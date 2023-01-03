@@ -24,6 +24,12 @@ namespace vgwb
         {
             Vector3 newPos = localHex.ToWorld(0f);
             transform.localPosition = newPos;
+
+            // if (transform.localEulerAngles.y > 0) {
+            //     Debug.Log(transform.localEulerAngles.y);
+            // }
+            // int increment = 60;
+            // transform.eulerAngles = new Vector3(transform.eulerAngles.x, Mathf.Round(transform.eulerAngles.y / increment) * increment, transform.eulerAngles.z);
         }
 
 #if UNITY_EDITOR
