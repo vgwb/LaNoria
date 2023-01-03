@@ -4,51 +4,51 @@ using UnityEngine;
 namespace vgwb
 {
     [System.Serializable]
-    public struct Hex
+    public struct HexUtils
     {
-        public static float RADIUS = 0.5f;
+        public static float RADIUS = 1f;
         public static Vector2 Q_BASIS = new Vector2(2f, 0);
         public static Vector2 R_BASIS = new Vector2(1f, Mathf.Sqrt(3));
         public static Vector2 Q_INV = new Vector2(1f / 2, -Mathf.Sqrt(3) / 6);
         public static Vector2 R_INV = new Vector2(0, Mathf.Sqrt(3) / 3);
 
-        public static Hex FromPlanar(Vector2 planar)
+        public static HexUtils FromPlanar(Vector2 planar)
         {
             float q = Vector2.Dot(planar, Q_INV) / RADIUS;
             float r = Vector2.Dot(planar, R_INV) / RADIUS;
-            return new Hex(q, r);
+            return new HexUtils(q, r);
         }
 
-        public static Hex FromWorld(Vector3 world)
+        public static HexUtils FromWorld(Vector3 world)
         {
             return FromPlanar(new Vector2(world.x, world.z));
         }
 
-        public static Hex zero = new Hex(0, 0);
+        public static HexUtils zero = new HexUtils(0, 0);
 
-        public static Hex operator +(Hex a, Hex b)
+        public static HexUtils operator +(HexUtils a, HexUtils b)
         {
-            return new Hex(a.q + b.q, a.r + b.r);
+            return new HexUtils(a.q + b.q, a.r + b.r);
         }
 
-        public static Hex operator -(Hex a, Hex b)
+        public static HexUtils operator -(HexUtils a, HexUtils b)
         {
-            return new Hex(a.q - b.q, a.r - b.r);
+            return new HexUtils(a.q - b.q, a.r - b.r);
         }
 
-        public static Hex[] AXIAL_DIRECTIONS = new Hex[] {
-        new Hex(1, 0),
-        new Hex(0, 1),
-        new Hex(-1, 1),
-        new Hex(-1, 0),
-        new Hex(0, -1),
-        new Hex(1, -1),
+        public static HexUtils[] AXIAL_DIRECTIONS = new HexUtils[] {
+        new HexUtils(1, 0),
+        new HexUtils(0, 1),
+        new HexUtils(-1, 1),
+        new HexUtils(-1, 0),
+        new HexUtils(0, -1),
+        new HexUtils(1, -1),
     };
 
-        public static IEnumerable<Hex> Ring(Hex center, int radius)
+        public static IEnumerable<HexUtils> Ring(HexUtils center, int radius)
         {
-            Hex current = center + new Hex(0, -radius);
-            foreach (Hex dir in AXIAL_DIRECTIONS) {
+            HexUtils current = center + new HexUtils(0, -radius);
+            foreach (HexUtils dir in AXIAL_DIRECTIONS) {
                 for (int i = 0; i < radius; i++) {
                     yield return current;
                     current = current + dir;
@@ -56,7 +56,7 @@ namespace vgwb
             }
         }
 
-        public static IEnumerable<Hex> Spiral(Hex center, int minRadius, int maxRadius)
+        public static IEnumerable<HexUtils> Spiral(HexUtils center, int minRadius, int maxRadius)
         {
             if (minRadius == 0) {
                 yield return center;
@@ -64,7 +64,7 @@ namespace vgwb
             }
             for (int r = minRadius; r <= maxRadius; r++) {
                 var ring = Ring(center, r);
-                foreach (Hex hex in ring) {
+                foreach (HexUtils hex in ring) {
                     yield return hex;
                 }
             }
@@ -73,11 +73,11 @@ namespace vgwb
         public int q;
         public int r;
 
-        public Hex(float q, float r) :
+        public HexUtils(float q, float r) :
             this(Mathf.RoundToInt(q), Mathf.RoundToInt(r))
         { }
 
-        public Hex(int q, int r)
+        public HexUtils(int q, int r)
         {
             this.q = q;
             this.r = r;
@@ -94,22 +94,22 @@ namespace vgwb
             return new Vector3(planar.x, y, planar.y);
         }
 
-        public IEnumerable<Hex> Neighbours()
+        public IEnumerable<HexUtils> Neighbours()
         {
-            foreach (Hex dir in AXIAL_DIRECTIONS) {
+            foreach (HexUtils dir in AXIAL_DIRECTIONS) {
                 yield return this + dir;
             }
         }
 
-        public Hex GetNeighbour(int dir)
+        public HexUtils GetNeighbour(int dir)
         {
-            Hex incr = AXIAL_DIRECTIONS[dir % AXIAL_DIRECTIONS.Length];
+            HexUtils incr = AXIAL_DIRECTIONS[dir % AXIAL_DIRECTIONS.Length];
             return this + incr;
         }
 
         public override bool Equals(System.Object obj)
         {
-            Hex hex = (Hex)obj;
+            HexUtils hex = (HexUtils)obj;
             return (q == hex.q) && (r == hex.r);
         }
 

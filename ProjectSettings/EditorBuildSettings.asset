@@ -6,6 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_test/NoriaMap.unity
-    guid: b79c85f1936fb4cf1b364216fdbe12d8
-  m_configObjects: {}
+    path: Assets/_dev/test hex.unity
+    guid: b8b316544265140babab8b64f0a4faa6
+  - enabled: 1
+    path: Assets/_scenes/LaNoria - main.unity
+    guid: eac090337b645415bb6394f0a2a74624
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: b075540c8ea1746b6b358e577c707c04, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: cea07ce5d2b0f46c59071066750c3032, type: 2}
