@@ -1,0 +1,2 @@
+# LaNoria Game Design doc
+
