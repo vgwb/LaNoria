@@ -18,12 +18,12 @@ The game is about placing tiles into a map (so basically a puzzle). Each tile re
 
 Here a description of basics interactions (refer to the image above):
 
-- The player can select one of the project cards at the bottom of the screen, each of this cards represent a different project of La Noria. Once a card is selected the details of the projects and the associated tile are displayed in the right side of the screen
-- Once a card is selected the player can read the infos about the project or drag the tile into the map
-- The player can place the tile around the map by dragging it. When the drag is over the tile is released on the map (the tile is snapped in the nearest position). The player can rotate the tile by tapping on it. Here there are two situations:
+- The player can select one of the project cards at the bottom of the screen, each of this cards represent a different project of La Noria. Once a card is selected the details of the project and the associated tiles are displayed in the right side of the screen
+- Once a card is selected the player can read the info about the project or drag the project (group of tiles) into the map
+- The player can place the project around the map by dragging it. When the drag is over the project is released on the map (the tile is snapped in the nearest position). The player can rotate the tile by tapping on it. Here there are two situations:
   - The tile is in a valid position (this should be notified with the correct feedbacks), without any obstacles or other intersecting tiles. A button will be displayed around the tile, by hitting it the player will confirm the placement. 
-  - The tile is not in a valid position (this should be notified with the correct feedbacks), the player should change the position and/or rotation. The player can also discard the tile just by clicking on another card
-- When the placement is over new cards will be given to the player
+  - The tile is not in a valid position (this should be notified with the correct feedbacks), the player should change the position and/or rotation. The player can also discard the tile just by clicking on another card.
+- When the placement is over new cards will be given to the player.
 
 The target of the game is to maximaze the score with combo of colors.
 
