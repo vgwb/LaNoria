@@ -9,6 +9,7 @@ namespace vgwb
     public class HexSnap : MonoBehaviour
     {
 
+        public bool SnapTo0Y = false;
         public bool ShowRange = false;
         public bool ShowNeighbours = false;
         [Range(1, 10)]
@@ -22,7 +23,7 @@ namespace vgwb
 
         public void ApplyTransform()
         {
-            Vector3 newPos = localHex.ToWorld(0f);
+            Vector3 newPos = localHex.ToWorld(SnapTo0Y ? 0 : transform.localPosition.y);
             transform.localPosition = newPos;
 
             // if (transform.localEulerAngles.y > 0) {
