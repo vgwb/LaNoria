@@ -51,6 +51,13 @@ namespace vgwb
             transform.parent = null; // restore the parent object to null
             Destroy(ParentInPivot);
         }
+
+        public void EnablePivot(bool enable)
+        {
+            if (Pivot != null) {
+                Pivot.SetActive(enable);
+            }
+        }
         #endregion
     }
 }

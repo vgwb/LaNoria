@@ -1,43 +1,84 @@
 using Lean.Touch;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using vgwb;
 
-public class SpawnObjectUI : MonoBehaviour, IPointerDownHandler
+public class SpawnObjectUI : MonoBehaviour
 {
     #region Var
-    public GameObject ProjectPrefab;
     public Transform SpawnPoint;
+    public TMP_Text ChoiceTxt;
+    public GameObject BtnConfirm;
+    public List<Button> BtnsSpawn;
+    private GameObject instancedPrefab;
     #endregion
 
     #region MonoB
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        instancedPrefab = null;
+        EnableBtnConfirm(false);
+        EnableBtnsSpawn(true);
+        SetChoiceTxt("");
     }
     #endregion
 
     #region Functions
-    public void SpawnPrefab()
+    public void SpawnPrefab(GameObject projectPrefab)
     {
-        if (ProjectPrefab != null && SpawnPoint != null) {
-            var obj = Instantiate(ProjectPrefab);
-            obj.transform.position = SpawnPoint.position;
+        if (projectPrefab != null && SpawnPoint != null) {
+            if (instancedPrefab != null) {
+                Destroy(instancedPrefab);
+            }
+            instancedPrefab = Instantiate(projectPrefab);
+            instancedPrefab.transform.position = SpawnPoint.position;
+            EnableBtnConfirm(true);
+            Debug.Log("Choice: "+projectPrefab.name);
+            SetChoiceTxt(projectPrefab.name);
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void ConfirmProject()
     {
-        SpawnPrefab();
+        if (instancedPrefab != null) {
+            Debug.Log("here 1!");
+            var projectComp = instancedPrefab.GetComponent<Project>();
+            if (projectComp != null) {
+                Debug.Log("here 2!");
+                projectComp.EnablePivot(false);
+            }
+            instancedPrefab = null;
+        }
+
+        EnableBtnConfirm(false);
+        EnableBtnsSpawn(true);
+    }
+
+    private void EnableBtnConfirm(bool enable)
+    {
+        if (BtnConfirm != null) {
+            BtnConfirm.SetActive(enable);
+        }
+    }
+
+    private void EnableBtnsSpawn(bool enable)
+    {
+        if (BtnsSpawn.Count > 0) {
+            foreach (var btn in BtnsSpawn) {
+                btn.interactable = enable;
+            }
+        }
+    }
+
+    private void SetChoiceTxt(string message)
+    {
+        if (ChoiceTxt != null) {
+            ChoiceTxt.text = message;
+        }
     }
     #endregion
 }
