@@ -249,6 +249,8 @@ MonoBehaviour:
   - {fileID: 6607870174885407912}
   - {fileID: 6607870174178182079}
   - {fileID: 6607870174641228807}
+  OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
+  MovingColor: {r: 0.4745098, g: 0.8392157, b: 1, a: 1}
   LeanCameraComp: {fileID: 2001722828}
   LeanSelectableComp: {fileID: 2001722829}
   LeanFingerTapComp: {fileID: 2001722830}
@@ -298,7 +300,19 @@ MonoBehaviour:
   selfSelected: 0
   onSelected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072460375433622535}
+        m_TargetAssemblyTypeName: vgwb.Project, Assembly-CSharp
+        m_MethodName: OnSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
@@ -525,6 +539,7 @@ GameObject:
   - component: {fileID: 4341873301973986103}
   - component: {fileID: 859823963233477778}
   - component: {fileID: 3173421588950716504}
+  - component: {fileID: 7846080219659888599}
   m_Layer: 0
   m_Name: hex_forest (2)
   m_TagString: Untagged
@@ -597,6 +612,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7846080219659888599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966191806161957261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &3966191806270132514
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +641,7 @@ GameObject:
   - component: {fileID: 4341873301731904408}
   - component: {fileID: 859823963192460349}
   - component: {fileID: 3173421589108912375}
+  - component: {fileID: 1109537180499031371}
   m_Layer: 0
   m_Name: hex_forest (2)
   m_TagString: Untagged
@@ -680,6 +714,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1109537180499031371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966191806270132514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &3966191806867201690
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +743,7 @@ GameObject:
   - component: {fileID: 4341873302341551136}
   - component: {fileID: 859823963669072773}
   - component: {fileID: 3173421588511850319}
+  - component: {fileID: 1375651050182134059}
   m_Layer: 0
   m_Name: hex_forest (2)
   m_TagString: Untagged
@@ -763,6 +816,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1375651050182134059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966191806867201690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6818917519444963258
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,8 +46,7 @@ public class SpawnObjectUI : MonoBehaviour
         if (instancedPrefab != null) {
             var projectComp = instancedPrefab.GetComponent<Project>();
             if (projectComp != null) {
-                projectComp.EnableLeanComponents(false);
-                projectComp.OccupatyGrid();
+                projectComp.OnProjectConfirmed();
             }
             instancedPrefab = null;
         }

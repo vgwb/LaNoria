@@ -11,13 +11,22 @@ namespace vgwb
         public bool ShowPivot = false;
         public GameObject Pivot;
         public List<HexSnap> Tiles;
+        public Color OverlapColor = Color.red;
+        public Color MovingColor = Color.white;
         [Header("Lean components")]
         public LeanDragCamera LeanCameraComp;
         public LeanSelectableByFinger LeanSelectableComp;
         public LeanFingerTap LeanFingerTapComp;
+
+        private List<Outline> Outlines; // TODO: should go somewhere else
         #endregion
 
         #region MonoB
+        private void Awake()
+        {
+            SetupOutline();
+        }
+
         private void OnDrawGizmos()
         {
             if (ShowPivot) {
@@ -42,6 +51,11 @@ namespace vgwb
             CheckOverlap();
         }
 
+        public void OnSelect()
+        {
+            RestoreOutline();
+        }
+
         /// <summary>
         /// Fired when the player tap on the project object.
         /// </summary>
@@ -56,6 +70,13 @@ namespace vgwb
             ParentInPivot.transform.Rotate(rot);
             transform.parent = null; // restore the parent object to null
             Destroy(ParentInPivot);
+        }
+
+        public void OnProjectConfirmed()
+        {
+            EnableLeanComponents(false);
+            OccupyGrid();
+            DisableOutline();
         }
 
         public void EnablePivot(bool enable)
@@ -80,7 +101,7 @@ namespace vgwb
             }
         }
 
-        public void OccupatyGrid()
+        public void OccupyGrid()
         {
             var grid = FindObjectOfType<GridManager>(); // TODO: remove this!
             foreach (var tile in Tiles) {
@@ -96,9 +117,46 @@ namespace vgwb
                 Vector3 tilePos = tile.transform.position;
                 bool posOccupied = grid.IsCellOccupiedByPos(tilePos);
                 if (posOccupied) {
-                    Debug.Log("Occupied!!!");
+                    HandleOverlap();
                     break;
                 }
+            }
+        }
+
+        private void SetupOutline()
+        {
+            Outlines = new List<Outline>();
+            foreach (var tile in Tiles) {
+                var outline = tile.gameObject.GetComponentInChildren<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineVisible;
+                outline.OutlineColor = MovingColor;
+                outline.OutlineWidth = 7.0f;
+                Outlines.Add(outline);
+            }
+        }
+
+
+        private void HandleOverlap()
+        {
+            ChangeOutlineColor(OverlapColor);
+        }
+
+        private void RestoreOutline()
+        {
+            ChangeOutlineColor(MovingColor);
+        }
+
+        private void ChangeOutlineColor(Color color)
+        {
+            foreach (var outline in Outlines) {
+                outline.OutlineColor = color;
+            }
+        }
+
+        private void DisableOutline()
+        {
+            foreach (var outline in Outlines) {
+                outline.enabled = false;
             }
         }
         #endregion

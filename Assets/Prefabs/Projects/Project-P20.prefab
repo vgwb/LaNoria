@@ -55,6 +55,8 @@ MonoBehaviour:
   Tiles:
   - {fileID: 8027589083109220880}
   - {fileID: 8027589084294654735}
+  OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
+  MovingColor: {r: 0.4745098, g: 0.8392157, b: 1, a: 1}
   LeanCameraComp: {fileID: 2888703948252826677}
   LeanSelectableComp: {fileID: 2888703948252826676}
   LeanFingerTapComp: {fileID: 2888703948252826679}
@@ -104,7 +106,19 @@ MonoBehaviour:
   selfSelected: 0
   onSelected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2888703948252826666}
+        m_TargetAssemblyTypeName: vgwb.Project, Assembly-CSharp
+        m_MethodName: OnSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
@@ -288,6 +302,29 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2c57751e748651a4c9bd8f9f48e8cf5e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
+--- !u!1 &278899076895340074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3154883500402158453, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
+  m_PrefabInstance: {fileID: 2888703948300082527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3316717088774371533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278899076895340074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &4390476701138272520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1511141997233577047, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
@@ -365,6 +402,29 @@ PrefabInstance:
       objectReference: {fileID: 8388242491016390830, guid: 7b023cbe00ba748f89d49689e03a6a12, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
+--- !u!1 &278899078114262837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3154883500402158453, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
+  m_PrefabInstance: {fileID: 2888703949212816448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &799362536034975318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278899078114262837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &4390476700170913815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1511141997233577047, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
