@@ -57,6 +57,8 @@ MonoBehaviour:
   Tiles:
   - {fileID: 1276381129179335117}
   - {fileID: 1276381128387905408}
+  - {fileID: 1276381128290535230}
+  - {fileID: 1276381128610137496}
   OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
   MovingColor: {r: 0.4745098, g: 0.8392157, b: 1, a: 1}
   LeanCameraComp: {fileID: 6253134339163446054}
@@ -418,6 +420,17 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: eb19d4e9e6dff424daabfbc351d2dde1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
+--- !u!114 &1276381128290535230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5147901702692566608, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
+  m_PrefabInstance: {fileID: 6253134340098322798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4773603599455579449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1511141997233577047, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
@@ -607,6 +620,17 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d15897a066fc1bd4e873db20d70da822, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
+--- !u!114 &1276381128610137496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5147901702692566608, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
+  m_PrefabInstance: {fileID: 6253134340584092616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4773603599001825183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1511141997233577047, guid: bcae152bb8ea74aa3858fe0d5e08c2a9, type: 3}
