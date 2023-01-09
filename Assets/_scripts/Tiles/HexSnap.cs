@@ -43,7 +43,9 @@ namespace vgwb
 
         void OnDrawGizmosSelected()
         {
-            UnityEditor.Handles.Label(transform.position, hex.ToString());
+            GUIStyle style = new GUIStyle();
+            style.normal.textColor = Color.black;
+            UnityEditor.Handles.Label(transform.position, hex.ToString(), style);
             if (ShowRange) {
                 Gizmos.color = Color.cyan;
                 foreach (HexUtils hex in HexUtils.Spiral(hex, minRadius, maxRadius)) {

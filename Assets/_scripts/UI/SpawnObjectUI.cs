@@ -37,7 +37,6 @@ public class SpawnObjectUI : MonoBehaviour
             instancedPrefab = Instantiate(projectPrefab);
             instancedPrefab.transform.position = SpawnPoint.position;
             EnableBtnConfirm(true);
-            Debug.Log("Choice: "+projectPrefab.name);
             SetChoiceTxt(projectPrefab.name);
         }
     }
@@ -45,11 +44,10 @@ public class SpawnObjectUI : MonoBehaviour
     public void ConfirmProject()
     {
         if (instancedPrefab != null) {
-            Debug.Log("here 1!");
             var projectComp = instancedPrefab.GetComponent<Project>();
             if (projectComp != null) {
-                Debug.Log("here 2!");
-                projectComp.EnablePivot(false);
+                projectComp.EnableLeanComponents(false);
+                projectComp.OccupatyGrid();
             }
             instancedPrefab = null;
         }

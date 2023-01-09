@@ -55,6 +55,9 @@ MonoBehaviour:
   Tiles:
   - {fileID: 8027589083109220880}
   - {fileID: 8027589084294654735}
+  LeanCameraComp: {fileID: 2888703948252826677}
+  LeanSelectableComp: {fileID: 2888703948252826676}
+  LeanFingerTapComp: {fileID: 2888703948252826679}
 --- !u!114 &2888703948252826677
 MonoBehaviour:
   m_ObjectHideFlags: 0

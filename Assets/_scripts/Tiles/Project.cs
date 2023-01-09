@@ -1,3 +1,4 @@
+using Lean.Touch;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,10 @@ namespace vgwb
         public bool ShowPivot = false;
         public GameObject Pivot;
         public List<HexSnap> Tiles;
+        [Header("Lean components")]
+        public LeanDragCamera LeanCameraComp;
+        public LeanSelectableByFinger LeanSelectableComp;
+        public LeanFingerTap LeanFingerTapComp;
         #endregion
 
         #region MonoB
@@ -34,6 +39,7 @@ namespace vgwb
                 Vector3 newPos = Tiles[0].hex.ToWorld(0f);
                 transform.position = newPos;
             }
+            CheckOverlap();
         }
 
         /// <summary>
@@ -56,6 +62,43 @@ namespace vgwb
         {
             if (Pivot != null) {
                 Pivot.SetActive(enable);
+            }
+        }
+
+        public void EnableLeanComponents(bool enable)
+        {
+            if (LeanCameraComp != null) {
+                LeanCameraComp.enabled = enable;
+            }
+
+            if (LeanFingerTapComp != null) {
+                LeanFingerTapComp.enabled = enable;
+            }
+
+            if (LeanSelectableComp != null) {
+                LeanSelectableComp.enabled = enable;
+            }
+        }
+
+        public void OccupatyGrid()
+        {
+            var grid = FindObjectOfType<GridManager>(); // TODO: remove this!
+            foreach (var tile in Tiles) {
+                Vector3 tilePos = tile.transform.position;
+                grid.SetCellAsOccupiedByPosition(tilePos);
+            }
+        }
+
+        private void CheckOverlap()
+        {
+            var grid = FindObjectOfType<GridManager>(); // TODO: remove this!
+            foreach (var tile in Tiles) {
+                Vector3 tilePos = tile.transform.position;
+                bool posOccupied = grid.IsCellOccupiedByPos(tilePos);
+                if (posOccupied) {
+                    Debug.Log("Occupied!!!");
+                    break;
+                }
             }
         }
         #endregion

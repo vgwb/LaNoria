@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SnapTo0Y: 0
   ShowRange: 0
   ShowNeighbours: 0
   minRadius: 1
@@ -122,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SnapTo0Y: 0
   ShowRange: 0
   ShowNeighbours: 0
   minRadius: 1
@@ -185,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SnapTo0Y: 0
   ShowRange: 0
   ShowNeighbours: 0
   minRadius: 1
@@ -246,6 +249,9 @@ MonoBehaviour:
   - {fileID: 6607870174885407912}
   - {fileID: 6607870174178182079}
   - {fileID: 6607870174641228807}
+  LeanCameraComp: {fileID: 2001722828}
+  LeanSelectableComp: {fileID: 2001722829}
+  LeanFingerTapComp: {fileID: 2001722830}
 --- !u!114 &2001722828
 MonoBehaviour:
   m_ObjectHideFlags: 0
