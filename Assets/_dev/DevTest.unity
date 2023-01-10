@@ -4631,9 +4631,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1139583145}
+  - component: {fileID: 1139583146}
   - component: {fileID: 1139583144}
   - component: {fileID: 1139583143}
-  - component: {fileID: 1139583142}
   m_Layer: 0
   m_Name: Camera Pivot
   m_TagString: Untagged
@@ -4641,25 +4641,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1139583142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139583141}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d4879872d634a242ab1f733c1fad33b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 1
-  speed: 25
-  acceleration: 1
-  idleTime: 0
-  strength: 0
-  expectedPitch: 0
-  expectedYaw: 0
 --- !u!114 &1139583143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4667,7 +4648,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139583141}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5726d77b04f1a53448ffb9873ac0e474, type: 3}
   m_Name: 
@@ -4675,7 +4656,7 @@ MonoBehaviour:
   Use:
     Filter: 0
     IgnoreStartedOverGui: 1
-    RequiredFingerCount: 0
+    RequiredFingerCount: 1
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 0}
   ignoreIfStatic: 0
@@ -4738,12 +4719,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 881277057}
   damping: -1
-  defaultRotation: {x: 0, y: 0}
+  defaultRotation: {x: 0, y: 1}
   pitch: 45
   pitchSensitivity: 0.25
   pitchClamp: 1
-  pitchMin: 10
-  pitchMax: 90
+  pitchMin: 45
+  pitchMax: 45
   yaw: 45
   yawSensitivity: 0.25
   yawClamp: 0
@@ -4767,6 +4748,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1139583146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139583141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4e169add1a8bc4d8cf11ae1ff470e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cam: {fileID: 881277057}
+  LeanUpdate: {fileID: 1139583143}
 --- !u!1001 &1146290652
 PrefabInstance:
   m_ObjectHideFlags: 0
