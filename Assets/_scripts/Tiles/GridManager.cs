@@ -60,24 +60,28 @@ public class GridManager : SingletonMonoB<GridManager>
 
     public bool IsCellOccupiedByPos(Vector3 pos)
     {
-        var hex = HexUtils.FromWorld(pos);
-        Vector3 hexPos = hex.ToWorld(0f);
+        Vector3 hexPos = RetrieveHexPos(pos);
         var cell = Cells.Find(x => x.Position == hexPos);
         if (cell != null) {
             return cell.Occupied;
         }
 
-        return false;
+        return true; // outside of the map!!!
     }
 
     public void SetCellAsOccupiedByPosition(Vector3 pos)
     {
-        var hex = HexUtils.FromWorld(pos);
-        Vector3 hexPos = hex.ToWorld(0f);
+        Vector3 hexPos = RetrieveHexPos(pos);
         var cell = Cells.Find(x => x.Position == hexPos);
         if (cell != null) {
             cell.Occupied = true;
         }
+    }
+
+    private Vector3 RetrieveHexPos(Vector3 pos)
+    {
+        var hex = HexUtils.FromWorld(pos);
+        return hex.ToWorld(0f);
     }
     #endregion
 }
