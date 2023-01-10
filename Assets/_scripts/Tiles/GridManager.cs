@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using vgwb;
 
-public class GridManager : MonoBehaviour
+public class GridManager : SingletonMonoB<GridManager>
 {
     #region Struct
 
@@ -30,8 +30,10 @@ public class GridManager : MonoBehaviour
     #endregion
 
     #region MonoB
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         InitCells();
     }
 
