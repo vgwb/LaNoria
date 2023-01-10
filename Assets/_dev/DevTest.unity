@@ -3433,7 +3433,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 75
   orthographic: 0
   orthographic size: 7
   m_Depth: -1
@@ -4725,13 +4725,13 @@ MonoBehaviour:
   pitchClamp: 1
   pitchMin: 45
   pitchMax: 45
-  yaw: 45
+  yaw: 120
   yawSensitivity: 0.25
   yawClamp: 0
   yawMin: -45
   yawMax: 45
   currentPitch: 45
-  currentYaw: 45
+  currentYaw: 120
 --- !u!4 &1139583145
 Transform:
   m_ObjectHideFlags: 0
@@ -4739,7 +4739,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139583141}
-  m_LocalRotation: {x: 0.3535534, y: 0.3535534, z: -0.14644663, w: 0.85355335}
+  m_LocalRotation: {x: 0.19134171, y: 0.8001032, z: -0.3314136, w: 0.46193972}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4747,7 +4747,7 @@ Transform:
   - {fileID: 881277054}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &1139583146
 MonoBehaviour:
   m_ObjectHideFlags: 0
