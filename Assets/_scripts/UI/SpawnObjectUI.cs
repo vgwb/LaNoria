@@ -44,7 +44,7 @@ public class SpawnObjectUI : MonoBehaviour
     public void ConfirmProject()
     {
         if (instancedPrefab != null) {
-            var projectComp = instancedPrefab.GetComponent<Project>();
+            var projectComp = instancedPrefab.GetComponent<Placeable>();
             if (projectComp != null) {
                 projectComp.OnProjectConfirmed();
             }

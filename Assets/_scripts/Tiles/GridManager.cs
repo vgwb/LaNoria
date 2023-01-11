@@ -26,7 +26,6 @@ public class GridManager : SingletonMonoB<GridManager>
 
     #region Var
     public List<CellInfo> Cells;
-    public HexUtils hex => HexUtils.FromWorld(transform.position);
     #endregion
 
     #region MonoB
