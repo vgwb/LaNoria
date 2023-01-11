@@ -1,3 +1,4 @@
+using Core;
 using Lean.Touch;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,20 +12,16 @@ namespace vgwb
         public bool ShowPivot = false;
         public GameObject Pivot;
         public List<PlaceableTile> Tiles;
-        public Color OverlapColor = Color.red;  // TODO: settings!
-        public Color MovingColor = Color.white; // TODO: settings!
         [Header("Lean components")]
         public LeanDragCamera LeanCameraComp;
         public LeanSelectableByFinger LeanSelectableComp;
         public LeanFingerTap LeanFingerTapComp;
-
-        private List<Outline> Outlines; // TODO: should go somewhere else
         #endregion
 
         #region MonoB
         private void Awake()
         {
-            SetupOutline();
+
         }
 
         private void Update()
@@ -161,40 +158,30 @@ namespace vgwb
             }
         }
 
-        private void SetupOutline()
-        {
-            Outlines = new List<Outline>();
-            foreach (var tile in Tiles) {
-                var outline = tile.gameObject.GetComponentInChildren<Outline>();
-                outline.OutlineMode = Outline.Mode.OutlineVisible; // TODO: settings!
-                outline.OutlineColor = MovingColor; // TODO: settings!
-                outline.OutlineWidth = 7.0f;  // TODO: settings!
-                Outlines.Add(outline);
-            }
-        }
-
 
         private void HandleOverlap()
         {
-            ChangeOutlineColor(OverlapColor);
+            var overlapColor = AppSettings.I.OverlapColor;
+            ChangeOutlineColor(overlapColor);
         }
 
         private void RestoreOutline()
         {
-            ChangeOutlineColor(MovingColor);
+            var movingColor = AppSettings.I.MovingColor;
+            ChangeOutlineColor(movingColor);
         }
 
         private void ChangeOutlineColor(Color color)
         {
-            foreach (var outline in Outlines) {
-                outline.OutlineColor = color;
+            foreach (var tile in Tiles) {
+                tile.ChangeOutlineColor(color);
             }
         }
 
         private void DisableOutline()
         {
-            foreach (var outline in Outlines) {
-                outline.enabled = false;
+            foreach (var tile in Tiles) {
+                tile.EnableOutline(false);
             }
         }
         #endregion
