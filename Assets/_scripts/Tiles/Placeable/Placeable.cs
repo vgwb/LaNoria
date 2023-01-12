@@ -69,8 +69,15 @@ namespace vgwb
         /// </summary>
         public void OnRelease()
         {
-            if (Tiles.Count > 0) { // the first tile is considered the object center
+            // the first tile is considered the object center
+            if (Tiles.Count > 0) {
                 Vector3 newPos = Tiles[0].HexPosition;
+
+                if (IsCompletelyOutOfMap()) {
+                    var grid = GridManager.I;
+                    newPos = grid.ClosestBorderPoint(newPos);
+                }
+
                 transform.position = newPos;
             }
 
@@ -206,6 +213,26 @@ namespace vgwb
                     OnValidPositionChange(); // notify the new validity
                 }
             }
+        }
+
+        private bool IsCompletelyOutOfMap()
+        {
+            bool result = true;
+            foreach (var tile in Tiles) {
+                var grid = GridManager.I;
+                Vector3 tilePos = tile.transform.position;
+                if (!grid.IsOutOfMap(tilePos)) {
+                    result = false;
+                    break;
+                }
+            }
+
+            return result;
+        }
+
+        private void SnapToBorders()
+        {
+
         }
 
         private void HandleInvalidPosition()

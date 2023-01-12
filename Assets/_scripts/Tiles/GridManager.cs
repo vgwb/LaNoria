@@ -38,7 +38,7 @@ public class GridManager : SingletonMonoB<GridManager>
 
     void Update()
     {
-        
+
     }
     #endregion
 
@@ -50,8 +50,7 @@ public class GridManager : SingletonMonoB<GridManager>
             var obj = transform.GetChild(i).gameObject;
             var box = obj.AddComponent<BoxCollider>();
             box.center = new Vector3(0.0f, 0.5f, 0.0f);
-            var hex = HexUtils.FromWorld(obj.transform.position);
-            Vector3 hexPos = hex.ToWorld(0f);
+            Vector3 hexPos = RetrieveHexPos(obj.transform.position);
             CellInfo info = new CellInfo(i == 0 ? true : false, obj, hexPos);
             Cells.Add(info);
         }
@@ -68,6 +67,14 @@ public class GridManager : SingletonMonoB<GridManager>
         return true; // outside of the map!!!
     }
 
+    public bool IsOutOfMap(Vector3 pos)
+    {
+        Vector3 hexPos = RetrieveHexPos(pos);
+        var cell = Cells.Find(x => x.Position == hexPos);
+
+        return cell == null;
+    }
+
     public void SetCellAsOccupiedByPosition(Vector3 pos)
     {
         Vector3 hexPos = RetrieveHexPos(pos);
@@ -75,6 +82,21 @@ public class GridManager : SingletonMonoB<GridManager>
         if (cell != null) {
             cell.Occupied = true;
         }
+    }
+
+    public Vector3 ClosestBorderPoint(Vector3 pos)
+    {
+        Vector3 result = Vector3.negativeInfinity;
+        float distance = float.PositiveInfinity;
+        foreach (var cell in Cells) {
+            float d = Vector3.Distance(pos, cell.Position);
+            if (d < distance) {
+                distance = d;
+                result = cell.Position;
+            }
+        }
+
+        return result;
     }
 
     private Vector3 RetrieveHexPos(Vector3 pos)
