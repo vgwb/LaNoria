@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3278893794261288162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6032261832205611788}
+  - component: {fileID: 8377090441992337209}
+  m_Layer: 0
+  m_Name: TilesContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6032261832205611788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278893794261288162}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5093536029970560525}
+  - {fileID: 5093536029795289110}
+  - {fileID: 5093536029810397951}
+  - {fileID: 5093536029907075496}
+  m_Father: {fileID: 5093536028753083324}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8377090441992337209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278893794261288162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5093536028573834410
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +65,6 @@ GameObject:
   - component: {fileID: 5093536028573834414}
   - component: {fileID: 5093536028573834415}
   - component: {fileID: 5093536028573834412}
-  - component: {fileID: 5093536028573834413}
   m_Layer: 0
   m_Name: hex_forest (2)
   m_TagString: Untagged
@@ -84,24 +137,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5093536028573834413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5093536028573834410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &5093536028645954110
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,10 +229,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5093536028645954099}
-  - {fileID: 5093536029970560525}
-  - {fileID: 5093536029795289110}
-  - {fileID: 5093536029810397951}
-  - {fileID: 5093536029907075496}
+  - {fileID: 6032261832205611788}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -215,13 +247,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowPivot: 1
   Pivot: {fileID: 5093536028645954110}
+  TilesContainer: {fileID: 3278893794261288162}
   Tiles:
   - {fileID: 5093536029970560522}
   - {fileID: 5093536029795289111}
   - {fileID: 5093536029810397948}
   - {fileID: 5093536029907075497}
-  OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
-  MovingColor: {r: 0.4745098, g: 0.8392157, b: 1, a: 1}
+  OutlineHandler: {fileID: 8377090441992337209}
   LeanCameraComp: {fileID: 5093536028753083322}
   LeanSelectableComp: {fileID: 5093536028753083323}
   LeanFingerTapComp: {fileID: 5093536028753083320}
@@ -499,7 +531,6 @@ GameObject:
   - component: {fileID: 5093536029172446121}
   - component: {fileID: 5093536029172446038}
   - component: {fileID: 5093536029172446039}
-  - component: {fileID: 5093536029172446036}
   m_Layer: 0
   m_Name: hex_forest (2)
   m_TagString: Untagged
@@ -572,24 +603,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5093536029172446036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5093536029172446037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &5093536029254974862
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +614,6 @@ GameObject:
   - component: {fileID: 5093536029254974850}
   - component: {fileID: 5093536029254974851}
   - component: {fileID: 5093536029254974848}
-  - component: {fileID: 5093536029254974849}
   m_Layer: 0
   m_Name: hex_forest (2)
   m_TagString: Untagged
@@ -674,24 +686,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5093536029254974849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5093536029254974862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &5093536029310501367
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,8 +780,8 @@ Transform:
   m_Children:
   - {fileID: 5093536028815518299}
   - {fileID: 5093536029310501366}
-  m_Father: {fileID: 5093536028753083324}
-  m_RootOrder: 2
+  m_Father: {fileID: 6032261832205611788}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5093536029795289111
 MonoBehaviour:
@@ -802,7 +796,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexHandler: {fileID: 5093536029795289193}
-  outlineHandler: {fileID: 5093536029254974849}
 --- !u!114 &5093536029795289193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,8 +845,8 @@ Transform:
   m_Children:
   - {fileID: 5093536028836701496}
   - {fileID: 5093536029038732897}
-  m_Father: {fileID: 5093536028753083324}
-  m_RootOrder: 3
+  m_Father: {fileID: 6032261832205611788}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5093536029810397948
 MonoBehaviour:
@@ -868,7 +861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexHandler: {fileID: 5093536029810397950}
-  outlineHandler: {fileID: 5093536029172446036}
 --- !u!114 &5093536029810397950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -918,8 +910,8 @@ Transform:
   m_Children:
   - {fileID: 5093536028833160184}
   - {fileID: 5093536030070340405}
-  m_Father: {fileID: 5093536028753083324}
-  m_RootOrder: 4
+  m_Father: {fileID: 6032261832205611788}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5093536029907075497
 MonoBehaviour:
@@ -934,7 +926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexHandler: {fileID: 5093536029907075499}
-  outlineHandler: {fileID: 5093536028573834413}
 --- !u!114 &5093536029907075499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,8 +975,8 @@ Transform:
   m_Children:
   - {fileID: 5093536030066053676}
   - {fileID: 5093536029619674345}
-  m_Father: {fileID: 5093536028753083324}
-  m_RootOrder: 1
+  m_Father: {fileID: 6032261832205611788}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5093536029970560522
 MonoBehaviour:
@@ -1000,7 +991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexHandler: {fileID: 5093536029970560524}
-  outlineHandler: {fileID: 5093536030135621640}
 --- !u!114 &5093536029970560524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1082,6 @@ GameObject:
   - component: {fileID: 5093536030135621645}
   - component: {fileID: 5093536030135621642}
   - component: {fileID: 5093536030135621643}
-  - component: {fileID: 5093536030135621640}
   m_Layer: 0
   m_Name: hex_forest (2)
   m_TagString: Untagged
@@ -1165,21 +1154,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5093536030135621640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5093536030135621641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []

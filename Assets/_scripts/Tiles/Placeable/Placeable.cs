@@ -11,7 +11,9 @@ namespace vgwb
         #region Var
         public bool ShowPivot = false;
         public GameObject Pivot;
+        public GameObject TilesContainer;
         public List<PlaceableTile> Tiles;
+        public Outline OutlineHandler;
         [Header("Lean components")]
         public LeanDragCamera LeanCameraComp;
         public LeanSelectableByFinger LeanSelectableComp;
@@ -34,6 +36,12 @@ namespace vgwb
 
 
         #region MonoB
+
+        private void Awake()
+        {
+            SetupOutline();
+        }
+
         private void Update()
         {
             CheckValidPosition();
@@ -142,34 +150,32 @@ namespace vgwb
             LeanFingerTapComp = GetComponent<LeanFingerTap>();
             Tiles.Clear();
 
-            int childs = transform.childCount;
+            int childs = TilesContainer.transform.childCount;
             for (int i = 0; i < childs; i++) {
-                var child = transform.GetChild(i).gameObject;
+                var child = TilesContainer.transform.GetChild(i).gameObject;
                 string childName = child.name.ToLower();
-                if (childName.Contains("tile")) {
-                    var tile = child.GetComponent<PlaceableTile>();
-                    if (tile == null) {
-                        tile = child.AddComponent<PlaceableTile>();
-                    }
-                    tile.Init();
-                    Tiles.Add(tile);
+                var tile = child.GetComponent<PlaceableTile>();
+                if (tile == null) {
+                    tile = child.AddComponent<PlaceableTile>();
                 }
+                tile.Init();
+                Tiles.Add(tile);
             }
         }
 
         public void RiseUpTilesHeight()
         {
-            foreach (var tile in Tiles) {
+            if (TilesContainer != null) {
                 Vector3 delta = Vector3.up * AppSettings.I.DragYOffset;
-                tile.transform.position += delta;
+                TilesContainer.transform.position += delta;
             }
         }
 
         public void LowerDownTilesHeight()
         {
-            foreach (var tile in Tiles) {
+            if (TilesContainer != null) {
                 Vector3 delta = Vector3.up * AppSettings.I.DragYOffset;
-                tile.transform.position -= delta;
+                TilesContainer.transform.position -= delta;
             }
         }
 
@@ -202,7 +208,6 @@ namespace vgwb
             }
         }
 
-
         private void HandleInvalidPosition()
         {
             var overlapColor = AppSettings.I.OverlapColor;
@@ -217,16 +222,12 @@ namespace vgwb
 
         private void ChangeOutlineColor(Color color)
         {
-            foreach (var tile in Tiles) {
-                tile.ChangeOutlineColor(color);
-            }
+            OutlineHandler.OutlineColor = color;
         }
 
         private void DisableOutline()
         {
-            foreach (var tile in Tiles) {
-                tile.EnableOutline(false);
-            }
+            OutlineHandler.enabled = false;
         }
 
         private void StopUsingMe()
@@ -234,6 +235,13 @@ namespace vgwb
             if (OnStopUsingMe != null) {
                 OnStopUsingMe();
             }
+        }
+
+        private void SetupOutline()
+        {
+            OutlineHandler.OutlineColor = AppSettings.I.MovingColor;
+            OutlineHandler.OutlineWidth = AppSettings.I.OutlineWidth;
+            OutlineHandler.OutlineMode = AppSettings.I.PlaceableOutlineMode;
         }
         #endregion
     }

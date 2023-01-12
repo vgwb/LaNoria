@@ -9,7 +9,6 @@ namespace vgwb
     {
         #region Var
         [SerializeField] private HexSnap hexHandler;
-        [SerializeField] private Outline outlineHandler;
         #endregion
 
         #region Attributes
@@ -30,7 +29,7 @@ namespace vgwb
         #region MonoB
         private void Start()
         {
-            SetupOutline();
+
         }
         #endregion
 
@@ -41,33 +40,6 @@ namespace vgwb
             if (hexHandler == null) {
                 hexHandler = gameObject.AddComponent<HexSnap>();
             }
-
-            outlineHandler = GetComponentInChildren<Outline>();
-            if (outlineHandler == null) {
-                var mesh = GetComponentInChildren<MeshRenderer>();
-                if (mesh != null) {
-                    outlineHandler = mesh.gameObject.AddComponent<Outline>();
-                }
-            }
-
-            SetupOutline();
-        }
-
-        public void ChangeOutlineColor(Color color)
-        {
-            outlineHandler.OutlineColor = color;
-        }
-
-        public void EnableOutline(bool enable)
-        {
-            outlineHandler.enabled = enable;
-        }
-
-        private void SetupOutline()
-        {
-            outlineHandler.OutlineColor = AppSettings.I.MovingColor;
-            outlineHandler.OutlineWidth = AppSettings.I.OutlineWidth;
-            outlineHandler.OutlineMode = AppSettings.I.PlaceableOutlineMode;
         }
         #endregion
     }
