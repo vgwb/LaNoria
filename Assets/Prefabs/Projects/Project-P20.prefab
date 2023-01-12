@@ -100,8 +100,6 @@ MonoBehaviour:
   Tiles:
   - {fileID: 3410199035486240979}
   - {fileID: 3410199034254674380}
-  OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
-  MovingColor: {r: 0.4745098, g: 0.8392157, b: 1, a: 1}
   LeanCameraComp: {fileID: 5976312339843145886}
   LeanSelectableComp: {fileID: 5976312339843145887}
   LeanFingerTapComp: {fileID: 5976312339843145884}
@@ -475,7 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []

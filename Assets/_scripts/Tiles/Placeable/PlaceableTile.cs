@@ -27,6 +27,13 @@ namespace vgwb
         }
         #endregion
 
+        #region MonoB
+        private void Start()
+        {
+            SetupOutline();
+        }
+        #endregion
+
         #region Functions
         public void Init()
         {
