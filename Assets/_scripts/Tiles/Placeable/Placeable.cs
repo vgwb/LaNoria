@@ -66,6 +66,7 @@ namespace vgwb
                 transform.position = newPos;
             }
 
+            LowerDownTilesHeight();
             CameraManager.I.EnableRotationWithFingers(true);
         }
 
@@ -73,6 +74,7 @@ namespace vgwb
         {
             RestoreOutline();
             CameraManager.I.EnableRotationWithFingers(false);
+            RiseUpTilesHeight();
         }
 
         /// <summary>
@@ -152,6 +154,22 @@ namespace vgwb
                     tile.Init();
                     Tiles.Add(tile);
                 }
+            }
+        }
+
+        public void RiseUpTilesHeight()
+        {
+            foreach (var tile in Tiles) {
+                Vector3 delta = Vector3.up * AppSettings.I.DragYOffset;
+                tile.transform.position += delta;
+            }
+        }
+
+        public void LowerDownTilesHeight()
+        {
+            foreach (var tile in Tiles) {
+                Vector3 delta = Vector3.up * AppSettings.I.DragYOffset;
+                tile.transform.position -= delta;
             }
         }
 

@@ -14,6 +14,7 @@ namespace Core
         public Color OverlapColor;
         public Outline.Mode PlaceableOutlineMode = Outline.Mode.OutlineVisible;
         public float OutlineWidth = 7.0f;
+        public float DragYOffset = 0.2f;
         #endregion
     } 
 }
