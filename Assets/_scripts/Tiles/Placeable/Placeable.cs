@@ -16,17 +16,32 @@ namespace vgwb
         public LeanDragCamera LeanCameraComp;
         public LeanSelectableByFinger LeanSelectableComp;
         public LeanFingerTap LeanFingerTapComp;
+        public delegate void PlaceableEvent();
+        public PlaceableEvent OnValidPositionChange;
+        public PlaceableEvent OnStopUsingMe;
+
+        private bool isValidPosition;
         #endregion
 
-        #region MonoB
-        private void Awake()
+        #region Attributes
+        public bool IsValidPosition
         {
-
+            get {
+                return isValidPosition;
+            }
         }
+        #endregion
 
+
+        #region MonoB
         private void Update()
         {
-            CheckOverlap();
+            CheckValidPosition();
+        }
+
+        private void OnDestroy()
+        {
+            StopUsingMe();
         }
 
         private void OnDrawGizmos()
@@ -81,6 +96,7 @@ namespace vgwb
             EnableLeanComponents(false);
             OccupyGrid();
             DisableOutline();
+            StopUsingMe();
         }
 
         public void EnablePivot(bool enable)
@@ -139,27 +155,37 @@ namespace vgwb
             }
         }
 
-        private void CheckOverlap()
+        /// <summary>
+        /// Check if the placeable is in a valid position.
+        /// </summary>
+        private void CheckValidPosition()
         {
             var grid = GridManager.I;
-            bool isOverlapping = false;
+            bool validPosition = true;
             foreach (var tile in Tiles) {
                 Vector3 tilePos = tile.transform.position;
-                bool posOccupied = grid.IsCellOccupiedByPos(tilePos);
-                if (posOccupied) {
-                    isOverlapping = true;
-                    HandleOverlap();
+                if (grid.IsCellOccupiedByPos(tilePos)) {
+                    validPosition = false;
+                    HandleInvalidPosition();
                     break;
                 }
             }
 
-            if (!isOverlapping) {
+            if (validPosition) {
                 RestoreOutline();
+            }
+
+            // raise the event, position validity has changed!
+            if (validPosition != isValidPosition) {
+                isValidPosition = validPosition; // update the value
+                if (OnValidPositionChange != null) {
+                    OnValidPositionChange(); // notify the new validity
+                }
             }
         }
 
 
-        private void HandleOverlap()
+        private void HandleInvalidPosition()
         {
             var overlapColor = AppSettings.I.OverlapColor;
             ChangeOutlineColor(overlapColor);
@@ -182,6 +208,13 @@ namespace vgwb
         {
             foreach (var tile in Tiles) {
                 tile.EnableOutline(false);
+            }
+        }
+
+        private void StopUsingMe()
+        {
+            if (OnStopUsingMe != null) {
+                OnStopUsingMe();
             }
         }
         #endregion

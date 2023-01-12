@@ -14,13 +14,13 @@ public class UIManager : MonoBehaviour
     public TMP_Text ChoiceTxt;
     public GameObject BtnConfirm;
     public List<Button> BtnsSpawn;
-    private GameObject instancedPrefab;
+    private Placeable instancedPlaceable;
     #endregion
 
     #region MonoB
     void Awake()
     {
-        instancedPrefab = null;
+        instancedPlaceable = null;
         EnableBtnConfirm(false);
         EnableBtnsSpawn(true);
         SetChoiceTxt("");
@@ -37,24 +37,20 @@ public class UIManager : MonoBehaviour
     public void ChosePrefab(Transform placeablePrefab)
     {
         if (placeablePrefab != null && Spawner != null) {
-            if (instancedPrefab != null) {
-                Destroy(instancedPrefab);
+            if (instancedPlaceable != null) {
+                Destroy(instancedPlaceable.gameObject);
             }
 
             Spawner.Prefab = placeablePrefab;
-            EnableBtnConfirm(true);
             SetChoiceTxt(placeablePrefab.name);
         }
     }
 
     public void ConfirmProject()
     {
-        if (instancedPrefab != null) {
-            var projectComp = instancedPrefab.GetComponent<Placeable>();
-            if (projectComp != null) {
-                projectComp.OnProjectConfirmed();
-            }
-            instancedPrefab = null;
+        if (instancedPlaceable != null) {
+            instancedPlaceable.OnProjectConfirmed();
+            instancedPlaceable = null;
         }
 
         EnableBtnConfirm(false);
@@ -68,7 +64,24 @@ public class UIManager : MonoBehaviour
 
     private void OnPrefabSpawned(GameObject clone)
     {
-        instancedPrefab = clone;
+        instancedPlaceable = clone.GetComponent<Placeable>();
+        SubscribeToPlaceableEvents();
+    }
+
+    private void SubscribeToPlaceableEvents()
+    {
+        if (instancedPlaceable != null) {
+            instancedPlaceable.OnValidPositionChange += HandleBtnConfirm;
+            instancedPlaceable.OnStopUsingMe += StopUsingPlaceable;
+        }
+    }
+
+    private void UnsuscribeToPlaceableEvents()
+    {
+        if (instancedPlaceable != null) {
+            instancedPlaceable.OnValidPositionChange -= HandleBtnConfirm;
+            instancedPlaceable.OnStopUsingMe -= StopUsingPlaceable;
+        }
     }
 
     private void EnableBtnConfirm(bool enable)
@@ -76,6 +89,18 @@ public class UIManager : MonoBehaviour
         if (BtnConfirm != null) {
             BtnConfirm.SetActive(enable);
         }
+    }
+
+    private void HandleBtnConfirm()
+    {
+        if (instancedPlaceable != null) {
+            EnableBtnConfirm(instancedPlaceable.IsValidPosition);
+        }
+    }
+
+    private void StopUsingPlaceable()
+    {
+        UnsuscribeToPlaceableEvents();
     }
 
     private void EnableBtnsSpawn(bool enable)
