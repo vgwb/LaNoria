@@ -7,10 +7,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using vgwb;
 
-public class SpawnObjectUI : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     #region Var
-    public Transform SpawnPoint;
+    public LeanSpawnWithFinger Spawner;
     public TMP_Text ChoiceTxt;
     public GameObject BtnConfirm;
     public List<Button> BtnsSpawn;
@@ -24,20 +24,26 @@ public class SpawnObjectUI : MonoBehaviour
         EnableBtnConfirm(false);
         EnableBtnsSpawn(true);
         SetChoiceTxt("");
+        Spawner.OnSpawnedClone += OnPrefabSpawned;
+    }
+
+    private void OnDestroy()
+    {
+        Spawner.OnSpawnedClone -= OnPrefabSpawned;
     }
     #endregion
 
     #region Functions
-    public void SpawnPrefab(GameObject projectPrefab)
+    public void ChosePrefab(Transform placeablePrefab)
     {
-        if (projectPrefab != null && SpawnPoint != null) {
+        if (placeablePrefab != null && Spawner != null) {
             if (instancedPrefab != null) {
                 Destroy(instancedPrefab);
             }
-            instancedPrefab = Instantiate(projectPrefab);
-            instancedPrefab.transform.position = SpawnPoint.position;
+
+            Spawner.Prefab = placeablePrefab;
             EnableBtnConfirm(true);
-            SetChoiceTxt(projectPrefab.name);
+            SetChoiceTxt(placeablePrefab.name);
         }
     }
 
@@ -53,6 +59,16 @@ public class SpawnObjectUI : MonoBehaviour
 
         EnableBtnConfirm(false);
         EnableBtnsSpawn(true);
+    }
+
+    public void ResetDetailPanel()
+    {
+        Spawner.Prefab = null;
+    }
+
+    private void OnPrefabSpawned(GameObject clone)
+    {
+        instancedPrefab = clone;
     }
 
     private void EnableBtnConfirm(bool enable)
