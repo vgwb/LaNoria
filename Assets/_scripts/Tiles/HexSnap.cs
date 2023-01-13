@@ -8,7 +8,7 @@ namespace vgwb.lanoria
     [ExecuteInEditMode]
     public class HexSnap : MonoBehaviour
     {
-
+        public bool SnapToGrid = true;
         public bool SnapTo0Y = false;
         public bool ShowRange = false;
         public bool ShowNeighbours = false;
@@ -36,16 +36,19 @@ namespace vgwb.lanoria
 #if UNITY_EDITOR
         void Update()
         {
-            if (!Application.isPlaying) {
-                ApplyTransform();
+            if (SnapToGrid) {
+                if (!Application.isPlaying) {
+                    ApplyTransform();
+                }
             }
         }
 
         void OnDrawGizmosSelected()
         {
-            GUIStyle style = new GUIStyle();
+            var style = new GUIStyle();
             style.normal.textColor = Color.black;
             UnityEditor.Handles.Label(transform.position, hex.ToString(), style);
+
             if (ShowRange) {
                 Gizmos.color = Color.cyan;
                 foreach (HexUtils hex in HexUtils.Spiral(hex, minRadius, maxRadius)) {
