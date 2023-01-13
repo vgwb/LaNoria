@@ -912,11 +912,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: eb80fc5f-c71a-46f4-a104-ff98f02734aa
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: LaNoria
+  organizationId: video-games-without-borders
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
