@@ -1,9 +1,10 @@
+using vgwb.framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {

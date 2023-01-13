@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace vgwb.data
+namespace vgwb.lanoria
 {
-
-
-
 
     public class ProjectData : MonoBehaviour
     {

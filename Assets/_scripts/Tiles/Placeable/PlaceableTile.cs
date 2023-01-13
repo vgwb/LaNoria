@@ -1,9 +1,8 @@
-using vgwb.data;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     public class PlaceableTile : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace vgwb.utilities
+namespace vgwb.framework
 {
     public static class Log
     {

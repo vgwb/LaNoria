@@ -1,4 +1,4 @@
-﻿using vgwb.utilities;
+﻿using vgwb.framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     public interface IDefinition
     {

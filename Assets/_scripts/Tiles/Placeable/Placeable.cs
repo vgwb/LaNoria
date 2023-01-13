@@ -1,10 +1,9 @@
-using vgwb.data;
 using Lean.Touch;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     public class Placeable : MonoBehaviour
     {

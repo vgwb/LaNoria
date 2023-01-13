@@ -1,29 +1,32 @@
-using vgwb;
+using vgwb.framework;
 using Lean.Touch;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraManager : SingletonMonoBehaviour<CameraManager>
+namespace vgwb.lanoria
 {
-    #region Var
-    public Camera Cam;
-    public LeanMultiUpdate LeanUpdate;
-    #endregion
-
-    #region MonoB
-    protected override void Awake()
+    public class CameraManager : SingletonMonoBehaviour<CameraManager>
     {
-        base.Awake();
+        #region Var
+        public Camera Cam;
+        public LeanMultiUpdate LeanUpdate;
+        #endregion
 
-        EnableRotationWithFingers(true);
-    }
-    #endregion
+        #region MonoB
+        protected override void Awake()
+        {
+            base.Awake();
 
-    #region Functions
-    public void EnableRotationWithFingers(bool enable)
-    {
-        LeanUpdate.enabled = enable;
+            EnableRotationWithFingers(true);
+        }
+        #endregion
+
+        #region Functions
+        public void EnableRotationWithFingers(bool enable)
+        {
+            LeanUpdate.enabled = enable;
+        }
+        #endregion
     }
-    #endregion
 }

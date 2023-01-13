@@ -1,8 +1,9 @@
+using vgwb.framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     [CreateAssetMenu(fileName = "AppSettings", menuName = "Scriptable Object/General/AppConfig", order = 1)]
     public class AppConfig : SingletonScriptableObject<AppConfig>

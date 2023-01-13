@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace vgwb.utilities
+namespace vgwb.framework
 {
     public static class StringUtilities
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine.Localization;
 
-namespace vgwb.utilities
+namespace vgwb.framework
 {
     [Serializable]
     public struct LocString

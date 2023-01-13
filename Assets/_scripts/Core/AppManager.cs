@@ -1,3 +1,4 @@
+using vgwb.framework;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     public class AppManager : SingletonMonoBehaviour<AppManager>
     {

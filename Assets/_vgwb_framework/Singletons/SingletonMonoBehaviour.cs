@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace vgwb
+namespace vgwb.framework
 {
     public class SingletonMonoBehaviour<T> : MonoBehaviour where T : Component
     {

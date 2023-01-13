@@ -1,5 +1,6 @@
+using vgwb.framework;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     public class Statics : SingletonMonoBehaviour<Statics>
     {

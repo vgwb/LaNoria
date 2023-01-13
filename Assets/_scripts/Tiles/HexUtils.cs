@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     [System.Serializable]
     public struct HexUtils

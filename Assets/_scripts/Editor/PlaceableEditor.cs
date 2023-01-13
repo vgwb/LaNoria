@@ -4,17 +4,20 @@ using UnityEditor;
 using UnityEngine;
 using vgwb;
 
-[CustomEditor(typeof(Placeable))]
-public class ProjectEditor : Editor
+namespace vgwb.lanoria
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(Placeable))]
+    public class ProjectEditor : Editor
     {
-        base.OnInspectorGUI();
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
 
-        var myScript = (Placeable)target;
+            var myScript = (Placeable)target;
 
-        if (GUILayout.Button("Init placeable")) {
-            myScript.InitPlaceable();
+            if (GUILayout.Button("Init placeable")) {
+                myScript.InitPlaceable();
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine.Serialization;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     [Serializable]
     public class AppSettings

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     [ExecuteInEditMode]
     public class HexSnap : MonoBehaviour

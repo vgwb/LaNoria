@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using vgwb;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     public class UIManager : MonoBehaviour
     {

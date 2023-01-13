@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ieedo
+namespace vgwb.lanoria
 {
 
     public class SoundManager : MonoBehaviour

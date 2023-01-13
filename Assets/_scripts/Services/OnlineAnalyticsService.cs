@@ -5,7 +5,7 @@ using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using Unity.Services.Analytics;
 
-namespace vgwb
+namespace vgwb.lanoria
 {
     public class OnlineAnalyticsService : MonoBehaviour
     {
