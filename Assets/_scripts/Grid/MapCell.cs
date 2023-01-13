@@ -4,15 +4,16 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class GridCell : MonoBehaviour
+    public class MapCell : MonoBehaviour
     {
-        // Start is called before the first frame update
+        public GameObject Prefab;
+        public GameObject Prop;
+
         void Start()
         {
 
         }
 
-        // Update is called once per frame
         void Update()
         {
 
