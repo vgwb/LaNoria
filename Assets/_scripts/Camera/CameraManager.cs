@@ -1,9 +1,10 @@
+using vgwb;
 using Lean.Touch;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraManager : SingletonMonoB<CameraManager>
+public class CameraManager : SingletonMonoBehaviour<CameraManager>
 {
     #region Var
     public Camera Cam;

@@ -1,4 +1,4 @@
-using Core;
+using vgwb.data;
 using Lean.Touch;
 using System.Collections;
 using System.Collections.Generic;
@@ -173,7 +173,7 @@ namespace vgwb
         public void RiseUpTilesHeight()
         {
             if (TilesContainer != null) {
-                Vector3 delta = Vector3.up * AppSettings.I.DragYOffset;
+                Vector3 delta = Vector3.up * AppConfig.I.DragYOffset;
                 TilesContainer.transform.position += delta;
             }
         }
@@ -181,7 +181,7 @@ namespace vgwb
         public void LowerDownTilesHeight()
         {
             if (TilesContainer != null) {
-                Vector3 delta = Vector3.up * AppSettings.I.DragYOffset;
+                Vector3 delta = Vector3.up * AppConfig.I.DragYOffset;
                 TilesContainer.transform.position -= delta;
             }
         }
@@ -237,13 +237,13 @@ namespace vgwb
 
         private void HandleInvalidPosition()
         {
-            var overlapColor = AppSettings.I.OverlapColor;
+            var overlapColor = AppConfig.I.OverlapColor;
             ChangeOutlineColor(overlapColor);
         }
 
         private void RestoreOutline()
         {
-            var movingColor = AppSettings.I.MovingColor;
+            var movingColor = AppConfig.I.MovingColor;
             ChangeOutlineColor(movingColor);
         }
 
@@ -266,9 +266,9 @@ namespace vgwb
 
         private void SetupOutline()
         {
-            OutlineHandler.OutlineColor = AppSettings.I.MovingColor;
-            OutlineHandler.OutlineWidth = AppSettings.I.OutlineWidth;
-            OutlineHandler.OutlineMode = AppSettings.I.PlaceableOutlineMode;
+            OutlineHandler.OutlineColor = AppConfig.I.MovingColor;
+            OutlineHandler.OutlineWidth = AppConfig.I.OutlineWidth;
+            OutlineHandler.OutlineMode = AppConfig.I.PlaceableOutlineMode;
         }
         #endregion
     }

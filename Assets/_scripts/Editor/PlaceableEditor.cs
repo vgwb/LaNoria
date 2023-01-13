@@ -11,7 +11,7 @@ public class ProjectEditor : Editor
     {
         base.OnInspectorGUI();
 
-        Placeable myScript = (Placeable)target;
+        var myScript = (Placeable)target;
 
         if (GUILayout.Button("Init placeable")) {
             myScript.InitPlaceable();

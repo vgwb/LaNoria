@@ -10,9 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2e4cac8b0e02af4ebfdde70ff56454a, type: 3}
-  m_Name: AppSettings
+  m_Name: AppConfig
   m_EditorClassIdentifier: 
+  Version: 1
+  UrlSupportWebsite: 
+  AnalyticsEnabled: 0
+  AnalyticsDevEnv: 0
+  DebugMode: 0
   MovingColor: {r: 0.4745098, g: 0.8392157, b: 1, a: 1}
   OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
   PlaceableOutlineMode: 1
   OutlineWidth: 8
+  DragYOffset: 0.2
