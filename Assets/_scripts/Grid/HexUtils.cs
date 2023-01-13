@@ -6,6 +6,9 @@ namespace vgwb.lanoria
     [System.Serializable]
     public struct HexUtils
     {
+        public int q;
+        public int r;
+
         public static float RADIUS = 1f;
         public static Vector2 Q_BASIS = new Vector2(2f, 0);
         public static Vector2 R_BASIS = new Vector2(1f, Mathf.Sqrt(3));
@@ -70,8 +73,6 @@ namespace vgwb.lanoria
             }
         }
 
-        public int q;
-        public int r;
 
         public HexUtils(float q, float r) :
             this(Mathf.RoundToInt(q), Mathf.RoundToInt(r))

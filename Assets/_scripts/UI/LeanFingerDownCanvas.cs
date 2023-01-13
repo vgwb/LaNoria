@@ -6,7 +6,6 @@ namespace Lean.Touch
     /// NOTE: This requires you to enable the RaycastTarget setting on your UI graphic.</summary>
     [RequireComponent(typeof(RectTransform))]
     [HelpURL(LeanTouch.PlusHelpUrlPrefix + "LeanFingerDownCanvas")]
-    [AddComponentMenu(LeanTouch.ComponentPathPrefix + "Finger Down Canvas")]
     public class LeanFingerDownCanvas : LeanFingerDown
     {
         protected override void HandleFingerDown(LeanFinger finger)

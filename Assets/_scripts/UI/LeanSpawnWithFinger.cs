@@ -8,7 +8,6 @@ namespace Lean.Touch
     /// <summary>This component allows you to spawn a prefab at a point relative to a finger and the specified ScreenDepth.
     /// NOTE: To trigger the prefab spawn you must call the Spawn method on this component from somewhere.</summary>
     [HelpURL(LeanTouch.HelpUrlPrefix + "LeanSpawnWithFinger")]
-    [AddComponentMenu(LeanTouch.ComponentPathPrefix + "Spawn With Finger")]
     public class LeanSpawnWithFinger : MonoBehaviour
     {
         public enum RotateType

@@ -18,7 +18,6 @@ namespace vgwb.lanoria
         public int maxRadius;
 
         public HexUtils hex => HexUtils.FromWorld(transform.position);
-
         public HexUtils localHex => HexUtils.FromWorld(transform.localPosition);
 
         public void ApplyTransform()
