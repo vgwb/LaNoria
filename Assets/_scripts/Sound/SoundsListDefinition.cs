@@ -17,7 +17,7 @@ namespace vgwb.lanoria
         score = 7
     }
 
-    [CreateAssetMenu(menuName = "Ieedo/Sounds List")]
+    [CreateAssetMenu(menuName = "VGWB/Sounds List")]
     public class SoundsListDefinition : ScriptableObject
     {
         public List<SoundItem> Sounds;

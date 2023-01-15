@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: ProjectsData
+  m_EditorClassIdentifier: Assembly-CSharp:vgwb.lanoria:ProjectsData
+  Projects:
+  - Id: 1
+    Model: P02
+    Sequence: 0200000004000000
+    Title: Project 1
+    Description: good project
+    Image: 
+  - Id: 2
+    Model: P03
+    Sequence: 030000000400000001000000
+    Title: Project 2
+    Description: 
+    Image: 
+  - Id: 3
+    Model: P13
+    Sequence: 020000000400000001000000
+    Title: Project 3
+    Description: 
+    Image: 
