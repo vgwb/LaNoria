@@ -5,9 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using vgwb;
+using vgwb.lanoria;
 
-namespace vgwb.lanoria
+namespace vgwb.lanoriaDEV
 {
     public class UIManager : MonoBehaviour
     {
