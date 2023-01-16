@@ -1,4 +1,10 @@
-# Programming todo
+# Dev Docs
+
+## ThirdParty
+
+### NaughtyAttributes
+Tons of Editor Ispectors extensiones.. docs: 
+<https://github.com/dbrizov/NaughtyAttributes>
 
 ## Unity project setup
 
