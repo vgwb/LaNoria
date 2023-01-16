@@ -8,26 +8,8 @@ namespace vgwb.lanoria
 {
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {
-        #region Struct
-
-        [System.Serializable]
-        public class CellInfo
-        {
-            public bool Occupied;
-            public GameObject CellObj;
-            public Vector3 Position;
-
-            public CellInfo(bool occupied, GameObject cellObj, Vector3 pos)
-            {
-                Occupied = occupied;
-                CellObj = cellObj;
-                Position = pos;
-            }
-        }
-        #endregion
-
         #region Var
-        public List<CellInfo> Cells;
+        public List<GridCell> Cells;
         #endregion
 
         #region MonoB
@@ -35,7 +17,9 @@ namespace vgwb.lanoria
         {
             base.Awake();
 
-            InitCells();
+            if (Cells.Count == 0) {
+                InitCells();
+            }
         }
 
         void Update()
@@ -45,23 +29,22 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
-        private void InitCells()
+        public void InitCells()
         {
+            Cells.Clear();
             int childs = transform.childCount;
             for (int i = 0; i < childs; i++) {
-                var obj = transform.GetChild(i).gameObject;
-                var box = obj.AddComponent<BoxCollider>();
-                box.center = new Vector3(0.0f, 0.5f, 0.0f);
-                Vector3 hexPos = RetrieveHexPos(obj.transform.position);
-                CellInfo info = new CellInfo(i == 0 ? true : false, obj, hexPos);
-                Cells.Add(info);
+                var cellObj = transform.GetChild(i).gameObject;
+                var gridCell = cellObj.GetComponent<GridCell>();
+                gridCell.Init(i == 0 ? true : false);  // the first one is Malaga
+                Cells.Add(gridCell);
             }
         }
 
         public bool IsCellOccupiedByPos(Vector3 pos)
         {
             Vector3 hexPos = RetrieveHexPos(pos);
-            var cell = Cells.Find(x => x.Position == hexPos);
+            var cell = Cells.Find(x => x.HexPosition == hexPos);
             if (cell != null) {
                 return cell.Occupied;
             }
@@ -72,7 +55,7 @@ namespace vgwb.lanoria
         public bool IsOutOfMap(Vector3 pos)
         {
             Vector3 hexPos = RetrieveHexPos(pos);
-            var cell = Cells.Find(x => x.Position == hexPos);
+            var cell = Cells.Find(x => x.HexPosition == hexPos);
 
             return cell == null;
         }
@@ -80,7 +63,7 @@ namespace vgwb.lanoria
         public void SetCellAsOccupiedByPosition(Vector3 pos)
         {
             Vector3 hexPos = RetrieveHexPos(pos);
-            var cell = Cells.Find(x => x.Position == hexPos);
+            var cell = Cells.Find(x => x.HexPosition == hexPos);
             if (cell != null) {
                 cell.Occupied = true;
             }
@@ -91,10 +74,10 @@ namespace vgwb.lanoria
             Vector3 result = Vector3.negativeInfinity;
             float distance = float.PositiveInfinity;
             foreach (var cell in Cells) {
-                float d = Vector3.Distance(pos, cell.Position);
+                float d = Vector3.Distance(pos, cell.HexPosition);
                 if (d < distance) {
                     distance = d;
-                    result = cell.Position;
+                    result = cell.HexPosition;
                 }
             }
 

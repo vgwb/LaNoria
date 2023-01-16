@@ -229,11 +229,6 @@ namespace vgwb.lanoria
             return result;
         }
 
-        private void SnapToBorders()
-        {
-
-        }
-
         private void HandleInvalidPosition()
         {
             var overlapColor = AppConfig.I.OverlapColor;
