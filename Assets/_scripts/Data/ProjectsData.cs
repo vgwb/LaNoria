@@ -13,12 +13,6 @@ namespace vgwb.lanoria
         People = 4
     }
 
-    [CreateAssetMenu(menuName = "VGWB/Projects Data")]
-    public class ProjectsData : ScriptableObject
-    {
-        public List<ProjectData> Projects;
-    }
-
     [Serializable]
     public class ProjectData
     {
@@ -28,5 +22,11 @@ namespace vgwb.lanoria
         public string Title;
         public string Description;
         public string Image;
+    }
+
+    [CreateAssetMenu(menuName = "VGWB/Projects Data")]
+    public class ProjectsData : ScriptableObject
+    {
+        public List<ProjectData> Projects;
     }
 }

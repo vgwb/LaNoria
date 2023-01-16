@@ -9,25 +9,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 18810bf1d737740ecacf984144ad3204, type: 3}
   m_Name: ProjectsData
   m_EditorClassIdentifier: Assembly-CSharp:vgwb.lanoria:ProjectsData
   Projects:
   - Id: 1
-    Model: P02
-    Sequence: 0200000004000000
-    Title: Project 1
-    Description: good project
-    Image: 
+    Model: P01
+    Sequence: 0300000004000000
+    Title: "Crafteando: educaci\xF3n, participaci\xF3n y territorio"
+    Description: "Crafteando es un proyecto orientado al mapeo de nuestro entorno
+      cercano, con el objetivo de desarrollar propuestas de mejora del espacio p\xFAblico.
+      Este proyecto a\xFAna la intervenci\xF3n sobre el territorio y el contacto
+      directo con nuestras realidades cercanas con la posibilidad de imaginar y dise\xF1ar
+      espacios alternativos con herramientas digitales como el videojuego Minecraf,
+      con \xE9l se puede construir y dise\xF1ar cualquier tipo de espacio para devolverlos
+      al territorio en forma de propuestas. A trav\xE9s de talleres participativos
+      destinados a j\xF3venes en los municipios, se pretende atravesar la barrera
+      digital-anal\xF3gica incidiendo sobre nuestra forma de pensar el espacio que
+      nos rodea y permiti\xE9ndonos plantearnos el entorno y hacer propuestas sobre
+      la realidad de nuestros pueblos. En este proyecto colaboran DYA-R y Arrabal
+      AID con la posibilidad de que otras entidades e instituciones participen."
+    Image: craftando
   - Id: 2
-    Model: P03
-    Sequence: 030000000400000001000000
-    Title: Project 2
-    Description: 
+    Model: P02
+    Sequence: 0400000003000000
+    Title: "\xC1ula Vivero La Salvia"
+    Description: "El Aula Vivero la Salvia es un espacio natural ubicado dentro del
+      Centro de Innovaci\xF3n Social La Noria donde la asociaci\xF3n Ecohuerto el
+      Rabanito forma mediante cursos, talleres y jornadas en agroecolog\xEDa, huertos
+      urbanos y consumo responsable a colectivos diversos. El espacio cuenta con
+      una zona de huerta urbana, un jard\xEDn de plantas medicinales, un gran invernadero,
+      una zona de compostaje y otra de bioconstrucci\xF3n entre numerosas plantas
+      y bichos."
     Image: 
   - Id: 3
-    Model: P13
-    Sequence: 020000000400000001000000
+    Model: P03
+    Sequence: 030000000100000000000000
     Title: Project 3
     Description: 
     Image: 
