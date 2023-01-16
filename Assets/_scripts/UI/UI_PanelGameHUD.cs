@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class UI_game_hud : MonoBehaviour
+    public class UI_PanelGameHUD : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()

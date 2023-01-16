@@ -13,7 +13,7 @@ namespace vgwb.lanoria
         public AppConfig ApplicationConfig;
         public Image LoadingObscurer;
         public DataManager DB;
-
+        public UI_manager UI_Manager;
         // protected override void Init()
         // {
         //     if (LoadingObscurer != null)

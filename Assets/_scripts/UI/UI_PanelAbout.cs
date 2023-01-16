@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class UI_panel_about : MonoBehaviour
+    public class UI_PanelAbout : MonoBehaviour
     {
         public GameObject ProjectsContainer;
         public GameObject ProjectCardPrefab;
