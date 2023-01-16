@@ -2441,6 +2441,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5068229777665841356, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
   m_PrefabInstance: {fileID: 706724572}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &715124301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715124303}
+  - component: {fileID: 715124302}
+  m_Layer: 0
+  m_Name: PlayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &715124302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715124301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cbe59d60c96dc34183faa5867703dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIGame: {fileID: 1515790041}
+  Spawner: {fileID: 2107731867}
+  FingerCanvas: {fileID: 1923427418}
+--- !u!4 &715124303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715124301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.5, y: 268.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &716529077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5224,6 +5271,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 308841110, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 308841110, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 308841110, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 715124302}
+    - target: {fileID: 308841110, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 308841110, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChosePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 308841110, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: vgwb.lanoria.GameplayManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 308841110, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 5976312339843145885, guid: 2934fa9d86f0c7044a712e7f45fb51c1, type: 3}
+    - target: {fileID: 308841110, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 659537633, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5248,6 +5327,66 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 659537634, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 659537634, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 659537634, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 715124302}
+    - target: {fileID: 659537634, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 659537634, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChosePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 659537634, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: vgwb.lanoria.GameplayManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 659537634, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3604787127280235150, guid: 0404aabfd67072242810eb61e8834eee, type: 3}
+    - target: {fileID: 659537634, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555069394, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555069394, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555069394, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 715124302}
+    - target: {fileID: 1555069394, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555069394, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConfirmProject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555069394, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: vgwb.lanoria.GameplayManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555069394, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1559409816, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5272,6 +5411,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1559409817, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559409817, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559409817, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 715124302}
+    - target: {fileID: 1559409817, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559409817, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChosePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559409817, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: vgwb.lanoria.GameplayManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559409817, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 5093536028753083324, guid: 5e37be18d63fc6a469ae1ce02ceda20f, type: 3}
+    - target: {fileID: 1559409817, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1840761094, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5295,6 +5466,38 @@ PrefabInstance:
     - target: {fileID: 1840761094, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840761095, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840761095, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840761095, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 715124302}
+    - target: {fileID: 1840761095, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840761095, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChosePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840761095, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: vgwb.lanoria.GameplayManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840761095, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 7131492775851823163, guid: fa393b9dbf06ce84ba1981ac8f537607, type: 3}
+    - target: {fileID: 1840761095, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5619242593406435912, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_Name
@@ -6743,6 +6946,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5068229777665841356, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
   m_PrefabInstance: {fileID: 1922511490}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1923427418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1391860328, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+  m_PrefabInstance: {fileID: 1515790040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53838f4955091ce45b598e500c35f86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1928037718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7847,6 +8061,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4495419392491572234, guid: b84a0942add6843938dc6e0f8635a756, type: 3}
   m_PrefabInstance: {fileID: 2106161516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107731867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9088964268417771431, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+  m_PrefabInstance: {fileID: 1515790040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791910dcf5d54764ba5dd60f4c6dac03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2118129423
 PrefabInstance:
   m_ObjectHideFlags: 0

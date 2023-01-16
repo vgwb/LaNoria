@@ -121,19 +121,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 308841111}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5619242593406435956}
-        m_TargetAssemblyTypeName: vgwb.lanoria.UI_PanelGameHUD, Assembly-CSharp
-        m_MethodName: ChosePrefab
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 5976312339843145885, guid: 2934fa9d86f0c7044a712e7f45fb51c1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &329810850
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,19 +455,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 659537635}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5619242593406435956}
-        m_TargetAssemblyTypeName: vgwb.lanoria.UI_PanelGameHUD, Assembly-CSharp
-        m_MethodName: ChosePrefab
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 3604787127280235150, guid: 0404aabfd67072242810eb61e8834eee, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &730976561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,19 +1103,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1555069395}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5619242593406435956}
-        m_TargetAssemblyTypeName: vgwb.lanoria.UI_PanelGameHUD, Assembly-CSharp
-        m_MethodName: ConfirmProject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1559409815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,19 +1225,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1559409818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5619242593406435956}
-        m_TargetAssemblyTypeName: vgwb.lanoria.UI_PanelGameHUD, Assembly-CSharp
-        m_MethodName: ChosePrefab
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 5093536028753083324, guid: 5e37be18d63fc6a469ae1ce02ceda20f, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1840761093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,19 +1347,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1840761096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5619242593406435956}
-        m_TargetAssemblyTypeName: vgwb.lanoria.UI_PanelGameHUD, Assembly-CSharp
-        m_MethodName: ChosePrefab
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7131492775851823163, guid: fa393b9dbf06ce84ba1981ac8f537607, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2012123483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,8 +2118,6 @@ MonoBehaviour:
   PanelCards: {fileID: 5619242592257613303}
   PanelCurrentProject: {fileID: 5619242593473234694}
   ProjectTitle: {fileID: 774309567901618780}
-  Spawner: {fileID: 9088964268417771431}
-  FingerCanvas: {fileID: 1391860328}
   PanelConfirm: {fileID: 329810850}
 --- !u!222 &5619242593406435957
 CanvasRenderer:
