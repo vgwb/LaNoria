@@ -36,7 +36,7 @@ namespace vgwb.lanoria
             for (int i = 0; i < childs; i++) {
                 var cellObj = transform.GetChild(i).gameObject;
                 var gridCell = cellObj.GetComponent<GridCell>();
-                gridCell.Init(i == 0 ? true : false);  // the first one is Malaga
+                gridCell.Init(i == 0 ? true : false);  // the first one is the capital
                 Cells.Add(gridCell);
             }
         }

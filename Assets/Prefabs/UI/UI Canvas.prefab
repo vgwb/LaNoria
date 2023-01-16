@@ -2015,6 +2015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64e140a145134b14b9c6a8fcdf9d808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelHUD: {fileID: 0}
+  PanelCards: {fileID: 0}
+  PanelCurrentProject: {fileID: 0}
+  ProjectTitle: {fileID: 0}
+  Spawner: {fileID: 0}
+  PanelConfirm: {fileID: 0}
 --- !u!222 &4281143646471477631
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2833,6 +2839,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c31821795ad4c549cc0e6b4a455f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelMenu: {fileID: 0}
+  PanelAbout: {fileID: 0}
+  PanelGameHUD: {fileID: 0}
+  PanelProjectDetail: {fileID: 0}
+  PanelOptions: {fileID: 0}
 --- !u!223 &4281143647077483684
 Canvas:
   m_ObjectHideFlags: 0
