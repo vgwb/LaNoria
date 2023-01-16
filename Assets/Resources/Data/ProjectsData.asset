@@ -29,7 +29,7 @@ MonoBehaviour:
       nos rodea y permiti\xE9ndonos plantearnos el entorno y hacer propuestas sobre
       la realidad de nuestros pueblos. En este proyecto colaboran DYA-R y Arrabal
       AID con la posibilidad de que otras entidades e instituciones participen."
-    Image: craftando
+    Image: {fileID: 2800000, guid: a355b358a2c81400ba1d4ec6f51b9704, type: 3}
   - Id: 2
     Model: P02
     Sequence: 0400000003000000
@@ -41,10 +41,10 @@ MonoBehaviour:
       una zona de huerta urbana, un jard\xEDn de plantas medicinales, un gran invernadero,
       una zona de compostaje y otra de bioconstrucci\xF3n entre numerosas plantas
       y bichos."
-    Image: 
+    Image: {fileID: 2800000, guid: 76ce0f5601ff546a9a398edac5df27cd, type: 3}
   - Id: 3
     Model: P03
     Sequence: 030000000100000000000000
     Title: Project 3
-    Description: 
-    Image: 
+    Description: description of this project
+    Image: {fileID: 0}

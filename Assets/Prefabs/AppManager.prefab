@@ -153,6 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7753285714682877559}
   - component: {fileID: 7753285714682877560}
+  - component: {fileID: 9170983364105901947}
   m_Layer: 0
   m_Name: AppManager
   m_TagString: Untagged
@@ -191,3 +192,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ApplicationConfig: {fileID: 11400000, guid: 040309ef49e246d489a94cc92ba53286, type: 2}
   LoadingObscurer: {fileID: 0}
+  DB: {fileID: 9170983364105901947}
+--- !u!114 &9170983364105901947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7753285714682877558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a30a14ba60f488792677c27fda2ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectsData: {fileID: 11400000, guid: d9b2dfa0456564fe2a97aca06bdb4b52, type: 2}

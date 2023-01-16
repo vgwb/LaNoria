@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace vgwb.lanoria
 {
@@ -21,7 +22,7 @@ namespace vgwb.lanoria
         public ProjectCategories[] Sequence;
         public string Title;
         public string Description;
-        public string Image;
+        public Texture Image;
     }
 
     [CreateAssetMenu(menuName = "VGWB/Projects Data")]

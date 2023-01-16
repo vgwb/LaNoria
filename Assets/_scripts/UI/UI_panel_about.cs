@@ -6,16 +6,23 @@ namespace vgwb.lanoria
 {
     public class UI_panel_about : MonoBehaviour
     {
-        // Start is called before the first frame update
+        public GameObject ProjectsContainer;
+        public GameObject ProjectCardPrefab;
+
         void Start()
         {
 
         }
 
-        // Update is called once per frame
-        void Update()
+        void OnEnable()
+        {
+            Debug.Log("CIAO CIAO");
+        }
+
+        void popupateProjects()
         {
 
         }
+
     }
 }

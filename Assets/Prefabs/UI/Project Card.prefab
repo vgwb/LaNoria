@@ -85,6 +85,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3533881453582318329}
+  - component: {fileID: 7631981566526349784}
   - component: {fileID: 6946009622770366870}
   - component: {fileID: 3220847653004563005}
   - component: {fileID: 297078156803485973}
@@ -117,6 +118,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &7631981566526349784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541602800570886400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e735b48c1fe245a88af18041c90c5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: {fileID: 8678320103715599988}
 --- !u!222 &6946009622770366870
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -268,7 +282,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -17,12 +17,9 @@ namespace vgwb.lanoria
         int Id { get; }
     }
 
-    public class DataManager
+    public class DataManager : MonoBehaviour
     {
-        public DataManager()
-        {
-            LoadDatabase();
-        }
+        public ProjectsData ProjectsData;
 
         #region Database
 
