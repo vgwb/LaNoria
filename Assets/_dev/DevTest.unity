@@ -3223,54 +3223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1867078421}
     m_Modifications:
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[2].ColorDebug.b
-      value: 0.05882353
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[2].ColorDebug.g
-      value: 0.81960785
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[2].ColorDebug.r
-      value: 0.44313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[4].ColorDebug.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[4].ColorDebug.g
-      value: 0.46666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[4].ColorDebug.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[5].ColorDebug.b
-      value: 0.94509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[5].ColorDebug.g
-      value: 0.1254902
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[5].ColorDebug.r
-      value: 0.07058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[9].ColorDebug.b
-      value: 0.59607846
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[9].ColorDebug.g
-      value: 0.07450981
-      objectReference: {fileID: 0}
-    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
-      propertyPath: SubRegionDebug.Array.data[9].ColorDebug.r
-      value: 0.39607844
-      objectReference: {fileID: 0}
     - target: {fileID: 2029244029550622160, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
       propertyPath: m_RootOrder
       value: 0
