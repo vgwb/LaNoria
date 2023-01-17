@@ -200,13 +200,13 @@ MonoBehaviour:
   - SubregionRef: 1
     ColorDebug: {r: 0.9056604, g: 0.07262372, b: 0.07262372, a: 1}
   - SubregionRef: 2
-    ColorDebug: {r: 0.06674972, g: 0.12632057, b: 0.9433962, a: 1}
+    ColorDebug: {r: 0.44313726, g: 0.81960785, b: 0.05882353, a: 1}
   - SubregionRef: 3
     ColorDebug: {r: 0.13207549, g: 0.1014029, b: 0.016820936, a: 1}
   - SubregionRef: 4
-    ColorDebug: {r: 0.3966061, g: 0.075694196, b: 0.5943396, a: 1}
+    ColorDebug: {r: 1, g: 0.46666667, b: 0, a: 1}
   - SubregionRef: 5
-    ColorDebug: {r: 0.443329, g: 0.8207547, b: 0.058072258, a: 1}
+    ColorDebug: {r: 0.07058824, g: 0.1254902, b: 0.94509804, a: 1}
   - SubregionRef: 6
     ColorDebug: {r: 0.8773585, g: 0.09518514, b: 0.6844177, a: 1}
   - SubregionRef: 7
@@ -214,7 +214,7 @@ MonoBehaviour:
   - SubregionRef: 8
     ColorDebug: {r: 1, g: 0.989607, b: 0, a: 1}
   - SubregionRef: 9
-    ColorDebug: {r: 1, g: 0.46619305, b: 0, a: 1}
+    ColorDebug: {r: 0.39607844, g: 0.07450981, b: 0.59607846, a: 1}
   - SubregionRef: 10
     ColorDebug: {r: 0, g: 0.2924528, b: 0.22822788, a: 1}
 --- !u!1001 &2029244029436289826
