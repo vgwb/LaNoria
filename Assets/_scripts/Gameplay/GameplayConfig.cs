@@ -15,6 +15,13 @@ namespace vgwb.lanoria
             public string Key;
             public GameObject Prefab;
         }
+
+        [System.Serializable]
+        public struct CategoryToColor<T>
+        {
+            public T Category;
+            public Color ColorToUse;
+        }
         #endregion
 
         #region Var
@@ -26,10 +33,8 @@ namespace vgwb.lanoria
         public float DragYOffset = 0.2f;
         public List<ModelKeyToPrefab> ProjectPrefabsMap;
         [Header("Project Setup")]
-        public Color ClimateColor;
-        public Color EqualityColor;
-        public Color TechColor;
-        public Color DepopulationColor;
+        public List<CategoryToColor<ProjectCategories>> CategoryColorsMap;
+        public Color BlankColor = Color.white;
         [Header("Drawing Rules")]
         public int CardToDraw = 4;
         #endregion
@@ -40,6 +45,13 @@ namespace vgwb.lanoria
             var tuple = ProjectPrefabsMap.Find(x => x.Key == key);
 
             return tuple.Prefab;
+        }
+
+        public Color GetCategoryColorsByType(ProjectCategories category)
+        {
+            var tuple = CategoryColorsMap.Find(x => x.Category == category);
+
+            return tuple.ColorToUse;
         }
         #endregion
     }

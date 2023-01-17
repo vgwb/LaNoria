@@ -11,7 +11,7 @@ namespace vgwb.lanoria
         public bool ShowPivot = false;
         public GameObject Pivot;
         public GameObject TilesContainer;
-        public List<PlaceableTile> Tiles;
+        public List<PlaceableCell> Tiles;
         public Outline OutlineHandler;
         [Header("Lean components")]
         public LeanDragCamera LeanCameraComp;
@@ -160,9 +160,9 @@ namespace vgwb.lanoria
             for (int i = 0; i < childs; i++) {
                 var child = TilesContainer.transform.GetChild(i).gameObject;
                 string childName = child.name.ToLower();
-                var tile = child.GetComponent<PlaceableTile>();
+                var tile = child.GetComponent<PlaceableCell>();
                 if (tile == null) {
-                    tile = child.AddComponent<PlaceableTile>();
+                    tile = child.AddComponent<PlaceableCell>();
                 }
                 tile.Init();
                 Tiles.Add(tile);

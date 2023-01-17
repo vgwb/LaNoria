@@ -42,3 +42,14 @@ MonoBehaviour:
   EqualityColor: {r: 0.5058824, g: 0.13725491, b: 1, a: 1}
   TechColor: {r: 1, g: 0.5372549, b: 0.019607844, a: 1}
   DepopulationColor: {r: 1, g: 0.2509804, b: 0.77254903, a: 1}
+  CategoryColorsMap:
+  - Category: 1
+    ColorToUse: {r: 0, g: 0.7529412, b: 0.5294118, a: 1}
+  - Category: 2
+    ColorToUse: {r: 0.5058824, g: 0.13725491, b: 1, a: 1}
+  - Category: 3
+    ColorToUse: {r: 1, g: 0.5372549, b: 0.019607844, a: 1}
+  - Category: 4
+    ColorToUse: {r: 1, g: 0.2509804, b: 0.77254903, a: 1}
+  BlankColor: {r: 1, g: 1, b: 1, a: 1}
+  CardToDraw: 4

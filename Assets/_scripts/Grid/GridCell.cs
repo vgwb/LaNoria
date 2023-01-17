@@ -4,26 +4,10 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class GridCell : MonoBehaviour
+    public class GridCell : GenericCell
     {
         #region Var
         public bool Occupied;
-        [SerializeField] private HexSnap hexHandler;
-        #endregion
-
-        #region Attributes
-        public Vector3 HexPosition
-        {
-            get {
-                if (hexHandler != null) {
-                    return hexHandler.hex.ToWorld(0.0f);
-                }
-
-                return Vector3.negativeInfinity;
-            }
-
-            set { }
-        }
         #endregion
 
         #region MonoB
@@ -32,11 +16,6 @@ namespace vgwb.lanoria
             if (hexHandler == null) {
                 hexHandler = GetComponent<HexSnap>();
             }
-        }
-
-        void Update()
-        {
-
         }
         #endregion
 

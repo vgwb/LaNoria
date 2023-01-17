@@ -4,27 +4,8 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class PlaceableTile : MonoBehaviour
+    public class PlaceableCell : GenericCell
     {
-        #region Var
-        [SerializeField] private HexSnap hexHandler;
-        #endregion
-
-        #region Attributes
-        public Vector3 HexPosition
-        {
-            get {
-                if (hexHandler != null) {
-                    return hexHandler.hex.ToWorld(0.0f);
-                }
-
-                return Vector3.negativeInfinity;
-            }
-
-            set { }
-        }
-        #endregion
-
         #region MonoB
         private void Start()
         {
@@ -39,6 +20,11 @@ namespace vgwb.lanoria
             if (hexHandler == null) {
                 hexHandler = gameObject.AddComponent<HexSnap>();
             }
+        }
+
+        public void SetupCategory(ProjectCategories newCategory)
+        {
+            category = newCategory;
         }
         #endregion
     }
