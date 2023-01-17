@@ -10,16 +10,15 @@ namespace vgwb.lanoria
         public GameplayManager PlayManager;
         #endregion
 
-        // Start is called before the first frame update
+        #region MonoB
         void Start()
         {
             //card.SetCardEvents(() => PlayManager.ChosePrefab(t));
         }
+        #endregion
 
-        // Update is called once per frame
-        void Update()
-        {
+        #region Functions
 
-        }
-    } 
+        #endregion
+    }
 }

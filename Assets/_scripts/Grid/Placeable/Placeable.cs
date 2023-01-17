@@ -172,7 +172,7 @@ namespace vgwb.lanoria
         public void RiseUpTilesHeight()
         {
             if (TilesContainer != null) {
-                Vector3 delta = Vector3.up * AppConfig.I.DragYOffset;
+                Vector3 delta = Vector3.up * GameplayConfig.I.DragYOffset;
                 TilesContainer.transform.position += delta;
             }
         }
@@ -180,7 +180,7 @@ namespace vgwb.lanoria
         public void LowerDownTilesHeight()
         {
             if (TilesContainer != null) {
-                Vector3 delta = Vector3.up * AppConfig.I.DragYOffset;
+                Vector3 delta = Vector3.up * GameplayConfig.I.DragYOffset;
                 TilesContainer.transform.position -= delta;
             }
         }
@@ -231,13 +231,13 @@ namespace vgwb.lanoria
 
         private void HandleInvalidPosition()
         {
-            var overlapColor = AppConfig.I.OverlapColor;
+            var overlapColor = GameplayConfig.I.OverlapColor;
             ChangeOutlineColor(overlapColor);
         }
 
         private void RestoreOutline()
         {
-            var movingColor = AppConfig.I.MovingColor;
+            var movingColor = GameplayConfig.I.MovingColor;
             ChangeOutlineColor(movingColor);
         }
 
@@ -260,9 +260,9 @@ namespace vgwb.lanoria
 
         private void SetupOutline()
         {
-            OutlineHandler.OutlineColor = AppConfig.I.MovingColor;
-            OutlineHandler.OutlineWidth = AppConfig.I.OutlineWidth;
-            OutlineHandler.OutlineMode = AppConfig.I.PlaceableOutlineMode;
+            OutlineHandler.OutlineColor = GameplayConfig.I.MovingColor;
+            OutlineHandler.OutlineWidth = GameplayConfig.I.OutlineWidth;
+            OutlineHandler.OutlineMode = GameplayConfig.I.PlaceableOutlineMode;
         }
         #endregion
     }
