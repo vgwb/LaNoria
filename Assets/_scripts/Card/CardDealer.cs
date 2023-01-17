@@ -7,18 +7,29 @@ namespace vgwb.lanoria
     public class CardDealer : MonoBehaviour
     {
         #region Var
-        public GameplayManager PlayManager;
+        [Header("Project Atlas")]
+        public ProjectsData ProjectAtlas;
         #endregion
 
         #region MonoB
-        void Start()
+        void Awake()
         {
-            //card.SetCardEvents(() => PlayManager.ChosePrefab(t));
+            if (ProjectAtlas == null) {
+                Debug.LogError("CardDealer - Awake(): no project atlas defined!");
+            }
         }
         #endregion
 
         #region Functions
+        public IEnumerable<ProjectData> DrawProjects()
+        {
+            int cardsNum = GameplayConfig.I.CardToDraw;
+            var projectsData = ProjectAtlas.PickRandomElements(cardsNum);
 
+            return projectsData;
+        }
+
+        
         #endregion
     }
 }

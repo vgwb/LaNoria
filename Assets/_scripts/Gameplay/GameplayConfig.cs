@@ -30,6 +30,17 @@ namespace vgwb.lanoria
         public Color EqualityColor;
         public Color TechColor;
         public Color DepopulationColor;
+        [Header("Drawing Rules")]
+        public int CardToDraw = 4;
+        #endregion
+
+        #region Functions
+        public GameObject GetProjectModelByKey(string key)
+        {
+            var tuple = ProjectPrefabsMap.Find(x => x.Key == key);
+
+            return tuple.Prefab;
+        }
         #endregion
     }
 }

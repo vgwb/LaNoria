@@ -19,7 +19,13 @@ namespace vgwb.lanoria
         public TMP_Text ProjectTitle;
         [Header("Panel Confirm Elements")]        
         public GameObject PanelConfirm;
-        
+        #endregion
+
+        #region Attributes
+        public Transform CardContainer
+        {
+            get { return PanelCards.transform; }
+        }
         #endregion
 
         #region MonoB
@@ -42,6 +48,18 @@ namespace vgwb.lanoria
             if (ProjectTitle != null) {
                 ProjectTitle.text = message;
             }
+        }
+
+        public List<GameObject> CardsInUI()
+        {
+            List<GameObject> cards = new List<GameObject>();
+            int cardsNum = PanelCards.transform.childCount;
+            for (int i = 0; i < cardsNum; i++) {
+                var child = PanelCards.transform.GetChild(i);
+                cards.Add(child.gameObject);
+            }
+
+            return cards;
         }
         #endregion
     }
