@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace vgwb.lanoria
@@ -8,14 +9,14 @@ namespace vgwb.lanoria
     {
         #region Var
         public bool Occupied;
+        public Region MyRegion = Region.Region_1;
+        public Subregion MySubregion = Subregion.No_Subregion;
         #endregion
 
         #region MonoB
-        void Awake()
+        protected override void Awake()
         {
-            if (hexHandler == null) {
-                hexHandler = GetComponent<HexSnap>();
-            }
+            base.Awake();
         }
         #endregion
 
@@ -23,7 +24,12 @@ namespace vgwb.lanoria
         public void Init(bool isOccupied)
         {
             Occupied = isOccupied;
-            hexHandler = GetComponent<HexSnap>();
+            BaseSetup();
+        }
+
+        public bool IsCapital()
+        {
+            return MySubregion == Subregion.Capital;
         }
         #endregion
     }

@@ -21,6 +21,7 @@ namespace vgwb.lanoria
         {
             public T Category;
             public Color ColorToUse;
+            public Material MaterialToUse;
         }
         #endregion
 
@@ -52,6 +53,13 @@ namespace vgwb.lanoria
             var tuple = CategoryColorsMap.Find(x => x.Category == category);
 
             return tuple.ColorToUse;
+        }
+
+        public Material GetCategoryMaterialByType(ProjectCategories category)
+        {
+            var tuple = CategoryColorsMap.Find(x => x.Category == category);
+
+            return tuple.MaterialToUse;
         }
         #endregion
     }

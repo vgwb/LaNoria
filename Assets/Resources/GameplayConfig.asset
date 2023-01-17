@@ -38,18 +38,39 @@ MonoBehaviour:
     Prefab: {fileID: 0}
   - Key: P45
     Prefab: {fileID: 0}
-  ClimateColor: {r: 0, g: 0.7529412, b: 0.5294118, a: 1}
-  EqualityColor: {r: 0.5058824, g: 0.13725491, b: 1, a: 1}
-  TechColor: {r: 1, g: 0.5372549, b: 0.019607844, a: 1}
-  DepopulationColor: {r: 1, g: 0.2509804, b: 0.77254903, a: 1}
   CategoryColorsMap:
   - Category: 1
     ColorToUse: {r: 0, g: 0.7529412, b: 0.5294118, a: 1}
+    MaterialToUse: {fileID: 2100000, guid: 32b0b392d2bd94fb5a88cee93836f4e2, type: 2}
   - Category: 2
     ColorToUse: {r: 0.5058824, g: 0.13725491, b: 1, a: 1}
+    MaterialToUse: {fileID: 2100000, guid: 6ed5e89af67e3441caff85c48bc7d19c, type: 2}
   - Category: 3
     ColorToUse: {r: 1, g: 0.5372549, b: 0.019607844, a: 1}
+    MaterialToUse: {fileID: 2100000, guid: 3db83cf33b8b34cf390905469e858736, type: 2}
   - Category: 4
     ColorToUse: {r: 1, g: 0.2509804, b: 0.77254903, a: 1}
+    MaterialToUse: {fileID: 2100000, guid: 273c3641cd04348389d4c85395c804fd, type: 2}
   BlankColor: {r: 1, g: 1, b: 1, a: 1}
   CardToDraw: 4
+  SubRegionDebug:
+  - SubregionRef: 0
+    ColorDebug: {r: 0, g: 0, b: 0, a: 0}
+  - SubregionRef: 1
+    ColorDebug: {r: 0.9056604, g: 0.07262372, b: 0.07262372, a: 1}
+  - SubregionRef: 2
+    ColorDebug: {r: 0.06674972, g: 0.12632057, b: 0.9433962, a: 1}
+  - SubregionRef: 3
+    ColorDebug: {r: 0.5283019, g: 0.40129536, b: 0.042363837, a: 1}
+  - SubregionRef: 4
+    ColorDebug: {r: 0.3966061, g: 0.075694196, b: 0.5943396, a: 1}
+  - SubregionRef: 5
+    ColorDebug: {r: 0.443329, g: 0.8207547, b: 0.058072258, a: 1}
+  - SubregionRef: 6
+    ColorDebug: {r: 0.8773585, g: 0.09518514, b: 0.6844177, a: 1}
+  - SubregionRef: 7
+    ColorDebug: {r: 0, g: 0.8773585, b: 0.8456081, a: 1}
+  - SubregionRef: 8
+    ColorDebug: {r: 1, g: 0.989607, b: 0, a: 1}
+  - SubregionRef: 9
+    ColorDebug: {r: 1, g: 0.46619305, b: 0, a: 1}

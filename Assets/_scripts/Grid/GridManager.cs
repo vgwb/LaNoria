@@ -6,10 +6,20 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
+    [System.Serializable]
+    public class SubregionColorDebug
+    {
+        public Subregion SubregionRef;
+        public Color ColorDebug;
+    }
+
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {
         #region Var
         public List<GridCell> Cells;
+        [Header("Subregion Debug")]
+        public bool ShowSubregionColor = false;
+        public List<SubregionColorDebug> SubRegionDebug;
         #endregion
 
         #region MonoB
@@ -17,18 +27,32 @@ namespace vgwb.lanoria
         {
             base.Awake();
 
-            if (Cells.Count == 0) {
-                InitCells();
-            }
+            ShowSubregionColor = false;
         }
 
-        void Update()
+        private void Start()
         {
+            Cells.Clear();
+            InitCells();
+        }
 
+        private void OnDrawGizmos()
+        {
+            if (ShowSubregionColor) {
+                foreach (var cell in Cells) {
+                    var tuple = SubRegionDebug.Find(x => x.SubregionRef == cell.MySubregion);
+                    var pos = cell.transform.position;
+                    if (tuple != null) {
+                        Gizmos.color = tuple.ColorDebug;
+                        Gizmos.DrawSphere(pos, 0.3f);
+                    }
+                }
+            }
         }
         #endregion
 
         #region Functions
+
         public void InitCells()
         {
             Cells.Clear();
@@ -36,7 +60,7 @@ namespace vgwb.lanoria
             for (int i = 0; i < childs; i++) {
                 var cellObj = transform.GetChild(i).gameObject;
                 var gridCell = cellObj.GetComponent<GridCell>();
-                gridCell.Init(i == 0 ? true : false);  // the first one is the capital
+                gridCell.Init(gridCell.IsCapital() ? true : false);
                 Cells.Add(gridCell);
             }
         }
@@ -49,7 +73,7 @@ namespace vgwb.lanoria
                 return cell.Occupied;
             }
 
-            return true; // outside of the map!!!
+            return true;
         }
 
         public bool IsOutOfMap(Vector3 pos)
@@ -60,12 +84,13 @@ namespace vgwb.lanoria
             return cell == null;
         }
 
-        public void SetCellAsOccupiedByPosition(Vector3 pos)
+        public void OccupyCellByPosition(Vector3 pos, ProjectCategories category)
         {
             Vector3 hexPos = RetrieveHexPos(pos);
             var cell = Cells.Find(x => x.HexPosition == hexPos);
             if (cell != null) {
                 cell.Occupied = true;
+                cell.SetupCategory(category);
             }
         }
 

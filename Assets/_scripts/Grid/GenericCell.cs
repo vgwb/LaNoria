@@ -10,6 +10,7 @@ namespace vgwb.lanoria
         #region Var
         [SerializeField] protected ProjectCategories category;
         [SerializeField] protected HexSnap hexHandler;
+        [SerializeField] protected MeshRenderer mesh;
         #endregion
 
         #region Attributes
@@ -41,6 +42,50 @@ namespace vgwb.lanoria
                 return Color.white;
             }
         }
+
+        public Material AssociatedMaterial
+        {
+            get {
+                if (GameplayConfig.I != null) {
+                    return GameplayConfig.I.GetCategoryMaterialByType(category);
+                }
+
+                return null;
+            }
+        }
         #endregion
-    } 
+
+        #region MonoB
+        protected virtual void Awake()
+        {
+            BaseSetup();
+        }
+        #endregion
+
+        #region Functions
+        public virtual void SetupCategory(ProjectCategories newCategory)
+        {
+            category = newCategory;
+        }
+
+        protected virtual void BaseSetup()
+        {
+            if (mesh == null) {
+                mesh = GetComponentInChildren<MeshRenderer>();
+            }
+
+            if (hexHandler == null) {
+                hexHandler = GetComponent<HexSnap>();
+            }
+        }
+
+        protected virtual void ApplyColor()
+        {
+            var mat = AssociatedMaterial;
+            if (mat != null) {
+                mesh.material = AssociatedMaterial;
+            }
+        }
+        #endregion
+    }
 }

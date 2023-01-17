@@ -142,7 +142,7 @@ namespace vgwb.lanoria
             var grid = GridManager.I;
             foreach (var tile in Tiles) {
                 Vector3 tilePos = tile.transform.position;
-                grid.SetCellAsOccupiedByPosition(tilePos);
+                grid.OccupyCellByPosition(tilePos, tile.Category);
             }
         }
 
