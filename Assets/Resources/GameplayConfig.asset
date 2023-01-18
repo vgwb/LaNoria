@@ -53,24 +53,61 @@ MonoBehaviour:
     MaterialToUse: {fileID: 2100000, guid: 273c3641cd04348389d4c85395c804fd, type: 2}
   BlankColor: {r: 1, g: 1, b: 1, a: 1}
   CardToDraw: 4
-  SubRegionDebug:
-  - SubregionRef: 0
-    ColorDebug: {r: 0, g: 0, b: 0, a: 0}
-  - SubregionRef: 1
-    ColorDebug: {r: 0.9056604, g: 0.07262372, b: 0.07262372, a: 1}
-  - SubregionRef: 2
-    ColorDebug: {r: 0.06674972, g: 0.12632057, b: 0.9433962, a: 1}
-  - SubregionRef: 3
-    ColorDebug: {r: 0.5283019, g: 0.40129536, b: 0.042363837, a: 1}
-  - SubregionRef: 4
-    ColorDebug: {r: 0.3966061, g: 0.075694196, b: 0.5943396, a: 1}
-  - SubregionRef: 5
-    ColorDebug: {r: 0.443329, g: 0.8207547, b: 0.058072258, a: 1}
-  - SubregionRef: 6
-    ColorDebug: {r: 0.8773585, g: 0.09518514, b: 0.6844177, a: 1}
-  - SubregionRef: 7
-    ColorDebug: {r: 0, g: 0.8773585, b: 0.8456081, a: 1}
-  - SubregionRef: 8
-    ColorDebug: {r: 1, g: 0.989607, b: 0, a: 1}
-  - SubregionRef: 9
-    ColorDebug: {r: 1, g: 0.46619305, b: 0, a: 1}
+  SubregionNames:
+  - MyEnum: 0
+    DisplayedName: No Subregion
+  - MyEnum: 1
+    DisplayedName: Costa del Sol
+  - MyEnum: 2
+    DisplayedName: Serrania de Ronda
+  - MyEnum: 3
+    DisplayedName: Sierra de las Nieves
+  - MyEnum: 4
+    DisplayedName: Guadallelba
+  - MyEnum: 5
+    DisplayedName: Comarqua de Antequera
+  - MyEnum: 6
+    DisplayedName: Valle del Guadal Horce
+  - MyEnum: 7
+    DisplayedName: Malaga
+  - MyEnum: 8
+    DisplayedName: Noroma
+  - MyEnum: 9
+    DisplayedName: Axarquia
+  - MyEnum: 10
+    DisplayedName: Capital
+  SubregionColors:
+  - Category: 0
+    ColorToUse: {r: 0, g: 0, b: 0, a: 0}
+    MaterialToUse: {fileID: 0}
+  - Category: 1
+    ColorToUse: {r: 0.90588236, g: 0.07450981, b: 0.07450981, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 2
+    ColorToUse: {r: 0.44313726, g: 0.81960785, b: 0.05882353, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 3
+    ColorToUse: {r: 0.13333334, g: 0.101960786, b: 0.015686275, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 4
+    ColorToUse: {r: 1, g: 0.46666667, b: 0, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 5
+    ColorToUse: {r: 0.07058824, g: 0.1254902, b: 0.94509804, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 6
+    ColorToUse: {r: 0.8784314, g: 0.09411765, b: 0.6862745, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 7
+    ColorToUse: {r: 0, g: 0.8784314, b: 0.84705883, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 8
+    ColorToUse: {r: 1, g: 0.9882353, b: 0, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 9
+    ColorToUse: {r: 0.39607844, g: 0.07450981, b: 0.59607846, a: 1}
+    MaterialToUse: {fileID: 0}
+  - Category: 10
+    ColorToUse: {r: 0, g: 0.29411766, b: 0.22745098, a: 1}
+    MaterialToUse: {fileID: 0}
+  LabelOffset: {x: 0.8, y: 0.8, z: 0}

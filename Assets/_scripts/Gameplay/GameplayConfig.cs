@@ -23,6 +23,12 @@ namespace vgwb.lanoria
             public Color ColorToUse;
             public Material MaterialToUse;
         }
+
+        [System.Serializable]
+        public struct EnumToDisplayedName<T> {
+            public T MyEnum;
+            public string DisplayedName;
+        }
         #endregion
 
         #region Var
@@ -38,6 +44,12 @@ namespace vgwb.lanoria
         public Color BlankColor = Color.white;
         [Header("Drawing Rules")]
         public int CardToDraw = 4;
+        [Header("Region Definition")]
+        public List<EnumToDisplayedName<Subregion>> SubregionNames;
+        public List<CategoryToColor<Subregion>> SubregionColors;
+        [Header("Region Definition")]
+        public Vector3 LabelDebugOffset;
+        public int LabelDebugFontSize = 15;
         #endregion
 
         #region Functions
@@ -60,6 +72,20 @@ namespace vgwb.lanoria
             var tuple = CategoryColorsMap.Find(x => x.Category == category);
 
             return tuple.MaterialToUse;
+        }
+
+        public string GetSubregionNameByEnum(Subregion subregion)
+        {
+            var tuple = SubregionNames.Find(x => x.MyEnum == subregion);
+
+            return tuple.DisplayedName;
+        }
+
+        public Color GetSubregionColorByEnum(Subregion subregion)
+        {
+            var tuple = SubregionColors.Find(x => x.Category == subregion);
+
+            return tuple.ColorToUse;
         }
         #endregion
     }

@@ -15,11 +15,19 @@ namespace vgwb.lanoria
 
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {
+        #region enum
+        public enum SubregionDebugType
+        {
+            None,
+            Color,
+            Name,
+            ColorAndName
+        }
+        #endregion
         #region Var
         public List<GridCell> Cells;
         [Header("Subregion Debug")]
-        public bool ShowSubregionColor = false;
-        public List<SubregionColorDebug> SubRegionDebug;
+        public SubregionDebugType ShowSubregionDebug = SubregionDebugType.None;
         #endregion
 
         #region MonoB
@@ -27,7 +35,7 @@ namespace vgwb.lanoria
         {
             base.Awake();
 
-            ShowSubregionColor = false;
+            ShowSubregionDebug = SubregionDebugType.None;
         }
 
         private void Start()
@@ -38,15 +46,8 @@ namespace vgwb.lanoria
 
         private void OnDrawGizmos()
         {
-            if (ShowSubregionColor) {
-                foreach (var cell in Cells) {
-                    var tuple = SubRegionDebug.Find(x => x.SubregionRef == cell.MySubregion);
-                    var pos = cell.transform.position;
-                    if (tuple != null) {
-                        Gizmos.color = tuple.ColorDebug;
-                        Gizmos.DrawSphere(pos, 0.3f);
-                    }
-                }
+            if (ShowSubregionDebug != SubregionDebugType.None) {
+                DrawSubregionInfo();
             }
         }
         #endregion
@@ -113,6 +114,49 @@ namespace vgwb.lanoria
         {
             var hex = HexUtils.FromWorld(pos);
             return hex.ToWorld(0f);
+        }
+
+        private void DrawSubregionInfo()
+        {
+            foreach (var cell in Cells) {
+                bool drawText = false;
+                bool drawColor = false;
+                switch (ShowSubregionDebug) {
+                    case SubregionDebugType.Color:
+                        drawColor = true;
+                        break;
+
+                    case SubregionDebugType.Name:
+                        drawText = true;
+                        break;
+
+                    case SubregionDebugType.ColorAndName:
+                        drawColor = true;
+                        drawText = true;
+                        break;
+
+                    default:
+                    case SubregionDebugType.None:
+                        break;
+                }
+
+                var pos = cell.transform.position;
+                var subregionColor = GameplayConfig.I.GetSubregionColorByEnum(cell.MySubregion);
+                if (drawText) {
+                    string subregionName = GameplayConfig.I.GetSubregionNameByEnum(cell.MySubregion);
+                    subregionName = subregionName.Replace(" ", "\n");
+                    var style = new GUIStyle();
+                    style.normal.textColor = subregionColor;
+                    style.fontSize = GameplayConfig.I.LabelDebugFontSize;
+                    Vector3 labelPos = pos + GameplayConfig.I.LabelDebugOffset;
+                    Handles.Label(labelPos, subregionName, style);
+                }
+
+                if (drawColor) {
+                    Gizmos.color = subregionColor;
+                    Gizmos.DrawSphere(pos, 0.3f);
+                }
+            }
         }
         #endregion
     }

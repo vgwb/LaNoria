@@ -3223,6 +3223,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1867078421}
     m_Modifications:
+    - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
+      propertyPath: ShowSubregionDebug
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2029244029550622160, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
       propertyPath: m_RootOrder
       value: 0
