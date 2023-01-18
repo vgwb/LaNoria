@@ -15,6 +15,12 @@ namespace vgwb.lanoria
         [Header("Cards")]
         public CardDealer Dealer;
         public GameObject CardPrefab;
+
+        public delegate void GameplayEvent();
+        public GameplayEvent OnProjectConfirmed;
+        public GameplayEvent OnHandDrawed;
+        public GameplayEvent OnProjectChosen;
+
         private Placeable instancedPlaceable;
         #endregion
 
@@ -51,6 +57,10 @@ namespace vgwb.lanoria
 
                 Spawner.Prefab = placeablePrefab;
                 UIGame.SetProjectTitle(projectData.Title);
+
+                if (OnProjectChosen != null) {
+                    OnProjectChosen();
+                }
             }
         }
 
@@ -65,6 +75,10 @@ namespace vgwb.lanoria
             UIGame.SetProjectTitle("");
             UIGame.EnableBtnConfirm(false);
             DrawNewHand();
+
+            if (OnProjectConfirmed != null) {
+                OnProjectConfirmed();
+            }
         }
 
         public void ResetDetailPanel()
@@ -150,6 +164,10 @@ namespace vgwb.lanoria
                     var associatedPrefab = GameplayConfig.I.GetProjectModelByKey(modelKey);
                     cardComp.SetCardEvents(() => ChosePrefab(associatedPrefab.transform, projectData));
                 }
+            }
+
+            if (OnHandDrawed != null) {
+                OnHandDrawed();
             }
         }
         #endregion
