@@ -8,6 +8,8 @@ namespace vgwb.lanoria
     {
         #region Var
         public int ActualScore;
+        public delegate void ScoreEvent(int score);
+        public ScoreEvent OnScoreUpdate;
         /// <summary>
         /// Subregions with all the colors.
         /// </summary>
@@ -18,21 +20,49 @@ namespace vgwb.lanoria
         private void Awake()
         {
             completedSubregion = new List<Subregion>();
+            ActualScore = 0;
         }
         #endregion
 
         #region Functions
         public void UpdateScore(Placeable placeable)
         {
-            int basicPoints = CalculateBasicPoints(placeable);
-            int transversalityPoints = CalculateTransversality(placeable);
+            int basicScore = CalculateBasicPoints(placeable);
+            int sinergyScore = CalculateSynergy(placeable);
+            int transversalityScore = CalculateTransversality(placeable);
+            int totalScore = basicScore + sinergyScore + transversalityScore;
+            ActualScore += totalScore;
+            Debug.Log("basic: "+basicScore+" sinergy: "+sinergyScore+" transversality: "+transversalityScore);
 
-            Debug.Log("basic points: "+basicPoints+" transversality: "+transversalityPoints);
+            if (OnScoreUpdate != null) {
+                OnScoreUpdate(ActualScore);
+            }
         }
 
         private int CalculateBasicPoints(Placeable placeable)
         {
             return placeable.CellsNum;
+        }
+
+        private int CalculateSynergy(Placeable placeable)
+        {
+            int resultingScore = 0;
+            var grid = GridManager.I;
+            var positionsToExclude = placeable.GetCellsHexPositions();
+
+            foreach (var cell in placeable.Cells) {
+                var neighbours = grid.GetNeighboursByPos(cell.HexPosition);
+                foreach (var neighbour in neighbours) {
+                    if (positionsToExclude.Contains(neighbour.HexPosition)) {
+                        continue;
+                    }
+                    if (neighbour.Category == cell.Category) {
+                        resultingScore++;
+                    }
+                }
+            }
+
+            return resultingScore;
         }
 
         private int CalculateTransversality(Placeable placeable)

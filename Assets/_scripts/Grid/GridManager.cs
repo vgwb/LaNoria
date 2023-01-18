@@ -127,6 +127,34 @@ namespace vgwb.lanoria
             return subregionCells;
         }
 
+        public List<GridCell> GetNeighboursByPos(Vector3 pos)
+        {
+            List<GridCell> subregionCells = new List<GridCell>();
+            var hex = HexUtils.FromWorld(pos);
+            foreach (var neighbour in hex.Neighbours()) {
+                var neighbourPos = neighbour.ToWorld();
+                if (!IsOutOfMap(neighbourPos)) {
+                    subregionCells.Add(GetCellByPosition(neighbourPos));
+                }
+            }
+
+            return subregionCells;
+        }
+
+        public HashSet<GridCell> GetNeighboursOfPlaceable(List<PlaceableCell> cells)
+        {
+            HashSet<GridCell> neighboursSet = new HashSet<GridCell>();
+            HashSet<GridCell> cellsToExclude = new HashSet<GridCell>();
+            foreach (var cell in cells) {
+                cellsToExclude.Add(GetCellByPosition(cell.HexPosition));
+                neighboursSet.UnionWith(GetNeighboursByPos(cell.HexPosition));
+            }
+
+            neighboursSet.ExceptWith(cellsToExclude);
+
+            return neighboursSet;
+        }
+
         private Vector3 RetrieveHexPos(Vector3 pos)
         {
             var hex = HexUtils.FromWorld(pos);
@@ -172,7 +200,8 @@ namespace vgwb.lanoria
 
                 if (drawColor) {
                     Gizmos.color = subregionColor;
-                    Gizmos.DrawSphere(pos, 0.3f);
+                    Vector3 gizmosPos = pos + Vector3.up * 0.2f;
+                    Gizmos.DrawSphere(gizmosPos, 0.3f);
                 }
             }
         }

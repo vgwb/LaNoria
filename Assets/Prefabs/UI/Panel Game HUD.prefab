@@ -1085,6 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelHUD: {fileID: 5619242592131529070}
+  ScoreTxt: {fileID: 5619242591862886333}
   PanelCards: {fileID: 5619242592257613303}
   PanelCurrentProject: {fileID: 5619242593473234694}
   ProjectTitle: {fileID: 774309567901618780}

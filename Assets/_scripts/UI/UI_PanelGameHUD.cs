@@ -12,6 +12,7 @@ namespace vgwb.lanoria
         #region Var
         [Header("Panel HUD Elements")]
         public GameObject PanelHUD;
+        public TMP_Text ScoreTxt;
         [Header("Panel Cards Elements")]
         public GameObject PanelCards;
         [Header("Panel Current Project Elements")]
@@ -48,6 +49,18 @@ namespace vgwb.lanoria
             if (ProjectTitle != null) {
                 ProjectTitle.text = message;
             }
+        }
+
+        public void SetScoreTxt(string newScore)
+        {
+            if (ScoreTxt != null) {
+                ScoreTxt.text = newScore;
+            }
+        }
+
+        public void SetScoreUI(int newScore)
+        {
+            SetScoreTxt(newScore.ToString());
         }
 
         public List<GameObject> CardsInUI()

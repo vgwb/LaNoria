@@ -43,6 +43,7 @@ namespace vgwb.lanoria
 
         private void Start()
         {
+            UIGame.SetScoreUI(0);
             DrawNewHand();
         }
 
@@ -81,6 +82,7 @@ namespace vgwb.lanoria
                 OnProjectConfirmed(instancedPlaceable);
             }
 
+            Scorer.UpdateScore(instancedPlaceable);
             instancedPlaceable = null;
             chosenProjectData = null;
         }
@@ -96,6 +98,11 @@ namespace vgwb.lanoria
             instancedPlaceable.SetupCellsColor(chosenProjectData);
             EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
+        }
+
+        private void OnScoreUpdate(int score)
+        {
+            UIGame.SetScoreUI(score);
         }
 
         private void SubscribeToPlaceableEvents()
@@ -179,13 +186,13 @@ namespace vgwb.lanoria
         private void EventsSubscribe()
         {
             Spawner.OnSpawnedClone += OnPrefabSpawned;
-            OnProjectConfirmed += Scorer.UpdateScore;
+            Scorer.OnScoreUpdate += OnScoreUpdate;
         }
 
         private void EventsUnsubscribe()
         {
             Spawner.OnSpawnedClone -= OnPrefabSpawned;
-            OnProjectConfirmed -= Scorer.UpdateScore;
+            Scorer.OnScoreUpdate -= OnScoreUpdate;
         }
         #endregion
     }

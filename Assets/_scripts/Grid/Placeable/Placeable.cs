@@ -205,6 +205,16 @@ namespace vgwb.lanoria
             }
         }
 
+        public List<Vector3> GetCellsHexPositions()
+        {
+            List<Vector3> hexPositions = new List<Vector3>();
+            foreach (var cell in Cells) {
+                hexPositions.Add(cell.HexPosition);
+            }
+
+            return hexPositions;
+        }
+
         /// <summary>
         /// Check if the placeable is in a valid position.
         /// </summary>
