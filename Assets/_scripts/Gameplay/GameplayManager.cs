@@ -15,6 +15,8 @@ namespace vgwb.lanoria
         [Header("Cards")]
         public CardDealer Dealer;
         public GameObject CardPrefab;
+        [Header("Score")]
+        public ScoreManager Scorer;
 
         public delegate void GameplayEvent();
         public GameplayEvent OnProjectConfirmed;
@@ -33,7 +35,7 @@ namespace vgwb.lanoria
             instancedPlaceable = null;
             UIGame.EnableBtnConfirm(false);
             UIGame.SetProjectTitle("");
-            Spawner.OnSpawnedClone += OnPrefabSpawned;
+            EventsSubscribe();
         }
 
         private void Start()
@@ -43,7 +45,7 @@ namespace vgwb.lanoria
 
         private void OnDestroy()
         {
-            Spawner.OnSpawnedClone -= OnPrefabSpawned;
+            EventsUnsubscribe();
         }
         #endregion
 
@@ -169,6 +171,18 @@ namespace vgwb.lanoria
             if (OnHandDrawed != null) {
                 OnHandDrawed();
             }
+        }
+
+        private void EventsSubscribe()
+        {
+            Spawner.OnSpawnedClone += OnPrefabSpawned;
+            OnProjectConfirmed += Scorer.UpdateScore;
+        }
+
+        private void EventsUnsubscribe()
+        {
+            Spawner.OnSpawnedClone -= OnPrefabSpawned;
+            OnProjectConfirmed -= Scorer.UpdateScore;
         }
         #endregion
     }

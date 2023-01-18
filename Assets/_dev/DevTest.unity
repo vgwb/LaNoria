@@ -2452,6 +2452,7 @@ GameObject:
   - component: {fileID: 715124303}
   - component: {fileID: 715124302}
   - component: {fileID: 715124304}
+  - component: {fileID: 715124305}
   m_Layer: 0
   m_Name: PlayManager
   m_TagString: Untagged
@@ -2474,6 +2475,7 @@ MonoBehaviour:
   UIGame: {fileID: 1515790041}
   Spawner: {fileID: 2107731867}
   FingerCanvas: {fileID: 1923427418}
+  Scorer: {fileID: 715124305}
   Dealer: {fileID: 715124304}
   CardPrefab: {fileID: 9130779135910414227, guid: 84af55ec7b481594ba48fa0c4d6533ce, type: 3}
 --- !u!4 &715124303
@@ -2504,6 +2506,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectAtlas: {fileID: 11400000, guid: d9b2dfa0456564fe2a97aca06bdb4b52, type: 2}
+--- !u!114 &715124305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715124301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54b45f5c95fd194bb01701ffdff7961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &716529077
 PrefabInstance:
   m_ObjectHideFlags: 0
