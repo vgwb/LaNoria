@@ -46,7 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d0daee440e041c9800f95bb9cb9d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  category: 0
   hexHandler: {fileID: 7818359960468404321}
+  mesh: {fileID: 0}
 --- !u!114 &7818359960468404321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +125,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 21392caccb2004b92bc8525c82ad6ef0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 32b0b392d2bd94fb5a88cee93836f4e2, type: 2}
+      objectReference: {fileID: 2100000, guid: 934f635f6c7d242d78004a72dae5734f, type: 2}
     - target: {fileID: 919132149155446097, guid: 21392caccb2004b92bc8525c82ad6ef0, type: 3}
       propertyPath: m_Name
       value: hex_basic

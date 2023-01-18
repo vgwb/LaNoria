@@ -19,11 +19,13 @@ namespace vgwb.lanoria
         public ScoreManager Scorer;
 
         public delegate void GameplayEvent();
-        public GameplayEvent OnProjectConfirmed;
         public GameplayEvent OnHandDrawed;
         public GameplayEvent OnProjectChosen;
+        public delegate void GameplayEventOneParam(Placeable placeable);
+        public GameplayEventOneParam OnProjectConfirmed;
 
         private Placeable instancedPlaceable;
+        private ProjectData chosenProjectData;
         #endregion
 
         #region MonoB
@@ -33,6 +35,7 @@ namespace vgwb.lanoria
                 Debug.LogError("CardDealer - Awake(): no card prefab defined!");
             }
             instancedPlaceable = null;
+            chosenProjectData = null;
             UIGame.EnableBtnConfirm(false);
             UIGame.SetProjectTitle("");
             EventsSubscribe();
@@ -56,7 +59,7 @@ namespace vgwb.lanoria
                 if (instancedPlaceable != null) {
                     Destroy(instancedPlaceable.gameObject);
                 }
-
+                chosenProjectData = projectData;
                 Spawner.Prefab = placeablePrefab;
                 UIGame.SetProjectTitle(projectData.Title);
 
@@ -68,19 +71,18 @@ namespace vgwb.lanoria
 
         public void ConfirmProject()
         {
-            if (instancedPlaceable != null) {
-                instancedPlaceable.OnProjectConfirmed();
-                instancedPlaceable = null;
-            }
-
+            instancedPlaceable.OnProjectConfirmed();
             Spawner.Prefab = null;
             UIGame.SetProjectTitle("");
             UIGame.EnableBtnConfirm(false);
             DrawNewHand();
 
             if (OnProjectConfirmed != null) {
-                OnProjectConfirmed();
+                OnProjectConfirmed(instancedPlaceable);
             }
+
+            instancedPlaceable = null;
+            chosenProjectData = null;
         }
 
         public void ResetDetailPanel()
@@ -91,6 +93,7 @@ namespace vgwb.lanoria
         private void OnPrefabSpawned(GameObject clone)
         {
             instancedPlaceable = clone.GetComponent<Placeable>();
+            instancedPlaceable.SetupCellsColor(chosenProjectData);
             EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
         }

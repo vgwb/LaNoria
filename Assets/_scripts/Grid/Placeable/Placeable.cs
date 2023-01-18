@@ -185,6 +185,21 @@ namespace vgwb.lanoria
             }
         }
 
+        public void SetupCellsColor(ProjectData projectData)
+        {
+            if (projectData.Sequence.Length != Tiles.Count) {
+                Debug.LogError("Placeable - SetupCellsColor(): error in sequence definition!");
+                return;
+            }
+
+            for (int i = 0; i < projectData.Sequence.Length; i++) {
+                if(Tiles[i] != null) {
+                    Tiles[i].SetupCategory(projectData.Sequence[i]);
+                    Tiles[i].ApplyColor();
+                }
+            }
+        }
+
         /// <summary>
         /// Check if the placeable is in a valid position.
         /// </summary>

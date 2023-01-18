@@ -68,6 +68,14 @@ namespace vgwb.lanoria
             category = newCategory;
         }
 
+        public virtual void ApplyColor()
+        {
+            var mat = AssociatedMaterial;
+            if (mat != null) {
+                mesh.material = AssociatedMaterial;
+            }
+        }
+
         protected virtual void BaseSetup()
         {
             if (mesh == null) {
@@ -76,14 +84,6 @@ namespace vgwb.lanoria
 
             if (hexHandler == null) {
                 hexHandler = GetComponent<HexSnap>();
-            }
-        }
-
-        protected virtual void ApplyColor()
-        {
-            var mat = AssociatedMaterial;
-            if (mat != null) {
-                mesh.material = AssociatedMaterial;
             }
         }
         #endregion
