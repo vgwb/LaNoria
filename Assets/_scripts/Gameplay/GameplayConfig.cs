@@ -38,8 +38,8 @@ namespace vgwb.lanoria
         public Outline.Mode PlaceableOutlineMode = Outline.Mode.OutlineVisible;
         public float OutlineWidth = 7.0f;
         public float DragYOffset = 0.2f;
+        [Header("Projects Setup")]
         public List<ModelKeyToPrefab> ProjectPrefabsMap;
-        [Header("Project Setup")]
         public List<CategoryToColor<ProjectCategories>> CategoryColorsMap;
         public Color BlankColor = Color.white;
         [Header("Drawing Rules")]
@@ -47,7 +47,6 @@ namespace vgwb.lanoria
         [Header("Region Definition")]
         public List<EnumToDisplayedName<Subregion>> SubregionNames;
         public List<CategoryToColor<Subregion>> SubregionColors;
-        [Header("Region Definition")]
         public Vector3 LabelDebugOffset;
         public int LabelDebugFontSize = 15;
         [Header("Score")]
