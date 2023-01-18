@@ -111,7 +111,7 @@ MonoBehaviour:
   ShowPivot: 1
   Pivot: {fileID: 2595230328224774844}
   TilesContainer: {fileID: 5881202175564109355}
-  Tiles:
+  Cells:
   - {fileID: 7747439320104330704}
   - {fileID: 1721491956914024536}
   - {fileID: 1369256098645628246}

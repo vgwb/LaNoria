@@ -11,7 +11,7 @@ namespace vgwb.lanoria
         public bool ShowPivot = false;
         public GameObject Pivot;
         public GameObject TilesContainer;
-        public List<PlaceableCell> Tiles;
+        public List<PlaceableCell> Cells;
         public Outline OutlineHandler;
         [Header("Lean components")]
         public LeanDragCamera LeanCameraComp;
@@ -30,6 +30,11 @@ namespace vgwb.lanoria
             get {
                 return isValidPosition;
             }
+        }
+
+        public int CellsNum
+        {
+            get { return Cells.Count; }
         }
         #endregion
 
@@ -69,8 +74,8 @@ namespace vgwb.lanoria
         public void OnRelease()
         {
             // the first tile is considered the object center
-            if (Tiles.Count > 0) {
-                Vector3 newPos = Tiles[0].HexPosition;
+            if (Cells.Count > 0) {
+                Vector3 newPos = Cells[0].HexPosition;
 
                 if (IsCompletelyOutOfMap()) {
                     var grid = GridManager.I;
@@ -140,7 +145,7 @@ namespace vgwb.lanoria
         public void OccupyGrid()
         {
             var grid = GridManager.I;
-            foreach (var tile in Tiles) {
+            foreach (var tile in Cells) {
                 Vector3 tilePos = tile.transform.position;
                 grid.OccupyCellByPosition(tilePos, tile.Category);
             }
@@ -154,7 +159,7 @@ namespace vgwb.lanoria
             LeanCameraComp = GetComponent<LeanDragCamera>();
             LeanSelectableComp = GetComponent<LeanSelectableByFinger>();
             LeanFingerTapComp = GetComponent<LeanFingerTap>();
-            Tiles.Clear();
+            Cells.Clear();
 
             int childs = TilesContainer.transform.childCount;
             for (int i = 0; i < childs; i++) {
@@ -165,7 +170,7 @@ namespace vgwb.lanoria
                     tile = child.AddComponent<PlaceableCell>();
                 }
                 tile.Init();
-                Tiles.Add(tile);
+                Cells.Add(tile);
             }
         }
 
@@ -187,15 +192,15 @@ namespace vgwb.lanoria
 
         public void SetupCellsColor(ProjectData projectData)
         {
-            if (projectData.Sequence.Length != Tiles.Count) {
+            if (projectData.Sequence.Length != Cells.Count) {
                 Debug.LogError("Placeable - SetupCellsColor(): error in sequence definition!");
                 return;
             }
 
             for (int i = 0; i < projectData.Sequence.Length; i++) {
-                if(Tiles[i] != null) {
-                    Tiles[i].SetupCategory(projectData.Sequence[i]);
-                    Tiles[i].ApplyColor();
+                if(Cells[i] != null) {
+                    Cells[i].SetupCategory(projectData.Sequence[i]);
+                    Cells[i].ApplyColor();
                 }
             }
         }
@@ -207,7 +212,7 @@ namespace vgwb.lanoria
         {
             var grid = GridManager.I;
             bool validPosition = true;
-            foreach (var tile in Tiles) {
+            foreach (var tile in Cells) {
                 Vector3 tilePos = tile.transform.position;
                 if (grid.IsCellOccupiedByPos(tilePos)) {
                     validPosition = false;
@@ -232,7 +237,7 @@ namespace vgwb.lanoria
         private bool IsCompletelyOutOfMap()
         {
             bool result = true;
-            foreach (var tile in Tiles) {
+            foreach (var tile in Cells) {
                 var grid = GridManager.I;
                 Vector3 tilePos = tile.transform.position;
                 if (!grid.IsOutOfMap(tilePos)) {
