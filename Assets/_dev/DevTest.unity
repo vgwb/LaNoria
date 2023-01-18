@@ -2475,9 +2475,9 @@ MonoBehaviour:
   UIGame: {fileID: 1515790041}
   Spawner: {fileID: 2107731867}
   FingerCanvas: {fileID: 1923427418}
-  Scorer: {fileID: 715124305}
   Dealer: {fileID: 715124304}
   CardPrefab: {fileID: 9130779135910414227, guid: 84af55ec7b481594ba48fa0c4d6533ce, type: 3}
+  Scorer: {fileID: 715124305}
 --- !u!4 &715124303
 Transform:
   m_ObjectHideFlags: 0
@@ -2518,6 +2518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54b45f5c95fd194bb01701ffdff7961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActualScore: 0
 --- !u!1001 &716529077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3239,7 +3240,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 922576738, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
       propertyPath: ShowSubregionDebug
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2029244029550622160, guid: 358f90c34bc2f400c9590c85e372f8a2, type: 3}
       propertyPath: m_RootOrder

@@ -50,6 +50,8 @@ namespace vgwb.lanoria
         [Header("Region Definition")]
         public Vector3 LabelDebugOffset;
         public int LabelDebugFontSize = 15;
+        [Header("Score")]
+        public int TransversalityBonus = 20;
         #endregion
 
         #region Functions

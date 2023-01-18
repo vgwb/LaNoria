@@ -46,7 +46,7 @@ namespace vgwb.lanoria
         {
             var style = new GUIStyle();
             style.normal.textColor = Color.black;
-            UnityEditor.Handles.Label(transform.position, hex.ToString(), style);
+            //UnityEditor.Handles.Label(transform.position, hex.ToString(), style);
 
             if (ShowRange) {
                 Gizmos.color = Color.cyan;

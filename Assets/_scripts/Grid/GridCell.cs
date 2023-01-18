@@ -17,6 +17,7 @@ namespace vgwb.lanoria
         protected override void Awake()
         {
             base.Awake();
+            Debug.Log("category: "+category);
         }
         #endregion
 

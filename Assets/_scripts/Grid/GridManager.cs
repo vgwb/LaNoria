@@ -35,7 +35,9 @@ namespace vgwb.lanoria
         {
             base.Awake();
 
-            ShowSubregionDebug = SubregionDebugType.None;
+            if (!Application.isEditor) {
+                ShowSubregionDebug = SubregionDebugType.None;
+            }
         }
 
         private void Start()
@@ -68,8 +70,7 @@ namespace vgwb.lanoria
 
         public bool IsCellOccupiedByPos(Vector3 pos)
         {
-            Vector3 hexPos = RetrieveHexPos(pos);
-            var cell = Cells.Find(x => x.HexPosition == hexPos);
+            var cell = GetCellByPosition(pos);
             if (cell != null) {
                 return cell.Occupied;
             }
@@ -79,20 +80,25 @@ namespace vgwb.lanoria
 
         public bool IsOutOfMap(Vector3 pos)
         {
-            Vector3 hexPos = RetrieveHexPos(pos);
-            var cell = Cells.Find(x => x.HexPosition == hexPos);
+            var cell = GetCellByPosition(pos);
 
             return cell == null;
         }
 
         public void OccupyCellByPosition(Vector3 pos, ProjectCategories category)
         {
-            Vector3 hexPos = RetrieveHexPos(pos);
-            var cell = Cells.Find(x => x.HexPosition == hexPos);
+            var cell = GetCellByPosition(pos);
             if (cell != null) {
                 cell.Occupied = true;
                 cell.SetupCategory(category);
             }
+        }
+
+        public GridCell GetCellByPosition(Vector3 pos)
+        {
+            Vector3 hexPos = RetrieveHexPos(pos);
+
+            return Cells.Find(x => x.HexPosition == hexPos);
         }
 
         public Vector3 ClosestBorderPoint(Vector3 pos)
@@ -110,9 +116,21 @@ namespace vgwb.lanoria
             return result;
         }
 
+        public List<GridCell> GetAllSubregionCellsByPos(Vector3 pos)
+        {
+            List<GridCell> subregionCells = new List<GridCell>();
+            var originCell = GetCellByPosition(pos);
+            if (originCell != null) {
+                subregionCells = Cells.FindAll(x => x.MySubregion == originCell.MySubregion);
+            }
+
+            return subregionCells;
+        }
+
         private Vector3 RetrieveHexPos(Vector3 pos)
         {
             var hex = HexUtils.FromWorld(pos);
+
             return hex.ToWorld(0f);
         }
 
