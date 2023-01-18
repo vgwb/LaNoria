@@ -110,4 +110,5 @@ MonoBehaviour:
   - Category: 10
     ColorToUse: {r: 0, g: 0.29411766, b: 0.22745098, a: 1}
     MaterialToUse: {fileID: 0}
-  LabelOffset: {x: 0.8, y: 0.8, z: 0}
+  LabelDebugOffset: {x: 0.8, y: 0.8, z: 0}
+  LabelDebugFontSize: 10
