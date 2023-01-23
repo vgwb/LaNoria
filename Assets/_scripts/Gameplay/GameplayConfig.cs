@@ -51,6 +51,9 @@ namespace vgwb.lanoria
         public int LabelDebugFontSize = 15;
         [Header("Score")]
         public int TransversalityBonus = 20;
+        [Header("UI")]
+        public float SlideProjectPanelTime = 0.8f;
+        public float SlideProjectPanelPixelIn = 50.0f;
         #endregion
 
         #region Functions

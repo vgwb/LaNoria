@@ -44,6 +44,7 @@ namespace vgwb.lanoria
         private void Start()
         {
             UIGame.SetScoreUI(0);
+            UIGame.SlideOnTheRight();
             DrawNewHand();
         }
 
@@ -63,6 +64,7 @@ namespace vgwb.lanoria
                 chosenProjectData = projectData;
                 Spawner.Prefab = placeablePrefab;
                 UIGame.SetProjectTitle(projectData.Title);
+                UIGame.SlideToOriginalPosition();
 
                 if (OnProjectChosen != null) {
                     OnProjectChosen();
@@ -92,12 +94,24 @@ namespace vgwb.lanoria
             Spawner.Prefab = null;
         }
 
+        public void OnProjectDrag()
+        {
+            if (instancedPlaceable != null) {
+                UIGame.SlideOnTheRight();
+            }
+        }
+
         private void OnPrefabSpawned(GameObject clone)
         {
             instancedPlaceable = clone.GetComponent<Placeable>();
             instancedPlaceable.SetupCellsColor(chosenProjectData);
             EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
+        }
+
+        private void OnPrefabSelect()
+        {
+            UIGame.SlideOnTheRight();
         }
 
         private void OnScoreUpdate(int score)
@@ -110,6 +124,7 @@ namespace vgwb.lanoria
             if (instancedPlaceable != null) {
                 instancedPlaceable.OnValidPositionChange += HandleBtnConfirm;
                 instancedPlaceable.OnStopUsingMe += StopUsingPlaceable;
+                instancedPlaceable.OnSelectMe += OnPrefabSelect;
             }
         }
 
@@ -118,6 +133,7 @@ namespace vgwb.lanoria
             if (instancedPlaceable != null) {
                 instancedPlaceable.OnValidPositionChange -= HandleBtnConfirm;
                 instancedPlaceable.OnStopUsingMe -= StopUsingPlaceable;
+                instancedPlaceable.OnSelectMe -= OnPrefabSelect;
             }
         }
 

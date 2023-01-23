@@ -18,6 +18,7 @@ namespace vgwb.lanoria
         public LeanSelectableByFinger LeanSelectableComp;
         public LeanFingerTap LeanFingerTapComp;
         public delegate void PlaceableEvent();
+        public PlaceableEvent OnSelectMe;
         public PlaceableEvent OnValidPositionChange;
         public PlaceableEvent OnStopUsingMe;
 
@@ -94,6 +95,9 @@ namespace vgwb.lanoria
             RestoreOutline();
             CameraManager.I.EnableRotationWithFingers(false);
             RiseUpTilesHeight();
+            if (OnSelectMe != null) {
+                OnSelectMe();
+            }
         }
 
         /// <summary>

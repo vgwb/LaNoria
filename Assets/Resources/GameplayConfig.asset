@@ -112,3 +112,6 @@ MonoBehaviour:
     MaterialToUse: {fileID: 0}
   LabelDebugOffset: {x: 0.8, y: 0.8, z: 0}
   LabelDebugFontSize: 10
+  TransversalityBonus: 20
+  SlideProjectPanelTime: 0.4
+  SlideProjectPanelPixelIn: 50
