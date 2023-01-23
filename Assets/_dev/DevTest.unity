@@ -5322,6 +5322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel Game HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 5619242593406435958, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5619242593406435959, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
