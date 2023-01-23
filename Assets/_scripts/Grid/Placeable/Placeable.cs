@@ -202,7 +202,7 @@ namespace vgwb.lanoria
             }
 
             for (int i = 0; i < projectData.Sequence.Length; i++) {
-                if(Cells[i] != null) {
+                if (Cells[i] != null) {
                     Cells[i].SetupCategory(projectData.Sequence[i]);
                     Cells[i].ApplyColor();
                 }
@@ -224,7 +224,7 @@ namespace vgwb.lanoria
             EnableLeanComponents(false);
             DisableOutline();
             SetupCellsForUICamera(false);
-            
+
         }
 
         private void SetupCellsForUICamera(bool enable)
