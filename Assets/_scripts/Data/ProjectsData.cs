@@ -22,6 +22,7 @@ namespace vgwb.lanoria
         public string Model;
         public ProjectCategories[] Sequence;
         public string Title;
+        [TextArea]
         public string Description;
         public Texture Image;
     }
@@ -36,7 +37,7 @@ namespace vgwb.lanoria
         #region Functions
         public IEnumerable<ProjectData> PickRandomElements(int num)
         {
-            System.Random rnd = new System.Random();
+            var rnd = new System.Random();
             return Projects.OrderBy(x => rnd.Next()).Take(num);
         }
         #endregion
