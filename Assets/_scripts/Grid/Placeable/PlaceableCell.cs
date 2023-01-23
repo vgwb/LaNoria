@@ -18,6 +18,11 @@ namespace vgwb.lanoria
         {
             BaseSetup();
         }
+
+        public void SetupLayerForUICamera()
+        {
+            mesh.gameObject.layer = LayerMask.NameToLayer("UICamera");
+        }
         #endregion
     }
 }

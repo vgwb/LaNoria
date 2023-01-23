@@ -55,7 +55,7 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
-        public void ChosePrefab(Transform placeablePrefab, ProjectData projectData)
+        public void ChosePrefab(Transform placeablePrefab, ProjectData projectData, int cardIndex)
         {
             if (placeablePrefab != null && Spawner != null) {
                 if (instancedPlaceable != null) {
@@ -65,6 +65,9 @@ namespace vgwb.lanoria
                 Spawner.Prefab = placeablePrefab;
                 UIGame.SetProjectTitle(projectData.Title);
                 UIGame.SlideToOriginalPosition();
+                var texture = UICameraManager.I.GetUICameraTexture(cardIndex);
+                UIGame.SetupCurrentProjectImg(texture);
+                UIGame.EnableCurrentProjectImg(true);
 
                 if (OnProjectChosen != null) {
                     OnProjectChosen();
@@ -78,6 +81,7 @@ namespace vgwb.lanoria
             Spawner.Prefab = null;
             UIGame.SetProjectTitle("");
             UIGame.EnableBtnConfirm(false);
+            UIGame.SetupCurrentProjectImg(null);
             DrawNewHand();
 
             if (OnProjectConfirmed != null) {
@@ -111,6 +115,7 @@ namespace vgwb.lanoria
 
         private void OnPrefabSelect()
         {
+            UIGame.EnableCurrentProjectImg(false);
             UIGame.SlideOnTheRight();
         }
 
@@ -182,16 +187,23 @@ namespace vgwb.lanoria
         {
             CleanHand();
             var projectsData = Dealer.DrawProjects();
+            int cardIndex = 0;
             foreach (var projectData in projectsData) {
                 var cardInstance = Instantiate(CardPrefab, UIGame.CardContainer); // spawn the card inside the container
                 var cardComp = cardInstance.GetComponent<CardInGame>();
                 if (cardComp != null) {
-                    cardComp.InitCard(projectData); // initialize the card component
+                    var cardTexture = UICameraManager.I.GetUICameraTexture(cardIndex);
+                    cardComp.InitCard(projectData, cardTexture); // initialize the card component
                     // get the associated model and bind it to the card clickable area
                     string modelKey = projectData.Model;
                     var associatedPrefab = GameplayConfig.I.GetProjectModelByKey(modelKey);
-                    cardComp.SetCardEvents(() => ChosePrefab(associatedPrefab.transform, projectData));
+                    int indexToPass = cardIndex;
+                    cardComp.SetCardEvents(() => ChosePrefab(associatedPrefab.transform, projectData, indexToPass));
+                    // spawn the object in camera UI
+                    UICameraManager.I.SpawnPrefabInCamera(cardIndex, associatedPrefab, projectData);
                 }
+
+                cardIndex++;
             }
 
             if (OnHandDrawed != null) {

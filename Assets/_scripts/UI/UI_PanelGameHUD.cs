@@ -19,6 +19,7 @@ namespace vgwb.lanoria
         [Header("Panel Current Project Elements")]
         public RectTransform PanelCurrentProject;
         public TMP_Text ProjectTitle;
+        public RawImage CurrentProjectImg;
         [Header("Panel Confirm Elements")]        
         public GameObject PanelConfirm;
 
@@ -95,6 +96,20 @@ namespace vgwb.lanoria
                 float duration = GameplayConfig.I.SlideProjectPanelTime;
                 float pixelIn = GameplayConfig.I.SlideProjectPanelPixelIn;
                 SlideActualProjectPanel(duration, pixelIn, () => SetProjectPanelShifted(true));
+            }
+        }
+
+        public void SetupCurrentProjectImg(Texture img)
+        {
+            if (CurrentProjectImg != null) {
+                CurrentProjectImg.texture = img;
+            }
+        }
+
+        public void EnableCurrentProjectImg(bool enable)
+        {
+            if (CurrentProjectImg != null) {
+                CurrentProjectImg.gameObject.SetActive(enable);
             }
         }
 

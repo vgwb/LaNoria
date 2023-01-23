@@ -14,7 +14,7 @@ namespace vgwb.lanoria
         [Header("UI Elements")]
         public TMP_Text CardTitle;
         public Button ClickableComp;
-        public Image PrefabImg;  // TODO: temporary
+        public RawImage PrefabImg;
         [Header("Project Data")]
         public ProjectData CardData;
         #endregion
@@ -27,11 +27,11 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
-        public void InitCard(ProjectData cardData)
+        public void InitCard(ProjectData cardData, Texture texture)
         {
             CardData = cardData;
             SetCardTitle(CardData.Title);
-            // SetPrefabImg(); // visualize the 3d prefab into the canvas
+            SetPrefabImg(texture); // visualize the 3d prefab into the canvas
         }
 
         public void SetCardEvents(UnityAction action)
@@ -55,10 +55,10 @@ namespace vgwb.lanoria
             }
         }
 
-        private void SetPrefabImg(Sprite img)
+        private void SetPrefabImg(Texture texture)
         {
             if (PrefabImg != null) {
-                PrefabImg.sprite = img;
+                PrefabImg.texture = texture;
             }
         }
         #endregion

@@ -219,6 +219,22 @@ namespace vgwb.lanoria
             return hexPositions;
         }
 
+        public void SetupForUI()
+        {
+            EnableLeanComponents(false);
+            DisableOutline();
+            SetupCellsForUICamera(false);
+            
+        }
+
+        private void SetupCellsForUICamera(bool enable)
+        {
+            foreach (var cell in Cells) {
+                cell.EnableHexComponent(enable);
+                cell.SetupLayerForUICamera();
+            }
+        }
+
         /// <summary>
         /// Check if the placeable is in a valid position.
         /// </summary>

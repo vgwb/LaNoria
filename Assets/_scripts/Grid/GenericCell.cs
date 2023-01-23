@@ -63,6 +63,13 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
+        public void EnableHexComponent(bool enable)
+        {
+            if (hexHandler != null) {
+                hexHandler.enabled = enable;
+            }
+        }
+
         public virtual void SetupCategory(ProjectCategories newCategory)
         {
             category = newCategory;
