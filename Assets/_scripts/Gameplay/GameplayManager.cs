@@ -9,7 +9,7 @@ namespace vgwb.lanoria
     {
         #region Var
         [Header("Other Ref")]
-        public UI_PanelGameHUD UIGame;
+        public UI_GameHUD UIGame;
         public LeanSpawnWithFinger Spawner;
         public LeanFingerDownCanvas FingerCanvas;
         [Header("Cards")]

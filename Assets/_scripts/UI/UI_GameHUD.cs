@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace vgwb.lanoria
 {
-    public class UI_PanelGameHUD : MonoBehaviour
+    public class UI_GameHUD : MonoBehaviour
     {
         #region Var
         [Header("Panel HUD Elements")]
@@ -20,7 +20,7 @@ namespace vgwb.lanoria
         public RectTransform PanelCurrentProject;
         public TMP_Text ProjectTitle;
         public RawImage CurrentProjectImg;
-        [Header("Panel Confirm Elements")]        
+        [Header("Panel Confirm Elements")]
         public GameObject PanelConfirm;
 
         private bool iSProjectPanelShifted;

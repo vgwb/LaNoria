@@ -8,9 +8,10 @@ namespace vgwb.lanoria
     {
         public UI_PanelMenu PanelMenu;
         public UI_PanelAbout PanelAbout;
-        public UI_PanelGameHUD PanelGameHUD;
+        public UI_GameHUD PanelGameHUD;
         public UI_PanelProjectDetail PanelProjectDetail;
         public UI_PanelOptions PanelOptions;
+        public UI_PanelGamePause PanelGamePause;
 
         void Start()
         {

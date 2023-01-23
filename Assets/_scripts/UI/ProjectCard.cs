@@ -8,6 +8,7 @@ namespace vgwb.lanoria
     public class ProjectCard : MonoBehaviour
     {
         public TextMeshProUGUI Title;
+        public TextMeshProUGUI Colors;
 
         void Init(string title)
         {
