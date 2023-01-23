@@ -10,39 +10,36 @@ namespace vgwb.lanoria
 {
     public class UI_GameHUD : MonoBehaviour
     {
-        #region Var
+
         [Header("Panel HUD Elements")]
         public GameObject PanelHUD;
         public TMP_Text ScoreTxt;
+
         [Header("Panel Cards Elements")]
         public GameObject PanelCards;
+
         [Header("Panel Current Project Elements")]
         public RectTransform PanelCurrentProject;
         public TMP_Text ProjectTitle;
         public RawImage CurrentProjectImg;
+
         [Header("Panel Confirm Elements")]
         public GameObject PanelConfirm;
 
         private bool iSProjectPanelShifted;
         private Vector2 projectPanelOriginalPosition;
-        #endregion
 
-        #region Attributes
         public Transform CardContainer
         {
             get { return PanelCards.transform; }
         }
-        #endregion
 
-        #region MonoB
         void Awake()
         {
             iSProjectPanelShifted = false;
             projectPanelOriginalPosition = PanelCurrentProject.anchoredPosition;
         }
-        #endregion
 
-        #region Functions
         public void EnableBtnConfirm(bool enable)
         {
             if (PanelConfirm != null) {
@@ -71,7 +68,7 @@ namespace vgwb.lanoria
 
         public List<GameObject> CardsInUI()
         {
-            List<GameObject> cards = new List<GameObject>();
+            var cards = new List<GameObject>();
             int cardsNum = PanelCards.transform.childCount;
             for (int i = 0; i < cardsNum; i++) {
                 var child = PanelCards.transform.GetChild(i);
@@ -126,6 +123,5 @@ namespace vgwb.lanoria
         {
             iSProjectPanelShifted = isShifted;
         }
-        #endregion
     }
 }
