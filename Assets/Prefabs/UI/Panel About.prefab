@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 9058276257770794874}
   - component: {fileID: 7681324661600294153}
   m_Layer: 5
-  m_Name: Informations
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,8 +166,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GLOSSARY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1a16814c86c3a46c58feb18aeea36fed, type: 2}
+  m_sharedMaterial: {fileID: -5148097082383372813, guid: 1a16814c86c3a46c58feb18aeea36fed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.6
+  m_fontSize: 65.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1251,8 +1251,8 @@ MonoBehaviour:
     por tanto, al mismo tiempo innovadoras en s\xED mismas y \xFAtiles para capacitar
     a la sociedad a innovar\u2026\u201D. INNOVATION UNION (European Commission 2010/10/6)"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1a16814c86c3a46c58feb18aeea36fed, type: 2}
+  m_sharedMaterial: {fileID: -5148097082383372813, guid: 1a16814c86c3a46c58feb18aeea36fed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.95
+  m_fontSize: 24.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
