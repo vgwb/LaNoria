@@ -24,6 +24,7 @@ namespace vgwb.lanoria
         public delegate void GameplayEventOneParam(Placeable placeable);
         public GameplayEventOneParam OnProjectConfirmed;
 
+        private int chosenCardIndex;
         private Placeable instancedPlaceable;
         private ProjectData chosenProjectData;
         #endregion
@@ -34,6 +35,8 @@ namespace vgwb.lanoria
             if (CardPrefab == null) {
                 Debug.LogError("CardDealer - Awake(): no card prefab defined!");
             }
+
+            chosenCardIndex = -1;
             instancedPlaceable = null;
             chosenProjectData = null;
             UIGame.EnableBtnConfirm(false);
@@ -61,11 +64,14 @@ namespace vgwb.lanoria
                 if (instancedPlaceable != null) {
                     Destroy(instancedPlaceable.gameObject);
                 }
+
+                chosenCardIndex = cardIndex;
                 chosenProjectData = projectData;
                 Spawner.Prefab = placeablePrefab;
                 UIGame.SetProjectTitle(projectData.Title);
                 UIGame.SlideToOriginalPosition();
-                var texture = UICameraManager.I.GetUICameraTexture(cardIndex);
+                UIGame.EnableBtnConfirm(false);
+                var texture = UICameraManager.I.GetUICameraTexture(chosenCardIndex);
                 UIGame.SetupCurrentProjectImg(texture);
                 UIGame.EnableCurrentProjectImg(true);
 
@@ -89,6 +95,7 @@ namespace vgwb.lanoria
             }
 
             Scorer.UpdateScore(instancedPlaceable);
+            chosenCardIndex = -1;
             instancedPlaceable = null;
             chosenProjectData = null;
         }

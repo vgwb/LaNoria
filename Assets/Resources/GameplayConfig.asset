@@ -115,3 +115,7 @@ MonoBehaviour:
   TransversalityBonus: 20
   SlideProjectPanelTime: 0.4
   SlideProjectPanelPixelIn: 50
+  PrefabsUIData:
+  - Prefab: {fileID: 7872463044641677066, guid: fdc7f298cf37ab446ba3323520aa4531, type: 3}
+    Pos: {x: -2, y: -1, z: 2}
+    Rot: {x: 0, y: -90, z: 60}

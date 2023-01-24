@@ -54,6 +54,7 @@ namespace vgwb.lanoria
         [Header("UI")]
         public float SlideProjectPanelTime = 0.8f;
         public float SlideProjectPanelPixelIn = 50.0f;
+        public Vector3 UIProjectRotation = new Vector3(0.0f, -90.0f, 60.0f);
         #endregion
 
         #region Functions

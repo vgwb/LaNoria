@@ -23,23 +23,20 @@ namespace vgwb.lanoria
 
         public GameObject SpawnPrefabInCamera(int cameraIndex, GameObject prefab, ProjectData projectData)
         {
-            //            Debug.Log("Call function!!! "+prefab);
             if (IsIndexValid(cameraIndex) && prefab != null) {
                 CleanCameraSubject(cameraIndex);
-                //                Debug.Log("Call function!!!");
                 var container = Cams[cameraIndex].SubjectPivot;
                 var instance = Instantiate(prefab);
                 instance.transform.localPosition = Vector3.zero;
                 var placeable = instance.GetComponent<Placeable>();
                 if (placeable != null) {
                     placeable.SetupForUI();
-
                     var ParentInPivot = new GameObject(); // create an empty object
                     ParentInPivot.transform.position = placeable.Pivot.transform.position;
                     placeable.transform.parent = ParentInPivot.transform;
                     ParentInPivot.transform.parent = container;
                     ParentInPivot.transform.localPosition = Vector3.zero;
-                    ParentInPivot.transform.localRotation = Quaternion.identity;
+                    ParentInPivot.transform.localRotation = Quaternion.Euler(GameplayConfig.I.UIProjectRotation);
 
                     if (projectData != null) {
                         placeable.SetupCellsColor(projectData);
@@ -58,6 +55,16 @@ namespace vgwb.lanoria
             if (IsIndexValid(cameraIndex)) {
                 Cams[cameraIndex].CleanSubject();
             }
+        }
+
+        public Vector3 GetUIObjectRotation(int cameraIndex)
+        {
+            Vector3 rot = Vector3.zero;
+            if(IsIndexValid(cameraIndex)) {
+                rot = Cams[cameraIndex].GetSubjectRotation();
+            }
+
+            return rot;
         }
 
         private bool IsIndexValid(int cameraIndex)

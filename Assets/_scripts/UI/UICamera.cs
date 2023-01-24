@@ -43,6 +43,17 @@ namespace vgwb.lanoria
                 }
             }
         }
+
+        public Vector3 GetSubjectRotation()
+        {
+            Vector3 rot = Vector3.zero;
+            int childsNum = subjectPivot.childCount;
+            if (subjectPivot.childCount > 0) {
+                rot = subjectPivot.GetChild(0).transform.eulerAngles;
+            }
+
+            return rot;
+        }
         #endregion
     }
 }
