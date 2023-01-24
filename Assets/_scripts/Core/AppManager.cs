@@ -44,7 +44,8 @@ namespace vgwb.lanoria
 
         public void OnPlay()
         {
-            Debug.Log("PLAY!");
+            UI_manager.I.Show(UI_manager.States.Play);
+            Debug.Log("PLAY NEW GAME!");
         }
 
         public void OnOptions()
