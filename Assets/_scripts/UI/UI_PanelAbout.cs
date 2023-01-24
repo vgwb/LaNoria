@@ -40,7 +40,7 @@ namespace vgwb.lanoria
 
             emptyProjectsContainers();
 
-            var projects = DataManager.I.Database.ProjectsData.Projects;
+            var projects = DataManager.I.Data.ProjectsData.Projects;
             foreach (var project in projects) {
                 if (project.Active) {
                     _projectCard = Instantiate(ProjectCardPrefab);

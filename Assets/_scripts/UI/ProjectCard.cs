@@ -27,7 +27,7 @@ namespace vgwb.lanoria
 
             foreach (ProjectCategories cat in projectData.Sequence) {
                 Cats[CatCounter].SetActive(true);
-                Cats[CatCounter].GetComponent<Image>().color = AppConfig.I.GameData.CategoriesData.GetColor(cat);
+                Cats[CatCounter].GetComponent<Image>().color = DataManager.I.Data.CategoriesData.GetColor(cat);
                 CatCounter++;
             }
             if (CatCounter < 3) {

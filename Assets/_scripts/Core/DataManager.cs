@@ -19,47 +19,7 @@ namespace vgwb.lanoria
 
     public class DataManager : SingletonMonoBehaviour<DataManager>
     {
-        public GameData Database;
-
-        #region Database
-
-        private Dictionary<string, List<Object>> db = new();
-
-        public void LoadDatabase()
-        {
-            // LoadAll<CategoryDefinition>();
-            // LoadAll<ActivityDefinition>();
-            // LoadAll<AssessmentQuestionDefinition>();
-            // LoadAll<CountryDefinition>();
-        }
-
-        public T Get<T>(int id) where T : class, IDefinition
-        {
-            var all = GetAll<T>();
-            return all.FirstOrDefault(x => x.Id == id);
-        }
-
-        public List<T> GetAll<T>() where T : class
-        {
-            return db[typeof(T).Name].ConvertAll(x => x as T);
-        }
-        public void PrintAll<T>() where T : Object
-        {
-            var s = new StringBuilder();
-            s.Append($"{typeof(T).Name}:");
-            s.AppendLine(GetAll<T>().ToJoinedString());
-            Log.Info(s.ToString());
-        }
-
-        private void LoadAll<T>() where T : Object
-        {
-            var objs = Resources.LoadAll<T>(typeof(T).Name);
-            db[typeof(T).Name] = new List<Object>();
-            db[typeof(T).Name].AddRange(objs);
-        }
-
-        #endregion
-
+        public GameData Data;
 
         #region Profile
 
