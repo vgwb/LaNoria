@@ -57,11 +57,37 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
+        public GameObject GetProjectModelFromData(ProjectData projectData)
+        {
+            if (projectData == null) {
+                return null;
+            }
+
+            GameObject result = null;
+            if (!string.IsNullOrEmpty(projectData.Model)) {
+                result = GetProjectModelByKey(projectData.Model);
+            } else {
+                result = GetProjectModelByCellNum(projectData.Sequence.Length);
+            }
+
+            return result;
+        }
+
         public GameObject GetProjectModelByKey(string key)
         {
             var tuple = ProjectPrefabsMap.Find(x => x.Key == key);
 
             return tuple.Prefab;
+        }
+
+        public GameObject GetProjectModelByCellNum(int cellNum)
+        {
+            string category = "P" + cellNum.ToString();
+            var tuples = ProjectPrefabsMap.FindAll(x => x.Key.Contains(category));
+
+            int randomIndex = Random.Range(0, tuples.Count);
+
+            return tuples[randomIndex].Prefab;
         }
 
         public Color GetCategoryColorsByType(ProjectCategories category)
