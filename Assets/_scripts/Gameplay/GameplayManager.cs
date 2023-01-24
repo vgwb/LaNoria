@@ -97,6 +97,7 @@ namespace vgwb.lanoria
         public void ConfirmProject()
         {
             instancedPlaceable.OnProjectConfirmed();
+            instancedPlaceable.transform.parent = BoardManager.I.ProjectsContainer.transform;
             spawner.Prefab = null;
             UIGame.SetProjectTitle("");
             UIGame.EnableBtnConfirm(false);
