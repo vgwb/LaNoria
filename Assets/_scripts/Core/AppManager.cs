@@ -11,7 +11,6 @@ namespace vgwb.lanoria
     public class AppManager : SingletonMonoBehaviour<AppManager>
     {
         public AppConfig ApplicationConfig;
-        public DataManager DB;
 
         public IEnumerator Start()
         {

@@ -32,7 +32,7 @@ namespace vgwb.lanoria
 
         void OnEnable()
         {
-            Debug.Log("CIAO CIAO");
+            // Debug.Log("CIAO CIAO");
         }
 
         void popupateProjects()
@@ -40,7 +40,7 @@ namespace vgwb.lanoria
 
             emptyProjectsContainers();
 
-            var projects = AppManager.I.DB.ProjectsData.Projects;
+            var projects = DataManager.I.Database.ProjectsData.Projects;
             foreach (var project in projects) {
                 if (project.Active) {
                     _projectCard = Instantiate(ProjectCardPrefab);

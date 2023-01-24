@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2f3e73b0ea34be4916a4d8385017fa, type: 3}
+  m_Name: CategoriesData
+  m_EditorClassIdentifier: 
+  Categories:
+  - Category: 1
+    Title: Environment
+    Color: {r: 0, g: 0.7529412, b: 0.5294118, a: 1}
+    Material: {fileID: 2100000, guid: 32b0b392d2bd94fb5a88cee93836f4e2, type: 2}
+  - Category: 2
+    Title: Equality
+    Color: {r: 0.5058824, g: 0.13725491, b: 1, a: 1}
+    Material: {fileID: 2100000, guid: 6ed5e89af67e3441caff85c48bc7d19c, type: 2}
+  - Category: 3
+    Title: Tech
+    Color: {r: 1, g: 0.5372549, b: 0.019607844, a: 1}
+    Material: {fileID: 2100000, guid: 3db83cf33b8b34cf390905469e858736, type: 2}
+  - Category: 4
+    Title: People
+    Color: {r: 1, g: 0.2509804, b: 0.77254903, a: 1}
+    Material: {fileID: 2100000, guid: 273c3641cd04348389d4c85395c804fd, type: 2}

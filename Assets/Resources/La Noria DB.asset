@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2e4cac8b0e02af4ebfdde70ff56454a, type: 3}
-  m_Name: AppConfig
+  m_Script: {fileID: 11500000, guid: df0227d2b36cd400f8cca3b8d50e7253, type: 3}
+  m_Name: La Noria DB
   m_EditorClassIdentifier: 
-  Version: 1
-  UrlSupportWebsite: 
-  GameData: {fileID: 11400000, guid: 2b6b51886b50b4b29b2b522d08682677, type: 2}
-  AnalyticsEnabled: 0
-  AnalyticsDevEnv: 0
-  DebugMode: 0
+  ProjectsData: {fileID: 11400000, guid: d9b2dfa0456564fe2a97aca06bdb4b52, type: 2}
+  CategoriesData: {fileID: 11400000, guid: 16de47ea887d44339850a43fa8eecd9f, type: 2}

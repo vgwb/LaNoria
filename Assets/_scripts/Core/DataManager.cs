@@ -17,9 +17,9 @@ namespace vgwb.lanoria
         int Id { get; }
     }
 
-    public class DataManager : MonoBehaviour
+    public class DataManager : SingletonMonoBehaviour<DataManager>
     {
-        public ProjectsData ProjectsData;
+        public GameData Database;
 
         #region Database
 
@@ -57,46 +57,6 @@ namespace vgwb.lanoria
             db[typeof(T).Name] = new List<Object>();
             db[typeof(T).Name].AddRange(objs);
         }
-
-        #region Cards
-
-        // public List<CardDefinition> CardDefinitions => cards.Cards.ToList();
-
-        // private CardsCollection cards = new();
-        // public void LoadCardDefinitions()
-        // {
-        //     LoadSerialized(out cards, Application.persistentDataPath, "cards");
-        // }
-
-        // public void InitialiseCardDefinitions()
-        // {
-        //     LoadSerialized(out cards, Application.streamingAssetsPath, "cards");
-        //     if (cards == null)
-        //         cards = new();
-        //     SaveCardDefinitions(saveAsDefaultCards: false);
-        // }
-
-        // public void AddCardDefinition(CardDefinition def, bool isDefaultCard = false)
-        // {
-        //     cards.Add(def);
-        //     SaveCardDefinitions(isDefaultCard);
-        // }
-
-        // public void DeleteAllCardDefinitions()
-        // {
-        //     cards.Cards.Clear();
-        //     SaveCardDefinitions(saveAsDefaultCards: false);
-        // }
-
-        // public void SaveCardDefinitions(bool saveAsDefaultCards = false)
-        // {
-        //     if (saveAsDefaultCards)
-        //         SaveSerialized(cards, Application.streamingAssetsPath, "cards");
-        //     else
-        //         SaveSerialized(cards, Application.persistentDataPath, "cards");
-        // }
-
-        #endregion
 
         #endregion
 
