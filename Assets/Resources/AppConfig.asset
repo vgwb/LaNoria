@@ -18,3 +18,4 @@ MonoBehaviour:
   AnalyticsEnabled: 0
   AnalyticsDevEnv: 0
   DebugMode: 0
+  ShowHexCoords: 1
