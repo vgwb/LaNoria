@@ -10,6 +10,8 @@ namespace vgwb.lanoria
 {
     public class UI_GameHUD : MonoBehaviour
     {
+        [Header("Other comps")]
+        public LeanSpawnWithFinger Spawner;
 
         [Header("Panel HUD Elements")]
         public GameObject PanelHUD;
@@ -22,9 +24,14 @@ namespace vgwb.lanoria
         public RectTransform PanelCurrentProject;
         public TMP_Text ProjectTitle;
         public RawImage CurrentProjectImg;
+        public LeanFingerDownCanvas LeanSpawnCanvas;
 
         [Header("Panel Confirm Elements")]
         public GameObject PanelConfirm;
+        public Button BtnConfirm;
+
+        public delegate void GameHUDEvent();
+        public GameHUDEvent OnProjectDragged;
 
         private bool iSProjectPanelShifted;
         private Vector2 projectPanelOriginalPosition;
@@ -107,6 +114,20 @@ namespace vgwb.lanoria
         {
             if (CurrentProjectImg != null) {
                 CurrentProjectImg.gameObject.SetActive(enable);
+            }
+        }
+
+        public void EnableFingerCanvas(bool enable)
+        {
+            if (LeanSpawnCanvas != null) {
+                LeanSpawnCanvas.enabled = enable;
+            }
+        }
+
+        public void OnProjectDragFromCanvas()
+        {
+            if (OnProjectDragged != null) {
+                OnProjectDragged();
             }
         }
 

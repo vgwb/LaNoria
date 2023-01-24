@@ -1,17 +1,13 @@
 using Lean.Touch;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    public class GameplayManager : MonoBehaviour
+    public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
     {
         #region Var
-        [Header("Other Ref")]
-        public UI_GameHUD UIGame;
-        public LeanSpawnWithFinger Spawner;
-        public LeanFingerDownCanvas FingerCanvas;
         [Header("Cards")]
         public CardDealer Dealer;
         public GameObject CardPrefab;
@@ -25,29 +21,35 @@ namespace vgwb.lanoria
         public GameplayEventOneParam OnProjectConfirmed;
 
         private int chosenCardIndex;
+        private UI_GameHUD UIGame;
+        private LeanSpawnWithFinger spawner;
         private Placeable instancedPlaceable;
         private ProjectData chosenProjectData;
         #endregion
 
         #region MonoB
-        void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             if (CardPrefab == null) {
                 Debug.LogError("CardDealer - Awake(): no card prefab defined!");
             }
-
+            
             chosenCardIndex = -1;
             instancedPlaceable = null;
-            chosenProjectData = null;
-            UIGame.EnableBtnConfirm(false);
-            UIGame.SetProjectTitle("");
-            EventsSubscribe();
+            chosenProjectData = null;            
         }
 
         private void Start()
         {
+            UIGame = UI_manager.I.PanelGameHUD;
+            spawner = UIGame.Spawner;
             UIGame.SetScoreUI(0);
             UIGame.SlideOnTheRight();
+            UIGame.EnableBtnConfirm(false);
+            UIGame.SetProjectTitle("");
+            EventsSubscribe();
             DrawNewHand();
         }
 
@@ -60,14 +62,14 @@ namespace vgwb.lanoria
         #region Functions
         public void ChosePrefab(Transform placeablePrefab, ProjectData projectData, int cardIndex)
         {
-            if (placeablePrefab != null && Spawner != null) {
+            if (placeablePrefab != null && spawner != null) {
                 if (instancedPlaceable != null) {
                     Destroy(instancedPlaceable.gameObject);
                 }
 
                 chosenCardIndex = cardIndex;
                 chosenProjectData = projectData;
-                Spawner.Prefab = placeablePrefab;
+                spawner.Prefab = placeablePrefab;
                 UIGame.SetProjectTitle(projectData.Title);
                 UIGame.SlideToOriginalPosition();
                 UIGame.EnableBtnConfirm(false);
@@ -84,7 +86,7 @@ namespace vgwb.lanoria
         public void ConfirmProject()
         {
             instancedPlaceable.OnProjectConfirmed();
-            Spawner.Prefab = null;
+            spawner.Prefab = null;
             UIGame.SetProjectTitle("");
             UIGame.EnableBtnConfirm(false);
             UIGame.SetupCurrentProjectImg(null);
@@ -102,7 +104,7 @@ namespace vgwb.lanoria
 
         public void ResetDetailPanel()
         {
-            Spawner.Prefab = null;
+            spawner.Prefab = null;
         }
 
         public void OnProjectDrag()
@@ -116,7 +118,7 @@ namespace vgwb.lanoria
         {
             instancedPlaceable = clone.GetComponent<Placeable>();
             instancedPlaceable.SetupCellsColor(chosenProjectData);
-            EnableFingerCanvas(false);
+            UIGame.EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
         }
 
@@ -159,20 +161,13 @@ namespace vgwb.lanoria
         private void StopUsingPlaceable()
         {
             UnsuscribeToPlaceableEvents();
-            EnableFingerCanvas(true);
+            UIGame.EnableFingerCanvas(true);
         }
 
         private void EnableSpawner(bool enable)
         {
-            if (Spawner != null) {
-                Spawner.enabled = enable;
-            }
-        }
-
-        private void EnableFingerCanvas(bool enable)
-        {
-            if (FingerCanvas != null) {
-                FingerCanvas.enabled = enable;
+            if (spawner != null) {
+                spawner.enabled = enable;
             }
         }
 
@@ -219,14 +214,18 @@ namespace vgwb.lanoria
 
         private void EventsSubscribe()
         {
-            Spawner.OnSpawnedClone += OnPrefabSpawned;
+            spawner.OnSpawnedClone += OnPrefabSpawned;
             Scorer.OnScoreUpdate += OnScoreUpdate;
+            UIGame.OnProjectDragged += OnProjectDrag;
+            UIGame.BtnConfirm.onClick.AddListener(() => ConfirmProject());
         }
 
         private void EventsUnsubscribe()
         {
-            Spawner.OnSpawnedClone -= OnPrefabSpawned;
+            spawner.OnSpawnedClone -= OnPrefabSpawned;
             Scorer.OnScoreUpdate -= OnScoreUpdate;
+            UIGame.OnProjectDragged -= OnProjectDrag;
+            UIGame.BtnConfirm.onClick.RemoveListener(() => ConfirmProject());
         }
         #endregion
     }
