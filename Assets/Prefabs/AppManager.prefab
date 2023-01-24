@@ -336,7 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ApplicationConfig: {fileID: 11400000, guid: 040309ef49e246d489a94cc92ba53286, type: 2}
-  DB: {fileID: 9170983364105901947}
 --- !u!114 &9170983364105901947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,4 +348,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a30a14ba60f488792677c27fda2ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Database: {fileID: 11400000, guid: 2b6b51886b50b4b29b2b522d08682677, type: 2}
+  Data: {fileID: 11400000, guid: 2b6b51886b50b4b29b2b522d08682677, type: 2}
