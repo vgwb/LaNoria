@@ -10,6 +10,7 @@ namespace vgwb.lanoria
         public Button BtnPlay;
         public Button BtnAbout;
         public Button BtnOptions;
+        public Button BtnHelp;
 
         void Start()
         {
