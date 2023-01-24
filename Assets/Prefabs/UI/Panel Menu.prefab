@@ -178,7 +178,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2966039198642177333, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_Name
-      value: Menu Button
+      value: Menu Button PLAY
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_Pivot.x
@@ -284,7 +284,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2966039198642177333, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_Name
-      value: Menu Button (2)
+      value: Menu Button OPTIONS
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_Pivot.x
@@ -390,7 +390,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2966039198642177333, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_Name
-      value: Menu Button (1)
+      value: Menu Button ABOUT
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_Pivot.x

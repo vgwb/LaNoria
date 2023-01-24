@@ -23,10 +23,10 @@ namespace vgwb.lanoria
 
         public GameObject SpawnPrefabInCamera(int cameraIndex, GameObject prefab, ProjectData projectData)
         {
-            Debug.Log("Call function!!! "+prefab);
+            //            Debug.Log("Call function!!! "+prefab);
             if (IsIndexValid(cameraIndex) && prefab != null) {
                 CleanCameraSubject(cameraIndex);
-                Debug.Log("Call function!!!");
+                //                Debug.Log("Call function!!!");
                 var container = Cams[cameraIndex].SubjectPivot;
                 var instance = Instantiate(prefab);
                 instance.transform.localPosition = Vector3.zero;
@@ -44,7 +44,8 @@ namespace vgwb.lanoria
                     if (projectData != null) {
                         placeable.SetupCellsColor(projectData);
                     }
-                } else {
+                }
+                else {
                     instance.transform.localPosition = Vector3.zero;
                 }
             }
@@ -69,5 +70,5 @@ namespace vgwb.lanoria
             return false;
         }
         #endregion
-    } 
+    }
 }

@@ -27,6 +27,8 @@ namespace vgwb.lanoria
             // Init localization
             yield return LocalizationSettings.InitializationOperation;
 
+            UI_Manager.Show(UI_manager.States.Home);
+
         }
 
     }
