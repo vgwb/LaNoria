@@ -16,13 +16,16 @@ namespace vgwb.lanoria
 
         public GameObject[] Cats;
 
+        private ProjectData projectData;
+
         public void Init(ProjectData data)
         {
-            Title.text = data.Title;
+            projectData = data;
+            Title.text = projectData.Title;
 
             int CatCounter = 0;
 
-            foreach (ProjectCategories cat in data.Sequence) {
+            foreach (ProjectCategories cat in projectData.Sequence) {
                 Cats[CatCounter].SetActive(true);
                 Cats[CatCounter].GetComponent<Image>().material = GetCatMaterial(cat);
                 CatCounter++;
@@ -33,6 +36,14 @@ namespace vgwb.lanoria
             if (CatCounter < 4) {
                 Cats[3].SetActive(false);
             }
+
+            GetComponent<Button>().onClick.AddListener(() => OnClick());
+
+        }
+
+        private void OnClick()
+        {
+            Debug.Log("CLICKED " + projectData.Title);
         }
 
         private Material GetCatMaterial(ProjectCategories cat)
