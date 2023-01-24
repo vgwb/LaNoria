@@ -36,7 +36,7 @@ namespace vgwb.lanoria
         {
             get {
                 if (GameplayConfig.I != null) {
-                    return GameplayConfig.I.GetCategoryColorsByType(category);
+                    return DataManager.I.Data.CategoriesData.GetColor(category);
                 }
 
                 return Color.white;
@@ -47,7 +47,7 @@ namespace vgwb.lanoria
         {
             get {
                 if (GameplayConfig.I != null) {
-                    return GameplayConfig.I.GetCategoryMaterialByType(category);
+                    return DataManager.I.Data.CategoriesData.GetMaterial(category);
                 }
 
                 return null;

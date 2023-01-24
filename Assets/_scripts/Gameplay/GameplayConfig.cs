@@ -40,7 +40,6 @@ namespace vgwb.lanoria
         public float DragYOffset = 0.2f;
         [Header("Projects Setup")]
         public List<ModelKeyToPrefab> ProjectPrefabsMap;
-        public List<CategoryToColor<ProjectCategories>> CategoryColorsMap;
         public Color BlankColor = Color.white;
         [Header("Drawing Rules")]
         public int CardToDraw = 4;
@@ -89,20 +88,6 @@ namespace vgwb.lanoria
             int randomIndex = Random.Range(0, tuples.Count);
 
             return tuples[randomIndex].Prefab;
-        }
-
-        public Color GetCategoryColorsByType(ProjectCategories category)
-        {
-            var tuple = CategoryColorsMap.Find(x => x.Category == category);
-
-            return tuple.ColorToUse;
-        }
-
-        public Material GetCategoryMaterialByType(ProjectCategories category)
-        {
-            var tuple = CategoryColorsMap.Find(x => x.Category == category);
-
-            return tuple.MaterialToUse;
         }
 
         public string GetSubregionNameByEnum(Subregion subregion)
