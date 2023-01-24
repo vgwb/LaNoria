@@ -46,7 +46,8 @@ namespace vgwb.lanoria
         {
             BoardManager.I.ShowMap(false);
             UI_manager.I.Show(UI_manager.States.Play);
-            Debug.Log("PLAY NEW GAME!");
+            GameplayManager.I.StartGame();
+            //            Debug.Log("PLAY NEW GAME!");
         }
 
         public void OnOptions()

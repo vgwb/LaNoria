@@ -36,10 +36,10 @@ namespace vgwb.lanoria
             if (CardPrefab == null) {
                 Debug.LogError("CardDealer - Awake(): no card prefab defined!");
             }
-            
+
             chosenCardIndex = -1;
             instancedPlaceable = null;
-            chosenProjectData = null;            
+            chosenProjectData = null;
         }
 
         private void Start()
@@ -62,6 +62,7 @@ namespace vgwb.lanoria
         #region Functions
         public void StartGame()
         {
+            BoardManager.I.EmptyProjectsContainer();
             UI_manager.I.Show(UI_manager.States.Play);
             UIGame.SetScoreUI(0);
             UIGame.SlideOnTheRight();
