@@ -47,6 +47,16 @@ namespace vgwb.lanoria
             projectPanelOriginalPosition = PanelCurrentProject.anchoredPosition;
         }
 
+        public void OpenPanel()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void ClosePanel()
+        {
+            gameObject.SetActive(false);
+        }
+
         public void EnableBtnConfirm(bool enable)
         {
             if (PanelConfirm != null) {

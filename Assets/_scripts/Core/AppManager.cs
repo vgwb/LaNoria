@@ -5,12 +5,16 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+using UnityEditor;
 
 namespace vgwb.lanoria
 {
     public class AppManager : SingletonMonoBehaviour<AppManager>
     {
         public AppConfig ApplicationConfig;
+
+        [Header("Debug")]
+        public bool DebugDirectPlay;
 
         public IEnumerator Start()
         {
@@ -19,7 +23,11 @@ namespace vgwb.lanoria
             // Init localization
             yield return LocalizationSettings.InitializationOperation;
 
-            OnHome();
+            if (DebugDirectPlay) {
+                OnPlay();
+            } else {
+                OnHome();
+            }
         }
 
         public void OnHome()
