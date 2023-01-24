@@ -5250,6 +5250,7 @@ MonoBehaviour:
   PanelGameHUD: {fileID: 1515790041}
   PanelProjectDetail: {fileID: 1745226189}
   PanelOptions: {fileID: 1044983078}
+  PanelGamePause: {fileID: 0}
 --- !u!224 &1475989390
 RectTransform:
   m_ObjectHideFlags: 0

@@ -52,7 +52,7 @@ MonoBehaviour:
   ShowPivot: 1
   Pivot: {fileID: 5601575146463594318}
   TilesContainer: {fileID: 9155471060449986326}
-  Tiles: []
+  Cells: []
   OutlineHandler: {fileID: 713258926437315187}
   LeanCameraComp: {fileID: 5601575145783329368}
   LeanSelectableComp: {fileID: 5601575145783329369}
@@ -218,7 +218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5601575146463594318}
   m_LocalRotation: {x: 0, y: 0.5, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0.5, y: 1, z: -0.89}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: -0.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -263,7 +263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9155471060449986326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1646258, y: 1.677576, z: -1.5946118}
+  m_LocalPosition: {x: 1.1646258, y: 0, z: -1.5946118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

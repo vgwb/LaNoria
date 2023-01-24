@@ -30,8 +30,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3945374727125893698}
-  - {fileID: 6743853140537431502}
   - {fileID: 6898196186244548098}
+  - {fileID: 6743853140537431502}
   m_Father: {fileID: 7131492775851823163}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -152,8 +152,8 @@ MonoBehaviour:
   TilesContainer: {fileID: 956721596140025669}
   Cells:
   - {fileID: 88541917640280768}
-  - {fileID: 7668684301602921804}
   - {fileID: 7512296565206503040}
+  - {fileID: 7668684301602921804}
   OutlineHandler: {fileID: 7332092013841500199}
   LeanCameraComp: {fileID: 1497322628851280916}
   LeanSelectableComp: {fileID: 6974142896618380074}
@@ -303,7 +303,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5068229777665841356, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5068229777665841356, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
       propertyPath: m_LocalScale.y
@@ -351,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332491097330033133, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
       propertyPath: m_Name
-      value: ProjectCell_3
+      value: ProjectCell_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
@@ -380,7 +380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5068229777665841356, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5068229777665841356, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
       propertyPath: m_LocalScale.y
@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332491097330033133, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
       propertyPath: m_Name
-      value: ProjectCell_2
+      value: ProjectCell_3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90bfd511725004ae597f08feb16f6988, type: 3}
