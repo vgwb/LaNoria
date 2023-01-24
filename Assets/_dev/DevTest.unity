@@ -1719,7 +1719,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5311655321630592212, guid: cbb4aa90f5778b1498962b587fbf20cf, type: 3}
       propertyPath: StartGameOnPlay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5311655321630592213, guid: cbb4aa90f5778b1498962b587fbf20cf, type: 3}
       propertyPath: m_RootOrder
@@ -6705,7 +6705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7753285714682877560, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753285714682877560, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
+      propertyPath: DebugDirectPlay
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}

@@ -46,8 +46,6 @@ namespace vgwb.lanoria
         {
             UIGame = UI_manager.I.PanelGameHUD;
             spawner = UIGame.Spawner;
-            UIGame.SlideOnTheRight();
-            UI_manager.I.Show(UI_manager.States.Play);
             EventsSubscribe();
 
             if (StartGameOnPlay) {
@@ -64,6 +62,7 @@ namespace vgwb.lanoria
         #region Functions
         public void StartGame()
         {
+            UI_manager.I.Show(UI_manager.States.Play);
             UIGame.SetScoreUI(0);
             UIGame.SlideOnTheRight();
             UIGame.EnableBtnConfirm(false);
