@@ -12,7 +12,6 @@ namespace vgwb.lanoria
     {
         public AppConfig ApplicationConfig;
         public DataManager DB;
-        public UI_manager UI_Manager;
 
         public IEnumerator Start()
         {
@@ -27,13 +26,13 @@ namespace vgwb.lanoria
         public void OnHome()
         {
             Debug.Log("HOME!");
-            UI_Manager.Show(UI_manager.States.Home);
+            UI_manager.I.Show(UI_manager.States.Home);
         }
 
         public void OnAbout()
         {
             Debug.Log("ABOUT!");
-            UI_Manager.Show(UI_manager.States.About);
+            UI_manager.I.Show(UI_manager.States.About);
         }
 
         public void OnPlay()
@@ -44,7 +43,7 @@ namespace vgwb.lanoria
         public void OnOptions()
         {
             Debug.Log("OPTIONS!");
-            UI_Manager.Show(UI_manager.States.Options);
+            UI_manager.I.Show(UI_manager.States.Options);
         }
 
     }

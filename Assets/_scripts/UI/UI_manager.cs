@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    public class UI_manager : MonoBehaviour
+    public class UI_manager : SingletonMonoBehaviour<UI_manager>
     {
+
         public enum States
         {
             Home = 1,
@@ -22,11 +24,6 @@ namespace vgwb.lanoria
         public UI_PanelGamePause PanelGamePause;
 
         private States currentUIState;
-
-        void Start()
-        {
-
-        }
 
         public void Show(States newState)
         {
