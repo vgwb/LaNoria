@@ -8,6 +8,7 @@ namespace vgwb.lanoria
     public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
     {
         #region Var
+        public bool StartGameOnPlay = false;
         [Header("Cards")]
         public CardDealer Dealer;
         public GameObject CardPrefab;
@@ -45,12 +46,13 @@ namespace vgwb.lanoria
         {
             UIGame = UI_manager.I.PanelGameHUD;
             spawner = UIGame.Spawner;
-            UIGame.SetScoreUI(0);
             UIGame.SlideOnTheRight();
-            UIGame.EnableBtnConfirm(false);
-            UIGame.SetProjectTitle("");
+            UI_manager.I.Show(UI_manager.States.Play);
             EventsSubscribe();
-            DrawNewHand();
+
+            if (StartGameOnPlay) {
+                StartGame();
+            }
         }
 
         private void OnDestroy()
@@ -60,6 +62,15 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
+        public void StartGame()
+        {
+            UIGame.SetScoreUI(0);
+            UIGame.SlideOnTheRight();
+            UIGame.EnableBtnConfirm(false);
+            UIGame.SetProjectTitle("");
+            DrawNewHand();
+        }
+
         public void ChosePrefab(Transform placeablePrefab, ProjectData projectData, int cardIndex)
         {
             if (placeablePrefab != null && spawner != null) {

@@ -1717,6 +1717,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5311655321630592212, guid: cbb4aa90f5778b1498962b587fbf20cf, type: 3}
+      propertyPath: StartGameOnPlay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5311655321630592213, guid: cbb4aa90f5778b1498962b587fbf20cf, type: 3}
       propertyPath: m_RootOrder
       value: 6
