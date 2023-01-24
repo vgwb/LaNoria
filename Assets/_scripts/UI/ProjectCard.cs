@@ -44,6 +44,7 @@ namespace vgwb.lanoria
         private void OnClick()
         {
             Debug.Log("CLICKED " + projectData.Title);
+            UI_manager.I.OpenProjectDetail(projectData);
         }
 
         private Material GetCatMaterial(ProjectCategories cat)

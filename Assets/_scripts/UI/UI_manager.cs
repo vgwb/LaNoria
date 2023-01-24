@@ -57,5 +57,10 @@ namespace vgwb.lanoria
             }
         }
 
+        public void OpenProjectDetail(ProjectData data)
+        {
+            PanelProjectDetail.OpenPanel(data);
+        }
+
     }
 }
