@@ -19,6 +19,7 @@ namespace vgwb.lanoria
     public class ProjectData
     {
         public string Id;
+        public bool Active = true;
         public string Model;
         public ProjectCategories[] Sequence;
         public string Title;

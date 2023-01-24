@@ -21,16 +21,43 @@ namespace vgwb.lanoria
         public UI_PanelOptions PanelOptions;
         public UI_PanelGamePause PanelGamePause;
 
-        private States currentState;
+        private States currentUIState;
 
         void Start()
         {
 
         }
 
-        public void Show(States area)
+        public void Show(States newState)
         {
+            CloseState(currentUIState);
+            switch (newState) {
+                case States.Home:
+                    PanelMenu.OpenPanel();
+                    break;
+                case States.About:
+                    PanelAbout.OpenPanel();
+                    break;
+                case States.Options:
+                    PanelOptions.OpenPanel();
+                    break;
+            }
+            currentUIState = newState;
+        }
 
+        private void CloseState(States state)
+        {
+            switch (state) {
+                case States.Home:
+                    PanelMenu.ClosePanel();
+                    break;
+                case States.About:
+                    PanelAbout.ClosePanel();
+                    break;
+                case States.Options:
+                    PanelOptions.ClosePanel();
+                    break;
+            }
         }
 
     }

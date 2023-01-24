@@ -11,14 +11,8 @@ namespace vgwb.lanoria
     public class AppManager : SingletonMonoBehaviour<AppManager>
     {
         public AppConfig ApplicationConfig;
-        public Image LoadingObscurer;
         public DataManager DB;
         public UI_manager UI_Manager;
-        // protected override void Init()
-        // {
-        //     if (LoadingObscurer != null)
-        //         LoadingObscurer.color = new Color(LoadingObscurer.color.r, LoadingObscurer.color.g, LoadingObscurer.color.b, 1f);
-        // }
 
         public IEnumerator Start()
         {
@@ -27,8 +21,30 @@ namespace vgwb.lanoria
             // Init localization
             yield return LocalizationSettings.InitializationOperation;
 
-            UI_Manager.Show(UI_manager.States.Home);
+            OnHome();
+        }
 
+        public void OnHome()
+        {
+            Debug.Log("HOME!");
+            UI_Manager.Show(UI_manager.States.Home);
+        }
+
+        public void OnAbout()
+        {
+            Debug.Log("ABOUT!");
+            UI_Manager.Show(UI_manager.States.About);
+        }
+
+        public void OnPlay()
+        {
+            Debug.Log("PLAY!");
+        }
+
+        public void OnOptions()
+        {
+            Debug.Log("OPTIONS!");
+            UI_Manager.Show(UI_manager.States.Options);
         }
 
     }

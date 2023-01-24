@@ -8,11 +8,29 @@ namespace vgwb.lanoria
     public class ProjectCard : MonoBehaviour
     {
         public TextMeshProUGUI Title;
-        public TextMeshProUGUI Colors;
+        public GameObject Cat_1;
+        public GameObject Cat_2;
+        public GameObject Cat_3;
+        public GameObject Cat_4;
 
-        void Init(string title)
+        public void Init(ProjectData data)
         {
-            Title.text = title;
+            Title.text = data.Title;
+
+            foreach (ProjectCategories cat in data.Sequence) {
+                switch (cat) {
+                    case ProjectCategories.Environment:
+                        break;
+                    case ProjectCategories.Equality:
+                        break;
+                    case ProjectCategories.Tech:
+                        break;
+                    case ProjectCategories.People:
+                        break;
+                }
+
+            }
+
         }
 
     }

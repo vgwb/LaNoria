@@ -14,16 +14,23 @@ namespace vgwb.lanoria
         void Start()
         {
             BtnPlay.onClick.AddListener(() => OnPlay());
+            BtnAbout.onClick.AddListener(() => AppManager.I.OnAbout());
+            BtnOptions.onClick.AddListener(() => AppManager.I.OnOptions());
         }
 
-        public void Show(bool status)
+        public void OpenPanel()
         {
-            gameObject.SetActive(status);
+            gameObject.SetActive(true);
+        }
+
+        public void ClosePanel()
+        {
+            gameObject.SetActive(false);
         }
 
         private void OnPlay()
         {
-            Debug.Log("PLAY!");
+            AppManager.I.OnPlay();
         }
 
     }

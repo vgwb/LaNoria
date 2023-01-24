@@ -1,12 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UI_PanelOptions : MonoBehaviour
+namespace vgwb.lanoria
 {
-    void Start()
+    public class UI_PanelOptions : MonoBehaviour
     {
+        public Button BtnClose;
 
+        void Start()
+        {
+            BtnClose.onClick.AddListener(() => AppManager.I.OnHome());
+        }
+
+        public void OpenPanel()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void ClosePanel()
+        {
+            gameObject.SetActive(false);
+        }
     }
-
 }
