@@ -164,6 +164,7 @@ namespace vgwb.lanoria
 
         private void DrawSubregionInfo()
         {
+            List<Subregion> subregionWritten = new List<Subregion>();
             foreach (var cell in Cells) {
                 bool drawText = false;
                 bool drawColor = false;
@@ -188,7 +189,7 @@ namespace vgwb.lanoria
 
                 var pos = cell.transform.position;
                 var subregionColor = GameplayConfig.I.GetSubregionColorByEnum(cell.MySubregion);
-                if (drawText) {
+                if (drawText && !subregionWritten.Contains(cell.MySubregion)) {
                     string subregionName = GameplayConfig.I.GetSubregionNameByEnum(cell.MySubregion);
                     subregionName = subregionName.Replace(" ", "\n");
                     var style = new GUIStyle();
@@ -196,6 +197,7 @@ namespace vgwb.lanoria
                     style.fontSize = GameplayConfig.I.LabelDebugFontSize;
                     Vector3 labelPos = pos + GameplayConfig.I.LabelDebugOffset;
                     Handles.Label(labelPos, subregionName, style);
+                    subregionWritten.Add(cell.MySubregion);
                 }
 
                 if (drawColor) {

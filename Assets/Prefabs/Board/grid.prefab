@@ -96,13 +96,13 @@ Transform:
   - {fileID: 3601654062805742385}
   - {fileID: 3601654062520620804}
   - {fileID: 3601654063352637095}
-  - {fileID: 3601654063935269124}
   - {fileID: 3601654063259816034}
   - {fileID: 3601654064183143969}
   - {fileID: 3601654062738517696}
   - {fileID: 3601654062265340155}
   - {fileID: 3601654062681743654}
   - {fileID: 3601654063057595178}
+  - {fileID: 8604678390822685501}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -186,14 +186,14 @@ MonoBehaviour:
   - {fileID: 8472450609304679275}
   - {fileID: 8472450608516241246}
   - {fileID: 8472450609834665725}
-  - {fileID: 8472450610458880350}
   - {fileID: 8472450610060644408}
   - {fileID: 8472450610145209979}
   - {fileID: 8472450609505267354}
   - {fileID: 8472450608772567201}
   - {fileID: 8472450609431814524}
   - {fileID: 8472450609053084528}
-  ShowSubregionDebug: 0
+  - {fileID: 3676732597409549159}
+  ShowSubregionDebug: 1
 --- !u!1001 &761050670957410399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,6 +318,14 @@ PrefabInstance:
       value: GridCell (27)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654750858984}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853309887000}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -331,11 +339,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654750858984 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029436289826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064055597087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029436289826}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853309887000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029436289826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610269354053 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -407,6 +431,14 @@ PrefabInstance:
       value: GridCell (7)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654722517145}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853281604713}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 3
       objectReference: {fileID: 0}
@@ -420,11 +452,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654722517145 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029477156179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064012635758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029477156179}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853281604713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029477156179}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610243169844 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -496,6 +544,14 @@ PrefabInstance:
       value: GridCell (36)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654661935757}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853354770045}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -509,11 +565,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654661935757 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029550763847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064077948026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029550763847}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853354770045 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029550763847}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610316182560 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -585,6 +657,14 @@ PrefabInstance:
       value: GridCell (48)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654903687797}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853193758341}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 6
       objectReference: {fileID: 0}
@@ -598,11 +678,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654903687797 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029557663679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064168582274 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029557663679}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853193758341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029557663679}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610155322584 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -674,8 +770,16 @@ PrefabInstance:
       value: GridCell (13)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654884059919}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853174589439}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -687,11 +791,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654884059919 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029571589829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064191094264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029571589829}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853174589439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029571589829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610136284578 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -763,6 +883,14 @@ PrefabInstance:
       value: GridCell (5)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654890026722}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853180156434}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -776,11 +904,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654890026722 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029575461672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064186433557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029575461672}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853180156434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029575461672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610139619407 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -852,6 +996,14 @@ PrefabInstance:
       value: GridCell (42)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654893710400}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853183811760}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -865,11 +1017,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654893710400 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029579108746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064181738167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029579108746}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853183811760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029579108746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610143279853 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -894,7 +1062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_RootOrder
-      value: 69
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -941,8 +1109,16 @@ PrefabInstance:
       value: GridCell (69)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654893091030}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853183382566}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -954,11 +1130,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654893091030 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029580588316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064183143969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029580588316}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853183382566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029580588316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610145209979 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1030,8 +1222,16 @@ PrefabInstance:
       value: GridCell (34)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654851518837}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853142117765}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -1043,11 +1243,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654851518837 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029604064447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064156260226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029604064447}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853142117765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029604064447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610101581784 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1119,6 +1335,14 @@ PrefabInstance:
       value: GridCell (14)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654812231261}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853236980397}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -1132,11 +1356,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654812231261 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029665438615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654064192663722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029665438615}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853236980397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029665438615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610196574448 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1208,6 +1448,14 @@ PrefabInstance:
       value: GridCell (21)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654499904651}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853595443323}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -1221,11 +1469,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654499904651 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029688619329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063771286140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029688619329}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853595443323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029688619329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610554780198 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1297,6 +1561,14 @@ PrefabInstance:
       value: GridCell (62)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654500832291}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853596612819}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 5
       objectReference: {fileID: 0}
@@ -1310,11 +1582,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654500832291 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029691681257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063765848788 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029691681257}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853596612819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029691681257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610558288526 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1386,6 +1674,14 @@ PrefabInstance:
       value: GridCell (45)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654620024304}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853447012608}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 4
       objectReference: {fileID: 0}
@@ -1399,11 +1695,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654620024304 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029844389946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063918537479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029844389946}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853447012608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029844389946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610408561501 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1475,6 +1787,14 @@ PrefabInstance:
       value: GridCell (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654567586712}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853528811368}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -1488,11 +1808,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654567586712 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029892650578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063966764399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029892650578}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853528811368 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029892650578}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610490375477 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1564,8 +1900,16 @@ PrefabInstance:
       value: GridCell (51)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654547615326}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853508936366}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -1577,104 +1921,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654547615326 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029904102292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063986768041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029904102292}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8472450610468272371 stripped
+--- !u!114 &7093740853508936366 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029904102292}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c9cd610999ff4ed7863d32ccd1409a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &2029244029928337977
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2029244029550622160}
-    m_Modifications:
-    - target: {fileID: 1849261061489800869, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_RootOrder
-      value: 67
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.928203
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562694654471094906, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: m_Name
-      value: GridCell (66)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: MySubregion
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: ShowRange
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-      propertyPath: ShowNeighbours
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
---- !u!4 &3601654063935269124 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-  m_PrefabInstance: {fileID: 2029244029928337977}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8472450610458880350 stripped
+--- !u!114 &8472450610468272371 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
-  m_PrefabInstance: {fileID: 2029244029928337977}
+  m_PrefabInstance: {fileID: 2029244029904102292}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -1742,6 +2013,14 @@ PrefabInstance:
       value: GridCell (59)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654545865002}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853507540442}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 5
       objectReference: {fileID: 0}
@@ -1755,11 +2034,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654545865002 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029935940832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063926095837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029935940832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853507540442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029935940832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610467008391 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1831,8 +2126,16 @@ PrefabInstance:
       value: GridCell (20)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655306646989}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853865589053}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -1844,11 +2147,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655306646989 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029958494215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063495889722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244029958494215}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853865589053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244029958494215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609751425888 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -1920,6 +2239,14 @@ PrefabInstance:
       value: GridCell (12)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655254241323}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853813136603}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -1933,11 +2260,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655254241323 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030006787553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063485363932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030006787553}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853813136603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030006787553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609698989702 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2009,6 +2352,14 @@ PrefabInstance:
       value: GridCell (55)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655240100838}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853933184790}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 4
       objectReference: {fileID: 0}
@@ -2022,11 +2373,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655240100838 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030026163756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063563504913 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030026163756}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853933184790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030026163756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609819041099 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2098,6 +2465,14 @@ PrefabInstance:
       value: GridCell (57)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655343641116}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853767778028}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 5
       objectReference: {fileID: 0}
@@ -2111,11 +2486,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655343641116 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030198915030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063660745963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030198915030}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853767778028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030198915030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609655710897 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2187,6 +2578,14 @@ PrefabInstance:
       value: GridCell (47)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655019561188}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740854114925588}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 4
       objectReference: {fileID: 0}
@@ -2200,11 +2599,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655019561188 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030241836334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063250560531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030241836334}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740854114925588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030241836334}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610000631369 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2276,8 +2691,16 @@ PrefabInstance:
       value: GridCell (37)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655031748681}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740854126855353}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -2289,11 +2712,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655031748681 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030256149891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063239671486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030256149891}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740854126855353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030256149891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610014940900 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2365,6 +2804,14 @@ PrefabInstance:
       value: GridCell (60)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654970795367}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740854200392087}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 8
       objectReference: {fileID: 0}
@@ -2378,11 +2825,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654970795367 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030295861421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063296164752 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030295861421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740854200392087 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030295861421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610088211402 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2407,7 +2870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_RootOrder
-      value: 68
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2454,8 +2917,16 @@ PrefabInstance:
       value: GridCell (67)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654942639765}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740854172973669}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -2467,11 +2938,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654942639765 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030334815071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063259816034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030334815071}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740854172973669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030334815071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610060644408 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2543,6 +3030,14 @@ PrefabInstance:
       value: GridCell (40)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654918571332}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740854148807092}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 6
       objectReference: {fileID: 0}
@@ -2556,11 +3051,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654918571332 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030342170766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063283917747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030342170766}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740854148807092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030342170766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610034381801 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2632,6 +3143,14 @@ PrefabInstance:
       value: GridCell (26)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519654924309491}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740854154604291}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -2645,11 +3164,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519654924309491 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030350007865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063275033860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030350007865}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740854154604291 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030350007865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450610042275166 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2721,6 +3256,14 @@ PrefabInstance:
       value: GridCell (11)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655171152530}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853997938274}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -2734,11 +3277,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655171152530 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030359869272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063368719461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030359869272}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853997938274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030359869272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609883778111 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2810,6 +3369,14 @@ PrefabInstance:
       value: GridCell (68)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655119351888}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853946977440}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 8
       objectReference: {fileID: 0}
@@ -2823,11 +3390,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655119351888 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030410833306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063352637095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030410833306}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853946977440 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030410833306}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609834665725 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2899,6 +3482,14 @@ PrefabInstance:
       value: GridCell (41)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655094429971}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740854055785955}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -2912,11 +3503,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655094429971 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030453048537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063445164004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030453048537}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740854055785955 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030453048537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609943478206 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -2988,6 +3595,14 @@ PrefabInstance:
       value: GridCell (29)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655061764876}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740854023440380}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -3001,11 +3616,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655061764876 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030485395142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063410195963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030485395142}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740854023440380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030485395142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609909165473 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3077,6 +3708,14 @@ PrefabInstance:
       value: GridCell (24)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655845046095}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852256594879}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -3090,11 +3729,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655845046095 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030499023493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062962454968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030499023493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852256594879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030499023493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609218154978 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3166,8 +3821,16 @@ PrefabInstance:
       value: GridCell (33)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655853911794}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852265554434}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -3179,11 +3842,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655853911794 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030505755448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062952577029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030505755448}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852265554434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030505755448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609224890463 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3255,6 +3934,14 @@ PrefabInstance:
       value: GridCell (25)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655816850573}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852228165757}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -3268,11 +3955,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655816850573 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030535803207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062923840122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030535803207}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852228165757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030535803207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609187895840 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3344,8 +4047,16 @@ PrefabInstance:
       value: GridCell (8)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655939113561}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852081786537}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -3357,11 +4068,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655939113561 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030660202387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063064978606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030660202387}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852081786537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030660202387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609043330292 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3386,7 +4113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_RootOrder
-      value: 73
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3433,6 +4160,14 @@ PrefabInstance:
       value: GridCell (73)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655950482909}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852093485357}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -3446,11 +4181,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655950482909 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030669434903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063057595178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030669434903}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852093485357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030669434903}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609053084528 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3522,8 +4273,16 @@ PrefabInstance:
       value: GridCell (50)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655935976113}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852078632513}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -3535,11 +4294,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655935976113 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030688522107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063068132422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030688522107}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852078632513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030688522107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609038095388 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3611,6 +4386,14 @@ PrefabInstance:
       value: GridCell (54)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655914906745}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852191975561}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 4
       objectReference: {fileID: 0}
@@ -3624,11 +4407,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655914906745 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030701005235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063156048526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030701005235}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852191975561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030701005235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609151701716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3700,8 +4499,16 @@ PrefabInstance:
       value: GridCell (39)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655865537133}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852142780061}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -3713,11 +4520,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655865537133 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030754365351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654063142519962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030754365351}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852142780061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030754365351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609104454848 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3789,6 +4612,14 @@ PrefabInstance:
       value: GridCell (53)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655523359389}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852471326317}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 4
       objectReference: {fileID: 0}
@@ -3802,11 +4633,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655523359389 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030812772183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062680673386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030812772183}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852471326317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030812772183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609430776880 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3831,7 +4678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_RootOrder
-      value: 72
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3878,6 +4725,14 @@ PrefabInstance:
       value: GridCell (72)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655522334673}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852470254369}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -3891,11 +4746,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655522334673 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030813813275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062681743654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030813813275}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852470254369 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030813813275}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609431814524 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -3967,6 +4838,14 @@ PrefabInstance:
       value: GridCell (28)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655528789383}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852476381559}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -3980,11 +4859,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655528789383 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030820268109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062671356784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030820268109}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852476381559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030820268109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609438204714 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4056,6 +4951,14 @@ PrefabInstance:
       value: GridCell (46)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655506194305}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852588106609}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 4
       objectReference: {fileID: 0}
@@ -4069,11 +4972,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655506194305 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030829158987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062764177782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030829158987}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852588106609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030829158987}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609547835692 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4145,6 +5064,14 @@ PrefabInstance:
       value: GridCell (23)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655508455585}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852591086673}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -4158,11 +5085,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655508455585 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030831426923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062757979734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030831426923}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852591086673 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030831426923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609550550540 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4187,7 +5130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_RootOrder
-      value: 70
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4234,8 +5177,16 @@ PrefabInstance:
       value: GridCell (70)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655461599287}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852543571143}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -4247,11 +5198,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655461599287 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030887327229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062738517696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030887327229}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852543571143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030887327229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609505267354 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4323,6 +5290,14 @@ PrefabInstance:
       value: GridCell (16)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655698682601}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852378840601}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -4336,11 +5311,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655698682601 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030920957731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062839350302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030920957731}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852378840601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030920957731}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609338156100 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4412,6 +5403,14 @@ PrefabInstance:
       value: GridCell (64)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655665198534}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852345215286}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 5
       objectReference: {fileID: 0}
@@ -4425,11 +5424,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655665198534 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030954579980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062805742385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030954579980}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852345215286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030954579980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609304679275 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4501,8 +5516,16 @@ PrefabInstance:
       value: GridCell (35)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655622662782}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852437034638}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -4514,11 +5537,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655622662782 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030981248948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062916422793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030981248948}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852437034638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030981248948}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609398451411 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4590,6 +5629,14 @@ PrefabInstance:
       value: GridCell (58)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655627775490}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852441359090}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 8
       objectReference: {fileID: 0}
@@ -4603,11 +5650,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655627775490 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030984262600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062911047925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244030984262600}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852441359090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244030984262600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450609400940719 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4679,6 +5742,14 @@ PrefabInstance:
       value: GridCell (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656371278498}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852782083666}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -4692,11 +5763,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656371278498 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031058780008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062431781973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031058780008}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852782083666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031058780008}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608670147599 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4768,6 +5855,14 @@ PrefabInstance:
       value: GridCell (22)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656349712292}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852760658772}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -4781,11 +5876,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656349712292 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031068697198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062391470419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031068697198}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852760658772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031068697198}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608646514953 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4857,6 +5968,14 @@ PrefabInstance:
       value: GridCell (43)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656328040408}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852739339048}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -4870,11 +5989,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656328040408 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031080579602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062411553071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031080579602}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852739339048 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031080579602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608625310069 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -4946,8 +6081,16 @@ PrefabInstance:
       value: GridCell (61)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656335339736}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852746718248}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -4959,11 +6102,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656335339736 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031089949970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062404298287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031089949970}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852746718248 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031089949970}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608634668661 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5035,8 +6194,16 @@ PrefabInstance:
       value: GridCell (10)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656314336062}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852859998158}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -5048,11 +6215,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656314336062 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031102500596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062492411337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031102500596}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852859998158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031102500596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608747947411 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5124,6 +6307,14 @@ PrefabInstance:
       value: GridCell (32)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656282832771}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852828586867}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -5137,11 +6328,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656282832771 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031138132553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062452320628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031138132553}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852828586867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031138132553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608716409134 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5213,6 +6420,14 @@ PrefabInstance:
       value: GridCell (15)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656502139336}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852644930872}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -5226,11 +6441,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656502139336 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031187571714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062569066303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031187571714}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852644930872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031187571714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608530509669 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5302,8 +6533,16 @@ PrefabInstance:
       value: GridCell (52)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656505159171}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852648202995}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -5315,11 +6554,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656505159171 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031192687561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062565800180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031192687561}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852648202995 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031192687561}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608536156334 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5391,8 +6646,16 @@ PrefabInstance:
       value: GridCell (65)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656487436787}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852630273283}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -5404,11 +6667,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656487436787 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031206394937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062520620804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031206394937}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852630273283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031206394937}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608516241246 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5480,6 +6759,14 @@ PrefabInstance:
       value: GridCell (38)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656491873261}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852634226461}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 6
       objectReference: {fileID: 0}
@@ -5493,11 +6780,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656491873261 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031210831399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062516725018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031210831399}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852634226461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031210831399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608520209728 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5569,6 +6872,14 @@ PrefabInstance:
       value: GridCell (17)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656448269770}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852725014842}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 3
       objectReference: {fileID: 0}
@@ -5582,11 +6893,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656448269770 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031234363392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062624246589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031234363392}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852725014842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031234363392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608610855783 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5658,6 +6985,14 @@ PrefabInstance:
       value: GridCell (4)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656453138694}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852730631670}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -5671,11 +7006,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656453138694 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031241299148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062622834673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031241299148}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852730631670 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031241299148}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608618323883 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5747,6 +7098,14 @@ PrefabInstance:
       value: GridCell (63)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656395456572}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852672969932}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 5
       objectReference: {fileID: 0}
@@ -5760,11 +7119,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656395456572 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031282187766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062613386955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031282187766}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852672969932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031282187766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608558544529 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5836,6 +7211,14 @@ PrefabInstance:
       value: GridCell (56)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656116633454}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853065040798}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 5
       objectReference: {fileID: 0}
@@ -5849,11 +7232,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656116633454 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031305380516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062149806489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031305380516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853065040798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031305380516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608950766019 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -5925,8 +7324,16 @@ PrefabInstance:
       value: GridCell (18)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656076932300}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853025048636}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -5938,11 +7345,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656076932300 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031332759814}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062126883387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031332759814}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853025048636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031332759814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608911032929 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6014,6 +7437,14 @@ PrefabInstance:
       value: GridCell (6)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656059224844}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853007106044}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 2
       objectReference: {fileID: 0}
@@ -6027,11 +7458,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656059224844 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031350705862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062144837115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031350705862}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853007106044 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031350705862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608894907809 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6103,8 +7550,16 @@ PrefabInstance:
       value: GridCell (49)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519655991718908}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740853073563404}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -6116,11 +7571,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519655991718908 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031417450038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062211540235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031417450038}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740853073563404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031417450038}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608961643857 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6192,8 +7663,16 @@ PrefabInstance:
       value: GridCell (19)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656245355532}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852924782844}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: ShowRange
@@ -6205,11 +7684,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656245355532 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031436171718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062289023739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031436171718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852924782844 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031436171718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608812602017 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6281,6 +7776,14 @@ PrefabInstance:
       value: GridCell (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656195644269}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852874880925}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -6294,11 +7797,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656195644269 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031487121063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062272925082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031487121063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852874880925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031487121063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608762949056 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6370,6 +7889,14 @@ PrefabInstance:
       value: GridCell (44)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656202949107}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852882255107}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 9
       objectReference: {fileID: 0}
@@ -6383,11 +7910,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656202949107 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031492332601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062269810436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031492332601}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852882255107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031492332601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608768091998 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6459,6 +8002,14 @@ PrefabInstance:
       value: GridCell (9)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656200983990}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852881074502}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 3
       objectReference: {fileID: 0}
@@ -6472,11 +8023,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656200983990 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031492462716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062269940545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031492462716}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852881074502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031492462716}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608768746267 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6501,7 +8068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_RootOrder
-      value: 71
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6548,6 +8115,14 @@ PrefabInstance:
       value: GridCell (71)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656206861836}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852886731516}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 8
       objectReference: {fileID: 0}
@@ -6561,11 +8136,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656206861836 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031496276934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062265340155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031496276934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852886731516 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031496276934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608772567201 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6637,6 +8228,14 @@ PrefabInstance:
       value: GridCell (31)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656144658911}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852958371119}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -6650,11 +8249,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656144658911 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031536802837}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062322612008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031536802837}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852958371119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031536802837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608846190450 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6726,6 +8341,14 @@ PrefabInstance:
       value: GridCell (30)
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1570519656129220147}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 7093740852943401667}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
       value: 1
       objectReference: {fileID: 0}
@@ -6739,11 +8362,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!23 &1570519656129220147 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031552816121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3601654062338562244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2029244031552816121}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7093740852943401667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2029244031552816121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8472450608829110430 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
@@ -6815,14 +8454,31 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 3234089301606415524}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: Occupied
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 6582107489584791636}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
       propertyPath: MySubregion
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
 --- !u!4 &635558481704102483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2666978609137480046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &3234089301606415524 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
   m_PrefabInstance: {fileID: 2666978609137480046}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &5529963681190832649 stripped
@@ -6836,6 +8492,130 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9cd610999ff4ed7863d32ccd1409a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6582107489584791636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 2666978609137480046}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &6537822103062089728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2029244029550622160}
+    m_Modifications:
+    - target: {fileID: 1849261061489800869, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_RootOrder
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.928203
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562694654471094906, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: m_Name
+      value: GridCell (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 6006055259144117706}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: hexHandler
+      value: 
+      objectReference: {fileID: 2657220095102755130}
+    - target: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: MySubregion
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: ShowRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+      propertyPath: ShowNeighbours
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+--- !u!114 &2657220095102755130 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9104964570062500154, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 6537822103062089728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f30a6f8115ec4ae3a6b1ad75b59971b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3676732597409549159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7619354177688607591, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 6537822103062089728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9cd610999ff4ed7863d32ccd1409a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &6006055259144117706 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 712353790666231242, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 6537822103062089728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8604678390822685501 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3301974123265252157, guid: 41a8b8592b4c24390b75f6ea2f48498f, type: 3}
+  m_PrefabInstance: {fileID: 6537822103062089728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8867530791506122142
 PrefabInstance:
   m_ObjectHideFlags: 0

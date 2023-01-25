@@ -19,7 +19,6 @@ public enum Subregion
     Subregion_6 = 6, // Valle del Guadal Horce
     Subregion_7 = 7, // Malaga
     Subregion_8 = 8, // Noroma
-    Subregion_9 = 9, // Axarquia
-    Capital = 10
+    Subregion_9 = 9 // Axarquia
 }
 

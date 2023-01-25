@@ -30,7 +30,7 @@ namespace vgwb.lanoria
 
         public bool IsCapital()
         {
-            return MySubregion == Subregion.Capital;
+            return MySubregion == Subregion.Subregion_7;
         }
         #endregion
     }
