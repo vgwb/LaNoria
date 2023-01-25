@@ -11,9 +11,6 @@ namespace vgwb.lanoria
     {
         #region Var
         public bool StartGameOnPlay = false;
-        [Header("Test to remove")] // TODO: remove sounds from here!
-        public AudioClip ShuffleClip; // this...
-        public AudioClip CardClip; // ... and this
         [Header("Cards")]
         public CardDealer Dealer;
         public GameObject CardPrefab;
