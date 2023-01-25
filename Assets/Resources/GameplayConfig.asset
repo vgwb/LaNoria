@@ -98,3 +98,6 @@ MonoBehaviour:
   SlideProjectPanelTime: 0.4
   SlideProjectPanelPixelIn: 50
   UIProjectRotation: {x: 0, y: -90, z: 60}
+  ResetCameraRotYOnPlay: 1
+  FadeInGameCanvas: 1
+  CardAppearsTime: 0.3

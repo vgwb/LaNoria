@@ -57,6 +57,7 @@ namespace vgwb.lanoria
         [Header("UI transitions")]
         public float ResetCameraRotYOnPlay = 1.0f;
         public float FadeInGameCanvas = 1.0f;
+        public float CardAppearsTime = 1.0f;
         #endregion
 
         #region Functions

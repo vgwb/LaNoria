@@ -14,7 +14,9 @@ namespace vgwb.lanoria
         open = 4,
         close = 5,
         trash = 6,
-        score = 7
+        score = 7,
+        shuffle = 8,
+        card = 9
     }
 
     [CreateAssetMenu(menuName = "VGWB/Sounds List")]

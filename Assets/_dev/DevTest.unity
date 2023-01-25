@@ -2077,6 +2077,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cam: {fileID: 881277057}
   LeanUpdate: {fileID: 1139583143}
+  PitchYaw: {fileID: 1139583144}
+  AutoRotate: {fileID: 0}
 --- !u!1001 &1163917687
 PrefabInstance:
   m_ObjectHideFlags: 0

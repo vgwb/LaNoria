@@ -20,6 +20,7 @@ namespace vgwb.lanoria
 
         [Header("Panel Cards Elements")]
         public GameObject PanelCards;
+        public List<GameObject> Hooks;
 
         [Header("Panel Current Project Elements")]
         public RectTransform PanelCurrentProject;
@@ -87,10 +88,13 @@ namespace vgwb.lanoria
         public List<GameObject> CardsInUI()
         {
             var cards = new List<GameObject>();
-            int cardsNum = PanelCards.transform.childCount;
-            for (int i = 0; i < cardsNum; i++) {
-                var child = PanelCards.transform.GetChild(i);
-                cards.Add(child.gameObject);
+            for (int i = 0; i < Hooks.Count; i++) {
+                if (Hooks[i].transform.childCount > 0) {
+                    var card = Hooks[i].transform.GetChild(0);
+                    if (card != null) {
+                        cards.Add(card.gameObject);
+                    }
+                }
             }
 
             return cards;
@@ -151,11 +155,28 @@ namespace vgwb.lanoria
             }
         }
 
+        public void SetCanvasInteractable(bool enable)
+        {
+            if (Canvas != null) {
+                Canvas.blocksRaycasts = enable;
+                Canvas.interactable = enable;
+            }
+        }
+
         public void FadeCanvas(float endVal, float duration = 1.0f, TweenCallback callback = null)
         {
             if (Canvas != null) {
                 Canvas.DOFade(endVal, duration).OnComplete(callback);
             }
+        }
+
+        public GameObject GetHook(int index)
+        {
+            if (index >= 0 && index < Hooks.Count) {
+                return Hooks[index];
+            }
+
+            return null;
         }
 
         public void OnProjectDragFromCanvas()

@@ -1,5 +1,7 @@
+using DG.Tweening;
 using Lean.Touch;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using vgwb.framework;
 
@@ -9,6 +11,9 @@ namespace vgwb.lanoria
     {
         #region Var
         public bool StartGameOnPlay = false;
+        [Header("Test to remove")] // TODO: remove sounds from here!
+        public AudioClip ShuffleClip; // this...
+        public AudioClip CardClip; // ... and this
         [Header("Cards")]
         public CardDealer Dealer;
         public GameObject CardPrefab;
@@ -28,6 +33,7 @@ namespace vgwb.lanoria
         private LeanSpawnWithFinger spawner;
         private Placeable instancedPlaceable;
         private ProjectData chosenProjectData;
+        private List<CardInGame> spawnedCards;
         #endregion
 
         #region MonoB
@@ -42,6 +48,7 @@ namespace vgwb.lanoria
             chosenCardIndex = -1;
             instancedPlaceable = null;
             chosenProjectData = null;
+            spawnedCards = new List<CardInGame>();
         }
 
         private void Start()
@@ -99,6 +106,7 @@ namespace vgwb.lanoria
             UIGame.SetProjectTitle("");
             UIGame.EnableBtnConfirm(false);
             UIGame.SetupCurrentProjectImg(null);
+            UIGame.SlideOnTheRight();
             Scorer.UpdateScore(instancedPlaceable);
             chosenCardIndex = -1;
             instancedPlaceable = null;
@@ -198,12 +206,15 @@ namespace vgwb.lanoria
         private void DrawNewHand()
         {
             CleanHand();
+            spawnedCards = new List<CardInGame>();
             var projectsData = Dealer.DrawProjects();
             int cardIndex = 0;
             foreach (var projectData in projectsData) {
-                var cardInstance = Instantiate(CardPrefab, UIGame.CardContainer); // spawn the card inside the container
+                var cardInstance = Instantiate(CardPrefab, UIGame.GetHook(cardIndex).transform); // spawn the card inside the container
                 var cardComp = cardInstance.GetComponent<CardInGame>();
                 if (cardComp != null) {
+                    spawnedCards.Add(cardComp);
+                    cardComp.HideInBottomScreen();
                     var cardTexture = UICameraManager.I.GetUICameraTexture(cardIndex);
                     cardComp.InitCard(projectData, cardTexture); // initialize the card component
                     // get the associated model and bind it to the card clickable area
@@ -213,9 +224,10 @@ namespace vgwb.lanoria
                     // spawn the object in camera UI
                     UICameraManager.I.SpawnPrefabInCamera(cardIndex, associatedPrefab, projectData);
                 }
-
                 cardIndex++;
             }
+
+            SoundManager.I.PlaySfx(SfxEnum.shuffle);
 
             if (OnHandDrawed != null) {
                 OnHandDrawed();
@@ -240,6 +252,24 @@ namespace vgwb.lanoria
             StateHandler.OnStateUpdate -= ReadState;
         }
 
+        private void CardEntrance()
+        {
+            UIGame.SetCanvasInteractable(false);
+            float duration = GameplayConfig.I.CardAppearsTime;
+            Sequence mySequence = DOTween.Sequence();
+            float index = 0;
+            foreach (var card in spawnedCards) {
+                float time = (duration/2.0f) * index++;
+                mySequence.Insert(time, card.Rect.DOAnchorPosY(0.0f, duration).OnComplete(() => SoundManager.I.PlaySfx(SfxEnum.card)));
+            }
+            
+            mySequence.PrependInterval(duration);
+            mySequence.AppendCallback(() => {
+                SetState(GameplayState.Play);
+                UIGame.SetCanvasInteractable(true);
+            });
+        }
+
         private void ReadState(GameplayState state)
         {
             switch (state) {
@@ -262,7 +292,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Drawing:
                     DrawNewHand();
-                    SetState(GameplayState.Play); // TODO: remove from here when will be an animation or some kind of transitions
+                    CardEntrance();
                     break;
                 case GameplayState.Play:
                     break;

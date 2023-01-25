@@ -17,12 +17,21 @@ namespace vgwb.lanoria
         public RawImage PrefabImg;
         [Header("Project Data")]
         public ProjectData CardData;
+
+        private RectTransform rect;
+        #endregion
+
+        #region Attributes
+        public RectTransform Rect
+        {
+            get { return rect; }
+        }
         #endregion
 
         #region MonoB
-        private void Start()
+        private void Awake()
         {
-
+            rect = GetComponent<RectTransform>();
         }
         #endregion
 
@@ -45,6 +54,16 @@ namespace vgwb.lanoria
         {
             if (ClickableComp != null) {
                 ClickableComp.interactable = isPlayable;
+            }
+        }
+
+        public void HideInBottomScreen()
+        {
+            if (rect != null) {
+                float height = rect.sizeDelta.y;
+                var pos = rect.localPosition;
+                pos.y = -height;
+                rect.localPosition = pos;
             }
         }
 
