@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundsList: {fileID: 11400000, guid: 24942bdb4c056444090286a2ec56174b, type: 2}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 600269537392882769}
   audioSourceWin: {fileID: 0}
 --- !u!82 &600269537392882769
 AudioSource:
@@ -336,6 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ApplicationConfig: {fileID: 11400000, guid: 040309ef49e246d489a94cc92ba53286, type: 2}
+  DebugDirectPlay: 0
 --- !u!114 &9170983364105901947
 MonoBehaviour:
   m_ObjectHideFlags: 0
