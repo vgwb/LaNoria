@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2
-  speed: 15
+  speed: 3
   acceleration: 1
   idleTime: 0
   strength: 0
@@ -1661,6 +1661,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cam: {fileID: 881277057}
   LeanUpdate: {fileID: 1139583143}
+  PitchYaw: {fileID: 1139583144}
+  AutoRotate: {fileID: 1139583142}
+  ResetRotYDuration: 1
 --- !u!4 &1225926336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4495419392491572234, guid: b84a0942add6843938dc6e0f8635a756, type: 3}

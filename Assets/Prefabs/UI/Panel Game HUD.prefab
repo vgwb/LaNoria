@@ -1048,6 +1048,7 @@ GameObject:
   - component: {fileID: 5619242593406435957}
   - component: {fileID: 5619242593406435958}
   - component: {fileID: 9088964268417771431}
+  - component: {fileID: 6333353175812435533}
   m_Layer: 5
   m_Name: Panel Game HUD
   m_TagString: Untagged
@@ -1092,6 +1093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawner: {fileID: 9088964268417771431}
+  Canvas: {fileID: 6333353175812435533}
   PanelHUD: {fileID: 5619242592131529070}
   ScoreTxt: {fileID: 5619242591862886333}
   PanelCards: {fileID: 5619242592257613303}
@@ -1190,6 +1192,18 @@ MonoBehaviour:
   worldOffset: {x: 0, y: 0, z: 0}
   worldRelativeTo: {fileID: 0}
   fingerDatas: []
+--- !u!225 &6333353175812435533
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619242593406435912}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5619242593473234694
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ namespace vgwb.lanoria
     {
         [Header("Other comps")]
         public LeanSpawnWithFinger Spawner;
+        public CanvasGroup Canvas;
 
         [Header("Panel HUD Elements")]
         public GameObject PanelHUD;
@@ -131,6 +132,29 @@ namespace vgwb.lanoria
         {
             if (LeanSpawnCanvas != null) {
                 LeanSpawnCanvas.enabled = enable;
+            }
+        }
+
+        public void EnableCanvas(bool enable)
+        {
+            if (Canvas != null) {
+                Canvas.alpha = enable ? 1.0f : 0.0f;
+                Canvas.blocksRaycasts = enable;
+                Canvas.interactable = enable;
+            }
+        }
+
+        public void SetCanvasAlpha(float alpha)
+        {
+            if (Canvas != null) {
+                Canvas.alpha = alpha;
+            }
+        }
+
+        public void FadeCanvas(float endVal, float duration = 1.0f, TweenCallback callback = null)
+        {
+            if (Canvas != null) {
+                Canvas.DOFade(endVal, duration).OnComplete(callback);
             }
         }
 

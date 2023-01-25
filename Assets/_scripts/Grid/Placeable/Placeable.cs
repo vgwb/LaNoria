@@ -93,7 +93,6 @@ namespace vgwb.lanoria
         public void OnSelect()
         {
             RestoreOutline();
-            CameraManager.I.EnableRotationWithFingers(false);
             RiseUpTilesHeight();
             if (OnSelectMe != null) {
                 OnSelectMe();

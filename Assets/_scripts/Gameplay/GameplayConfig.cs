@@ -54,6 +54,9 @@ namespace vgwb.lanoria
         public float SlideProjectPanelTime = 0.8f;
         public float SlideProjectPanelPixelIn = 50.0f;
         public Vector3 UIProjectRotation = new Vector3(0.0f, -90.0f, 60.0f);
+        [Header("UI transitions")]
+        public float ResetCameraRotYOnPlay = 1.0f;
+        public float FadeInGameCanvas = 1.0f;
         #endregion
 
         #region Functions

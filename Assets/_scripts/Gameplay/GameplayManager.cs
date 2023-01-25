@@ -14,6 +14,8 @@ namespace vgwb.lanoria
         public GameObject CardPrefab;
         [Header("Score")]
         public ScoreManager Scorer;
+        [Header("State")]
+        public GameplayStateHandler StateHandler;
 
         public delegate void GameplayEvent();
         public GameplayEvent OnHandDrawed;
@@ -63,12 +65,7 @@ namespace vgwb.lanoria
         public void StartGame()
         {
             BoardManager.I.EmptyProjectsContainer();
-            UI_manager.I.Show(UI_manager.States.Play);
-            UIGame.SetScoreUI(0);
-            UIGame.SlideOnTheRight();
-            UIGame.EnableBtnConfirm(false);
-            UIGame.SetProjectTitle("");
-            DrawNewHand();
+            SetState(GameplayState.Intro);
         }
 
         public void ChosePrefab(Transform placeablePrefab, ProjectData projectData, int cardIndex)
@@ -102,16 +99,16 @@ namespace vgwb.lanoria
             UIGame.SetProjectTitle("");
             UIGame.EnableBtnConfirm(false);
             UIGame.SetupCurrentProjectImg(null);
-            DrawNewHand();
+            Scorer.UpdateScore(instancedPlaceable);
+            chosenCardIndex = -1;
+            instancedPlaceable = null;
+            chosenProjectData = null;
 
             if (OnProjectConfirmed != null) {
                 OnProjectConfirmed(instancedPlaceable);
             }
 
-            Scorer.UpdateScore(instancedPlaceable);
-            chosenCardIndex = -1;
-            instancedPlaceable = null;
-            chosenProjectData = null;
+            SetState(GameplayState.Drawing);
         }
 
         public void ResetDetailPanel()
@@ -136,6 +133,7 @@ namespace vgwb.lanoria
 
         private void OnPrefabSelect()
         {
+            CameraManager.I.EnableRotationWithFingers(false);
             UIGame.EnableCurrentProjectImg(false);
             UIGame.SlideOnTheRight();
         }
@@ -230,6 +228,7 @@ namespace vgwb.lanoria
             Scorer.OnScoreUpdate += OnScoreUpdate;
             UIGame.OnProjectDragged += OnProjectDrag;
             UIGame.BtnConfirm.onClick.AddListener(() => ConfirmProject());
+            StateHandler.OnStateUpdate += ReadState;
         }
 
         private void EventsUnsubscribe()
@@ -238,6 +237,47 @@ namespace vgwb.lanoria
             Scorer.OnScoreUpdate -= OnScoreUpdate;
             UIGame.OnProjectDragged -= OnProjectDrag;
             UIGame.BtnConfirm.onClick.RemoveListener(() => ConfirmProject());
+            StateHandler.OnStateUpdate -= ReadState;
+        }
+
+        private void ReadState(GameplayState state)
+        {
+            switch (state) {
+                default:
+                case GameplayState.None:
+                    break;
+                case GameplayState.Intro:
+                    UI_manager.I.Show(UI_manager.States.Play);
+                    UIGame.SetCanvasAlpha(0.0f);
+                    CameraManager.I.EnableAutoRotate(false);
+                    CameraManager.I.ResetToOriginalRotY(() => SetState(GameplayState.Setup));
+                    break;
+                case GameplayState.Setup:
+                    UIGame.SetScoreUI(0);
+                    UIGame.SlideOnTheRight();
+                    UIGame.EnableBtnConfirm(false);
+                    UIGame.SetProjectTitle("");
+                    float duration = GameplayConfig.I.FadeInGameCanvas;
+                    UIGame.FadeCanvas(1.0f, duration, () => SetState(GameplayState.Drawing));
+                    break;
+                case GameplayState.Drawing:
+                    DrawNewHand();
+                    SetState(GameplayState.Play); // TODO: remove from here when will be an animation or some kind of transitions
+                    break;
+                case GameplayState.Play:
+                    break;
+                case GameplayState.End:
+                    break;
+                case GameplayState.Pause:
+                    break;
+            }
+        }
+
+        private void SetState(GameplayState state)
+        {
+            if (StateHandler != null) {
+                StateHandler.SetState(state);
+            }
         }
         #endregion
     }
