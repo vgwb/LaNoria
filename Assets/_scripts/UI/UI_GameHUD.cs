@@ -22,11 +22,12 @@ namespace vgwb.lanoria
         public GameObject PanelCards;
         public List<GameObject> Hooks;
 
-        [Header("Panel Current Project Elements")]
+        [Header("Panel Current Project")]
         public RectTransform PanelCurrentProject;
         public TMP_Text ProjectTitle;
         public RawImage CurrentProjectImg;
         public LeanFingerDownCanvas LeanSpawnCanvas;
+        public Button BtnDetailProject;
 
         [Header("Panel Confirm Elements")]
         public GameObject PanelConfirm;
@@ -51,7 +52,10 @@ namespace vgwb.lanoria
         {
             iSProjectPanelShifted = false;
             projectPanelOriginalPosition = PanelCurrentProject.anchoredPosition;
+
+            BtnDetailProject.onClick.AddListener(() => OnOpenProjectDetail());
         }
+
 
         public void OpenPanel()
         {
@@ -191,6 +195,11 @@ namespace vgwb.lanoria
             SetupCurrentProjectImg(null);
         }
 
+        public void OnOpenProjectDetail()
+        {
+            Debug.Log("SHOW PROJECT ");
+        }
+
         public void PrefabSelectionHUD()
         {
             SlideOnTheRight();
@@ -215,7 +224,7 @@ namespace vgwb.lanoria
 
         public void OnProjectSelectedFromCanvas()
         {
-            if(OnCurrentProjectSelected != null) {
+            if (OnCurrentProjectSelected != null) {
                 OnCurrentProjectSelected();
             }
         }
