@@ -7,23 +7,18 @@ namespace vgwb.lanoria
     [RequireComponent(typeof(HexSnap))]
     public abstract class GenericCell : MonoBehaviour
     {
-        #region Var
         [SerializeField] protected ProjectCategories category;
         [SerializeField] protected HexSnap hexHandler;
         [SerializeField] protected MeshRenderer mesh;
-        #endregion
 
-        #region Attributes
         public Vector3 HexPosition
         {
             get {
                 if (hexHandler != null) {
                     return hexHandler.hex.ToWorld(0.0f);
                 }
-
                 return Vector3.negativeInfinity;
             }
-
             set { }
         }
 
@@ -49,20 +44,15 @@ namespace vgwb.lanoria
                 if (GameplayConfig.I != null) {
                     return DataManager.I.Data.CategoriesData.GetMaterial(category);
                 }
-
                 return null;
             }
         }
-        #endregion
 
-        #region MonoB
         protected virtual void Awake()
         {
             BaseSetup();
         }
-        #endregion
 
-        #region Functions
         public void EnableHexComponent(bool enable)
         {
             if (hexHandler != null) {
@@ -93,6 +83,5 @@ namespace vgwb.lanoria
                 hexHandler = GetComponent<HexSnap>();
             }
         }
-        #endregion
     }
 }

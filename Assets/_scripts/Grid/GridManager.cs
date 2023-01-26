@@ -15,7 +15,6 @@ namespace vgwb.lanoria
 
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {
-        #region enum
         public enum SubregionDebugType
         {
             None,
@@ -23,14 +22,11 @@ namespace vgwb.lanoria
             Name,
             ColorAndName
         }
-        #endregion
-        #region Var
         public List<GridCell> Cells;
+
         [Header("Subregion Debug")]
         public SubregionDebugType ShowSubregionDebug = SubregionDebugType.None;
-        #endregion
 
-        #region MonoB
         protected override void Awake()
         {
             base.Awake();
@@ -52,9 +48,6 @@ namespace vgwb.lanoria
                 DrawSubregionInfo();
             }
         }
-        #endregion
-
-        #region Functions
 
         public void InitCells()
         {
@@ -118,7 +111,7 @@ namespace vgwb.lanoria
 
         public List<GridCell> GetAllSubregionCellsByPos(Vector3 pos)
         {
-            List<GridCell> subregionCells = new List<GridCell>();
+            var subregionCells = new List<GridCell>();
             var originCell = GetCellByPosition(pos);
             if (originCell != null) {
                 subregionCells = Cells.FindAll(x => x.MySubregion == originCell.MySubregion);
@@ -129,7 +122,7 @@ namespace vgwb.lanoria
 
         public List<GridCell> GetNeighboursByPos(Vector3 pos)
         {
-            List<GridCell> subregionCells = new List<GridCell>();
+            var subregionCells = new List<GridCell>();
             var hex = HexUtils.FromWorld(pos);
             foreach (var neighbour in hex.Neighbours()) {
                 var neighbourPos = neighbour.ToWorld();
@@ -164,7 +157,7 @@ namespace vgwb.lanoria
 
         private void DrawSubregionInfo()
         {
-            List<Subregion> subregionWritten = new List<Subregion>();
+            var subregionWritten = new List<Subregion>();
             foreach (var cell in Cells) {
                 bool drawText = false;
                 bool drawColor = false;
@@ -207,6 +200,5 @@ namespace vgwb.lanoria
                 }
             }
         }
-        #endregion
     }
 }

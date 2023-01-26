@@ -7,21 +7,16 @@ namespace vgwb.lanoria
 {
     public class GridCell : GenericCell
     {
-        #region Var
         public bool Occupied;
         public Region MyRegion = Region.Region_1;
         public Subregion MySubregion = Subregion.No_Subregion;
-        #endregion
 
-        #region MonoB
         protected override void Awake()
         {
             base.Awake();
             //            Debug.Log("category: " + category);
         }
-        #endregion
 
-        #region Functions
         public void Init(bool isOccupied)
         {
             Occupied = isOccupied;
@@ -32,6 +27,5 @@ namespace vgwb.lanoria
         {
             return MySubregion == Subregion.Subregion_7;
         }
-        #endregion
     }
 }

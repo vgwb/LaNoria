@@ -1,6 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+// using Axial coordinates
+// see https://www.redblobgames.com/grids/hexagons/
+// r = row
+// q = col
+
 namespace vgwb.lanoria
 {
     [System.Serializable]
@@ -40,13 +45,13 @@ namespace vgwb.lanoria
         }
 
         public static HexUtils[] AXIAL_DIRECTIONS = new HexUtils[] {
-        new HexUtils(1, 0),
-        new HexUtils(0, 1),
-        new HexUtils(-1, 1),
-        new HexUtils(-1, 0),
-        new HexUtils(0, -1),
-        new HexUtils(1, -1),
-    };
+            new HexUtils(1, 0),
+            new HexUtils(0, 1),
+            new HexUtils(-1, 1),
+            new HexUtils(-1, 0),
+            new HexUtils(0, -1),
+            new HexUtils(1, -1),
+        };
 
         public static IEnumerable<HexUtils> Ring(HexUtils center, int radius)
         {
@@ -72,7 +77,6 @@ namespace vgwb.lanoria
                 }
             }
         }
-
 
         public HexUtils(float q, float r) :
             this(Mathf.RoundToInt(q), Mathf.RoundToInt(r))
@@ -121,7 +125,7 @@ namespace vgwb.lanoria
 
         public override string ToString()
         {
-            return "(" + q + ";" + r + ")";
+            return "(q:" + q + " r:" + r + ")";
         }
 
     }

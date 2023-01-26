@@ -18,6 +18,11 @@ namespace vgwb.lanoria
 
         }
 
+        public bool CanProjectBePlaced()
+        {
+            return true;
+        }
+
         public void ShowMap(bool status)
         {
             MapContainer.SetActive(status);
