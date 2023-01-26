@@ -20,6 +20,19 @@ namespace vgwb.lanoria
         public static Vector2 Q_INV = new Vector2(1f / 2, -Mathf.Sqrt(3) / 6);
         public static Vector2 R_INV = new Vector2(0, Mathf.Sqrt(3) / 3);
 
+        public HexUtils(int q, int r)
+        {
+            this.q = q;
+            this.r = r;
+        }
+
+        public HexUtils(float q, float r) :
+            this(Mathf.RoundToInt(q), Mathf.RoundToInt(r))
+        {
+        }
+
+        public static HexUtils zero = new HexUtils(0, 0);
+
         public static HexUtils FromPlanar(Vector2 planar)
         {
             float q = Vector2.Dot(planar, Q_INV) / RADIUS;
@@ -31,8 +44,6 @@ namespace vgwb.lanoria
         {
             return FromPlanar(new Vector2(world.x, world.z));
         }
-
-        public static HexUtils zero = new HexUtils(0, 0);
 
         public static HexUtils operator +(HexUtils a, HexUtils b)
         {
@@ -76,16 +87,6 @@ namespace vgwb.lanoria
                     yield return hex;
                 }
             }
-        }
-
-        public HexUtils(float q, float r) :
-            this(Mathf.RoundToInt(q), Mathf.RoundToInt(r))
-        { }
-
-        public HexUtils(int q, int r)
-        {
-            this.q = q;
-            this.r = r;
         }
 
         public Vector2 ToPlanar()

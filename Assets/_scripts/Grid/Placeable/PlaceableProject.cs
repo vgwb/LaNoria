@@ -232,7 +232,7 @@ namespace vgwb.lanoria
         private void SetupCellsForUICamera(bool enable)
         {
             foreach (var cell in Cells) {
-                cell.EnableHexComponent(enable);
+                //               cell.EnableHexComponent(enable);
                 cell.SetupLayerForUICamera();
             }
         }

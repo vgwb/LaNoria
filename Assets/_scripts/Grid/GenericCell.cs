@@ -4,20 +4,18 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    [RequireComponent(typeof(HexSnap))]
     public abstract class GenericCell : MonoBehaviour
     {
         [SerializeField] protected ProjectCategories category;
-        [SerializeField] protected HexSnap hexHandler;
         [SerializeField] protected MeshRenderer mesh;
+
+        private HexUtils hex => HexUtils.FromWorld(transform.position);
+        private HexUtils localHex => HexUtils.FromWorld(transform.localPosition);
 
         public Vector3 HexPosition
         {
             get {
-                if (hexHandler != null) {
-                    return hexHandler.hex.ToWorld(0.0f);
-                }
-                return Vector3.negativeInfinity;
+                return hex.ToWorld(0.0f);
             }
             set { }
         }
@@ -30,21 +28,14 @@ namespace vgwb.lanoria
         public Color AssociatedColor
         {
             get {
-                if (GameplayConfig.I != null) {
-                    return DataManager.I.Data.CategoriesData.GetColor(category);
-                }
-
-                return Color.white;
+                return DataManager.I.Data.CategoriesData.GetColor(category);
             }
         }
 
         public Material AssociatedMaterial
         {
             get {
-                if (GameplayConfig.I != null) {
-                    return DataManager.I.Data.CategoriesData.GetMaterial(category);
-                }
-                return null;
+                return DataManager.I.Data.CategoriesData.GetMaterial(category);
             }
         }
 
@@ -55,9 +46,9 @@ namespace vgwb.lanoria
 
         public void EnableHexComponent(bool enable)
         {
-            if (hexHandler != null) {
-                hexHandler.enabled = enable;
-            }
+            // if (hexHandler != null) {
+            //     hexHandler.enabled = enable;
+            // }
         }
 
         public virtual void SetupCategory(ProjectCategories newCategory)
@@ -77,10 +68,6 @@ namespace vgwb.lanoria
         {
             if (mesh == null) {
                 mesh = GetComponentInChildren<MeshRenderer>();
-            }
-
-            if (hexHandler == null) {
-                hexHandler = GetComponent<HexSnap>();
             }
         }
     }
