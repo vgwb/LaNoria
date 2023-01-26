@@ -17,7 +17,7 @@ namespace vgwb.lanoria
         public string Title;
         [TextArea]
         public string Description;
-        public Texture Image;
+        public Sprite Image;
     }
 
     [CreateAssetMenu(menuName = "VGWB/Projects Data")]

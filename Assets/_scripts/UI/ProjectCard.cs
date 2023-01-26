@@ -9,11 +9,7 @@ namespace vgwb.lanoria
     public class ProjectCard : MonoBehaviour
     {
         public TextMeshProUGUI Title;
-        public Material Mat_1;
-        public Material Mat_2;
-        public Material Mat_3;
-        public Material Mat_4;
-
+        public Image ProjectImage;
         public GameObject[] Cats;
 
         private ProjectData projectData;
@@ -22,7 +18,7 @@ namespace vgwb.lanoria
         {
             projectData = data;
             Title.text = projectData.Title;
-
+            ProjectImage.sprite = projectData.Image;
             int CatCounter = 0;
 
             foreach (ProjectCategories cat in projectData.Sequence) {
@@ -38,29 +34,12 @@ namespace vgwb.lanoria
             }
 
             GetComponent<Button>().onClick.AddListener(() => OnClick());
-
         }
 
         private void OnClick()
         {
-            Debug.Log("CLICKED " + projectData.Title);
+            //            Debug.Log("CLICKED " + projectData.Title);
             UI_manager.I.OpenProjectDetail(projectData);
-        }
-
-        private Material GetCatMaterial(ProjectCategories cat)
-        {
-            switch (cat) {
-                case ProjectCategories.Environment:
-                    return Mat_1;
-                case ProjectCategories.Equality:
-                    return Mat_2;
-                case ProjectCategories.Tech:
-                    return Mat_3;
-                case ProjectCategories.People:
-                    return Mat_4;
-                default:
-                    return null;
-            }
         }
 
     }
