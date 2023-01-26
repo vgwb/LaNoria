@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class Placeable : MonoBehaviour
+    public class PlaceableProject : MonoBehaviour
     {
         public bool ShowPivot = false;
         public GameObject Pivot;

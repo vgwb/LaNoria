@@ -28,7 +28,7 @@ namespace vgwb.lanoria
                 var container = Cams[cameraIndex].SubjectPivot;
                 var instance = Instantiate(prefab);
                 instance.transform.localPosition = Vector3.zero;
-                var placeable = instance.GetComponent<Placeable>();
+                var placeable = instance.GetComponent<PlaceableProject>();
                 if (placeable != null) {
                     placeable.SetupForUI();
                     var ParentInPivot = new GameObject(); // create an empty object
@@ -41,8 +41,7 @@ namespace vgwb.lanoria
                     if (projectData != null) {
                         placeable.SetupCellsColor(projectData);
                     }
-                }
-                else {
+                } else {
                     instance.transform.localPosition = Vector3.zero;
                 }
             }
@@ -60,7 +59,7 @@ namespace vgwb.lanoria
         public Vector3 GetUIObjectRotation(int cameraIndex)
         {
             Vector3 rot = Vector3.zero;
-            if(IsIndexValid(cameraIndex)) {
+            if (IsIndexValid(cameraIndex)) {
                 rot = Cams[cameraIndex].GetSubjectRotation();
             }
 
