@@ -7,27 +7,26 @@ namespace vgwb.lanoria
 {
     public class Placeable : MonoBehaviour
     {
-        #region Var
         public bool ShowPivot = false;
         public GameObject Pivot;
-        public GameObject TilesContainer;
+        public GameObject CellsContainer;
         public List<PlaceableCell> Cells;
         public Outline OutlineHandler;
-        [Header("Lean components")]
-        public LeanDragCamera LeanCameraComp;
-        public LeanSelectableByFinger LeanSelectableComp;
-        public LeanFingerTap LeanFingerTapComp;
+
         public delegate void PlaceableEvent();
         public PlaceableEvent OnSelectMe;
         public PlaceableEvent OnValidPositionChange;
         public PlaceableEvent OnStopUsingMe;
         public PlaceableEvent OnHexPosChange;
 
+        [Header("Lean components")]
+        public LeanDragCamera LeanCameraComp;
+        public LeanSelectableByFinger LeanSelectableComp;
+        public LeanFingerTap LeanFingerTapComp;
+
         private bool isValidPosition;
         private Vector3 prevPos;
-        #endregion
 
-        #region Attributes
         public bool IsValidPosition
         {
             get {
@@ -50,10 +49,6 @@ namespace vgwb.lanoria
                 return transform.position;
             }
         }
-        #endregion
-
-
-        #region MonoB
 
         private void Awake()
         {
@@ -79,9 +74,6 @@ namespace vgwb.lanoria
                 Gizmos.DrawSphere(Pivot.transform.position, 0.2f);
             }
         }
-        #endregion
-
-        #region Functions
 
         /// <summary>
         /// Fired when the player release the project into the board.
@@ -175,9 +167,9 @@ namespace vgwb.lanoria
             LeanFingerTapComp = GetComponent<LeanFingerTap>();
             Cells.Clear();
 
-            int childs = TilesContainer.transform.childCount;
+            int childs = CellsContainer.transform.childCount;
             for (int i = 0; i < childs; i++) {
-                var child = TilesContainer.transform.GetChild(i).gameObject;
+                var child = CellsContainer.transform.GetChild(i).gameObject;
                 string childName = child.name.ToLower();
                 var tile = child.GetComponent<PlaceableCell>();
                 if (tile == null) {
@@ -190,17 +182,17 @@ namespace vgwb.lanoria
 
         public void RiseUpTilesHeight()
         {
-            if (TilesContainer != null) {
+            if (CellsContainer != null) {
                 Vector3 delta = Vector3.up * GameplayConfig.I.DragYOffset;
-                TilesContainer.transform.position += delta;
+                CellsContainer.transform.position += delta;
             }
         }
 
         public void LowerDownTilesHeight()
         {
-            if (TilesContainer != null) {
+            if (CellsContainer != null) {
                 Vector3 delta = Vector3.up * GameplayConfig.I.DragYOffset;
-                TilesContainer.transform.position -= delta;
+                CellsContainer.transform.position -= delta;
             }
         }
 
@@ -338,6 +330,5 @@ namespace vgwb.lanoria
             OutlineHandler.OutlineWidth = GameplayConfig.I.OutlineWidth;
             OutlineHandler.OutlineMode = GameplayConfig.I.PlaceableOutlineMode;
         }
-        #endregion
     }
 }

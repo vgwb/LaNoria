@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5099870230725275479}
   - component: {fileID: 7332092013841500199}
   m_Layer: 0
-  m_Name: TilesContainer
+  m_Name: CellsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowPivot: 1
   Pivot: {fileID: 5719024331935106398}
-  TilesContainer: {fileID: 956721596140025669}
+  CellsContainer: {fileID: 956721596140025669}
   Cells:
   - {fileID: 88541917640280768}
   - {fileID: 7512296565206503040}
