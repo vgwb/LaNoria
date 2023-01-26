@@ -167,7 +167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartGameOnPlay: 0
   Dealer: {fileID: 5311655321630592202}
-  CardPrefab: {fileID: 9130779135910414227, guid: 84af55ec7b481594ba48fa0c4d6533ce, type: 3}
   Scorer: {fileID: 5311655321630592203}
   StateHandler: {fileID: 4141334991488932}
 --- !u!114 &5311655321630592202
@@ -207,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a09288af750a34d89bd2e04b8778a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardPrefab: {fileID: 9130779135910414227, guid: 84af55ec7b481594ba48fa0c4d6533ce, type: 3}
   state: 0
 --- !u!1001 &3914503583074823613
 PrefabInstance:
