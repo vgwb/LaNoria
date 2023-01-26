@@ -21,8 +21,10 @@ namespace vgwb.lanoria
         public PlaceableEvent OnSelectMe;
         public PlaceableEvent OnValidPositionChange;
         public PlaceableEvent OnStopUsingMe;
+        public PlaceableEvent OnHexPosChange;
 
         private bool isValidPosition;
+        private Vector3 prevPos;
         #endregion
 
         #region Attributes
@@ -37,6 +39,17 @@ namespace vgwb.lanoria
         {
             get { return Cells.Count; }
         }
+
+        public Vector3 HexPos
+        {
+            get { // the first tile is considered the object center
+                if (Cells.Count > 0) {
+                    return Cells[0].HexPosition;
+                }
+
+                return transform.position;
+            }
+        }
         #endregion
 
 
@@ -44,12 +57,14 @@ namespace vgwb.lanoria
 
         private void Awake()
         {
+            prevPos = HexPos;
             SetupOutline();
         }
 
         private void Update()
         {
             CheckValidPosition();
+            CheckHexPosChange();
         }
 
         private void OnDestroy()
@@ -74,17 +89,13 @@ namespace vgwb.lanoria
         /// </summary>
         public void OnRelease()
         {
-            // the first tile is considered the object center
-            if (Cells.Count > 0) {
-                Vector3 newPos = Cells[0].HexPosition;
-
-                if (IsCompletelyOutOfMap()) {
-                    var grid = GridManager.I;
-                    newPos = grid.ClosestBorderPoint(newPos);
-                }
-
-                transform.position = newPos;
+            Vector3 newPos = HexPos;
+            if (IsCompletelyOutOfMap()) {
+                var grid = GridManager.I;
+                newPos = grid.ClosestBorderPoint(newPos);
             }
+
+            transform.position = newPos;
 
             LowerDownTilesHeight();
             CameraManager.I.EnableRotationWithFingers(true);
@@ -259,6 +270,20 @@ namespace vgwb.lanoria
                 isValidPosition = validPosition; // update the value
                 if (OnValidPositionChange != null) {
                     OnValidPositionChange(); // notify the new validity
+                }
+            }
+        }
+
+        /// <summary>
+        /// Warning: this method check for real if the first tile has changed position!
+        /// </summary>
+        private void CheckHexPosChange()
+        {
+            var actualPos = HexPos;
+            if (actualPos != prevPos) {
+                prevPos = actualPos;
+                if (OnHexPosChange != null) {
+                    OnHexPosChange();
                 }
             }
         }

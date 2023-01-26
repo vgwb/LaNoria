@@ -32,6 +32,9 @@ namespace vgwb.lanoria
         public GameObject PanelConfirm;
         public Button BtnConfirm;
 
+        [Header("Preview")]
+        public Transform PanelPreview;
+
         public delegate void GameHUDEvent();
         public GameHUDEvent OnProjectDragged;
         public GameHUDEvent OnCurrentProjectSelected;
@@ -215,6 +218,21 @@ namespace vgwb.lanoria
             if(OnCurrentProjectSelected != null) {
                 OnCurrentProjectSelected();
             }
+        }
+
+        public List<GameObject> GetPreviewElements()
+        {
+            if (PanelPreview == null) {
+                return null;
+            }
+
+            List<GameObject> elements = new List<GameObject>();
+            int childs = PanelPreview.childCount;
+            for (int i = 0; i < childs; i++) {
+                elements.Add(PanelPreview.GetChild(i).gameObject);
+            }
+
+            return elements;
         }
 
         private void SlideActualProjectPanel(float duration, float pixelIn = 50.0f, TweenCallback callback = null)

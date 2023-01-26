@@ -17,6 +17,8 @@ namespace vgwb.lanoria
         public ScoreManager Scorer;
         [Header("State")]
         public GameplayBehaviour StateHandler;
+        [Header("Preview")]
+        public PreviewManager Preview;
 
         private UI_GameHUD UIGame;
         private LeanSpawnWithFinger spawner;
@@ -48,7 +50,7 @@ namespace vgwb.lanoria
         public void StartGame()
         {
             BoardManager.I.EmptyProjectsContainer();
-            StateHandler.StartGame(this);
+            StateHandler.StartGame();
         }
 
         public void EndGame()

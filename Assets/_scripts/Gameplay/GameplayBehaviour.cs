@@ -13,11 +13,12 @@ namespace vgwb.lanoria
         Setup,
         Drawing,
         Play,
+        Score,
         End,
         Pause
     }
 
-    public class GameplayBehaviour : MonoBehaviour
+    public class GameplayBehaviour : GameplayComponent
     {
         #region Var
         public GameObject CardPrefab;
@@ -33,14 +34,21 @@ namespace vgwb.lanoria
         private LeanSpawnWithFinger spawner;
         private CardDealer dealer;
         private ScoreManager scorer;
+        private PreviewManager preview;
         #endregion
 
         #region MonoB
-        void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             if (CardPrefab == null) {
                 Debug.LogError("CardDealer - Awake(): no card prefab defined!");
             }
+
+            dealer = manager.Dealer;
+            scorer = manager.Scorer;
+            preview = manager.Preview;
 
             state = GameplayState.None;
             ResetValues();
@@ -53,13 +61,10 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
-        public void StartGame(GameplayManager manager)
+        public void StartGame()
         {
-            dealer = manager.Dealer;
-            scorer = manager.Scorer;
             UIGame = UI_manager.I.PanelGameHUD;
             spawner = UIGame.Spawner;
-            
             EventsSubscribe();
             SetState(GameplayState.Intro);
         }
@@ -82,6 +87,7 @@ namespace vgwb.lanoria
                     Destroy(instancedPlaceable.gameObject);
                 }
 
+                CleanPreview();
                 chosenCardIndex = cardIndex;
                 chosenProjectData = projectData;
                 spawner.Prefab = placeablePrefab;
@@ -97,8 +103,9 @@ namespace vgwb.lanoria
             scorer.UpdateScore(instancedPlaceable);
             ResetProjectPanel();
             ResetValues();
+            CleanPreview();
 
-            SetState(GameplayState.Drawing);
+            SetState(GameplayState.Score);
         }
 
         public void ResetProjectPanel()
@@ -119,6 +126,11 @@ namespace vgwb.lanoria
             if (instancedPlaceable != null) {
                 UIGame.SlideToOriginalPosition();
             }
+        }
+
+        public void CleanPreview()
+        {
+            preview.CleanPreview();
         }
 
         private void SetState(GameplayState newState)
@@ -155,12 +167,20 @@ namespace vgwb.lanoria
             UIGame.PrefabSelectionHUD();
         }
 
+        private void OnHexPosChange()
+        {
+            if (instancedPlaceable != null) {
+                preview.PreviewScore(instancedPlaceable);
+            }
+        }
+
         private void SubscribeToPlaceableEvents()
         {
             if (instancedPlaceable != null) {
                 instancedPlaceable.OnValidPositionChange += HandleBtnConfirm;
                 instancedPlaceable.OnStopUsingMe += StopUsingPlaceable;
                 instancedPlaceable.OnSelectMe += OnPrefabSelect;
+                instancedPlaceable.OnHexPosChange += OnHexPosChange;
             }
         }
 
@@ -170,6 +190,7 @@ namespace vgwb.lanoria
                 instancedPlaceable.OnValidPositionChange -= HandleBtnConfirm;
                 instancedPlaceable.OnStopUsingMe -= StopUsingPlaceable;
                 instancedPlaceable.OnSelectMe -= OnPrefabSelect;
+                instancedPlaceable.OnHexPosChange -= OnHexPosChange;
             }
         }
 
@@ -291,6 +312,10 @@ namespace vgwb.lanoria
                     CardEntrance();
                     break;
                 case GameplayState.Play:
+                    break;
+                case GameplayState.Score:
+                    CleanPreview();
+                    SetState(GameplayState.Drawing);// handle score efx 
                     break;
                 case GameplayState.End:
                     break;

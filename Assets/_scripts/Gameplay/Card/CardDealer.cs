@@ -4,15 +4,17 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class CardDealer : MonoBehaviour
+    public class CardDealer : GameplayComponent
     {
         #region Var
         private ProjectsData projectAtlas;
         #endregion
 
         #region MonoB
-        void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             projectAtlas = DataManager.I.Data.ProjectsData;
             if (projectAtlas == null) {
                 Debug.LogError("CardDealer - Awake(): no project atlas defined!");

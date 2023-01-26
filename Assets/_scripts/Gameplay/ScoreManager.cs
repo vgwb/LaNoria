@@ -4,12 +4,14 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class ScoreManager : MonoBehaviour
+    public class ScoreManager : GameplayComponent
     {
         #region Var
         public int ActualScore;
         public delegate void ScoreEvent(int score);
         public ScoreEvent OnScoreUpdate;
+
+        [SerializeField] private int synergyScore;
         /// <summary>
         /// Subregions with all the colors.
         /// </summary>
@@ -17,8 +19,10 @@ namespace vgwb.lanoria
         #endregion
 
         #region MonoB
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             completedSubregion = new List<Subregion>();
             ActualScore = 0;
         }
@@ -28,15 +32,19 @@ namespace vgwb.lanoria
         public void UpdateScore(Placeable placeable)
         {
             int basicScore = CalculateBasicPoints(placeable);
-            int sinergyScore = CalculateSynergy(placeable);
             int transversalityScore = CalculateTransversality(placeable);
-            int totalScore = basicScore + sinergyScore + transversalityScore;
+            int totalScore = basicScore + synergyScore + transversalityScore;
             ActualScore += totalScore;
-            Debug.Log("basic: "+basicScore+" sinergy: "+sinergyScore+" transversality: "+transversalityScore);
+            Debug.Log("basic: "+basicScore+" sinergy: "+ synergyScore + " transversality: "+transversalityScore);
 
             if (OnScoreUpdate != null) {
                 OnScoreUpdate(ActualScore);
             }
+        }
+
+        public void PreviewSynergy()
+        {
+
         }
 
         private int CalculateBasicPoints(Placeable placeable)
@@ -44,11 +52,12 @@ namespace vgwb.lanoria
             return placeable.CellsNum;
         }
 
-        private int CalculateSynergy(Placeable placeable)
+        public List<Vector3> CalculateSynergy(Placeable placeable)
         {
             int resultingScore = 0;
             var grid = GridManager.I;
             var positionsToExclude = placeable.GetCellsHexPositions();
+            var synergyPoints = new List<Vector3>();
 
             foreach (var cell in placeable.Cells) {
                 var neighbours = grid.GetNeighboursByPos(cell.HexPosition);
@@ -58,11 +67,15 @@ namespace vgwb.lanoria
                     }
                     if (neighbour.Category == cell.Category) {
                         resultingScore++;
+                        Vector3 midPoint = cell.HexPosition + (neighbour.HexPosition - cell.HexPosition) / 2;
+                        synergyPoints.Add(midPoint);
                     }
                 }
             }
 
-            return resultingScore;
+            synergyScore = resultingScore;
+
+            return synergyPoints;
         }
 
         private int CalculateTransversality(Placeable placeable)
