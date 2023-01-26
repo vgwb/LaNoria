@@ -34,6 +34,7 @@ namespace vgwb.lanoria
 
         public delegate void GameHUDEvent();
         public GameHUDEvent OnProjectDragged;
+        public GameHUDEvent OnCurrentProjectSelected;
 
         private bool iSProjectPanelShifted;
         private Vector2 projectPanelOriginalPosition;
@@ -206,6 +207,13 @@ namespace vgwb.lanoria
         {
             if (OnProjectDragged != null) {
                 OnProjectDragged();
+            }
+        }
+
+        public void OnProjectSelectedFromCanvas()
+        {
+            if(OnCurrentProjectSelected != null) {
+                OnCurrentProjectSelected();
             }
         }
 

@@ -114,6 +114,13 @@ namespace vgwb.lanoria
             }
         }
 
+        public void OnProjectSelect()
+        {
+            if (instancedPlaceable != null) {
+                UIGame.SlideToOriginalPosition();
+            }
+        }
+
         private void SetState(GameplayState newState)
         {
             if (state != newState) {
@@ -231,6 +238,7 @@ namespace vgwb.lanoria
         {
             spawner.OnSpawnedClone += OnPrefabSpawned;
             UIGame.OnProjectDragged += OnProjectDrag;
+            UIGame.OnCurrentProjectSelected += OnProjectSelect;
             UIGame.BtnConfirm.onClick.AddListener(() => ConfirmProject());
         }
 
@@ -238,6 +246,7 @@ namespace vgwb.lanoria
         {
             spawner.OnSpawnedClone -= OnPrefabSpawned;
             UIGame.OnProjectDragged -= OnProjectDrag;
+            UIGame.OnCurrentProjectSelected += OnProjectSelect;
             UIGame.BtnConfirm.onClick.RemoveListener(() => ConfirmProject());
         }
 

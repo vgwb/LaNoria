@@ -1481,8 +1481,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5619242593406435956}
-        m_TargetAssemblyTypeName: vgwb.lanoria.UI_PanelGameHUD, Assembly-CSharp
-        m_MethodName: SlideToOriginalPosition
+        m_TargetAssemblyTypeName: vgwb.lanoria.UI_GameHUD, Assembly-CSharp
+        m_MethodName: OnProjectSelectedFromCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
