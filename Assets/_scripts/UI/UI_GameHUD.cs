@@ -179,6 +179,29 @@ namespace vgwb.lanoria
             return null;
         }
 
+        public void ResetProjectPanel()
+        {
+            SlideOnTheRight();
+            SetProjectTitle("");
+            EnableBtnConfirm(false);
+            SetupCurrentProjectImg(null);
+        }
+
+        public void PrefabSelectionHUD()
+        {
+            SlideOnTheRight();
+            EnableCurrentProjectImg(false);
+        }
+
+        public void CardSelectionHUD(string title, Texture projectImg)
+        {
+            SetProjectTitle(title);
+            EnableBtnConfirm(false);
+            SlideToOriginalPosition();
+            SetupCurrentProjectImg(projectImg);
+            EnableCurrentProjectImg(true);
+        }
+
         public void OnProjectDragFromCanvas()
         {
             if (OnProjectDragged != null) {

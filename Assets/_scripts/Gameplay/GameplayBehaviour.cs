@@ -15,7 +15,7 @@ namespace vgwb.lanoria
         Pause
     }
 
-    public class GameplayStateHandler : MonoBehaviour
+    public class GameplayBehaviour : MonoBehaviour
     {
         #region Var
         public delegate void GameplayStateEvent(GameplayState state);

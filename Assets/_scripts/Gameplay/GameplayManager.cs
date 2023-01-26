@@ -17,7 +17,7 @@ namespace vgwb.lanoria
         [Header("Score")]
         public ScoreManager Scorer;
         [Header("State")]
-        public GameplayStateHandler StateHandler;
+        public GameplayBehaviour StateHandler;
 
         public delegate void GameplayEvent();
         public GameplayEvent OnHandDrawed;
@@ -42,10 +42,7 @@ namespace vgwb.lanoria
                 Debug.LogError("CardDealer - Awake(): no card prefab defined!");
             }
 
-            chosenCardIndex = -1;
-            instancedPlaceable = null;
-            chosenProjectData = null;
-            spawnedCards = new List<CardInGame>();
+            ResetValues();
         }
 
         private void Start()
@@ -72,7 +69,7 @@ namespace vgwb.lanoria
             SetState(GameplayState.Intro);
         }
 
-        public void ChosePrefab(Transform placeablePrefab, ProjectData projectData, int cardIndex)
+        public void OnClickCard(Transform placeablePrefab, ProjectData projectData, int cardIndex)
         {
             if (placeablePrefab != null && spawner != null) {
                 if (instancedPlaceable != null) {
@@ -82,12 +79,8 @@ namespace vgwb.lanoria
                 chosenCardIndex = cardIndex;
                 chosenProjectData = projectData;
                 spawner.Prefab = placeablePrefab;
-                UIGame.SetProjectTitle(projectData.Title);
-                UIGame.SlideToOriginalPosition();
-                UIGame.EnableBtnConfirm(false);
                 var texture = UICameraManager.I.GetUICameraTexture(chosenCardIndex);
-                UIGame.SetupCurrentProjectImg(texture);
-                UIGame.EnableCurrentProjectImg(true);
+                UIGame.CardSelectionHUD(projectData.Title, texture);
 
                 if (OnProjectChosen != null) {
                     OnProjectChosen();
@@ -99,15 +92,9 @@ namespace vgwb.lanoria
         {
             instancedPlaceable.OnProjectConfirmed();
             instancedPlaceable.transform.parent = BoardManager.I.ProjectsContainer.transform;
-            spawner.Prefab = null;
-            UIGame.SetProjectTitle("");
-            UIGame.EnableBtnConfirm(false);
-            UIGame.SetupCurrentProjectImg(null);
-            UIGame.SlideOnTheRight();
             Scorer.UpdateScore(instancedPlaceable);
-            chosenCardIndex = -1;
-            instancedPlaceable = null;
-            chosenProjectData = null;
+            ResetProjectPanel();
+            ResetValues();
 
             if (OnProjectConfirmed != null) {
                 OnProjectConfirmed(instancedPlaceable);
@@ -116,9 +103,10 @@ namespace vgwb.lanoria
             SetState(GameplayState.Drawing);
         }
 
-        public void ResetDetailPanel()
+        public void ResetProjectPanel()
         {
             spawner.Prefab = null;
+            UIGame.ResetProjectPanel();
         }
 
         public void OnProjectDrag()
@@ -126,6 +114,14 @@ namespace vgwb.lanoria
             if (instancedPlaceable != null) {
                 UIGame.SlideOnTheRight();
             }
+        }
+
+        private void ResetValues()
+        {
+            chosenCardIndex = -1;
+            instancedPlaceable = null;
+            chosenProjectData = null;
+            spawnedCards = new List<CardInGame>();
         }
 
         private void OnPrefabSpawned(GameObject clone)
@@ -139,8 +135,7 @@ namespace vgwb.lanoria
         private void OnPrefabSelect()
         {
             CameraManager.I.EnableRotationWithFingers(false);
-            UIGame.EnableCurrentProjectImg(false);
-            UIGame.SlideOnTheRight();
+            UIGame.PrefabSelectionHUD();
         }
 
         private void OnScoreUpdate(int score)
@@ -217,7 +212,7 @@ namespace vgwb.lanoria
                     // get the associated model and bind it to the card clickable area
                     var associatedPrefab = GameplayConfig.I.GetProjectModelFromData(projectData);
                     int indexToPass = cardIndex;
-                    cardComp.SetCardEvents(() => ChosePrefab(associatedPrefab.transform, projectData, indexToPass));
+                    cardComp.SetCardEvents(() => OnClickCard(associatedPrefab.transform, projectData, indexToPass));
                     // spawn the object in camera UI
                     UICameraManager.I.SpawnPrefabInCamera(cardIndex, associatedPrefab, projectData);
                 }
@@ -281,9 +276,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Setup:
                     UIGame.SetScoreUI(0);
-                    UIGame.SlideOnTheRight();
-                    UIGame.EnableBtnConfirm(false);
-                    UIGame.SetProjectTitle("");
+                    ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;
                     UIGame.FadeCanvas(1.0f, duration, () => SetState(GameplayState.Drawing));
                     break;
