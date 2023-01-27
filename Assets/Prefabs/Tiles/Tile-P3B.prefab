@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314b31df608a1fe45b10a86663022a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 32
+  Model: 32
   ShowPivot: 1
   Pivot: {fileID: 2595230328224774844}
   CellsContainer: {fileID: 5881202175564109355}
