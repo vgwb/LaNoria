@@ -14,7 +14,7 @@ namespace vgwb.lanoria
         public GameplayBehaviour StateHandler;
         public PreviewManager Preview;
 
-        private UI_GameHUD UIGame;
+        private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
 
         protected override void Awake()
@@ -24,7 +24,7 @@ namespace vgwb.lanoria
 
         private void Start()
         {
-            UIGame = UI_manager.I.PanelGameHUD;
+            UIGame = UI_manager.I.PanelGameplay;
             EventsSubscribe();
         }
 
@@ -47,11 +47,25 @@ namespace vgwb.lanoria
         public void PauseGame()
         {
             StateHandler.PauseGame();
+            UI_manager.I.ShowGamePause(true);
         }
 
-        private void OnScoreUpdate(int score)
+        public void ResumeGame()
         {
-            UIGame.SetScoreUI(score);
+            StateHandler.ResumeGame();
+            UI_manager.I.ShowGamePause(false);
+        }
+
+        public void ExitGame()
+        {
+            StateHandler.EndGame();
+            UI_manager.I.ShowGamePause(false);
+            UI_manager.I.Show(UI_manager.States.Home);
+        }
+
+        private void OnScoreUpdate(int score, int points)
+        {
+            UIGame.SetScoreUI(score, points);
         }
 
         private void EventsSubscribe()

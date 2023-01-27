@@ -7,8 +7,8 @@ namespace vgwb.lanoria
     public class ScoreManager : GameplayComponent
     {
         #region Var
-        public int ActualScore;
-        public delegate void ScoreEvent(int score);
+        public int CurrentScore;
+        public delegate void ScoreEvent(int score, int points);
         public ScoreEvent OnScoreUpdate;
 
         [SerializeField] private int synergyScore;
@@ -24,21 +24,21 @@ namespace vgwb.lanoria
             base.Awake();
 
             completedSubregion = new List<AreaId>();
-            ActualScore = 0;
+            CurrentScore = 0;
         }
         #endregion
 
         #region Functions
         public void UpdateScore(Tile placeable)
         {
-            int basicScore = CalculateBasicPoints(placeable);
-            int transversalityScore = CalculateTransversality(placeable);
-            int totalScore = basicScore + synergyScore + transversalityScore;
-            ActualScore += totalScore;
-            Debug.Log("basic: " + basicScore + " sinergy: " + synergyScore + " transversality: " + transversalityScore);
+            int placementPoints = CalculateBasicPoints(placeable);
+            int transversalityPoints = CalculateTransversality(placeable);
+            int totalPoints = placementPoints + synergyScore + transversalityPoints;
+            CurrentScore += totalPoints;
+            Debug.Log("basic: " + placementPoints + " sinergy: " + synergyScore + " transversality: " + transversalityPoints);
 
             if (OnScoreUpdate != null) {
-                OnScoreUpdate(ActualScore);
+                OnScoreUpdate(CurrentScore, totalPoints);
             }
         }
 

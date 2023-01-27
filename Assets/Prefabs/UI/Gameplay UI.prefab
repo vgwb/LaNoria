@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 5619242591862886332}
   - component: {fileID: 5619242591862886333}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1168,7 +1168,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5619242592131529069}
   - component: {fileID: 5619242592131529067}
-  - component: {fileID: 5619242592131529068}
   m_Layer: 5
   m_Name: Panel HUD
   m_TagString: Untagged
@@ -1206,36 +1205,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5619242592131529070}
   m_CullTransparentMesh: 1
---- !u!114 &5619242592131529068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5619242592131529070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5619242592257613303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,7 +1460,7 @@ GameObject:
   - component: {fileID: 9088964268417771431}
   - component: {fileID: 6333353175812435533}
   m_Layer: 5
-  m_Name: Panel Game HUD
+  m_Name: Gameplay UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1536,8 +1505,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawner: {fileID: 9088964268417771431}
   Canvas: {fileID: 6333353175812435533}
+  BtnPause: {fileID: 5619242592057094579}
   PanelHUD: {fileID: 5619242592131529070}
-  ScoreTxt: {fileID: 5619242591862886333}
+  ScoreUI: {fileID: 3641863030235943505}
   PanelCards: {fileID: 5619242592257613303}
   Hooks:
   - {fileID: 1160776949}
@@ -1934,9 +1904,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3820805212302126711}
   - component: {fileID: 8218873470985772584}
+  - component: {fileID: 3641863030235943505}
   - component: {fileID: 6858764208426216753}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1971,6 +1942,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8050400475841560079}
   m_CullTransparentMesh: 1
+--- !u!114 &3641863030235943505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8050400475841560079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad9bbf0954db4a41be8a0042226afcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreGO: {fileID: 8050400475841560079}
+  ScoreText: {fileID: 5619242591862886333}
+  BonusPrefab: {fileID: 3774780889815644438, guid: 9668ea633f6124933abe4fd2ed7ff684, type: 3}
 --- !u!114 &6858764208426216753
 MonoBehaviour:
   m_ObjectHideFlags: 0

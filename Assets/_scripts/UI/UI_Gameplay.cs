@@ -5,18 +5,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using vgwb.framework.ui;
 
 namespace vgwb.lanoria
 {
-    public class UI_GameHUD : MonoBehaviour
+    public class UI_Gameplay : MonoBehaviour
     {
         [Header("Other comps")]
         public LeanSpawnWithFinger Spawner;
         public CanvasGroup Canvas;
 
         [Header("Panel HUD Elements")]
+        public Button BtnPause;
         public GameObject PanelHUD;
-        public TMP_Text ScoreTxt;
+        public ui_score ScoreUI;
 
         [Header("Panel Cards Elements")]
         public GameObject PanelCards;
@@ -43,10 +45,7 @@ namespace vgwb.lanoria
         private bool iSProjectPanelShifted;
         private Vector2 projectPanelOriginalPosition;
 
-        public Transform CardContainer
-        {
-            get { return PanelCards.transform; }
-        }
+        public Transform CardContainer => PanelCards.transform;
 
         void Awake()
         {
@@ -54,8 +53,8 @@ namespace vgwb.lanoria
             projectPanelOriginalPosition = PanelCurrentProject.anchoredPosition;
 
             BtnDetailProject.onClick.AddListener(() => OnOpenProjectDetail());
+            BtnPause.onClick.AddListener(() => GameplayManager.I.PauseGame());
         }
-
 
         public void OpenPanel()
         {
@@ -81,16 +80,9 @@ namespace vgwb.lanoria
             }
         }
 
-        public void SetScoreTxt(string newScore)
+        public void SetScoreUI(int total, int points)
         {
-            if (ScoreTxt != null) {
-                ScoreTxt.text = newScore;
-            }
-        }
-
-        public void SetScoreUI(int newScore)
-        {
-            SetScoreTxt(newScore.ToString());
+            ScoreUI.AddScore(total, points);
         }
 
         public List<GameObject> CardsInUI()

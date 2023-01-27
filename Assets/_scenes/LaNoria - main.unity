@@ -2408,7 +2408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelMenu: {fileID: 158381535}
   PanelAbout: {fileID: 845891906}
-  PanelGameHUD: {fileID: 1367730467}
+  PanelGameplay: {fileID: 1367730467}
   PanelProjectDetail: {fileID: 1419485501}
   PanelOptions: {fileID: 5049177350627637902}
   PanelGamePause: {fileID: 4969077840702990553}
@@ -3043,27 +3043,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3691494701566448484, guid: 7aefaa9747d254586a7b15023c342ce8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3691494701566448484, guid: 7aefaa9747d254586a7b15023c342ce8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3691494701566448484, guid: 7aefaa9747d254586a7b15023c342ce8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3691494701566448484, guid: 7aefaa9747d254586a7b15023c342ce8, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3691494701566448484, guid: 7aefaa9747d254586a7b15023c342ce8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3691494701566448484, guid: 7aefaa9747d254586a7b15023c342ce8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 800
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3691494701566448484, guid: 7aefaa9747d254586a7b15023c342ce8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3255,7 +3255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5619242593406435912, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_Name
-      value: Panel Game HUD
+      value: Panel Gameplay
       objectReference: {fileID: 0}
     - target: {fileID: 5619242593406435912, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_IsActive

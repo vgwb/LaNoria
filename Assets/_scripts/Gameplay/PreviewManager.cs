@@ -41,7 +41,7 @@ namespace vgwb.lanoria
 
         public void CleanPreview()
         {
-            var elements = UI_manager.I.PanelGameHUD.GetPreviewElements();
+            var elements = UI_manager.I.PanelGameplay.GetPreviewElements();
             foreach (var element in elements) {
                 Destroy(element);
             }
@@ -49,7 +49,7 @@ namespace vgwb.lanoria
 
         private GameObject InstantiatePointPreview(Vector3 worldPos, int points)
         {
-            var parent = UI_manager.I.PanelGameHUD.PanelPreview;
+            var parent = UI_manager.I.PanelGameplay.PanelPreview;
             var instance = Instantiate(PointPreviewPrefab, parent);
             var pointPreview = instance.GetComponent<PointPreview>();
             if (pointPreview != null) {

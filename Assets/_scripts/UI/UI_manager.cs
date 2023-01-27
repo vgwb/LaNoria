@@ -18,7 +18,7 @@ namespace vgwb.lanoria
 
         public UI_PanelMenu PanelMenu;
         public UI_PanelAbout PanelAbout;
-        public UI_GameHUD PanelGameHUD;
+        public UI_Gameplay PanelGameplay;
         public UI_PanelProjectDetail PanelProjectDetail;
         public UI_PanelOptions PanelOptions;
         public UI_PanelGamePause PanelGamePause;
@@ -39,7 +39,7 @@ namespace vgwb.lanoria
                     PanelOptions.OpenPanel();
                     break;
                 case States.Play:
-                    PanelGameHUD.OpenPanel();
+                    PanelGameplay.OpenPanel();
                     break;
             }
             currentUIState = newState;
@@ -58,7 +58,7 @@ namespace vgwb.lanoria
                     PanelOptions.ClosePanel();
                     break;
                 case States.Play:
-                    PanelGameHUD.ClosePanel();
+                    PanelGameplay.ClosePanel();
                     break;
             }
         }
@@ -66,6 +66,15 @@ namespace vgwb.lanoria
         public void OpenProjectDetail(ProjectData data)
         {
             PanelProjectDetail.OpenPanel(data);
+        }
+
+        public void ShowGamePause(bool status)
+        {
+            if (status) {
+                PanelGamePause.OpenPanel();
+            } else {
+                PanelGamePause.ClosePanel();
+            }
         }
 
     }

@@ -30,7 +30,7 @@ namespace vgwb.lanoria
         private Tile instancedPlaceable;
         private ProjectData chosenProjectData;
         private List<CardInGame> spawnedCards;
-        private UI_GameHUD UIGame;
+        private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
         private CardDealer dealer;
         private ScoreManager scorer;
@@ -63,7 +63,7 @@ namespace vgwb.lanoria
         #region Functions
         public void StartGame()
         {
-            UIGame = UI_manager.I.PanelGameHUD;
+            UIGame = UI_manager.I.PanelGameplay;
             spawner = UIGame.Spawner;
             EventsSubscribe();
             SetState(GameplayState.Intro);
@@ -78,6 +78,11 @@ namespace vgwb.lanoria
         public void PauseGame()
         {
             SetState(GameplayState.Pause);
+        }
+
+        public void ResumeGame()
+        {
+            SetState(GameplayState.Play);
         }
 
         public void OnClickCard(Transform placeablePrefab, ProjectData projectData, int cardIndex)
@@ -302,7 +307,7 @@ namespace vgwb.lanoria
                     CameraManager.I.ResetToOriginalRotY(() => SetState(GameplayState.Setup));
                     break;
                 case GameplayState.Setup:
-                    UIGame.SetScoreUI(0);
+                    UIGame.ScoreUI.Init(0);
                     ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;
                     UIGame.FadeCanvas(1.0f, duration, () => SetState(GameplayState.Drawing));
