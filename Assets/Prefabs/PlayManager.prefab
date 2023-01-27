@@ -166,10 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cbe59d60c96dc34183faa5867703dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartGameOnPlay: 0
   Dealer: {fileID: 5311655321630592202}
   Scorer: {fileID: 5311655321630592203}
-  StateHandler: {fileID: 4141334991488932}
+  GameFSM: {fileID: 4141334991488932}
   Preview: {fileID: 723556936064208639}
 --- !u!114 &5311655321630592202
 MonoBehaviour:
@@ -195,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54b45f5c95fd194bb01701ffdff7961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActualScore: 0
+  CurrentScore: 0
   synergyScore: 0
 --- !u!114 &4141334991488932
 MonoBehaviour:
@@ -224,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointPreviewPrefab: {fileID: 1514386752178567753, guid: 090bab71a4dc77746b8850313cf26054, type: 3}
+  UsePreview: 1
 --- !u!1001 &3914503583074823613
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,9 +18,8 @@ namespace vgwb.lanoria
         Pause
     }
 
-    public class GameplayBehaviour : GameplayComponent
+    public class GameplayFSM : GameplayComponent
     {
-        #region Var
         public GameObject CardPrefab;
         public delegate void GameplayStateEvent(GameplayState state);
         public GameplayStateEvent OnStateUpdate;
@@ -28,16 +27,19 @@ namespace vgwb.lanoria
         [SerializeField] private GameplayState state;
         private int chosenCardIndex;
         private Tile instancedPlaceable;
-        private ProjectData chosenProjectData;
+
+        public ProjectData currentProjectData
+        {
+            get; private set;
+        }
+
         private List<CardInGame> spawnedCards;
         private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
         private CardDealer dealer;
         private ScoreManager scorer;
         private PreviewManager preview;
-        #endregion
 
-        #region MonoB
         protected override void Awake()
         {
             base.Awake();
@@ -58,9 +60,7 @@ namespace vgwb.lanoria
         {
             EventsUnsubscribe();
         }
-        #endregion
 
-        #region Functions
         public void StartGame()
         {
             UIGame = UI_manager.I.PanelGameplay;
@@ -94,7 +94,7 @@ namespace vgwb.lanoria
 
                 CleanPreview();
                 chosenCardIndex = cardIndex;
-                chosenProjectData = projectData;
+                currentProjectData = projectData;
                 spawner.Prefab = placeablePrefab;
                 var texture = UICameraManager.I.GetUICameraTexture(chosenCardIndex);
                 UIGame.CardSelectionHUD(projectData.Title, texture);
@@ -154,14 +154,14 @@ namespace vgwb.lanoria
         {
             chosenCardIndex = -1;
             instancedPlaceable = null;
-            chosenProjectData = null;
+            currentProjectData = null;
             spawnedCards = new List<CardInGame>();
         }
 
         private void OnPrefabSpawned(GameObject clone)
         {
             instancedPlaceable = clone.GetComponent<Tile>();
-            instancedPlaceable.SetupCellsColor(chosenProjectData);
+            instancedPlaceable.SetupCellsColor(currentProjectData);
             UIGame.EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
         }
@@ -328,6 +328,5 @@ namespace vgwb.lanoria
                     break;
             }
         }
-        #endregion
     }
 }

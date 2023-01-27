@@ -11,7 +11,7 @@ namespace vgwb.lanoria
     {
         public CardDealer Dealer;
         public ScoreManager Scorer;
-        public GameplayBehaviour StateHandler;
+        public GameplayFSM GameFSM;
         public PreviewManager Preview;
 
         private UI_Gameplay UIGame;
@@ -36,29 +36,29 @@ namespace vgwb.lanoria
         public void StartGame()
         {
             BoardManager.I.EmptyProjectsContainer();
-            StateHandler.StartGame();
+            GameFSM.StartGame();
         }
 
         public void EndGame()
         {
-            StateHandler.EndGame();
+            GameFSM.EndGame();
         }
 
         public void PauseGame()
         {
-            StateHandler.PauseGame();
+            GameFSM.PauseGame();
             UI_manager.I.ShowGamePause(true);
         }
 
         public void ResumeGame()
         {
-            StateHandler.ResumeGame();
+            GameFSM.ResumeGame();
             UI_manager.I.ShowGamePause(false);
         }
 
         public void ExitGame()
         {
-            StateHandler.EndGame();
+            GameFSM.EndGame();
             UI_manager.I.ShowGamePause(false);
             UI_manager.I.Show(UI_manager.States.Home);
         }
