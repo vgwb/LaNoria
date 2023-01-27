@@ -6,31 +6,23 @@ namespace vgwb.lanoria
 {
     public class CardDealer : GameplayComponent
     {
-        #region Var
         private ProjectsData projectAtlas;
-        #endregion
 
-        #region MonoB
         protected override void Awake()
         {
             base.Awake();
 
-            projectAtlas = DataManager.I.Data.ProjectsData;
+            projectAtlas = GameData.I.Projects;
             if (projectAtlas == null) {
                 Debug.LogError("CardDealer - Awake(): no project atlas defined!");
             }
         }
-        #endregion
 
-        #region Functions
         public IEnumerable<ProjectData> DrawProjects()
         {
             int cardsNum = GameplayConfig.I.CardToDraw;
 
             return projectAtlas.PickRandomElements(cardsNum);
         }
-
-        
-        #endregion
     }
 }

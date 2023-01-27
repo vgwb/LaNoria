@@ -6,13 +6,6 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    [System.Serializable]
-    public class SubregionColorDebug
-    {
-        public Subregion SubregionRef;
-        public Color ColorDebug;
-    }
-
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {
         public enum SubregionDebugType
@@ -114,7 +107,7 @@ namespace vgwb.lanoria
             var subregionCells = new List<GridCell>();
             var originCell = GetCellByPosition(pos);
             if (originCell != null) {
-                subregionCells = Cells.FindAll(x => x.MySubregion == originCell.MySubregion);
+                subregionCells = Cells.FindAll(x => x.Area == originCell.Area);
             }
 
             return subregionCells;
@@ -136,8 +129,8 @@ namespace vgwb.lanoria
 
         public HashSet<GridCell> GetNeighboursOfPlaceable(List<TileCell> cells)
         {
-            HashSet<GridCell> neighboursSet = new HashSet<GridCell>();
-            HashSet<GridCell> cellsToExclude = new HashSet<GridCell>();
+            var neighboursSet = new HashSet<GridCell>();
+            var cellsToExclude = new HashSet<GridCell>();
             foreach (var cell in cells) {
                 cellsToExclude.Add(GetCellByPosition(cell.HexPosition));
                 neighboursSet.UnionWith(GetNeighboursByPos(cell.HexPosition));
@@ -157,7 +150,7 @@ namespace vgwb.lanoria
 
         private void DrawSubregionInfo()
         {
-            var subregionWritten = new List<Subregion>();
+            var subregionWritten = new List<AreaId>();
             foreach (var cell in Cells) {
                 bool drawText = false;
                 bool drawColor = false;
@@ -181,16 +174,16 @@ namespace vgwb.lanoria
                 }
 
                 var pos = cell.transform.position;
-                var subregionColor = GameplayConfig.I.GetSubregionColorByEnum(cell.MySubregion);
-                if (drawText && !subregionWritten.Contains(cell.MySubregion)) {
-                    string subregionName = GameplayConfig.I.GetSubregionNameByEnum(cell.MySubregion);
+                var subregionColor = GameData.I.Areas.GetSubregionColorByEnum(cell.Area);
+                if (drawText && !subregionWritten.Contains(cell.Area)) {
+                    string subregionName = GameData.I.Areas.GetSubregionNameByEnum(cell.Area);
                     subregionName = subregionName.Replace(" ", "\n");
                     var style = new GUIStyle();
                     style.normal.textColor = subregionColor;
                     style.fontSize = GameplayConfig.I.LabelDebugFontSize;
                     Vector3 labelPos = pos + GameplayConfig.I.LabelDebugOffset;
                     Handles.Label(labelPos, subregionName, style);
-                    subregionWritten.Add(cell.MySubregion);
+                    subregionWritten.Add(cell.Area);
                 }
 
                 if (drawColor) {

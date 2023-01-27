@@ -10,32 +10,21 @@ namespace vgwb.lanoria
 {
     public class CardInGame : MonoBehaviour
     {
-        #region Var
         [Header("UI Elements")]
         public TMP_Text CardTitle;
         public Button ClickableComp;
         public RawImage PrefabImg;
+
         [Header("Project Data")]
         public ProjectData CardData;
 
-        private RectTransform rect;
-        #endregion
+        public RectTransform Rect { get; private set; }
 
-        #region Attributes
-        public RectTransform Rect
-        {
-            get { return rect; }
-        }
-        #endregion
-
-        #region MonoB
         private void Awake()
         {
-            rect = GetComponent<RectTransform>();
+            Rect = GetComponent<RectTransform>();
         }
-        #endregion
 
-        #region Functions
         public void InitCard(ProjectData cardData, Texture texture)
         {
             CardData = cardData;
@@ -59,11 +48,11 @@ namespace vgwb.lanoria
 
         public void HideInBottomScreen()
         {
-            if (rect != null) {
-                float height = rect.sizeDelta.y;
-                var pos = rect.localPosition;
+            if (Rect != null) {
+                float height = Rect.sizeDelta.y;
+                var pos = Rect.localPosition;
                 pos.y = -height;
-                rect.localPosition = pos;
+                Rect.localPosition = pos;
             }
         }
 
@@ -80,6 +69,5 @@ namespace vgwb.lanoria
                 PrefabImg.texture = texture;
             }
         }
-        #endregion
     }
 }

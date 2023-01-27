@@ -12,7 +12,7 @@ namespace vgwb.lanoria
     {
         public string Id;
         public bool Active = true;
-        public TileType TileModel;
+        public TileModel TileModel;
         public ProjectCategories[] Sequence;
         public string Title;
         [TextArea]
@@ -29,6 +29,22 @@ namespace vgwb.lanoria
         {
             var rnd = new System.Random();
             return Projects.OrderBy(x => rnd.Next()).Take(num);
+        }
+
+        public GameObject GetTile(ProjectData projectData)
+        {
+            if (projectData == null) {
+                return null;
+            }
+
+            GameObject tileModel = null;
+            if (projectData.TileModel != TileModel.Undefined) {
+                tileModel = GameData.I.Tiles.GetProjectModelByKey(projectData.TileModel);
+            } else {
+                tileModel = GameData.I.Tiles.GetProjectModelByCellNum(projectData.Sequence.Length);
+            }
+
+            return tileModel;
         }
     }
 }

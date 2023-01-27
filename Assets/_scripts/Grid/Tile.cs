@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public enum TileType
+    public enum TileModel
     {
         Undefined = 0,
         P2A = 21,
@@ -22,7 +22,7 @@ namespace vgwb.lanoria
 
     public class Tile : MonoBehaviour
     {
-        public TileType Type;
+        public TileModel Model;
         public bool ShowPivot = false;
         public GameObject Pivot;
         public GameObject CellsContainer;

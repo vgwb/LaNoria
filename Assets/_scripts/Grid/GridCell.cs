@@ -8,8 +8,9 @@ namespace vgwb.lanoria
     public class GridCell : GenericCell
     {
         public bool Occupied;
-        public Region MyRegion = Region.Region_1;
-        public Subregion MySubregion = Subregion.No_Subregion;
+
+        public Region Region = Region.Region_1;
+        public AreaId Area = AreaId.undefined;
 
         protected override void Awake()
         {
@@ -25,7 +26,7 @@ namespace vgwb.lanoria
 
         public bool IsCapital()
         {
-            return MySubregion == Subregion.Subregion_7;
+            return Area == AreaId.Subregion_7;
         }
     }
 }

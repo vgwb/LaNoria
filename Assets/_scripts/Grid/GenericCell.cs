@@ -28,14 +28,14 @@ namespace vgwb.lanoria
         public Color AssociatedColor
         {
             get {
-                return DataManager.I.Data.CategoriesData.GetColor(category);
+                return GameData.I.Categories.GetColor(category);
             }
         }
 
         public Material AssociatedMaterial
         {
             get {
-                return DataManager.I.Data.CategoriesData.GetMaterial(category);
+                return GameData.I.Categories.GetMaterial(category);
             }
         }
 

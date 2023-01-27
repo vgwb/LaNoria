@@ -8,9 +8,9 @@ using UnityEngine.Serialization;
 namespace vgwb.lanoria
 {
     [Serializable]
-    public class TileModel
+    public class TileInfo
     {
-        public TileType Model;
+        public TileModel Model;
         public int Length;
         public GameObject Prefab;
     }
@@ -18,12 +18,11 @@ namespace vgwb.lanoria
     [CreateAssetMenu(menuName = "VGWB/Tiles Data")]
     public class TilesData : ScriptableObject
     {
-        public List<TileModel> Tiles;
+        public List<TileInfo> Tiles;
 
-
-        public GameObject GetProjectModelByKey(TileType modelType)
+        public GameObject GetProjectModelByKey(TileModel model)
         {
-            return Tiles.Find(x => x.Model == modelType).Prefab;
+            return Tiles.Find(x => x.Model == model).Prefab;
         }
 
         public GameObject GetProjectModelByCellNum(int cellNum)

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0227d2b36cd400f8cca3b8d50e7253, type: 3}
   m_Name: La Noria DB
   m_EditorClassIdentifier: 
-  ProjectsData: {fileID: 11400000, guid: d9b2dfa0456564fe2a97aca06bdb4b52, type: 2}
-  CategoriesData: {fileID: 11400000, guid: 16de47ea887d44339850a43fa8eecd9f, type: 2}
-  TilesData: {fileID: 11400000, guid: f9d5c8484b6c84ac99b36863e6e7f0ab, type: 2}
+  Projects: {fileID: 11400000, guid: d9b2dfa0456564fe2a97aca06bdb4b52, type: 2}
+  Categories: {fileID: 11400000, guid: 16de47ea887d44339850a43fa8eecd9f, type: 2}
+  Tiles: {fileID: 11400000, guid: f9d5c8484b6c84ac99b36863e6e7f0ab, type: 2}
+  Areas: {fileID: 11400000, guid: 1c1529bd9108d42038a24c6d7e016fd1, type: 2}

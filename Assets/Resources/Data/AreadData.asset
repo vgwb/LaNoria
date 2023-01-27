@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02b69f39ee07429facbb886e696b324, type: 3}
+  m_Name: AreadData
+  m_EditorClassIdentifier: 
+  Areas:
+  - Id: 0
+    Title: Undefined
+    Color: {r: 0, g: 0, b: 0, a: 0}
+  - Id: 1
+    Title: "Costa del Sol Occidental"
+    Color: {r: 0.90588236, g: 0.07450981, b: 0.07450981, a: 1}
+  - Id: 2
+    Title: "Serran\xEDa de Ronda"
+    Color: {r: 0.44313726, g: 0.81960785, b: 0.05882353, a: 1}
+  - Id: 3
+    Title: Sierra de las Nieves
+    Color: {r: 0.13333334, g: 0.101960786, b: 0.015686275, a: 1}
+  - Id: 4
+    Title: Guadalteba
+    Color: {r: 1, g: 0.46666667, b: 0, a: 1}
+  - Id: 5
+    Title: Antequera
+    Color: {r: 0.07058824, g: 0.1254902, b: 0.94509804, a: 1}
+  - Id: 6
+    Title: "Valle del Guadalhorce"
+    Color: {r: 0.8784314, g: 0.09411765, b: 0.6862745, a: 1}
+  - Id: 7
+    Title: "M\xE1laga"
+    Color: {r: 0, g: 0.8784314, b: 0.84705883, a: 1}
+  - Id: 8
+    Title: "Nororma"
+    Color: {r: 1, g: 0.9882353, b: 0, a: 1}
+  - Id: 9
+    Title: "Axarqu\xEDa"
+    Color: {r: 0.39607844, g: 0.07450981, b: 0.59607846, a: 1}

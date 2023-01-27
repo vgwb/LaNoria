@@ -15,7 +15,7 @@ namespace vgwb.lanoria
         /// <summary>
         /// Subregions with all the colors.
         /// </summary>
-        private List<Subregion> completedSubregion;
+        private List<AreaId> completedSubregion;
         #endregion
 
         #region MonoB
@@ -23,7 +23,7 @@ namespace vgwb.lanoria
         {
             base.Awake();
 
-            completedSubregion = new List<Subregion>();
+            completedSubregion = new List<AreaId>();
             ActualScore = 0;
         }
         #endregion
@@ -82,8 +82,8 @@ namespace vgwb.lanoria
         {
             int resultingScore = 0;
             var grid = GridManager.I;
-            List<ProjectCategories> containedCategories = new List<ProjectCategories>();
-            List<Subregion> visitedSubregion = new List<Subregion>();
+            var containedCategories = new List<ProjectCategories>();
+            var visitedSubregion = new List<AreaId>();
             foreach (var placCell in placeable.Cells) {
                 Vector3 cellPos = placCell.HexPosition;
                 var subregionCells = grid.GetAllSubregionCellsByPos(cellPos);
@@ -91,7 +91,7 @@ namespace vgwb.lanoria
                     continue;
                 }
 
-                var subregion = subregionCells[0].MySubregion;
+                var subregion = subregionCells[0].Area;
                 if (visitedSubregion.Contains(subregion) || IsSubregionComplete(subregion)) {
                     continue; // already visited!
                 }
@@ -116,9 +116,9 @@ namespace vgwb.lanoria
             return resultingScore;
         }
 
-        private bool IsSubregionComplete(Subregion subregion)
+        private bool IsSubregionComplete(AreaId area)
         {
-            return completedSubregion.Contains(subregion);
+            return completedSubregion.Contains(area);
         }
         #endregion
     }
