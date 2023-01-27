@@ -12,8 +12,8 @@ namespace vgwb.lanoria
 
         void Start()
         {
-            BtnResume.onClick.AddListener(() => GameplayManager.I.ResumeGame());
-            BtnExit.onClick.AddListener(() => GameplayManager.I.ExitGame());
+            BtnResume.onClick.AddListener(() => GameManager.I.ResumeGame());
+            BtnExit.onClick.AddListener(() => GameManager.I.ExitGame());
         }
 
         public void OpenPanel()

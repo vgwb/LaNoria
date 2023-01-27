@@ -7,11 +7,11 @@ using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    public class GameplayManager : SingletonMonoBehaviour<GameplayManager>
+    public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         public CardDealer Dealer;
         public ScoreManager Scorer;
-        public GameplayFSM GameFSM;
+        public GameFSM GameFSM;
         public PreviewManager Preview;
 
         private UI_Gameplay UIGame;

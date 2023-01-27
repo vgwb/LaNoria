@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace vgwb.lanoria
 {
-    public class CardInGame : MonoBehaviour
+    public class Card : MonoBehaviour
     {
         [Header("UI Elements")]
         public TMP_Text CardTitle;
@@ -25,21 +25,21 @@ namespace vgwb.lanoria
             Rect = GetComponent<RectTransform>();
         }
 
-        public void InitCard(ProjectData cardData, Texture texture)
+        public void Init(ProjectData cardData, Texture texture)
         {
             CardData = cardData;
-            SetCardTitle(CardData.Title);
-            SetPrefabImg(texture); // visualize the 3d prefab into the canvas
+            SetTitle(CardData.Title);
+            SetImage(texture); // visualize the 3d prefab into the canvas
         }
 
-        public void SetCardEvents(UnityAction action)
+        public void SetEvents(UnityAction action)
         {
             if (action != null) {
                 ClickableComp.onClick.AddListener(action);
             }
         }
 
-        public void SetCardAsPlayable(bool isPlayable)
+        public void SetPlayable(bool isPlayable)
         {
             if (ClickableComp != null) {
                 ClickableComp.interactable = isPlayable;
@@ -56,14 +56,14 @@ namespace vgwb.lanoria
             }
         }
 
-        private void SetCardTitle(string title)
+        private void SetTitle(string title)
         {
             if (CardTitle != null) {
                 CardTitle.text = title;
             }
         }
 
-        private void SetPrefabImg(Texture texture)
+        private void SetImage(Texture texture)
         {
             if (PrefabImg != null) {
                 PrefabImg.texture = texture;

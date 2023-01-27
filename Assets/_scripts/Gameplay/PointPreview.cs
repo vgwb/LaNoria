@@ -7,20 +7,15 @@ namespace vgwb.lanoria
 {
     public class PointPreview : MonoBehaviour
     {
-        #region Var
         public RectTransform Rect;
         public TMP_Text Txt;
         private Vector3 targetWorldPos;
-        #endregion
 
-        #region MonoB
         private void Update()
         {
             SetUIPosOnWorldPos();
         }
-        #endregion
 
-        #region Functions
         public void Init(Vector3 worldPos, string points)
         {
             if (Rect == null) {
@@ -46,6 +41,5 @@ namespace vgwb.lanoria
             Vector3 posUI = Camera.main.WorldToScreenPoint(targetWorldPos);
             Rect.position = posUI;
         }
-        #endregion
-    } 
+    }
 }

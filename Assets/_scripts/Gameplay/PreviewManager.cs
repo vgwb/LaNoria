@@ -6,13 +6,10 @@ namespace vgwb.lanoria
 {
     public class PreviewManager : GameplayComponent
     {
-        #region Var
         public GameObject PointPreviewPrefab;
         public bool UsePreview = true;
         private ScoreManager scorer;
-        #endregion
 
-        #region MonoB
         protected override void Awake()
         {
             base.Awake();
@@ -23,9 +20,7 @@ namespace vgwb.lanoria
                 Debug.LogError("ScoreManager - Awake(): no point preview prefab defined!");
             }
         }
-        #endregion
 
-        #region Functions
         public void PreviewScore(Tile placeable)
         {
             CleanPreview();
@@ -58,6 +53,5 @@ namespace vgwb.lanoria
 
             return instance;
         }
-        #endregion
     }
 }

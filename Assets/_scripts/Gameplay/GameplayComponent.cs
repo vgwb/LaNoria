@@ -4,14 +4,14 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    [RequireComponent(typeof(GameplayManager))]
+    [RequireComponent(typeof(GameManager))]
     public abstract class GameplayComponent : MonoBehaviour
     {
-        protected GameplayManager manager;
+        protected GameManager manager;
 
         protected virtual void Awake()
         {
-            manager = GetComponent<GameplayManager>();
+            manager = GetComponent<GameManager>();
         }
     }
 }

@@ -18,22 +18,22 @@ namespace vgwb.lanoria
         Pause
     }
 
-    public class GameplayFSM : GameplayComponent
+    public class GameFSM : GameplayComponent
     {
         public GameObject CardPrefab;
         public delegate void GameplayStateEvent(GameplayState state);
         public GameplayStateEvent OnStateUpdate;
 
         [SerializeField] private GameplayState state;
-        private int chosenCardIndex;
-        private Tile instancedPlaceable;
+        private int currentCardIndex;
+        private Tile currentTile;
 
         public ProjectData currentProjectData
         {
             get; private set;
         }
 
-        private List<CardInGame> spawnedCards;
+        private List<Card> spawnedCards;
         private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
         private CardDealer dealer;
@@ -88,24 +88,24 @@ namespace vgwb.lanoria
         public void OnClickCard(Transform placeablePrefab, ProjectData projectData, int cardIndex)
         {
             if (placeablePrefab != null && spawner != null) {
-                if (instancedPlaceable != null) {
-                    Destroy(instancedPlaceable.gameObject);
+                if (currentTile != null) {
+                    Destroy(currentTile.gameObject);
                 }
 
                 CleanPreview();
-                chosenCardIndex = cardIndex;
+                currentCardIndex = cardIndex;
                 currentProjectData = projectData;
                 spawner.Prefab = placeablePrefab;
-                var texture = UICameraManager.I.GetUICameraTexture(chosenCardIndex);
+                var texture = UICameraManager.I.GetUICameraTexture(currentCardIndex);
                 UIGame.CardSelectionHUD(projectData.Title, texture);
             }
         }
 
         public void ConfirmProject()
         {
-            instancedPlaceable.OnProjectConfirmed();
-            instancedPlaceable.transform.parent = BoardManager.I.ProjectsContainer.transform;
-            scorer.UpdateScore(instancedPlaceable);
+            currentTile.OnProjectConfirmed();
+            currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
+            scorer.UpdateScore(currentTile);
             ResetProjectPanel();
             ResetValues();
             CleanPreview();
@@ -121,14 +121,14 @@ namespace vgwb.lanoria
 
         public void OnProjectDrag()
         {
-            if (instancedPlaceable != null) {
+            if (currentTile != null) {
                 UIGame.SlideOnTheRight();
             }
         }
 
         public void OnProjectSelect()
         {
-            if (instancedPlaceable != null) {
+            if (currentTile != null) {
                 UIGame.SlideToOriginalPosition();
             }
         }
@@ -152,16 +152,16 @@ namespace vgwb.lanoria
 
         private void ResetValues()
         {
-            chosenCardIndex = -1;
-            instancedPlaceable = null;
+            currentCardIndex = -1;
+            currentTile = null;
             currentProjectData = null;
-            spawnedCards = new List<CardInGame>();
+            spawnedCards = new List<Card>();
         }
 
         private void OnPrefabSpawned(GameObject clone)
         {
-            instancedPlaceable = clone.GetComponent<Tile>();
-            instancedPlaceable.SetupCellsColor(currentProjectData);
+            currentTile = clone.GetComponent<Tile>();
+            currentTile.SetupCellsColor(currentProjectData);
             UIGame.EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
         }
@@ -174,35 +174,35 @@ namespace vgwb.lanoria
 
         private void OnHexPosChange()
         {
-            if (instancedPlaceable != null) {
-                preview.PreviewScore(instancedPlaceable);
+            if (currentTile != null) {
+                preview.PreviewScore(currentTile);
             }
         }
 
         private void SubscribeToPlaceableEvents()
         {
-            if (instancedPlaceable != null) {
-                instancedPlaceable.OnValidPositionChange += HandleBtnConfirm;
-                instancedPlaceable.OnStopUsingMe += StopUsingPlaceable;
-                instancedPlaceable.OnSelectMe += OnPrefabSelect;
-                instancedPlaceable.OnHexPosChange += OnHexPosChange;
+            if (currentTile != null) {
+                currentTile.OnValidPositionChange += HandleBtnConfirm;
+                currentTile.OnStopUsingMe += StopUsingPlaceable;
+                currentTile.OnSelectMe += OnPrefabSelect;
+                currentTile.OnHexPosChange += OnHexPosChange;
             }
         }
 
         private void UnsuscribeToPlaceableEvents()
         {
-            if (instancedPlaceable != null) {
-                instancedPlaceable.OnValidPositionChange -= HandleBtnConfirm;
-                instancedPlaceable.OnStopUsingMe -= StopUsingPlaceable;
-                instancedPlaceable.OnSelectMe -= OnPrefabSelect;
-                instancedPlaceable.OnHexPosChange -= OnHexPosChange;
+            if (currentTile != null) {
+                currentTile.OnValidPositionChange -= HandleBtnConfirm;
+                currentTile.OnStopUsingMe -= StopUsingPlaceable;
+                currentTile.OnSelectMe -= OnPrefabSelect;
+                currentTile.OnHexPosChange -= OnHexPosChange;
             }
         }
 
         private void HandleBtnConfirm()
         {
-            if (instancedPlaceable != null) {
-                UIGame.EnableBtnConfirm(instancedPlaceable.IsValidPosition);
+            if (currentTile != null) {
+                UIGame.EnableBtnConfirm(currentTile.IsValidPosition);
             }
         }
 
@@ -236,23 +236,24 @@ namespace vgwb.lanoria
         private void DrawNewHand()
         {
             CleanHand();
-            spawnedCards = new List<CardInGame>();
+            spawnedCards = new List<Card>();
             var projectsData = dealer.DrawProjects();
             int cardIndex = 0;
             foreach (var projectData in projectsData) {
-                var cardInstance = Instantiate(CardPrefab, UIGame.GetHook(cardIndex).transform); // spawn the card inside the container
-                var cardComp = cardInstance.GetComponent<CardInGame>();
-                if (cardComp != null) {
-                    spawnedCards.Add(cardComp);
-                    cardComp.HideInBottomScreen();
+                // spawn the card inside the container
+                var cardInstance = Instantiate(CardPrefab, UIGame.GetHook(cardIndex).transform);
+                var card = cardInstance.GetComponent<Card>();
+                if (card != null) {
+                    spawnedCards.Add(card);
+                    card.HideInBottomScreen();
                     var cardTexture = UICameraManager.I.GetUICameraTexture(cardIndex);
-                    cardComp.InitCard(projectData, cardTexture); // initialize the card component
+                    card.Init(projectData, cardTexture); // initialize the card component
                     // get the associated model and bind it to the card clickable area
-                    var associatedPrefab = GameData.I.Projects.GetTile(projectData);
+                    var tilePrefab = GameData.I.Projects.GetTile(projectData);
                     int indexToPass = cardIndex;
-                    cardComp.SetCardEvents(() => OnClickCard(associatedPrefab.transform, projectData, indexToPass));
+                    card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
                     // spawn the object in camera UI
-                    UICameraManager.I.SpawnPrefabInCamera(cardIndex, associatedPrefab, projectData);
+                    UICameraManager.I.SpawnPrefabInCamera(cardIndex, tilePrefab, projectData);
                 }
                 cardIndex++;
             }

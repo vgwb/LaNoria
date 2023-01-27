@@ -53,7 +53,7 @@ namespace vgwb.lanoria
             projectPanelOriginalPosition = PanelCurrentProject.anchoredPosition;
 
             BtnDetailProject.onClick.AddListener(() => OnOpenProjectDetail());
-            BtnPause.onClick.AddListener(() => GameplayManager.I.PauseGame());
+            BtnPause.onClick.AddListener(() => GameManager.I.PauseGame());
         }
 
         public void OpenPanel()
@@ -189,7 +189,7 @@ namespace vgwb.lanoria
 
         public void OnOpenProjectDetail()
         {
-            UI_manager.I.OpenProjectDetail(GameplayManager.I.GameFSM.currentProjectData);
+            UI_manager.I.OpenProjectDetail(GameManager.I.GameFSM.currentProjectData);
         }
 
         public void PrefabSelectionHUD()
