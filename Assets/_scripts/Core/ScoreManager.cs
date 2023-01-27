@@ -29,7 +29,7 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
-        public void UpdateScore(PlaceableProject placeable)
+        public void UpdateScore(Tile placeable)
         {
             int basicScore = CalculateBasicPoints(placeable);
             int transversalityScore = CalculateTransversality(placeable);
@@ -47,12 +47,12 @@ namespace vgwb.lanoria
 
         }
 
-        private int CalculateBasicPoints(PlaceableProject placeable)
+        private int CalculateBasicPoints(Tile placeable)
         {
             return placeable.CellsNum;
         }
 
-        public List<Vector3> CalculateSynergy(PlaceableProject placeable)
+        public List<Vector3> CalculateSynergy(Tile placeable)
         {
             int resultingScore = 0;
             var grid = GridManager.I;
@@ -78,7 +78,7 @@ namespace vgwb.lanoria
             return synergyPoints;
         }
 
-        private int CalculateTransversality(PlaceableProject placeable)
+        private int CalculateTransversality(Tile placeable)
         {
             int resultingScore = 0;
             var grid = GridManager.I;

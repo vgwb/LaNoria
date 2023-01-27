@@ -134,7 +134,7 @@ namespace vgwb.lanoria
             return subregionCells;
         }
 
-        public HashSet<GridCell> GetNeighboursOfPlaceable(List<PlaceableCell> cells)
+        public HashSet<GridCell> GetNeighboursOfPlaceable(List<TileCell> cells)
         {
             HashSet<GridCell> neighboursSet = new HashSet<GridCell>();
             HashSet<GridCell> cellsToExclude = new HashSet<GridCell>();

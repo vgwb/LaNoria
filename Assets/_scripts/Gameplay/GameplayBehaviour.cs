@@ -27,7 +27,7 @@ namespace vgwb.lanoria
 
         [SerializeField] private GameplayState state;
         private int chosenCardIndex;
-        private PlaceableProject instancedPlaceable;
+        private Tile instancedPlaceable;
         private ProjectData chosenProjectData;
         private List<CardInGame> spawnedCards;
         private UI_GameHUD UIGame;
@@ -155,7 +155,7 @@ namespace vgwb.lanoria
 
         private void OnPrefabSpawned(GameObject clone)
         {
-            instancedPlaceable = clone.GetComponent<PlaceableProject>();
+            instancedPlaceable = clone.GetComponent<Tile>();
             instancedPlaceable.SetupCellsColor(chosenProjectData);
             UIGame.EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();

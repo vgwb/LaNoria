@@ -25,7 +25,8 @@ namespace vgwb.lanoria
         }
 
         [System.Serializable]
-        public struct EnumToDisplayedName<T> {
+        public struct EnumToDisplayedName<T>
+        {
             public T MyEnum;
             public string DisplayedName;
         }
@@ -39,7 +40,6 @@ namespace vgwb.lanoria
         public float OutlineWidth = 7.0f;
         public float DragYOffset = 0.2f;
         [Header("Projects Setup")]
-        public List<ModelKeyToPrefab> ProjectPrefabsMap;
         public Color BlankColor = Color.white;
         [Header("Drawing Rules")]
         public int CardToDraw = 4;
@@ -67,31 +67,14 @@ namespace vgwb.lanoria
                 return null;
             }
 
-            GameObject result = null;
-            if (!string.IsNullOrEmpty(projectData.Model)) {
-                result = GetProjectModelByKey(projectData.Model);
+            GameObject tileModel = null;
+            if (projectData.TileModel != TileType.Undefined) {
+                tileModel = DataManager.I.Data.TilesData.GetProjectModelByKey(projectData.TileModel);
             } else {
-                result = GetProjectModelByCellNum(projectData.Sequence.Length);
+                tileModel = DataManager.I.Data.TilesData.GetProjectModelByCellNum(projectData.Sequence.Length);
             }
 
-            return result;
-        }
-
-        public GameObject GetProjectModelByKey(string key)
-        {
-            var tuple = ProjectPrefabsMap.Find(x => x.Key == key);
-
-            return tuple.Prefab;
-        }
-
-        public GameObject GetProjectModelByCellNum(int cellNum)
-        {
-            string category = "P" + cellNum.ToString();
-            var tuples = ProjectPrefabsMap.FindAll(x => x.Key.Contains(category));
-
-            int randomIndex = Random.Range(0, tuples.Count);
-
-            return tuples[randomIndex].Prefab;
+            return tileModel;
         }
 
         public string GetSubregionNameByEnum(Subregion subregion)

@@ -12,7 +12,7 @@ namespace vgwb.lanoria
     {
         public string Id;
         public bool Active = true;
-        public string Model;
+        public TileType TileModel;
         public ProjectCategories[] Sequence;
         public string Title;
         [TextArea]

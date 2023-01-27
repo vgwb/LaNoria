@@ -5,12 +5,28 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class PlaceableProject : MonoBehaviour
+    public enum TileType
     {
+        Undefined = 0,
+        P2A = 21,
+        P3A = 31,
+        P3B = 32,
+        P3C = 33,
+        P4A = 41,
+        P4B = 42,
+        P4C = 43,
+        P4D = 44,
+        P4E = 45,
+        P4F = 46
+    }
+
+    public class Tile : MonoBehaviour
+    {
+        public TileType Type;
         public bool ShowPivot = false;
         public GameObject Pivot;
         public GameObject CellsContainer;
-        public List<PlaceableCell> Cells;
+        public List<TileCell> Cells;
         public Outline OutlineHandler;
 
         public delegate void PlaceableEvent();
@@ -171,9 +187,9 @@ namespace vgwb.lanoria
             for (int i = 0; i < childs; i++) {
                 var child = CellsContainer.transform.GetChild(i).gameObject;
                 string childName = child.name.ToLower();
-                var tile = child.GetComponent<PlaceableCell>();
+                var tile = child.GetComponent<TileCell>();
                 if (tile == null) {
-                    tile = child.AddComponent<PlaceableCell>();
+                    tile = child.AddComponent<TileCell>();
                 }
                 tile.Init();
                 Cells.Add(tile);

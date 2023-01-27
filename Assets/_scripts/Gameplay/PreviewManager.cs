@@ -26,7 +26,7 @@ namespace vgwb.lanoria
         #endregion
 
         #region Functions
-        public void PreviewScore(PlaceableProject placeable)
+        public void PreviewScore(Tile placeable)
         {
             CleanPreview();
             if (!UsePreview) {

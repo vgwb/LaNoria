@@ -18,7 +18,7 @@ namespace vgwb.lanoria
 
         }
 
-        public bool CanProjectBePlaced(PlaceableProject project)
+        public bool CanProjectBePlaced(Tile project)
         {
             return true;
         }

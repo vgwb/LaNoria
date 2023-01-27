@@ -28,7 +28,7 @@ namespace vgwb.lanoria
                 var container = Cams[cameraIndex].SubjectPivot;
                 var instance = Instantiate(prefab);
                 instance.transform.localPosition = Vector3.zero;
-                var placeable = instance.GetComponent<PlaceableProject>();
+                var placeable = instance.GetComponent<Tile>();
                 if (placeable != null) {
                     placeable.SetupForUI();
                     var ParentInPivot = new GameObject(); // create an empty object

@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 4546588131082605344}
   - component: {fileID: 4546588131082605347}
   m_Layer: 0
-  m_Name: Project-P42
+  m_Name: Tile-P4C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314b31df608a1fe45b10a86663022a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 43
   ShowPivot: 1
   Pivot: {fileID: 4546588129076942391}
   CellsContainer: {fileID: 984801029793027695}

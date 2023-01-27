@@ -13,5 +13,6 @@ namespace vgwb.lanoria
     {
         public ProjectsData ProjectsData;
         public CategoriesData CategoriesData;
+        public TilesData TilesData;
     }
 }

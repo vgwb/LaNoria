@@ -4,16 +4,13 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class PlaceableCell : GenericCell
+    public class TileCell : GenericCell
     {
-        #region MonoB
         protected override void Awake()
         {
             base.Awake();
         }
-        #endregion
 
-        #region Functions
         public void Init()
         {
             BaseSetup();
@@ -23,6 +20,5 @@ namespace vgwb.lanoria
         {
             mesh.gameObject.layer = LayerMask.NameToLayer("UICamera");
         }
-        #endregion
     }
 }

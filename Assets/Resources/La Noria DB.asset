@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectsData: {fileID: 11400000, guid: d9b2dfa0456564fe2a97aca06bdb4b52, type: 2}
   CategoriesData: {fileID: 11400000, guid: 16de47ea887d44339850a43fa8eecd9f, type: 2}
+  TilesData: {fileID: 11400000, guid: f9d5c8484b6c84ac99b36863e6e7f0ab, type: 2}
