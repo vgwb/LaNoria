@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df0227d2b36cd400f8cca3b8d50e7253, type: 3}
-  m_Name: La Noria DB
+  m_Name: _GameData
   m_EditorClassIdentifier: 
   Projects: {fileID: 11400000, guid: d9b2dfa0456564fe2a97aca06bdb4b52, type: 2}
   Categories: {fileID: 11400000, guid: 16de47ea887d44339850a43fa8eecd9f, type: 2}
