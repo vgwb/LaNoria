@@ -20,9 +20,9 @@ namespace vgwb.lanoria
 
         public IEnumerable<ProjectData> DrawProjects()
         {
-            int cardsNum = GameplayConfig.I.CardToDraw;
+            int cardsNum = GameplayConfig.I.CardsInHand;
 
-            return projectAtlas.PickRandomElements(cardsNum);
+            return GameData.I.Projects.PickRandomProjects(cardsNum);
         }
     }
 }
