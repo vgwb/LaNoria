@@ -42,7 +42,7 @@ namespace vgwb.framework.ui
             ScoreText.text = value.ToString();
             PunchAnimation.Rewind();
             PunchAnimation.Play();
-            SoundManager.I.PlaySfx(SfxEnum.score);
+            SoundManager.I.PlaySfx(AudioEnum.score);
         }
     }
 }

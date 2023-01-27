@@ -258,7 +258,7 @@ namespace vgwb.lanoria
                 cardIndex++;
             }
 
-            SoundManager.I.PlaySfx(SfxEnum.shuffle);
+            SoundManager.I.PlaySfx(AudioEnum.shuffle);
         }
 
         private void EventsSubscribe()
@@ -285,7 +285,9 @@ namespace vgwb.lanoria
             float index = 0;
             foreach (var card in spawnedCards) {
                 float time = (duration / 2.0f) * index++;
-                mySequence.Insert(time, card.Rect.DOAnchorPosY(0.0f, duration).OnComplete(() => SoundManager.I.PlaySfx(SfxEnum.card)));
+                mySequence.Insert(time,
+                    card.Rect.DOAnchorPosY(0.0f, duration).OnComplete(() => SoundManager.I.PlaySfx(AudioEnum.card))
+                );
             }
 
             mySequence.PrependInterval(duration);

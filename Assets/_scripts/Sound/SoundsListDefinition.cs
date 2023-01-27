@@ -6,7 +6,7 @@ using UnityEngine;
 namespace vgwb.lanoria
 {
 
-    public enum SfxEnum
+    public enum AudioEnum
     {
         click = 1,
         win = 2,
@@ -16,7 +16,17 @@ namespace vgwb.lanoria
         trash = 6,
         score = 7,
         shuffle = 8,
-        card = 9
+        card = 9,
+
+        music_1 = 20
+    }
+
+    public enum AudioChannel
+    {
+        Sfx1,
+        Sfx2,
+        Sfx3,
+        Music
     }
 
     [CreateAssetMenu(menuName = "VGWB/Sounds List")]
@@ -28,10 +38,11 @@ namespace vgwb.lanoria
     [Serializable]
     public class SoundItem
     {
-        public SfxEnum id;
+        public AudioEnum id;
+        public AudioChannel Channel;
         public AudioClip audioClip;
 
         [Range(0.0f, 1.0f)]
-        public float Volume = 1.0f;
+        public float Volume;
     }
 }
