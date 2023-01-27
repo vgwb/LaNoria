@@ -7,6 +7,21 @@ using UnityEngine.Serialization;
 
 namespace vgwb.lanoria
 {
+    public enum TileModel
+    {
+        Undefined = 0,
+        P2A = 21,
+        P3A = 31,
+        P3B = 32,
+        P3C = 33,
+        P4A = 41,
+        P4B = 42,
+        P4C = 43,
+        P4D = 44,
+        P4E = 45,
+        P4F = 46
+    }
+
     [Serializable]
     public class TileInfo
     {

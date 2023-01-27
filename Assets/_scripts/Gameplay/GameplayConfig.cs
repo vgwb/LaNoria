@@ -8,20 +8,20 @@ namespace vgwb.lanoria
     [CreateAssetMenu(menuName = "VGWB/Gameplay Config")]
     public class GameplayConfig : SingletonScriptableObject<GameplayConfig>
     {
-        [Header("Placeable Settings")]
+        [Header("Tiles")]
         public Color MovingColor;
         public Color OverlapColor;
         public Outline.Mode PlaceableOutlineMode = Outline.Mode.OutlineVisible;
         public float OutlineWidth = 7.0f;
         public float DragYOffset = 0.2f;
 
-        [Header("Projects Setup")]
+        [Header("Projects")]
         public Color BlankColor = Color.white;
 
-        [Header("Drawing Rules")]
-        public int CardToDraw = 4;
+        [Header("Deck Rules")]
+        public int CardsInHand = 4;
 
-        [Header("Region Definition")]
+        [Header("Areas")]
         public Vector3 LabelDebugOffset;
         public int LabelDebugFontSize = 15;
 
@@ -37,6 +37,5 @@ namespace vgwb.lanoria
         public float ResetCameraRotYOnPlay = 1.0f;
         public float FadeInGameCanvas = 1.0f;
         public float CardAppearsTime = 1.0f;
-
     }
 }

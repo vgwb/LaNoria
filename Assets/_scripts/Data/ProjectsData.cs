@@ -25,10 +25,10 @@ namespace vgwb.lanoria
     {
         public List<ProjectData> Projects;
 
-        public IEnumerable<ProjectData> PickRandomElements(int num)
+        public IEnumerable<ProjectData> PickRandomProjects(int howMany)
         {
             var rnd = new System.Random();
-            return Projects.OrderBy(x => rnd.Next()).Take(num);
+            return Projects.OrderBy(x => rnd.Next()).Take(howMany);
         }
 
         public GameObject GetTile(ProjectData projectData)
