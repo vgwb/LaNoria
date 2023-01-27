@@ -15,7 +15,7 @@ namespace vgwb.lanoria
         public Button ClickableComp;
         public RawImage PrefabImg;
 
-        [Header("Project Data")]
+        [HideInInspector]
         public ProjectData CardData;
 
         public RectTransform Rect { get; private set; }
