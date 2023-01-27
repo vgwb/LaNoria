@@ -32,13 +32,13 @@ namespace vgwb.lanoria
 
         public void OnHome()
         {
-            Debug.Log("HOME!");
+            //            Debug.Log("HOME!");
             UI_manager.I.Show(UI_manager.States.Home);
         }
 
         public void OnAbout()
         {
-            Debug.Log("ABOUT!");
+            //Debug.Log("ABOUT!");
             UI_manager.I.Show(UI_manager.States.About);
         }
 
@@ -52,7 +52,7 @@ namespace vgwb.lanoria
 
         public void OnOptions()
         {
-            Debug.Log("OPTIONS!");
+            //            Debug.Log("OPTIONS!");
             UI_manager.I.Show(UI_manager.States.Options);
         }
 

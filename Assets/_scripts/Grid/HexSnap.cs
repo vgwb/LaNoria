@@ -17,8 +17,8 @@ namespace vgwb.lanoria
         [Range(1, 10)]
         public int maxRadius;
 
-        private HexUtils hex => HexUtils.FromWorld(transform.position);
-        private HexUtils localHex => HexUtils.FromWorld(transform.localPosition);
+        private Hex hex => Hex.FromWorld(transform.position);
+        private Hex localHex => Hex.FromWorld(transform.localPosition);
 
         public void ApplyTransform()
         {
@@ -49,15 +49,17 @@ namespace vgwb.lanoria
             if (AppConfig.I.ShowHexCoords) {
                 UnityEditor.Handles.Label(transform.position, hex.ToString(), style);
             }
+
             if (ShowRange) {
                 Gizmos.color = Color.cyan;
-                foreach (HexUtils hex in HexUtils.Spiral(hex, minRadius, maxRadius)) {
+                foreach (Hex hex in Hex.Spiral(hex, minRadius, maxRadius)) {
                     Gizmos.DrawSphere(hex.ToWorld(), .25f);
                 }
             }
+
             if (ShowNeighbours) {
                 Gizmos.color = Color.red;
-                foreach (HexUtils neighbour in hex.Neighbours()) {
+                foreach (Hex neighbour in hex.Neighbours()) {
                     Gizmos.DrawSphere(neighbour.ToWorld(), .25f);
                 }
             }

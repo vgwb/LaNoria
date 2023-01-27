@@ -9,8 +9,8 @@ namespace vgwb.lanoria
         [SerializeField] protected ProjectCategories category;
         [SerializeField] protected MeshRenderer mesh;
 
-        private HexUtils hex => HexUtils.FromWorld(transform.position);
-        private HexUtils localHex => HexUtils.FromWorld(transform.localPosition);
+        private Hex hex => Hex.FromWorld(transform.position);
+        private Hex localHex => Hex.FromWorld(transform.localPosition);
 
         public Vector3 HexPosition
         {

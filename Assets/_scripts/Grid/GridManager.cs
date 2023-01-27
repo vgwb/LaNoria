@@ -15,7 +15,10 @@ namespace vgwb.lanoria
             Name,
             ColorAndName
         }
+        [HideInInspector]
         public List<GridCell> Cells;
+        [HideInInspector]
+        public Hex[,] HexCells;
 
         [Header("Subregion Debug")]
         public SubregionDebugType ShowSubregionDebug = SubregionDebugType.None;
@@ -31,7 +34,6 @@ namespace vgwb.lanoria
 
         private void Start()
         {
-            Cells.Clear();
             InitCells();
         }
 
@@ -60,14 +62,12 @@ namespace vgwb.lanoria
             if (cell != null) {
                 return cell.Occupied;
             }
-
             return true;
         }
 
         public bool IsOutOfMap(Vector3 pos)
         {
             var cell = GetCellByPosition(pos);
-
             return cell == null;
         }
 
@@ -80,10 +80,14 @@ namespace vgwb.lanoria
             }
         }
 
+        // public GridCell GetCellByCoords(int q, int r)
+        // {
+        //     return Cells.Find(x => x.q == q);
+        // }
+
         public GridCell GetCellByPosition(Vector3 pos)
         {
             Vector3 hexPos = RetrieveHexPos(pos);
-
             return Cells.Find(x => x.HexPosition == hexPos);
         }
 
@@ -104,27 +108,26 @@ namespace vgwb.lanoria
 
         public List<GridCell> GetAllSubregionCellsByPos(Vector3 pos)
         {
-            var subregionCells = new List<GridCell>();
+            var cells = new List<GridCell>();
             var originCell = GetCellByPosition(pos);
             if (originCell != null) {
-                subregionCells = Cells.FindAll(x => x.Area == originCell.Area);
+                cells = Cells.FindAll(x => x.Area == originCell.Area);
             }
 
-            return subregionCells;
+            return cells;
         }
 
         public List<GridCell> GetNeighboursByPos(Vector3 pos)
         {
-            var subregionCells = new List<GridCell>();
-            var hex = HexUtils.FromWorld(pos);
+            var cells = new List<GridCell>();
+            var hex = Hex.FromWorld(pos);
             foreach (var neighbour in hex.Neighbours()) {
                 var neighbourPos = neighbour.ToWorld();
                 if (!IsOutOfMap(neighbourPos)) {
-                    subregionCells.Add(GetCellByPosition(neighbourPos));
+                    cells.Add(GetCellByPosition(neighbourPos));
                 }
             }
-
-            return subregionCells;
+            return cells;
         }
 
         public HashSet<GridCell> GetNeighboursOfPlaceable(List<TileCell> cells)
@@ -143,7 +146,7 @@ namespace vgwb.lanoria
 
         private Vector3 RetrieveHexPos(Vector3 pos)
         {
-            var hex = HexUtils.FromWorld(pos);
+            var hex = Hex.FromWorld(pos);
 
             return hex.ToWorld(0f);
         }
@@ -158,16 +161,13 @@ namespace vgwb.lanoria
                     case SubregionDebugType.Color:
                         drawColor = true;
                         break;
-
                     case SubregionDebugType.Name:
                         drawText = true;
                         break;
-
                     case SubregionDebugType.ColorAndName:
                         drawColor = true;
                         drawText = true;
                         break;
-
                     default:
                     case SubregionDebugType.None:
                         break;
