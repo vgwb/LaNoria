@@ -1,6 +1,5 @@
 using DG.Tweening;
 using Lean.Touch;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,14 +7,14 @@ namespace vgwb.lanoria
 {
     public enum GameplayState
     {
-        None,
-        Intro,
-        Setup,
-        Drawing,
-        Play,
-        Score,
-        End,
-        Pause
+        None, // no state defined
+        Intro, // intro state, here efx like camera on regions are played
+        Setup, // setup here we set things useful for gameplay
+        Drawing, // draw step
+        Play, // here we play!
+        Score, // counting the score after a tile is placed
+        End, // end the game and show the final score
+        Pause // game is in pause
     }
 
     public class GameFSM : GameplayComponent
@@ -45,7 +44,7 @@ namespace vgwb.lanoria
             base.Awake();
 
             if (CardPrefab == null) {
-                Debug.LogError("CardDealer - Awake(): no card prefab defined!");
+                Debug.LogError("GameFSM - Awake(): no card prefab defined!");
             }
 
             dealer = manager.Dealer;
@@ -253,12 +252,42 @@ namespace vgwb.lanoria
                     int indexToPass = cardIndex;
                     card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
                     // spawn the object in camera UI
-                    UICameraManager.I.SpawnPrefabInCamera(cardIndex, tilePrefab, projectData);
+                    var UIPrefab = UICameraManager.I.SpawnPrefabInCamera(cardIndex, tilePrefab, projectData);
+                    bool placeable = ProjectIsPlaceable(UIPrefab);
+                    card.SetPlayable(placeable);
                 }
                 cardIndex++;
             }
 
             SoundManager.I.PlaySfx(AudioEnum.shuffle);
+        }
+
+        private bool ProjectIsPlaceable(GameObject prefabInstance)
+        {
+            var tile = prefabInstance.GetComponent<Tile>();
+            if (tile != null) {
+                return BoardManager.I.CanProjectBePlaced(tile);
+            }
+
+            return false;
+        }
+
+        private void CheckGameEnd()
+        {
+            bool cardAvailable = false;
+            foreach (var card in spawnedCards) {
+                if (card.IsPlayable()) {
+                    cardAvailable = true;
+                    break;
+                }
+            }
+            Debug.Log("Cards available: "+cardAvailable);
+            if (!cardAvailable) {
+                SetState(GameplayState.End);
+            } else {
+                SetState(GameplayState.Play);
+                UIGame.SetCanvasInteractable(true);
+            }
         }
 
         private void EventsSubscribe()
@@ -292,8 +321,7 @@ namespace vgwb.lanoria
 
             mySequence.PrependInterval(duration);
             mySequence.AppendCallback(() => {
-                SetState(GameplayState.Play);
-                UIGame.SetCanvasInteractable(true);
+                CheckGameEnd();
             });
         }
 

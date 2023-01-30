@@ -56,6 +56,15 @@ namespace vgwb.lanoria
             }
         }
 
+        public bool IsPlayable()
+        {
+            if (ClickableComp != null) {
+                return ClickableComp.interactable;
+            }
+
+            return false;
+        }
+
         private void SetTitle(string title)
         {
             if (CardTitle != null) {

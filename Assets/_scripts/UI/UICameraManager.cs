@@ -44,6 +44,8 @@ namespace vgwb.lanoria
                 } else {
                     instance.transform.localPosition = Vector3.zero;
                 }
+
+                return instance;
             }
 
             return null;
