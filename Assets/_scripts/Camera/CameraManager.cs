@@ -26,7 +26,7 @@ namespace vgwb.lanoria
             base.Awake();
 
             originalRot = transform.eulerAngles;
-            EnableRotationWithFingers(true);
+            EnableRotationWithFingers(false);
         }
         #endregion
 
