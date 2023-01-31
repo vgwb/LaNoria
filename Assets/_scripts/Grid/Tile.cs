@@ -122,6 +122,7 @@ namespace vgwb.lanoria
         public void OnProjectConfirmed()
         {
             EnableLeanComponents(false);
+            EnablePivot(false); // deactivate pivot and colliders
             OccupyGrid();
             DisableOutline();
             StopUsingMe();
