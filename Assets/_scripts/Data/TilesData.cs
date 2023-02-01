@@ -35,12 +35,12 @@ namespace vgwb.lanoria
     {
         public List<TileInfo> Tiles;
 
-        public GameObject GetProjectModelByKey(TileModel model)
+        public GameObject GetTileByModel(TileModel model)
         {
             return Tiles.Find(x => x.Model == model).Prefab;
         }
 
-        public GameObject GetProjectModelByCellNum(int cellNum)
+        public GameObject GetTileByLength(int cellNum)
         {
             var tuples = Tiles.FindAll(x => x.Length == cellNum);
             int randomIndex = UnityEngine.Random.Range(0, tuples.Count);

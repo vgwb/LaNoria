@@ -35,14 +35,14 @@ namespace vgwb.lanoria
                 return null;
             }
 
-            GameObject tileModel = null;
+            GameObject tilePrefab;
             if (projectData.TileModel != TileModel.Random) {
-                tileModel = GameData.I.Tiles.GetProjectModelByKey(projectData.TileModel);
+                tilePrefab = GameData.I.Tiles.GetTileByModel(projectData.TileModel);
             } else {
-                tileModel = GameData.I.Tiles.GetProjectModelByCellNum(projectData.Sequence.Length);
+                tilePrefab = GameData.I.Tiles.GetTileByLength(projectData.Sequence.Length);
             }
 
-            return tileModel;
+            return tilePrefab;
         }
     }
 }

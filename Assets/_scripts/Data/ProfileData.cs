@@ -21,15 +21,6 @@ namespace vgwb.lanoria
     {
         public int Version;
         public AppSettings AppSettings;
-
-        // State
-        public int CurrentPoints;
-
-        public override string ToString()
-        {
-            var s = new StringBuilder();
-            s.AppendLine($"Points: {CurrentPoints}");
-            return s.ToString();
-        }
+        public int HiScore;
     }
 }
