@@ -16,7 +16,6 @@ MonoBehaviour:
   - Id: 1
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000003000000
     Title: "Crafteando: educaci\xF3n, participaci\xF3n y territorio"
     Description: "Crafteando es un proyecto orientado al mapeo de nuestro entorno
@@ -35,7 +34,6 @@ MonoBehaviour:
   - Id: 2
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0400000001000000
     Title: "\xC1ula Vivero La Salvia"
     Description: "El Aula Vivero la Salvia es un espacio natural ubicado dentro del
@@ -49,7 +47,6 @@ MonoBehaviour:
   - Id: 3
     Active: 1
     TileModel: 31
-    Model: P30
     Sequence: 030000000100000003000000
     Title: Project 3
     Description: description of this project
@@ -57,15 +54,13 @@ MonoBehaviour:
   - Id: 4
     Active: 1
     TileModel: 31
-    Model: P30
-    Sequence: 040000000200000003000000
+    Sequence: 010000000200000003000000
     Title: Project 4
     Description: description of this project
     Image: {fileID: 0}
   - Id: 5
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 030000000100000002000000
     Title: Project 5
     Description: description of this project
@@ -73,7 +68,6 @@ MonoBehaviour:
   - Id: 6
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 030000000100000001000000
     Title: Project 6
     Description: description of this project
@@ -81,7 +75,6 @@ MonoBehaviour:
   - Id: 7
     Active: 1
     TileModel: 41
-    Model: P41
     Sequence: 02000000020000000400000003000000
     Title: Project 7
     Description: description of this project
@@ -89,7 +82,6 @@ MonoBehaviour:
   - Id: 8
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 8
     Description: description of this project
@@ -97,7 +89,6 @@ MonoBehaviour:
   - Id: 9
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000001000000
     Title: Project 9
     Description: description of this project
@@ -105,7 +96,6 @@ MonoBehaviour:
   - Id: 10
     Active: 1
     TileModel: 31
-    Model: P30
     Sequence: 030000000200000004000000
     Title: Project 10
     Description: description of this project
@@ -113,7 +103,6 @@ MonoBehaviour:
   - Id: 11
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 010000000100000002000000
     Title: Project 11
     Description: description of this project
@@ -121,7 +110,6 @@ MonoBehaviour:
   - Id: 12
     Active: 1
     TileModel: 43
-    Model: P43
     Sequence: 01000000040000000400000004000000
     Title: Project 12
     Description: description of this project
@@ -129,7 +117,6 @@ MonoBehaviour:
   - Id: 13
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000002000000
     Title: Project 13
     Description: description of this project
@@ -137,7 +124,6 @@ MonoBehaviour:
   - Id: 14
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000003000000
     Title: Project 14
     Description: description of this project
@@ -145,7 +131,6 @@ MonoBehaviour:
   - Id: 15
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000002000000
     Title: Project 15
     Description: description of this project
@@ -153,7 +138,6 @@ MonoBehaviour:
   - Id: 16
     Active: 1
     TileModel: 33
-    Model: P32
     Sequence: 040000000100000002000000
     Title: Project 16
     Description: description of this project
@@ -161,7 +145,6 @@ MonoBehaviour:
   - Id: 17
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 020000000200000004000000
     Title: Project 17
     Description: description of this project
@@ -169,7 +152,6 @@ MonoBehaviour:
   - Id: 18
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000003000000
     Title: Project 18
     Description: description of this project
@@ -177,7 +159,6 @@ MonoBehaviour:
   - Id: 19
     Active: 1
     TileModel: 0
-    Model: 
     Sequence: 020000000200000001000000
     Title: Project 19
     Description: description of this project
@@ -185,7 +166,6 @@ MonoBehaviour:
   - Id: 20
     Active: 1
     TileModel: 43
-    Model: P43
     Sequence: 01000000020000000300000004000000
     Title: Project 20 TODAS
     Description: description of this project
@@ -193,7 +173,6 @@ MonoBehaviour:
   - Id: 21
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000003000000
     Title: Project 21
     Description: description of this project
@@ -201,7 +180,6 @@ MonoBehaviour:
   - Id: 22
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000002000000
     Title: Project 22
     Description: description of this project
@@ -209,7 +187,6 @@ MonoBehaviour:
   - Id: 23
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 030000000200000002000000
     Title: Project 23
     Description: description of this project
@@ -217,7 +194,6 @@ MonoBehaviour:
   - Id: 24
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000004000000
     Title: Project 24
     Description: description of this project
@@ -225,7 +201,6 @@ MonoBehaviour:
   - Id: 25
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000004000000
     Title: Project 25
     Description: description of this project
@@ -233,7 +208,6 @@ MonoBehaviour:
   - Id: 26
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0400000004000000
     Title: Project 26
     Description: description of this project
@@ -241,7 +215,6 @@ MonoBehaviour:
   - Id: 27
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000004000000
     Title: Project 27
     Description: description of this project
@@ -249,7 +222,6 @@ MonoBehaviour:
   - Id: 28
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000004000000
     Title: Project 28
     Description: description of this project
@@ -257,7 +229,6 @@ MonoBehaviour:
   - Id: 29
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 29
     Description: description of this project
@@ -265,7 +236,6 @@ MonoBehaviour:
   - Id: 30
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0400000004000000
     Title: Project 30
     Description: description of this project
@@ -273,15 +243,13 @@ MonoBehaviour:
   - Id: 31
     Active: 1
     TileModel: 21
-    Model: P20
-    Sequence: 0130000000400000
+    Sequence: 0200000002000000
     Title: Project 31
     Description: description of this project
     Image: {fileID: 0}
   - Id: 32
     Active: 1
     TileModel: 31
-    Model: P30
     Sequence: 020000000400000002000000
     Title: Project 32
     Description: description of this project
@@ -289,7 +257,6 @@ MonoBehaviour:
   - Id: 33
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 030000000400000002000000
     Title: Project 33
     Description: description of this project
@@ -297,7 +264,6 @@ MonoBehaviour:
   - Id: 34
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0400000004000000
     Title: Project 34
     Description: description of this project
@@ -305,7 +271,6 @@ MonoBehaviour:
   - Id: 35
     Active: 1
     TileModel: 33
-    Model: P32
     Sequence: 010000000200000002000000
     Title: Project 35
     Description: description of this project
@@ -313,7 +278,6 @@ MonoBehaviour:
   - Id: 36
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000001000000
     Title: Project 36
     Description: description of this project
@@ -321,7 +285,6 @@ MonoBehaviour:
   - Id: 37
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000001000000
     Title: Project 37
     Description: description of this project
@@ -329,7 +292,6 @@ MonoBehaviour:
   - Id: 38
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 040000000400000002000000
     Title: Project 38
     Description: description of this project
@@ -337,7 +299,6 @@ MonoBehaviour:
   - Id: 39
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000004000000
     Title: Project 39
     Description: description of this project
@@ -345,7 +306,6 @@ MonoBehaviour:
   - Id: 40
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000004000000
     Title: Project 40
     Description: description of this project
@@ -353,7 +313,6 @@ MonoBehaviour:
   - Id: 41
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000001000000
     Title: Project 41
     Description: description of this project
@@ -361,7 +320,6 @@ MonoBehaviour:
   - Id: 42
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 42
     Description: description of this project
@@ -369,7 +327,6 @@ MonoBehaviour:
   - Id: 43
     Active: 1
     TileModel: 31
-    Model: P30
     Sequence: 020000000200000001000000
     Title: Project 43
     Description: description of this project
@@ -377,7 +334,6 @@ MonoBehaviour:
   - Id: 44
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 010000000400000002000000
     Title: Project 44
     Description: description of this project
@@ -385,7 +341,6 @@ MonoBehaviour:
   - Id: 45
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000002000000
     Title: Project 45
     Description: description of this project
@@ -393,7 +348,6 @@ MonoBehaviour:
   - Id: 46
     Active: 1
     TileModel: 33
-    Model: P32
     Sequence: 030000000300000002000000
     Title: Project 46
     Description: description of this project
@@ -401,7 +355,6 @@ MonoBehaviour:
   - Id: 47
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0400000002000000
     Title: Project 47
     Description: description of this project
@@ -409,7 +362,6 @@ MonoBehaviour:
   - Id: 48
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000004000000
     Title: Project 48
     Description: description of this project
@@ -417,7 +369,6 @@ MonoBehaviour:
   - Id: 49
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000004000000
     Title: Project 49
     Description: description of this project
@@ -425,7 +376,6 @@ MonoBehaviour:
   - Id: 50
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 50
     Description: description of this project
@@ -433,7 +383,6 @@ MonoBehaviour:
   - Id: 51
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0400000004000000
     Title: Project 51
     Description: description of this project
@@ -441,7 +390,6 @@ MonoBehaviour:
   - Id: 52
     Active: 1
     TileModel: 31
-    Model: P30
     Sequence: 010000000400000002000000
     Title: Project 52
     Description: description of this project
@@ -449,7 +397,6 @@ MonoBehaviour:
   - Id: 53
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000004000000
     Title: Project 53
     Description: description of this project
@@ -457,7 +404,6 @@ MonoBehaviour:
   - Id: 54
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 54
     Description: description of this project
@@ -465,7 +411,6 @@ MonoBehaviour:
   - Id: 55
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0400000004000000
     Title: Project 55
     Description: description of this project
@@ -473,7 +418,6 @@ MonoBehaviour:
   - Id: 56
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 56
     Description: description of this project
@@ -481,7 +425,6 @@ MonoBehaviour:
   - Id: 57
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000002000000
     Title: Project 57
     Description: description of this project
@@ -489,7 +432,6 @@ MonoBehaviour:
   - Id: 58
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 58
     Description: description of this project
@@ -497,7 +439,6 @@ MonoBehaviour:
   - Id: 59
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 59
     Description: description of this project
@@ -505,7 +446,6 @@ MonoBehaviour:
   - Id: 60
     Active: 1
     TileModel: 44
-    Model: P44
     Sequence: 01000000040000000400000004000000
     Title: Project 60
     Description: description of this project
@@ -513,7 +453,6 @@ MonoBehaviour:
   - Id: 61
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000001000000
     Title: Project 61
     Description: description of this project
@@ -521,7 +460,6 @@ MonoBehaviour:
   - Id: 62
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0200000002000000
     Title: Project 62
     Description: description of this project
@@ -529,7 +467,6 @@ MonoBehaviour:
   - Id: 63
     Active: 1
     TileModel: 45
-    Model: P45
     Sequence: 01000000040000000400000004000000
     Title: Project 63
     Description: description of this project
@@ -537,7 +474,6 @@ MonoBehaviour:
   - Id: 64
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0300000004000000
     Title: Project 64
     Description: description of this project
@@ -545,7 +481,6 @@ MonoBehaviour:
   - Id: 65
     Active: 1
     TileModel: 31
-    Model: P30
     Sequence: 020000000200000001000000
     Title: Project 65
     Description: description of this project
@@ -553,7 +488,6 @@ MonoBehaviour:
   - Id: 66
     Active: 1
     TileModel: 32
-    Model: P31
     Sequence: 030000000100000001000000
     Title: Project 66
     Description: description of this project
@@ -561,7 +495,6 @@ MonoBehaviour:
   - Id: 67
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000002000000
     Title: Project 67
     Description: description of this project
@@ -569,7 +502,6 @@ MonoBehaviour:
   - Id: 68
     Active: 1
     TileModel: 21
-    Model: P20
     Sequence: 0100000003000000
     Title: Project 68
     Description: description of this project
@@ -577,7 +509,6 @@ MonoBehaviour:
   - Id: 69
     Active: 1
     TileModel: 33
-    Model: P32
     Sequence: 030000000100000001000000
     Title: Project 69
     Description: description of this project
