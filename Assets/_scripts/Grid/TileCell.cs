@@ -17,7 +17,12 @@ namespace vgwb.lanoria
         public void Init()
         {
             BaseSetup();
-            Label.text = "";
+            SetLabel("");
+        }
+
+        public void SetLabel(string label)
+        {
+            Label.text = label;
         }
 
         public void SetupLayerForUICamera()

@@ -180,12 +180,12 @@ namespace vgwb.lanoria
             for (int i = 0; i < childs; i++) {
                 var child = CellsContainer.transform.GetChild(i).gameObject;
                 string childName = child.name.ToLower();
-                var tile = child.GetComponent<TileCell>();
-                if (tile == null) {
-                    tile = child.AddComponent<TileCell>();
+                var tileCell = child.GetComponent<TileCell>();
+                if (tileCell == null) {
+                    tileCell = child.AddComponent<TileCell>();
                 }
-                tile.Init();
-                Cells.Add(tile);
+                tileCell.Init();
+                Cells.Add(tileCell);
             }
         }
 
@@ -216,6 +216,7 @@ namespace vgwb.lanoria
                 if (Cells[i] != null) {
                     Cells[i].SetupCategory(projectData.Sequence[i]);
                     Cells[i].ApplyColor();
+                    Cells[i].SetLabel("");
                 }
             }
         }
