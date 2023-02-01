@@ -15,6 +15,7 @@ namespace vgwb.lanoria
 
         [Header("Debug")]
         public bool DebugDirectPlay;
+        public bool DebugHome;
 
         public IEnumerator Start()
         {
@@ -32,6 +33,8 @@ namespace vgwb.lanoria
 
         public void OnHome()
         {
+            if (DebugHome)
+                return;
             //            Debug.Log("HOME!");
             UI_manager.I.Show(UI_manager.States.Home);
         }

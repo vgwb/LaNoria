@@ -126,7 +126,7 @@ namespace vgwb.lanoria
 
         public override string ToString()
         {
-            return "(q:" + q + " r:" + r + ")";
+            return q + "," + r;
         }
 
     }

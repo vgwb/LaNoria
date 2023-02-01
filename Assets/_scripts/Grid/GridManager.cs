@@ -8,20 +8,14 @@ namespace vgwb.lanoria
 {
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {
-        public enum SubregionDebugType
-        {
-            None,
-            Color,
-            Name,
-            ColorAndName
-        }
+
         [HideInInspector]
         public List<GridCell> Cells;
-        [HideInInspector]
-        public Hex[,] HexCells;
 
         [Header("Subregion Debug")]
         public SubregionDebugType ShowSubregionDebug = SubregionDebugType.None;
+
+        Hex currentHex = new Hex(0, 0);
 
         protected override void Awake()
         {
@@ -35,6 +29,37 @@ namespace vgwb.lanoria
         private void Start()
         {
             InitCells();
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.E)) {
+                selectCell(5);
+            }
+            if (Input.GetKeyDown(KeyCode.W)) {
+                selectCell(0);
+            }
+            if (Input.GetKeyDown(KeyCode.A)) {
+                selectCell(1);
+            }
+            if (Input.GetKeyDown(KeyCode.Z)) {
+                selectCell(2);
+            }
+            if (Input.GetKeyDown(KeyCode.X)) {
+                selectCell(3);
+            }
+            if (Input.GetKeyDown(KeyCode.D)) {
+                selectCell(4);
+            }
+        }
+
+        private void selectCell(int direction)
+        {
+            if (GetCellByCoords(currentHex.GetNeighbour(direction)) is not null) {
+                GetCellByCoords(currentHex).Highlight(false);
+                currentHex = currentHex.GetNeighbour(direction);
+                GetCellByCoords(currentHex).Highlight(true);
+            }
         }
 
         private void OnDrawGizmos()
@@ -80,10 +105,10 @@ namespace vgwb.lanoria
             }
         }
 
-        // public GridCell GetCellByCoords(int q, int r)
-        // {
-        //     return Cells.Find(x => x.q == q);
-        // }
+        public GridCell GetCellByCoords(Hex hex)
+        {
+            return Cells.Find(x => (x.hex.q == hex.q) && (x.hex.r == hex.r));
+        }
 
         public GridCell GetCellByPosition(Vector3 pos)
         {

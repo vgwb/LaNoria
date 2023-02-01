@@ -5,6 +5,14 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
+    public enum SubregionDebugType
+    {
+        None,
+        Color,
+        Name,
+        ColorAndName
+    }
+
     [CreateAssetMenu(fileName = "AppSettings", menuName = "VGWB/App Config", order = 1)]
     public class AppConfig : SingletonScriptableObject<AppConfig>
     {
