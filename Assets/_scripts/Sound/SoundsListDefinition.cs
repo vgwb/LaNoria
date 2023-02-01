@@ -17,6 +17,7 @@ namespace vgwb.lanoria
         score = 7,
         shuffle = 8,
         card = 9,
+        tile_confirmed = 10,
 
         music_1 = 20
     }

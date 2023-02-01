@@ -102,13 +102,14 @@ namespace vgwb.lanoria
 
         public void ConfirmProject()
         {
+            SoundManager.I.PlaySfx(AudioEnum.tile_confirmed);
             currentTile.OnProjectConfirmed();
             currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
-            scorer.UpdateScore(currentTile);
             ResetProjectPanel();
             ResetValues();
             CleanPreview();
 
+            scorer.UpdateScore(currentTile);
             SetState(GameplayState.Score);
         }
 
@@ -179,7 +180,7 @@ namespace vgwb.lanoria
                     preview.PreviewScore(currentTile);
                 } else {
                     preview.CleanPreview();
-                }                
+                }
             }
         }
 
@@ -286,7 +287,7 @@ namespace vgwb.lanoria
                     break;
                 }
             }
-            Debug.Log("Cards available: "+cardAvailable);
+            Debug.Log("Cards available: " + cardAvailable);
             if (!cardAvailable) {
                 SetState(GameplayState.End);
             } else {
