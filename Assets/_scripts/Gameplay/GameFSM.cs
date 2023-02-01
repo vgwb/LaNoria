@@ -330,6 +330,12 @@ namespace vgwb.lanoria
             });
         }
 
+        private void EndSetup()
+        {
+            SetState(GameplayState.Drawing);
+            CameraManager.I.EnableRotationWithFingers(true);
+        }
+
         private void ReadState()
         {
             switch (state) {
@@ -346,7 +352,7 @@ namespace vgwb.lanoria
                     UIGame.ScoreUI.Init(0);
                     ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;
-                    UIGame.FadeCanvas(1.0f, duration, () => SetState(GameplayState.Drawing));
+                    UIGame.FadeCanvas(1.0f, duration, () => EndSetup());
                     break;
                 case GameplayState.Drawing:
                     DrawNewHand();
