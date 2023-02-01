@@ -16,7 +16,8 @@ MonoBehaviour:
   OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
   PlaceableOutlineMode: 1
   OutlineWidth: 8
-  DragYOffset: 0.37
+  DragYOffset: 0.4
+  OnConfirmYOffset: 0.25
   BlankColor: {r: 1, g: 1, b: 1, a: 1}
   CardsInHand: 4
   LabelDebugOffset: {x: 0, y: 0, z: 0}
