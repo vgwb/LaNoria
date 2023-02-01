@@ -14,6 +14,7 @@ namespace vgwb.lanoria
         public Outline.Mode PlaceableOutlineMode = Outline.Mode.OutlineVisible;
         public float OutlineWidth = 7.0f;
         public float DragYOffset = 0.2f;
+        public float OnConfirmYOffset = 0.1f;
 
         [Header("Projects")]
         public Color BlankColor = Color.white;

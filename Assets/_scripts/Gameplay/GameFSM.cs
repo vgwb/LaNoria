@@ -161,6 +161,7 @@ namespace vgwb.lanoria
         {
             currentTile = clone.GetComponent<Tile>();
             currentTile.SetupCellsColor(currentProjectData);
+            currentTile.SetupForDrag();
             UIGame.EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
         }
@@ -174,7 +175,11 @@ namespace vgwb.lanoria
         private void OnHexPosChange()
         {
             if (currentTile != null) {
-                preview.PreviewScore(currentTile);
+                if (currentTile.IsValidPosition) {
+                    preview.PreviewScore(currentTile);
+                } else {
+                    preview.CleanPreview();
+                }                
             }
         }
 
@@ -354,6 +359,7 @@ namespace vgwb.lanoria
                     SetState(GameplayState.Drawing);// handle score efx
                     break;
                 case GameplayState.End:
+                    Debug.Log("End Game!");
                     break;
                 case GameplayState.Pause:
                     break;

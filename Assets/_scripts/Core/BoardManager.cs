@@ -35,5 +35,15 @@ namespace vgwb.lanoria
             }
         }
 
+        public float ProjectsHeight()
+        {
+            float height = 0.0f;
+            if (ProjectsContainer != null) {
+                height = ProjectsContainer.transform.position.y;
+            }
+
+            return height;
+        }
+
     }
 }

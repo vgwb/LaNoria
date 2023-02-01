@@ -25,6 +25,7 @@ namespace vgwb.lanoria
         public LeanSelectableByFinger LeanSelectableComp;
         public LeanFingerTap LeanFingerTapComp;
 
+        private bool isUsed;
         private bool isValidPosition;
         private Vector3 prevPos;
 
@@ -59,6 +60,10 @@ namespace vgwb.lanoria
 
         private void Update()
         {
+            if (isUsed) {
+                SetY(); // need to force the Y because of conflict with CW
+            }
+
             CheckValidPosition();
             CheckHexPosChange();
         }
@@ -89,8 +94,9 @@ namespace vgwb.lanoria
             }
 
             transform.position = newPos;
+            SetY();
 
-            LowerDownTilesHeight();
+            LowerDownTilesHeight(false);
             CameraManager.I.EnableRotationWithFingers(true);
         }
 
@@ -126,6 +132,7 @@ namespace vgwb.lanoria
             OccupyGrid();
             DisableOutline();
             StopUsingMe();
+            LowerDownTilesHeight(true);
         }
 
         public void EnablePivot(bool enable)
@@ -186,15 +193,15 @@ namespace vgwb.lanoria
         {
             if (CellsContainer != null) {
                 Vector3 delta = Vector3.up * GameplayConfig.I.DragYOffset;
-                CellsContainer.transform.position += delta;
+                CellsContainer.transform.localPosition = delta;
             }
         }
 
-        public void LowerDownTilesHeight()
+        public void LowerDownTilesHeight(bool toZero)
         {
             if (CellsContainer != null) {
-                Vector3 delta = Vector3.up * GameplayConfig.I.DragYOffset;
-                CellsContainer.transform.position -= delta;
+                Vector3 delta = toZero ? Vector3.zero : Vector3.up * GameplayConfig.I.OnConfirmYOffset;
+                CellsContainer.transform.localPosition = delta;
             }
         }
 
@@ -228,7 +235,21 @@ namespace vgwb.lanoria
             EnableLeanComponents(false);
             DisableOutline();
             SetupCellsForUICamera(false);
+            enabled = false;
+        }
 
+        public void SetupForDrag()
+        {
+            isUsed = true;
+            var container = BoardManager.I.ProjectsContainer;
+            transform.parent = container.transform;
+        }
+
+        private void SetY()
+        {
+            var pos = transform.position;
+            pos.y = BoardManager.I.ProjectsHeight();
+            transform.position = pos;
         }
 
         private void SetupCellsForUICamera(bool enable)
@@ -321,6 +342,8 @@ namespace vgwb.lanoria
 
         private void StopUsingMe()
         {
+            isUsed = false;
+
             if (OnStopUsingMe != null) {
                 OnStopUsingMe();
             }
