@@ -9,7 +9,7 @@ namespace vgwb.lanoria
 {
     public enum TileModel
     {
-        Undefined = 0,
+        Random = 0,
         P2A = 21,
         P3A = 31,
         P3B = 32,
