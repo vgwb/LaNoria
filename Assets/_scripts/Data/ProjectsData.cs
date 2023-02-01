@@ -36,7 +36,7 @@ namespace vgwb.lanoria
             }
 
             GameObject tileModel = null;
-            if (projectData.TileModel != TileModel.Undefined) {
+            if (projectData.TileModel != TileModel.Random) {
                 tileModel = GameData.I.Tiles.GetProjectModelByKey(projectData.TileModel);
             } else {
                 tileModel = GameData.I.Tiles.GetProjectModelByCellNum(projectData.Sequence.Length);
