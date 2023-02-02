@@ -22,14 +22,22 @@ namespace vgwb.lanoria
                     deck.Add(project);
                 }
             }
-            Debug.Log("New Deck: " + DeckSize + " cards");
+            Debug.Log("New Deck size: " + DeckSize);
         }
 
-        public IEnumerable<ProjectData> GetNewHand()
+        public List<ProjectData> GetNewHand()
         {
             int handSize = GameplayConfig.I.HandSize;
-
-            return GameData.I.Projects.PickRandomProjects(handSize);
+            var hand = new List<ProjectData>();
+            for (int i = 0; i < handSize; i++) {
+                if (DeckSize > 0) {
+                    int randomIndex = Random.Range(0, handSize);
+                    hand.Add(deck[randomIndex]);
+                    deck.Remove(deck[randomIndex]);
+                }
+            }
+            Debug.Log("GetNewHand Deck size: " + DeckSize);
+            return hand;
         }
     }
 }
