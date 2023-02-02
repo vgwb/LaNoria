@@ -42,6 +42,7 @@ namespace vgwb.lanoria
                 case States.Play:
                     PanelGameplay.OpenPanel();
                     break;
+
             }
             currentUIState = newState;
         }
@@ -75,6 +76,15 @@ namespace vgwb.lanoria
                 PanelGamePause.OpenPanel();
             } else {
                 PanelGamePause.ClosePanel();
+            }
+        }
+
+        public void ShowGameResult(bool status)
+        {
+            if (status) {
+                PanelGameResults.OpenPanel();
+            } else {
+                PanelGameResults.ClosePanel();
             }
         }
 

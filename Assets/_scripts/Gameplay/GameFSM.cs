@@ -231,29 +231,35 @@ namespace vgwb.lanoria
             EmptyHand();
 
             var projectsData = DeckManager.I.GetNewHand();
-            int cardIndex = 0;
-            foreach (var projectData in projectsData) {
-                // spawn the card inside the container
-                var cardInstance = Instantiate(CardPrefab, UIGame.GetHook(cardIndex).transform);
-                var card = cardInstance.GetComponent<Card>();
-                if (card != null) {
-                    cardsInHand.Add(card);
-                    card.HideInBottomScreen();
-                    var cardTexture = UICameraManager.I.GetUICameraTexture(cardIndex);
-                    card.Init(projectData, cardTexture); // initialize the card component
-                    // get the associated model and bind it to the card clickable area
-                    var tilePrefab = GameData.I.Projects.GetTile(projectData);
-                    int indexToPass = cardIndex;
-                    card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
-                    // spawn the object in camera UI
-                    var UIPrefab = UICameraManager.I.SpawnPrefabInCamera(cardIndex, tilePrefab, projectData);
-                    bool placeable = IsProjectPlaceable(UIPrefab);
-                    card.SetPlayable(placeable);
-                }
-                cardIndex++;
-            }
+            if (projectsData.Count > 0) {
 
-            SoundManager.I.PlaySfx(AudioEnum.shuffle);
+                int cardIndex = 0;
+                foreach (var projectData in projectsData) {
+                    // spawn the card inside the container
+                    var cardInstance = Instantiate(CardPrefab, UIGame.GetHook(cardIndex).transform);
+                    var card = cardInstance.GetComponent<Card>();
+                    if (card != null) {
+                        cardsInHand.Add(card);
+                        card.HideInBottomScreen();
+                        var cardTexture = UICameraManager.I.GetUICameraTexture(cardIndex);
+                        card.Init(projectData, cardTexture); // initialize the card component
+                                                             // get the associated model and bind it to the card clickable area
+                        var tilePrefab = GameData.I.Projects.GetTile(projectData);
+                        int indexToPass = cardIndex;
+                        card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
+                        // spawn the object in camera UI
+                        var UIPrefab = UICameraManager.I.SpawnPrefabInCamera(cardIndex, tilePrefab, projectData);
+                        bool placeable = IsProjectPlaceable(UIPrefab);
+                        card.SetPlayable(placeable);
+                    }
+                    cardIndex++;
+                }
+
+                SoundManager.I.PlaySfx(AudioEnum.shuffle);
+            } else {
+                // NO MORE CARDS - GAME ENDS
+                SetState(GameplayState.End);
+            }
         }
 
         private bool IsProjectPlaceable(GameObject prefabInstance)
@@ -356,6 +362,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.End:
                     Debug.Log("End Game!");
+                    UI_manager.I.ShowGameResult(true);
                     break;
                 case GameplayState.Pause:
                     break;
