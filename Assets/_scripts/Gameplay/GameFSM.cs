@@ -105,11 +105,11 @@ namespace vgwb.lanoria
             SoundManager.I.PlaySfx(AudioEnum.tile_confirmed);
             currentTile.OnProjectConfirmed();
             currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
+            scorer.UpdateScore(currentTile);
             ResetProjectPanel();
             ResetValues();
             CleanPreview();
 
-            scorer.UpdateScore(currentTile);
             SetState(GameplayState.Score);
         }
 
