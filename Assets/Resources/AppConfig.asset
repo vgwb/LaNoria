@@ -19,3 +19,4 @@ MonoBehaviour:
   AnalyticsDevEnv: 0
   DebugMode: 0
   ShowHexCoords: 1
+  ShowSubregionDebug: 0

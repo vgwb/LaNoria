@@ -2376,6 +2376,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 444260224015624550, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
+      propertyPath: ShowSubregionDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753285714682877558, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
       propertyPath: m_Name
       value: AppManager
@@ -2422,10 +2426,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7753285714682877559, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7753285714682877560, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
-      propertyPath: DebugHome
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

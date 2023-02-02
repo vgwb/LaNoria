@@ -23,7 +23,7 @@ namespace vgwb.lanoria
         public delegate void GameplayStateEvent(GameplayState state);
         public GameplayStateEvent OnStateUpdate;
 
-        [SerializeField] private GameplayState state;
+        public GameplayState state { get; private set; }
         private int currentCardIndex;
         private Tile currentTile;
 

@@ -8,65 +8,19 @@ namespace vgwb.lanoria
 {
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {
-
         [HideInInspector]
         public List<GridCell> Cells;
-
-        [Header("Subregion Debug")]
-        public SubregionDebugType ShowSubregionDebug = SubregionDebugType.None;
 
         Hex currentHex = new Hex(0, 0);
 
         protected override void Awake()
         {
             base.Awake();
-
-            if (!Application.isEditor) {
-                ShowSubregionDebug = SubregionDebugType.None;
-            }
         }
 
         private void Start()
         {
             InitCells();
-        }
-
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.E)) {
-                selectCell(5);
-            }
-            if (Input.GetKeyDown(KeyCode.W)) {
-                selectCell(0);
-            }
-            if (Input.GetKeyDown(KeyCode.A)) {
-                selectCell(1);
-            }
-            if (Input.GetKeyDown(KeyCode.Z)) {
-                selectCell(2);
-            }
-            if (Input.GetKeyDown(KeyCode.X)) {
-                selectCell(3);
-            }
-            if (Input.GetKeyDown(KeyCode.D)) {
-                selectCell(4);
-            }
-        }
-
-        private void selectCell(int direction)
-        {
-            if (GetCellByCoords(currentHex.GetNeighbour(direction)) is not null) {
-                GetCellByCoords(currentHex).Highlight(false);
-                currentHex = currentHex.GetNeighbour(direction);
-                GetCellByCoords(currentHex).Highlight(true);
-            }
-        }
-
-        private void OnDrawGizmos()
-        {
-            if (ShowSubregionDebug != SubregionDebugType.None) {
-                DrawSubregionInfo();
-            }
         }
 
         public void InitCells()
@@ -127,7 +81,6 @@ namespace vgwb.lanoria
                     result = cell.HexPosition;
                 }
             }
-
             return result;
         }
 
@@ -138,7 +91,6 @@ namespace vgwb.lanoria
             if (originCell != null) {
                 cells = Cells.FindAll(x => x.Area == originCell.Area);
             }
-
             return cells;
         }
 
@@ -163,17 +115,30 @@ namespace vgwb.lanoria
                 cellsToExclude.Add(GetCellByPosition(cell.HexPosition));
                 neighboursSet.UnionWith(GetNeighboursByPos(cell.HexPosition));
             }
-
             neighboursSet.ExceptWith(cellsToExclude);
-
             return neighboursSet;
         }
 
         private Vector3 RetrieveHexPos(Vector3 pos)
         {
-            var hex = Hex.FromWorld(pos);
+            return Hex.FromWorld(pos).ToWorld(0f);
+        }
 
-            return hex.ToWorld(0f);
+        #region Debug and Editor Methods
+        public void DebugSelectCell(int direction)
+        {
+            if (GetCellByCoords(currentHex.GetNeighbour(direction)) is not null) {
+                GetCellByCoords(currentHex).Highlight(false);
+                currentHex = currentHex.GetNeighbour(direction);
+                GetCellByCoords(currentHex).Highlight(true);
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (AppConfig.I.ShowSubregionDebug != SubregionDebugType.None) {
+                DrawSubregionInfo();
+            }
         }
 
         private void DrawSubregionInfo()
@@ -182,7 +147,7 @@ namespace vgwb.lanoria
             foreach (var cell in Cells) {
                 bool drawText = false;
                 bool drawColor = false;
-                switch (ShowSubregionDebug) {
+                switch (AppConfig.I.ShowSubregionDebug) {
                     case SubregionDebugType.Color:
                         drawColor = true;
                         break;
@@ -218,5 +183,6 @@ namespace vgwb.lanoria
                 }
             }
         }
+        #endregion
     }
 }

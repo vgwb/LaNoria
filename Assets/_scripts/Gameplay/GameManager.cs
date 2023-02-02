@@ -77,5 +77,16 @@ namespace vgwb.lanoria
         {
             Scorer.OnScoreUpdate -= OnScoreUpdate;
         }
+
+        #region Debug and Editor Methods
+
+        public void DebugPlayCard(int whichCard)
+        {
+            if (GameFSM.state == GameplayState.Play) {
+                Debug.Log("Simulate Playing Card " + whichCard);
+            }
+        }
+
+        #endregion
     }
 }
