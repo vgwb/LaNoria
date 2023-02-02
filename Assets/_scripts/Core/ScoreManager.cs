@@ -4,19 +4,18 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class ScoreManager : GameplayComponent
+    public class ScoreManager : MonoBehaviour
     {
         public int CurrentScore { get; private set; }
         public delegate void ScoreEvent(int score, int points);
         public ScoreEvent OnScoreUpdate;
 
         [SerializeField] private int synergyScore;
-        private List<AreaId> completedSubregion;
+        private List<AreaId> completedAreas;
 
-        protected override void Awake()
+        void Awake()
         {
-            base.Awake();
-            completedSubregion = new List<AreaId>();
+            completedAreas = new List<AreaId>();
             CurrentScore = 0;
         }
 
@@ -62,49 +61,47 @@ namespace vgwb.lanoria
             }
 
             synergyScore = resultingScore;
-
             return synergyPoints;
         }
 
-        private int CalculateTransversality(Tile placeable)
+        private int CalculateTransversality(Tile tile)
         {
             int resultingScore = 0;
             var containedCategories = new List<ProjectCategories>();
-            var visitedSubregion = new List<AreaId>();
-            foreach (var placCell in placeable.Cells) {
-                Vector3 cellPos = placCell.HexPosition;
-                var subregionCells = GridManager.I.GetAllSubregionCellsByPos(cellPos);
-                if (subregionCells.Count == 0) {
+            var visitedArea = new List<AreaId>();
+            foreach (var cell in tile.Cells) {
+                var areaCells = GridManager.I.GetAreaCellsByPos(cell.HexPosition);
+                if (areaCells.Count == 0) {
                     continue;
                 }
 
-                var subregion = subregionCells[0].Area;
-                if (visitedSubregion.Contains(subregion) || IsSubregionComplete(subregion)) {
+                var area = areaCells[0].Area;
+                if (visitedArea.Contains(area) || IsAreaComplete(area)) {
                     continue; // already visited!
                 }
 
-                visitedSubregion.Add(subregion);
+                visitedArea.Add(area);
                 containedCategories.Clear();
-                foreach (var subregionCell in subregionCells) {
-                    var subCellCategory = subregionCell.Category;
-                    if (subCellCategory > 0) {
-                        if (!containedCategories.Contains(subCellCategory)) {
-                            containedCategories.Add(subCellCategory);
+                foreach (var areaCell in areaCells) {
+                    var cellCategory = areaCell.Category;
+                    if (cellCategory > 0) {
+                        if (!containedCategories.Contains(cellCategory)) {
+                            containedCategories.Add(cellCategory);
                         }
                     }
                 }
                 var categoriesCount = System.Enum.GetNames(typeof(ProjectCategories)).Length;
                 if (containedCategories.Count == categoriesCount) {
                     resultingScore += GameplayConfig.I.TransversalityBonus;
-                    completedSubregion.Add(subregion);
+                    completedAreas.Add(area);
                 }
             }
             return resultingScore;
         }
 
-        private bool IsSubregionComplete(AreaId area)
+        private bool IsAreaComplete(AreaId area)
         {
-            return completedSubregion.Contains(area);
+            return completedAreas.Contains(area);
         }
     }
 }

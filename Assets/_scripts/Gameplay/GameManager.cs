@@ -9,7 +9,7 @@ namespace vgwb.lanoria
 {
     public class GameManager : SingletonMonoBehaviour<GameManager>
     {
-        public CardDealer Dealer;
+        public DeckManager Dealer;
         public ScoreManager Scorer;
         public GameFSM GameFSM;
         public PreviewManager Preview;

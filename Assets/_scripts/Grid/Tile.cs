@@ -97,9 +97,7 @@ namespace vgwb.lanoria
         {
             RestoreOutline();
             RiseUpTilesHeight();
-            if (OnSelectMe != null) {
-                OnSelectMe();
-            }
+            OnSelectMe?.Invoke();
         }
 
         /// <summary>
@@ -130,9 +128,7 @@ namespace vgwb.lanoria
 
         public void EnablePivot(bool enable)
         {
-            if (Pivot != null) {
-                Pivot.SetActive(enable);
-            }
+            Pivot?.SetActive(enable);
         }
 
         public void EnableLeanComponents(bool enable)
@@ -277,9 +273,7 @@ namespace vgwb.lanoria
             // raise the event, position validity has changed!
             if (validPosition != IsValidPosition) {
                 IsValidPosition = validPosition; // update the value
-                if (OnValidPositionChange != null) {
-                    OnValidPositionChange(); // notify the new validity
-                }
+                OnValidPositionChange?.Invoke(); // notify the new validity
             }
         }
 
@@ -291,9 +285,7 @@ namespace vgwb.lanoria
             var actualPos = HexPos;
             if (actualPos != prevPos) {
                 prevPos = actualPos;
-                if (OnHexPosChange != null) {
-                    OnHexPosChange();
-                }
+                OnHexPosChange?.Invoke();
             }
         }
 
@@ -308,7 +300,6 @@ namespace vgwb.lanoria
                     break;
                 }
             }
-
             return result;
         }
 
@@ -337,10 +328,7 @@ namespace vgwb.lanoria
         private void StopUsingMe()
         {
             isUsed = false;
-
-            if (OnStopUsingMe != null) {
-                OnStopUsingMe();
-            }
+            OnStopUsingMe?.Invoke();
         }
 
         private void SetupOutline()

@@ -14,41 +14,17 @@ namespace vgwb.lanoria
 
         public Vector3 HexPosition
         {
-            get {
-                return hex.ToWorld(0.0f);
-            }
+            get => hex.ToWorld(0.0f);
             set { }
         }
 
-        public ProjectCategories Category
-        {
-            get { return category; }
-        }
-
-        public Color AssociatedColor
-        {
-            get {
-                return GameData.I.Categories.GetColor(category);
-            }
-        }
-
-        public Material AssociatedMaterial
-        {
-            get {
-                return GameData.I.Categories.GetMaterial(category);
-            }
-        }
+        public ProjectCategories Category => category;
+        public Color AssociatedColor => GameData.I.Categories.GetColor(category);
+        public Material AssociatedMaterial => GameData.I.Categories.GetMaterial(category);
 
         protected virtual void Awake()
         {
             BaseSetup();
-        }
-
-        public void EnableHexComponent(bool enable)
-        {
-            // if (hexHandler != null) {
-            //     hexHandler.enabled = enable;
-            // }
         }
 
         public virtual void SetupCategory(ProjectCategories newCategory)

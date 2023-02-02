@@ -28,18 +28,18 @@ namespace vgwb.lanoria
                 var container = Cams[cameraIndex].SubjectPivot;
                 var instance = Instantiate(prefab);
                 instance.transform.localPosition = Vector3.zero;
-                var placeable = instance.GetComponent<Tile>();
-                if (placeable != null) {
-                    placeable.SetupForUI();
+                var tile = instance.GetComponent<Tile>();
+                if (tile != null) {
+                    tile.SetupForUI();
                     var ParentInPivot = new GameObject(); // create an empty object
-                    ParentInPivot.transform.position = placeable.Pivot.transform.position;
-                    placeable.transform.parent = ParentInPivot.transform;
+                    ParentInPivot.transform.position = tile.Pivot.transform.position;
+                    tile.transform.parent = ParentInPivot.transform;
                     ParentInPivot.transform.parent = container;
                     ParentInPivot.transform.localPosition = Vector3.zero;
                     ParentInPivot.transform.localRotation = Quaternion.Euler(GameplayConfig.I.UIProjectRotation);
 
                     if (projectData != null) {
-                        placeable.SetupCellsColor(projectData);
+                        tile.SetupCellsColor(projectData);
                     }
                 } else {
                     instance.transform.localPosition = Vector3.zero;

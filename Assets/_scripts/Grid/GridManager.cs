@@ -84,7 +84,7 @@ namespace vgwb.lanoria
             return result;
         }
 
-        public List<GridCell> GetAllSubregionCellsByPos(Vector3 pos)
+        public List<GridCell> GetAreaCellsByPos(Vector3 pos)
         {
             var cells = new List<GridCell>();
             var originCell = GetCellByPosition(pos);
@@ -107,7 +107,7 @@ namespace vgwb.lanoria
             return cells;
         }
 
-        public HashSet<GridCell> GetNeighboursOfPlaceable(List<TileCell> cells)
+        public HashSet<GridCell> GetNeighbours(List<TileCell> cells)
         {
             var neighboursSet = new HashSet<GridCell>();
             var cellsToExclude = new HashSet<GridCell>();

@@ -35,13 +35,11 @@ namespace vgwb.lanoria
         {
             if (DebugHome)
                 return;
-            //            Debug.Log("HOME!");
             UI_manager.I.Show(UI_manager.States.Home);
         }
 
         public void OnAbout()
         {
-            //Debug.Log("ABOUT!");
             UI_manager.I.Show(UI_manager.States.About);
         }
 
@@ -50,12 +48,10 @@ namespace vgwb.lanoria
             BoardManager.I.ShowMap(false);
             UI_manager.I.Show(UI_manager.States.Play);
             GameManager.I.StartGame();
-            //            Debug.Log("PLAY NEW GAME!");
         }
 
         public void OnOptions()
         {
-            //            Debug.Log("OPTIONS!");
             UI_manager.I.Show(UI_manager.States.Options);
         }
 

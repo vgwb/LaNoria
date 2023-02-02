@@ -4,18 +4,13 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class PreviewManager : GameplayComponent
+    public class PreviewManager : MonoBehaviour
     {
         public GameObject PointPreviewPrefab;
         public bool UsePreview = true;
-        private ScoreManager scorer;
 
-        protected override void Awake()
+        void Awake()
         {
-            base.Awake();
-
-            scorer = manager.Scorer;
-
             if (PointPreviewPrefab == null) {
                 Debug.LogError("ScoreManager - Awake(): no point preview prefab defined!");
             }
@@ -28,7 +23,7 @@ namespace vgwb.lanoria
                 return;
             }
 
-            var points = scorer.CalculateSynergy(placeable);
+            var points = GameManager.I.Scorer.CalculateSynergy(placeable);
             foreach (var point in points) {
                 InstantiatePointPreview(point, 1);
             }

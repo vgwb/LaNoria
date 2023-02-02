@@ -17,7 +17,7 @@ namespace vgwb.lanoria
         Pause // game is in pause
     }
 
-    public class GameFSM : GameplayComponent
+    public class GameFSM : MonoBehaviour
     {
         public GameObject CardPrefab;
         public delegate void GameplayStateEvent(GameplayState state);
@@ -35,21 +35,19 @@ namespace vgwb.lanoria
         private List<Card> spawnedCards;
         private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
-        private CardDealer dealer;
+        private DeckManager dealer;
         private ScoreManager scorer;
         private PreviewManager preview;
 
-        protected override void Awake()
+        void Start()
         {
-            base.Awake();
-
             if (CardPrefab == null) {
                 Debug.LogError("GameFSM - Awake(): no card prefab defined!");
             }
 
-            dealer = manager.Dealer;
-            scorer = manager.Scorer;
-            preview = manager.Preview;
+            dealer = GameManager.I.Dealer;
+            scorer = GameManager.I.Scorer;
+            preview = GameManager.I.Preview;
 
             state = GameplayState.None;
             ResetValues();
@@ -144,9 +142,7 @@ namespace vgwb.lanoria
                 state = newState;
                 ReadState();
 
-                if (OnStateUpdate != null) {
-                    OnStateUpdate(state);
-                }
+                OnStateUpdate?.Invoke(state);
             }
         }
 
