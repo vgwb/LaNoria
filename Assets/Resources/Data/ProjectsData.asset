@@ -53,7 +53,7 @@ MonoBehaviour:
     Image: {fileID: 0}
   - Id: 4
     Active: 1
-    TileModel: 31
+    TileModel: 32
     Sequence: 010000000200000003000000
     Title: Project 4
     Description: description of this project
@@ -109,7 +109,7 @@ MonoBehaviour:
     Image: {fileID: 0}
   - Id: 12
     Active: 1
-    TileModel: 43
+    TileModel: 0
     Sequence: 01000000040000000400000004000000
     Title: Project 12
     Description: description of this project

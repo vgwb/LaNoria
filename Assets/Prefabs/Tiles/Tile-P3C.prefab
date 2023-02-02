@@ -103,17 +103,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Model: 33
-  ShowPivot: 1
-  Pivot: {fileID: 4315520079555166094}
-  CellsContainer: {fileID: 671529084400992214}
   Cells:
   - {fileID: 8857197881912150951}
   - {fileID: 5258832371497423319}
   - {fileID: 422785837113919036}
+  Shape: 0200000002000000
+  Pivot: {fileID: 4315520079555166094}
+  CellsContainer: {fileID: 671529084400992214}
   OutlineHandler: {fileID: 9203393334754790067}
   LeanCameraComp: {fileID: 1645981664670586006}
   LeanSelectableComp: {fileID: 1645981664670586007}
   LeanFingerTapComp: {fileID: 1645981664670586004}
+  ShowPivot: 1
 --- !u!114 &1645981664670586006
 MonoBehaviour:
   m_ObjectHideFlags: 0

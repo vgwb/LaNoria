@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e92676af396d3d45b47bb298f38560a, type: 3}
   m_Name: GameplayConfig
   m_EditorClassIdentifier: 
-  MovingColor: {r: 0.4745098, g: 0.8392157, b: 1, a: 1}
+  MovingColor: {r: 0.5494121, g: 1, b: 0.47450984, a: 1}
   OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
   PlaceableOutlineMode: 1
-  OutlineWidth: 8
-  DragYOffset: 0.4
+  OutlineWidth: 3.01
+  DragYOffset: 0.1
   OnConfirmYOffset: 0.25
   BlankColor: {r: 1, g: 1, b: 1, a: 1}
   CardsInHand: 4

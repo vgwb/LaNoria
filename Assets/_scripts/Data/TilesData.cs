@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Serialization;
+using NaughtyAttributes;
 
 namespace vgwb.lanoria
 {
@@ -22,29 +23,21 @@ namespace vgwb.lanoria
         P4F = 46
     }
 
-    [Serializable]
-    public class TileInfo
-    {
-        public TileModel Model;
-        public int Length;
-        public GameObject Prefab;
-    }
-
     [CreateAssetMenu(menuName = "VGWB/Tiles Data")]
     public class TilesData : ScriptableObject
     {
-        public List<TileInfo> Tiles;
+        public List<Tile> TilesPrefabs;
 
         public GameObject GetTileByModel(TileModel model)
         {
-            return Tiles.Find(x => x.Model == model).Prefab;
+            return TilesPrefabs.Find(x => x.Model == model).gameObject;
         }
 
-        public GameObject GetTileByLength(int cellNum)
+        public GameObject GetTileBySize(int size)
         {
-            var tuples = Tiles.FindAll(x => x.Length == cellNum);
+            var tuples = TilesPrefabs.FindAll(x => x.Size == size);
             int randomIndex = UnityEngine.Random.Range(0, tuples.Count);
-            return tuples[randomIndex].Prefab;
+            return tuples[randomIndex].gameObject;
         }
     }
 }

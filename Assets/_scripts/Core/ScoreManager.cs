@@ -6,29 +6,20 @@ namespace vgwb.lanoria
 {
     public class ScoreManager : GameplayComponent
     {
-        #region Var
-        public int CurrentScore;
+        public int CurrentScore { get; private set; }
         public delegate void ScoreEvent(int score, int points);
         public ScoreEvent OnScoreUpdate;
 
         [SerializeField] private int synergyScore;
-        /// <summary>
-        /// Subregions with all the colors.
-        /// </summary>
         private List<AreaId> completedSubregion;
-        #endregion
 
-        #region MonoB
         protected override void Awake()
         {
             base.Awake();
-
             completedSubregion = new List<AreaId>();
             CurrentScore = 0;
         }
-        #endregion
 
-        #region Functions
         public void UpdateScore(Tile placeable)
         {
             int placementPoints = CalculateBasicPoints(placeable);
@@ -37,9 +28,7 @@ namespace vgwb.lanoria
             CurrentScore += totalPoints;
             Debug.Log("basic: " + placementPoints + " sinergy: " + synergyScore + " transversality: " + transversalityPoints);
 
-            if (OnScoreUpdate != null) {
-                OnScoreUpdate(CurrentScore, totalPoints);
-            }
+            OnScoreUpdate?.Invoke(CurrentScore, totalPoints);
         }
 
         public void PreviewSynergy()
@@ -49,18 +38,17 @@ namespace vgwb.lanoria
 
         private int CalculateBasicPoints(Tile placeable)
         {
-            return placeable.CellsNum;
+            return placeable.Size;
         }
 
         public List<Vector3> CalculateSynergy(Tile placeable)
         {
             int resultingScore = 0;
-            var grid = GridManager.I;
             var positionsToExclude = placeable.GetCellsHexPositions();
             var synergyPoints = new List<Vector3>();
 
             foreach (var cell in placeable.Cells) {
-                var neighbours = grid.GetNeighboursByPos(cell.HexPosition);
+                var neighbours = GridManager.I.GetNeighboursByPos(cell.HexPosition);
                 foreach (var neighbour in neighbours) {
                     if (positionsToExclude.Contains(neighbour.HexPosition)) {
                         continue;
@@ -81,12 +69,11 @@ namespace vgwb.lanoria
         private int CalculateTransversality(Tile placeable)
         {
             int resultingScore = 0;
-            var grid = GridManager.I;
             var containedCategories = new List<ProjectCategories>();
             var visitedSubregion = new List<AreaId>();
             foreach (var placCell in placeable.Cells) {
                 Vector3 cellPos = placCell.HexPosition;
-                var subregionCells = grid.GetAllSubregionCellsByPos(cellPos);
+                var subregionCells = GridManager.I.GetAllSubregionCellsByPos(cellPos);
                 if (subregionCells.Count == 0) {
                     continue;
                 }
@@ -112,7 +99,6 @@ namespace vgwb.lanoria
                     completedSubregion.Add(subregion);
                 }
             }
-
             return resultingScore;
         }
 
@@ -120,6 +106,5 @@ namespace vgwb.lanoria
         {
             return completedSubregion.Contains(area);
         }
-        #endregion
     }
 }

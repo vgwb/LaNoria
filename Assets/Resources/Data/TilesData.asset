@@ -12,34 +12,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014b3a37d94184946b3f86b26d847071, type: 3}
   m_Name: TilesData
   m_EditorClassIdentifier: 
+  TilesPrefabs:
+  - {fileID: 5976312339843145857, guid: 2934fa9d86f0c7044a712e7f45fb51c1, type: 3}
+  - {fileID: 7574194601451014641, guid: fa393b9dbf06ce84ba1981ac8f537607, type: 3}
+  - {fileID: 1398222022785771040, guid: 0404aabfd67072242810eb61e8834eee, type: 3}
+  - {fileID: 1645981664670585993, guid: 0f06930bc65c8fe4da12d61570d47077, type: 3}
+  - {fileID: 5093536028753083325, guid: 5e37be18d63fc6a469ae1ce02ceda20f, type: 3}
+  - {fileID: 5797613279180542722, guid: 03518386bd44e94439345dfebf89bbc1, type: 3}
+  - {fileID: 4546588131082605374, guid: 53433a3af56104f4f8d156d8020ff4c2, type: 3}
+  - {fileID: 4040447778704762476, guid: 8775b63f5457a4a4cbe7f59b64aa8dbf, type: 3}
+  - {fileID: 8022967054676008999, guid: aac1eb89b013c58498e79c2445d6a47a, type: 3}
+  - {fileID: 7872463044641677073, guid: fdc7f298cf37ab446ba3323520aa4531, type: 3}
   Tiles:
   - Model: 21
     Length: 2
+    Combo: 02000000
     Prefab: {fileID: 5976312339843145882, guid: 2934fa9d86f0c7044a712e7f45fb51c1, type: 3}
   - Model: 31
     Length: 3
+    Combo: 0200000004000000
     Prefab: {fileID: 8360217987605548242, guid: fa393b9dbf06ce84ba1981ac8f537607, type: 3}
   - Model: 32
     Length: 3
+    Combo: 0200000001000000
     Prefab: {fileID: 4956329170521988285, guid: 0404aabfd67072242810eb61e8834eee, type: 3}
   - Model: 33
     Length: 3
+    Combo: 0200000002000000
     Prefab: {fileID: 1645981664670586002, guid: 0f06930bc65c8fe4da12d61570d47077, type: 3}
   - Model: 41
     Length: 4
+    Combo: 020000000400000002000000
     Prefab: {fileID: 5093536028753083321, guid: 5e37be18d63fc6a469ae1ce02ceda20f, type: 3}
   - Model: 42
     Length: 4
+    Combo: 020000000300000002000000
     Prefab: {fileID: 5797613279180542745, guid: 03518386bd44e94439345dfebf89bbc1, type: 3}
   - Model: 43
     Length: 4
+    Combo: 020000000000000000000000
     Prefab: {fileID: 4546588131082605349, guid: 53433a3af56104f4f8d156d8020ff4c2, type: 3}
   - Model: 44
     Length: 4
+    Combo: 
     Prefab: {fileID: 4040447778704762487, guid: 8775b63f5457a4a4cbe7f59b64aa8dbf, type: 3}
   - Model: 45
     Length: 4
+    Combo: 
     Prefab: {fileID: 8022967054676009020, guid: aac1eb89b013c58498e79c2445d6a47a, type: 3}
   - Model: 46
     Length: 4
+    Combo: 
     Prefab: {fileID: 7872463044641677066, guid: fdc7f298cf37ab446ba3323520aa4531, type: 3}

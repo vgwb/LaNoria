@@ -259,7 +259,7 @@ namespace vgwb.lanoria
                     card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
                     // spawn the object in camera UI
                     var UIPrefab = UICameraManager.I.SpawnPrefabInCamera(cardIndex, tilePrefab, projectData);
-                    bool placeable = ProjectIsPlaceable(UIPrefab);
+                    bool placeable = IsProjectPlaceable(UIPrefab);
                     card.SetPlayable(placeable);
                 }
                 cardIndex++;
@@ -268,7 +268,7 @@ namespace vgwb.lanoria
             SoundManager.I.PlaySfx(AudioEnum.shuffle);
         }
 
-        private bool ProjectIsPlaceable(GameObject prefabInstance)
+        private bool IsProjectPlaceable(GameObject prefabInstance)
         {
             var tile = prefabInstance.GetComponent<Tile>();
             if (tile != null) {

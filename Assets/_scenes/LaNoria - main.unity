@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0.117536455, b: 0.12833798, a: 1}
+  m_IndirectSpecularColor: {r: NaN, g: NaN, b: NaN, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -947,6 +947,14 @@ PrefabInstance:
     - target: {fileID: 1347230791135226155, guid: 16334d044958a4ec5ac359351e649d53, type: 3}
       propertyPath: m_Name
       value: walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501805256264180617, guid: 16334d044958a4ec5ac359351e649d53, type: 3}
+      propertyPath: ShowRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501805256264180617, guid: 16334d044958a4ec5ac359351e649d53, type: 3}
+      propertyPath: ShowNeighbours
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16334d044958a4ec5ac359351e649d53, type: 3}

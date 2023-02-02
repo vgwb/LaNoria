@@ -6,13 +6,9 @@ namespace vgwb.lanoria
 {
     public class UICamera : MonoBehaviour
     {
-
-        #region Var
         public Camera MyCam;
         [SerializeField] private Transform subjectPivot;
-        #endregion
 
-        #region Attributes
         public Transform SubjectPivot
         {
             get { return subjectPivot; }
@@ -22,18 +18,13 @@ namespace vgwb.lanoria
         {
             get { return MyCam.targetTexture; }
         }
-        #endregion
 
-        #region MonoB
         private void Awake()
         {
             if (MyCam == null) {
                 MyCam = GetComponent<Camera>();
             }
         }
-        #endregion
-
-        #region Functions
         public void CleanSubject()
         {
             int childsNum = subjectPivot.childCount;
@@ -47,13 +38,11 @@ namespace vgwb.lanoria
         public Vector3 GetSubjectRotation()
         {
             Vector3 rot = Vector3.zero;
-            int childsNum = subjectPivot.childCount;
             if (subjectPivot.childCount > 0) {
                 rot = subjectPivot.GetChild(0).transform.eulerAngles;
             }
 
             return rot;
         }
-        #endregion
     }
 }

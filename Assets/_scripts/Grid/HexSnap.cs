@@ -44,9 +44,9 @@ namespace vgwb.lanoria
 
         void OnDrawGizmosSelected()
         {
-            var style = new GUIStyle();
-            style.normal.textColor = Color.black;
-            if (AppConfig.I.ShowHexCoords) {
+            if (AppConfig.I.ShowHexCoords && GetComponent<GridCell>()) {
+                var style = new GUIStyle();
+                style.normal.textColor = Color.black;
                 UnityEditor.Handles.Label(transform.position, hex.ToString(), style);
             }
 

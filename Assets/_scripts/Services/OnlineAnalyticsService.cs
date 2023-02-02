@@ -9,7 +9,7 @@ namespace vgwb.lanoria
 {
     public class OnlineAnalyticsService : MonoBehaviour
     {
-        private bool AnalyticsEnabled => Statics.App.ApplicationConfig.AnalyticsEnabled;
+        private bool AnalyticsEnabled => AppConfig.I.AnalyticsEnabled;
 
         async void Awake()
         {
@@ -17,7 +17,7 @@ namespace vgwb.lanoria
                 return;
 
             var options = new InitializationOptions();
-            if (Statics.App.ApplicationConfig.AnalyticsDevEnv) {
+            if (AppConfig.I.AnalyticsDevEnv) {
                 options.SetEnvironmentName("dev");
                 Debug.LogWarning("Analytics in DEV environment");
             }
@@ -31,7 +31,7 @@ namespace vgwb.lanoria
 
             var parameters = new Dictionary<string, object>()
             {
-                { "myNativeLang", Statics.Data.Profile.AppSettings.NativeLocale },
+                { "myNativeLang", DataManager.I.Profile.AppSettings.NativeLocale },
             };
 
             AnalyticsService.Instance.CustomData("myTestEvent", parameters);

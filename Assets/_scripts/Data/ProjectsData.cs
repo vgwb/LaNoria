@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using NaughtyAttributes;
 
 namespace vgwb.lanoria
 {
@@ -15,6 +16,7 @@ namespace vgwb.lanoria
         public string Title;
         [TextArea]
         public string Description;
+        [ShowAssetPreview(128, 128)]
         public Sprite Image;
     }
 
@@ -35,14 +37,11 @@ namespace vgwb.lanoria
                 return null;
             }
 
-            GameObject tilePrefab;
             if (projectData.TileModel != TileModel.Random) {
-                tilePrefab = GameData.I.Tiles.GetTileByModel(projectData.TileModel);
+                return GameData.I.Tiles.GetTileByModel(projectData.TileModel);
             } else {
-                tilePrefab = GameData.I.Tiles.GetTileByLength(projectData.Sequence.Length);
+                return GameData.I.Tiles.GetTileBySize(projectData.Sequence.Length);
             }
-
-            return tilePrefab;
         }
     }
 }

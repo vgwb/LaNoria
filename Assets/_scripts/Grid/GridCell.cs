@@ -18,7 +18,6 @@ namespace vgwb.lanoria
         protected override void Awake()
         {
             base.Awake();
-            //            Debug.Log("category: " + category);
         }
 
         public void Init(bool isOccupied)

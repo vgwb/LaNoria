@@ -8,10 +8,12 @@ namespace vgwb.lanoria
     public class Tile : MonoBehaviour
     {
         public TileModel Model;
-        public bool ShowPivot = false;
+        public List<TileCell> Cells;
+        public List<HexDirection> Shape;
+
+        [Header("Ref")]
         public GameObject Pivot;
         public GameObject CellsContainer;
-        public List<TileCell> Cells;
         public Outline OutlineHandler;
 
         public delegate void PlaceableEvent();
@@ -20,34 +22,25 @@ namespace vgwb.lanoria
         public PlaceableEvent OnStopUsingMe;
         public PlaceableEvent OnHexPosChange;
 
-        [Header("Lean components")]
         public LeanDragCamera LeanCameraComp;
         public LeanSelectableByFinger LeanSelectableComp;
         public LeanFingerTap LeanFingerTapComp;
 
+        [Header("Debug")]
+        public bool ShowPivot = false;
+
         private bool isUsed;
-        private bool isValidPosition;
         private Vector3 prevPos;
 
-        public bool IsValidPosition
-        {
-            get {
-                return isValidPosition;
-            }
-        }
-
-        public int CellsNum
-        {
-            get { return Cells.Count; }
-        }
+        public bool IsValidPosition { get; private set; }
+        public int Size => Cells.Count;
 
         public Vector3 HexPos
         {
             get { // the first tile is considered the object center
-                if (Cells.Count > 0) {
+                if (Size > 0) {
                     return Cells[0].HexPosition;
                 }
-
                 return transform.position;
             }
         }
@@ -119,7 +112,7 @@ namespace vgwb.lanoria
             ParentInPivot.transform.position = Pivot.transform.position;
             // the new object is now the parent...
             transform.parent = ParentInPivot.transform;
-            Vector3 rot = new Vector3(0.0f, 60.0f, 0.0f); // rotate it!
+            var rot = new Vector3(0.0f, 60.0f, 0.0f); // rotate it!
             ParentInPivot.transform.Rotate(rot);
             transform.parent = null; // restore the parent object to null
             Destroy(ParentInPivot);
@@ -207,7 +200,7 @@ namespace vgwb.lanoria
 
         public void SetupCellsColor(ProjectData projectData)
         {
-            if (projectData.Sequence.Length != Cells.Count) {
+            if (projectData.Sequence.Length != Size) {
                 Debug.LogError("Placeable - SetupCellsColor(): error in sequence definition!");
                 return;
             }
@@ -223,7 +216,7 @@ namespace vgwb.lanoria
 
         public List<Vector3> GetCellsHexPositions()
         {
-            List<Vector3> hexPositions = new List<Vector3>();
+            var hexPositions = new List<Vector3>();
             foreach (var cell in Cells) {
                 hexPositions.Add(cell.HexPosition);
             }
@@ -282,8 +275,8 @@ namespace vgwb.lanoria
             }
 
             // raise the event, position validity has changed!
-            if (validPosition != isValidPosition) {
-                isValidPosition = validPosition; // update the value
+            if (validPosition != IsValidPosition) {
+                IsValidPosition = validPosition; // update the value
                 if (OnValidPositionChange != null) {
                     OnValidPositionChange(); // notify the new validity
                 }
