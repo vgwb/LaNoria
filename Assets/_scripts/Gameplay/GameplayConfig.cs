@@ -20,7 +20,7 @@ namespace vgwb.lanoria
         public Color BlankColor = Color.white;
 
         [Header("Deck Rules")]
-        public int CardsInHand = 4;
+        public int HandSize = 4;
 
         [Header("Areas")]
         public Vector3 LabelDebugOffset;

@@ -1,20 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    public class PreviewManager : MonoBehaviour
+    public class PreviewManager : SingletonMonoBehaviour<PreviewManager>
     {
         public GameObject PointPreviewPrefab;
         public bool UsePreview = true;
-
-        void Awake()
-        {
-            if (PointPreviewPrefab == null) {
-                Debug.LogError("ScoreManager - Awake(): no point preview prefab defined!");
-            }
-        }
 
         public void PreviewScore(Tile placeable)
         {
@@ -23,7 +17,7 @@ namespace vgwb.lanoria
                 return;
             }
 
-            var points = GameManager.I.Scorer.CalculateSynergy(placeable);
+            var points = ScoreManager.I.CalculateSynergy(placeable);
             foreach (var point in points) {
                 InstantiatePointPreview(point, 1);
             }

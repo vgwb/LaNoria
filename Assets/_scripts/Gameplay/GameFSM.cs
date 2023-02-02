@@ -32,22 +32,15 @@ namespace vgwb.lanoria
             get; private set;
         }
 
-        private List<Card> spawnedCards;
+        private List<Card> cardsInHand;
         private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
-        private DeckManager dealer;
-        private ScoreManager scorer;
-        private PreviewManager preview;
 
         void Start()
         {
             if (CardPrefab == null) {
                 Debug.LogError("GameFSM - Awake(): no card prefab defined!");
             }
-
-            dealer = GameManager.I.Dealer;
-            scorer = GameManager.I.Scorer;
-            preview = GameManager.I.Preview;
 
             state = GameplayState.None;
             ResetValues();
@@ -103,7 +96,7 @@ namespace vgwb.lanoria
             SoundManager.I.PlaySfx(AudioEnum.tile_confirmed);
             currentTile.OnProjectConfirmed();
             currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
-            scorer.UpdateScore(currentTile);
+            ScoreManager.I.UpdateScore(currentTile);
             ResetProjectPanel();
             ResetValues();
             CleanPreview();
@@ -133,7 +126,7 @@ namespace vgwb.lanoria
 
         public void CleanPreview()
         {
-            preview.CleanPreview();
+            PreviewManager.I.CleanPreview();
         }
 
         private void SetState(GameplayState newState)
@@ -151,7 +144,7 @@ namespace vgwb.lanoria
             currentCardIndex = -1;
             currentTile = null;
             currentProjectData = null;
-            spawnedCards = new List<Card>();
+            cardsInHand = new List<Card>();
         }
 
         private void OnPrefabSpawned(GameObject clone)
@@ -173,9 +166,9 @@ namespace vgwb.lanoria
         {
             if (currentTile != null) {
                 if (currentTile.IsValidPosition) {
-                    preview.PreviewScore(currentTile);
+                    PreviewManager.I.PreviewScore(currentTile);
                 } else {
-                    preview.CleanPreview();
+                    PreviewManager.I.CleanPreview();
                 }
             }
         }
@@ -220,11 +213,10 @@ namespace vgwb.lanoria
             }
         }
 
-        /// <summary>
-        /// Clean the actual hand of cards.
-        /// </summary>
-        private void CleanHand()
+        private void EmptyHand()
         {
+            cardsInHand = new List<Card>();
+
             var cards = UIGame.CardsInUI();
             for (int i = 0; i < cards.Count; i++) {
                 Destroy(cards[i]);
@@ -232,20 +224,20 @@ namespace vgwb.lanoria
         }
 
         /// <summary>
-        /// Draw a new hand deleting the actual cards in hand.
+        /// Draw a new hand deleting the current cards in hand.
         /// </summary>
         private void DrawNewHand()
         {
-            CleanHand();
-            spawnedCards = new List<Card>();
-            var projectsData = dealer.DrawProjects();
+            EmptyHand();
+
+            var projectsData = DeckManager.I.GetNewHand();
             int cardIndex = 0;
             foreach (var projectData in projectsData) {
                 // spawn the card inside the container
                 var cardInstance = Instantiate(CardPrefab, UIGame.GetHook(cardIndex).transform);
                 var card = cardInstance.GetComponent<Card>();
                 if (card != null) {
-                    spawnedCards.Add(card);
+                    cardsInHand.Add(card);
                     card.HideInBottomScreen();
                     var cardTexture = UICameraManager.I.GetUICameraTexture(cardIndex);
                     card.Init(projectData, cardTexture); // initialize the card component
@@ -277,13 +269,13 @@ namespace vgwb.lanoria
         private void CheckGameEnd()
         {
             bool cardAvailable = false;
-            foreach (var card in spawnedCards) {
+            foreach (var card in cardsInHand) {
                 if (card.IsPlayable()) {
                     cardAvailable = true;
                     break;
                 }
             }
-            Debug.Log("Cards available: " + cardAvailable);
+            //            Debug.Log("Cards available: " + cardAvailable);
             if (!cardAvailable) {
                 SetState(GameplayState.End);
             } else {
@@ -314,7 +306,7 @@ namespace vgwb.lanoria
             float duration = GameplayConfig.I.CardAppearsTime;
             Sequence mySequence = DOTween.Sequence();
             float index = 0;
-            foreach (var card in spawnedCards) {
+            foreach (var card in cardsInHand) {
                 float time = (duration / 2.0f) * index++;
                 mySequence.Insert(time,
                     card.Rect.DOAnchorPosY(0.0f, duration).OnComplete(() => SoundManager.I.PlaySfx(AudioEnum.card))
@@ -347,6 +339,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Setup:
                     UIGame.ScoreUI.Init(0);
+                    DeckManager.I.PrepareNewDeck();
                     ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;
                     UIGame.FadeCanvas(1.0f, duration, () => EndSetup());

@@ -1,33 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    public class ScoreManager : MonoBehaviour
+    public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     {
-        public int CurrentScore { get; private set; }
-        public delegate void ScoreEvent(int score, int points);
-        public ScoreEvent OnScoreUpdate;
+        public int Score { get; private set; }
 
         [SerializeField] private int synergyScore;
         private List<AreaId> completedAreas;
 
-        void Awake()
+        void Start()
         {
             completedAreas = new List<AreaId>();
-            CurrentScore = 0;
+            Score = 0;
         }
 
-        public void UpdateScore(Tile placeable)
+        public void UpdateScore(Tile tile)
         {
-            int placementPoints = CalculateBasicPoints(placeable);
-            int transversalityPoints = CalculateTransversality(placeable);
-            int totalPoints = placementPoints + synergyScore + transversalityPoints;
-            CurrentScore += totalPoints;
+            int placementPoints = CalculateBasicPoints(tile);
+            int transversalityPoints = CalculateTransversality(tile);
+            int newPoints = placementPoints + synergyScore + transversalityPoints;
+            Score += newPoints;
             Debug.Log("basic: " + placementPoints + " sinergy: " + synergyScore + " transversality: " + transversalityPoints);
 
-            OnScoreUpdate?.Invoke(CurrentScore, totalPoints);
+            UI_manager.I.PanelGameplay.SetScoreUI(Score, newPoints);
         }
 
         public void PreviewSynergy()
@@ -35,18 +34,18 @@ namespace vgwb.lanoria
 
         }
 
-        private int CalculateBasicPoints(Tile placeable)
+        private int CalculateBasicPoints(Tile tile)
         {
-            return placeable.Size;
+            return tile.Size;
         }
 
-        public List<Vector3> CalculateSynergy(Tile placeable)
+        public List<Vector3> CalculateSynergy(Tile tile)
         {
             int resultingScore = 0;
-            var positionsToExclude = placeable.GetCellsHexPositions();
+            var positionsToExclude = tile.GetCellsHexPositions();
             var synergyPoints = new List<Vector3>();
 
-            foreach (var cell in placeable.Cells) {
+            foreach (var cell in tile.Cells) {
                 var neighbours = GridManager.I.GetNeighboursByPos(cell.HexPosition);
                 foreach (var neighbour in neighbours) {
                     if (positionsToExclude.Contains(neighbour.HexPosition)) {

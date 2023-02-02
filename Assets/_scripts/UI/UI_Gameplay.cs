@@ -114,7 +114,7 @@ namespace vgwb.lanoria
                 iSProjectPanelShifted = true;
                 float duration = GameplayConfig.I.SlideProjectPanelTime;
                 float pixelIn = GameplayConfig.I.SlideProjectPanelPixelIn;
-                SlideActualProjectPanel(duration, pixelIn, () => SetProjectPanelShifted(true));
+                SlideCurrentProjectPanel(duration, pixelIn, () => SetProjectPanelShifted(true));
             }
         }
 
@@ -209,16 +209,12 @@ namespace vgwb.lanoria
 
         public void OnProjectDragFromCanvas()
         {
-            if (OnProjectDragged != null) {
-                OnProjectDragged();
-            }
+            OnProjectDragged?.Invoke();
         }
 
         public void OnProjectSelectedFromCanvas()
         {
-            if (OnCurrentProjectSelected != null) {
-                OnCurrentProjectSelected();
-            }
+            OnCurrentProjectSelected?.Invoke();
         }
 
         public List<GameObject> GetPreviewElements()
@@ -227,7 +223,7 @@ namespace vgwb.lanoria
                 return null;
             }
 
-            List<GameObject> elements = new List<GameObject>();
+            var elements = new List<GameObject>();
             int childs = PanelPreview.childCount;
             for (int i = 0; i < childs; i++) {
                 elements.Add(PanelPreview.GetChild(i).gameObject);
@@ -236,7 +232,7 @@ namespace vgwb.lanoria
             return elements;
         }
 
-        private void SlideActualProjectPanel(float duration, float pixelIn = 50.0f, TweenCallback callback = null)
+        private void SlideCurrentProjectPanel(float duration, float pixelIn = 50.0f, TweenCallback callback = null)
         {
             if (PanelCurrentProject != null) {
                 float width = PanelCurrentProject.sizeDelta.x;

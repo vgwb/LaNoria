@@ -1,26 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    public class DeckManager : MonoBehaviour
+    public class DeckManager : SingletonMonoBehaviour<DeckManager>
     {
-        private ProjectsData projectAtlas;
+        private List<ProjectData> deck;
+        private int DeckSize => deck.Count;
 
-        void Awake()
+        void Start()
         {
-            projectAtlas = GameData.I.Projects;
-            if (projectAtlas == null) {
-                Debug.LogError("CardDealer - Awake(): no project atlas defined!");
-            }
         }
 
-        public IEnumerable<ProjectData> DrawProjects()
+        public void PrepareNewDeck()
         {
-            int cardsNum = GameplayConfig.I.CardsInHand;
+            deck = new List<ProjectData>();
+            foreach (var project in GameData.I.Projects.Projects) {
+                if (project.Active) {
+                    deck.Add(project);
+                }
+            }
+            Debug.Log("New Deck: " + DeckSize + " cards");
+        }
 
-            return GameData.I.Projects.PickRandomProjects(cardsNum);
+        public IEnumerable<ProjectData> GetNewHand()
+        {
+            int handSize = GameplayConfig.I.HandSize;
+
+            return GameData.I.Projects.PickRandomProjects(handSize);
         }
     }
 }
