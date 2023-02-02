@@ -11,6 +11,8 @@ namespace vgwb.lanoria
     {
         public string Id;
         public bool Active = true;
+        // [ShowAssetPreview(128, 128)]
+        // public GameObject TilePrefab;
         public TileModel TileModel;
         public ProjectCategories[] Sequence;
         public string Title;
