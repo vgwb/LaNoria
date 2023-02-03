@@ -31,7 +31,7 @@ namespace vgwb.lanoria
             var hand = new List<ProjectData>();
             for (int i = 0; i < handSize; i++) {
                 if (DeckSize > 0) {
-                    int randomIndex = Random.Range(0, handSize);
+                    int randomIndex = Random.Range(0, DeckSize - 1);
                     hand.Add(deck[randomIndex]);
                     deck.Remove(deck[randomIndex]);
                 }
