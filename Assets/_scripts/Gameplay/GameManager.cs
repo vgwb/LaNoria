@@ -62,8 +62,8 @@ namespace vgwb.lanoria
                 var hexposition = new Hex(1, 2).ToWorld();
                 tileToPlace.ManualSetPosition(hexposition, HexDirection.E);
                 tileToPlace.SetupCellsColor(card.CardData);
-                tileToPlace.OnProjectConfirmed();
-                ScoreManager.I.UpdateScore(tileToPlace);
+                
+                GameFSM.PlayCardDebug(tileToPlace);
             }
         }
 

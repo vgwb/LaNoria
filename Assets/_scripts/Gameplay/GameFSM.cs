@@ -148,6 +148,12 @@ namespace vgwb.lanoria
             return null;
         }
 
+        public void PlayCardDebug(Tile tile)
+        {
+            currentTile = tile;
+            ConfirmProject();
+        }
+
         private void SetState(GameplayState newState)
         {
             if (state != newState) {
