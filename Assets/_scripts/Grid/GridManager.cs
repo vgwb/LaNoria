@@ -1,5 +1,5 @@
 using vgwb.framework;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -137,13 +137,24 @@ namespace vgwb.lanoria
                 if (cell.Occupied) {
                     continue;
                 }
-                var neightbour = cell.hex.GetNeighbour(HexDirection.E);
-                if (GetCellByHex(neightbour) != null) {
-                    Debug.Log("FOUND FREE FELL");
-                    foundLocation.Position = cell.hex;
-                    foundLocation.Direction = HexDirection.E;
-                    return true;
+
+                foreach (HexDirection direction in Enum.GetValues(typeof(HexDirection))) {
+                    if (canShapeBePlacedHere(cell.hex, tile.Shape, direction)) {
+                        foundLocation.Position = cell.hex;
+                        foundLocation.Direction = direction;
+                        return true;
+                    }
                 }
+            }
+            return false;
+        }
+
+        private bool canShapeBePlacedHere(Hex startingHex, List<HexDirection> shape, HexDirection direction)
+        {
+            var neightbour = startingHex.GetNeighbour(direction);
+            if (GetCellByHex(neightbour) != null && !GetCellByHex(neightbour).Occupied) {
+                Debug.Log("GOOD NEIGHBOR IS " + neightbour);
+                return true;
             }
             return false;
         }

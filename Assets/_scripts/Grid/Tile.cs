@@ -252,9 +252,16 @@ namespace vgwb.lanoria
         public void ManualSetPosition(Vector3 hexPos, HexDirection dir)
         {
             transform.position = hexPos;
-            transform.SetPositionAndRotation(hexPos, Quaternion.Euler(Vector3.up));
+            transform.SetPositionAndRotation(hexPos, Quaternion.Euler(GetHexRotation(dir)));
             var container = BoardManager.I.ProjectsContainer;
             transform.parent = container.transform;
+        }
+
+        private Vector3 GetHexRotation(HexDirection dir)
+        {
+            Debug.Log("HexDirection + " + dir + " int:" + (int)dir);
+            dir--;
+            return new Vector3(0, 60 * (int)dir, 0);
         }
 
         private void SetY()

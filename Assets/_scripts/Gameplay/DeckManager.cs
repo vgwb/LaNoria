@@ -36,7 +36,7 @@ namespace vgwb.lanoria
                     deck.Remove(deck[randomIndex]);
                 }
             }
-            Debug.Log("GetNewHand Deck size: " + DeckSize);
+            //            Debug.Log("GetNewHand Deck size: " + DeckSize);
             return hand;
         }
     }

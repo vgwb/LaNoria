@@ -57,11 +57,11 @@ namespace vgwb.lanoria
 
         public static Hex[] AXIAL_DIRECTIONS = new Hex[] {
             new Hex(1, 0),
-            new Hex(0, 1),
-            new Hex(-1, 1),
-            new Hex(-1, 0),
-            new Hex(0, -1),
             new Hex(1, -1),
+            new Hex(0, -1),
+            new Hex(-1, 0),
+            new Hex(-1, 1),
+            new Hex(0, 1),
         };
 
         public static IEnumerable<Hex> Ring(Hex center, int radius)
