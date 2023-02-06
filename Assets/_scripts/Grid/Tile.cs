@@ -236,6 +236,12 @@ namespace vgwb.lanoria
             transform.parent = container.transform;
         }
 
+        public void ManualSetPostion(Vector3 hexPos, HexDirection dir)
+        {
+            transform.position = hexPos;
+
+        }
+
         private void SetY()
         {
             var pos = transform.position;
