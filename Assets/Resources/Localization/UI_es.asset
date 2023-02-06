@@ -17,7 +17,43 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: f145508d5e373411a8e59d53138b69e4, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 8702683148967936
+    m_Localized: Fine Juego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114348253184
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34841026560
+    m_Localized: Juega
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81292943360
+    m_Localized: Sur La Noria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172359671808
+    m_Localized: Puntos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193004036096
+    m_Localized: Estas seguro?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 286247608320
+    m_Localized: Si
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303461031936
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 343755710464
+    m_Localized: Confirma
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

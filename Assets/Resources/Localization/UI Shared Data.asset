@@ -15,36 +15,40 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: f145508d5e373411a8e59d53138b69e4
   m_Entries:
-  - m_Id: 34841026560
-    m_Key: menu.play
-    m_Metadata:
-      m_Items: []
-  - m_Id: 81292943360
-    m_Key: menu.about
-    m_Metadata:
-      m_Items: []
-  - m_Id: 114348253184
-    m_Key: menu.options
-    m_Metadata:
-      m_Items: []
-  - m_Id: 172359671808
-    m_Key: label.score
-    m_Metadata:
-      m_Items: []
-  - m_Id: 193004036096
-    m_Key: prompt.areyousure
-    m_Metadata:
-      m_Items: []
-  - m_Id: 286247608320
-    m_Key: btn.yes
+  - m_Id: 343755710464
+    m_Key: btn.confirm
     m_Metadata:
       m_Items: []
   - m_Id: 303461031936
     m_Key: btn.no
     m_Metadata:
       m_Items: []
-  - m_Id: 343755710464
-    m_Key: btn.confirm
+  - m_Id: 286247608320
+    m_Key: btn.yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172359671808
+    m_Key: label.score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81292943360
+    m_Key: menu.about
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8702683148967936
+    m_Key: menu.gameend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114348253184
+    m_Key: menu.options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34841026560
+    m_Key: menu.play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193004036096
+    m_Key: prompt.areyousure
     m_Metadata:
       m_Items: []
   m_Metadata:
