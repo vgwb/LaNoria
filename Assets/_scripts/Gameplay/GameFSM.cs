@@ -33,6 +33,7 @@ namespace vgwb.lanoria
         }
 
         private List<Card> cardsInHand;
+        private List<Tile> projectTiles;
         private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
 
@@ -129,6 +130,15 @@ namespace vgwb.lanoria
             PreviewManager.I.CleanPreview();
         }
 
+        public Tile GetTileByCardIndex(int index)
+        {
+            if (index >= 0 && index < projectTiles.Count) {
+                return projectTiles[index];
+            }
+
+            return null;
+        }
+
         private void SetState(GameplayState newState)
         {
             if (state != newState) {
@@ -145,6 +155,7 @@ namespace vgwb.lanoria
             currentTile = null;
             currentProjectData = null;
             cardsInHand = new List<Card>();
+            projectTiles = new List<Tile>();
         }
 
         private void OnPrefabSpawned(GameObject clone)
@@ -229,7 +240,7 @@ namespace vgwb.lanoria
         private void DrawNewHand()
         {
             EmptyHand();
-
+            projectTiles = new List<Tile>();
             var projectsData = DeckManager.I.GetNewHand();
             if (projectsData.Count > 0) {
 
@@ -266,6 +277,7 @@ namespace vgwb.lanoria
         {
             var tile = prefabInstance.GetComponent<Tile>();
             if (tile != null) {
+                projectTiles.Add(tile);
                 return BoardManager.I.CanProjectBePlaced(tile);
             }
 
@@ -345,6 +357,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Setup:
                     UIGame.ScoreUI.Init(0);
+                    //CameraManager.I.SwitchToPlayCamera();
                     DeckManager.I.PrepareNewDeck();
                     ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;
@@ -363,6 +376,7 @@ namespace vgwb.lanoria
                 case GameplayState.End:
                     Debug.Log("End Game!");
                     UI_manager.I.ShowGameResult(true);
+                    //CameraManager.I.SwitchToMenuCamera(); // TODO: check if camera swap should gop here!
                     break;
                 case GameplayState.Pause:
                     break;
