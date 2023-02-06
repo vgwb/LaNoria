@@ -14,6 +14,7 @@ namespace vgwb.lanoria
         public TMP_Text CardTitle;
         public Button ClickableComp;
         public RawImage PrefabImg;
+        public GameObject MyPrefab;
 
         [HideInInspector]
         public ProjectData CardData;
@@ -25,9 +26,10 @@ namespace vgwb.lanoria
             Rect = GetComponent<RectTransform>();
         }
 
-        public void Init(ProjectData cardData, Texture texture)
+        public void Init(ProjectData cardData, Texture texture, GameObject prefabUsed)
         {
             CardData = cardData;
+            MyPrefab = prefabUsed;
             SetTitle(CardData.Title);
             SetImage(texture); // visualize the 3d prefab into the canvas
         }

@@ -262,9 +262,8 @@ namespace vgwb.lanoria
                         cardsInHand.Add(card);
                         card.HideInBottomScreen();
                         var cardTexture = UICameraManager.I.GetUICameraTexture(cardIndex);
-                        card.Init(projectData, cardTexture); // initialize the card component
-                                                             // get the associated model and bind it to the card clickable area
                         var tilePrefab = GameData.I.Projects.GetTile(projectData);
+                        card.Init(projectData, cardTexture, tilePrefab); // initialize the card component
                         int indexToPass = cardIndex;
                         card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
                         // spawn the object in camera UI
