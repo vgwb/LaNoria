@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using vgwb.framework;
+using QuickOutline;
 
 namespace vgwb.lanoria
 {
