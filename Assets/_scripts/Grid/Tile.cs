@@ -239,7 +239,9 @@ namespace vgwb.lanoria
         public void ManualSetPostion(Vector3 hexPos, HexDirection dir)
         {
             transform.position = hexPos;
-
+            transform.SetPositionAndRotation(hexPos, Quaternion.Euler(Vector3.up));
+            var container = BoardManager.I.ProjectsContainer;
+            transform.parent = container.transform;
         }
 
         private void SetY()
