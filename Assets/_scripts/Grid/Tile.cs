@@ -236,7 +236,7 @@ namespace vgwb.lanoria
             transform.parent = container.transform;
         }
 
-        public void ManualSetPostion(Vector3 hexPos, HexDirection dir)
+        public void ManualSetPosition(Vector3 hexPos, HexDirection dir)
         {
             transform.position = hexPos;
             transform.SetPositionAndRotation(hexPos, Quaternion.Euler(Vector3.up));

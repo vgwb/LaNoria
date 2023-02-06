@@ -139,6 +139,15 @@ namespace vgwb.lanoria
             return null;
         }
 
+        public Card GetCard(int index)
+        {
+            if (index >= 0 && index < projectTiles.Count) {
+                return cardsInHand[index];
+            }
+
+            return null;
+        }
+
         private void SetState(GameplayState newState)
         {
             if (state != newState) {
