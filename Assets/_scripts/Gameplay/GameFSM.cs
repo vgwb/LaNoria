@@ -292,7 +292,7 @@ namespace vgwb.lanoria
             var tile = prefabInstance.GetComponent<Tile>();
             if (tile != null) {
                 projectTiles.Add(tile);
-                return BoardManager.I.CanProjectBePlaced(tile);
+                return GridManager.I.CanProjectBePlaced(tile);
             }
 
             return false;

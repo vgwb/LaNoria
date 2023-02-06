@@ -107,6 +107,12 @@ namespace vgwb.lanoria
             }
         }
 
+        public Hex GetNeighbour(HexDirection dir)
+        {
+            Hex incr = AXIAL_DIRECTIONS[(int)dir];
+            return this + incr;
+        }
+
         public Hex GetNeighbour(int dir)
         {
             Hex incr = AXIAL_DIRECTIONS[dir % AXIAL_DIRECTIONS.Length];

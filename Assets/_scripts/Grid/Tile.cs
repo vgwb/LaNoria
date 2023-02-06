@@ -6,6 +6,19 @@ using QuickOutline;
 
 namespace vgwb.lanoria
 {
+
+    public struct TileLocation
+    {
+        public Hex Position;
+        public HexDirection Direction;
+
+        public TileLocation(Hex hexPosition, HexDirection hexDirection)
+        {
+            Position = hexPosition;
+            Direction = hexDirection;
+        }
+    }
+
     public class Tile : MonoBehaviour
     {
         public TileModel Model;
@@ -247,7 +260,7 @@ namespace vgwb.lanoria
         private void SetY()
         {
             var pos = transform.position;
-            pos.y = BoardManager.I.ProjectsHeight();
+            pos.y = BoardManager.I.GetProjectsHeight();
             transform.position = pos;
         }
 

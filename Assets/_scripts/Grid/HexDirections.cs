@@ -2,7 +2,7 @@ namespace vgwb.lanoria
 {
     public enum HexDirection
     {
-        NW, NE, E, SE, SW, W
+        NW = 1, NE = 2, E = 3, SE = 4, SW = 5, W = 6
     }
 
     public static class HexDirectionExtensions

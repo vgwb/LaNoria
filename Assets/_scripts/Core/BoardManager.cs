@@ -18,11 +18,6 @@ namespace vgwb.lanoria
 
         }
 
-        public bool CanProjectBePlaced(Tile project)
-        {
-            return true;
-        }
-
         public void ShowMap(bool status)
         {
             MapContainer.SetActive(status);
@@ -35,7 +30,7 @@ namespace vgwb.lanoria
             }
         }
 
-        public float ProjectsHeight()
+        public float GetProjectsHeight()
         {
             float height = 0.0f;
             if (ProjectsContainer != null) {

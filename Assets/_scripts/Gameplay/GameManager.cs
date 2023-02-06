@@ -59,11 +59,14 @@ namespace vgwb.lanoria
                 var card = GameFSM.GetCard(whichCard - 1); // get card
                 var tileInstance = Instantiate(card.MyPrefab); // instantiate project
                 var tileToPlace = tileInstance.GetComponent<Tile>();
-                var hexposition = new Hex(1, 2).ToWorld();
-                tileToPlace.ManualSetPosition(hexposition, HexDirection.E);
-                tileToPlace.SetupCellsColor(card.CardData);
-                
-                GameFSM.PlayCardDebug(tileToPlace);
+                var foundLocation = new TileLocation();
+                if (GridManager.I.GetGoodTileLocation(tileToPlace, out foundLocation)) {
+                    tileToPlace.ManualSetPosition(foundLocation.Position.ToWorld(), foundLocation.Direction);
+                    tileToPlace.SetupCellsColor(card.CardData);
+                    GameFSM.PlayCardDebug(tileToPlace);
+                } else {
+                    Debug.Log("NOT FOUND ANY POSITION");
+                }
             }
         }
 

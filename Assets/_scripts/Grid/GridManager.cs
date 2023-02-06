@@ -59,7 +59,7 @@ namespace vgwb.lanoria
             }
         }
 
-        public GridCell GetCellByCoords(Hex hex)
+        public GridCell GetCellByHex(Hex hex)
         {
             return Cells.Find(x => (x.hex.q == hex.q) && (x.hex.r == hex.r));
         }
@@ -124,13 +124,37 @@ namespace vgwb.lanoria
             return Hex.FromWorld(pos).ToWorld(0f);
         }
 
+
+        public bool CanProjectBePlaced(Tile project)
+        {
+            return true;
+        }
+
+        public bool GetGoodTileLocation(Tile tile, out TileLocation foundLocation)
+        {
+            foundLocation = new TileLocation();
+            foreach (var cell in Cells) {
+                if (cell.Occupied) {
+                    continue;
+                }
+                var neightbour = cell.hex.GetNeighbour(HexDirection.E);
+                if (GetCellByHex(neightbour) != null) {
+                    Debug.Log("FOUND FREE FELL");
+                    foundLocation.Position = cell.hex;
+                    foundLocation.Direction = HexDirection.E;
+                    return true;
+                }
+            }
+            return false;
+        }
+
         #region Debug and Editor Methods
         public void DebugSelectCell(int direction)
         {
-            if (GetCellByCoords(currentHex.GetNeighbour(direction)) is not null) {
-                GetCellByCoords(currentHex).Highlight(false);
+            if (GetCellByHex(currentHex.GetNeighbour(direction)) is not null) {
+                GetCellByHex(currentHex).Highlight(false);
                 currentHex = currentHex.GetNeighbour(direction);
-                GetCellByCoords(currentHex).Highlight(true);
+                GetCellByHex(currentHex).Highlight(true);
             }
         }
 
