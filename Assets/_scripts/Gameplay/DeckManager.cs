@@ -9,6 +9,8 @@ namespace vgwb.lanoria
     {
         private List<ProjectData> deck;
         private int DeckSize => deck.Count;
+        private List<ProjectData> discardedCards;
+        private List<ProjectData> currentHand;
 
         void Start()
         {
@@ -22,22 +24,43 @@ namespace vgwb.lanoria
                     deck.Add(project);
                 }
             }
+            currentHand = new List<ProjectData>();
+            discardedCards = new List<ProjectData>();
             Debug.Log("New Deck size: " + DeckSize);
         }
 
-        public List<ProjectData> GetNewHand()
+        public List<ProjectData> DiscardAndGetNewHand(ProjectData playedProjectData)
+        {
+
+            foreach (var projectInHand in currentHand) {
+                if (projectInHand != playedProjectData) {
+                    discardedCards.Add(projectInHand);
+                }
+            }
+            if (DeckSize < 4) {
+                reshuffleDeck();
+            }
+            return GetNewHand();
+        }
+
+        private List<ProjectData> GetNewHand()
         {
             int handSize = GameplayConfig.I.HandSize;
-            var hand = new List<ProjectData>();
+            currentHand = new List<ProjectData>();
             for (int i = 0; i < handSize; i++) {
                 if (DeckSize > 0) {
                     int randomIndex = Random.Range(0, DeckSize - 1);
-                    hand.Add(deck[randomIndex]);
+                    currentHand.Add(deck[randomIndex]);
                     deck.Remove(deck[randomIndex]);
                 }
             }
             //            Debug.Log("GetNewHand Deck size: " + DeckSize);
-            return hand;
+            return currentHand;
+        }
+
+        private void reshuffleDeck()
+        {
+            deck = discardedCards;
         }
     }
 }

@@ -62,7 +62,7 @@ namespace vgwb.lanoria
                 var foundLocation = new TileLocation();
                 if (GridManager.I.GetGoodTileLocation(tileToPlace, out foundLocation)) {
                     tileToPlace.ManualSetPosition(foundLocation.Position.ToWorld(), foundLocation.Direction);
-                    tileToPlace.SetupCellsColor(card.CardData);
+                    tileToPlace.SetupCellsColor(card.Project);
                     GameFSM.PlayCardDebug(tileToPlace);
                 } else {
                     Debug.Log("NOT FOUND ANY POSITION");

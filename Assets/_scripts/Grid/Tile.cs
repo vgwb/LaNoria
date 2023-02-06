@@ -21,6 +21,8 @@ namespace vgwb.lanoria
 
     public class Tile : MonoBehaviour
     {
+        [HideInInspector]
+        public ProjectData Project;
         public TileModel Model;
         public List<TileCell> Cells;
         public List<HexDirection> Shape;

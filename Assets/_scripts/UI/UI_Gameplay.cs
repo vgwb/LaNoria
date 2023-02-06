@@ -189,7 +189,7 @@ namespace vgwb.lanoria
 
         public void OnOpenProjectDetail()
         {
-            UI_manager.I.OpenProjectDetail(GameManager.I.GameFSM.currentProjectData);
+            UI_manager.I.OpenProjectDetail(GameManager.I.GameFSM.CurrentProjectData);
         }
 
         public void PrefabSelectionHUD()

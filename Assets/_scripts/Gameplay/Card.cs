@@ -17,7 +17,7 @@ namespace vgwb.lanoria
         public GameObject MyPrefab;
 
         [HideInInspector]
-        public ProjectData CardData;
+        public ProjectData Project;
 
         public RectTransform Rect { get; private set; }
 
@@ -26,11 +26,11 @@ namespace vgwb.lanoria
             Rect = GetComponent<RectTransform>();
         }
 
-        public void Init(ProjectData cardData, Texture texture, GameObject prefabUsed)
+        public void Init(ProjectData projectData, Texture texture, GameObject prefabUsed)
         {
-            CardData = cardData;
+            Project = projectData;
             MyPrefab = prefabUsed;
-            SetTitle(CardData.Title);
+            SetTitle(Project.Title);
             SetImage(texture); // visualize the 3d prefab into the canvas
         }
 

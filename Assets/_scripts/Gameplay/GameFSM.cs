@@ -25,13 +25,8 @@ namespace vgwb.lanoria
 
         public GameplayState state { get; private set; }
         private int currentCardIndex;
-        private Tile currentTile;
-
-        public ProjectData currentProjectData
-        {
-            get; private set;
-        }
-
+        public Tile currentTile { get; private set; }
+        public ProjectData CurrentProjectData { get; private set; }
         private List<Card> cardsInHand;
         private List<Tile> projectTiles;
         private UI_Gameplay UIGame;
@@ -85,7 +80,7 @@ namespace vgwb.lanoria
 
                 CleanPreview();
                 currentCardIndex = cardIndex;
-                currentProjectData = projectData;
+                CurrentProjectData = projectData;
                 spawner.Prefab = placeablePrefab;
                 var texture = UICameraManager.I.GetUICameraTexture(currentCardIndex);
                 UIGame.CardSelectionHUD(projectData.Title, texture);
@@ -144,7 +139,6 @@ namespace vgwb.lanoria
             if (index >= 0 && index < projectTiles.Count) {
                 return cardsInHand[index];
             }
-
             return null;
         }
 
@@ -168,7 +162,6 @@ namespace vgwb.lanoria
         {
             currentCardIndex = -1;
             currentTile = null;
-            currentProjectData = null;
             cardsInHand = new List<Card>();
             projectTiles = new List<Tile>();
         }
@@ -176,7 +169,7 @@ namespace vgwb.lanoria
         private void OnPrefabSpawned(GameObject clone)
         {
             currentTile = clone.GetComponent<Tile>();
-            currentTile.SetupCellsColor(currentProjectData);
+            currentTile.SetupCellsColor(currentTile.Project);
             currentTile.SetupForDrag();
             UIGame.EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
@@ -256,7 +249,7 @@ namespace vgwb.lanoria
         {
             EmptyHand();
             projectTiles = new List<Tile>();
-            var projectsData = DeckManager.I.GetNewHand();
+            var projectsData = DeckManager.I.DiscardAndGetNewHand(CurrentProjectData);
             if (projectsData.Count > 0) {
 
                 int cardIndex = 0;
