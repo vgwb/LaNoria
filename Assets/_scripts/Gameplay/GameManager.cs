@@ -63,6 +63,7 @@ namespace vgwb.lanoria
                 tileToPlace.ManualSetPosition(hexposition, HexDirection.E);
                 tileToPlace.SetupCellsColor(card.CardData);
                 tileToPlace.OnProjectConfirmed();
+                ScoreManager.I.UpdateScore(tileToPlace);
             }
         }
 
