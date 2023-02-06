@@ -56,6 +56,9 @@ namespace vgwb.lanoria
         {
             if (GameFSM.state == GameplayState.Play) {
                 Debug.Log("Simulate Playing Card " + whichCard);
+                var tileToPlace = GameFSM.GetTileByCardIndex(whichCard - 1);
+                var hexposition = new Hex(1, 2).ToWorld();
+                tileToPlace.ManualSetPostion(hexposition, HexDirection.E);
             }
         }
 
