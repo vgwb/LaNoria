@@ -8,6 +8,22 @@ namespace vgwb.lanoria
     public static class HexDirectionExtensions
     {
 
+        public static HexDirection GetByDelta(this HexDirection direction, int delta)
+        {
+            if (delta == 1) {
+                return Next(direction);
+            } else if (delta == 2) {
+                return Next2(direction);
+            } else if (delta == 3) {
+                return Opposite(direction);
+            } else if (delta == -1) {
+                return Previous(direction);
+            } else if (delta == -2) {
+                return Previous2(direction);
+            }
+            return direction;
+        }
+
         public static HexDirection Opposite(this HexDirection direction) =>
             (int)direction < 3 ? (direction + 3) : (direction - 3);
 

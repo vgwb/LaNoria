@@ -149,12 +149,35 @@ namespace vgwb.lanoria
             return false;
         }
 
-        private bool canShapeBePlacedHere(Hex startingHex, List<HexDirection> shape, HexDirection direction)
+        private bool canShapeBePlacedHere(Hex startingHex, List<int> shape, HexDirection direction)
         {
             var neightbour = startingHex.GetNeighbour(direction);
-            if (GetCellByHex(neightbour) != null && !GetCellByHex(neightbour).Occupied) {
-                Debug.Log("GOOD NEIGHBOR IS " + neightbour);
-                return true;
+            if (shape.Count == 1) {
+                // size = 2
+                if (GetCellByHex(neightbour) != null && !GetCellByHex(neightbour).Occupied) {
+                    return true;
+                }
+            } else if (shape.Count == 2) {
+                // size = 3
+                var neightbour2 = neightbour.GetNeighbour(HexDirectionExtensions.GetByDelta(direction, shape[1]));
+                if (GetCellByHex(neightbour) != null && !GetCellByHex(neightbour).Occupied
+                && GetCellByHex(neightbour2) != null && !GetCellByHex(neightbour2).Occupied) {
+                    return true;
+                }
+            } else if (shape.Count == 3) {
+                //                Debug.Log("Shape size 4");
+                // size = 4
+                var neightbour2 = neightbour.GetNeighbour(HexDirectionExtensions.GetByDelta(direction, shape[1]));
+                var neightbour3 = neightbour2.GetNeighbour(HexDirectionExtensions.GetByDelta(direction, shape[2]));
+                // Debug.Log("startingHex: " + startingHex);
+                // Debug.Log("neightbour1: " + neightbour);
+                // Debug.Log("neightbour2: " + neightbour2);
+                // Debug.Log("neightbour3: " + neightbour3);
+                if (GetCellByHex(neightbour) != null && !GetCellByHex(neightbour).Occupied
+                && GetCellByHex(neightbour2) != null && !GetCellByHex(neightbour2).Occupied
+                && GetCellByHex(neightbour3) != null && !GetCellByHex(neightbour3).Occupied) {
+                    return true;
+                }
             }
             return false;
         }

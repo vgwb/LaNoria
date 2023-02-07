@@ -147,12 +147,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314b31df608a1fe45b10a86663022a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Project:
+    Id: 
+    Active: 1
+    TileModel: 0
+    Sequence: 
+    Title: 
+    Description: 
+    Image: {fileID: 0}
   Model: 31
   Cells:
   - {fileID: 88541917640280768}
   - {fileID: 7512296565206503040}
   - {fileID: 7668684301602921804}
-  Shape: 0200000004000000
+  ShapeInt: 0000000002000000
   Pivot: {fileID: 5719024331935106398}
   CellsContainer: {fileID: 956721596140025669}
   OutlineHandler: {fileID: 7332092013841500199}

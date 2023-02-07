@@ -25,7 +25,7 @@ namespace vgwb.lanoria
         public ProjectData Project;
         public TileModel Model;
         public List<TileCell> Cells;
-        public List<HexDirection> Shape;
+        public List<int> Shape;
 
         [Header("Ref")]
         public GameObject Pivot;
