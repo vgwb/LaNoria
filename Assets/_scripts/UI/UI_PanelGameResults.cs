@@ -15,6 +15,11 @@ namespace vgwb.lanoria
             BtnExit.onClick.AddListener(() => GameManager.I.ExitGame());
         }
 
+        public void ShowResult(int blablabla_score)
+        {
+
+        }
+
         public void OpenPanel()
         {
             gameObject.SetActive(true);
