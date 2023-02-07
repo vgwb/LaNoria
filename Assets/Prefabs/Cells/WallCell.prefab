@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7170789528015079982}
   - component: {fileID: 3461686897241776169}
+  - component: {fileID: 830340673448117055}
   m_Layer: 0
   m_Name: WallCell
   m_TagString: Untagged
@@ -135,6 +136,19 @@ MonoBehaviour:
   ShowNeighbours: 0
   minRadius: 1
   maxRadius: 2
+--- !u!114 &830340673448117055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8142726310909514601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69269fe3d31786941a1d12ef263407a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Areas: 
 --- !u!1001 &3061183885340031199
 PrefabInstance:
   m_ObjectHideFlags: 0
