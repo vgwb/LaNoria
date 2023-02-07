@@ -46,16 +46,16 @@ namespace vgwb.lanoria
 
             // GamePlay play Tile
             if (Input.GetKeyDown(KeyCode.Alpha1)) {
-                GameManager.I.DebugPlayCard(1);
+                GameManager.I.AutomaticPlayCard(1);
             }
             if (Input.GetKeyDown(KeyCode.Alpha2)) {
-                GameManager.I.DebugPlayCard(2);
+                GameManager.I.AutomaticPlayCard(2);
             }
             if (Input.GetKeyDown(KeyCode.Alpha3)) {
-                GameManager.I.DebugPlayCard(3);
+                GameManager.I.AutomaticPlayCard(3);
             }
             if (Input.GetKeyDown(KeyCode.Alpha4)) {
-                GameManager.I.DebugPlayCard(4);
+                GameManager.I.AutomaticPlayCard(4);
             }
         }
     }

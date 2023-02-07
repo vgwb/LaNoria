@@ -7,11 +7,7 @@ namespace vgwb.lanoria
 {
     public class UICameraManager : SingletonMonoBehaviour<UICameraManager>
     {
-        #region Var
         public List<UICamera> Cams;
-        #endregion
-
-        #region Functions
         public Texture GetUICameraTexture(int cameraIndex)
         {
             if (IsIndexValid(cameraIndex)) {
@@ -64,7 +60,6 @@ namespace vgwb.lanoria
             if (IsIndexValid(cameraIndex)) {
                 rot = Cams[cameraIndex].GetSubjectRotation();
             }
-
             return rot;
         }
 
@@ -74,9 +69,7 @@ namespace vgwb.lanoria
             if (indexOk) {
                 return Cams[cameraIndex] != null;
             }
-
             return false;
         }
-        #endregion
     }
 }

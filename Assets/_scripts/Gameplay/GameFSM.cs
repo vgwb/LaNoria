@@ -2,6 +2,7 @@ using DG.Tweening;
 using Lean.Touch;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 namespace vgwb.lanoria
 {
@@ -19,11 +20,9 @@ namespace vgwb.lanoria
 
     public class GameFSM : MonoBehaviour
     {
+        [Required]
         public GameObject CardPrefab;
-        public delegate void GameplayStateEvent(GameplayState state);
-        public GameplayStateEvent OnStateUpdate;
 
-        public GameplayState state { get; private set; }
         private int currentCardIndex;
         public Tile currentTile { get; private set; }
         public ProjectData CurrentProjectData { get; private set; }
@@ -32,12 +31,12 @@ namespace vgwb.lanoria
         private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
 
+        public delegate void GameplayStateEvent(GameplayState state);
+        public GameplayStateEvent OnStateUpdate;
+        public GameplayState state { get; private set; }
+
         void Start()
         {
-            if (CardPrefab == null) {
-                Debug.LogError("GameFSM - Awake(): no card prefab defined!");
-            }
-
             state = GameplayState.None;
             ResetValues();
         }
@@ -78,7 +77,7 @@ namespace vgwb.lanoria
                     Destroy(currentTile.gameObject);
                 }
 
-                CleanPreview();
+                CleanPointsPreview();
                 currentCardIndex = cardIndex;
                 CurrentProjectData = projectData;
                 spawner.Prefab = placeablePrefab;
@@ -87,7 +86,7 @@ namespace vgwb.lanoria
             }
         }
 
-        public void ConfirmProject()
+        public void ConfirmCurrentTile()
         {
             SoundManager.I.PlaySfx(AudioEnum.tile_confirmed);
             currentTile.OnProjectConfirmed();
@@ -95,7 +94,7 @@ namespace vgwb.lanoria
             ScoreManager.I.UpdateScore(currentTile);
             ResetProjectPanel();
             ResetValues();
-            CleanPreview();
+            CleanPointsPreview();
 
             SetState(GameplayState.Score);
         }
@@ -120,9 +119,9 @@ namespace vgwb.lanoria
             }
         }
 
-        public void CleanPreview()
+        public void CleanPointsPreview()
         {
-            PreviewManager.I.CleanPreview();
+            PointsPreviewManager.I.CleanPreview();
         }
 
         public Tile GetTileByCardIndex(int index)
@@ -145,7 +144,7 @@ namespace vgwb.lanoria
         public void PlayCardDebug(Tile tile)
         {
             currentTile = tile;
-            ConfirmProject();
+            ConfirmCurrentTile();
         }
 
         private void SetState(GameplayState newState)
@@ -185,9 +184,9 @@ namespace vgwb.lanoria
         {
             if (currentTile != null) {
                 if (currentTile.IsValidPosition) {
-                    PreviewManager.I.PreviewScore(currentTile);
+                    PointsPreviewManager.I.PreviewScore(currentTile);
                 } else {
-                    PreviewManager.I.CleanPreview();
+                    PointsPreviewManager.I.CleanPreview();
                 }
             }
         }
@@ -267,8 +266,7 @@ namespace vgwb.lanoria
                         card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
                         // spawn the object in camera UI
                         var UIPrefab = UICameraManager.I.SpawnPrefabInCamera(cardIndex, tilePrefab, projectData);
-                        bool placeable = IsProjectPlaceable(UIPrefab);
-                        card.SetPlayable(placeable);
+                        card.SetPlayable(IsTilePlaceableOnBoard(UIPrefab));
                     }
                     cardIndex++;
                 }
@@ -280,14 +278,13 @@ namespace vgwb.lanoria
             }
         }
 
-        private bool IsProjectPlaceable(GameObject prefabInstance)
+        private bool IsTilePlaceableOnBoard(GameObject tilePrefab)
         {
-            var tile = prefabInstance.GetComponent<Tile>();
+            var tile = tilePrefab.GetComponent<Tile>();
             if (tile != null) {
                 projectTiles.Add(tile);
                 return GridManager.I.CanProjectBePlaced(tile);
             }
-
             return false;
         }
 
@@ -314,7 +311,7 @@ namespace vgwb.lanoria
             spawner.OnSpawnedClone += OnPrefabSpawned;
             UIGame.OnProjectDragged += OnProjectDrag;
             UIGame.OnCurrentProjectSelected += OnProjectSelect;
-            UIGame.BtnConfirm.onClick.AddListener(() => ConfirmProject());
+            UIGame.BtnConfirm.onClick.AddListener(() => ConfirmCurrentTile());
         }
 
         private void EventsUnsubscribe()
@@ -322,7 +319,7 @@ namespace vgwb.lanoria
             spawner.OnSpawnedClone -= OnPrefabSpawned;
             UIGame.OnProjectDragged -= OnProjectDrag;
             UIGame.OnCurrentProjectSelected += OnProjectSelect;
-            UIGame.BtnConfirm.onClick.RemoveListener(() => ConfirmProject());
+            UIGame.BtnConfirm.onClick.RemoveListener(() => ConfirmCurrentTile());
         }
 
         private void CardEntrance()
@@ -377,7 +374,7 @@ namespace vgwb.lanoria
                 case GameplayState.Play:
                     break;
                 case GameplayState.Score:
-                    CleanPreview();
+                    CleanPointsPreview();
                     SetState(GameplayState.Drawing);// handle score efx
                     break;
                 case GameplayState.End:

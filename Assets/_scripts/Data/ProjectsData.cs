@@ -20,6 +20,11 @@ namespace vgwb.lanoria
         public string Description;
         [ShowAssetPreview(128, 128)]
         public Sprite Image;
+
+        public override string ToString()
+        {
+            return Title + " - " + Sequence.Length;
+        }
     }
 
     [CreateAssetMenu(menuName = "VGWB/Projects Data")]
@@ -45,5 +50,6 @@ namespace vgwb.lanoria
                 return GameData.I.Tiles.GetTileBySize(projectData.Sequence.Length);
             }
         }
+
     }
 }

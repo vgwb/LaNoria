@@ -130,7 +130,7 @@ namespace vgwb.lanoria
             return true;
         }
 
-        public bool GetGoodTileLocation(Tile tile, out TileLocation foundLocation)
+        public bool GetGoodTileLocation(List<int> shapePath, out TileLocation foundLocation)
         {
             foundLocation = new TileLocation();
             foreach (var cell in Cells) {
@@ -139,7 +139,7 @@ namespace vgwb.lanoria
                 }
 
                 foreach (HexDirection direction in Enum.GetValues(typeof(HexDirection))) {
-                    if (canShapeBePlacedHere(cell.hex, tile.Shape, direction)) {
+                    if (canShapeBePlacedHere(cell.hex, shapePath, direction)) {
                         foundLocation.Position = cell.hex;
                         foundLocation.Direction = direction;
                         return true;

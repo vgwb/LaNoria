@@ -10,7 +10,7 @@ namespace vgwb.lanoria
     public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         public GameFSM GameFSM;
-        public PreviewManager Preview;
+        public PointsPreviewManager Preview;
 
         private UI_Gameplay UIGame;
         private LeanSpawnWithFinger spawner;
@@ -52,15 +52,17 @@ namespace vgwb.lanoria
 
         #region Debug and Editor Methods
 
-        public void DebugPlayCard(int whichCard)
+        public void AutomaticPlayCard(int whichCard)
         {
             if (GameFSM.state == GameplayState.Play) {
                 Debug.Log("Simulate Playing Card " + whichCard);
                 var card = GameFSM.GetCard(whichCard - 1); // get card
-                var tileInstance = Instantiate(card.MyPrefab); // instantiate project
-                var tileToPlace = tileInstance.GetComponent<Tile>();
+                Debug.Log(card.Project);
                 var foundLocation = new TileLocation();
-                if (GridManager.I.GetGoodTileLocation(tileToPlace, out foundLocation)) {
+                var shape = card.TilePrefab.GetComponent<Tile>().ShapePath;
+                if (GridManager.I.GetGoodTileLocation(shape, out foundLocation)) {
+                    var tileInstance = Instantiate(card.TilePrefab); // instantiate project
+                    var tileToPlace = tileInstance.GetComponent<Tile>();
                     tileToPlace.ManualSetPosition(foundLocation.Position.ToWorld(), foundLocation.Direction);
                     tileToPlace.SetupCellsColor(card.Project);
                     GameFSM.PlayCardDebug(tileToPlace);

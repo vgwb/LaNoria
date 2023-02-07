@@ -5,7 +5,7 @@ using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    public class PreviewManager : SingletonMonoBehaviour<PreviewManager>
+    public class PointsPreviewManager : SingletonMonoBehaviour<PointsPreviewManager>
     {
         public GameObject PointPreviewPrefab;
         public bool UsePreview = true;

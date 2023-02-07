@@ -158,7 +158,7 @@ MonoBehaviour:
   Cells:
   - {fileID: 1411005572551938167}
   - {fileID: 7876634295498519714}
-  ShapeInt: 00000000
+  ShapePath: 00000000
   Pivot: {fileID: 5976312339718104456}
   CellsContainer: {fileID: 1378387405956758192}
   OutlineHandler: {fileID: 4342413685833157362}

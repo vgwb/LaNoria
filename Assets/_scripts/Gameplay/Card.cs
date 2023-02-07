@@ -10,15 +10,13 @@ namespace vgwb.lanoria
 {
     public class Card : MonoBehaviour
     {
-        [Header("UI Elements")]
         public TMP_Text CardTitle;
         public Button ClickableComp;
         public RawImage PrefabImg;
-        public GameObject MyPrefab;
 
         [HideInInspector]
-        public ProjectData Project;
-
+        public ProjectData Project { get; private set; }
+        public GameObject TilePrefab { get; private set; }
         public RectTransform Rect { get; private set; }
 
         private void Awake()
@@ -29,7 +27,7 @@ namespace vgwb.lanoria
         public void Init(ProjectData projectData, Texture texture, GameObject prefabUsed)
         {
             Project = projectData;
-            MyPrefab = prefabUsed;
+            TilePrefab = prefabUsed;
             SetTitle(Project.Title);
             SetImage(texture); // visualize the 3d prefab into the canvas
         }
