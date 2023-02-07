@@ -398,6 +398,7 @@ namespace vgwb.lanoria
                 case GameplayState.Intro:
                     break;
                 case GameplayState.Setup:
+                    BoardManager.I.ShowOutland(false);
                     break;
                 case GameplayState.Drawing:
                     break;

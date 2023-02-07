@@ -23,6 +23,11 @@ namespace vgwb.lanoria
             MapContainer.SetActive(status);
         }
 
+        public void ShowOutland(bool status)
+        {
+            MapOutlandContainer.SetActive(status);
+        }
+
         public void EmptyProjectsContainer()
         {
             foreach (Transform t in ProjectsContainer.transform) {
