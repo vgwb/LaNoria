@@ -47,7 +47,7 @@ MonoBehaviour:
     Volume: 0.5
   - id: 9
     Channel: 1
-    audioClip: {fileID: 8300000, guid: 387c282cc3acca14bb509f31e6c265e4, type: 3}
+    audioClip: {fileID: 8300000, guid: 54c5476c618d3461b832d0ac4b685a4f, type: 3}
     Volume: 0.5
   - id: 20
     Channel: 3
