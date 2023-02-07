@@ -47,6 +47,7 @@ namespace vgwb.lanoria
         {
             GameFSM.EndGame();
             UI_manager.I.ShowGamePause(false);
+            UI_manager.I.ShowGameResult(false);
             UI_manager.I.Show(UI_manager.States.Home);
         }
 
