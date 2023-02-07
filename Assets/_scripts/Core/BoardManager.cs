@@ -40,5 +40,10 @@ namespace vgwb.lanoria
             return height;
         }
 
+        public void TileCollidesWithOutland(bool status)
+        {
+
+        }
+
     }
 }
