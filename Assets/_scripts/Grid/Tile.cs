@@ -132,7 +132,7 @@ namespace vgwb.lanoria
             Destroy(ParentInPivot);
         }
 
-        public void OnProjectConfirmed()
+        public void OnTileConfirmed()
         {
             EnableLeanComponents(false);
             EnablePivot(false); // deactivate pivot and colliders
@@ -140,6 +140,7 @@ namespace vgwb.lanoria
             DisableOutline();
             StopUsingMe();
             LowerDownTilesHeight(true);
+            TileManager.I.AddTilesToPlaced(Cells);
         }
 
         public void EnablePivot(bool enable)

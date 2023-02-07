@@ -89,7 +89,7 @@ namespace vgwb.lanoria
         public void ConfirmCurrentTile()
         {
             SoundManager.I.PlaySfx(AudioEnum.tile_confirmed);
-            currentTile.OnProjectConfirmed();
+            currentTile.OnTileConfirmed();
             currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
             ScoreManager.I.UpdateScore(currentTile);
             ResetProjectPanel();
@@ -362,6 +362,7 @@ namespace vgwb.lanoria
                 case GameplayState.Setup:
                     UIGame.ScoreUI.Init(0);
                     CameraManager.I.SwitchToPlayCamera();
+                    TileManager.I.Clean();
                     DeckManager.I.PrepareNewDeck();
                     ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;

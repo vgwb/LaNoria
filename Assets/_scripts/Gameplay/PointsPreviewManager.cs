@@ -7,8 +7,13 @@ namespace vgwb.lanoria
 {
     public class PointsPreviewManager : SingletonMonoBehaviour<PointsPreviewManager>
     {
-        public GameObject PointPreviewPrefab;
         public bool UsePreview = true;
+        private List<CellScoreToDisplay> cellsScore;
+
+        private void Start()
+        {
+            cellsScore = new List<CellScoreToDisplay>();
+        }
 
         public void PreviewScore(Tile placeable)
         {
@@ -17,30 +22,26 @@ namespace vgwb.lanoria
                 return;
             }
 
-            var points = ScoreManager.I.CalculateSynergy(placeable);
-            foreach (var point in points) {
-                InstantiatePointPreview(point, 1);
+            cellsScore = ScoreManager.I.CalculateSynergy(placeable);
+            foreach (var cellScore in cellsScore) {
+                DrawPreviewScore(cellScore.Cell, cellScore.Score);
             }
         }
 
         public void CleanPreview()
         {
-            var elements = UI_manager.I.PanelGameplay.GetPreviewElements();
-            foreach (var element in elements) {
-                Destroy(element);
+            foreach (var cellScore in cellsScore) {
+                cellScore.Cell.SetLabel("");
             }
+
+            cellsScore.Clear();
         }
 
-        private GameObject InstantiatePointPreview(Vector3 worldPos, int points)
+        private void DrawPreviewScore(TileCell cell, float score)
         {
-            var parent = UI_manager.I.PanelGameplay.PanelPreview;
-            var instance = Instantiate(PointPreviewPrefab, parent);
-            var pointPreview = instance.GetComponent<PointPreview>();
-            if (pointPreview != null) {
-                pointPreview.Init(worldPos, points);
+            if (cell != null) {
+                cell.SetLabel(score.ToString());
             }
-
-            return instance;
         }
     }
 }

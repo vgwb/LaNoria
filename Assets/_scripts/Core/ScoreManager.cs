@@ -5,6 +5,18 @@ using vgwb.framework;
 
 namespace vgwb.lanoria
 {
+    [System.Serializable]
+    public class CellScoreToDisplay
+    {
+        public TileCell Cell;
+        public float Score;
+
+        public CellScoreToDisplay(TileCell cell, float score)
+        {
+            Cell = cell;
+            Score = score;
+        }
+    }
     public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     {
         public int Score { get; private set; }
@@ -29,21 +41,16 @@ namespace vgwb.lanoria
             UI_manager.I.PanelGameplay.SetScoreUI(Score, newPoints);
         }
 
-        public void PreviewSynergy()
-        {
-
-        }
-
         private int CalculateBasicPoints(Tile tile)
         {
             return tile.Size;
         }
 
-        public List<Vector3> CalculateSynergy(Tile tile)
+        public List<CellScoreToDisplay> CalculateSynergy(Tile tile)
         {
             int resultingScore = 0;
             var positionsToExclude = tile.GetCellsHexPositions();
-            var synergyPoints = new List<Vector3>();
+            var synergyCells = new List<CellScoreToDisplay>();
 
             foreach (var cell in tile.Cells) {
                 var neighbours = GridManager.I.GetNeighboursByPos(cell.HexPosition);
@@ -51,16 +58,24 @@ namespace vgwb.lanoria
                     if (positionsToExclude.Contains(neighbour.HexPosition)) {
                         continue;
                     }
-                    if (neighbour.Category == cell.Category) {
-                        resultingScore++;
-                        Vector3 midPoint = cell.HexPosition + (neighbour.HexPosition - cell.HexPosition) / 2;
-                        synergyPoints.Add(midPoint);
+                    var existingCell = TileManager.I.GetPlacedTileByPosition(neighbour.HexPosition);
+                    if (existingCell != null) {
+                        CellScoreToDisplay cellScore = synergyCells.Find(x => x.Cell == existingCell);
+                        if (cellScore == null) {
+                            cellScore = new CellScoreToDisplay(existingCell, 0);
+                            synergyCells.Add(cellScore);
+                        }
+
+                        if (neighbour.Category == cell.Category) {
+                            resultingScore++;
+                            cellScore.Score += 1;
+                        }
                     }
                 }
             }
 
             synergyScore = resultingScore;
-            return synergyPoints;
+            return synergyCells;
         }
 
         private int CalculateTransversality(Tile tile)
