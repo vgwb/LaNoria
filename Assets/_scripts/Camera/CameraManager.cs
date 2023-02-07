@@ -98,6 +98,11 @@ namespace vgwb.lanoria
             cameraMover.CanMove = enable;
         }
 
+        public void ResetCameraGameplay()
+        {
+            cameraMover.ResetCam();
+        }
+
         private void Setup()
         {
             if (CameraGameplayPrefab == null) {

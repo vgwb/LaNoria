@@ -8,7 +8,7 @@ namespace vgwb.lanoria
 {
     public class GridManager : SingletonMonoBehaviour<GridManager>
     {
-        [HideInInspector]
+        //[HideInInspector]
         public List<GridCell> Cells;
 
         Hex currentHex = new Hex(0, 0);

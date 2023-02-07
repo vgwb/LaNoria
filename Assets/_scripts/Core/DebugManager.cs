@@ -45,6 +45,9 @@ namespace vgwb.lanoria
             }
 
             // GamePlay play Tile
+            if (Input.GetKeyDown(KeyCode.Alpha0)) {
+                GameManager.I.AutomaticEndGame();
+            }
             if (Input.GetKeyDown(KeyCode.Alpha1)) {
                 GameManager.I.AutomaticPlayCard(1);
             }

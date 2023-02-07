@@ -22,13 +22,12 @@ namespace vgwb.lanoria
 
         public void StartGame()
         {
-            BoardManager.I.EmptyProjectsContainer();
             GameFSM.StartGame();
         }
 
-        public void EndGame()
+        public void ForceEndGame()
         {
-            GameFSM.EndGame();
+            GameFSM.ForceEndGame();
         }
 
         public void PauseGame()
@@ -45,10 +44,7 @@ namespace vgwb.lanoria
 
         public void ExitGame()
         {
-            GameFSM.EndGame();
-            UI_manager.I.ShowGamePause(false);
-            UI_manager.I.ShowGameResult(false);
-            UI_manager.I.Show(UI_manager.States.Home);
+            GameFSM.ExitGame();            
         }
 
         #region Debug and Editor Methods
@@ -71,6 +67,11 @@ namespace vgwb.lanoria
                     Debug.Log("NOT FOUND ANY POSITION");
                 }
             }
+        }
+
+        public void AutomaticEndGame()
+        {
+            GameFSM.DebugEndGame();
         }
 
         #endregion

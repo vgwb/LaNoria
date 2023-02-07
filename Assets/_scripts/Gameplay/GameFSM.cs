@@ -14,7 +14,9 @@ namespace vgwb.lanoria
         Drawing, // draw step
         Play, // here we play!
         Score, // counting the score after a tile is placed
-        End, // end the game and show the final score
+        Show, // show the final score
+        End, // end the game
+        ForceEnd, // force the end game
         Pause // game is in pause
     }
 
@@ -50,19 +52,23 @@ namespace vgwb.lanoria
         {
             UIGame = UI_manager.I.PanelGameplay;
             spawner = UIGame.Spawner;
-            EventsSubscribe();
+            BoardManager.I.EmptyProjectsContainer();
             SetState(GameplayState.Intro);
         }
 
-        public void EndGame()
+        public void ForceEndGame()
         {
-            EventsUnsubscribe();
-            SetState(GameplayState.End);
+            SetState(GameplayState.ForceEnd);
         }
 
         public void PauseGame()
         {
             SetState(GameplayState.Pause);
+        }
+
+        public void ExitGame()
+        {
+            SetState(GameplayState.None);
         }
 
         public void ResumeGame()
@@ -145,6 +151,11 @@ namespace vgwb.lanoria
         {
             currentTile = tile;
             ConfirmCurrentTile();
+        }
+
+        public void DebugEndGame()
+        {
+            SetState(GameplayState.Show);
         }
 
         private void SetState(GameplayState newState)
@@ -275,7 +286,7 @@ namespace vgwb.lanoria
                 SoundManager.I.PlaySfx(AudioEnum.shuffle);
             } else {
                 // NO MORE CARDS - GAME ENDS
-                SetState(GameplayState.End);
+                SetState(GameplayState.Show);
             }
         }
 
@@ -300,7 +311,7 @@ namespace vgwb.lanoria
             }
             //            Debug.Log("Cards available: " + cardAvailable);
             if (!cardAvailable) {
-                SetState(GameplayState.End);
+                SetState(GameplayState.Show);
             } else {
                 SetState(GameplayState.Play);
                 UIGame.SetCanvasInteractable(true);
@@ -317,10 +328,13 @@ namespace vgwb.lanoria
 
         private void EventsUnsubscribe()
         {
-            spawner.OnSpawnedClone -= OnPrefabSpawned;
+            if (spawner != null) {
+                spawner.OnSpawnedClone -= OnPrefabSpawned;
+            }
+            
             UIGame.OnProjectDragged -= OnProjectDrag;
-            UIGame.OnCurrentProjectSelected += OnProjectSelect;
-            UIGame.BtnConfirm.onClick.RemoveListener(() => ConfirmCurrentTile());
+            UIGame.OnCurrentProjectSelected -= OnProjectSelect;
+            UIGame.BtnConfirm.onClick.RemoveAllListeners();
         }
 
         private void CardEntrance()
@@ -364,6 +378,8 @@ namespace vgwb.lanoria
                     CameraManager.I.SwitchToPlayCamera();
                     TileManager.I.Clean();
                     DeckManager.I.PrepareNewDeck();
+                    GridManager.I.InitCells();
+                    UI_manager.I.PanelGameResults.SetScore(0);
                     ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;
                     UIGame.FadeCanvas(1.0f, duration, () => EndSetup());
@@ -379,10 +395,18 @@ namespace vgwb.lanoria
                     CleanPointsPreview();
                     SetState(GameplayState.Drawing);// handle score efx
                     break;
+                case GameplayState.Show:
+                    UI_manager.I.PanelGameResults.SetScore(ScoreManager.I.Score);
+                    UI_manager.I.ShowGameResult(true);
+                    SetState(GameplayState.End);
+                    break;
                 case GameplayState.End:
                     Debug.Log("End Game!");
-                    UI_manager.I.ShowGameResult(true);
-                    CameraManager.I.SwitchToMenuCamera(); // TODO: camera swap should go here?
+                    CameraManager.I.ResetCameraGameplay();
+                    break;
+                case GameplayState.ForceEnd:
+                    CameraManager.I.ResetCameraGameplay();
+                    SetState(GameplayState.None);
                     break;
                 case GameplayState.Pause:
                     break;
@@ -396,6 +420,7 @@ namespace vgwb.lanoria
                 case GameplayState.None:
                     break;
                 case GameplayState.Intro:
+                    EventsSubscribe();
                     break;
                 case GameplayState.Setup:
                     BoardManager.I.ShowOutland(false);
@@ -407,7 +432,18 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Score:
                     break;
+                case GameplayState.Show:
+                    break;
+                case GameplayState.ForceEnd:
                 case GameplayState.End:
+                    EventsUnsubscribe();
+                    EmptyHand();
+                    BoardManager.I.EmptyProjectsContainer();
+                    BoardManager.I.ShowOutland(true);
+                    CameraManager.I.SwitchToMenuCamera();
+                    UI_manager.I.ShowGamePause(false);
+                    UI_manager.I.ShowGameResult(false);
+                    UI_manager.I.Show(UI_manager.States.Home);
                     break;
                 case GameplayState.Pause:
                     break;

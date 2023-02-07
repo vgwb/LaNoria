@@ -10,15 +10,15 @@ public class CameraMove : MonoBehaviour
     public bool CanMove = false;
     private bool drag = false;
     private float fixDistance;  //where the screen world point should hit!
-    private Vector3 Origin;
-    private Vector3 Difference;
-    private Vector3 ResetCamera;
+    private Vector3 origin;
+    private Vector3 difference;
+    private Vector3 resetCamera;
     #endregion
 
     #region MonoB
     private void Start()
     {
-        ResetCamera = Cam.transform.position;
+        resetCamera = Cam.transform.position;
         fixDistance = Cam.transform.position.z;
     }
 
@@ -32,25 +32,32 @@ public class CameraMove : MonoBehaviour
             var mousePos = Input.mousePosition;
             mousePos.z = fixDistance;
             var worldMouse = Cam.ScreenToWorldPoint(mousePos);
-            Difference = (worldMouse) - Cam.transform.position;
+            difference = (worldMouse) - Cam.transform.position;
             if(drag == false) {
                 drag = true;
-                Origin = worldMouse;
+                origin = worldMouse;
             }
         } else {
             drag = false;
         }
 
         if (drag) {
-            Vector3 destination = Origin - Difference;
-            float deltaX = Mathf.Abs(ResetCamera.x - destination.x);
-            float deltaY = Mathf.Abs(ResetCamera.y - destination.y);
+            Vector3 destination = origin - difference;
+            float deltaX = Mathf.Abs(resetCamera.x - destination.x);
+            float deltaY = Mathf.Abs(resetCamera.y - destination.y);
             float clampX = GameplayConfig.I.MovementXClamp;
             float clampY = GameplayConfig.I.MovementYClamp;
             if (deltaX <= clampX && deltaY <= clampY) {
                 Cam.transform.position = destination;
             }
         }        
+    }
+    #endregion
+
+    #region Functions
+    public void ResetCam()
+    {
+        Cam.transform.position = resetCamera;
     }
     #endregion
 }

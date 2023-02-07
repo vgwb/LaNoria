@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ namespace vgwb.lanoria
     {
         public Button BtnResume;
         public Button BtnExit;
+        public TMP_Text Score;
 
         void Start()
         {
@@ -28,6 +30,19 @@ namespace vgwb.lanoria
         public void ClosePanel()
         {
             gameObject.SetActive(false);
+        }
+
+        public void SetScore(string score)
+        {
+            if (Score != null) {
+                Score.text = score;
+                Debug.Log("arg: "+score+" txt: "+Score.text);
+            }
+        }
+
+        public void SetScore(int score)
+        {
+            SetScore(score.ToString());
         }
     }
 }

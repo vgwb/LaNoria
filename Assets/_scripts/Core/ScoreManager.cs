@@ -41,6 +41,12 @@ namespace vgwb.lanoria
             UI_manager.I.PanelGameplay.SetScoreUI(Score, newPoints);
         }
 
+        public void ResetScore()
+        {
+            Score = 0;
+            synergyScore = 0;
+        }
+
         private int CalculateBasicPoints(Tile tile)
         {
             return tile.Size;
