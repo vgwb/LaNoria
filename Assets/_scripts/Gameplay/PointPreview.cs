@@ -38,7 +38,8 @@ namespace vgwb.lanoria
 
         public void SetUIPosOnWorldPos()
         {
-            Vector3 posUI = Camera.main.WorldToScreenPoint(targetWorldPos);
+            var activecamera = CameraManager.I.GetActiveCamera();
+            Vector3 posUI = activecamera.WorldToScreenPoint(targetWorldPos);
             Rect.position = posUI;
         }
     }

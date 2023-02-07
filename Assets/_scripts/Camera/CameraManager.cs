@@ -12,12 +12,20 @@ namespace vgwb.lanoria
     {
         #region Var
         [Header("Components")]
-        public Camera Cam;
+        public GameObject CameraGameplayPrefab;
         public LeanMultiUpdate LeanUpdate;
         public LeanPitchYaw PitchYaw;
         public LeanPitchYawAutoRotate AutoRotate;
 
+        [SerializeField] private Camera cameraMenu;
+        private Camera cameraGameplay;
+        private GameObject cameraGameplayContainer;
+        private CameraMove cameraMover;
         private Vector3 originalRot;
+        private Vector3 startMoveFrom;
+        private Vector3 deltaMov;
+        private Camera activeCamera;
+        private bool drag;
         #endregion
 
         #region MonoB
@@ -25,8 +33,10 @@ namespace vgwb.lanoria
         {
             base.Awake();
 
+            Setup();
             originalRot = transform.eulerAngles;
             EnableRotationWithFingers(false);
+            EnableCameraMove(false);
         }
         #endregion
 
@@ -58,6 +68,51 @@ namespace vgwb.lanoria
             float toVal = originalRot.y;
             float duration = GameplayConfig.I.ResetCameraRotYOnPlay;
             DOVirtual.Float(fromVal, toVal, duration, y => PitchYaw.Yaw = y).OnComplete(callback);
+        }
+
+        public Camera GetActiveCamera()
+        {
+            return activeCamera;
+        }
+
+        public void SwitchToMenuCamera()
+        {
+            activeCamera = cameraMenu;
+            cameraMenu.tag = "MainCamera";
+            cameraGameplay.tag = "Untagged";
+            cameraMenu.gameObject.SetActive(true);
+            cameraGameplay.gameObject.SetActive(false);
+        }
+
+        public void SwitchToPlayCamera()
+        {
+            activeCamera = cameraGameplay;
+            cameraMenu.tag = "Untagged";
+            cameraGameplay.tag = "MainCamera";
+            cameraGameplay.gameObject.SetActive(true);
+            cameraMenu.gameObject.SetActive(false);
+        }
+
+        public void EnableCameraMove(bool enable)
+        {
+            cameraMover.CanMove = enable;
+        }
+
+        private void Setup()
+        {
+            if (CameraGameplayPrefab == null) {
+                Debug.LogError("CameraManager - Setup(): no camera prefab defined!");
+                return;
+            }
+
+            cameraGameplayContainer = Instantiate(CameraGameplayPrefab);
+            cameraGameplay = cameraGameplayContainer.GetComponentInChildren<Camera>();
+            cameraGameplay.fieldOfView = cameraMenu.fieldOfView;
+            cameraMover = cameraGameplayContainer.GetComponentInChildren<CameraMove>();
+            SwitchToMenuCamera();
+
+            cameraGameplay.transform.position = cameraMenu.transform.position;
+            cameraGameplay.transform.rotation = cameraMenu.transform.rotation;
         }
         #endregion
     }

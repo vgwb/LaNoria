@@ -39,5 +39,9 @@ namespace vgwb.lanoria
         public float ResetCameraRotYOnPlay = 1.0f;
         public float FadeInGameCanvas = 1.0f;
         public float CardAppearsTime = 1.0f;
+
+        [Header("Camera In Game")]
+        public float MovementXClamp = 4.0f;
+        public float MovementYClamp = 3.0f;
     }
 }

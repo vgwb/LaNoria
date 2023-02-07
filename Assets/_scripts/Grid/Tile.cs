@@ -106,7 +106,7 @@ namespace vgwb.lanoria
             SetY();
 
             LowerDownTilesHeight(false);
-            CameraManager.I.EnableRotationWithFingers(true);
+            CameraManager.I.EnableCameraMove(true);
         }
 
         public void OnSelect()

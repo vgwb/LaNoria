@@ -1,8 +1,8 @@
 using DG.Tweening;
 using Lean.Touch;
+using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
-using NaughtyAttributes;
 
 namespace vgwb.lanoria
 {
@@ -150,8 +150,9 @@ namespace vgwb.lanoria
         private void SetState(GameplayState newState)
         {
             if (state != newState) {
+                ExitState();
                 state = newState;
-                ReadState();
+                EnterState();
 
                 OnStateUpdate?.Invoke(state);
             }
@@ -176,7 +177,7 @@ namespace vgwb.lanoria
 
         private void OnPrefabSelect()
         {
-            CameraManager.I.EnableRotationWithFingers(false);
+            CameraManager.I.EnableCameraMove(false);
             UIGame.PrefabSelectionHUD();
         }
 
@@ -344,10 +345,9 @@ namespace vgwb.lanoria
         private void EndSetup()
         {
             SetState(GameplayState.Drawing);
-            CameraManager.I.EnableRotationWithFingers(true);
         }
 
-        private void ReadState()
+        private void EnterState()
         {
             switch (state) {
                 default:
@@ -361,7 +361,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Setup:
                     UIGame.ScoreUI.Init(0);
-                    //CameraManager.I.SwitchToPlayCamera();
+                    CameraManager.I.SwitchToPlayCamera();
                     DeckManager.I.PrepareNewDeck();
                     ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;
@@ -372,6 +372,7 @@ namespace vgwb.lanoria
                     CardEntrance();
                     break;
                 case GameplayState.Play:
+                    CameraManager.I.EnableCameraMove(true);
                     break;
                 case GameplayState.Score:
                     CleanPointsPreview();
@@ -380,7 +381,31 @@ namespace vgwb.lanoria
                 case GameplayState.End:
                     Debug.Log("End Game!");
                     UI_manager.I.ShowGameResult(true);
-                    //CameraManager.I.SwitchToMenuCamera(); // TODO: check if camera swap should gop here!
+                    CameraManager.I.SwitchToMenuCamera(); // TODO: camera swap should go here?
+                    break;
+                case GameplayState.Pause:
+                    break;
+            }
+        }
+
+        private void ExitState()
+        {
+            switch (state) {
+                default:
+                case GameplayState.None:
+                    break;
+                case GameplayState.Intro:
+                    break;
+                case GameplayState.Setup:
+                    break;
+                case GameplayState.Drawing:
+                    break;
+                case GameplayState.Play:
+                    CameraManager.I.EnableCameraMove(false);
+                    break;
+                case GameplayState.Score:
+                    break;
+                case GameplayState.End:
                     break;
                 case GameplayState.Pause:
                     break;
