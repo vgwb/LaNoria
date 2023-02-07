@@ -169,7 +169,7 @@ namespace vgwb.lanoria
         private void OnPrefabSpawned(GameObject clone)
         {
             currentTile = clone.GetComponent<Tile>();
-            currentTile.SetupCellsColor(currentTile.Project);
+            currentTile.SetupCellsColor(CurrentProjectData);
             currentTile.SetupForDrag();
             UIGame.EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
