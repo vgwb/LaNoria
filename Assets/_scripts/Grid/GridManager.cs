@@ -124,10 +124,10 @@ namespace vgwb.lanoria
             return Hex.FromWorld(pos).ToWorld(0f);
         }
 
-
-        public bool CanProjectBePlaced(Tile project)
+        public bool CanProjectBePlaced(Tile tile)
         {
-            return true;
+            var foundLocation = new TileLocation();
+            return GetGoodTileLocation(tile.ShapePath, out foundLocation);
         }
 
         public bool GetGoodTileLocation(List<int> shapePath, out TileLocation foundLocation)

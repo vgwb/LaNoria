@@ -261,7 +261,7 @@ namespace vgwb.lanoria
 
         private Vector3 GetHexRotation(HexDirection dir)
         {
-            Debug.Log("HexDirection + " + dir + " int:" + (int)dir);
+            //            Debug.Log("HexDirection + " + dir + " int:" + (int)dir);
             dir--;
             return new Vector3(0, 60 * (int)dir, 0);
         }

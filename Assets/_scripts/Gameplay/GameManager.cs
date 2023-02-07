@@ -55,9 +55,9 @@ namespace vgwb.lanoria
         public void AutomaticPlayCard(int whichCard)
         {
             if (GameFSM.state == GameplayState.Play) {
-                Debug.Log("Simulate Playing Card " + whichCard);
+                //                Debug.Log("Simulate Playing Card " + whichCard);
                 var card = GameFSM.GetCard(whichCard - 1); // get card
-                Debug.Log(card.Project);
+                                                           //                Debug.Log(card.Project);
                 var foundLocation = new TileLocation();
                 var shape = card.TilePrefab.GetComponent<Tile>().ShapePath;
                 if (GridManager.I.GetGoodTileLocation(shape, out foundLocation)) {
