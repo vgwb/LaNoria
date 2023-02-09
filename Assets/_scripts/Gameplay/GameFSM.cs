@@ -349,12 +349,10 @@ namespace vgwb.lanoria
                 case GameplayState.Intro:
                     UI_manager.I.Show(UI_manager.States.Play);
                     UIGame.SetCanvasAlpha(0.0f);
-                    CameraManager.I.EnableAutoRotate(false);
-                    CameraManager.I.ResetToOriginalRotY(() => SetState(GameplayState.Setup));
+                    SetState(GameplayState.Setup);
                     break;
                 case GameplayState.Setup:
                     UIGame.ScoreUI.Init(0);
-                    CameraManager.I.SwitchToPlayCamera();
                     TileManager.I.Clean();
                     DeckManager.I.PrepareNewDeck();
                     GridManager.I.InitCells();
@@ -418,7 +416,6 @@ namespace vgwb.lanoria
                     EmptyHand();
                     BoardManager.I.EmptyProjectsContainer();
                     WallManager.I.ResetAllWalls();
-                    CameraManager.I.SwitchToMenuCamera();
                     ScoreManager.I.ResetScore();
                     UI_manager.I.ShowGamePause(false);
                     UI_manager.I.ShowGameResult(false);
