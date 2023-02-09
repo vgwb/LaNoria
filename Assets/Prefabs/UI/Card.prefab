@@ -146,8 +146,10 @@ GameObject:
   - component: {fileID: 9130779135910414220}
   - component: {fileID: 9130779135910414222}
   - component: {fileID: 9130779135910414221}
-  - component: {fileID: 9130779135910414216}
   - component: {fileID: 9130779135910414223}
+  - component: {fileID: 2081086362204356188}
+  - component: {fileID: 2187895913496584241}
+  - component: {fileID: 4405880805631890680}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -215,7 +217,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9130779135910414216
+--- !u!114 &9130779135910414223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,6 +225,118 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9130779135910414227}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f847f49628441441bf76fddc6360c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardTitle: {fileID: 9130779134868818049}
+  PrefabImg: {fileID: 4079635434452199577}
+  SpawnCanvas: {fileID: 1121327977602275986}
+  Spawner: {fileID: 5044108920472638138}
+  Playable: 0
+--- !u!114 &2081086362204356188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130779135910414227}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791910dcf5d54764ba5dd60f4c6dac03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  rotateTo: 0
+  dragAfterSpawn: 1
+  destroyIfBlocked: 0
+  BlockedScreenQuery:
+    Method: 0
+    Layers:
+      serializedVersion: 2
+      m_Bits: 32
+    Search: 1
+    RequiredTag: 
+    Camera: {fileID: 0}
+    Distance: 50
+  destroyIfMissing: 0
+  MissingScreenQuery:
+    Method: 0
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Search: 1
+    RequiredTag: 
+    Camera: {fileID: 0}
+    Distance: 50
+  selectOnSpawn: 1
+  selectWith: {fileID: 0}
+  deselectOnUp: 1
+  ScreenDepth:
+    Conversion: 6
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  pixelOffset: {x: 0, y: 0}
+  pixelScale: {fileID: 0}
+  worldOffset: {x: 0, y: 0, z: 0}
+  worldRelativeTo: {fileID: 0}
+  fingerDatas: []
+--- !u!114 &2187895913496584241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130779135910414227}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53838f4955091ce45b598e500c35f86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreStartedOverGui: 0
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2081086362204356188}
+        m_TargetAssemblyTypeName: Lean.Touch.LeanSpawnWithFinger, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4405880805631890680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130779135910414227}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -259,29 +373,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9130779135910414223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9130779135910414227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f847f49628441441bf76fddc6360c5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardTitle: {fileID: 9130779134868818049}
-  ClickableComp: {fileID: 9130779135910414216}
-  PrefabImg: {fileID: 4079635434452199577}
-  CardData:
-    Id: 
-    Active: 1
-    Model: 
-    Sequence: 
-    Title: 
-    Description: 
-    Image: {fileID: 0}
 --- !u!1 &9130779136399215602
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +384,8 @@ GameObject:
   - component: {fileID: 9130779136399215603}
   - component: {fileID: 9130779136399215597}
   - component: {fileID: 4079635434452199577}
+  - component: {fileID: 1121327977602275986}
+  - component: {fileID: 5044108920472638138}
   m_Layer: 5
   m_Name: PrefabImg
   m_TagString: Untagged
@@ -355,3 +448,98 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &1121327977602275986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130779136399215602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53838f4955091ce45b598e500c35f86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreStartedOverGui: 0
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5044108920472638138}
+        m_TargetAssemblyTypeName: Lean.Touch.LeanSpawnWithFinger, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5044108920472638138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130779136399215602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791910dcf5d54764ba5dd60f4c6dac03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  rotateTo: 0
+  dragAfterSpawn: 1
+  destroyIfBlocked: 0
+  BlockedScreenQuery:
+    Method: 0
+    Layers:
+      serializedVersion: 2
+      m_Bits: 32
+    Search: 1
+    RequiredTag: 
+    Camera: {fileID: 0}
+    Distance: 50
+  destroyIfMissing: 0
+  MissingScreenQuery:
+    Method: 0
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Search: 1
+    RequiredTag: 
+    Camera: {fileID: 0}
+    Distance: 50
+  selectOnSpawn: 1
+  selectWith: {fileID: 0}
+  deselectOnUp: 1
+  ScreenDepth:
+    Conversion: 6
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  pixelOffset: {x: 0, y: 0}
+  pixelScale: {fileID: 0}
+  worldOffset: {x: 0, y: 0, z: 0}
+  worldRelativeTo: {fileID: 0}
+  fingerDatas: []

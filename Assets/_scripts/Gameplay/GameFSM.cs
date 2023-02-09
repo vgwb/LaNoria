@@ -31,7 +31,7 @@ namespace vgwb.lanoria
         private List<Card> cardsInHand;
         private List<Tile> projectTiles;
         private UI_Gameplay UIGame;
-        private LeanSpawnWithFinger spawner;
+        //private LeanSpawnWithFinger spawner;
 
         public delegate void GameplayStateEvent(GameplayState state);
         public GameplayStateEvent OnStateUpdate;
@@ -51,7 +51,6 @@ namespace vgwb.lanoria
         public void StartGame()
         {
             UIGame = UI_manager.I.PanelGameplay;
-            spawner = UIGame.Spawner;
             BoardManager.I.EmptyProjectsContainer();
             SetState(GameplayState.Intro);
         }
@@ -76,20 +75,19 @@ namespace vgwb.lanoria
             SetState(GameplayState.Play);
         }
 
-        public void OnClickCard(Transform placeablePrefab, ProjectData projectData, int cardIndex)
+        public void OnClickCard(ProjectData projectData, int cardIndex)
         {
-            if (placeablePrefab != null && spawner != null) {
-                if (currentTile != null) {
-                    Destroy(currentTile.gameObject);
-                }
-
-                CleanPointsPreview();
-                currentCardIndex = cardIndex;
-                CurrentProjectData = projectData;
-                spawner.Prefab = placeablePrefab;
-                var texture = UICameraManager.I.GetUICameraTexture(currentCardIndex);
-                UIGame.CardSelectionHUD(projectData.Title, texture);
+            if (currentTile != null) {
+                UnsuscribeToPlaceableEvents();
+                Destroy(currentTile.gameObject);
             }
+            
+            CleanPointsPreview();
+            currentCardIndex = cardIndex;
+            CurrentProjectData = projectData;
+            Debug.Log("get texture");
+            var texture = UICameraManager.I.GetUICameraTexture(currentCardIndex);
+            UIGame.CardSelectionHUD(projectData.Title, texture);
         }
 
         public void ConfirmCurrentTile()
@@ -107,15 +105,7 @@ namespace vgwb.lanoria
 
         public void ResetProjectPanel()
         {
-            spawner.Prefab = null;
             UIGame.ResetProjectPanel();
-        }
-
-        public void OnProjectDrag()
-        {
-            if (currentTile != null) {
-                UIGame.SlideOnTheRight();
-            }
         }
 
         public void OnProjectSelect()
@@ -177,11 +167,9 @@ namespace vgwb.lanoria
             projectTiles = new List<Tile>();
         }
 
-        private void OnPrefabSpawned(GameObject clone)
+        public void OnPrefabSpawned(Tile tile)
         {
-            currentTile = clone.GetComponent<Tile>();
-            currentTile.SetupCellsColor(CurrentProjectData);
-            currentTile.SetupForDrag();
+            currentTile = tile;
             UIGame.EnableFingerCanvas(false);
             SubscribeToPlaceableEvents();
         }
@@ -189,7 +177,7 @@ namespace vgwb.lanoria
         private void OnPrefabSelect()
         {
             CameraManager.I.EnableCameraMove(false);
-            UIGame.PrefabSelectionHUD();
+            //UIGame.PrefabSelectionHUD();
         }
 
         private void OnHexPosChange()
@@ -206,6 +194,7 @@ namespace vgwb.lanoria
         private void SubscribeToPlaceableEvents()
         {
             if (currentTile != null) {
+                Debug.Log("subscribe to: "+currentTile);
                 currentTile.OnValidPositionChange += HandleBtnConfirm;
                 currentTile.OnStopUsingMe += StopUsingPlaceable;
                 currentTile.OnSelectMe += OnPrefabSelect;
@@ -216,6 +205,7 @@ namespace vgwb.lanoria
         private void UnsuscribeToPlaceableEvents()
         {
             if (currentTile != null) {
+                Debug.Log("unsubscribe to: " + currentTile);
                 currentTile.OnValidPositionChange -= HandleBtnConfirm;
                 currentTile.OnStopUsingMe -= StopUsingPlaceable;
                 currentTile.OnSelectMe -= OnPrefabSelect;
@@ -234,13 +224,6 @@ namespace vgwb.lanoria
         {
             UnsuscribeToPlaceableEvents();
             UIGame.EnableFingerCanvas(true);
-        }
-
-        private void EnableSpawner(bool enable)
-        {
-            if (spawner != null) {
-                spawner.enabled = enable;
-            }
         }
 
         private void EmptyHand()
@@ -273,9 +256,9 @@ namespace vgwb.lanoria
                         card.HideInBottomScreen();
                         var cardTexture = UICameraManager.I.GetUICameraTexture(cardIndex);
                         var tilePrefab = GameData.I.Projects.GetTile(projectData);
-                        card.Init(projectData, cardTexture, tilePrefab); // initialize the card component
+                        card.Init(projectData, cardTexture, tilePrefab, cardIndex); // initialize the card component
                         int indexToPass = cardIndex;
-                        card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
+                        //card.SetEvents(() => OnClickCard(tilePrefab.transform, projectData, indexToPass));
                         // spawn the object in camera UI
                         var UIPrefab = UICameraManager.I.SpawnPrefabInCamera(cardIndex, tilePrefab, projectData);
                         card.SetPlayable(IsTilePlaceableOnBoard(UIPrefab));
@@ -285,6 +268,7 @@ namespace vgwb.lanoria
 
                 SoundManager.I.PlaySfx(AudioEnum.shuffle);
             } else {
+                Debug.Log("End game");
                 // NO MORE CARDS - GAME ENDS
                 SetState(GameplayState.Show);
             }
@@ -320,20 +304,13 @@ namespace vgwb.lanoria
 
         private void EventsSubscribe()
         {
-            spawner.OnSpawnedClone += OnPrefabSpawned;
-            UIGame.OnProjectDragged += OnProjectDrag;
-            UIGame.OnCurrentProjectSelected += OnProjectSelect;
+            //UIGame.OnCurrentProjectSelected += OnProjectSelect;
             UIGame.BtnConfirm.onClick.AddListener(() => ConfirmCurrentTile());
         }
 
         private void EventsUnsubscribe()
         {
-            if (spawner != null) {
-                spawner.OnSpawnedClone -= OnPrefabSpawned;
-            }
-            
-            UIGame.OnProjectDragged -= OnProjectDrag;
-            UIGame.OnCurrentProjectSelected -= OnProjectSelect;
+            //UIGame.OnCurrentProjectSelected -= OnProjectSelect;
             UIGame.BtnConfirm.onClick.RemoveAllListeners();
         }
 

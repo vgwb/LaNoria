@@ -1,3 +1,4 @@
+using Lean.Touch;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,39 +12,42 @@ namespace vgwb.lanoria
     public class Card : MonoBehaviour
     {
         public TMP_Text CardTitle;
-        public Button ClickableComp;
         public RawImage PrefabImg;
+        public LeanFingerDownCanvas SpawnCanvas;
+        public LeanSpawnWithFinger Spawner;
+        public bool Playable;
 
         [HideInInspector]
         public ProjectData Project { get; private set; }
         public GameObject TilePrefab { get; private set; }
         public RectTransform Rect { get; private set; }
 
+        private int cardNumber;
+
         private void Awake()
         {
             Rect = GetComponent<RectTransform>();
         }
 
-        public void Init(ProjectData projectData, Texture texture, GameObject prefabUsed)
+        private void OnDestroy()
+        {
+            Spawner.OnSpawnedClone = null;
+        }
+
+        public void Init(ProjectData projectData, Texture texture, GameObject prefabUsed, int cardIndex)
         {
             Project = projectData;
             TilePrefab = prefabUsed;
+            Spawner.Prefab = TilePrefab.transform;
+            Spawner.OnSpawnedClone += OnPrefabSpawned;
+            cardNumber = cardIndex;
             SetTitle(Project.Title);
             SetImage(texture); // visualize the 3d prefab into the canvas
         }
 
-        public void SetEvents(UnityAction action)
-        {
-            if (action != null) {
-                ClickableComp.onClick.AddListener(action);
-            }
-        }
-
         public void SetPlayable(bool isPlayable)
         {
-            if (ClickableComp != null) {
-                ClickableComp.interactable = isPlayable;
-            }
+            Playable = isPlayable;
         }
 
         public void HideInBottomScreen()
@@ -58,11 +62,7 @@ namespace vgwb.lanoria
 
         public bool IsPlayable()
         {
-            if (ClickableComp != null) {
-                return ClickableComp.interactable;
-            }
-
-            return false;
+            return Playable;
         }
 
         private void SetTitle(string title)
@@ -77,6 +77,15 @@ namespace vgwb.lanoria
             if (PrefabImg != null) {
                 PrefabImg.texture = texture;
             }
+        }
+
+        private void OnPrefabSpawned(GameObject clone)
+        {
+            var tile = clone.GetComponent<Tile>();
+            tile.SetupCellsColor(Project);
+            tile.SetupForDrag();
+            GameManager.I.GameFSM.OnClickCard(Project, cardNumber);
+            GameManager.I.GameFSM.OnPrefabSpawned(tile);
         }
     }
 }
