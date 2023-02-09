@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -50, y: 50}
-  m_SizeDelta: {x: 350, y: 100}
+  m_SizeDelta: {x: 430, y: 95}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &329810853
 CanvasRenderer:
@@ -246,10 +246,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.85
-  m_fontSizeBase: 24
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 17
@@ -298,7 +298,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1391860325}
   - component: {fileID: 1391860327}
-  - component: {fileID: 1391860328}
   - component: {fileID: 4301231721648682939}
   m_Layer: 5
   m_Name: ImgDrag
@@ -320,7 +319,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5619242593473234693}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -335,62 +334,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391860324}
   m_CullTransparentMesh: 1
---- !u!114 &1391860328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391860324}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53838f4955091ce45b598e500c35f86b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreStartedOverGui: 0
-  requiredButtons: -1
-  requiredSelectable: {fileID: 0}
-  onFinger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Lean.Touch.LeanSpawnWithFinger, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5619242593406435956}
-        m_TargetAssemblyTypeName: vgwb.lanoria.UI_GameHUD, Assembly-CSharp
-        m_MethodName: OnProjectDragFromCanvas
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ScreenDepth:
-    Conversion: 1
-    Camera: {fileID: 0}
-    Object: {fileID: 0}
-    Layers:
-      serializedVersion: 2
-      m_Bits: 4294967291
-    Distance: 0
-  onWorld:
-    m_PersistentCalls:
-      m_Calls: []
-  onScreen:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4301231721648682939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +399,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -30, y: 80}
+  m_SizeDelta: {x: 0, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1555069396
 CanvasRenderer:
@@ -479,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5330188, g: 1, b: 0.70584905, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -610,11 +553,11 @@ RectTransform:
   - {fileID: 8702296273743070024}
   - {fileID: 378990099}
   m_Father: {fileID: 5619242593473234693}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 110}
+  m_AnchoredPosition: {x: 0, y: 70}
   m_SizeDelta: {x: 430, y: 95}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1335830557950028921
@@ -1304,7 +1247,7 @@ MonoBehaviour:
   PanelCurrentProject: {fileID: 5619242593473234693}
   ProjectTitle: {fileID: 774309567901618780}
   CurrentProjectImg: {fileID: 4301231721648682939}
-  LeanSpawnCanvas: {fileID: 1391860328}
+  LeanSpawnCanvas: {fileID: 0}
   BtnDetailProject: {fileID: 1652776506203765561}
   PanelConfirm: {fileID: 329810850}
   BtnConfirm: {fileID: 1555069394}
@@ -1391,6 +1334,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1157314127908715419}
+  - {fileID: 6178836578049375312}
   - {fileID: 1391860325}
   - {fileID: 6073047697355298761}
   m_Father: {fileID: 5619242593406435959}
@@ -1530,8 +1474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: -40, y: 200}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: -40, y: 165}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7468028918415834785
 CanvasRenderer:
@@ -1561,7 +1505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PROJECT SU DUE RICHE
+  m_text: PROJECT SU DUE RIGHE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39bdcfcf1ce2f471897968982a4f81cc, type: 2}
   m_sharedMaterial: {fileID: 3870575114217079394, guid: 39bdcfcf1ce2f471897968982a4f81cc, type: 2}
@@ -1570,8 +1514,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294729984
+  m_fontColor: {r: 0, g: 0.3803922, b: 0.98823535, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1588,19 +1532,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 60
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 40
-  m_fontStyle: 0
+  m_fontSizeMax: 60
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -40
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1723,3 +1667,76 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &9077301212732485345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6178836578049375312}
+  - component: {fileID: 5401167372889678274}
+  - component: {fileID: 5125212106146454166}
+  m_Layer: 5
+  m_Name: ImgBck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6178836578049375312
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077301212732485345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5619242593473234693}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5401167372889678274
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077301212732485345}
+  m_CullTransparentMesh: 1
+--- !u!114 &5125212106146454166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077301212732485345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 0b8fe8e752e096c49ba2ca4d8945cc45, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
