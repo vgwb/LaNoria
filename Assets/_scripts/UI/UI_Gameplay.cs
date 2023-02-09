@@ -12,7 +12,6 @@ namespace vgwb.lanoria
     public class UI_Gameplay : MonoBehaviour
     {
         [Header("Other comps")]
-        public LeanSpawnWithFinger Spawner;
         public CanvasGroup Canvas;
 
         [Header("Panel HUD Elements")]
