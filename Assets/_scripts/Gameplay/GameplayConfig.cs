@@ -29,6 +29,7 @@ namespace vgwb.lanoria
 
         [Header("Score")]
         public int TransversalityBonus = 20;
+        public int SynergyBonus = 1;
         public int Hex2Points = 4;
         public int Hex3Points = 8;
         public int Hex4Points = 12;

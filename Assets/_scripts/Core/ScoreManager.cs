@@ -87,7 +87,7 @@ namespace vgwb.lanoria
 
                         if (neighbour.Category == cell.Category) {
                             resultingScore++;
-                            cellScore.Score += 1;
+                            cellScore.Score += GameplayConfig.I.SynergyBonus;
                         }
                     }
                 }
