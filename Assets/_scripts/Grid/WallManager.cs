@@ -2,10 +2,11 @@ using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    public class WallManager : MonoBehaviour
+    public class WallManager : SingletonMonoBehaviour<WallManager>
     {
         public List<Wall> Walls;
 
@@ -38,6 +39,31 @@ namespace vgwb.lanoria
         public List<Wall> GetWallsByArea(AreaId area)
         {
             return Walls.FindAll(x => x.Areas.Contains(area));
+        }
+
+        public void HighlightWallArea(AreaId area)
+        {
+            ApplyMaterialToArea(area, GameplayConfig.I.HighlightMat);
+        }
+
+        public void ResetWallArea(AreaId area)
+        {
+            ApplyMaterialToArea(area, GameplayConfig.I.BaseMat);
+        }
+
+        public void ResetAllWalls()
+        {
+            foreach (var wall in Walls) {
+                wall.ChangeMaterial(GameplayConfig.I.BaseMat);
+            }
+        }
+
+        private void ApplyMaterialToArea(AreaId area, Material mat)
+        {
+            var walls = GetWallsByArea(area);
+            foreach (var wall in walls) {
+                wall.ChangeMaterial(mat);
+            }
         }
     } 
 }

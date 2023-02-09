@@ -50,12 +50,11 @@ namespace vgwb.lanoria
             return cell == null;
         }
 
-        public void OccupyCellByPosition(Vector3 pos, ProjectCategories category)
+        public void OccupyCellByPosition(Vector3 pos)
         {
             var cell = GetCellByPosition(pos);
             if (cell != null) {
                 cell.Occupied = true;
-                cell.SetupCategory(category);
             }
         }
 
@@ -84,7 +83,7 @@ namespace vgwb.lanoria
             return result;
         }
 
-        public List<GridCell> GetAreaCellsByPos(Vector3 pos)
+        public List<GridCell> GetAreaCellsFromSinglePos(Vector3 pos)
         {
             var cells = new List<GridCell>();
             var originCell = GetCellByPosition(pos);
@@ -119,11 +118,6 @@ namespace vgwb.lanoria
             return neighboursSet;
         }
 
-        private Vector3 RetrieveHexPos(Vector3 pos)
-        {
-            return Hex.FromWorld(pos).ToWorld(0f);
-        }
-
         public bool CanProjectBePlaced(Tile tile)
         {
             var foundLocation = new TileLocation();
@@ -147,6 +141,11 @@ namespace vgwb.lanoria
                 }
             }
             return false;
+        }
+
+        private Vector3 RetrieveHexPos(Vector3 pos)
+        {
+            return Hex.FromWorld(pos).ToWorld(0f);
         }
 
         private bool canShapeBePlacedHere(Hex startingHex, List<int> shape, HexDirection direction)

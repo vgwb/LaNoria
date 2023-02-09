@@ -17,6 +17,10 @@ namespace vgwb.lanoria
         public float DragYOffset = 0.2f;
         public float OnConfirmYOffset = 0.1f;
 
+        [Header("Walls")]
+        public Material BaseMat;
+        public Material HighlightMat;
+
         [Header("Projects")]
         public Color BlankColor = Color.white;
 

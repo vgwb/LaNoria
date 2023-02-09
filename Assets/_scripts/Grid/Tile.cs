@@ -168,7 +168,7 @@ namespace vgwb.lanoria
             var grid = GridManager.I;
             foreach (var tile in Cells) {
                 Vector3 tilePos = tile.transform.position;
-                grid.OccupyCellByPosition(tilePos, tile.Category);
+                grid.OccupyCellByPosition(tilePos);
             }
         }
 
@@ -258,6 +258,22 @@ namespace vgwb.lanoria
             transform.SetPositionAndRotation(hexPos, Quaternion.Euler(GetHexRotation(dir)));
             var container = BoardManager.I.ProjectsContainer;
             transform.parent = container.transform;
+        }
+
+        public List<ProjectCategories> GetTileCategoriesInArea(AreaId area)
+        {
+            List<ProjectCategories> result = new List<ProjectCategories>();
+            foreach (var cell in Cells) {
+                if (!result.Contains(cell.Category)) {
+                    var gridCell = GridManager.I.GetCellByPosition(cell.HexPosition);
+                    bool isPieceInArea = gridCell.Area == area;
+                    if (isPieceInArea) {
+                        result.Add(cell.Category);
+                    }
+                }
+            }
+
+            return result;
         }
 
         private Vector3 GetHexRotation(HexDirection dir)

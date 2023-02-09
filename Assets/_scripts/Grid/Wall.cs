@@ -38,5 +38,12 @@ namespace vgwb.lanoria
         {
             Areas.Clear();
         }
+
+        public void ChangeMaterial(Material mat)
+        {
+            if (WallMesh != null) {
+                WallMesh.material = mat;
+            }
+        }
     } 
 }

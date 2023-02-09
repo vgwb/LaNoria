@@ -438,7 +438,9 @@ namespace vgwb.lanoria
                     EventsUnsubscribe();
                     EmptyHand();
                     BoardManager.I.EmptyProjectsContainer();
+                    WallManager.I.ResetAllWalls();
                     CameraManager.I.SwitchToMenuCamera();
+                    ScoreManager.I.ResetScore();
                     UI_manager.I.ShowGamePause(false);
                     UI_manager.I.ShowGameResult(false);
                     UI_manager.I.Show(UI_manager.States.Home);

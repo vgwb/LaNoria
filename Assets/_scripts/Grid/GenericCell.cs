@@ -35,8 +35,13 @@ namespace vgwb.lanoria
         public virtual void ApplyColor()
         {
             var mat = AssociatedMaterial;
-            if (mat != null) {
-                mesh.material = AssociatedMaterial;
+            ApplyMaterial(mat);
+        }
+
+        public void ApplyMaterial(Material mat)
+        {
+            if (mesh != null) {
+                mesh.material = mat;
             }
         }
 
