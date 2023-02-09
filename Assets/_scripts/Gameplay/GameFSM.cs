@@ -311,7 +311,7 @@ namespace vgwb.lanoria
         private void EventsUnsubscribe()
         {
             //UIGame.OnCurrentProjectSelected -= OnProjectSelect;
-            if (UIGame.BtnConfirm != null) {
+            if (UIGame != null && UIGame.BtnConfirm != null) {
                 UIGame.BtnConfirm.onClick.RemoveAllListeners();
             }
         }
