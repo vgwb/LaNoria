@@ -25,6 +25,7 @@ namespace vgwb.lanoria
         public Color BlankColor = Color.white;
 
         [Header("Deck Rules")]
+        [Range(1, 4)]
         public int HandSize = 4;
 
         [Header("Areas")]
