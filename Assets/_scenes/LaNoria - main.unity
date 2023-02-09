@@ -360,17 +360,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbb4aa90f5778b1498962b587fbf20cf, type: 3}
---- !u!114 &810793324 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5311655321630592212, guid: cbb4aa90f5778b1498962b587fbf20cf, type: 3}
-  m_PrefabInstance: {fileID: 810793323}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cbe59d60c96dc34183faa5867703dce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &845891903 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7128606051143739352, guid: fa1d21f8bf432454a906834556fa250e, type: 3}
@@ -1033,10 +1022,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 4452299246788259880, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1067,11 +1052,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 685
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 800
+      value: 1042
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1120,34 +1105,6 @@ PrefabInstance:
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452299247256831904, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452299247256831904, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452299247256831904, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 810793324}
-    - target: {fileID: 4452299247256831904, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452299247256831904, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452299247256831904, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: vgwb.lanoria.GameplayManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452299247256831904, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}

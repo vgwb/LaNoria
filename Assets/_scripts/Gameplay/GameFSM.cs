@@ -311,7 +311,9 @@ namespace vgwb.lanoria
         private void EventsUnsubscribe()
         {
             //UIGame.OnCurrentProjectSelected -= OnProjectSelect;
-            UIGame.BtnConfirm.onClick.RemoveAllListeners();
+            if (UIGame.BtnConfirm != null) {
+                UIGame.BtnConfirm.onClick.RemoveAllListeners();
+            }
         }
 
         private void CardEntrance()
