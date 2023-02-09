@@ -20,8 +20,8 @@ namespace vgwb.lanoria
             var walls = GetComponentsInChildren<Wall>();
             foreach (var wall in walls) {
                 wall.GetWallMesh();
-                Vector3 forward = wall.GetWallForward() * 0.9f;
-                Vector3 back = wall.GetWallForward() * -0.9f;
+                Vector3 forward = wall.GetWallForward() * 1;
+                Vector3 back = wall.GetWallForward() * -1;
                 Vector3 pos1 = wall.GetWallPosition() + forward;
                 Vector3 pos2 = wall.GetWallPosition() + back;
                 var grid = GridManager.I;
@@ -33,6 +33,11 @@ namespace vgwb.lanoria
 
                 Walls.Add(wall);
             }
+        }
+
+        public List<Wall> GetWallsByArea(AreaId area)
+        {
+            return Walls.FindAll(x => x.Areas.Contains(area));
         }
     } 
 }
