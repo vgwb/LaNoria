@@ -31,13 +31,12 @@ namespace vgwb.lanoria
 
         public List<ProjectData> DiscardAndGetNewHand(ProjectData playedProjectData)
         {
-
             foreach (var projectInHand in currentHand) {
                 if (projectInHand != playedProjectData) {
                     discardedCards.Add(projectInHand);
                 }
             }
-            if (DeckSize < 4) {
+            if (DeckSize < GameplayConfig.I.HandSize) {
                 reshuffleDeck();
             }
             return GetNewHand();

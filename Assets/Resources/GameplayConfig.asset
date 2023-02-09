@@ -19,7 +19,7 @@ MonoBehaviour:
   DragYOffset: 0.25
   OnConfirmYOffset: 0.1
   BaseMat: {fileID: 2100000, guid: 9215cb730e2c4e740a2c029dca5fda2d, type: 2}
-  HighlightMat: {fileID: 0}
+  HighlightMat: {fileID: 2100000, guid: 1405291b0217bd04b8052faf02f6996a, type: 2}
   BlankColor: {r: 1, g: 1, b: 1, a: 1}
   HandSize: 4
   LabelDebugOffset: {x: 0, y: 0, z: 0}

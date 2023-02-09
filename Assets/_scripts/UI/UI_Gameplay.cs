@@ -51,6 +51,7 @@ namespace vgwb.lanoria
         {
             iSProjectPanelShifted = false;
             projectPanelOriginalPosition = PanelCurrentProject.anchoredPosition;
+            CreateHooks();
 
             BtnDetailProject.onClick.AddListener(() => OnOpenProjectDetail());
             BtnPause.onClick.AddListener(() => GameManager.I.PauseGame());
@@ -244,6 +245,17 @@ namespace vgwb.lanoria
         private void SetProjectPanelShifted(bool isShifted)
         {
             iSProjectPanelShifted = isShifted;
+        }
+
+        private void CreateHooks()
+        {
+            int howMany = GameplayConfig.I.HandSize;
+            for (int i = 0; i < howMany; i++) {
+                var hook = new GameObject("Hook_"+i.ToString(), typeof(RectTransform));
+                hook.transform.SetParent(PanelCards.transform);
+                hook.transform.localScale = Vector3.one;
+                Hooks.Add(hook.gameObject);
+            }
         }
     }
 }
