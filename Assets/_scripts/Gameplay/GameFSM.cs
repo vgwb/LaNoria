@@ -423,7 +423,6 @@ namespace vgwb.lanoria
                     EventsSubscribe();
                     break;
                 case GameplayState.Setup:
-                    BoardManager.I.ShowOutland(false);
                     break;
                 case GameplayState.Drawing:
                     break;
@@ -439,7 +438,6 @@ namespace vgwb.lanoria
                     EventsUnsubscribe();
                     EmptyHand();
                     BoardManager.I.EmptyProjectsContainer();
-                    BoardManager.I.ShowOutland(true);
                     CameraManager.I.SwitchToMenuCamera();
                     UI_manager.I.ShowGamePause(false);
                     UI_manager.I.ShowGameResult(false);
