@@ -23,9 +23,15 @@ MonoBehaviour:
   LabelDebugOffset: {x: 0, y: 0, z: 0}
   LabelDebugFontSize: 10
   TransversalityBonus: 20
+  SynergyBonus: 1
+  Hex2Points: 4
+  Hex3Points: 8
+  Hex4Points: 12
   SlideProjectPanelTime: 0.4
   SlideProjectPanelPixelIn: 50
   UIProjectRotation: {x: 0, y: -90, z: 60}
   ResetCameraRotYOnPlay: 1
   FadeInGameCanvas: 1
   CardAppearsTime: 0.3
+  MovementXClamp: 4
+  MovementYClamp: 3
