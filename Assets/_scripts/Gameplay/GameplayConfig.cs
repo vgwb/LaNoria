@@ -29,6 +29,9 @@ namespace vgwb.lanoria
 
         [Header("Score")]
         public int TransversalityBonus = 20;
+        public int Hex2Points = 4;
+        public int Hex3Points = 8;
+        public int Hex4Points = 12;
 
         [Header("UI")]
         public float SlideProjectPanelTime = 0.8f;

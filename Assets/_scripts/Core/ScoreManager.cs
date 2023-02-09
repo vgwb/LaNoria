@@ -49,7 +49,20 @@ namespace vgwb.lanoria
 
         private int CalculateBasicPoints(Tile tile)
         {
-            return tile.Size;
+            int points = 0;
+            switch (tile.Size) {
+                default:
+                case 2:
+                    points = GameplayConfig.I.Hex2Points;
+                    break;
+                case 3:
+                    points = GameplayConfig.I.Hex3Points;
+                    break;
+                case 4:
+                    points = GameplayConfig.I.Hex4Points;
+                    break;
+            }
+            return points;
         }
 
         public List<CellScoreToDisplay> CalculateSynergy(Tile tile)
