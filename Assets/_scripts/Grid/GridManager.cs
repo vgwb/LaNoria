@@ -1,8 +1,8 @@
 using vgwb.framework;
 using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 
 namespace vgwb.lanoria
 {
@@ -191,6 +191,8 @@ namespace vgwb.lanoria
             }
         }
 
+#if UNITY_EDITOR
+
         private void OnDrawGizmos()
         {
             if (AppConfig.I.ShowSubregionDebug != SubregionDebugType.None) {
@@ -240,6 +242,7 @@ namespace vgwb.lanoria
                 }
             }
         }
+#endif
         #endregion
     }
 }
