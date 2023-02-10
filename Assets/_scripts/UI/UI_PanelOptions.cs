@@ -12,6 +12,7 @@ namespace vgwb.lanoria
         void Start()
         {
             BtnClose.onClick.AddListener(() => AppManager.I.OnHome());
+            BtnClose.onClick.AddListener(() => SoundManager.I.PlaySfx(AudioEnum.click));
         }
 
         public void OpenPanel()
