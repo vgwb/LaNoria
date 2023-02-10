@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8702683148967936
-    m_Key: menu.gameend
+    m_Key: panel.gameend
     m_Metadata:
       m_Items: []
   - m_Id: 114348253184
@@ -49,6 +49,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 193004036096
     m_Key: prompt.areyousure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10137802690781184
+    m_Key: menu.howtoplay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10138653455015936
+    m_Key: menu.resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10138992044400640
+    m_Key: btn.exit
     m_Metadata:
       m_Items: []
   m_Metadata:
