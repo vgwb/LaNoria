@@ -10,13 +10,14 @@ namespace vgwb.lanoria
     {
         public TextMeshProUGUI Title;
         public TextMeshProUGUI Description;
-
+        public Image ProjectImage;
         public Button BtnClose;
 
-        private void Init(ProjectData data)
+        private void Init(ProjectData projectData)
         {
-            Title.text = data.Title;
-            Description.text = data.Description;
+            Title.text = projectData.Title;
+            Description.text = projectData.Description;
+            ProjectImage.sprite = projectData.Image;
             BtnClose.onClick.AddListener(() => ClosePanel());
         }
 
