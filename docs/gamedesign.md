@@ -59,7 +59,7 @@ The goal of the game is to maximize the score.
 
 The score is calculated by adding points every time a project is placed & confirmed… and at the end of the game when some bonuses are computed.
 
-### Placing a project (Basic Points)
+### Placing a project (Placement / Basic Points)
 Any project placed on the map gives:
 
 - 2 tiles project: 4 points
@@ -68,13 +68,13 @@ Any project placed on the map gives:
 
 These points are added to the score as soon as a project is confirmed on the map.
 
-### Color matching (Synergy Bonus)
+### Color matching (Adjacency / Synergy Bonus)
 Adjacent cells of the same color give 1 bonus point for each cell adjacent to the project cells.  
 NOTE: only the cells adjacent to the placed project give bonus points, large groups of cells of the same colors doe not give extra bonus.  
 These points are added to the score as soon as a project is confirmed on the map.
 
-### All colors in an area (Transversality Bonus)
-Placing all 4 colors in a subregion (Comarca) gives an extra bonus (i.e.. 20 points to be sure it’s always a priority over the Synergy bonus).  
+### All colors in an area (Area / Transversality Bonus)
+Placing all 4 colors in an area (Comarca) gives an extra bonus (i.e.. 20 points to be sure it’s always a priority over the Synergy bonus).  
 These points could be added to the score as soon as a project is confirmed on the map or at the end of the game.
 
 ### End of game review (Final Score computation)
