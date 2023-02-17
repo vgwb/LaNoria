@@ -1,14 +1,14 @@
 # LaNoria Game Design doc
 
-current doc: <https://docs.google.com/presentation/d/1rs6DF-Tlf7_JsVmTLqjSrzwOyMAkfLNhHRZNmjcenrM/edit#slide=id.g1b0c938e790_0_10>
+[current google doc](https://docs.google.com/document/d/1SPc61o-s_OPw4w89VVaIKAdP1lstlgJqu2hLmYhbrAM/edit#)
 
 ## Overview
 
-This games talks about the story of La Noria, a center of cultural innovation born in 2013, in Malaga Spain. The game explains the impact of the association in the territory of Malaga. La Noria has been involved in many different projects in the last ten years, the game tries to expose all of the projects dividing them into 4 categories.
+This game tells the story of La Noria ( https://www.malaga.es/lanoria/ ), a center of cultural innovation born in 2013, in Malaga, Spain. The game explains the impact of the association in the territory of Malaga. La Noria has been involved in many different projects in the last ten years, the game tries to expose many of the projects dividing them into 4 categories.
 
 ## Platform
 
-The game will be available for mobile iOS and Android. The game will be displayed only in landscape mode.
+The game will be available for mobile iOS and Android. The game will be displayed only in landscape mode. Could be published on the web.
 
 ## Features
 
@@ -18,22 +18,42 @@ The game will be available for mobile iOS and Android. The game will be displaye
 - Let’s take in considerations accessibility (colors mostly and readability)
 - The game will be free and open source
 
+## Home
+
+In home we have just 4 buttons:
+
+### About La Noria
+An introduction to what it is and what it does, text and images.
+Then a list/book of all the available projects-cards in the game (title + photo + details)
+
+### Play
+To play a game. You can play as many times as you want to improve your high-score.
+
+### Options
+
+- toggle sfx
+- toggle music / volume
+- credits
+
 ## Gameplay
 
-The game is about placing tiles into a map (so basically a puzzle). Each tile represents a project of La Noria and the map is representing the Malaga region. The map is made by multiple hexagonal pieces (around 100 pieces). The tiles are composed by 2, 3 or 4 hexagons, each hexagon has a different color (the color represents the project [category](#Projects)).
+The game is about selecting and placing projects into the map of Malaga province. The map is made of multiple cells (hexagonal pieces). The projects are composed of 2, 3 or 4 cells with different colors (the color represents a category).
 
 ![mobile-noria](https://user-images.githubusercontent.com/45659694/210342035-7995898b-dea7-46d1-b9fc-e47b2d97d4bf.png)
 
 Here a description of basics interactions (refer to the image above):
 
-- The player can select one of the project cards at the bottom of the screen, each of this cards represent a different project of La Noria. Once a card is selected the details of the project and the associated tiles are displayed in the right side of the screen
-- Once a card is selected the player can read the info about the project or drag the project (group of tiles) into the map
-- The player can place the project around the map by dragging it. When the drag is over the project is released on the map (the tile is snapped in the nearest position). The player can rotate the tile by tapping on it. Here there are two situations:
-  - The tile is in a valid position (this should be notified with the correct feedbacks), without any obstacles or other intersecting tiles. A button will be displayed around the tile, by hitting it the player will confirm the placement. 
-  - The tile is not in a valid position (this should be notified with the correct feedbacks), the player should change the position and/or rotation. The player can also discard the tile just by clicking on another card.
-- When the placement is over new cards will be given to the player.
+- The player can select one of the project cards at the bottom of the screen. Once a project is selected its details and the associated tiles are displayed in the right side of the screen
+- We can read the info about the project or drag the project into the map.
+- The player can place the project around the map by dragging it and releasing it wherever on the map (the tile is snapped in the nearest position). The player can rotate the project by tapping on it. Here there are two situations:
+  - The project is in a valid position (this should be notified with the correct feedback), without any obstacles or other intersecting tiles. A button will be displayed to confirm the placement.
+  - The tile is not in a valid position (this should be notified with the correct feedback), the player should change the position and/or rotation. The player can also discard the tile just by clicking on another project card.
+- When the placement is done, new project cards will be given to the player.
 
-The target of the game is to maximaze the score with combo of colors.
+Repeat until no more projects can be put in the map.
+
+The goal of the game is to maximize the score.
+
 
 ## Score
 
@@ -48,7 +68,7 @@ Adjacent cells of the same color give 1 bonus point for each cell adjacent to th
 NOTE: only the cells adjacent to the placed project give bonus points, large groups of cells of the same colors doe not give extra bonus.  
 These points are added to the score as soon as a project is confirmed on the map.
 
-### All colors in a subregion (Transversality Bonus)
+### All colors in an area (Transversality Bonus)
 Placing all 4 colors in a subregion (Comarca) gives an extra bonus (i.e.. 20 points to be sure it’s always a priority over the Synergy bonus).  
 These points could be added to the score as soon as a project is confirmed on the map or at the end of the game.
 
@@ -75,7 +95,6 @@ La Noria's projects are divided into 4 categories:
 3. Tech for people (Tecnología para las personas) - FF8905
 4. Depopulation (Despoblación) - FF40C5
 
-
 Each project will be displayed as a playable card in game.  
 The project description and cover image are accessible from the card.  
 The Projects database live in a Google Sheet where the content editor can define:
@@ -86,7 +105,6 @@ The Projects database live in a Google Sheet where the content editor can define
 - Title
 - Description
 - Image (?)
-
 
 ## Map
 
