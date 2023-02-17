@@ -60,7 +60,12 @@ The goal of the game is to maximize the score.
 The score is calculated by adding points every time a project is placed & confirmed… and at the end of the game when some bonuses are computed.
 
 ### Placing a project (Basic Points)
-Any project placed on the map gives 1 point for each cell it’s composed of (i.e. a 3 hexagons project gives 3 points). This way the more cells you are able to fit on the map, the higher you can score.  
+Any project placed on the map gives:
+
+- 2 tiles project: 4 points
+- 3 tiles project: 8 points
+- 4 tiles project: 12 points
+
 These points are added to the score as soon as a project is confirmed on the map.
 
 ### Color matching (Synergy Bonus)
