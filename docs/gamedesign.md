@@ -2,6 +2,8 @@
 
 [current google doc](https://docs.google.com/document/d/1SPc61o-s_OPw4w89VVaIKAdP1lstlgJqu2hLmYhbrAM/edit#)
 
+[Project view](https://github.com/orgs/vgwb/projects/5/)
+
 ## Overview
 
 This game tells the story of La Noria ( https://www.malaga.es/lanoria/ ), a center of cultural innovation born in 2013, in Malaga, Spain. The game explains the impact of the association in the territory of Malaga. La Noria has been involved in many different projects in the last ten years, the game tries to expose many of the projects dividing them into 4 categories.
