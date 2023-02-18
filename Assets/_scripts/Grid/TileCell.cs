@@ -8,6 +8,7 @@ namespace vgwb.lanoria
     public class TileCell : GenericCell
     {
         public TextMeshPro Label;
+        public SpriteRenderer Icon;
 
         protected override void Awake()
         {

@@ -22,6 +22,7 @@ namespace vgwb.lanoria
         public string Title;
         public Color Color;
         public Material Material;
+        public Sprite Icon;
     }
 
     [CreateAssetMenu(menuName = "VGWB/Categories Data")]
