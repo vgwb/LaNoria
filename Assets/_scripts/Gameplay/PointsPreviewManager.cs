@@ -43,7 +43,7 @@ namespace vgwb.lanoria
 
         private void DisplaySynergyPreview(Tile placeable)
         {
-            cellsScore = ScoreManager.I.CalculateSynergy(placeable);
+            cellsScore = ScoreManager.I.CalculateAdjacencyBonus(placeable);
             foreach (var cellScore in cellsScore) {
                 DrawPreviewScore(cellScore.Cell, cellScore.Score);
             }
@@ -60,7 +60,7 @@ namespace vgwb.lanoria
 
         private void DisplayTransversalityPreview(Tile placeable)
         {
-            highligtAreas = ScoreManager.I.CalculateTransversality(placeable);
+            highligtAreas = ScoreManager.I.CalculateAreaBonus(placeable);
             foreach (var area in highligtAreas) {
                 WallManager.I.HighlightWallArea(area);
             }

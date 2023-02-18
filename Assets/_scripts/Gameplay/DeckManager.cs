@@ -49,6 +49,9 @@ namespace vgwb.lanoria
             for (int i = 0; i < handSize; i++) {
                 if (DeckSize > 0) {
                     int randomIndex = Random.Range(0, DeckSize - 1);
+
+                    // TODO check https://github.com/orgs/vgwb/projects/5/views/1?pane=issue&itemId=20763365
+
                     currentHand.Add(deck[randomIndex]);
                     deck.Remove(deck[randomIndex]);
                 }

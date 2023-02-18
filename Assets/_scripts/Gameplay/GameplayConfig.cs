@@ -33,11 +33,11 @@ namespace vgwb.lanoria
         public int LabelDebugFontSize = 15;
 
         [Header("Score")]
-        public int TransversalityBonus = 20;
-        public int SynergyBonus = 1;
-        public int Hex2Points = 4;
-        public int Hex3Points = 8;
-        public int Hex4Points = 12;
+        public int AreaBonus = 20;
+        public int AdjacencyBonus = 1;
+        public int Place2Bonus = 4;
+        public int Place3Bonus = 8;
+        public int Place4Bonus = 12;
 
         [Header("UI")]
         public float SlideProjectPanelTime = 0.8f;

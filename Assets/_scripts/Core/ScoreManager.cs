@@ -17,12 +17,13 @@ namespace vgwb.lanoria
             Score = score;
         }
     }
+
     public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     {
         public int Score { get; private set; }
 
-        [SerializeField] private int synergyScore;
-        [SerializeField] private int transversalityScore;
+        [SerializeField] private int adjacencyBonus;
+        [SerializeField] private int areaScore;
         [SerializeField] private List<AreaId> completedAreas;
         [SerializeField] private List<AreaId> areasToConfirm;
 
@@ -35,11 +36,11 @@ namespace vgwb.lanoria
 
         public void UpdateScore(Tile tile)
         {
-            int placementPoints = CalculateBasicPoints(tile);
-            int newPoints = placementPoints + synergyScore + transversalityScore;
+            int placementBonus = CalculatePlacementBonus(tile);
+            int newPoints = placementBonus + adjacencyBonus + areaScore;
             Score += newPoints;
-            Debug.Log("basic: " + placementPoints + " sinergy: " + synergyScore + " transversality: " + transversalityScore);
-            ConfirmAreas();
+            Debug.Log("basic: " + placementBonus + " adjacency: " + adjacencyBonus + " area: " + areaScore);
+            confirmAreas();
 
             UI_manager.I.PanelGameplay.SetScoreUI(Score, newPoints);
         }
@@ -47,12 +48,12 @@ namespace vgwb.lanoria
         public void ResetScore()
         {
             Score = 0;
-            synergyScore = 0;
+            adjacencyBonus = 0;
             completedAreas.Clear();
             areasToConfirm.Clear();
         }
 
-        public List<CellScoreToDisplay> CalculateSynergy(Tile tile)
+        public List<CellScoreToDisplay> CalculateAdjacencyBonus(Tile tile)
         {
             int resultingScore = 0;
             var positionsToExclude = tile.GetCellsHexPositions();
@@ -74,17 +75,17 @@ namespace vgwb.lanoria
 
                         if (existingCell.Category == cell.Category) {
                             resultingScore++;
-                            cellScore.Score += GameplayConfig.I.SynergyBonus;
+                            cellScore.Score += GameplayConfig.I.AdjacencyBonus;
                         }
                     }
                 }
             }
 
-            synergyScore = resultingScore;
+            adjacencyBonus = resultingScore;
             return synergyCells;
         }
 
-        public List<AreaId> CalculateTransversality(Tile tile)
+        public List<AreaId> CalculateAreaBonus(Tile tile)
         {
             int resultingScore = 0;
             var containedCategories = new List<ProjectCategories>();
@@ -95,9 +96,9 @@ namespace vgwb.lanoria
                 if (areaCells.Count == 0) {
                     continue;
                 }
-                
+
                 var area = areaCells[0].Area;
-                if (visitedArea.Contains(area) || IsAreaComplete(area)) {
+                if (visitedArea.Contains(area) || isAreaComplete(area)) {
                     continue; // already visited!
                 }
 
@@ -111,54 +112,44 @@ namespace vgwb.lanoria
                     if (existingTile != null) {
                         if (!containedCategories.Contains(existingTile.Category)) {
                             containedCategories.Add(existingTile.Category);
-                        }                        
+                        }
                     }
                 }
 
                 var categoriesCount = System.Enum.GetNames(typeof(ProjectCategories)).Length;
                 if (containedCategories.Count == categoriesCount) {
-                    resultingScore += GameplayConfig.I.TransversalityBonus;
+                    resultingScore += GameplayConfig.I.AreaBonus;
                     areasToConfirm.Add(area);
                 }
             }
 
-            transversalityScore = resultingScore;
-
+            areaScore = resultingScore;
             return areasToConfirm;
         }
 
-        private int CalculateBasicPoints(Tile tile)
+        private int CalculatePlacementBonus(Tile tile)
         {
-            int points = 0;
-            switch (tile.Size) {
-                default:
-                case 2:
-                    points = GameplayConfig.I.Hex2Points;
-                    break;
-                case 3:
-                    points = GameplayConfig.I.Hex3Points;
-                    break;
-                case 4:
-                    points = GameplayConfig.I.Hex4Points;
-                    break;
-            }
-
+            var points = tile.Size switch {
+                2 => GameplayConfig.I.Place2Bonus,
+                3 => GameplayConfig.I.Place3Bonus,
+                4 => GameplayConfig.I.Place4Bonus,
+                _ => 0,
+            };
             return points;
         }
 
-        private bool IsAreaComplete(AreaId area)
+        private bool isAreaComplete(AreaId area)
         {
             return completedAreas.Contains(area);
         }
 
-        private void ConfirmAreas()
+        private void confirmAreas()
         {
             foreach (var area in areasToConfirm) {
                 if (!completedAreas.Contains(area)) {
                     completedAreas.Add(area);
                 }
             }
-
             areasToConfirm.Clear();
         }
     }
