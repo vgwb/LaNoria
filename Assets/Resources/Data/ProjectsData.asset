@@ -17,7 +17,7 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 02000000030000000100000004000000
-    Title: "BIJ: Bioconstrucci\xF3n + Innovaci\xF3n + J\xF3venes"
+    Title: BIJ
     Description: 'The standard Lorem Ipsum passage, used since the 1500s
 
 
@@ -75,7 +75,7 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 010000000100000001000000
-    Title: "\xC1ula Vivero La Salvia"
+    Title: Aula Vivero La Salvia
     Description: "El Aula Vivero la Salvia es un espacio natural ubicado dentro del
       Centro de Innovaci\xF3n Social La Noria donde la asociaci\xF3n Ecohuerto el
       Rabanito forma mediante cursos, talleres y jornadas en agroecolog\xEDa, huertos
@@ -95,7 +95,7 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 010000000100000001000000
-    Title: Crea huertas
+    Title: Crea Huertas
     Description: description of this project
     Image: {fileID: 0}
   - Id: 6
@@ -109,7 +109,7 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 01000000010000000300000003000000
-    Title: "Cultura pl\xE1stica"
+    Title: "Cultura Pl\xE1stica"
     Description: description of this project
     Image: {fileID: 0}
   - Id: 8
@@ -130,7 +130,7 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 010000000100000004000000
-    Title: Bosques y juventud
+    Title: Bosques y Juventud
     Description: description of this project
     Image: {fileID: 0}
   - Id: 11
@@ -144,14 +144,14 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 01000000010000000400000002000000
-    Title: Vives emprende
+    Title: Vives Emprende
     Description: description of this project
     Image: {fileID: 0}
   - Id: 13
     Active: 1
     TileModel: 0
     Sequence: 020000000100000004000000
-    Title: Cultivando futuro
+    Title: Cultivando Futuro
     Description: description of this project
     Image: {fileID: 0}
   - Id: 14
@@ -172,28 +172,28 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 0100000004000000
-    Title: La comida de la abuela
+    Title: La comida de la Abuela
     Description: description of this project
     Image: {fileID: 0}
   - Id: 17
     Active: 1
     TileModel: 0
     Sequence: 02000000010000000400000004000000
-    Title: "Inclusi\xF3n rural caprina"
+    Title: "Inclusi\xF3n Rural Caprina"
     Description: description of this project
     Image: {fileID: 0}
   - Id: 18
     Active: 1
     TileModel: 0
     Sequence: 0200000004000000
-    Title: 'Agua: proyecto de empleo de personas con diversidad funcional'
+    Title: 'Agua: proyecto de empleo'
     Description: description of this project
     Image: {fileID: 0}
   - Id: 19
     Active: 1
     TileModel: 0
     Sequence: 04000000040000000100000001000000
-    Title: Sembrando territorio
+    Title: Sembrando Territorio
     Description: description of this project
     Image: {fileID: 0}
   - Id: 20
@@ -235,14 +235,14 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 020000000300000003000000
-    Title: "Arkidtech: arquitectura para ni\xF1os y ni\xF1as"
+    Title: Arkidtech
     Description: description of this project
     Image: {fileID: 0}
   - Id: 26
     Active: 1
     TileModel: 41
     Sequence: 03000000020000000100000004000000
-    Title: "Crafteando: educaci\xF3n, participaci\xF3n y territorio"
+    Title: Crafteando
     Description: "Crafteando es un proyecto orientado al mapeo de nuestro entorno
       cercano, con el objetivo de desarrollar propuestas de mejora del espacio p\xFAblico.
       Este proyecto a\xFAna la intervenci\xF3n sobre el territorio y el contacto
@@ -316,14 +316,14 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 030000000300000002000000
-    Title: "\xBFA qu\xE9 juegan mi hij@s? Escuela de madres y padres sobre videojuegos"
+    Title: "\xBFA qu\xE9 juegan mi hij@s?"
     Description: description of this project
     Image: {fileID: 0}
   - Id: 36
     Active: 1
     TileModel: 0
     Sequence: 030000000300000003000000
-    Title: "Formaci\xF3n en aplicaciones electr\xF3nicas y redes en el medio rural"
+    Title: Apps y redes en el medio rural
     Description: description of this project
     Image: {fileID: 0}
   - Id: 37
@@ -358,7 +358,7 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 03000000030000000100000002000000
-    Title: "Innoria Juventud, Tecnolog\xEDa e inclusi\xF3n social"
+    Title: Innoria Juventud
     Description: description of this project
     Image: {fileID: 0}
   - Id: 42
@@ -386,7 +386,7 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 02000000040000000400000004000000
-    Title: "Monitores de ocio y tiempo libre de Innovaci\xF3n social"
+    Title: Monitores de ocio y tiempo libre
     Description: description of this project
     Image: {fileID: 0}
   - Id: 46
@@ -442,14 +442,14 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 02000000020000000100000004000000
-    Title: Sendas inclusivas
+    Title: Sendas Inclusivas
     Description: description of this project
     Image: {fileID: 0}
   - Id: 54
     Active: 1
     TileModel: 0
     Sequence: 0200000004000000
-    Title: 'Diversidad y helicultura: Motor para el emprendimiento rural'
+    Title: Diversidad y Helicultura
     Description: description of this project
     Image: {fileID: 0}
   - Id: 55
@@ -463,14 +463,14 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 040000000400000004000000
-    Title: Cicerones rurales
+    Title: Cicerones Rurales
     Description: description of this project
     Image: {fileID: 0}
   - Id: 57
     Active: 1
     TileModel: 0
     Sequence: 020000000200000002000000
-    Title: "Emprende en g\xE9nero"
+    Title: "Emprende en G\xE9nero"
     Description: description of this project
     Image: {fileID: 0}
   - Id: 58
@@ -554,7 +554,7 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 020000000400000001000000
-    Title: "Cambium: nuevos modelos de gesti\xF3n"
+    Title: Cambium
     Description: description of this project
     Image: {fileID: 0}
   - Id: 70
