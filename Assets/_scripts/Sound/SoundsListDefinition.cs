@@ -18,6 +18,8 @@ namespace vgwb.lanoria
         shuffle = 8,
         card = 9,
         tile_confirmed = 10,
+        tile_rotate = 11,
+        tile_released = 12,
 
         music_1 = 20
     }

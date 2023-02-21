@@ -57,3 +57,11 @@ MonoBehaviour:
     Channel: 2
     audioClip: {fileID: 8300000, guid: 2eae66430c79749d9b13ab56bc988740, type: 3}
     Volume: 0.5
+  - id: 11
+    Channel: 0
+    audioClip: {fileID: 8300000, guid: 0fd5a523747571541bb7855af1b20f26, type: 3}
+    Volume: 0.137
+  - id: 12
+    Channel: 1
+    audioClip: {fileID: 8300000, guid: 7b07293d40c504762846ff33b47cb5c9, type: 3}
+    Volume: 0.5

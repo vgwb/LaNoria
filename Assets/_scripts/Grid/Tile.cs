@@ -96,6 +96,7 @@ namespace vgwb.lanoria
         /// </summary>
         public void OnRelease()
         {
+            SoundManager.I.PlaySfx(AudioEnum.tile_released);
             Vector3 newPos = HexPos;
             if (IsCompletelyOutOfMap()) {
                 var grid = GridManager.I;
@@ -111,6 +112,7 @@ namespace vgwb.lanoria
 
         public void OnSelect()
         {
+            //SoundManager.I.PlaySfx(AudioEnum.tile_released);
             RestoreOutline();
             RiseUpTilesHeight();
             OnSelectMe?.Invoke();
@@ -120,6 +122,12 @@ namespace vgwb.lanoria
         /// Fired when the player tap on the project object.
         /// </summary>
         public void OnTap()
+        {
+            SoundManager.I.PlaySfx(AudioEnum.tile_rotate);
+            rotate();
+        }
+
+        private void rotate()
         {
             var ParentInPivot = new GameObject(); // create an empty object
             // put it in the pivot position
@@ -262,7 +270,7 @@ namespace vgwb.lanoria
 
         public List<ProjectCategories> GetTileCategoriesInArea(AreaId area)
         {
-            List<ProjectCategories> result = new List<ProjectCategories>();
+            var result = new List<ProjectCategories>();
             foreach (var cell in Cells) {
                 if (!result.Contains(cell.Category)) {
                     var gridCell = GridManager.I.GetCellByPosition(cell.HexPosition);
