@@ -11,7 +11,7 @@ namespace vgwb.lanoria
     public class CameraManager : SingletonMonoBehaviour<CameraManager>
     {
         [Header("Components")]
-        public CameraMove Mover;
+        public CameraController CameraController;
 
         protected override void Awake()
         {
@@ -21,12 +21,12 @@ namespace vgwb.lanoria
 
         public void EnableCameraMove(bool enable)
         {
-            Mover.CanMove = enable;
+            CameraController.CanMove = enable;
         }
 
         public void ResetCameraGameplay()
         {
-            Mover.ResetCam();
+            CameraController.ResetCam();
         }
     }
 }

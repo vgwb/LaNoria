@@ -126,9 +126,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5311655321630592213}
   - component: {fileID: 5311655321630592212}
+  - component: {fileID: 4141334991488932}
   - component: {fileID: 5311655321630592202}
   - component: {fileID: 5311655321630592203}
-  - component: {fileID: 4141334991488932}
   - component: {fileID: 723556936064208639}
   m_Layer: 0
   m_Name: PlayManager
@@ -166,10 +166,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cbe59d60c96dc34183faa5867703dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dealer: {fileID: 5311655321630592202}
-  Scorer: {fileID: 5311655321630592203}
   GameFSM: {fileID: 4141334991488932}
   Preview: {fileID: 723556936064208639}
+--- !u!114 &4141334991488932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311655321630592215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a09288af750a34d89bd2e04b8778a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardPrefab: {fileID: 9130779135910414227, guid: 84af55ec7b481594ba48fa0c4d6533ce, type: 3}
 --- !u!114 &5311655321630592202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,22 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54b45f5c95fd194bb01701ffdff7961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentScore: 0
-  synergyScore: 0
---- !u!114 &4141334991488932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5311655321630592215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a09288af750a34d89bd2e04b8778a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardPrefab: {fileID: 9130779135910414227, guid: 84af55ec7b481594ba48fa0c4d6533ce, type: 3}
-  state: 0
+  adjacencyBonus: 0
+  areaScore: 0
+  completedAreas: 
+  areasToConfirm: 
 --- !u!114 &723556936064208639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7851289e60ac8c843b8eb06a7407de10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointPreviewPrefab: {fileID: 1514386752178567753, guid: 090bab71a4dc77746b8850313cf26054, type: 3}
   UsePreview: 1
 --- !u!1001 &3914503583074823613
 PrefabInstance:

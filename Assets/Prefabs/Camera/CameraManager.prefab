@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2714980114440374808}
   - component: {fileID: 2714980114440374807}
   - component: {fileID: 2714980114440374806}
+  - component: {fileID: 5820560080848413156}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -26,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2714980114440374805}
-  m_LocalRotation: {x: -0.2664897, y: -0.73146427, z: 0.41090634, w: -0.4744462}
-  m_LocalPosition: {x: -15.624852, y: 26.048605, z: 9.250935}
+  m_LocalRotation: {x: 0.5571814, y: 0.004982442, z: -0.0033431354, w: 0.8303691}
+  m_LocalPosition: {x: -4.288615, y: 35.535133, z: -16.333317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,6 +119,31 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &5820560080848413156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2714980114440374805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0da874a88004a1497486ab96c49aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanMove: 0
+  PanSpeed: 20
+  ZoomSpeedTouch: 0.05
+  ZoomSpeedMouse: 0.5
+  BoundsX:
+  - -10
+  - 5
+  BoundsZ:
+  - -18
+  - -4
+  ZoomBounds:
+  - 10
+  - 30
 --- !u!1 &2714980115064678604
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +153,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2714980115064678605}
-  - component: {fileID: 3183463321774721334}
   - component: {fileID: 1386577023}
   m_Layer: 0
   m_Name: CameraManager
@@ -152,20 +177,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3183463321774721334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2714980115064678604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8633c51901ff05c4bbbf174a1705e701, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cam: {fileID: 2714980114440374808}
-  CanMove: 0
 --- !u!114 &1386577023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,4 +189,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4e169add1a8bc4d8cf11ae1ff470e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mover: {fileID: 3183463321774721334}
+  CameraController: {fileID: 5820560080848413156}
