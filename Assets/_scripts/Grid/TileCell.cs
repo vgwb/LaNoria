@@ -7,8 +7,13 @@ namespace vgwb.lanoria
 {
     public class TileCell : GenericCell
     {
+        [SerializeField] ProjectCategories category;
         public TextMeshPro Label;
         public SpriteRenderer Icon;
+
+        public ProjectCategories Category => category;
+        public Color AssociatedColor => GameData.I.Categories.GetColor(category);
+        public Material AssociatedMaterial => GameData.I.Categories.GetMaterial(category);
 
         protected override void Awake()
         {
@@ -24,6 +29,18 @@ namespace vgwb.lanoria
         public void SetLabel(string label)
         {
             Label.text = label;
+        }
+
+        public void SetupCategory(ProjectCategories newCategory)
+        {
+            category = newCategory;
+        }
+
+        public void ApplyColor()
+        {
+            var mat = AssociatedMaterial;
+            ApplyMaterial(mat);
+            Icon.sprite = GameData.I.Categories.GetIcon(category);
         }
 
         public void SetupLayerForUICamera()

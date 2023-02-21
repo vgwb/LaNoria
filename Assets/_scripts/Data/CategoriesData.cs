@@ -35,6 +35,12 @@ namespace vgwb.lanoria
             return Categories.Find(x => x.Category == category).Color;
         }
 
+        public Sprite GetIcon(ProjectCategories category)
+        {
+            return Categories.Find(x => x.Category == category).Icon;
+        }
+
+
         public Material GetMaterial(ProjectCategories category)
         {
             return Categories.Find(x => x.Category == category).Material;

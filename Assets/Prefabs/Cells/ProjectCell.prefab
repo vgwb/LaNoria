@@ -246,7 +246,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 862a2cc3554284e46a507bd9d28e8e86, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.74509805}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -304,8 +304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d0daee440e041c9800f95bb9cb9d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  category: 0
   mesh: {fileID: 0}
+  category: 0
   Label: {fileID: 197296245651065038}
   Icon: {fileID: 2461746646216555874}
 --- !u!114 &7818359960468404321

@@ -6,7 +6,6 @@ namespace vgwb.lanoria
 {
     public abstract class GenericCell : MonoBehaviour
     {
-        [SerializeField] protected ProjectCategories category;
         [SerializeField] protected MeshRenderer mesh;
 
         public Hex hex => Hex.FromWorld(transform.position);
@@ -18,24 +17,9 @@ namespace vgwb.lanoria
             set { }
         }
 
-        public ProjectCategories Category => category;
-        public Color AssociatedColor => GameData.I.Categories.GetColor(category);
-        public Material AssociatedMaterial => GameData.I.Categories.GetMaterial(category);
-
         protected virtual void Awake()
         {
             BaseSetup();
-        }
-
-        public virtual void SetupCategory(ProjectCategories newCategory)
-        {
-            category = newCategory;
-        }
-
-        public virtual void ApplyColor()
-        {
-            var mat = AssociatedMaterial;
-            ApplyMaterial(mat);
         }
 
         public void ApplyMaterial(Material mat)
