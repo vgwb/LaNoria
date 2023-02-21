@@ -81,7 +81,11 @@ namespace vgwb.lanoria
                 UnsuscribeToPlaceableEvents();
                 Destroy(currentTile.gameObject);
             }
-            
+
+            foreach (var card in cardsInHand) {
+                card.DoSelect(cardIndex == card.CardIndex);
+            }
+
             CleanPointsPreview();
             currentCardIndex = cardIndex;
             CurrentProjectData = projectData;
@@ -194,7 +198,7 @@ namespace vgwb.lanoria
         private void SubscribeToPlaceableEvents()
         {
             if (currentTile != null) {
-                Debug.Log("subscribe to: "+currentTile);
+                Debug.Log("subscribe to: " + currentTile);
                 currentTile.OnValidPositionChange += HandleBtnConfirm;
                 currentTile.OnStopUsingMe += StopUsingPlaceable;
                 currentTile.OnSelectMe += OnPrefabSelect;
@@ -245,7 +249,6 @@ namespace vgwb.lanoria
             projectTiles = new List<Tile>();
             var projectsData = DeckManager.I.DiscardAndGetNewHand(CurrentProjectData);
             if (projectsData.Count > 0) {
-
                 int cardIndex = 0;
                 foreach (var projectData in projectsData) {
                     // spawn the card inside the container
@@ -265,7 +268,6 @@ namespace vgwb.lanoria
                     }
                     cardIndex++;
                 }
-
                 SoundManager.I.PlaySfx(AudioEnum.shuffle);
             } else {
                 Debug.Log("End game");

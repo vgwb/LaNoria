@@ -11,7 +11,7 @@ namespace vgwb.lanoria
 {
     public class UI_Gameplay : MonoBehaviour
     {
-        [Header("Other comps")]
+        [Header("References")]
         public CanvasGroup Canvas;
 
         [Header("Panel HUD Elements")]
@@ -96,7 +96,6 @@ namespace vgwb.lanoria
                     }
                 }
             }
-
             return cards;
         }
 
@@ -250,7 +249,7 @@ namespace vgwb.lanoria
         {
             int howMany = GameplayConfig.I.HandSize;
             for (int i = 0; i < howMany; i++) {
-                var hook = new GameObject("Hook_"+i.ToString(), typeof(RectTransform));
+                var hook = new GameObject("Hook_" + i.ToString(), typeof(RectTransform));
                 hook.transform.SetParent(PanelCards.transform);
                 hook.transform.localScale = Vector3.one;
                 Hooks.Add(hook.gameObject);

@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using DG.Tweening;
 
 namespace vgwb.lanoria
 {
@@ -15,14 +16,15 @@ namespace vgwb.lanoria
         public RawImage PrefabImg;
         public LeanFingerDownCanvas SpawnCanvas;
         public LeanSpawnWithFinger Spawner;
-        public bool Playable;
+        public bool Playable { get; private set; }
 
         [HideInInspector]
         public ProjectData Project { get; private set; }
         public GameObject TilePrefab { get; private set; }
         public RectTransform Rect { get; private set; }
 
-        private int cardNumber;
+        public int CardIndex;
+        public Vector3 originalLocalPos;
 
         private void Awake()
         {
@@ -40,14 +42,36 @@ namespace vgwb.lanoria
             TilePrefab = prefabUsed;
             Spawner.Prefab = TilePrefab.transform;
             Spawner.OnSpawnedClone += OnPrefabSpawned;
-            cardNumber = cardIndex;
+            CardIndex = cardIndex;
             SetTitle(Project.Title);
             SetImage(texture); // visualize the 3d prefab into the canvas
+            originalLocalPos = transform.localPosition;
         }
 
         public void SetPlayable(bool isPlayable)
         {
             Playable = isPlayable;
+            // if (Playable) {
+            //     transform.localPosition = originalLocalPos;
+            // } else {
+            //     Debug.Log("NOT PLAYABLE card " + cardNumber);
+            //     transform.DOLocalMoveY(-30, 1);
+            //     //transform.localPosition = new Vector3(originalLocalPos.x, originalLocalPos.y - 30, originalLocalPos.z);
+            // }
+        }
+
+        public bool IsPlayable()
+        {
+            return Playable;
+        }
+
+        public void DoSelect(bool status)
+        {
+            if (status) {
+                Rect.DOAnchorPosY(-242, 0.5f);
+            } else {
+                Rect.DOAnchorPosY(0.0f, 0.5f);
+            }
         }
 
         public void HideInBottomScreen()
@@ -58,11 +82,6 @@ namespace vgwb.lanoria
                 pos.y = -height;
                 Rect.localPosition = pos;
             }
-        }
-
-        public bool IsPlayable()
-        {
-            return Playable;
         }
 
         private void SetTitle(string title)
@@ -84,7 +103,7 @@ namespace vgwb.lanoria
             var tile = clone.GetComponent<Tile>();
             tile.SetupCellsColor(Project);
             tile.SetupForDrag();
-            GameManager.I.GameFSM.OnClickCard(Project, cardNumber);
+            GameManager.I.GameFSM.OnClickCard(Project, CardIndex);
             GameManager.I.GameFSM.OnPrefabSpawned(tile);
         }
     }

@@ -310,7 +310,6 @@ MonoBehaviour:
   PrefabImg: {fileID: 4079635434452199577}
   SpawnCanvas: {fileID: 1121327977602275986}
   Spawner: {fileID: 5044108920472638138}
-  Playable: 0
 --- !u!114 &2081086362204356188
 MonoBehaviour:
   m_ObjectHideFlags: 0
