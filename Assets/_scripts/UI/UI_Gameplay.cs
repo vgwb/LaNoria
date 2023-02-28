@@ -102,6 +102,7 @@ namespace vgwb.lanoria
         public void SlideToOriginalPosition()
         {
             if (iSProjectPanelShifted) {
+                BtnDetailProject.interactable = true;
                 float duration = GameplayConfig.I.SlideProjectPanelTime;
                 PanelCurrentProject.DOAnchorPosX(projectPanelOriginalPosition.x, duration).OnComplete(() => SetProjectPanelShifted(false));
             }
@@ -111,6 +112,7 @@ namespace vgwb.lanoria
         {
             if (!iSProjectPanelShifted) {
                 iSProjectPanelShifted = true;
+                BtnDetailProject.interactable = false;
                 float duration = GameplayConfig.I.SlideProjectPanelTime;
                 float pixelIn = GameplayConfig.I.SlideProjectPanelPixelIn;
                 SlideCurrentProjectPanel(duration, pixelIn, () => SetProjectPanelShifted(true));
