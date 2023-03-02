@@ -29,12 +29,10 @@ namespace vgwb.lanoria
         private int currentCardIndex;
         private bool displayTutorial;
         public Tile currentTile { get; private set; }
-        public ProjectData CurrentProjectData { get; private set; }
-        private bool isFirstTurn;
+        public ProjectData CurrentProjectData { get; private set; }        
         private List<Card> cardsInHand;
         private List<Tile> projectTiles;
         private UI_Gameplay UIGame;
-        private UI_Tutorial UITutorial;
 
         public delegate void GameplayStateEvent(GameplayState state);
         public GameplayStateEvent OnStateUpdate;
@@ -55,7 +53,6 @@ namespace vgwb.lanoria
         public void StartGame()
         {
             UIGame = UI_manager.I.PanelGameplay;
-            UITutorial = UI_manager.I.PanelTutorial;
             BoardManager.I.EmptyProjectsContainer();
             SetState(GameplayState.Tutorial);
         }
@@ -102,6 +99,7 @@ namespace vgwb.lanoria
         {
             SoundManager.I.PlaySfx(AudioEnum.tile_confirmed);
             currentTile.OnTileConfirmed();
+            CloseTutorialExplanation(2);
             currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
             ScoreManager.I.UpdateScore(currentTile);
             ResetProjectPanel();
@@ -191,6 +189,14 @@ namespace vgwb.lanoria
         private void OnPrefabRelease()
         {
             //ShowTutorial();
+            CloseTutorialExplanation(0);
+            ShowTutorialExplanation(1);
+        }
+
+        private void OnPrefabRotate()
+        {
+            CloseTutorialExplanation(1);
+            ShowTutorialExplanation(2);
         }
 
         private void OnHexPosChange()
@@ -201,6 +207,7 @@ namespace vgwb.lanoria
                 } else {
                     PointsPreviewManager.I.CleanPreview();
                 }
+                HandleBtnConfirm();
             }
         }
 
@@ -208,10 +215,11 @@ namespace vgwb.lanoria
         {
             if (currentTile != null) {
                 Debug.Log("subscribe to: " + currentTile);
-                currentTile.OnValidPositionChange += HandleBtnConfirm;
+                //currentTile.OnValidPositionChange += HandleBtnConfirm;
                 currentTile.OnStopUsingMe += StopUsingPlaceable;
                 currentTile.OnSelectMe += OnPrefabSelect;
                 currentTile.OnReleaseMe += OnPrefabRelease;
+                currentTile.OnRotateMe += OnPrefabRotate;
                 currentTile.OnHexPosChange += OnHexPosChange;
             }
         }
@@ -220,10 +228,11 @@ namespace vgwb.lanoria
         {
             if (currentTile != null) {
                 Debug.Log("unsubscribe to: " + currentTile);
-                currentTile.OnValidPositionChange -= HandleBtnConfirm;
+                //currentTile.OnValidPositionChange -= HandleBtnConfirm;
                 currentTile.OnStopUsingMe -= StopUsingPlaceable;
                 currentTile.OnSelectMe -= OnPrefabSelect;
                 currentTile.OnReleaseMe -= OnPrefabRelease;
+                currentTile.OnRotateMe -= OnPrefabRotate;
                 currentTile.OnHexPosChange -= OnHexPosChange;
             }
         }
@@ -231,7 +240,9 @@ namespace vgwb.lanoria
         private void HandleBtnConfirm()
         {
             if (currentTile != null) {
-                UIGame.EnableBtnConfirm(currentTile.IsValidPosition);
+                Debug.Log("right step?: "+ TutorialManager.I.IsExplanationReached(2));
+                bool enable = currentTile.IsValidPosition && TutorialManager.I.IsExplanationReached(2);
+                UIGame.EnableBtnConfirm(enable);
             }
         }
 
@@ -353,10 +364,17 @@ namespace vgwb.lanoria
             SetState(GameplayState.Drawing);
         }
 
-        private void ShowTutorial()
+        private void ShowTutorialExplanation(int tutorialKey)
         {
-            if (isFirstTurn && displayTutorial) {
-                UITutorial.ShowNextExplanation();
+            if (displayTutorial) {
+                TutorialManager.I.ShowExplanation(tutorialKey);
+            }
+        }
+
+        private void CloseTutorialExplanation(int tutorialKey)
+        {
+            if (displayTutorial) {
+                TutorialManager.I.CloseExplanation(tutorialKey);
             }
         }
 
@@ -373,8 +391,8 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Tutorial:
                     UIGame.EnableCanvas(false);
-                    UITutorial.BeginTutorial(EndTutorial);
-                    UITutorial.ShowNextIntroduction();
+                    TutorialManager.I.BeginTutorial(EndTutorial);
+                    TutorialManager.I.ShowNextIntroduction();
                     break;
                 case GameplayState.Intro:
                     UI_manager.I.Show(UI_manager.States.Play);
@@ -382,7 +400,6 @@ namespace vgwb.lanoria
                     SetState(GameplayState.Setup);
                     break;
                 case GameplayState.Setup:
-                    isFirstTurn = true;
                     UIGame.ScoreUI.Init(0);
                     TileManager.I.Clean();
                     DeckManager.I.PrepareNewDeck();
@@ -401,7 +418,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Score:
                     CleanPointsPreview();
-                    isFirstTurn = false;
+                    TutorialManager.I.EndTurn();
                     SetState(GameplayState.Drawing);// handle score efx
                     break;
                 case GameplayState.Show:
@@ -429,7 +446,7 @@ namespace vgwb.lanoria
                 case GameplayState.None:
                     break;
                 case GameplayState.Tutorial:
-                    UITutorial.ClosePanel();
+                    TutorialManager.I.Close();
                     UIGame.EnableCanvas(true);
                     break;
                 case GameplayState.Intro:
@@ -438,7 +455,7 @@ namespace vgwb.lanoria
                 case GameplayState.Setup:
                     break;
                 case GameplayState.Drawing:
-                    ShowTutorial(); // show how to drag a project
+                    ShowTutorialExplanation(0); // show how to drag a project
                     break;
                 case GameplayState.Play:
                     CameraManager.I.EnableCameraMove(false);

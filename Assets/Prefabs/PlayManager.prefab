@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 5311655321630592202}
   - component: {fileID: 5311655321630592203}
   - component: {fileID: 723556936064208639}
+  - component: {fileID: 9036364573013671970}
   m_Layer: 0
   m_Name: PlayManager
   m_TagString: Untagged
@@ -181,7 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPrefab: {fileID: 9130779135910414227, guid: 84af55ec7b481594ba48fa0c4d6533ce, type: 3}
-  DisplayTutorial: 1
 --- !u!114 &5311655321630592202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +224,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsePreview: 1
   CellAreaEfx: {fileID: 2734998109956602606, guid: 044b9ac675df66f49a3601694ac9a1c0, type: 3}
+--- !u!114 &9036364573013671970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311655321630592215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fd9a4c91b6a7c46bdd7b37f1ba14d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3914503583074823613
 PrefabInstance:
   m_ObjectHideFlags: 0

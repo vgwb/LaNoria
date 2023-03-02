@@ -35,6 +35,7 @@ namespace vgwb.lanoria
         public delegate void PlaceableEvent();
         public PlaceableEvent OnSelectMe;
         public PlaceableEvent OnReleaseMe;
+        public PlaceableEvent OnRotateMe;
         public PlaceableEvent OnValidPositionChange;
         public PlaceableEvent OnStopUsingMe;
         public PlaceableEvent OnHexPosChange;
@@ -129,10 +130,10 @@ namespace vgwb.lanoria
         public void OnTap()
         {
             SoundManager.I.PlaySfx(AudioEnum.tile_rotate);
-            rotate();
+            Rotate();
         }
 
-        private void rotate()
+        private void Rotate()
         {
             var ParentInPivot = new GameObject(); // create an empty object
             // put it in the pivot position
@@ -143,6 +144,10 @@ namespace vgwb.lanoria
             ParentInPivot.transform.Rotate(rot);
             transform.parent = null; // restore the parent object to null
             Destroy(ParentInPivot);
+
+            if (OnRotateMe != null) {
+                OnRotateMe();
+            }
         }
 
         public void OnTileConfirmed()
