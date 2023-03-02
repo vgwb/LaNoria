@@ -8,13 +8,16 @@ namespace vgwb.lanoria
     public class PointsPreviewManager : SingletonMonoBehaviour<PointsPreviewManager>
     {
         public bool UsePreview = true;
+        public GameObject CellAreaEfx;
         private List<CellScoreToDisplay> cellsScore;
         private List<AreaId> highligtAreas;
+        private List<CellEfx> areaEfx;
 
         private void Start()
         {
             cellsScore = new List<CellScoreToDisplay>();
             highligtAreas = new List<AreaId>();
+            areaEfx = new List<CellEfx>();
         }
 
         public void PreviewScore(Tile placeable)
@@ -63,6 +66,18 @@ namespace vgwb.lanoria
             highligtAreas = ScoreManager.I.CalculateAreaBonus(placeable);
             foreach (var area in highligtAreas) {
                 WallManager.I.HighlightWallArea(area);
+                var cells = GridManager.I.GetCellsByArea(area);
+                foreach (var cell in cells) {
+                    var pos = Vector3.up;
+                    pos.y += GameplayConfig.I.CellEfxHeight;
+                    var cellEfx = Instantiate(CellAreaEfx, cell.transform);
+                    cellEfx.transform.localPosition += pos;
+                    var efxComp = cellEfx.GetComponent<CellEfx>();
+                    Color color = GameplayConfig.I.HighlightMat.GetColor("_BaseColor");
+                    color.a = GameplayConfig.I.CellEfxAlpha;
+                    efxComp.SetColor(color);
+                    areaEfx.Add(efxComp);
+                }
             }
         }
 
@@ -73,6 +88,11 @@ namespace vgwb.lanoria
             }
 
             highligtAreas.Clear();
+
+            foreach (var efx in areaEfx) {
+                Destroy(efx.gameObject);
+            }
+            areaEfx.Clear();
         }
     }
 }

@@ -24,6 +24,7 @@ namespace vgwb.lanoria
         [Header("Development")]
         public bool DebugMode;
         public bool ShowHexCoords;
+        public bool ShowTutorial = true;
         public SubregionDebugType ShowSubregionDebug;
     }
 }

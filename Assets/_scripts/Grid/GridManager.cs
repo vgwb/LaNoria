@@ -143,6 +143,14 @@ namespace vgwb.lanoria
             return false;
         }
 
+        public List<GridCell> GetCellsByArea(AreaId area)
+        {
+            var cells = new List<GridCell>();
+            cells = Cells.FindAll(x => x.Area == area);
+
+            return cells;
+        }
+
         private Vector3 RetrieveHexPos(Vector3 pos)
         {
             return Hex.FromWorld(pos).ToWorld(0f);

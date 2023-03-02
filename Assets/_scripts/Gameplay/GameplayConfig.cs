@@ -31,6 +31,8 @@ namespace vgwb.lanoria
         [Header("Areas")]
         public Vector3 LabelDebugOffset;
         public int LabelDebugFontSize = 15;
+        public float CellEfxHeight = 0.4f;
+        public float CellEfxAlpha = 0.5f;
 
         [Header("Score")]
         public int AreaBonus = 20;

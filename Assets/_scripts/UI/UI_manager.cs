@@ -23,6 +23,7 @@ namespace vgwb.lanoria
         public UI_PanelOptions PanelOptions;
         public UI_PanelGamePause PanelGamePause;
         public UI_PanelGameResults PanelGameResults;
+        public UI_Tutorial PanelTutorial;
 
         private States currentUIState;
 

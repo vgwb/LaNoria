@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPrefab: {fileID: 9130779135910414227, guid: 84af55ec7b481594ba48fa0c4d6533ce, type: 3}
+  DisplayTutorial: 1
 --- !u!114 &5311655321630592202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UsePreview: 1
+  CellAreaEfx: {fileID: 2734998109956602606, guid: 044b9ac675df66f49a3601694ac9a1c0, type: 3}
 --- !u!1001 &3914503583074823613
 PrefabInstance:
   m_ObjectHideFlags: 0

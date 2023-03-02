@@ -9,6 +9,7 @@ namespace vgwb.lanoria
     public enum GameplayState
     {
         None, // no state defined
+        Tutorial,
         Intro, // intro state, here efx like camera on regions are played
         Setup, // setup here we set things useful for gameplay
         Drawing, // draw step
@@ -26,12 +27,14 @@ namespace vgwb.lanoria
         public GameObject CardPrefab;
 
         private int currentCardIndex;
+        private bool displayTutorial;
         public Tile currentTile { get; private set; }
         public ProjectData CurrentProjectData { get; private set; }
+        private bool isFirstTurn;
         private List<Card> cardsInHand;
         private List<Tile> projectTiles;
         private UI_Gameplay UIGame;
-        //private LeanSpawnWithFinger spawner;
+        private UI_Tutorial UITutorial;
 
         public delegate void GameplayStateEvent(GameplayState state);
         public GameplayStateEvent OnStateUpdate;
@@ -40,6 +43,7 @@ namespace vgwb.lanoria
         void Start()
         {
             state = GameplayState.None;
+            displayTutorial = !Application.isEditor ? true : AppConfig.I.ShowTutorial;
             ResetValues();
         }
 
@@ -51,8 +55,9 @@ namespace vgwb.lanoria
         public void StartGame()
         {
             UIGame = UI_manager.I.PanelGameplay;
+            UITutorial = UI_manager.I.PanelTutorial;
             BoardManager.I.EmptyProjectsContainer();
-            SetState(GameplayState.Intro);
+            SetState(GameplayState.Tutorial);
         }
 
         public void ForceEndGame()
@@ -89,7 +94,6 @@ namespace vgwb.lanoria
             CleanPointsPreview();
             currentCardIndex = cardIndex;
             CurrentProjectData = projectData;
-            Debug.Log("get texture");
             var texture = UICameraManager.I.GetUICameraTexture(currentCardIndex);
             UIGame.CardSelectionHUD(projectData.Title, texture);
         }
@@ -184,6 +188,11 @@ namespace vgwb.lanoria
             //UIGame.PrefabSelectionHUD();
         }
 
+        private void OnPrefabRelease()
+        {
+            //ShowTutorial();
+        }
+
         private void OnHexPosChange()
         {
             if (currentTile != null) {
@@ -202,6 +211,7 @@ namespace vgwb.lanoria
                 currentTile.OnValidPositionChange += HandleBtnConfirm;
                 currentTile.OnStopUsingMe += StopUsingPlaceable;
                 currentTile.OnSelectMe += OnPrefabSelect;
+                currentTile.OnReleaseMe += OnPrefabRelease;
                 currentTile.OnHexPosChange += OnHexPosChange;
             }
         }
@@ -213,6 +223,7 @@ namespace vgwb.lanoria
                 currentTile.OnValidPositionChange -= HandleBtnConfirm;
                 currentTile.OnStopUsingMe -= StopUsingPlaceable;
                 currentTile.OnSelectMe -= OnPrefabSelect;
+                currentTile.OnReleaseMe -= OnPrefabRelease;
                 currentTile.OnHexPosChange -= OnHexPosChange;
             }
         }
@@ -342,11 +353,28 @@ namespace vgwb.lanoria
             SetState(GameplayState.Drawing);
         }
 
+        private void ShowTutorial()
+        {
+            if (isFirstTurn && displayTutorial) {
+                UITutorial.ShowNextExplanation();
+            }
+        }
+
+        private void EndTutorial()
+        {
+            SetState(GameplayState.Intro);
+        }
+
         private void EnterState()
         {
             switch (state) {
                 default:
                 case GameplayState.None:
+                    break;
+                case GameplayState.Tutorial:
+                    UIGame.EnableCanvas(false);
+                    UITutorial.BeginTutorial(EndTutorial);
+                    UITutorial.ShowNextIntroduction();
                     break;
                 case GameplayState.Intro:
                     UI_manager.I.Show(UI_manager.States.Play);
@@ -354,6 +382,7 @@ namespace vgwb.lanoria
                     SetState(GameplayState.Setup);
                     break;
                 case GameplayState.Setup:
+                    isFirstTurn = true;
                     UIGame.ScoreUI.Init(0);
                     TileManager.I.Clean();
                     DeckManager.I.PrepareNewDeck();
@@ -372,6 +401,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Score:
                     CleanPointsPreview();
+                    isFirstTurn = false;
                     SetState(GameplayState.Drawing);// handle score efx
                     break;
                 case GameplayState.Show:
@@ -398,12 +428,17 @@ namespace vgwb.lanoria
                 default:
                 case GameplayState.None:
                     break;
+                case GameplayState.Tutorial:
+                    UITutorial.ClosePanel();
+                    UIGame.EnableCanvas(true);
+                    break;
                 case GameplayState.Intro:
                     EventsSubscribe();
                     break;
                 case GameplayState.Setup:
                     break;
                 case GameplayState.Drawing:
+                    ShowTutorial(); // show how to drag a project
                     break;
                 case GameplayState.Play:
                     CameraManager.I.EnableCameraMove(false);

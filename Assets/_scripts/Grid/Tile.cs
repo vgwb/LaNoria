@@ -34,6 +34,7 @@ namespace vgwb.lanoria
 
         public delegate void PlaceableEvent();
         public PlaceableEvent OnSelectMe;
+        public PlaceableEvent OnReleaseMe;
         public PlaceableEvent OnValidPositionChange;
         public PlaceableEvent OnStopUsingMe;
         public PlaceableEvent OnHexPosChange;
@@ -108,6 +109,10 @@ namespace vgwb.lanoria
 
             LowerDownTilesHeight(false);
             CameraManager.I.EnableCameraMove(true);
+
+            if (OnReleaseMe != null) {
+                OnReleaseMe();
+            }
         }
 
         public void OnSelect()
