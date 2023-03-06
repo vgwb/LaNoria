@@ -7,12 +7,21 @@ using vgwb.framework;
 
 namespace vgwb.lanoria
 {
+    [System.Serializable]
+    public class MapTutorialPanel
+    {
+        public TutorialStep Key;
+        public int PanelIndex;
+        public bool IsCompleted;
+    }
+
     public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
     {
         #region Var
+        public List<MapTutorialPanel> TutorialSteps;
         [SerializeField] private int activeIntroduction;
-        [SerializeField] private int activeExplanation;
-        private int turn;
+        [SerializeField] private int turn;
+        [SerializeField] private TutorialStep savedKey;
         private UI_Tutorial UITutorial;
         private Action OnIntroOver;
         #endregion
@@ -30,8 +39,8 @@ namespace vgwb.lanoria
         {
             OnIntroOver = null;
             turn = 1;
+            savedKey = TutorialStep.None;
             activeIntroduction = -1;
-            activeExplanation = 0;
             UITutorial.HideAllIntroductions();
             UITutorial.HideAllExplanations();
         }
@@ -40,7 +49,7 @@ namespace vgwb.lanoria
         {
             UITutorial.OpenPanel();
             ResetTutorial();
-            SetupExplanation();
+            SetupTutorialSteps();
             SetupIntroduction(callback);
         }
 
@@ -69,7 +78,7 @@ namespace vgwb.lanoria
             }
         }
 
-        public void SetupExplanation()
+        public void SetupTutorialSteps()
         {
             foreach (var exp in UITutorial.Explanations) {
                 var btn = exp.GetComponentInChildren<Button>();
@@ -80,31 +89,35 @@ namespace vgwb.lanoria
             }
         }
 
-        public void ShowExplanation(int tutorialKey)
+        public void ShowTutorialStep(TutorialStep tutorialKey, int turnValidity = 1)
         {
-            if (activeExplanation != tutorialKey || !IsFirstTurn()) {
+            if (!IsValidKey(tutorialKey) || !IsTurnOk(turnValidity) || IsExplanationCompleted(tutorialKey)) {
                 return;
             }
 
+            savedKey = tutorialKey; // store the key
+            Debug.Log("Display: "+tutorialKey.ToString());
             UITutorial.OpenPanel();
             UITutorial.HideAllExplanations();
-            if (activeExplanation >= 0 && activeExplanation < UITutorial.Explanations.Count) {
-                UITutorial.Explanations[activeExplanation].SetActive(true);
-            } else if (activeExplanation == UITutorial.Explanations.Count) {
-
+            int panelIndex = GetTutorialPanel(tutorialKey);
+            if (panelIndex >= 0) {
+                UITutorial.Explanations[panelIndex].SetActive(true);
             }
         }
 
-        public void CloseExplanation(int tutorialKey)
+        public void CloseTutorialStep(TutorialStep tutorialKey, int turnValidity = 1)
         {
-            if (activeExplanation != tutorialKey || !IsFirstTurn()) {
+            if (savedKey != tutorialKey || !IsTurnOk(turnValidity)) {
                 return;
             }
 
-            if (activeExplanation >= 0 && activeExplanation < UITutorial.Explanations.Count) {
-                UITutorial.Explanations[activeExplanation].SetActive(false);
+            int panelIndex = GetTutorialPanel(tutorialKey);
+            if (panelIndex >= 0) {
+                UITutorial.Explanations[panelIndex].SetActive(false);
             }
-            activeExplanation++;
+
+            savedKey = TutorialStep.None;
+            SetTutorialCompleted(tutorialKey);
             UITutorial.ClosePanel();
         }
 
@@ -113,9 +126,14 @@ namespace vgwb.lanoria
             UITutorial.ClosePanel();
         }
 
-        public bool IsExplanationReached(int tutorialKey)
+        public bool IsExplanationCompleted(TutorialStep tutorialKey)
         {
-            return activeExplanation >= tutorialKey;
+            var tuple = TutorialSteps.Find(x => x.Key == tutorialKey);
+            if (tuple != null) {
+                return tuple.IsCompleted;
+            }
+
+            return false;
         }
 
         public void EndTurn()
@@ -123,9 +141,42 @@ namespace vgwb.lanoria
             turn++;
         }
 
-        private bool IsFirstTurn()
+        /// <summary>
+        /// Check if the turn is good. A value < 1 is always ok.
+        /// </summary>
+        /// <returns></returns>
+        private bool IsTurnOk(int turnValidity)
         {
-            return turn == 1;
+            if (turnValidity < 1) { // 
+                return true;
+            } else {
+                return turn == turnValidity;
+            }
+        }
+
+        private bool IsValidKey(TutorialStep tutorialKey)
+        {
+            return savedKey == TutorialStep.None;
+        }
+
+        private int GetTutorialPanel(TutorialStep key)
+        {
+            var tuple = TutorialSteps.Find(x => x.Key == key);
+
+            if (tuple != null) {
+                return tuple.PanelIndex;
+            }
+
+            return -1;
+        }
+
+        private void SetTutorialCompleted(TutorialStep key)
+        {
+            var tuple = TutorialSteps.Find(x => x.Key == key);
+
+            if (tuple != null) {
+                tuple.IsCompleted = true;
+            }
         }
         #endregion
     }

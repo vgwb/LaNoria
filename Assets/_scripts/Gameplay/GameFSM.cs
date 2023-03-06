@@ -21,6 +21,15 @@ namespace vgwb.lanoria
         Pause // game is in pause
     }
 
+    public enum TutorialStep
+    {
+        None,
+        Drag, // how to drag a tile
+        Rotate, // how to rotate
+        Confirm, // how to confirm
+        Points // how sinergy points are calculated
+    }
+
     public class GameFSM : MonoBehaviour
     {
         [Required]
@@ -79,10 +88,7 @@ namespace vgwb.lanoria
 
         public void OnClickCard(ProjectData projectData, int cardIndex)
         {
-            if (currentTile != null) {
-                UnsuscribeToPlaceableEvents();
-                Destroy(currentTile.gameObject);
-            }
+            DestroyCurrentTile();
 
             foreach (var card in cardsInHand) {
                 card.DoSelect(cardIndex == card.CardIndex);
@@ -99,7 +105,8 @@ namespace vgwb.lanoria
         {
             SoundManager.I.PlaySfx(AudioEnum.tile_confirmed);
             currentTile.OnTileConfirmed();
-            CloseTutorialExplanation(2);
+            CloseTutorialStep(TutorialStep.Confirm, 1);
+            CloseTutorialStep(TutorialStep.Points, 0);
             currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
             ScoreManager.I.UpdateScore(currentTile);
             ResetProjectPanel();
@@ -189,14 +196,14 @@ namespace vgwb.lanoria
         private void OnPrefabRelease()
         {
             //ShowTutorial();
-            CloseTutorialExplanation(0);
-            ShowTutorialExplanation(1);
+            CloseTutorialStep(TutorialStep.Drag, 1);
+            ShowTutorialStep(TutorialStep.Rotate, 1);
         }
 
         private void OnPrefabRotate()
         {
-            CloseTutorialExplanation(1);
-            ShowTutorialExplanation(2);
+            CloseTutorialStep(TutorialStep.Rotate, 1);
+            ShowTutorialStep(TutorialStep.Confirm, 1);
         }
 
         private void OnHexPosChange()
@@ -240,8 +247,7 @@ namespace vgwb.lanoria
         private void HandleBtnConfirm()
         {
             if (currentTile != null) {
-                Debug.Log("right step?: "+ TutorialManager.I.IsExplanationReached(2));
-                bool enable = currentTile.IsValidPosition && TutorialManager.I.IsExplanationReached(2);
+                bool enable = currentTile.IsValidPosition && TutorialManager.I.IsExplanationCompleted(TutorialStep.Rotate);
                 UIGame.EnableBtnConfirm(enable);
             }
         }
@@ -250,6 +256,14 @@ namespace vgwb.lanoria
         {
             UnsuscribeToPlaceableEvents();
             UIGame.EnableFingerCanvas(true);
+        }
+
+        private void DestroyCurrentTile()
+        {
+            if (currentTile != null) {
+                UnsuscribeToPlaceableEvents();
+                Destroy(currentTile.gameObject);
+            }
         }
 
         private void EmptyHand()
@@ -364,17 +378,17 @@ namespace vgwb.lanoria
             SetState(GameplayState.Drawing);
         }
 
-        private void ShowTutorialExplanation(int tutorialKey)
+        private void ShowTutorialStep(TutorialStep tutorialKey, int turnValidity)
         {
             if (displayTutorial) {
-                TutorialManager.I.ShowExplanation(tutorialKey);
+                TutorialManager.I.ShowTutorialStep(tutorialKey, turnValidity);
             }
         }
 
-        private void CloseTutorialExplanation(int tutorialKey)
+        private void CloseTutorialStep(TutorialStep tutorialKey, int turnValidity)
         {
             if (displayTutorial) {
-                TutorialManager.I.CloseExplanation(tutorialKey);
+                TutorialManager.I.CloseTutorialStep(tutorialKey, turnValidity);
             }
         }
 
@@ -455,7 +469,7 @@ namespace vgwb.lanoria
                 case GameplayState.Setup:
                     break;
                 case GameplayState.Drawing:
-                    ShowTutorialExplanation(0); // show how to drag a project
+                    ShowTutorialStep(TutorialStep.Drag, 1); // show how to drag a project
                     break;
                 case GameplayState.Play:
                     CameraManager.I.EnableCameraMove(false);
@@ -468,6 +482,7 @@ namespace vgwb.lanoria
                 case GameplayState.End:
                     EventsUnsubscribe();
                     EmptyHand();
+                    DestroyCurrentTile();
                     BoardManager.I.EmptyProjectsContainer();
                     WallManager.I.ResetAllWalls();
                     ScoreManager.I.ResetScore();

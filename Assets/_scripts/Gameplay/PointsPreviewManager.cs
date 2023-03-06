@@ -47,6 +47,10 @@ namespace vgwb.lanoria
         private void DisplaySynergyPreview(Tile placeable)
         {
             cellsScore = ScoreManager.I.CalculateAdjacencyBonus(placeable);
+            if (ScoreManager.I.FindSinergy()) {
+                TutorialManager.I.ShowTutorialStep(TutorialStep.Points, 0);
+            }
+
             foreach (var cellScore in cellsScore) {
                 DrawPreviewScore(cellScore.Cell, cellScore.Score);
             }

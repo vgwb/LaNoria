@@ -127,6 +127,11 @@ namespace vgwb.lanoria
             return areasToConfirm;
         }
 
+        public bool FindSinergy()
+        {
+            return adjacencyBonus > 0;
+        }
+
         private int CalculatePlacementBonus(Tile tile)
         {
             var points = tile.Size switch {

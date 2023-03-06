@@ -236,6 +236,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fd9a4c91b6a7c46bdd7b37f1ba14d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TutorialSteps:
+  - Key: 1
+    PanelIndex: 0
+    IsCompleted: 0
+  - Key: 2
+    PanelIndex: 1
+    IsCompleted: 0
+  - Key: 3
+    PanelIndex: 2
+    IsCompleted: 0
+  - Key: 4
+    PanelIndex: 3
+    IsCompleted: 0
+  activeIntroduction: 0
 --- !u!1001 &3914503583074823613
 PrefabInstance:
   m_ObjectHideFlags: 0
