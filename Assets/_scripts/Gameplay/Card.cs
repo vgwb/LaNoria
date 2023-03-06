@@ -14,8 +14,11 @@ namespace vgwb.lanoria
     {
         public TMP_Text CardTitle;
         public RawImage PrefabImg;
+        public Image TutorialImg;
         public LeanFingerDownCanvas SpawnCanvas;
         public LeanSpawnWithFinger Spawner;
+        private bool displayTutorial;
+        private Vector2 originSizeDelta;
         public bool Playable { get; private set; }
 
         [HideInInspector]
@@ -29,11 +32,20 @@ namespace vgwb.lanoria
         private void Awake()
         {
             Rect = GetComponent<RectTransform>();
+            originSizeDelta = TutorialImg.rectTransform.sizeDelta;
+            displayTutorial = TutorialManager.I.IsPlayingStep(TutorialStep.Drag);
+            TutorialImg.gameObject.SetActive(displayTutorial);
+        }
+
+        private void Update()
+        {
+            HandleTutorial();
         }
 
         private void OnDestroy()
         {
             Spawner.OnSpawnedClone = null;
+            TutorialImg.DOKill();
         }
 
         public void Init(ProjectData projectData, Texture texture, GameObject prefabUsed, int cardIndex)
@@ -105,6 +117,38 @@ namespace vgwb.lanoria
             tile.SetupForDrag();
             GameManager.I.GameFSM.OnClickCard(Project, CardIndex);
             GameManager.I.GameFSM.OnPrefabSpawned(tile);
+        }
+
+        private void HandleTutorial()
+        {
+            if (displayTutorial != TutorialManager.I.IsPlayingStep(TutorialStep.Drag)) {
+                displayTutorial = TutorialManager.I.IsPlayingStep(TutorialStep.Drag);
+                Debug.Log("Change");
+                TutorialImg.gameObject.SetActive(displayTutorial);
+                if (displayTutorial) {
+                    Bounce(false);
+                }
+            }
+        }
+
+        private void Bounce(bool increment)
+        {
+            float from = 0.6f;
+            float to = 1.0f;
+            float duration = 0.6f;
+            if (!increment) {
+                from = 1.0f;
+                to = 0.6f;
+            }
+            DOVirtual.Float(from, to, duration, ResizeRect).OnComplete(() => Bounce(!increment));
+        }
+
+        private void ResizeRect(float perc)
+        {
+            if (TutorialImg != null) {
+                Debug.Log("size delta: "+ TutorialImg.rectTransform.sizeDelta+" - "+perc);
+                TutorialImg.rectTransform.sizeDelta = originSizeDelta * perc;
+            }
         }
     }
 }

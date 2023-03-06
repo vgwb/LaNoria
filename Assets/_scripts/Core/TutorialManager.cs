@@ -21,7 +21,7 @@ namespace vgwb.lanoria
         public List<MapTutorialPanel> TutorialSteps;
         [SerializeField] private int activeIntroduction;
         [SerializeField] private int turn;
-        [SerializeField] private TutorialStep savedKey;
+        [SerializeField] private TutorialStep savedStep;
         private UI_Tutorial UITutorial;
         private Action OnIntroOver;
         #endregion
@@ -39,7 +39,7 @@ namespace vgwb.lanoria
         {
             OnIntroOver = null;
             turn = 1;
-            savedKey = TutorialStep.None;
+            savedStep = TutorialStep.None;
             activeIntroduction = -1;
             UITutorial.HideAllIntroductions();
             UITutorial.HideAllExplanations();
@@ -95,7 +95,7 @@ namespace vgwb.lanoria
                 return;
             }
 
-            savedKey = tutorialKey; // store the key
+            savedStep = tutorialKey; // store the key
             Debug.Log("Display: "+tutorialKey.ToString());
             UITutorial.OpenPanel();
             UITutorial.HideAllExplanations();
@@ -107,7 +107,7 @@ namespace vgwb.lanoria
 
         public void CloseTutorialStep(TutorialStep tutorialKey, int turnValidity = 1)
         {
-            if (savedKey != tutorialKey || !IsTurnOk(turnValidity)) {
+            if (savedStep != tutorialKey || !IsTurnOk(turnValidity)) {
                 return;
             }
 
@@ -116,7 +116,7 @@ namespace vgwb.lanoria
                 UITutorial.Explanations[panelIndex].SetActive(false);
             }
 
-            savedKey = TutorialStep.None;
+            savedStep = TutorialStep.None;
             SetTutorialCompleted(tutorialKey);
             UITutorial.ClosePanel();
         }
@@ -141,6 +141,11 @@ namespace vgwb.lanoria
             turn++;
         }
 
+        public bool IsPlayingStep(TutorialStep step)
+        {
+            return savedStep == step;
+        }
+
         /// <summary>
         /// Check if the turn is good. A value < 1 is always ok.
         /// </summary>
@@ -156,7 +161,7 @@ namespace vgwb.lanoria
 
         private bool IsValidKey(TutorialStep tutorialKey)
         {
-            return savedKey == TutorialStep.None;
+            return savedStep == TutorialStep.None;
         }
 
         private int GetTutorialPanel(TutorialStep key)
