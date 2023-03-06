@@ -48,6 +48,7 @@ namespace vgwb.lanoria
         public bool ShowPivot = false;
 
         private bool isUsed;
+        private bool isMoving;
         private Vector3 prevPos;
 
         public bool IsValidPosition { get; private set; }
@@ -98,6 +99,7 @@ namespace vgwb.lanoria
         /// </summary>
         public void OnRelease()
         {
+            isMoving = false;
             SoundManager.I.PlaySfx(AudioEnum.tile_released);
             Vector3 newPos = HexPos;
             if (IsCompletelyOutOfMap()) {
@@ -119,6 +121,7 @@ namespace vgwb.lanoria
         public void OnSelect()
         {
             //SoundManager.I.PlaySfx(AudioEnum.tile_released);
+            isMoving = true;
             RestoreOutline();
             RiseUpTilesHeight();
             OnSelectMe?.Invoke();
@@ -292,6 +295,11 @@ namespace vgwb.lanoria
             }
 
             return result;
+        }
+
+        public bool IsMoving()
+        {
+            return isMoving;
         }
 
         private Vector3 GetHexRotation(HexDirection dir)

@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 5976312339843145886}
   - component: {fileID: 5976312339843145887}
   - component: {fileID: 5976312339843145884}
+  - component: {fileID: 5897605277976617402}
   m_Layer: 0
   m_Name: Tile-P2A
   m_TagString: Untagged
@@ -302,6 +303,20 @@ MonoBehaviour:
   onScreen:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5897605277976617402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5976312339843145882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182f8acdafeab4945b9984416095de00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisplayStep: 2
+  HighlighterPrefab: {fileID: 5089711505563640223, guid: 4c18726bcc0c77243ba2dae14f83e734, type: 3}
 --- !u!1001 &2080887358441891052
 PrefabInstance:
   m_ObjectHideFlags: 0

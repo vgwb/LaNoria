@@ -123,7 +123,6 @@ namespace vgwb.lanoria
         {
             if (displayTutorial != TutorialManager.I.IsPlayingStep(TutorialStep.Drag)) {
                 displayTutorial = TutorialManager.I.IsPlayingStep(TutorialStep.Drag);
-                Debug.Log("Change");
                 TutorialImg.gameObject.SetActive(displayTutorial);
                 if (displayTutorial) {
                     Bounce(false);
@@ -146,7 +145,6 @@ namespace vgwb.lanoria
         private void ResizeRect(float perc)
         {
             if (TutorialImg != null) {
-                Debug.Log("size delta: "+ TutorialImg.rectTransform.sizeDelta+" - "+perc);
                 TutorialImg.rectTransform.sizeDelta = originSizeDelta * perc;
             }
         }
