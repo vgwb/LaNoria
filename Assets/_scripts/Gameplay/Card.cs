@@ -71,9 +71,11 @@ namespace vgwb.lanoria
         public void DoSelect(bool status)
         {
             if (status) {
-                Rect.DOAnchorPosY(-242, 0.5f);
+                PrefabImg.gameObject.SetActive(false);
+                // Rect.DOAnchorPosY(-242, 0.5f);
             } else {
-                Rect.DOAnchorPosY(0.0f, 0.5f);
+                PrefabImg.gameObject.SetActive(true);
+                // Rect.DOAnchorPosY(0.0f, 0.5f);
             }
         }
 

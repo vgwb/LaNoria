@@ -1336,6 +1336,10 @@ PrefabInstance:
       propertyPath: onFinger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9088964268417771431, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+    - target: {fileID: 2684578355111273229, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5619242593406435912, guid: 277ff3a2dd052470a8021db219e2527a, type: 3}
       propertyPath: m_Name
       value: Panel Gameplay
