@@ -1707,6 +1707,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9086320090705323602}
     m_Modifications:
+    - target: {fileID: 2106866505221783579, guid: 4e0d25a3738772a4e97c1b263b2517c7, type: 3}
+      propertyPath: m_text
+      value: 'TUTORIAL: DRAG'
+      objectReference: {fileID: 0}
     - target: {fileID: 2106866506712832826, guid: 4e0d25a3738772a4e97c1b263b2517c7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1794,6 +1798,15 @@ PrefabInstance:
     - target: {fileID: 2106866506712832827, guid: 4e0d25a3738772a4e97c1b263b2517c7, type: 3}
       propertyPath: m_Name
       value: TutorialStep1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3103681999970773746, guid: 4e0d25a3738772a4e97c1b263b2517c7, type: 3}
+      propertyPath: m_text
+      value: 'Each card represent a project: select a project and drag it over the
+        map'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3103681999970773746, guid: 4e0d25a3738772a4e97c1b263b2517c7, type: 3}
+      propertyPath: m_fontSize
+      value: 43.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e0d25a3738772a4e97c1b263b2517c7, type: 3}
