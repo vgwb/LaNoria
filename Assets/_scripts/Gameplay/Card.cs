@@ -49,6 +49,11 @@ namespace vgwb.lanoria
             originalLocalPos = transform.localPosition;
         }
 
+        public void OnOpenProjectDetail()
+        {
+            UI_manager.I.OpenProjectDetail(Project);
+        }
+
         public void SetPlayable(bool isPlayable)
         {
             Playable = isPlayable;
