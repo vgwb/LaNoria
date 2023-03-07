@@ -49,17 +49,17 @@ namespace vgwb.lanoria
                 GameManager.I.AutomaticEndGame();
             }
             if (Input.GetKeyDown(KeyCode.Alpha1)) {
-                GameManager.I.AutomaticPlayCard(1);
+                GameManager.I.AutomaticPlayCard(3);
             }
             if (Input.GetKeyDown(KeyCode.Alpha2)) {
                 GameManager.I.AutomaticPlayCard(2);
             }
             if (Input.GetKeyDown(KeyCode.Alpha3)) {
-                GameManager.I.AutomaticPlayCard(3);
+                GameManager.I.AutomaticPlayCard(1);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha4)) {
-                GameManager.I.AutomaticPlayCard(4);
-            }
+            // if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            //     GameManager.I.AutomaticPlayCard(4);
+            // }
         }
     }
 }
