@@ -33,7 +33,7 @@ MonoBehaviour:
   Place4Bonus: 12
   SlideProjectPanelTime: 0.4
   SlideProjectPanelPixelIn: 50
-  UIProjectRotation: {x: -90, y: 0, z: 0}
+  UIProjectRotation: {x: -50, y: 0, z: 0}
   ResetCameraRotYOnPlay: 1
   FadeInGameCanvas: 1
   CardAppearsTime: 0.3
