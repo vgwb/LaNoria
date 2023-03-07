@@ -249,6 +249,12 @@ namespace vgwb.lanoria
 
         private void CreateHooks()
         {
+            int child = PanelCards.transform.childCount;
+            for (int i = 0; i < child; i++) {
+                var childObj = PanelCards.transform.GetChild(i);
+                Destroy(childObj.gameObject);
+            }
+
             int howMany = GameplayConfig.I.HandSize;
             for (int i = 0; i < howMany; i++) {
                 var hook = new GameObject("Hook_" + i.ToString(), typeof(RectTransform));
