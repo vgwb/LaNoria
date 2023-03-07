@@ -24,16 +24,20 @@ MonoBehaviour:
   HandSize: 3
   LabelDebugOffset: {x: 0, y: 0, z: 0}
   LabelDebugFontSize: 10
-  TransversalityBonus: 20
-  SynergyBonus: 1
-  Hex2Points: 4
-  Hex3Points: 8
-  Hex4Points: 12
+  CellEfxHeight: 0.4
+  CellEfxAlpha: 0.5
+  AreaBonus: 20
+  AdjacencyBonus: 1
+  Place2Bonus: 4
+  Place3Bonus: 8
+  Place4Bonus: 12
   SlideProjectPanelTime: 0.4
   SlideProjectPanelPixelIn: 50
-  UIProjectRotation: {x: 0, y: -90, z: 60}
+  UIProjectRotation: {x: -90, y: 0, z: 0}
   ResetCameraRotYOnPlay: 1
   FadeInGameCanvas: 1
   CardAppearsTime: 0.3
+  BounceMinDim: 0.6
+  BounceDuration: 0.6
   MovementXClamp: 4
   MovementYClamp: 3
