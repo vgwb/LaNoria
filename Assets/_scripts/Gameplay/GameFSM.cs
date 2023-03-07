@@ -418,7 +418,7 @@ namespace vgwb.lanoria
                     TileManager.I.Clean();
                     DeckManager.I.PrepareNewDeck();
                     GridManager.I.InitCells();
-                    UI_manager.I.PanelGameResults.SetScore(0);
+                    UI_manager.I.PanelGameResults.SetTotalScore(0);
                     ResetProjectPanel();
                     float duration = GameplayConfig.I.FadeInGameCanvas;
                     UIGame.FadeCanvas(1.0f, duration, () => EndSetup());
@@ -436,7 +436,7 @@ namespace vgwb.lanoria
                     SetState(GameplayState.Drawing);// handle score efx
                     break;
                 case GameplayState.Show:
-                    UI_manager.I.PanelGameResults.SetScore(ScoreManager.I.Score);
+                    UI_manager.I.PanelGameResults.SetTotalScore(ScoreManager.I.Score);
                     UI_manager.I.ShowGameResult(true);
                     SetState(GameplayState.End);
                     break;

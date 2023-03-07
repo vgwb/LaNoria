@@ -21,9 +21,14 @@ namespace vgwb.lanoria
     public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     {
         public int Score { get; private set; }
+        public int AdjacencyScore { get; private set; }
+        public int AreaScore { get; private set; }
+        public int PlacementScore { get; private set; }
 
         [SerializeField] private int adjacencyBonus;
+        
         [SerializeField] private int areaScore;
+        
         [SerializeField] private List<AreaId> completedAreas;
         [SerializeField] private List<AreaId> areasToConfirm;
 
@@ -37,6 +42,9 @@ namespace vgwb.lanoria
         public void UpdateScore(Tile tile)
         {
             int placementBonus = CalculatePlacementBonus(tile);
+            AreaScore += areaScore;
+            AdjacencyScore += adjacencyBonus;
+            PlacementScore += placementBonus;
             int newPoints = placementBonus + adjacencyBonus + areaScore;
             Score += newPoints;
             Debug.Log("basic: " + placementBonus + " adjacency: " + adjacencyBonus + " area: " + areaScore);
@@ -49,6 +57,10 @@ namespace vgwb.lanoria
         {
             Score = 0;
             adjacencyBonus = 0;
+            areaScore = 0;
+            AreaScore = 0;
+            AdjacencyScore = 0;
+            PlacementScore = 0;
             completedAreas.Clear();
             areasToConfirm.Clear();
         }

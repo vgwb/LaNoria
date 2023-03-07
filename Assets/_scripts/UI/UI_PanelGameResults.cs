@@ -11,6 +11,10 @@ namespace vgwb.lanoria
         public Button BtnResume;
         public Button BtnExit;
         public TMP_Text Score;
+        public TMP_Text PlacementScore;
+        public TMP_Text AdjacencyScore;
+        public TMP_Text AreaScore;
+        public TMP_Text EmptyScore;
 
         void Start()
         {
@@ -32,7 +36,7 @@ namespace vgwb.lanoria
             gameObject.SetActive(false);
         }
 
-        public void SetScore(string score)
+        public void SetTotalScore(string score)
         {
             if (Score != null) {
                 Score.text = score;
@@ -40,9 +44,57 @@ namespace vgwb.lanoria
             }
         }
 
-        public void SetScore(int score)
+        public void SetTotalScore(int score)
         {
-            SetScore(score.ToString());
+            SetTotalScore(score.ToString());
+        }
+
+        public void SetPlacementScore(string score)
+        {
+            if (Score != null) {
+                PlacementScore.text = score;
+            }
+        }
+
+        public void SetPlacementScore(int score)
+        {
+            SetPlacementScore(score.ToString());
+        }
+
+        public void SetAdjacencyScore(string score)
+        {
+            if (Score != null) {
+                AdjacencyScore.text = score;
+            }
+        }
+
+        public void SetAdjacencyScore(int score)
+        {
+            SetAdjacencyScore(score.ToString());
+        }
+
+        public void SetAreaScore(string score)
+        {
+            if (Score != null) {
+                AreaScore.text = score;
+            }
+        }
+
+        public void SetAreaScore(int score)
+        {
+            SetAreaScore(score.ToString());
+        }
+
+        public void SetEmptyScore(string score)
+        {
+            if (Score != null) {
+                EmptyScore.text = score;
+            }
+        }
+
+        public void SetEmptyScore(int score)
+        {
+            SetEmptyScore(score.ToString());
         }
     }
 }
