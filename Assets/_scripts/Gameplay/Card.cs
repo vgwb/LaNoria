@@ -12,6 +12,7 @@ namespace vgwb.lanoria
 {
     public class Card : MonoBehaviour
     {
+        public CanvasGroup MyCanvas;
         public TMP_Text CardTitle;
         public RawImage PrefabImg;
         public LeanFingerDownCanvas SpawnCanvas;
@@ -51,13 +52,10 @@ namespace vgwb.lanoria
         public void SetPlayable(bool isPlayable)
         {
             Playable = isPlayable;
-            // if (Playable) {
-            //     transform.localPosition = originalLocalPos;
-            // } else {
-            //     Debug.Log("NOT PLAYABLE card " + cardNumber);
-            //     transform.DOLocalMoveY(-30, 1);
-            //     //transform.localPosition = new Vector3(originalLocalPos.x, originalLocalPos.y - 30, originalLocalPos.z);
-            // }
+            if (!Playable) {
+                MyCanvas.alpha = 0.5f;
+                MyCanvas.blocksRaycasts = false;
+            }
         }
 
         public bool IsPlayable()
