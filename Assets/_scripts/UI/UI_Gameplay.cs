@@ -250,7 +250,7 @@ namespace vgwb.lanoria
         private void CreateHooks()
         {
             int child = PanelCards.transform.childCount;
-            for (int i = 0; i < child; i++) {
+            for (int i = 0; i < child; i++) { // clean hooks
                 var childObj = PanelCards.transform.GetChild(i);
                 Destroy(childObj.gameObject);
             }

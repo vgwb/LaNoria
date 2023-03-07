@@ -436,7 +436,12 @@ namespace vgwb.lanoria
                     SetState(GameplayState.Drawing);// handle score efx
                     break;
                 case GameplayState.Show:
-                    UI_manager.I.PanelGameResults.SetTotalScore(ScoreManager.I.Score);
+                    UI_manager.I.PanelGameResults.SetAreaScore(ScoreManager.I.AreaScore);
+                    UI_manager.I.PanelGameResults.SetAdjacencyScore(ScoreManager.I.AdjacencyScore);
+                    UI_manager.I.PanelGameResults.SetPlacementScore(ScoreManager.I.PlacementScore);
+                    int emptyCells = GridManager.I.FreeCells() * -1;
+                    UI_manager.I.PanelGameResults.SetEmptyScore(emptyCells);
+                    UI_manager.I.PanelGameResults.SetTotalScore(ScoreManager.I.Score + emptyCells);
                     UI_manager.I.ShowGameResult(true);
                     SetState(GameplayState.End);
                     break;

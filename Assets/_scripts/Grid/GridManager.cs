@@ -35,6 +35,17 @@ namespace vgwb.lanoria
             }
         }
 
+        public int FreeCells()
+        {
+            int howMany = 0;
+            var freeCells = Cells.FindAll(x => x.Occupied == false);
+
+            if (freeCells != null) {
+                howMany = freeCells.Count;
+            }
+            return howMany;
+        }
+
         public bool IsCellOccupiedByPos(Vector3 pos)
         {
             var cell = GetCellByPosition(pos);
