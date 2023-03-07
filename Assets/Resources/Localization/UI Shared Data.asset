@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: btn.confirm
     m_Metadata:
       m_Items: []
+  - m_Id: 10138992044400640
+    m_Key: btn.exit
+    m_Metadata:
+      m_Items: []
   - m_Id: 303461031936
     m_Key: btn.no
     m_Metadata:
@@ -35,8 +39,8 @@ MonoBehaviour:
     m_Key: menu.about
     m_Metadata:
       m_Items: []
-  - m_Id: 8702683148967936
-    m_Key: panel.gameend
+  - m_Id: 10137802690781184
+    m_Key: menu.howtoplay
     m_Metadata:
       m_Items: []
   - m_Id: 114348253184
@@ -47,20 +51,36 @@ MonoBehaviour:
     m_Key: menu.play
     m_Metadata:
       m_Items: []
-  - m_Id: 193004036096
-    m_Key: prompt.areyousure
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10137802690781184
-    m_Key: menu.howtoplay
-    m_Metadata:
-      m_Items: []
   - m_Id: 10138653455015936
     m_Key: menu.resume
     m_Metadata:
       m_Items: []
-  - m_Id: 10138992044400640
-    m_Key: btn.exit
+  - m_Id: 8702683148967936
+    m_Key: panel.gameend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193004036096
+    m_Key: prompt.areyousure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454464
+    m_Key: tutorial.popup.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454465
+    m_Key: tutorial.popup.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454466
+    m_Key: tutorial.popup.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454467
+    m_Key: tutorial.popup.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454468
+    m_Key: tutorial.popup.5
     m_Metadata:
       m_Items: []
   m_Metadata:

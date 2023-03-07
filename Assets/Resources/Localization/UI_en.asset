@@ -66,6 +66,29 @@ MonoBehaviour:
     m_Localized: Exit
     m_Metadata:
       m_Items: []
+  - m_Id: 19308894571454464
+    m_Localized: 'Each card represent a project: select a project and drag it over
+      the map'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454465
+    m_Localized: "Change project by dragging another one over the map\u2026 and remember,
+      the bigger the project the bigger the impact\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454466
+    m_Localized: "Rotate the project by clicking it\u2026 and you can also move it
+      around by dragging it\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454467
+    m_Localized: Press the Confirm button once you are happy with the project position
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19308894571454468
+    m_Localized: Move and/or rotate the project to a valid position
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
