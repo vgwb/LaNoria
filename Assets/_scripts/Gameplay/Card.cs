@@ -73,9 +73,10 @@ namespace vgwb.lanoria
             if (status) {
                 PrefabImg.enabled = false;
                 // Rect.DOAnchorPosY(-242, 0.5f);
+                Rect.DOAnchorPosY(-142, 0.5f);
             } else {
                 PrefabImg.enabled = true;
-                // Rect.DOAnchorPosY(0.0f, 0.5f);
+                Rect.DOAnchorPosY(0.0f, 0.5f);
             }
         }
 
