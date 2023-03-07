@@ -9,6 +9,7 @@ namespace vgwb.lanoria
 {
     public enum ProjectCategories
     {
+        None = 0,
         Environment = 1,
         Equality = 2,
         Tech = 3,

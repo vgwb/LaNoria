@@ -157,6 +157,8 @@ namespace vgwb.lanoria
         {
             EnableLeanComponents(false);
             EnablePivot(false); // deactivate pivot and colliders
+            DisableCategoryIcons();
+
             OccupyGrid();
             DisableOutline();
             StopUsingMe();
@@ -245,6 +247,13 @@ namespace vgwb.lanoria
                     Cells[i].ApplyColor();
                     Cells[i].SetLabel("");
                 }
+            }
+        }
+
+        private void DisableCategoryIcons()
+        {
+            foreach (var cell in Cells) {
+                cell.RemoveCategory();
             }
         }
 

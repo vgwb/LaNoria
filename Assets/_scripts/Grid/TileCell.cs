@@ -36,6 +36,11 @@ namespace vgwb.lanoria
             category = newCategory;
         }
 
+        public void RemoveCategory()
+        {
+            Icon.gameObject.SetActive(false);
+        }
+
         public void ApplyColor()
         {
             var mat = AssociatedMaterial;
