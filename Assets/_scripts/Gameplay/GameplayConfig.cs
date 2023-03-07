@@ -51,6 +51,11 @@ namespace vgwb.lanoria
         public float FadeInGameCanvas = 1.0f;
         public float CardAppearsTime = 1.0f;
 
+        [Header("Tutorial highlight")]
+        [Range(0.1f, 1.0f)]
+        public float BounceMinDim = 0.6f;
+        public float BounceDuration = 0.6f;
+
         [Header("Camera In Game")]
         public float MovementXClamp = 4.0f;
         public float MovementYClamp = 3.0f;

@@ -51,12 +51,12 @@ namespace vgwb.lanoria
 
         private void Bounce(bool increment)
         {
-            float from = 0.6f;
+            float from = GameplayConfig.I.BounceMinDim;
             float to = 1.0f;
-            float duration = 0.6f;
+            float duration = GameplayConfig.I.BounceDuration;
             if (!increment) {
                 from = 1.0f;
-                to = 0.6f;
+                to = GameplayConfig.I.BounceMinDim;
             }
             DOVirtual.Float(from, to, duration, ResizeRect).OnComplete(() => Bounce(!increment));
         }
