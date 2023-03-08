@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8702683148967936
-    m_Localized: Game End
+    m_Localized: Quit Game
     m_Metadata:
       m_Items: []
   - m_Id: 10137802690781184
