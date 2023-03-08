@@ -109,6 +109,22 @@ MonoBehaviour:
     m_Localized: Move and/or rotate the project to a valid position
     m_Metadata:
       m_Items: []
+  - m_Id: 19679508188618752
+    m_Localized: CELLS/HEXAGON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618753
+    m_Localized: SYNERGY BONUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618754
+    m_Localized: REGION BONUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618755
+    m_Localized: EMPTY SCORE
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

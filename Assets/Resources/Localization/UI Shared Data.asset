@@ -103,6 +103,22 @@ MonoBehaviour:
     m_Key: tutorial.popup.5.desc
     m_Metadata:
       m_Items: []
+  - m_Id: 19679508188618752
+    m_Key: score.cells
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618753
+    m_Key: score.synergy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618754
+    m_Key: score.area
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618755
+    m_Key: score.empty
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

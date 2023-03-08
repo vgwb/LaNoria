@@ -110,6 +110,22 @@ MonoBehaviour:
     m_Localized: "Mueve y/o gira el proyecto a una posici\xF3n v\xE1lida"
     m_Metadata:
       m_Items: []
+  - m_Id: 19679508188618752
+    m_Localized: PROYECTOS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618753
+    m_Localized: SINERGIAS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618754
+    m_Localized: TRANSVERSALIDAD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618755
+    m_Localized: MALUS
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
