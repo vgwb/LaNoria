@@ -285,8 +285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BtnPlay: {fileID: 4452299247256831904}
   BtnAbout: {fileID: 1504416116986591616}
-  BtnOptions: {fileID: 1504416117565171358}
   BtnHelp: {fileID: 2441351062373650751}
+  BtnOptions: {fileID: 1504416117565171358}
 --- !u!222 &4452299246788259885
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -451,6 +451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu Button HELP
       objectReference: {fileID: 0}
+    - target: {fileID: 2966039198642177333, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -469,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_AnchorMin.x
@@ -477,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_SizeDelta.x
@@ -517,11 +521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 342.5
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -298.125
       objectReference: {fileID: 0}
     - target: {fileID: 2966039198642177334, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

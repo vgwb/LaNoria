@@ -66,27 +66,47 @@ MonoBehaviour:
     m_Localized: Salir
     m_Metadata:
       m_Items: []
-  - m_Id: 19308894571454464
+  - m_Id: 19668705049829376
+    m_Localized: Elige un proyecto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829377
     m_Localized: 'Cada carta representa un proyecto: elige un proyecto y arrastralo
       sobre el mapa'
     m_Metadata:
       m_Items: []
-  - m_Id: 19308894571454465
+  - m_Id: 19668705049829378
+    m_Localized: Cambia proyecto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829379
     m_Localized: "Cambia proyecto arrastrando otro proyecto sobre el mapa... y recuerda
       que los proyectos m\xE1s grandes generan m\xE1s impacto"
     m_Metadata:
       m_Items: []
-  - m_Id: 19308894571454466
+  - m_Id: 19668705049829380
+    m_Localized: Gira el proyecto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829381
     m_Localized: "Gira el proyecto clicando en cima de \xE9l... y lo puedes mover
       arrastastrandolo"
     m_Metadata:
       m_Items: []
-  - m_Id: 19308894571454467
+  - m_Id: 19668705049829382
+    m_Localized: Confirmar proyecto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829383
     m_Localized: "Pulsa el bot\xF3n Confirmar cuando est\xE9s satisfecho con la posici\xF3n
       del proyecto"
     m_Metadata:
       m_Items: []
-  - m_Id: 19308894571454468
+  - m_Id: 19668705049829384
+    m_Localized: "Posici\xF3n no v\xE1lida"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829385
     m_Localized: "Mueve y/o gira el proyecto a una posici\xF3n v\xE1lida"
     m_Metadata:
       m_Items: []
