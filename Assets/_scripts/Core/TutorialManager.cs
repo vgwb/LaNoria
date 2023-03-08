@@ -96,7 +96,7 @@ namespace vgwb.lanoria
             }
 
             savedStep = tutorialKey; // store the key
-            Debug.Log("Display: "+tutorialKey.ToString());
+            //Debug.Log("Display: "+tutorialKey.ToString());
             UITutorial.OpenPanel();
             UITutorial.HideAllExplanations();
             int panelIndex = GetTutorialPanel(tutorialKey);
@@ -152,7 +152,7 @@ namespace vgwb.lanoria
         /// <returns></returns>
         private bool IsTurnOk(int turnValidity)
         {
-            if (turnValidity < 1) { // 
+            if (turnValidity < 1) { //
                 return true;
             } else {
                 return turn == turnValidity;

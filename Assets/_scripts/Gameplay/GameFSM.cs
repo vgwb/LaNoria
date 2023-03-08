@@ -38,7 +38,7 @@ namespace vgwb.lanoria
         private int currentCardIndex;
         private bool displayTutorial;
         public Tile currentTile { get; private set; }
-        public ProjectData CurrentProjectData { get; private set; }        
+        public ProjectData CurrentProjectData { get; private set; }
         private List<Card> cardsInHand;
         private List<Tile> projectTiles;
         private UI_Gameplay UIGame;
@@ -221,7 +221,7 @@ namespace vgwb.lanoria
         private void SubscribeToPlaceableEvents()
         {
             if (currentTile != null) {
-                Debug.Log("subscribe to: " + currentTile);
+                // Debug.Log("subscribe to: " + currentTile);
                 //currentTile.OnValidPositionChange += HandleBtnConfirm;
                 currentTile.OnStopUsingMe += StopUsingPlaceable;
                 currentTile.OnSelectMe += OnPrefabSelect;
@@ -234,7 +234,7 @@ namespace vgwb.lanoria
         private void UnsuscribeToPlaceableEvents()
         {
             if (currentTile != null) {
-                Debug.Log("unsubscribe to: " + currentTile);
+                // Debug.Log("unsubscribe to: " + currentTile);
                 //currentTile.OnValidPositionChange -= HandleBtnConfirm;
                 currentTile.OnStopUsingMe -= StopUsingPlaceable;
                 currentTile.OnSelectMe -= OnPrefabSelect;
