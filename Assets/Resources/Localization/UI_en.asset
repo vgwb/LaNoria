@@ -125,6 +125,26 @@ MonoBehaviour:
     m_Localized: EMPTY SCORE
     m_Metadata:
       m_Items: []
+  - m_Id: 19768326510075904
+    m_Localized: Results
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075905
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075906
+    m_Localized: Sound Fx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075907
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19769399220101120
+    m_Localized: Game Paused
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

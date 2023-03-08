@@ -59,6 +59,14 @@ MonoBehaviour:
     m_Key: panel.gameend
     m_Metadata:
       m_Items: []
+  - m_Id: 19768326510075904
+    m_Key: panel.results
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19769399220101120
+    m_Key: panel.paused
+    m_Metadata:
+      m_Items: []
   - m_Id: 193004036096
     m_Key: prompt.areyousure
     m_Metadata:
@@ -117,6 +125,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19679508188618755
     m_Key: score.empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075905
+    m_Key: option.music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075906
+    m_Key: option.sfx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075907
+    m_Key: option.tutorial
     m_Metadata:
       m_Items: []
   m_Metadata:
