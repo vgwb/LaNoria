@@ -10,13 +10,13 @@ namespace vgwb.lanoria
         public bool UsePreview = true;
         public GameObject CellAreaEfx;
         private List<CellScoreToDisplay> cellsScore;
-        private List<AreaId> highligtAreas;
+        private List<AreaId> highlightAreas;
         private List<CellEfx> areaEfx;
 
         private void Start()
         {
             cellsScore = new List<CellScoreToDisplay>();
-            highligtAreas = new List<AreaId>();
+            highlightAreas = new List<AreaId>();
             areaEfx = new List<CellEfx>();
         }
 
@@ -67,8 +67,8 @@ namespace vgwb.lanoria
 
         private void DisplayTransversalityPreview(Tile placeable)
         {
-            highligtAreas = ScoreManager.I.CalculateAreaBonus(placeable);
-            foreach (var area in highligtAreas) {
+            highlightAreas = ScoreManager.I.CalculateAreaBonus(placeable);
+            foreach (var area in highlightAreas) {
                 WallManager.I.HighlightWallArea(area);
                 var cells = GridManager.I.GetCellsByArea(area);
                 foreach (var cell in cells) {
@@ -87,11 +87,11 @@ namespace vgwb.lanoria
 
         private void CleanTransversalityPreview()
         {
-            foreach (var area in highligtAreas) {
+            foreach (var area in highlightAreas) {
                 WallManager.I.ResetWallArea(area);
             }
 
-            highligtAreas.Clear();
+            highlightAreas.Clear();
 
             foreach (var efx in areaEfx) {
                 Destroy(efx.gameObject);
