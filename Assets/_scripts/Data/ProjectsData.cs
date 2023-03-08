@@ -21,6 +21,18 @@ namespace vgwb.lanoria
         [ShowAssetPreview(128, 128)]
         public Sprite Image;
 
+        public int Size()
+        {
+            return Sequence.Count();
+        }
+
+        public void AddCategories(HashSet<ProjectCategories> categories)
+        {
+            foreach (var cat in Sequence) {
+                categories.Add(cat);
+            }
+        }
+
         public override string ToString()
         {
             return Title + " - " + Sequence.Length;
