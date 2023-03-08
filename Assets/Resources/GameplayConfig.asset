@@ -26,11 +26,11 @@ MonoBehaviour:
   LabelDebugFontSize: 10
   CellEfxHeight: 0.4
   CellEfxAlpha: 0.5
-  AreaBonus: 20
-  AdjacencyBonus: 1
-  Place2Bonus: 4
-  Place3Bonus: 8
-  Place4Bonus: 12
+  AreaBonus: 60
+  AdjacencyBonus: 3
+  Place2Bonus: 12
+  Place3Bonus: 24
+  Place4Bonus: 36
   SlideProjectPanelTime: 0.4
   SlideProjectPanelPixelIn: 50
   UIProjectRotation: {x: -50, y: 0, z: 0}
