@@ -75,6 +75,9 @@ crashlytics-build.properties
 .vscode/
 .vsconfig
 # ------- Local and private stuff
+Assets/AddressableAssetsData/iOS.meta
+Assets/AddressableAssetsData/Android.meta
+
 /_production
 docs/_draft
 Assets/_private
