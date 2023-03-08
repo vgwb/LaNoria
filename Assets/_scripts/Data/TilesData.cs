@@ -27,6 +27,23 @@ namespace vgwb.lanoria
         P4F_alt = 49
     }
 
+    public static class TileUtils
+    {
+        public static TileModel GetRandomTileModelByLenght(int lenght)
+        {
+            if (lenght == 2) {
+                return TileModel.P2A;
+            } else if (lenght == 3) {
+                return TileModel.P3A;
+            } else if (lenght == 4) {
+                return TileModel.P4A;
+            } else {
+                return TileModel.P2A;
+            }
+        }
+    }
+
+
     [CreateAssetMenu(menuName = "VGWB/Tiles Data")]
     public class TilesData : ScriptableObject
     {

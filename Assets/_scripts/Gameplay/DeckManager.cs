@@ -26,6 +26,7 @@ namespace vgwb.lanoria
 
             foreach (var project in GameData.I.Projects.Projects) {
                 if (project.Active) {
+                    project.Init();
                     deck.Add(project);
                 }
             }
@@ -83,15 +84,35 @@ namespace vgwb.lanoria
         private bool check_Shape(ProjectData cardToCheck)
         {
             // no 3 identical shapes
-            return !(currentHand[0].TileModel == currentHand[1].TileModel &&
-            currentHand[0].TileModel == cardToCheck.TileModel);
+            bool shapes_ok = !(currentHand[0].DefinedTileModel == currentHand[1].DefinedTileModel &&
+            currentHand[0].DefinedTileModel == cardToCheck.DefinedTileModel);
+
+            if (shapes_ok) {
+                return shapes_ok;
+            } else {
+                Debug.LogWarning("check_Shape");
+                Debug.Log("Til 0 Model = " + currentHand[0].DefinedTileModel);
+                Debug.Log("Tile 1 Model = " + currentHand[1].DefinedTileModel);
+                Debug.Log("Tile 2 Model = " + cardToCheck.DefinedTileModel);
+                return shapes_ok;
+            }
         }
 
         private bool check_Size(ProjectData cardToCheck)
         {
             // no same number of tiles
-            return !(currentHand[0].Size() == currentHand[1].Size() &&
+            bool sizes_ok = !(currentHand[0].Size() == currentHand[1].Size() &&
             currentHand[0].Size() == cardToCheck.Size());
+
+            if (sizes_ok) {
+                return sizes_ok;
+            } else {
+                Debug.LogWarning("check_Shape");
+                Debug.Log("Tile 0 Size = " + currentHand[0].Size());
+                Debug.Log("Tile 1 Size = " + currentHand[1].Size());
+                Debug.Log("Tile 2 Size = " + cardToCheck.Size());
+                return sizes_ok;
+            }
         }
 
         private bool check_Colors(ProjectData cardToCheck)

@@ -14,12 +14,25 @@ namespace vgwb.lanoria
         // [ShowAssetPreview(128, 128)]
         // public GameObject TilePrefab;
         public TileModel TileModel;
+        [NonSerialized]
+        public TileModel DefinedTileModel;
         public ProjectCategories[] Sequence;
         public string Title;
         [TextArea]
         public string Description;
         [ShowAssetPreview(128, 128)]
         public Sprite Image;
+
+        public void Init()
+        {
+            if (TileModel != TileModel.Random) {
+                DefinedTileModel = TileModel;
+            } else {
+                //return GameData.I.Tiles.GetTileBySize(projectData.Sequence.Length);
+                DefinedTileModel = TileUtils.GetRandomTileModelByLenght(Sequence.Length);
+            }
+            //Debug.Log("Init Project with " + DefinedTileModel);
+        }
 
         public int Size()
         {
@@ -56,8 +69,8 @@ namespace vgwb.lanoria
                 return null;
             }
 
-            if (projectData.TileModel != TileModel.Random) {
-                return GameData.I.Tiles.GetTileByModel(projectData.TileModel);
+            if (projectData.DefinedTileModel != TileModel.Random) {
+                return GameData.I.Tiles.GetTileByModel(projectData.DefinedTileModel);
             } else {
                 return GameData.I.Tiles.GetTileBySize(projectData.Sequence.Length);
             }
