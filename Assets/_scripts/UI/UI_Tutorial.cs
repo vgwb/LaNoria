@@ -6,12 +6,9 @@ using UnityEngine.UI;
 
 public class UI_Tutorial : MonoBehaviour
 {
-    #region Var
     public List<GameObject> Introductions;
-    public List<GameObject> Explanations;    
-    #endregion
+    public List<GameObject> Explanations;
 
-    #region Functions
     public void OpenPanel()
     {
         gameObject.SetActive(true);
@@ -35,5 +32,4 @@ public class UI_Tutorial : MonoBehaviour
             exp.SetActive(false);
         }
     }
-    #endregion
 }

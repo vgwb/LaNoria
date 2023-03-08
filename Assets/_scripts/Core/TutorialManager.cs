@@ -7,7 +7,7 @@ using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-    [System.Serializable]
+    [Serializable]
     public class MapTutorialPanel
     {
         public TutorialStep Key;
@@ -17,24 +17,19 @@ namespace vgwb.lanoria
 
     public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
     {
-        #region Var
         public List<MapTutorialPanel> TutorialSteps;
         [SerializeField] private int activeIntroduction;
         [SerializeField] private int turn;
         [SerializeField] private TutorialStep savedStep;
         private UI_Tutorial UITutorial;
         private Action OnIntroOver;
-        #endregion
 
-        #region MonoB
         void Start()
         {
             UITutorial = UI_manager.I.PanelTutorial;
             ResetTutorial();
         }
-        #endregion
 
-        #region Functions
         public void ResetTutorial()
         {
             OnIntroOver = null;
@@ -183,6 +178,5 @@ namespace vgwb.lanoria
                 tuple.IsCompleted = true;
             }
         }
-        #endregion
     }
 }
