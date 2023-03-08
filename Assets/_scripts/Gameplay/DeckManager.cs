@@ -19,14 +19,16 @@ namespace vgwb.lanoria
         public void PrepareNewDeck()
         {
             deck = new List<ProjectData>();
+            currentHand = new List<ProjectData>();
+            discardedCards = new List<ProjectData>();
+
             foreach (var project in GameData.I.Projects.Projects) {
                 if (project.Active) {
                     deck.Add(project);
                 }
             }
-            currentHand = new List<ProjectData>();
-            discardedCards = new List<ProjectData>();
-            Debug.Log("New Deck size: " + DeckSize);
+            deck.Shuffle();
+            // Debug.Log("New Deck size: " + DeckSize);
         }
 
         public List<ProjectData> DiscardAndGetNewHand(ProjectData playedProjectData)
@@ -46,15 +48,22 @@ namespace vgwb.lanoria
         {
             int handSize = GameplayConfig.I.HandSize;
             currentHand = new List<ProjectData>();
-            for (int i = 0; i < handSize; i++) {
-                if (DeckSize > 0) {
-                    int randomIndex = Random.Range(0, DeckSize - 1);
+            ProjectData pickedCard;
+            if (DeckSize < handSize) {
+                reshuffleDeck();
+            }
 
-                    // TODO check https://github.com/orgs/vgwb/projects/5/views/1?pane=issue&itemId=20763365
-
-                    currentHand.Add(deck[randomIndex]);
-                    deck.Remove(deck[randomIndex]);
+            for (int i = 1; i <= handSize; i++) {
+                // check only last card
+                pickedCard = deck[0];
+                if (i == handSize) {
+                    if (check1() && check2() && check3()) {
+                        pickedCard = deck[0];
+                    }
                 }
+
+                currentHand.Add(pickedCard);
+                deck.Remove(pickedCard);
             }
             //            Debug.Log("GetNewHand Deck size: " + DeckSize);
             return currentHand;
@@ -63,6 +72,28 @@ namespace vgwb.lanoria
         private void reshuffleDeck()
         {
             deck = discardedCards;
+            deck.Shuffle();
         }
+
+        private bool check1()
+        {
+            // no 3 identical shapes
+            return true;
+        }
+
+        private bool check2()
+        {
+            // no same number of tiles
+            return true;
+        }
+
+        private bool check3()
+        {
+            // at least 3 different colors
+            return true;
+        }
+
+
+
     }
 }
