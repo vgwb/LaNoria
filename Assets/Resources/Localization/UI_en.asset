@@ -110,7 +110,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618752
-    m_Localized: CELLS/HEXAGON
+    m_Localized: PROJECTS
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618753
@@ -122,7 +122,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618755
-    m_Localized: EMPTY SCORE
+    m_Localized: EMPTY CELLS
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075904

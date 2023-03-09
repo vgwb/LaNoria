@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 8702683148967936
-    m_Localized: Adandonar Partido
+    m_Localized: Salir
     m_Metadata:
       m_Items: []
   - m_Id: 114348253184
@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 34841026560
-    m_Localized: Juega
+    m_Localized: Jugar
     m_Metadata:
       m_Items: []
   - m_Id: 81292943360
@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 193004036096
-    m_Localized: "\xBFEst\xE1s seguro?"
+    m_Localized: Salir
     m_Metadata:
       m_Items: []
   - m_Id: 286247608320
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 343755710464
-    m_Localized: Confirma
+    m_Localized: Confirmar
     m_Metadata:
       m_Items: []
   - m_Id: 10137802690781184
@@ -123,7 +123,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618755
-    m_Localized: MALUS
+    m_Localized: "CASILLAS VAC\xCDAS"
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075904
@@ -131,7 +131,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075905
-    m_Localized: Musica
+    m_Localized: "M\xFAsica"
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075906
@@ -143,7 +143,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19769399220101120
-    m_Localized: Juego pausado
+    m_Localized: Pausa
     m_Metadata:
       m_Items: []
   references:
