@@ -491,6 +491,7 @@ namespace vgwb.lanoria
                     BoardManager.I.EmptyProjectsContainer();
                     WallManager.I.ResetAllWalls();
                     ScoreManager.I.ResetScore();
+                    TutorialManager.I.ResetTutorial();
                     UI_manager.I.ShowGamePause(false);
                     UI_manager.I.ShowGameResult(false);
                     UI_manager.I.Show(UI_manager.States.Home);

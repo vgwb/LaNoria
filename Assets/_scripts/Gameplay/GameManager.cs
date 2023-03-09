@@ -44,7 +44,7 @@ namespace vgwb.lanoria
 
         public void ExitGame()
         {
-            GameFSM.ExitGame();            
+            GameFSM.ExitGame();
         }
 
         #region Debug and Editor Methods
