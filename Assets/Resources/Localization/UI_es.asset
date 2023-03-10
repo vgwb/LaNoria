@@ -88,24 +88,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829381
-    m_Localized: "Pulsa el bot\xF3n Confirmar cuando el proyecto est\xE9 en la posici\xF3n
-      que deseas"
+    m_Localized: "Una vez que pulse el bot\xF3n Confirmar ya no podr\xE1s mover o
+      girar el proyecto"
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829382
-    m_Localized: "Posici\xF3n no v\xE1lida"
+    m_Localized: Bonus de Sinergia
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829383
-    m_Localized: "Mueve y/o gira el proyecto a una posici\xF3n v\xE1lida"
+    m_Localized: "Por cada hex\xE1gonos adyaciente del mismo color consigues un Bonus
+      de Sinergia"
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829384
-    m_Localized: Tutorial 5 Title
+    m_Localized: Bonus de Transversalidad
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829385
-    m_Localized: Tutorial 5 Desc
+    m_Localized: "Cuando una comarca tiene hex\xE1gonos todos los 4 colores, consigues
+      el Bonus de Transversalidad"
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618752
@@ -125,7 +127,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075904
-    m_Localized: Resultados
+    m_Localized: Tu Impacto Social
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075905
@@ -142,6 +144,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19769399220101120
     m_Localized: Pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20308952015118336
+    m_Localized: "Posici\xF3n no v\xE1lida"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20308952073838592
+    m_Localized: "Mueve y/o gira el proyecto a una posici\xF3n v\xE1lida"
     m_Metadata:
       m_Items: []
   references:

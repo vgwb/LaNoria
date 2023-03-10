@@ -89,23 +89,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829381
-    m_Localized: Press the Confirm button once you are happy with the project position
+    m_Localized: 'Once you press the Confirm button you won''t be able to move or
+      rotate the project '
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829382
-    m_Localized: Invalid position
+    m_Localized: Synergy Bonus
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829383
-    m_Localized: Move and/or rotate the project to a valid position
+    m_Localized: For each neighbouring cell of the same color you get a Synergy Bonus
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829384
-    m_Localized: Tutorial 5 Title
+    m_Localized: Transversality Bonus
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829385
-    m_Localized: Tutorial 5 Desc
+    m_Localized: When a region has hexagons of all the 4 colors, you get a Transversality
+      Bonus
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618752
@@ -125,7 +127,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075904
-    m_Localized: Results
+    m_Localized: Your Social Impact
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075905
@@ -142,6 +144,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19769399220101120
     m_Localized: Game Paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20308952015118336
+    m_Localized: Invalid Position
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20308952073838592
+    m_Localized: Move and/or rotate the project to a valid position
     m_Metadata:
       m_Items: []
   references:
