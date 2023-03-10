@@ -39,7 +39,7 @@ namespace vgwb.lanoria
 
         private void DrawPreviewScore(TileCell cell, float score)
         {
-            if (cell != null) {
+            if (cell != null && score != 0.0f) {
                 cell.SetLabel(score.ToString());
             }
         }
