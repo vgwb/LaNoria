@@ -238,10 +238,10 @@ MonoBehaviour:
   onFinger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5797613279180542722}
-        m_TargetAssemblyTypeName: vgwb.Project, Assembly-CSharp
+      - m_Target: {fileID: 7574194601451014641, guid: fa393b9dbf06ce84ba1981ac8f537607, type: 3}
+        m_TargetAssemblyTypeName: vgwb.lanoria.Tile, Assembly-CSharp
         m_MethodName: OnTap
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

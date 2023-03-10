@@ -130,7 +130,7 @@ namespace vgwb.lanoria
         /// <summary>
         /// Fired when the player tap on the project object.
         /// </summary>
-        public void OnTap()
+        public void OnTap(LeanFinger finger)
         {
             SoundManager.I.PlaySfx(AudioEnum.tile_rotate);
             Rotate();
