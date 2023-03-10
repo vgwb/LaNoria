@@ -154,6 +154,10 @@ MonoBehaviour:
     m_Localized: "Mueve y/o gira el proyecto a una posici\xF3n v\xE1lida"
     m_Metadata:
       m_Items: []
+  - m_Id: 20410027822014464
+    m_Localized: Proyectos
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

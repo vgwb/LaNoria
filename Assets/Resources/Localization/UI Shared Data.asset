@@ -147,6 +147,10 @@ MonoBehaviour:
     m_Key: option.tutorial
     m_Metadata:
       m_Items: []
+  - m_Id: 20410027822014464
+    m_Key: about.projects
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
