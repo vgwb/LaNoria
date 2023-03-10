@@ -31,12 +31,17 @@ namespace vgwb.lanoria
     {
         public static TileModel GetRandomTileModelByLenght(int lenght)
         {
+            var random = new System.Random();
             if (lenght == 2) {
                 return TileModel.P2A;
             } else if (lenght == 3) {
-                return TileModel.P3A;
+                var models3 = new List<TileModel> { TileModel.P3A, TileModel.P3B, TileModel.P3B_alt, TileModel.P3C };
+                return models3[random.Next(models3.Count)];
             } else if (lenght == 4) {
-                return TileModel.P4A;
+                var models4 = new List<TileModel> { TileModel.P4A, TileModel.P4B, TileModel.P4B_alt,
+                TileModel.P4C, TileModel.P4D, TileModel.P4D_alt, TileModel.P4E,
+                TileModel.P4F, TileModel.P4F_alt };
+                return models4[random.Next(models4.Count)];
             } else {
                 return TileModel.P2A;
             }
@@ -51,6 +56,7 @@ namespace vgwb.lanoria
 
         public GameObject GetTileByModel(TileModel model)
         {
+            Debug.Log("GetTileByModel + " + model);
             return TilesPrefabs.Find(x => x.Model == model).gameObject;
         }
 
