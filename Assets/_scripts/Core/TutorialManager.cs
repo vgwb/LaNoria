@@ -34,6 +34,9 @@ namespace vgwb.lanoria
         {
             OnIntroOver = null;
             turn = 1;
+            foreach (var step in TutorialSteps) {
+                step.IsCompleted = false;
+            }
             savedStep = TutorialStep.None;
             activeIntroduction = -1;
             UITutorial.HideAllIntroductions();
