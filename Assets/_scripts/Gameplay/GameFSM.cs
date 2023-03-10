@@ -15,7 +15,7 @@ namespace vgwb.lanoria
         Drawing, // draw step
         Play, // here we play!
         Score, // counting the score after a tile is placed
-        Show, // show the final score
+        ShowResult, // show the final score
         End, // end the game
         ForceEnd, // force the end game
         Pause // game is in pause
@@ -158,7 +158,7 @@ namespace vgwb.lanoria
 
         public void DebugEndGame()
         {
-            SetState(GameplayState.Show);
+            SetState(GameplayState.ShowResult);
         }
 
         private void SetState(GameplayState newState)
@@ -308,7 +308,7 @@ namespace vgwb.lanoria
             } else {
                 Debug.Log("End game");
                 // NO MORE CARDS - GAME ENDS
-                SetState(GameplayState.Show);
+                SetState(GameplayState.ShowResult);
             }
         }
 
@@ -333,7 +333,7 @@ namespace vgwb.lanoria
             }
             //            Debug.Log("Cards available: " + cardAvailable);
             if (!cardAvailable) {
-                SetState(GameplayState.Show);
+                SetState(GameplayState.ShowResult);
             } else {
                 SetState(GameplayState.Play);
                 UIGame.SetCanvasInteractable(true);
@@ -405,6 +405,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Tutorial:
                     UIGame.EnableCanvas(false);
+                    TutorialManager.I.ResetTutorial();
                     TutorialManager.I.BeginTutorial(EndTutorial);
                     TutorialManager.I.ShowNextIntroduction();
                     break;
@@ -435,7 +436,8 @@ namespace vgwb.lanoria
                     TutorialManager.I.EndTurn();
                     SetState(GameplayState.Drawing);// handle score efx
                     break;
-                case GameplayState.Show:
+                case GameplayState.ShowResult:
+                    UI_manager.I.ShowGamePlay(false);
                     UI_manager.I.PanelGameResults.SetAreaScore(ScoreManager.I.AreaScore);
                     UI_manager.I.PanelGameResults.SetAdjacencyScore(ScoreManager.I.AdjacencyScore);
                     UI_manager.I.PanelGameResults.SetPlacementScore(ScoreManager.I.PlacementScore);
@@ -481,7 +483,7 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Score:
                     break;
-                case GameplayState.Show:
+                case GameplayState.ShowResult:
                     break;
                 case GameplayState.ForceEnd:
                 case GameplayState.End:
