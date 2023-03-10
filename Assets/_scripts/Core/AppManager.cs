@@ -36,6 +36,7 @@ namespace vgwb.lanoria
             if (DebugHome)
                 return;
             UI_manager.I.Show(UI_manager.States.Home);
+            BoardManager.I.ShowMap(true);
         }
 
         public void OnAbout()
