@@ -21,7 +21,7 @@ namespace vgwb.lanoria
             if (points > 0) {
                 PlacementPointsTxt.text = points.ToString();
             } else {
-                PlacementPointsTxt.gameObject.SetActive(false);
+                PlacementPointsTxt.transform.parent.gameObject.SetActive(false);
             }
         }
 
@@ -30,7 +30,7 @@ namespace vgwb.lanoria
             if (points > 0) {
                 AdjacencyPointsTxt.text = points.ToString();
             } else {
-                AdjacencyPointsTxt.gameObject.SetActive(false);
+                AdjacencyPointsTxt.transform.parent.gameObject.SetActive(false);
             }
         }
 
@@ -39,7 +39,7 @@ namespace vgwb.lanoria
             if (points > 0) {
                 AreaPointsTxt.text = points.ToString();
             } else {
-                AreaPointsTxt.gameObject.SetActive(false);
+                AreaPointsTxt.transform.parent.gameObject.SetActive(false);
             }
         }
     } 
