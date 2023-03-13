@@ -20,11 +20,16 @@ namespace vgwb.lanoria
 
     public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     {
+        
         public int Score { get; private set; }
         public int AdjacencyScore { get; private set; }
         public int AreaScore { get; private set; }
         public int PlacementScore { get; private set; }
 
+        [Header("UI")]
+        public GameObject EarnedPointsPrefab;
+
+        [Header("Scores")]
         [SerializeField] private int adjacencyBonus;
         
         [SerializeField] private int areaScore;
@@ -49,7 +54,8 @@ namespace vgwb.lanoria
             Score += newPoints;
             Debug.Log("basic: " + placementBonus + " adjacency: " + adjacencyBonus + " area: " + areaScore);
             confirmAreas();
-
+            var pos = CameraManager.I.MyCamera.WorldToScreenPoint(tile.transform.position);
+            EarnedPointsUI(pos, placementBonus);
             UI_manager.I.PanelGameplay.SetScoreUI(Score, newPoints);
         }
 
@@ -167,6 +173,20 @@ namespace vgwb.lanoria
                 }
             }
             areasToConfirm.Clear();
+        }
+
+        private void EarnedPointsUI(Vector3 pos, int placementPoints)
+        {
+            var ui = UI_manager.I.transform;
+            var instance = Instantiate(EarnedPointsPrefab, ui);
+            instance.transform.position = pos;
+            var points = instance.GetComponent<EarnedPoints>();
+            if (points != null) {
+                points.SetAdjacencyPoints(adjacencyBonus);
+                points.SetAreaPoints(areaScore);
+                points.SetPlacementPoints(placementPoints);
+            }
+
         }
     }
 }

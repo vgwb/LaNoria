@@ -280,6 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4187045336656867430}
   - component: {fileID: 4187045336656867431}
+  - component: {fileID: 6256683729308748169}
   m_Layer: 5
   m_Name: PanelEarnedPoints
   m_TagString: Untagged
@@ -336,6 +337,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &6256683729308748169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4187045336656867429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dbb500404020943b756f4fcd7cb88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlacementPointsTxt: {fileID: 4187045337375582235}
+  AdjacencyPointsTxt: {fileID: 4187045337287224711}
+  AreaPointsTxt: {fileID: 4187045335791088459}
 --- !u!1 &4187045336749989754
 GameObject:
   m_ObjectHideFlags: 0

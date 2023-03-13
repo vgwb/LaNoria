@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54b45f5c95fd194bb01701ffdff7961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EarnedPointsPrefab: {fileID: 4187045336656867429, guid: 9cb3b9774e148be4abb4978ca814db8b, type: 3}
   adjacencyBonus: 0
   areaScore: 0
   completedAreas: 
