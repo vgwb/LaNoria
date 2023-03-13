@@ -63,7 +63,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4040447776968581990}
-  - component: {fileID: 4040447776968581991}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -82,24 +81,10 @@ Transform:
   m_LocalPosition: {x: 1.99, y: 0.5, z: -1.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4430923779982770482}
+  m_Children: []
   m_Father: {fileID: 4040447778704762480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 60, z: 0}
---- !u!65 &4040447776968581991
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4040447776968581989}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 0.5, z: 3}
-  m_Center: {x: -1.5, y: -0.25, z: -0.82}
 --- !u!1 &4040447778704762487
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,9 +265,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4040447778704762476}
-        m_TargetAssemblyTypeName: vgwb.Project, Assembly-CSharp
+        m_TargetAssemblyTypeName: vgwb.lanoria.Tile, Assembly-CSharp
         m_MethodName: OnTap
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -322,51 +307,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayStep: 2
   HighlighterPrefab: {fileID: 5089711505563640223, guid: 4c18726bcc0c77243ba2dae14f83e734, type: 3}
---- !u!1 &4430923779982770481
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4430923779982770482}
-  - component: {fileID: 4430923779982770483}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4430923779982770482
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4430923779982770481}
-  m_LocalRotation: {x: -0, y: -0.86370367, z: 0, w: -0.504}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4040447776968581990}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -240.53, z: 0}
---- !u!65 &4430923779982770483
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4430923779982770481}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 0.5, z: 3}
-  m_Center: {x: -2, y: -0.25, z: 0}
 --- !u!1001 &4430923779419395416
 PrefabInstance:
   m_ObjectHideFlags: 0

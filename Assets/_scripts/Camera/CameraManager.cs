@@ -11,6 +11,7 @@ namespace vgwb.lanoria
     public class CameraManager : SingletonMonoBehaviour<CameraManager>
     {
         [Header("Components")]
+        public Camera MyCamera;
         public CameraController CameraController;
 
         protected override void Awake()

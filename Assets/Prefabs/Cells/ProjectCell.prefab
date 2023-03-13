@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 5068229777665841356}
   - component: {fileID: 8191943473958391886}
   - component: {fileID: 7818359960468404321}
+  - component: {fileID: 5562836990200180418}
   m_Layer: 0
   m_Name: ProjectCell
   m_TagString: Untagged
@@ -326,6 +327,19 @@ MonoBehaviour:
   ShowNeighbours: 0
   minRadius: 1
   maxRadius: 2
+--- !u!65 &5562836990200180418
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7332491097330033133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.5, z: 2}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!1001 &5610890069311859253
 PrefabInstance:
   m_ObjectHideFlags: 0

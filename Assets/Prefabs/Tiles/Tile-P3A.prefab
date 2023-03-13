@@ -62,7 +62,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2418821162678347571}
-  - component: {fileID: 1130513308372480832}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -85,19 +84,6 @@ Transform:
   m_Father: {fileID: 7131492775851823163}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1130513308372480832
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719024331935106398}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 0.5, z: 5}
-  m_Center: {x: 0, y: -0.25, z: -0.25}
 --- !u!1 &8360217987605548242
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,9 +263,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7574194601451014641}
-        m_TargetAssemblyTypeName: vgwb.Project, Assembly-CSharp
+        m_TargetAssemblyTypeName: vgwb.lanoria.Tile, Assembly-CSharp
         m_MethodName: OnTap
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

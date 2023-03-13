@@ -130,17 +130,24 @@ namespace vgwb.lanoria
         /// <summary>
         /// Fired when the player tap on the project object.
         /// </summary>
-        public void OnTap()
+        public void OnTap(LeanFinger finger)
         {
-            SoundManager.I.PlaySfx(AudioEnum.tile_rotate);
-            Rotate();
+            var screenPos = finger.ScreenPosition;
+            RaycastHit hit;
+            Ray ray = CameraManager.I.MyCamera.ScreenPointToRay(screenPos);
+
+            if (Physics.Raycast(ray, out hit)) {
+                Transform objectHit = hit.transform;
+                SoundManager.I.PlaySfx(AudioEnum.tile_rotate);
+                Rotate(objectHit);
+            }
         }
 
-        private void Rotate()
+        private void Rotate(Transform turnPoint)
         {
             var ParentInPivot = new GameObject(); // create an empty object
             // put it in the pivot position
-            ParentInPivot.transform.position = Pivot.transform.position;
+            ParentInPivot.transform.position = turnPoint.position;
             // the new object is now the parent...
             transform.parent = ParentInPivot.transform;
             var rot = new Vector3(0.0f, 60.0f, 0.0f); // rotate it!
