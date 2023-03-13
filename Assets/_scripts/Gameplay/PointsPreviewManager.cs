@@ -48,7 +48,10 @@ namespace vgwb.lanoria
         {
             cellsScore = ScoreManager.I.CalculateAdjacencyBonus(placeable);
             if (ScoreManager.I.FindSinergy()) {
-                TutorialManager.I.ShowTutorialStep(TutorialStep.Points, 0);
+                if (TutorialManager.I.IsExplanationCompleted(TutorialStep.PointsSynergy)) {
+                    TutorialManager.I.CloseTutorialStep(TutorialStep.PointsArea, 0, false);
+                }
+                TutorialManager.I.ShowTutorialStep(TutorialStep.PointsSynergy, 0);
             }
 
             foreach (var cellScore in cellsScore) {
@@ -68,6 +71,11 @@ namespace vgwb.lanoria
         private void DisplayTransversalityPreview(Tile placeable)
         {
             highlightAreas = ScoreManager.I.CalculateAreaBonus(placeable);
+            if (highlightAreas.Count > 0) {
+                TutorialManager.I.CloseTutorialStep(TutorialStep.PointsSynergy, 0, false);
+                TutorialManager.I.ShowTutorialStep(TutorialStep.PointsArea, 0);
+            }
+
             foreach (var area in highlightAreas) {
                 WallManager.I.HighlightWallArea(area);
                 var cells = GridManager.I.GetCellsByArea(area);

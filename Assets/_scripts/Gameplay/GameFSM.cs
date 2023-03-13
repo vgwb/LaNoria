@@ -27,7 +27,8 @@ namespace vgwb.lanoria
         Drag, // how to drag a tile
         Rotate, // how to rotate
         Confirm, // how to confirm
-        Points // how sinergy points are calculated
+        PointsSynergy, // how sinergy points are calculated
+        PointsArea
     }
 
     public class GameFSM : MonoBehaviour
@@ -106,7 +107,8 @@ namespace vgwb.lanoria
             SoundManager.I.PlaySfx(AudioEnum.tile_confirmed);
             currentTile.OnTileConfirmed();
             CloseTutorialStep(TutorialStep.Confirm, 1);
-            CloseTutorialStep(TutorialStep.Points, 0);
+            CloseTutorialStep(TutorialStep.PointsSynergy, 0);
+            CloseTutorialStep(TutorialStep.PointsArea, 0);
             currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
             ScoreManager.I.UpdateScore(currentTile);
             ResetProjectPanel();
@@ -490,6 +492,7 @@ namespace vgwb.lanoria
                     EventsUnsubscribe();
                     EmptyHand();
                     DestroyCurrentTile();
+                    CleanPointsPreview();
                     BoardManager.I.EmptyProjectsContainer();
                     WallManager.I.ResetAllWalls();
                     ScoreManager.I.ResetScore();

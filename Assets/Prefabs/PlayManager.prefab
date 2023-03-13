@@ -249,7 +249,12 @@ MonoBehaviour:
   - Key: 4
     PanelIndex: 3
     IsCompleted: 0
+  - Key: 5
+    PanelIndex: 4
+    IsCompleted: 0
   activeIntroduction: 0
+  turn: 0
+  savedStep: 0
 --- !u!1001 &3914503583074823613
 PrefabInstance:
   m_ObjectHideFlags: 0

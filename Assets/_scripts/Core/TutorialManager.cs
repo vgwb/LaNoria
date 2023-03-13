@@ -78,13 +78,7 @@ namespace vgwb.lanoria
 
         public void SetupTutorialSteps()
         {
-            foreach (var exp in UITutorial.Explanations) {
-                var btn = exp.GetComponentInChildren<Button>();
-                if (btn != null) {
-                    btn.onClick.RemoveAllListeners();
-                    //btn.onClick.AddListener(() => CloseExplanation());
-                }
-            }
+            
         }
 
         public void ShowTutorialStep(TutorialStep tutorialKey, int turnValidity = 1)
@@ -94,7 +88,6 @@ namespace vgwb.lanoria
             }
 
             savedStep = tutorialKey; // store the key
-            //Debug.Log("Display: "+tutorialKey.ToString());
             UITutorial.OpenPanel();
             UITutorial.HideAllExplanations();
             int panelIndex = GetTutorialPanel(tutorialKey);
@@ -103,7 +96,7 @@ namespace vgwb.lanoria
             }
         }
 
-        public void CloseTutorialStep(TutorialStep tutorialKey, int turnValidity = 1)
+        public void CloseTutorialStep(TutorialStep tutorialKey, int turnValidity = 1, bool setComplete = true)
         {
             if (savedStep != tutorialKey || !IsTurnOk(turnValidity)) {
                 return;
@@ -115,7 +108,10 @@ namespace vgwb.lanoria
             }
 
             savedStep = TutorialStep.None;
-            SetTutorialCompleted(tutorialKey);
+            if (setComplete) {
+                SetTutorialCompleted(tutorialKey);
+            }
+            
             UITutorial.ClosePanel();
         }
 
