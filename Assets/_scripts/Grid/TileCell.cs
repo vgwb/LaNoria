@@ -10,7 +10,7 @@ namespace vgwb.lanoria
         [SerializeField] ProjectCategories category;
         public TextMeshPro Label;
         public SpriteRenderer Icon;
-        public GameObject Bridge;
+        public GameObject BridgePrefab;
 
         public ProjectCategories Category => category;
         public Color AssociatedColor => GameData.I.Categories.GetColor(category);
@@ -19,7 +19,6 @@ namespace vgwb.lanoria
         protected override void Awake()
         {
             base.Awake();
-            EnableBridge(false);
         }
 
         public void Init()
@@ -55,11 +54,13 @@ namespace vgwb.lanoria
             mesh.gameObject.layer = LayerMask.NameToLayer("UICamera");
         }
 
-        public void EnableBridge(bool enable)
+
+        public GameObject SpawnBridgeBetween(Transform destination)
         {
-            if (Bridge != null) {
-                Bridge.SetActive(enable);
-            }
+            var bridge = Instantiate(BridgePrefab, transform);
+            bridge.transform.forward = destination.position - transform.position;
+
+            return bridge;
         }
     }
 }

@@ -12,12 +12,14 @@ namespace vgwb.lanoria
         private List<CellScoreToDisplay> cellsScore;
         private List<AreaId> highlightAreas;
         private List<CellEfx> areaEfx;
+        private List<GameObject> bridges;
 
         private void Start()
         {
             cellsScore = new List<CellScoreToDisplay>();
             highlightAreas = new List<AreaId>();
             areaEfx = new List<CellEfx>();
+            bridges = new List<GameObject>();
         }
 
         public void PreviewScore(Tile placeable)
@@ -37,11 +39,13 @@ namespace vgwb.lanoria
             CleanTransversalityPreview();
         }
 
-        private void DrawPreviewScore(TileCell cell, float score)
+        private void DrawPreviewScore(TileCell cell, List<GameObject> adjacents)
         {
             if (cell != null) {
-                cell.SetLabel(score.ToString());
-                //cell.EnableBridge(true);
+                foreach (var adjacent in adjacents) {
+                    var bridge = cell.SpawnBridgeBetween(adjacent.transform);
+                    bridges.Add(bridge);
+                }
             }
         }
 
@@ -56,17 +60,22 @@ namespace vgwb.lanoria
             }
 
             foreach (var cellScore in cellsScore) {
-                DrawPreviewScore(cellScore.Cell, cellScore.Score);
+                DrawPreviewScore(cellScore.Cell, cellScore.Adjacents);
             }
         }
 
         private void CleanSynergyPreview()
         {
             foreach (var cellScore in cellsScore) {
-                cellScore.Cell.SetLabel("");
+                //cellScore.Cell.SetLabel("");
                 //cellScore.Cell.EnableBridge(false);
             }
 
+            foreach (var bridge in bridges) {
+                Destroy(bridge);
+            }
+
+            bridges.Clear();
             cellsScore.Clear();
         }
 

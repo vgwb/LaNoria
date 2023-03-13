@@ -9,12 +9,12 @@ namespace vgwb.lanoria
     public class CellScoreToDisplay
     {
         public TileCell Cell;
-        public float Score;
+        public List<GameObject> Adjacents;
 
         public CellScoreToDisplay(TileCell cell, float score)
         {
             Cell = cell;
-            Score = score;
+            Adjacents = new List<GameObject>();
         }
     }
 
@@ -73,7 +73,6 @@ namespace vgwb.lanoria
 
             foreach (var cell in tile.Cells) {
                 var neighbours = GridManager.I.GetNeighboursByPos(cell.HexPosition);
-                bool addCell = false;
                 foreach (var neighbour in neighbours) {
                     if (positionsToExclude.Contains(neighbour.HexPosition)) {
                         continue;
@@ -81,22 +80,15 @@ namespace vgwb.lanoria
                     var existingCell = TileManager.I.GetPlacedTileByPosition(neighbour.HexPosition);
                     if (existingCell != null) {
                         if (existingCell.Category == cell.Category) {
-                            addCell = true;
                             CellScoreToDisplay cellScore = synergyCells.Find(x => x.Cell == existingCell);
                             if (cellScore == null) {
                                 cellScore = new CellScoreToDisplay(existingCell, 0);
                                 synergyCells.Add(cellScore);
                             }
                             resultingScore += GameplayConfig.I.AdjacencyBonus;
-                            cellScore.Score += GameplayConfig.I.AdjacencyBonus;
+                            cellScore.Adjacents.Add(cell.gameObject);
                         }
                     }
-                }
-
-                if (addCell) { // remove this if you don't want to add the tile cell
-                    Debug.Log("adding cell: "+cell.name);
-                    CellScoreToDisplay thisCell = new CellScoreToDisplay(cell, 0);
-                    synergyCells.Add(thisCell);
                 }
             }
 
