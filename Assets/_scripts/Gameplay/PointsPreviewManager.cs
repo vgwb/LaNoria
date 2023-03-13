@@ -39,11 +39,11 @@ namespace vgwb.lanoria
             CleanTransversalityPreview();
         }
 
-        private void DrawPreviewScore(TileCell cell, List<GameObject> adjacents)
+        private void DrawPreviewScore(TileCell cell, List<TileCell> adjacents)
         {
             if (cell != null) {
                 foreach (var adjacent in adjacents) {
-                    var bridge = cell.SpawnBridgeBetween(adjacent.transform);
+                    var bridge = cell.SpawnBridgeBetween(cell.HexPosition, adjacent.HexPosition);
                     bridges.Add(bridge);
                 }
             }

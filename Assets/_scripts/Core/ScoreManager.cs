@@ -9,12 +9,12 @@ namespace vgwb.lanoria
     public class CellScoreToDisplay
     {
         public TileCell Cell;
-        public List<GameObject> Adjacents;
+        public List<TileCell> Adjacents;
 
         public CellScoreToDisplay(TileCell cell, float score)
         {
             Cell = cell;
-            Adjacents = new List<GameObject>();
+            Adjacents = new List<TileCell>();
         }
     }
 
@@ -86,7 +86,7 @@ namespace vgwb.lanoria
                                 synergyCells.Add(cellScore);
                             }
                             resultingScore += GameplayConfig.I.AdjacencyBonus;
-                            cellScore.Adjacents.Add(cell.gameObject);
+                            cellScore.Adjacents.Add(cell);
                         }
                     }
                 }

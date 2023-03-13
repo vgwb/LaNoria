@@ -55,10 +55,10 @@ namespace vgwb.lanoria
         }
 
 
-        public GameObject SpawnBridgeBetween(Transform destination)
+        public GameObject SpawnBridgeBetween(Vector3 from, Vector3 to)
         {
             var bridge = Instantiate(BridgePrefab, transform);
-            bridge.transform.forward = destination.position - transform.position;
+            bridge.transform.forward = to - from;
 
             return bridge;
         }
