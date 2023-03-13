@@ -73,23 +73,30 @@ namespace vgwb.lanoria
 
             foreach (var cell in tile.Cells) {
                 var neighbours = GridManager.I.GetNeighboursByPos(cell.HexPosition);
+                bool addCell = false;
                 foreach (var neighbour in neighbours) {
                     if (positionsToExclude.Contains(neighbour.HexPosition)) {
                         continue;
                     }
                     var existingCell = TileManager.I.GetPlacedTileByPosition(neighbour.HexPosition);
                     if (existingCell != null) {
-                        CellScoreToDisplay cellScore = synergyCells.Find(x => x.Cell == existingCell);
-                        if (cellScore == null) {
-                            cellScore = new CellScoreToDisplay(existingCell, 0);
-                            synergyCells.Add(cellScore);
-                        }
-
                         if (existingCell.Category == cell.Category) {
+                            addCell = true;
+                            CellScoreToDisplay cellScore = synergyCells.Find(x => x.Cell == existingCell);
+                            if (cellScore == null) {
+                                cellScore = new CellScoreToDisplay(existingCell, 0);
+                                synergyCells.Add(cellScore);
+                            }
                             resultingScore += GameplayConfig.I.AdjacencyBonus;
                             cellScore.Score += GameplayConfig.I.AdjacencyBonus;
                         }
                     }
+                }
+
+                if (addCell) { // remove this if you don't want to add the tile cell
+                    Debug.Log("adding cell: "+cell.name);
+                    CellScoreToDisplay thisCell = new CellScoreToDisplay(cell, 0);
+                    synergyCells.Add(thisCell);
                 }
             }
 

@@ -39,8 +39,9 @@ namespace vgwb.lanoria
 
         private void DrawPreviewScore(TileCell cell, float score)
         {
-            if (cell != null && score != 0.0f) {
+            if (cell != null) {
                 cell.SetLabel(score.ToString());
+                //cell.EnableBridge(true);
             }
         }
 
@@ -63,6 +64,7 @@ namespace vgwb.lanoria
         {
             foreach (var cellScore in cellsScore) {
                 cellScore.Cell.SetLabel("");
+                //cellScore.Cell.EnableBridge(false);
             }
 
             cellsScore.Clear();
