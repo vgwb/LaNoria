@@ -71,8 +71,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829377
-    m_Localized: Arrastra un proyecto sobre el mapa y puedes cambiar de proyecto
-      arrastrando otro
+    m_Localized: Arrastra un proyecto sobre el mapa y, mientras no lo hayas confirmado,
+      puedes cambiar de proyecto arrastrando otro
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829378

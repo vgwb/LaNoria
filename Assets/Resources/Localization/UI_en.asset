@@ -71,8 +71,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829377
-    m_Localized: Drag a project over the map and you can change project by dragging
-      another one
+    m_Localized: Drag a project over the map and, until you confirm it, you can change
+      project by dragging another one
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829378
