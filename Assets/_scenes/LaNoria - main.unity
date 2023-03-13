@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.99999905, g: 0, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: NaN, g: NaN, b: NaN, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,14 +195,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1973875962}
     m_Modifications:
-    - target: {fileID: 7634252323097797441, guid: f2281f7c6e773834896ee7424215e4cc, type: 3}
-      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
-      value: 19668705049829385
-      objectReference: {fileID: 0}
-    - target: {fileID: 8010856811412621884, guid: f2281f7c6e773834896ee7424215e4cc, type: 3}
-      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
-      value: 19668705049829384
-      objectReference: {fileID: 0}
     - target: {fileID: 9086320091647281642, guid: f2281f7c6e773834896ee7424215e4cc, type: 3}
       propertyPath: m_Name
       value: Panel Tutorial
