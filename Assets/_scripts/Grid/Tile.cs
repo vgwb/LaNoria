@@ -50,6 +50,7 @@ namespace vgwb.lanoria
         private bool isUsed;
         private bool isMoving;
         private Vector3 prevPos;
+        private Vector3 prevRot;
 
         public bool IsValidPosition { get; private set; }
         public int Size => Cells.Count;
@@ -67,6 +68,7 @@ namespace vgwb.lanoria
         private void Awake()
         {
             prevPos = HexPos;
+            prevRot = transform.eulerAngles;
             SetupOutline();
         }
 
@@ -77,7 +79,7 @@ namespace vgwb.lanoria
             }
 
             CheckValidPosition();
-            CheckHexPosChange();
+            CheckTransformChange();
         }
 
         private void OnDestroy()
@@ -370,11 +372,21 @@ namespace vgwb.lanoria
         /// <summary>
         /// Warning: this method check for real if the first tile has changed position!
         /// </summary>
-        private void CheckHexPosChange()
+        private void CheckTransformChange()
         {
             var actualPos = HexPos;
+            bool hasChange = false;
             if (actualPos != prevPos) {
                 prevPos = actualPos;
+                hasChange = true;
+            }
+
+            if (prevRot != transform.eulerAngles) {
+                prevRot = transform.eulerAngles;
+                hasChange = true;
+            }
+
+            if (hasChange) {
                 OnHexPosChange?.Invoke();
             }
         }
