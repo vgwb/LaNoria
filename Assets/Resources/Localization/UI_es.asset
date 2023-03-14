@@ -88,8 +88,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829381
-    m_Localized: "Una vez que pulse el bot\xF3n Confirmar ya no podr\xE1s mover o
-      girar el proyecto"
+    m_Localized: "Una vez que pulse el bot\xF3n Confirmar ya no podr\xE1s mover el
+      proyecto seleccionado y las otras cartas ser\xE1n descartadas"
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829382

@@ -89,8 +89,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829381
-    m_Localized: 'Once you press the Confirm button you won''t be able to move or
-      rotate the project '
+    m_Localized: Once you press the Confirm button you won't be able to move the
+      selected project and the other cards will be discarded
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829382
