@@ -18,6 +18,14 @@ namespace vgwb.lanoria
 
         private void Init(ProjectData projectData)
         {
+            BtnClose.onClick.AddListener(() => ClosePanel());
+            BtnNext.onClick.AddListener(() => OnNext());
+            BtnPrev.onClick.AddListener(() => OnPrevious());
+            ShowProject(projectData);
+        }
+
+        public void ShowProject(ProjectData projectData)
+        {
             Title.text = projectData.Title;
             Description.text = projectData.Description;
             Info.text = "";
@@ -27,9 +35,6 @@ namespace vgwb.lanoria
             } else {
                 ProjectImage.gameObject.SetActive(false);
             }
-            BtnClose.onClick.AddListener(() => ClosePanel());
-            BtnNext.onClick.AddListener(() => OnNext());
-            BtnPrev.onClick.AddListener(() => OnPrevious());
         }
 
         public void OpenPanel(ProjectData data)

@@ -8,21 +8,23 @@ namespace vgwb.lanoria
     public class UI_PanelAbout : MonoBehaviour
     {
         public Button BtnClose;
+        public Button BtnWebsite;
 
         public GameObject ProjectsContainer;
         public GameObject ProjectCardPrefab;
 
-
         private GameObject _projectCard;
+
         void Start()
         {
             BtnClose.onClick.AddListener(() => AppManager.I.OnHome());
             BtnClose.onClick.AddListener(() => SoundManager.I.PlaySfx(AudioEnum.click));
+            BtnWebsite.onClick.AddListener(() => OnWebsite());
         }
 
         public void OpenPanel()
         {
-            popupateProjects();
+            populateProjects();
             gameObject.SetActive(true);
         }
 
@@ -36,9 +38,8 @@ namespace vgwb.lanoria
             // Debug.Log("CIAO CIAO");
         }
 
-        void popupateProjects()
+        void populateProjects()
         {
-
             emptyProjectsContainers();
 
             var projects = GameData.I.Projects.Projects;
@@ -56,7 +57,11 @@ namespace vgwb.lanoria
             foreach (Transform t in ProjectsContainer.transform) {
                 Destroy(t.gameObject);
             }
+        }
 
+        private void OnWebsite()
+        {
+            Application.OpenURL("https://www.malaga.es/lanoria/");
         }
 
     }
