@@ -177,14 +177,15 @@ namespace vgwb.lanoria
 
         private void EarnedPointsUI(Vector3 pos, int placementPoints)
         {
-            var ui = UI_manager.I.transform;
-            var instance = Instantiate(EarnedPointsPrefab, ui);
+            var UIParent = UI_manager.I.transform;
+            var instance = Instantiate(EarnedPointsPrefab, UIParent);
             instance.transform.position = pos;
             var points = instance.GetComponent<EarnedPoints>();
             if (points != null) {
                 points.SetAdjacencyPoints(adjacencyBonus);
                 points.SetAreaPoints(areaScore);
                 points.SetPlacementPoints(placementPoints);
+                points.Animate();
             }
 
         }
