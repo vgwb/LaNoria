@@ -18,7 +18,12 @@ namespace vgwb.lanoria
         {
             projectData = data;
             Title.text = projectData.Title;
-            ProjectImage.sprite = projectData.Image;
+            if (projectData.Image != null) {
+                ProjectImage.gameObject.SetActive(true);
+                ProjectImage.sprite = projectData.Image;
+            } else {
+                ProjectImage.gameObject.SetActive(false);
+            }
             int CatCounter = 0;
 
             foreach (ProjectCategories cat in projectData.Sequence) {

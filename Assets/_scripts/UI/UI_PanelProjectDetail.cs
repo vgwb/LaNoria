@@ -12,13 +12,24 @@ namespace vgwb.lanoria
         public TextMeshProUGUI Description;
         public Image ProjectImage;
         public Button BtnClose;
+        public Button BtnNext;
+        public Button BtnPrev;
+        public TextMeshProUGUI Info;
 
         private void Init(ProjectData projectData)
         {
             Title.text = projectData.Title;
             Description.text = projectData.Description;
-            ProjectImage.sprite = projectData.Image;
+            Info.text = "";
+            if (projectData.Image != null) {
+                ProjectImage.gameObject.SetActive(true);
+                ProjectImage.sprite = projectData.Image;
+            } else {
+                ProjectImage.gameObject.SetActive(false);
+            }
             BtnClose.onClick.AddListener(() => ClosePanel());
+            BtnNext.onClick.AddListener(() => OnNext());
+            BtnPrev.onClick.AddListener(() => OnPrevious());
         }
 
         public void OpenPanel(ProjectData data)
@@ -30,6 +41,16 @@ namespace vgwb.lanoria
         public void ClosePanel()
         {
             gameObject.SetActive(false);
+        }
+
+        private void OnNext()
+        {
+
+        }
+
+        private void OnPrevious()
+        {
+
         }
 
     }
