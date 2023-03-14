@@ -46,6 +46,8 @@ namespace vgwb.lanoria
         public float FadeInterval = 0.2f;
         public float MovementYOffset = 100.0f;
         public float MovementTime = 2.0f;
+        public float TextOutlineWidth = 0.3f;
+        public Color TextOutlineColor;
 
         [Header("UI")]
         public float SlideProjectPanelTime = 0.8f;

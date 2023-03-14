@@ -20,6 +20,7 @@ namespace vgwb.lanoria
         tile_confirmed = 10,
         tile_rotate = 11,
         tile_released = 12,
+        score_efx = 13,
 
         music_1 = 20
     }

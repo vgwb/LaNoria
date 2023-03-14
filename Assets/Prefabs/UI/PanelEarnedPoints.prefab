@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 4187045335791088468}
   - component: {fileID: 4187045335791088459}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: AreaPointTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,8 +137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 80, y: 0}
-  m_SizeDelta: {x: -160, y: 0}
+  m_AnchoredPosition: {x: 150, y: 0}
+  m_SizeDelta: {x: -300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045335791088468
 CanvasRenderer:
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 4187045336167710568}
   - component: {fileID: 4187045336167710575}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PlacementTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,8 +272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: 0}
-  m_SizeDelta: {x: -40, y: 0}
+  m_AnchoredPosition: {x: -29.999996, y: 0}
+  m_SizeDelta: {x: -60.00001, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045336167710568
 CanvasRenderer:
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Size point
+  m_text: Size points
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7ca4c13ab087d846bc23db3fa7334e1, type: 2}
   m_sharedMaterial: {fileID: -3788384837476101993, guid: c7ca4c13ab087d846bc23db3fa7334e1, type: 2}
@@ -330,8 +330,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -411,7 +411,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 180}
+  m_SizeDelta: {x: 360, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4187045336656867431
 MonoBehaviour:
@@ -430,7 +430,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -451,10 +451,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dbb500404020943b756f4fcd7cb88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlacementTxt: {fileID: 4187045336167710575}
   PlacementPointsTxt: {fileID: 4187045337375582235}
   PlacementCanvas: {fileID: 2471062131765302030}
+  AdjacencyTxt: {fileID: 4187045336801931470}
   AdjacencyPointsTxt: {fileID: 4187045337287224711}
   AdjacencyCanvas: {fileID: 84048562106515126}
+  AreaTxt: {fileID: 4187045337610004628}
   AreaPointsTxt: {fileID: 4187045335791088459}
   AreaPointsCanvas: {fileID: 2723983923975089510}
 --- !u!1 &4187045336749989754
@@ -494,7 +497,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 60}
+  m_SizeDelta: {x: 360, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045336749989701
 CanvasRenderer:
@@ -546,7 +549,7 @@ GameObject:
   - component: {fileID: 4187045336801931471}
   - component: {fileID: 4187045336801931470}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: AdjacencyTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,8 +572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20.00025, y: 0}
-  m_SizeDelta: {x: -39.9995, y: 0}
+  m_AnchoredPosition: {x: -30, y: 0}
+  m_SizeDelta: {x: -60, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045336801931471
 CanvasRenderer:
@@ -627,8 +630,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -706,7 +709,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 60}
+  m_SizeDelta: {x: 360, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045336873520956
 CanvasRenderer:
@@ -783,7 +786,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 60}
+  m_SizeDelta: {x: 360, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045336971636659
 CanvasRenderer:
@@ -835,7 +838,7 @@ GameObject:
   - component: {fileID: 4187045337287224704}
   - component: {fileID: 4187045337287224711}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: AdjacencyPointTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -858,8 +861,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 80, y: 0}
-  m_SizeDelta: {x: -160, y: 0}
+  m_AnchoredPosition: {x: 150, y: 0}
+  m_SizeDelta: {x: -300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045337287224704
 CanvasRenderer:
@@ -916,8 +919,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -970,7 +973,7 @@ GameObject:
   - component: {fileID: 4187045337375582692}
   - component: {fileID: 4187045337375582235}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PlacementPointTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -993,8 +996,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 80, y: 0}
-  m_SizeDelta: {x: -160, y: 0}
+  m_AnchoredPosition: {x: 150, y: 0}
+  m_SizeDelta: {x: -300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045337375582692
 CanvasRenderer:
@@ -1051,8 +1054,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1105,7 +1108,7 @@ GameObject:
   - component: {fileID: 4187045337610004629}
   - component: {fileID: 4187045337610004628}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: AreaTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,8 +1131,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: 0}
-  m_SizeDelta: {x: -40, y: 0}
+  m_AnchoredPosition: {x: -30.000004, y: 0}
+  m_SizeDelta: {x: -59.999992, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187045337610004629
 CanvasRenderer:
@@ -1186,8 +1189,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 8
