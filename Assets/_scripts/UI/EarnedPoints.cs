@@ -61,15 +61,15 @@ namespace vgwb.lanoria
         {
             Sequence mySequence = DOTween.Sequence();
             float time = 0.0f;
-            float fadeInTime = 0.25f;
+            float fadeInTime = GameplayConfig.I.FadeInTimeScore;
             foreach (var target in canvas) {
                 target.alpha = 0.0f;
                 mySequence.Insert(time, target.DOFade(1.0f, fadeInTime));
-                time += 0.2f;
+                time += GameplayConfig.I.FadeInterval;
             }
 
-            float endvalue = myRect.anchoredPosition.y + 50.0f;
-            float moveDuration = 2.0f;
+            float endvalue = myRect.anchoredPosition.y + GameplayConfig.I.MovementYOffset;
+            float moveDuration = GameplayConfig.I.MovementTime;
             mySequence.Insert(time, myRect.DOAnchorPosY(endvalue, moveDuration));
             mySequence.AppendCallback(() => {
                 DestroyMe();

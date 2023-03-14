@@ -41,6 +41,12 @@ namespace vgwb.lanoria
         public int Place3Bonus = 8;
         public int Place4Bonus = 12;
 
+        [Header("Score Efx")]
+        public float FadeInTimeScore = 0.25f;
+        public float FadeInterval = 0.2f;
+        public float MovementYOffset = 100.0f;
+        public float MovementTime = 2.0f;
+
         [Header("UI")]
         public float SlideProjectPanelTime = 0.8f;
         public float SlideProjectPanelPixelIn = 50.0f;
