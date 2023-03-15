@@ -20,7 +20,7 @@ namespace vgwb.lanoria
 
     public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     {
-        
+
         public int Score { get; private set; }
         public int AdjacencyScore { get; private set; }
         public int AreaScore { get; private set; }
@@ -31,9 +31,9 @@ namespace vgwb.lanoria
 
         [Header("Scores")]
         [SerializeField] private int adjacencyBonus;
-        
+
         [SerializeField] private int areaScore;
-        
+
         [SerializeField] private List<AreaId> completedAreas;
         [SerializeField] private List<AreaId> areasToConfirm;
 
@@ -180,7 +180,7 @@ namespace vgwb.lanoria
             var UIParent = UI_manager.I.transform;
             var instance = Instantiate(EarnedPointsPrefab, UIParent);
             instance.transform.position = pos;
-            var points = instance.GetComponent<EarnedPoints>();
+            var points = instance.GetComponent<PointsFX>();
             if (points != null) {
                 points.SetAdjacencyPoints(adjacencyBonus);
                 points.SetAreaPoints(areaScore);

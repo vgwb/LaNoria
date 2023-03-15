@@ -381,10 +381,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4187045336656867430}
-  - component: {fileID: 4187045336656867431}
   - component: {fileID: 6256683729308748169}
+  - component: {fileID: 4187045336656867431}
   m_Layer: 5
-  m_Name: PanelEarnedPoints
+  m_Name: PointsFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,6 +413,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 360, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6256683729308748169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4187045336656867429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dbb500404020943b756f4fcd7cb88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlacementTxt: {fileID: 4187045336167710575}
+  PlacementPointsTxt: {fileID: 4187045337375582235}
+  PlacementCanvas: {fileID: 2471062131765302030}
+  AdjacencyTxt: {fileID: 4187045336801931470}
+  AdjacencyPointsTxt: {fileID: 4187045337287224711}
+  AdjacencyCanvas: {fileID: 84048562106515126}
+  AreaTxt: {fileID: 4187045337610004628}
+  AreaPointsTxt: {fileID: 4187045335791088459}
+  AreaPointsCanvas: {fileID: 2723983923975089510}
 --- !u!114 &4187045336656867431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,27 +460,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &6256683729308748169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4187045336656867429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7dbb500404020943b756f4fcd7cb88f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlacementTxt: {fileID: 4187045336167710575}
-  PlacementPointsTxt: {fileID: 4187045337375582235}
-  PlacementCanvas: {fileID: 2471062131765302030}
-  AdjacencyTxt: {fileID: 4187045336801931470}
-  AdjacencyPointsTxt: {fileID: 4187045337287224711}
-  AdjacencyCanvas: {fileID: 84048562106515126}
-  AreaTxt: {fileID: 4187045337610004628}
-  AreaPointsTxt: {fileID: 4187045335791088459}
-  AreaPointsCanvas: {fileID: 2723983923975089510}
 --- !u!1 &4187045336749989754
 GameObject:
   m_ObjectHideFlags: 0

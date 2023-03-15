@@ -6,16 +6,18 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class EarnedPoints : MonoBehaviour
+    public class PointsFX : MonoBehaviour
     {
         [Header("Placement Points")]
         public TMP_Text PlacementTxt;
         public TMP_Text PlacementPointsTxt;
         public CanvasGroup PlacementCanvas;
+
         [Header("Adjacency Points")]
         public TMP_Text AdjacencyTxt;
         public TMP_Text AdjacencyPointsTxt;
         public CanvasGroup AdjacencyCanvas;
+
         [Header("Area Points")]
         public TMP_Text AreaTxt;
         public TMP_Text AreaPointsTxt;
@@ -103,5 +105,5 @@ namespace vgwb.lanoria
         {
             Destroy(gameObject);
         }
-    } 
+    }
 }
