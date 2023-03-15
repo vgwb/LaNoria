@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Serialization;
-using NaughtyAttributes;
 
 namespace vgwb.lanoria
 {
@@ -48,7 +47,6 @@ namespace vgwb.lanoria
         }
     }
 
-
     [CreateAssetMenu(menuName = "VGWB/Tiles Data")]
     public class TilesData : ScriptableObject
     {
@@ -56,7 +54,7 @@ namespace vgwb.lanoria
 
         public GameObject GetTileByModel(TileModel model)
         {
-            Debug.Log("GetTileByModel + " + model);
+            //            Debug.Log("GetTileByModel + " + model);
             return TilesPrefabs.Find(x => x.Model == model).gameObject;
         }
 

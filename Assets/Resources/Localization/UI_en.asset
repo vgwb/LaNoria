@@ -162,6 +162,18 @@ MonoBehaviour:
     m_Localized: Visit Official Website
     m_Metadata:
       m_Items: []
+  - m_Id: 22116143866044416
+    m_Localized: Accessibility (icons)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22120300530360320
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22120300530360321
+    m_Localized: Best Score
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
