@@ -4,32 +4,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Tutorial : MonoBehaviour
+namespace vgwb.lanoria
 {
-    public List<GameObject> Introductions;
-    public List<GameObject> Explanations;
-
-    public void OpenPanel()
+    public class UI_Tutorial : MonoBehaviour
     {
-        gameObject.SetActive(true);
-    }
+        public List<GameObject> Introductions;
+        public List<GameObject> Explanations;
 
-    public void ClosePanel()
-    {
-        gameObject.SetActive(false);
-    }
-
-    public void HideAllIntroductions()
-    {
-        foreach (var intro in Introductions) {
-            intro.SetActive(false);
+        public void OpenPanel()
+        {
+            gameObject.SetActive(true);
         }
-    }
 
-    public void HideAllExplanations()
-    {
-        foreach (var exp in Explanations) {
-            exp.SetActive(false);
+        public void ClosePanel()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void HideAllIntroductions()
+        {
+            foreach (var intro in Introductions) {
+                intro.SetActive(false);
+            }
+        }
+
+        public void HideAllExplanations()
+        {
+            foreach (var exp in Explanations) {
+                exp.SetActive(false);
+            }
         }
     }
 }
