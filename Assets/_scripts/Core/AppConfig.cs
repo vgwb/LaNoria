@@ -14,7 +14,6 @@ namespace vgwb.lanoria
         /// </summary>
         public int Version = 1;
         public string UrlSupportWebsite;
-
         public GameData GameData;
 
         [Header("Services")]

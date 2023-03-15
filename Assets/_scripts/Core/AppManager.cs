@@ -12,6 +12,7 @@ namespace vgwb.lanoria
     public class AppManager : SingletonMonoBehaviour<AppManager>
     {
         public AppConfig ApplicationConfig;
+        public AppSettings AppSettings;
 
         [Header("Debug")]
         public bool DebugDirectPlay;
@@ -20,6 +21,8 @@ namespace vgwb.lanoria
         public IEnumerator Start()
         {
             Application.runInBackground = true;
+
+            AppSettings = new AppSettings();
 
             // Init localization
             yield return LocalizationSettings.InitializationOperation;

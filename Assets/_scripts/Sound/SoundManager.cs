@@ -27,8 +27,8 @@ namespace vgwb.lanoria
         public void PlaySfx(AudioEnum sfx)
         {
             //Debug.Log("PlaySfx " + sfx);
-            // if (Statics.Data.Profile.Settings.SfxDisabled)
-            //     return;
+            if (!AppManager.I.AppSettings.SfxEnabled)
+                return;
 
             var sound = SoundsList.Sounds.Find(item => item.id == sfx);
             if (sound != null) {

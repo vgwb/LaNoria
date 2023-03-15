@@ -31,7 +31,7 @@ namespace vgwb.lanoria
 
             var parameters = new Dictionary<string, object>()
             {
-                { "myNativeLang", DataManager.I.Profile.AppSettings.NativeLocale },
+                { "myNativeLang", AppManager.I.AppSettings.Locale },
             };
 
             AnalyticsService.Instance.CustomData("myTestEvent", parameters);

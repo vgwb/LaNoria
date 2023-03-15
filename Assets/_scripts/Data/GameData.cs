@@ -8,7 +8,6 @@ using vgwb.framework;
 
 namespace vgwb.lanoria
 {
-
     [CreateAssetMenu(menuName = "VGWB/Game Data")]
     public class GameData : SingletonScriptableObject<GameData>
     {

@@ -51,7 +51,8 @@ namespace vgwb.lanoria
         void Start()
         {
             state = GameplayState.None;
-            displayTutorial = !Application.isEditor ? true : AppConfig.I.ShowTutorial;
+            return;
+
             ResetValues();
         }
 
@@ -62,9 +63,15 @@ namespace vgwb.lanoria
 
         public void StartGame()
         {
+            displayTutorial = AppManager.I.AppSettings.TutorialEnabled;
+
             UIGame = UI_manager.I.PanelGameplay;
             BoardManager.I.EmptyProjectsContainer();
-            SetState(GameplayState.Tutorial);
+            if (AppManager.I.AppSettings.TutorialEnabled) {
+                SetState(GameplayState.Tutorial);
+            } else {
+                SetState(GameplayState.Intro);
+            }
         }
 
         public void ForceEndGame()
