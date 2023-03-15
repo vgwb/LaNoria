@@ -15,8 +15,16 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: f145508d5e373411a8e59d53138b69e4
   m_Entries:
+  - m_Id: 20410027822014464
+    m_Key: about.projects
+    m_Metadata:
+      m_Items: []
   - m_Id: 343755710464
     m_Key: btn.confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22120300530360320
+    m_Key: btn.credits
     m_Metadata:
       m_Items: []
   - m_Id: 10138992044400640
@@ -27,12 +35,16 @@ MonoBehaviour:
     m_Key: btn.no
     m_Metadata:
       m_Items: []
+  - m_Id: 21811701396529152
+    m_Key: btn.openwww
+    m_Metadata:
+      m_Items: []
   - m_Id: 286247608320
     m_Key: btn.yes
     m_Metadata:
       m_Items: []
-  - m_Id: 21811701396529152
-    m_Key: btn.openwww
+  - m_Id: 22120300530360321
+    m_Key: label.hiscore
     m_Metadata:
       m_Items: []
   - m_Id: 172359671808
@@ -59,84 +71,8 @@ MonoBehaviour:
     m_Key: menu.resume
     m_Metadata:
       m_Items: []
-  - m_Id: 8702683148967936
-    m_Key: panel.gameend
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19768326510075904
-    m_Key: panel.results
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19769399220101120
-    m_Key: panel.paused
-    m_Metadata:
-      m_Items: []
-  - m_Id: 193004036096
-    m_Key: prompt.areyousure
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829376
-    m_Key: tutorial.popup.1.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829377
-    m_Key: tutorial.popup.1.desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829378
-    m_Key: tutorial.popup.2.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829379
-    m_Key: tutorial.popup.2.desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829380
-    m_Key: tutorial.popup.3.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829381
-    m_Key: tutorial.popup.3.desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829382
-    m_Key: tutorial.popup.4.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829383
-    m_Key: tutorial.popup.4.desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829384
-    m_Key: tutorial.popup.5.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19668705049829385
-    m_Key: tutorial.popup.5.desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20308952015118336
-    m_Key: tutorial.popup.6.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20308952073838592
-    m_Key: tutorial.popup.6.desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19679508188618752
-    m_Key: score.cells
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19679508188618753
-    m_Key: score.synergy
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19679508188618754
-    m_Key: score.area
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19679508188618755
-    m_Key: score.empty
+  - m_Id: 22116143866044416
+    m_Key: option.accessibility
     m_Metadata:
       m_Items: []
   - m_Id: 19768326510075905
@@ -151,8 +87,84 @@ MonoBehaviour:
     m_Key: option.tutorial
     m_Metadata:
       m_Items: []
-  - m_Id: 20410027822014464
-    m_Key: about.projects
+  - m_Id: 8702683148967936
+    m_Key: panel.gameend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19769399220101120
+    m_Key: panel.paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075904
+    m_Key: panel.results
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193004036096
+    m_Key: prompt.areyousure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618754
+    m_Key: score.area
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618752
+    m_Key: score.cells
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618755
+    m_Key: score.empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618753
+    m_Key: score.synergy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829377
+    m_Key: tutorial.popup.1.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829376
+    m_Key: tutorial.popup.1.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829379
+    m_Key: tutorial.popup.2.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829378
+    m_Key: tutorial.popup.2.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829381
+    m_Key: tutorial.popup.3.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829380
+    m_Key: tutorial.popup.3.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829383
+    m_Key: tutorial.popup.4.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829382
+    m_Key: tutorial.popup.4.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829385
+    m_Key: tutorial.popup.5.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829384
+    m_Key: tutorial.popup.5.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20308952073838592
+    m_Key: tutorial.popup.6.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20308952015118336
+    m_Key: tutorial.popup.6.title
     m_Metadata:
       m_Items: []
   m_Metadata:
