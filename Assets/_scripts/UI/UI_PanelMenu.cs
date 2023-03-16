@@ -11,6 +11,7 @@ namespace vgwb.lanoria
         public Button BtnAbout;
         public Button BtnHelp;
         public Button BtnOptions;
+        public LabelHiscore Hiscore;
 
         void Start()
         {
@@ -27,6 +28,7 @@ namespace vgwb.lanoria
         public void OpenPanel()
         {
             gameObject.SetActive(true);
+            Hiscore.Refresh();
         }
 
         public void ClosePanel()

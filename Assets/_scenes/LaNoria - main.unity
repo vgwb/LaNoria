@@ -974,7 +974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1988016827874955144, guid: 9499883949e584dd3ad6c4862a6a92b9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1000
+      value: 1042
       objectReference: {fileID: 0}
     - target: {fileID: 1988016827874955144, guid: 9499883949e584dd3ad6c4862a6a92b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1464,27 +1464,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 685
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1042
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4452299246788259887, guid: 4f89b40abe77842458e4cd0b6ab4f49b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2472,6 +2472,14 @@ PrefabInstance:
     - target: {fileID: 444260224015624550, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
       propertyPath: ShowSubregionDebug
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106065653118884812, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106065653118884812, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
+      propertyPath: m_Volume
+      value: 0.703
       objectReference: {fileID: 0}
     - target: {fileID: 7753285714682877558, guid: e00ff15c525ab47c2b1ab31871aa8973, type: 3}
       propertyPath: m_Name

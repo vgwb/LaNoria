@@ -5,7 +5,7 @@ using TMPro;
 
 namespace vgwb.lanoria
 {
-    public class AppVersionLabel : MonoBehaviour
+    public class LabelAppVersion : MonoBehaviour
     {
         public TextMeshProUGUI Label;
 
