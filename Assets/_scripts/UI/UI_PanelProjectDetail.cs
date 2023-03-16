@@ -50,11 +50,13 @@ namespace vgwb.lanoria
 
         private void OnNext()
         {
+            SoundManager.I.PlaySfx(AudioEnum.click);
 
         }
 
         private void OnPrevious()
         {
+            SoundManager.I.PlaySfx(AudioEnum.click);
 
         }
 
