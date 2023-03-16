@@ -18,6 +18,7 @@ namespace vgwb.lanoria
         public TileModel DefinedTileModel;
         public ProjectCategories[] Sequence;
         public string Title;
+        public int Year;
         [TextArea]
         public string Description;
         [ShowAssetPreview(128, 128)]
