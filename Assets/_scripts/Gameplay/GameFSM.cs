@@ -172,6 +172,7 @@ namespace vgwb.lanoria
         {
             displayTutorial = false;
             TutorialManager.I.Close();
+            DestroyCurrentTile();
         }
 
         private void SetState(GameplayState newState)
@@ -463,10 +464,6 @@ namespace vgwb.lanoria
                     ScoreManager.I.SaveHiScore(totalScore);
                     UI_manager.I.PanelGameResults.SetTotalScore(totalScore);
                     UI_manager.I.PanelGameResults.ShowNewHiScore(isNewHiScore);
-                    SoundManager.I.StopMusic();
-                    if (isNewHiScore) {
-                        SoundManager.I.PlaySfx(AudioEnum.win_hiscore);
-                    }
                     UI_manager.I.ShowGameResult(true);
                     SetState(GameplayState.End);
                     break;

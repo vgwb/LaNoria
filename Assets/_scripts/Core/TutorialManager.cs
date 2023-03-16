@@ -115,8 +115,9 @@ namespace vgwb.lanoria
                 var targetRect = target.GetComponent<RectTransform>();
                 if (targetRect != null) {
                     float width = targetRect.sizeDelta.x;
-                    float destination = (width - pixelIn) + targetRect.anchoredPosition.x;
-                    targetRect.DOAnchorPosX(destination, GameplayConfig.I.CardsEnterTime).SetEase(GameplayConfig.I.CardsEnterCurve);
+                    Vector2 newPos = targetRect.anchoredPosition;
+                    newPos.x = (width - pixelIn) + targetRect.anchoredPosition.x;
+                    targetRect.anchoredPosition = newPos;
                 }
             }
 
