@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Sounds List
   m_EditorClassIdentifier: 
   Sounds:
+  - id: 20
+    Channel: 3
+    audioClip: {fileID: 8300000, guid: eb8ef7a5d404440b697a05399d540ed8, type: 3}
+    Volume: 0.5
+  - id: 21
+    Channel: 3
+    audioClip: {fileID: 8300000, guid: 680b2770f990240d79c3a09364a1664e, type: 3}
+    Volume: 0.5
   - id: 1
     Channel: 0
     audioClip: {fileID: 8300000, guid: 7b07293d40c504762846ff33b47cb5c9, type: 3}
@@ -48,10 +56,6 @@ MonoBehaviour:
   - id: 9
     Channel: 1
     audioClip: {fileID: 8300000, guid: 54c5476c618d3461b832d0ac4b685a4f, type: 3}
-    Volume: 0.5
-  - id: 20
-    Channel: 3
-    audioClip: {fileID: 0}
     Volume: 0.5
   - id: 10
     Channel: 2
