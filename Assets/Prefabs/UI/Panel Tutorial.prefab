@@ -108,8 +108,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5826086822600877660}
   - {fileID: 6625509430635545260}
+  - {fileID: 5826086822600877660}
   - {fileID: 8190712126033885625}
   m_Father: {fileID: 9086320091214209408}
   m_RootOrder: 0
@@ -117,7 +117,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -40}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8542267281297947786
 CanvasRenderer:
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.10196079, g: 0.21960786, b: 0.32941177, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -188,7 +188,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7399228422923228457}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -224,10 +224,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "La Noria es un centro de Innovaci\xF3n Social dependiente de la Diputaci\xF3n
-    de M\xE1laga. Abri\xF3 sus puertas en 2013 y desde entonces se dedica a X temas
-    en la provincia de M\xE1laga, especialmente en poblaciones de menos de 20k habitantes.\n\nLa
-    Noria est\xE1 en M\xE1laga capital pero su trabajo est\xE1 orientado a las otras
-    8 comarcas de M\xE1laga, especialmente a las poblaciones de menos de 20k habitantes."
+    Provincial de M\xE1laga. Abri\xF3 sus puertas en 2013 en M\xE1laga capital pero
+    su trabajo est\xE1 orientado a las otras 8 comarcas de M\xE1laga, especialmente
+    a las poblaciones de menos de 20.000 habitantes. \t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a16814c86c3a46c58feb18aeea36fed, type: 2}
   m_sharedMaterial: {fileID: -5148097082383372813, guid: 1a16814c86c3a46c58feb18aeea36fed, type: 2}
@@ -236,8 +235,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -261,7 +260,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 42
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -989,12 +988,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7399228422923228457}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 0, y: 600}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4268601417917302482
 CanvasRenderer:
@@ -1482,7 +1481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9086320091214209408
 RectTransform:
   m_ObjectHideFlags: 0
