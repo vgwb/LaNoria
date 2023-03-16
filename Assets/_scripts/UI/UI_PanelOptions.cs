@@ -58,7 +58,7 @@ namespace vgwb.lanoria
         {
             SoundManager.I.PlaySfx(AudioEnum.click);
             AppManager.I.AppSettings.SetMusic(status);
-            SoundManager.I.PlayMusic(status);
+            SoundManager.I.ToggleMusic(status);
         }
 
         private void OnTutorial(bool status)

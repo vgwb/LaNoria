@@ -40,6 +40,7 @@ namespace vgwb.lanoria
                 return;
             UI_manager.I.Show(UI_manager.States.Home);
             BoardManager.I.ShowMap(true);
+            SoundManager.I.PlayMusic(AudioEnum.music_2);
         }
 
         public void OnAbout()
@@ -52,6 +53,7 @@ namespace vgwb.lanoria
             BoardManager.I.ShowMap(false);
             UI_manager.I.Show(UI_manager.States.Play);
             GameManager.I.StartGame();
+            SoundManager.I.PlayMusic(AudioEnum.music_1);
         }
 
         public void OnOptions()

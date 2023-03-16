@@ -14,19 +14,40 @@ namespace vgwb.lanoria
         public AudioSource audioSource3;
         public AudioSource audioSourceMusic;
 
-        public void PlayMusic(bool status)
+        public void PlayMusic(AudioEnum musicId)
+        {
+            if (!AppManager.I.AppSettings.MusicEnabled)
+                return;
+
+            var sound = SoundsList.Sounds.Find(item => item.id == musicId);
+            if (sound != null) {
+                var audioSource = getSource(sound);
+
+                audioSource.clip = sound.audioClip;
+                audioSource.volume = sound.Volume;
+                audioSource.Play();
+            }
+
+            // if (status) {
+            //     PlaySfx(AudioEnum.music_1);
+            // } else {
+            //     var music = SoundsList.Sounds.Find(item => item.id == AudioEnum.music_1);
+            //     getSource(music).Stop();
+            // }
+        }
+
+        public void ToggleMusic(bool status)
         {
             if (status) {
-                PlaySfx(AudioEnum.music_1);
+                audioSourceMusic.Play();
             } else {
-                var music = SoundsList.Sounds.Find(item => item.id == AudioEnum.music_1);
-                getSource(music).Stop();
+                audioSourceMusic.Stop();
             }
         }
 
         public void PlaySfx(AudioEnum sfx)
         {
-            //Debug.Log("PlaySfx " + sfx);
+            // Debug.Log("PlaySfx " + sfx);
             if (!AppManager.I.AppSettings.SfxEnabled)
                 return;
 

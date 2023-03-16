@@ -22,7 +22,8 @@ namespace vgwb.lanoria
         tile_released = 12,
         score_efx = 13,
 
-        music_1 = 20
+        music_1 = 20,
+        music_2 = 21
     }
 
     public enum AudioChannel
