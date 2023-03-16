@@ -56,7 +56,7 @@ namespace vgwb.lanoria
 
         public void OnOptions()
         {
-            UI_manager.I.Show(UI_manager.States.Options);
+            UI_manager.I.ShowOptions(true);
         }
 
     }

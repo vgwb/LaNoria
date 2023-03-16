@@ -13,7 +13,6 @@ namespace vgwb.lanoria
             Home = 1,
             About = 2,
             Play = 3,
-            Options = 4
         }
 
         public UI_PanelMenu PanelMenu;
@@ -38,9 +37,6 @@ namespace vgwb.lanoria
                 case States.About:
                     PanelAbout.OpenPanel();
                     break;
-                case States.Options:
-                    PanelOptions.OpenPanel();
-                    break;
                 case States.Play:
                     PanelGameplay.OpenPanel();
                     break;
@@ -59,9 +55,6 @@ namespace vgwb.lanoria
                 case States.About:
                     PanelAbout.ClosePanel();
                     break;
-                case States.Options:
-                    PanelOptions.ClosePanel();
-                    break;
                 case States.Play:
                     PanelGameplay.ClosePanel();
                     break;
@@ -79,6 +72,15 @@ namespace vgwb.lanoria
                 PanelGameplay.OpenPanel();
             } else {
                 PanelGameplay.ClosePanel();
+            }
+        }
+
+        public void ShowOptions(bool status)
+        {
+            if (status) {
+                PanelOptions.OpenPanel();
+            } else {
+                PanelOptions.ClosePanel();
             }
         }
 

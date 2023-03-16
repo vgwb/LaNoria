@@ -9,6 +9,7 @@ namespace vgwb.lanoria
     {
         public Button BtnResume;
         public Button BtnExit;
+        public Button BtnOptions;
 
         void Start()
         {
@@ -16,6 +17,8 @@ namespace vgwb.lanoria
             BtnResume.onClick.AddListener(() => SoundManager.I.PlaySfx(AudioEnum.click));
             BtnExit.onClick.AddListener(() => GameManager.I.ForceEndGame());
             BtnExit.onClick.AddListener(() => SoundManager.I.PlaySfx(AudioEnum.click));
+            BtnOptions.onClick.AddListener(() => AppManager.I.OnOptions());
+            BtnOptions.onClick.AddListener(() => SoundManager.I.PlaySfx(AudioEnum.click));
         }
 
         public void OpenPanel()
