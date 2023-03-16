@@ -73,7 +73,7 @@ namespace vgwb.lanoria
                 target.alpha = 0.0f;
                 mySequence.Insert(time,
                     target.DOFade(1.0f, fadeInTime).OnComplete(() => SoundManager.I.PlaySfx(AudioEnum.score_efx)));
-                time += GameplayConfig.I.FadeInterval;
+                time += GameplayConfig.I.FadeIntervalBetween;
             }
 
             float endvalue = myRect.anchoredPosition.y + GameplayConfig.I.MovementYOffset;
