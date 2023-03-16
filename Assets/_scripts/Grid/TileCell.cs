@@ -59,6 +59,7 @@ namespace vgwb.lanoria
         public void SetupLayerForUICamera()
         {
             mesh.gameObject.layer = LayerMask.NameToLayer("UICamera");
+            Icon.gameObject.layer = LayerMask.NameToLayer("UICamera");
         }
 
 
