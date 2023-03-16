@@ -90,10 +90,10 @@ namespace vgwb.lanoria
             if (shapes_ok) {
                 return shapes_ok;
             } else {
-                Debug.LogWarning("check_Shape");
-                Debug.Log("Til 0 Model = " + currentHand[0].DefinedTileModel);
-                Debug.Log("Tile 1 Model = " + currentHand[1].DefinedTileModel);
-                Debug.Log("Tile 2 Model = " + cardToCheck.DefinedTileModel);
+                // Debug.LogWarning("check_Shape");
+                // Debug.Log("Til 0 Model = " + currentHand[0].DefinedTileModel);
+                // Debug.Log("Tile 1 Model = " + currentHand[1].DefinedTileModel);
+                // Debug.Log("Tile 2 Model = " + cardToCheck.DefinedTileModel);
                 return shapes_ok;
             }
         }
@@ -107,10 +107,10 @@ namespace vgwb.lanoria
             if (sizes_ok) {
                 return sizes_ok;
             } else {
-                Debug.LogWarning("check_Shape");
-                Debug.Log("Tile 0 Size = " + currentHand[0].Size());
-                Debug.Log("Tile 1 Size = " + currentHand[1].Size());
-                Debug.Log("Tile 2 Size = " + cardToCheck.Size());
+                // Debug.LogWarning("check_Shape");
+                // Debug.Log("Tile 0 Size = " + currentHand[0].Size());
+                // Debug.Log("Tile 1 Size = " + currentHand[1].Size());
+                // Debug.Log("Tile 2 Size = " + cardToCheck.Size());
                 return sizes_ok;
             }
         }
