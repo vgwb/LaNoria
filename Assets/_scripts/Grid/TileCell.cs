@@ -39,14 +39,21 @@ namespace vgwb.lanoria
 
         public void RemoveCategory()
         {
-            Icon.gameObject.SetActive(false);
+            if (!AppManager.I.AppSettings.AccessibilityEnabled) {
+                Icon.gameObject.SetActive(false);
+            }
         }
 
         public void ApplyColor()
         {
             var mat = AssociatedMaterial;
             ApplyMaterial(mat);
-            Icon.sprite = GameData.I.Categories.GetIcon(category);
+            if (AppManager.I.AppSettings.AccessibilityEnabled) {
+                Icon.gameObject.SetActive(true);
+                Icon.sprite = GameData.I.Categories.GetIcon(category);
+            } else {
+                Icon.gameObject.SetActive(false);
+            }
         }
 
         public void SetupLayerForUICamera()
