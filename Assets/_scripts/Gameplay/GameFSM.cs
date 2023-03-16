@@ -256,7 +256,10 @@ namespace vgwb.lanoria
         private void HandleBtnConfirm()
         {
             if (currentTile != null) {
-                bool enable = currentTile.IsValidPosition && TutorialManager.I.IsExplanationCompleted(TutorialStep.Rotate);
+                bool enable = true;
+                if (displayTutorial) {
+                    enable = currentTile.IsValidPosition && TutorialManager.I.IsExplanationCompleted(TutorialStep.Rotate);
+                }
                 UIGame.EnableBtnConfirm(enable);
             }
         }
@@ -414,7 +417,6 @@ namespace vgwb.lanoria
                     break;
                 case GameplayState.Tutorial:
                     UIGame.EnableCanvas(false);
-                    TutorialManager.I.ResetTutorial();
                     TutorialManager.I.BeginTutorial(EndTutorial);
                     TutorialManager.I.ShowNextIntroduction();
                     break;
