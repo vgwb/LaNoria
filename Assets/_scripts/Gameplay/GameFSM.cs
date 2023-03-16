@@ -51,8 +51,6 @@ namespace vgwb.lanoria
         void Start()
         {
             state = GameplayState.None;
-            return;
-
             ResetValues();
         }
 
