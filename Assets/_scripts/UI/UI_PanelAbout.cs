@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ namespace vgwb.lanoria
         public GameObject ProjectCardPrefab;
 
         private GameObject _projectCard;
+
+        List<ProjectData> ProjectsList;
 
         void Start()
         {
@@ -33,17 +36,12 @@ namespace vgwb.lanoria
             gameObject.SetActive(false);
         }
 
-        void OnEnable()
-        {
-            // Debug.Log("CIAO CIAO");
-        }
-
         void populateProjects()
         {
             emptyProjectsContainers();
+            ProjectsList = GameData.I.Projects.Projects.OrderBy(x => x.Title).ToList();
 
-            var projects = GameData.I.Projects.Projects;
-            foreach (var project in projects) {
+            foreach (var project in ProjectsList) {
                 if (project.Active) {
                     _projectCard = Instantiate(ProjectCardPrefab);
                     _projectCard.transform.SetParent(ProjectsContainer.transform, false);
