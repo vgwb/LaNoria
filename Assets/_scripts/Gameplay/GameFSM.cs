@@ -453,8 +453,10 @@ namespace vgwb.lanoria
                     int emptyCells = GridManager.I.FreeCells() * -1;
                     UI_manager.I.PanelGameResults.SetEmptyScore(emptyCells);
                     int totalScore = ScoreManager.I.Score + emptyCells;
+                    bool isNewHiScore = ScoreManager.I.IsNewHiScore(totalScore);
                     ScoreManager.I.SaveHiScore(totalScore);
                     UI_manager.I.PanelGameResults.SetTotalScore(totalScore);
+                    UI_manager.I.PanelGameResults.ShowNewHiScore(isNewHiScore);
                     UI_manager.I.ShowGameResult(true);
                     SetState(GameplayState.End);
                     break;

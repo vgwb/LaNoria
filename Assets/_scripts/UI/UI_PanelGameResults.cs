@@ -15,6 +15,7 @@ namespace vgwb.lanoria
         public TMP_Text AdjacencyScore;
         public TMP_Text AreaScore;
         public TMP_Text EmptyScore;
+        public GameObject NewScore;
 
         void Start()
         {
@@ -41,6 +42,13 @@ namespace vgwb.lanoria
             if (Score != null) {
                 Score.text = score;
                 Debug.Log("arg: "+score+" txt: "+Score.text);
+            }
+        }
+
+        public void ShowNewHiScore(bool show)
+        {
+            if (NewScore != null) {
+                NewScore.SetActive(show);
             }
         }
 

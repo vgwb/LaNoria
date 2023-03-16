@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 namespace vgwb.lanoria
 {
-    public class UITutorialHighlight : MonoBehaviour
+    public class HighlighterManager : MonoBehaviour
     {
         #region Var
+        public bool AlwaysDisplay = false;
         public TutorialStep DisplayStep = TutorialStep.Confirm;
         public Image TutorialImg;
         private bool displayTutorial;
@@ -20,12 +21,21 @@ namespace vgwb.lanoria
         {
             displayTutorial = false;
             originSizeDelta = TutorialImg.rectTransform.sizeDelta;
-            TutorialImg.gameObject.SetActive(false);
+            TutorialImg.gameObject.SetActive(AlwaysDisplay);
+        }
+
+        private void Start()
+        {
+            if (AlwaysDisplay) {
+                Bounce(false);
+            }
         }
 
         void Update()
         {
-            HandleTutorial();
+            if (!AlwaysDisplay) {
+                HandleTutorial();
+            }
         }
 
         private void OnDestroy()

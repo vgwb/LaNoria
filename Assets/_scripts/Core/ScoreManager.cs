@@ -44,6 +44,11 @@ namespace vgwb.lanoria
             Score = 0;
         }
 
+        public bool IsNewHiScore(int totalScore)
+        {
+            return totalScore > AppManager.I.AppSettings.HiScore;
+        }
+
         public void SaveHiScore(int totalScore)
         {
             if (totalScore > AppManager.I.AppSettings.HiScore) {
