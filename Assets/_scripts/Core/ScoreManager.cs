@@ -68,7 +68,6 @@ namespace vgwb.lanoria
             confirmAreas();
             var pos = CameraManager.I.MyCamera.WorldToScreenPoint(tile.PivotPos);
             EarnedPointsUI(pos, placementBonus);
-            UI_manager.I.PanelGameplay.SetScoreUI(Score, newPoints);
         }
 
         public void ResetScore()

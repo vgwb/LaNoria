@@ -24,11 +24,23 @@ namespace vgwb.lanoria
         public CanvasGroup AreaPointsCanvas;
 
         private RectTransform myRect;
-        private List<CanvasGroup> canvas;
+        private List<CanvasScore> canvas;
+
+        private class CanvasScore
+        {
+            public CanvasGroup Canvas;
+            public int Score;
+
+            public CanvasScore(CanvasGroup canvas, int score)
+            {
+                Canvas = canvas;
+                Score = score;
+            }
+        }
 
         private void Awake()
         {
-            canvas = new List<CanvasGroup>();
+            canvas = new List<CanvasScore>();
             myRect = GetComponent<RectTransform>();
             SetOutline(PlacementTxt);
             SetOutline(AdjacencyTxt);
@@ -37,26 +49,12 @@ namespace vgwb.lanoria
 
         public void SetPlacementPoints(int points)
         {
-            if (points > 0) {
-                PlacementPointsTxt.text = points.ToString();
-                PlacementPointsTxt.outlineWidth = 0.25f;
-                PlacementPointsTxt.outlineColor = Color.white;
-                canvas.Add(PlacementCanvas);
-            } else {
-                PlacementPointsTxt.transform.parent.gameObject.SetActive(false);
-            }
+            SetCanvas(points, PlacementPointsTxt, PlacementCanvas);
         }
 
         public void SetAdjacencyPoints(int points)
         {
-            if (points > 0) {
-                AdjacencyPointsTxt.text = points.ToString();
-                AdjacencyPointsTxt.outlineWidth = 0.25f;
-                AdjacencyPointsTxt.outlineColor = Color.white;
-                canvas.Add(AdjacencyCanvas);
-            } else {
-                AdjacencyPointsTxt.transform.parent.gameObject.SetActive(false);
-            }
+            SetCanvas(points, AdjacencyPointsTxt, AdjacencyCanvas);
         }
 
         public void SetAreaPoints(int points)
@@ -71,20 +69,20 @@ namespace vgwb.lanoria
             float fadeInTime = GameplayConfig.I.FadeInTimeScore;
             float moveDuration = GameplayConfig.I.MovementTime;
             foreach (var target in canvas) {
-                target.alpha = 0.0f; // set alpha to 0
+                target.Canvas.alpha = 0.0f; // set alpha to 0
                 // fade in...
                 mySequence.Insert(time,
-                    target.DOFade(1.0f, fadeInTime).OnComplete(() => SoundManager.I.PlaySfx(AudioEnum.score_efx)));
+                    target.Canvas.DOFade(1.0f, fadeInTime).OnComplete(() => SoundManager.I.PlaySfx(AudioEnum.score_efx)));
                 time += fadeInTime;
 
                 // ...move
-                var targetRect = target.GetComponent<RectTransform>();
+                var targetRect = target.Canvas.GetComponent<RectTransform>();
                 float endvalue = targetRect.anchoredPosition.y + GameplayConfig.I.MovementYOffset;
                 mySequence.Insert(time,
-                    targetRect.DOAnchorPosY(endvalue, moveDuration).OnComplete(() => Destroy(target.gameObject)));
+                    targetRect.DOAnchorPosY(endvalue, moveDuration).OnComplete(() => OnEndMove(target)));
                 time += moveDuration;
             }
-
+            // destroy this object
             mySequence.AppendCallback(() => {
                 DestroyMe();
             });
@@ -95,7 +93,8 @@ namespace vgwb.lanoria
             if (points > 0) {
                 textArea.text = points.ToString();
                 SetOutline(textArea);
-                canvas.Add(targetCanvas);
+                CanvasScore canvasScore = new CanvasScore(targetCanvas, points);
+                canvas.Add(canvasScore);
             } else {
                 textArea.transform.parent.gameObject.SetActive(false);
             }
@@ -110,6 +109,13 @@ namespace vgwb.lanoria
         private void DestroyMe()
         {
             Destroy(gameObject);
+        }
+
+        private void OnEndMove(CanvasScore target)
+        {
+            int score = ScoreManager.I.Score;
+            UI_manager.I.PanelGameplay.SetScoreUI(score, target.Score);
+            Destroy(target.Canvas.gameObject);
         }
     }
 }
