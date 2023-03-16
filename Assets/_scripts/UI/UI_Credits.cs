@@ -8,6 +8,13 @@ namespace vgwb.lanoria
 {
     public class UI_Credits : MonoBehaviour
     {
+        public Button BtnClose;
+
+        void Start()
+        {
+            BtnClose.onClick.AddListener(() => ClosePanel());
+            BtnClose.onClick.AddListener(() => SoundManager.I.PlaySfx(AudioEnum.click));
+        }
 
         public void OpenPanel()
         {

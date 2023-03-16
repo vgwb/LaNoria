@@ -44,7 +44,8 @@ namespace vgwb.lanoria
 
         private void OnCredits()
         {
-            Application.OpenURL("https://vgwb.org/projects/lanoria/");
+            UI_manager.I.ShowCredits(true);
+            //Application.OpenURL("https://vgwb.org/projects/lanoria/");
         }
 
         private void OnSfx(bool status)
@@ -57,6 +58,7 @@ namespace vgwb.lanoria
         {
             SoundManager.I.PlaySfx(AudioEnum.click);
             AppManager.I.AppSettings.SetMusic(status);
+            SoundManager.I.PlayMusic(status);
         }
 
         private void OnTutorial(bool status)

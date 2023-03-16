@@ -84,6 +84,15 @@ namespace vgwb.lanoria
             }
         }
 
+        public void ShowCredits(bool status)
+        {
+            if (status) {
+                PanelCredits.OpenPanel();
+            } else {
+                PanelCredits.ClosePanel();
+            }
+        }
+
         public void ShowGamePause(bool status)
         {
             if (status) {
