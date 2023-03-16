@@ -43,7 +43,6 @@ namespace vgwb.lanoria
 
         [Header("Score Efx")]
         public float FadeInTimeScore = 0.25f;
-        public float FadeIntervalBetween = 0.5f;
         public float MovementYOffset = 100.0f;
         public float MovementTime = 2.0f;
         public float TextOutlineWidth = 0.3f;

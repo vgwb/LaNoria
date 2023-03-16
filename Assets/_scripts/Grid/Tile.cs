@@ -65,6 +65,16 @@ namespace vgwb.lanoria
             }
         }
 
+        public Vector3 PivotPos
+        {
+            get {
+                if (Pivot != null) {
+                    return Pivot.transform.position;
+                }
+                return transform.position;
+            }
+        }
+
         private void Awake()
         {
             prevPos = HexPos;
