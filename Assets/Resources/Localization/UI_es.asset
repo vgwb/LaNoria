@@ -72,7 +72,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19668705049829377
     m_Localized: Arrastra un proyecto sobre el mapa y, mientras no lo hayas confirmado,
-      puedes cambiar de proyecto arrastrando otro
+      puedes cambiarlo arrastrando otro
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829378
@@ -163,7 +163,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22116143866044416
-    m_Localized: Accesibilidad (iconos)
+    m_Localized: Accesibilidad (color)
     m_Metadata:
       m_Items: []
   - m_Id: 22120300530360320
@@ -171,7 +171,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22120300530360321
-    m_Localized: Marca personal
+    m_Localized: Marca Personal
     m_Metadata:
       m_Items: []
   references:
