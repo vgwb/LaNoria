@@ -44,6 +44,13 @@ namespace vgwb.lanoria
             Score = 0;
         }
 
+        public void SaveHiScore(int totalScore)
+        {
+            if (totalScore > AppManager.I.AppSettings.HiScore) {
+                AppManager.I.AppSettings.SetHiScore(totalScore);
+            }
+        }
+
         public void UpdateScore(Tile tile)
         {
             int placementBonus = CalculatePlacementBonus(tile);

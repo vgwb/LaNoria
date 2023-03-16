@@ -452,7 +452,9 @@ namespace vgwb.lanoria
                     UI_manager.I.PanelGameResults.SetPlacementScore(ScoreManager.I.PlacementScore);
                     int emptyCells = GridManager.I.FreeCells() * -1;
                     UI_manager.I.PanelGameResults.SetEmptyScore(emptyCells);
-                    UI_manager.I.PanelGameResults.SetTotalScore(ScoreManager.I.Score + emptyCells);
+                    int totalScore = ScoreManager.I.Score + emptyCells;
+                    ScoreManager.I.SaveHiScore(totalScore);
+                    UI_manager.I.PanelGameResults.SetTotalScore(totalScore);
                     UI_manager.I.ShowGameResult(true);
                     SetState(GameplayState.End);
                     break;
