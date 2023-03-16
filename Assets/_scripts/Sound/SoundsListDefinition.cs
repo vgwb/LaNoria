@@ -21,6 +21,7 @@ namespace vgwb.lanoria
         tile_rotate = 11,
         tile_released = 12,
         score_efx = 13,
+        win_hiscore = 14,
 
         music_1 = 20,
         music_2 = 21
