@@ -1377,7 +1377,7 @@ MonoBehaviour:
   MyRect: {fileID: 7686496211061482169}
   EfxType: 1
   Curve: 12
-  ScaleVal: 1.2
+  EfxVal: 1.2
   EfxDuration: 1
 --- !u!1 &6719790192846587269
 GameObject:

@@ -16,7 +16,7 @@ namespace vgwb.lanoria
         public RectTransform MyRect;
         public ImgEfxType EfxType;
         public Ease Curve = Ease.Linear;
-        public float ScaleVal = 1.5f;
+        public float EfxVal = 1.5f;
         public float EfxDuration = 1.0f;
 
         void Start()
@@ -42,13 +42,13 @@ namespace vgwb.lanoria
 
         private void Punch()
         {
-            Vector2 punch = Vector2.one * ScaleVal;
+            Vector2 punch = Vector2.one * EfxVal;
             MyRect.DOPunchAnchorPos(punch, EfxDuration).OnComplete(() => Punch());
         }
 
         private void Bounce(bool increment)
         {
-            Vector2 to = increment ? MyRect.sizeDelta * ScaleVal : MyRect.sizeDelta / ScaleVal;
+            Vector2 to = increment ? MyRect.sizeDelta * EfxVal : MyRect.sizeDelta / EfxVal;
             MyRect.DOSizeDelta(to, EfxDuration).SetEase(Curve).OnComplete(() => Bounce(!increment));
         }
     } 
