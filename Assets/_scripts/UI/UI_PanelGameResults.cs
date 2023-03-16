@@ -41,7 +41,6 @@ namespace vgwb.lanoria
         {
             if (Score != null) {
                 Score.text = score;
-                Debug.Log("arg: "+score+" txt: "+Score.text);
             }
         }
 

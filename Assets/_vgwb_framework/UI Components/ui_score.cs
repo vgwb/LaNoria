@@ -18,8 +18,6 @@ namespace vgwb.framework.ui
 
         void Start()
         {
-            ScoreText.text = "";
-
             PunchAnimation = DOTween.Sequence()
            .Insert(0, ScoreGO.transform.DOPunchScale(new Vector3(0.5f, 0.5f, 0.5f), 1, 3, 0f))
            .SetAutoKill(false).Pause();
