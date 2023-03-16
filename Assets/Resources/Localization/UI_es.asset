@@ -93,7 +93,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829382
-    m_Localized: Bonus de Sinergia
+    m_Localized: SINERGIAS
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829383
@@ -102,12 +102,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829384
-    m_Localized: Bonus de Transversalidad
+    m_Localized: TRANSVERSALIDAD
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829385
     m_Localized: "Cuando una comarca tiene hex\xE1gonos de todos los 4 colores, consigues
-      el Bonus de Transversalidad"
+      un Bonus de Transversalidad"
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618752

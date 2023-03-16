@@ -94,7 +94,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829382
-    m_Localized: Synergy Bonus
+    m_Localized: Synergies
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829383
@@ -102,7 +102,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829384
-    m_Localized: Transversality Bonus
+    m_Localized: Transversality
     m_Metadata:
       m_Items: []
   - m_Id: 19668705049829385
