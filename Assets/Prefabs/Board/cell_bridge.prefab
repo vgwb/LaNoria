@@ -115,7 +115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2461857585536425929
 Transform:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7089798189695048562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.45, z: 4.97}
+  m_LocalPosition: {x: 0, y: -1.45, z: 5}
   m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -241,15 +241,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49521b17738b841cba02ef3bc90e88e1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 2.4997685
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49521b17738b841cba02ef3bc90e88e1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 3.9107158
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49521b17738b841cba02ef3bc90e88e1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 2.4076715
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49521b17738b841cba02ef3bc90e88e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -291,13 +291,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 49521b17738b841cba02ef3bc90e88e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 242eb1577ea6f4901b73337271b7b0e6, type: 2}
     - target: {fileID: 919132149155446097, guid: 49521b17738b841cba02ef3bc90e88e1, type: 3}
       propertyPath: m_Name
       value: bridge
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 49521b17738b841cba02ef3bc90e88e1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49521b17738b841cba02ef3bc90e88e1, type: 3}
