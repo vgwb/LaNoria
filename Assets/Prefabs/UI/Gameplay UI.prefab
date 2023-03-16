@@ -887,15 +887,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 9999
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c7ca4c13ab087d846bc23db3fa7334e1, type: 2}
-  m_sharedMaterial: {fileID: -3788384837476101993, guid: c7ca4c13ab087d846bc23db3fa7334e1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39bdcfcf1ce2f471897968982a4f81cc, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 8b9396688915f4a4ea391e40e37c7e02, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -918,7 +918,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1357,6 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6472a17dd88e59b49980b3ca11835540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AlwaysDisplay: 0
   DisplayStep: 3
   TutorialImg: {fileID: 7372714338035197063}
 --- !u!1 &5619242593473234694
