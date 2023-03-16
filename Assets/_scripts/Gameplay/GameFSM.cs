@@ -168,6 +168,12 @@ namespace vgwb.lanoria
             SetState(GameplayState.ShowResult);
         }
 
+        public void ForceTutorialClose()
+        {
+            displayTutorial = false;
+            TutorialManager.I.Close();
+        }
+
         private void SetState(GameplayState newState)
         {
             if (state != newState) {

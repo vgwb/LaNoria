@@ -52,6 +52,7 @@ namespace vgwb.lanoria
         public void AutomaticPlayCard(int whichCard)
         {
             if (GameFSM.state == GameplayState.Play) {
+                GameFSM.ForceTutorialClose();
                 //                Debug.Log("Simulate Playing Card " + whichCard);
                 var card = GameFSM.GetCard(whichCard - 1); // get card
                                                            //                Debug.Log(card.Project);
