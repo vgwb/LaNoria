@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -92,11 +93,16 @@ namespace vgwb.lanoria
             UITutorial.HideAllExplanations();
             int panelIndex = GetTutorialPanel(tutorialKey);
             if (panelIndex >= 0) {
-                UITutorial.Explanations[panelIndex].SetActive(true);
+                var target = UITutorial.Explanations[panelIndex];
+                target.SetActive(true);
+                var targetRect = target.GetComponent<RectTransform>();
+                if (targetRect != null) {
+                    targetRect.DOAnchorPosX(0.0f, GameplayConfig.I.CardsEnterTime).SetEase(GameplayConfig.I.CardsEnterCurve);
+                }
             }
         }
 
-        public void CloseTutorialStep(TutorialStep tutorialKey, int turnValidity = 1, bool setComplete = true)
+        public void CloseTutorialStep(TutorialStep tutorialKey, int turnValidity = 1, bool setComplete = true, float pixelIn = 50.0f)
         {
             if (savedStep != tutorialKey || !IsTurnOk(turnValidity)) {
                 return;
@@ -104,7 +110,14 @@ namespace vgwb.lanoria
 
             int panelIndex = GetTutorialPanel(tutorialKey);
             if (panelIndex >= 0) {
-                UITutorial.Explanations[panelIndex].SetActive(false);
+                var target = UITutorial.Explanations[panelIndex];
+                target.SetActive(false);
+                var targetRect = target.GetComponent<RectTransform>();
+                if (targetRect != null) {
+                    float width = targetRect.sizeDelta.x;
+                    float destination = (width - pixelIn) + targetRect.anchoredPosition.x;
+                    targetRect.DOAnchorPosX(destination, GameplayConfig.I.CardsEnterTime).SetEase(GameplayConfig.I.CardsEnterCurve);
+                }
             }
 
             savedStep = TutorialStep.None;

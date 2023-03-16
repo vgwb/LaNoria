@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using vgwb.framework;
 using QuickOutline;
+using DG.Tweening;
 
 namespace vgwb.lanoria
 {
@@ -57,6 +58,10 @@ namespace vgwb.lanoria
         public float ResetCameraRotYOnPlay = 1.0f;
         public float FadeInGameCanvas = 1.0f;
         public float CardAppearsTime = 1.0f;
+
+        [Header("Tutorial")]
+        public float CardsEnterTime = 1.0f;
+        public Ease CardsEnterCurve = Ease.Linear;
 
         [Header("Tutorial highlight")]
         [Range(0.1f, 1.0f)]
