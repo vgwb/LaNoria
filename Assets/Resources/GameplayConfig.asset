@@ -43,8 +43,11 @@ MonoBehaviour:
   FadeInGameCanvas: 1
   CardAppearsTime: 0.3
   CardsEnterTime: 0.5
-  CardsEnterCurve: 9
+  CardsEnterCurve: 21
   BounceMinDim: 0.6
   BounceDuration: 0.6
+  CameraHomeSpeed: 1
+  CameraHomeWait: 3
+  CameraHomeCurve: 8
   MovementXClamp: 4
   MovementYClamp: 3

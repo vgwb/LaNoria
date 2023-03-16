@@ -68,6 +68,11 @@ namespace vgwb.lanoria
         public float BounceMinDim = 0.6f;
         public float BounceDuration = 0.6f;
 
+        [Header("Camera In Home")]
+        public float CameraHomeSpeed = 1.0f;
+        public float CameraHomeWait = 3.0f;
+        public Ease CameraHomeCurve = Ease.Linear;
+
         [Header("Camera In Game")]
         public float MovementXClamp = 4.0f;
         public float MovementYClamp = 3.0f;

@@ -62,9 +62,10 @@ namespace vgwb.lanoria
         public void StartGame()
         {
             displayTutorial = AppManager.I.AppSettings.TutorialEnabled;
-
+            Debug.Log("Start here!");
             UIGame = UI_manager.I.PanelGameplay;
             BoardManager.I.EmptyProjectsContainer();
+            CameraManager.I.StopMoveHome();
             if (AppManager.I.AppSettings.TutorialEnabled) {
                 SetState(GameplayState.Tutorial);
             } else {
@@ -468,7 +469,6 @@ namespace vgwb.lanoria
                     SetState(GameplayState.End);
                     break;
                 case GameplayState.End:
-                    Debug.Log("End Game!");
                     CameraManager.I.ResetCameraGameplay();
                     break;
                 case GameplayState.ForceEnd:

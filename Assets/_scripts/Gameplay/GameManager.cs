@@ -72,7 +72,6 @@ namespace vgwb.lanoria
 
         public void AutomaticEndGame()
         {
-            GameFSM.ForceEndGame();
             GameFSM.DebugEndGame();
         }
 

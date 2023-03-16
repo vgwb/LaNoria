@@ -41,6 +41,7 @@ namespace vgwb.lanoria
             UI_manager.I.Show(UI_manager.States.Home);
             BoardManager.I.ShowMap(true);
             SoundManager.I.PlayMusic(AudioEnum.music_2);
+            CameraManager.I.MoveInHome();
         }
 
         public void OnAbout()
