@@ -14,7 +14,7 @@ namespace vgwb.lanoria
         public AppSettings()
         {
             Load();
-            Debug.Log("SfxEnabled " + SfxEnabled);
+            // Debug.Log("SfxEnabled " + SfxEnabled);
         }
 
         public void SetMusic(bool status)
@@ -25,7 +25,7 @@ namespace vgwb.lanoria
 
         public void SetSfx(bool status)
         {
-            Debug.Log("SetSfx " + status);
+            // Debug.Log("SetSfx " + status);
             SfxEnabled = status;
             PlayerPrefs.SetInt("SfxEnabled", SfxEnabled ? 1 : 0);
         }
@@ -56,7 +56,7 @@ namespace vgwb.lanoria
 
         private void Load()
         {
-            Debug.Log("Load Appsertings");
+            // Debug.Log("Load Appsertings");
             MusicEnabled = PlayerPrefs.GetInt("MusicEnabled", 1) == 1;
             SfxEnabled = PlayerPrefs.GetInt("SfxEnabled", 1) == 1;
             AccessibilityEnabled = PlayerPrefs.GetInt("AccessibilityEnabled", 1) == 1;
