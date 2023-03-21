@@ -1,16 +1,45 @@
-[0]TITLE[0E]
-name surname
-name2 surname
+[0]Centro de Innovación Social La Noria[0E]
 
-name surname
-name2 surname
+[0]Diputación Provincial de Málaga[0E]
 
-[1]TITLE[1E]
-name surname
-name2 surname
-name surname
-name2 surname
+[0]Fundación La Caixa[0E]
+
+PRESENTAN UNA PRODUCCIÓN DE
+
+[0]Video Games Without Borders[0E]
+
+[0]Asociación Oleaje[0E]
 
 
-name surname
-name2 surname
+
+[1]EQUIPO DE DESARROLLO[1E]
+
+Francesco Cavallari (Producción y Diseño)
+
+José Manuel Salado (Diseño y Contenidos)
+
+Stefano Cecere (Responsable del Desarrollo)
+
+Clarissa Trianni (Dirección Artística)
+
+Giacomo Salvadori (Programación)
+
+
+
+[1]AGRADECIMIENTOS[1E]
+
+Un agradecimiento especial a todas las entidades que han colaborado con La Noria en estos años y especialmente a aquellas cuyo proyectos aparecen en el juego.
+
+
+
+[1]MÚSICA[1E]
+
+Weekend by LesFM | https://lesfm.net/acoustic-background-music/
+Music promoted by https://www.chosic.com/free-music/all/
+Creative Commons CC BY 3.0
+https://creativecommons.org/licenses/by/3.0/
+
+Happy Days by Steven O'Brien | https://www.steven-obrien.net/
+Music promoted by https://www.chosic.com/free-music/all/
+Creative Commons CC BY-ND 4.0
+https://creativecommons.org/licenses/by-nd/4.0/
