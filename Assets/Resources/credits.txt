@@ -1,13 +1,10 @@
-[0]Centro de Innovación Social La Noria[0E]
-
 [0]Diputación Provincial de Málaga[0E]
-
+[0]Centro de Innovación Social La Noria[0E]
 [0]Fundación La Caixa[0E]
 
 PRESENTAN UNA PRODUCCIÓN DE
 
 [0]Video Games Without Borders[0E]
-
 [0]Asociación Oleaje[0E]
 
 
@@ -28,8 +25,8 @@ Giacomo Salvadori (Programación)
 
 [1]AGRADECIMIENTOS[1E]
 
-Un agradecimiento especial a todas las entidades que han colaborado con La Noria en estos años y especialmente a aquellas cuyo proyectos aparecen en el juego.
-
+Un agradecimiento especial al equipo humano de La Noria y a todas las entidades y personas que han pasado por el centro durante estos años. 
+Muchas gracias.
 
 
 [1]MÚSICA[1E]
