@@ -28,79 +28,85 @@ Además con estas acciones se habilitó y acondicionó un espacio asociativo ‘
     Active: 1
     TileModel: 0
     Sequence: 010000000100000001000000
-    Title: "Programas de Acuapon\xEDa"
-    Year: 
-    Entity: 
-    Description: description of this project
+    Title: "Programas de Acuaponía"
+    Year: 2015-19
+    Entity: Aula del Mar
+    Description: Proyecto dedicado a promocionar la acuaponía como actividad innovadora y de emprendimiento socioeconómico, desde la producción ecológica y sostenible de alimentos (pescados y vegetales), promoviendo el asociacionismo y cooperativismo como modelos de emprendimiento, uniendo fuerzas y capacidades para poner en marcha iniciativas empresariales, sociales y medioambientales que supongan la creación de puestos de trabajo y el autoconsumo entre la juventud.
     Image: {fileID: 0}
   - Id: 3
     Active: 1
     TileModel: 0
     Sequence: 010000000100000001000000
     Title: Aula Vivero La Salvia
-    Year: 
-    Entity: 
-    Description: "El Aula Vivero la Salvia es un espacio natural ubicado dentro del
-      Centro de Innovaci\xF3n Social La Noria donde la asociaci\xF3n Ecohuerto el
-      Rabanito forma mediante cursos, talleres y jornadas en agroecolog\xEDa, huertos
-      urbanos y consumo responsable a colectivos diversos. El espacio cuenta con
-      una zona de huerta urbana, un jard\xEDn de plantas medicinales, un gran invernadero,
-      una zona de compostaje y otra de bioconstrucci\xF3n entre numerosas plantas
-      y bichos.\n\n"
+    Year: 2015-16
+    Entity: El Rabanito
+    Description: "Huerto ecológico y aula de educación agroecológica afianzando un papel dinamizador y centro de referencia para los proyectos e iniciativas relacionadas con la agricultura urbana.
+Mantenimiento y adecuación de las zonas de huerto, aromáticas e invernadero para realización de cursos, talleres y visitas.
+Celebración de las II Jornadas de Huertas Urbanas en Málaga. Curso de formación sobre huertas urbanas ecológicas. Talleres en torno a la huerta ecológica, agroecología, agricultura urbana e innovación.
+Sensibilización ambiental en torno a la huerta ecológica, agroecología, agricultura urbana e innovación."
     Image: {fileID: 21300000, guid: 76ce0f5601ff546a9a398edac5df27cd, type: 3}
   - Id: 4
     Active: 1
     TileModel: 0
     Sequence: 010000000100000001000000
-    Title: "Gesti\xF3n integral huerto urbano de La Noria"
-    Year: 
+    Title: Gestión integral huerto urbano de La Noria
+    Year: 2017
     Entity: 
-    Description: description of this project
+    Description: Resultado de sinergias entre la protección del medio ambiente y la actuación práctica del vermicompostaje. Se realizaron cinco líneas de trabajo en el huerto de La Noria: huerto productivo, experimental, bosque comestible, área de compostaje e invernadero.
     Image: {fileID: 0}
   - Id: 5
     Active: 1
     TileModel: 0
     Sequence: 010000000100000001000000
     Title: Crea Huertas
-    Year: 
-    Entity: 
-    Description: description of this project
+    Year: 2018-20
+    Entity: Crea Huertas
+    Description: "Diseño y mantenimiento del huerto de La Noria, divulgando el diseño, las cosechas y los desafíos del huerto, para inspirar una agricultura coherente con el entorno en la provincia.
+Organización del I Encuentro de Hortodiversidad de Málaga, espacio de encuentro con formato científico para todas las iniciativas agroecológicas de la provincia. Mapeo de espacios participativos de cultivo agroecológico.
+Sesiones formativas o Aulas de Agroecología. Realización de audiovisual 'Mujeres y Agroecología: una cultura de permanencia'."
     Image: {fileID: 0}
   - Id: 6
     Active: 1
     TileModel: 0
     Sequence: 0100000001000000
     Title: Agronautas
-    Year: 
-    Entity: 
-    Description: description of this project
+    Year: 2015-16
+    Entity: Asociación En Positivo
+    Description: "Agronautas tienen como objetivo generar en La Noria un espacio para la innovación que complemente las capacidades de sus instalaciones y ayude a la comunidad existente, tanto en el propio centro como en la provincia de Málaga.
+Entre las actividades destacan:
+- Localización de iniciativas emergentes en la provincia de Málaga para su interactuación con La Noria.
+- Creación de un espacio en el huerto de La Noria con sistemas constructivos y de ahorro de energía y recursos, para generar relaciones y prácticas novedosas en procesos y organismos naturales.
+- Foros de iniciativas locales centrado en la educación ambiental, agroecología y consumo responsable con especial incidencia en los cultivos y alimentos de la provincia de Málaga."
     Image: {fileID: 0}
   - Id: 7
     Active: 1
     TileModel: 0
     Sequence: 01000000010000000300000003000000
-    Title: "Cultura Pl\xE1stica"
-    Year: 
-    Entity: 
-    Description: description of this project
+    Title: Cultura Plástica
+    Year: 2016
+    Entity: Fundación Berrocal
+    Description: "Creación y diseño de productos a través de plástico reciclado, reutilización de plástico en la elaboración de nuevos productos a través del diseño y construcción de máquinas para procesar el plástico en centros de formación profesional.
+El proyecto contempla el diseño y fabricación de productos, talleres de comunicación, marketing y distribución de productos, red de formación de formadores. Exposición de productos y mercadillo en La Noria. Jornadas y talleres impartidos por el alumnado. Creación de recursos educativos para formadores y formadoras. Potenciar el espíritu emprendedor, promover valores de igualdad y creación de sinergias entre los distintos actores"
     Image: {fileID: 0}
   - Id: 8
     Active: 1
     TileModel: 0
     Sequence: 03000000040000000200000001000000
-    Title: "Escuela de Ecoinnovaci\xF3n Social"
+    Title: Escuela de Ecoinnovación Social
     Year: 
     Entity: 
-    Description: description of this project
+    Description: "Divulgar el ecoemprendimiento a través de capsulas formativas, encuentros, jornadas y seminarios sobre: nuevos modelos energéticos, emprender en social y tecnológico, emprendimiento colaborativo, agroecología y certificación participativa, cooperativa de comercio justo y productos ecológicos, formación en bioconstrucción, emprendimiento sostenible, agricultura urbana, alimentación consciente, educación en valores, etc.
+Mostrar a los y las jóvenes cuáles son las oportunidades del emprendimiento social y medioambiental, así como, la importancia de trabajar en iniciativas que permitan el cambio hacia sociedades más justas sin renunciar a la viabilidad económica. Celebración en La Noria de la 3º Feria por una Economía Verde Solidaria y del Bien Común."
     Image: {fileID: 0}
   - Id: 9
     Active: 1
     TileModel: 0
     Sequence: 01000000010000000100000003000000
-    Title: "Valorizaci\xF3n mediante Vermicompostaje"
+    Title: Valorización mediante Vermicompostaje
     Year: 
     Entity: 
-    Description: description of this project
+    Description: "Conversión de los productos orgánicos generados por La Noria en abono orgánico para ser utilizado en los jardines y el huerto de las propias instalaciones. La Noria será el primer lugar en Málaga que realice el procesamiento in-situ de los residuos orgánicos y de papel que genere para ser utilizados en el propio centro como abono.
+Además de la instalación del aparato y equipo para el vermicompostaje denominado Worm Wigwam, el proyecto contempla la realización de talleres formativos al personal de La Noria y de los proyectos asociados, así como la creación de un espacio demostrativo y su apertura al uso y visita por parte de los distintos colectivos."
     Image: {fileID: 0}
   - Id: 10
     Active: 1
@@ -109,7 +115,7 @@ Además con estas acciones se habilitó y acondicionó un espacio asociativo ‘
     Title: Bosques y Juventud
     Year: 
     Entity: 
-    Description: description of this project
+    Description: Programa de reforestación, lucha contra el cambio climático y fomento de una actitud emprendedora sostenible como yacimiento de empleo, en materia medioambiental y forestal dirigida a jóvenes de entornos rurales (centros de ESO y Bachillerato). Se realizaron talleres de cálculo de Huella de Carbono y compensación de emisiones de GEIs en centros docentes, talleres de Orientación Laboral en centros docentes, visitas de los centros docentes a empresas forestales, reforestaciones en los municipios de los centros docentes y una Jornada Exposición '30 años reforestando con AMMA Almijara' en La Noria con visitas a zonas reforestadas.
     Image: {fileID: 0}
   - Id: 11
     Active: 1
@@ -118,7 +124,7 @@ Además con estas acciones se habilitó y acondicionó un espacio asociativo ‘
     Title: Insect Community
     Year: 
     Entity: 
-    Description: description of this project
+    Description: Mostrar el abanico de oportunidades disponibles en el medio rural vinculado a la permanencia de las personas jóvenes en el territorio a través de la formación en agricultura ecológica y la importancia de la fauna auxiliar del medio natural, y talleres de construcción con la importancia del reciclado a la hora de construir insectarios. Dirigido a estudiantes de los 5 Institutos de la Comarca del Valle del Guadalhorce.
     Image: {fileID: 0}
   - Id: 12
     Active: 1
