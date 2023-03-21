@@ -18,6 +18,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000030000000100000004000000
     Title: BIJ
+    Year: 
+    Entity: 
     Description: 'The standard Lorem Ipsum passage, used since the 1500s
 
 
@@ -69,6 +71,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000001000000
     Title: "Programas de Acuapon\xEDa"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 3
@@ -76,6 +80,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000001000000
     Title: Aula Vivero La Salvia
+    Year: 
+    Entity: 
     Description: "El Aula Vivero la Salvia es un espacio natural ubicado dentro del
       Centro de Innovaci\xF3n Social La Noria donde la asociaci\xF3n Ecohuerto el
       Rabanito forma mediante cursos, talleres y jornadas en agroecolog\xEDa, huertos
@@ -89,6 +95,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000001000000
     Title: "Gesti\xF3n integral huerto urbano de La Noria"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 5
@@ -96,6 +104,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000001000000
     Title: Crea Huertas
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 6
@@ -103,6 +113,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0100000001000000
     Title: Agronautas
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 7
@@ -110,6 +122,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 01000000010000000300000003000000
     Title: "Cultura Pl\xE1stica"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 8
@@ -117,6 +131,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000040000000200000001000000
     Title: "Escuela de Ecoinnovaci\xF3n Social"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 9
@@ -124,6 +140,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 01000000010000000100000003000000
     Title: "Valorizaci\xF3n mediante Vermicompostaje"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 10
@@ -131,6 +149,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000004000000
     Title: Bosques y Juventud
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 11
@@ -138,6 +158,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0100000001000000
     Title: Insect Community
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 12
@@ -145,6 +167,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 01000000010000000400000002000000
     Title: Vives Emprende
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 13
@@ -152,6 +176,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000100000004000000
     Title: Cultivando Futuro
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 14
@@ -159,6 +185,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 01000000010000000400000004000000
     Title: Custodia del Territorio
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 15
@@ -166,6 +194,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000010000000100000004000000
     Title: Biodiversas
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 16
@@ -173,6 +203,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0100000004000000
     Title: La comida de la Abuela
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 17
@@ -180,6 +212,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000010000000400000004000000
     Title: "Inclusi\xF3n Rural Caprina"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 18
@@ -187,6 +221,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: 'Agua: proyecto de empleo'
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 19
@@ -194,6 +230,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 04000000040000000100000001000000
     Title: Sembrando Territorio
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 20
@@ -201,6 +239,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000004000000
     Title: "Escuela Rural de Agroecolog\xEDa"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 21
@@ -208,6 +248,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0100000001000000
     Title: Recilandos, plateados y verdes
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 22
@@ -215,6 +257,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000300000003000000
     Title: YouFAB
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 23
@@ -222,6 +266,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000002000000
     Title: Gamestar(t)
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 24
@@ -229,6 +275,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000300000003000000
     Title: "Rob\xF3tica en La Noria"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 25
@@ -236,6 +284,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000300000003000000
     Title: Arkidtech
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 26
@@ -243,6 +293,8 @@ MonoBehaviour:
     TileModel: 41
     Sequence: 03000000020000000100000004000000
     Title: Crafteando
+    Year: 
+    Entity: 
     Description: "Crafteando es un proyecto orientado al mapeo de nuestro entorno
       cercano, con el objetivo de desarrollar propuestas de mejora del espacio p\xFAblico.
       Este proyecto a\xFAna la intervenci\xF3n sobre el territorio y el contacto
@@ -261,6 +313,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000002000000
     Title: Semillas Online
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 28
@@ -268,6 +322,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000300000003000000
     Title: Pueblos Vivos
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 29
@@ -275,6 +331,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000020000000200000001000000
     Title: Proyecto 200
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 30
@@ -282,6 +340,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 040000000300000003000000
     Title: Algaidas Maker
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 31
@@ -289,6 +349,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000300000004000000
     Title: "Arte, Tecnolog\xEDa y Cer\xE1mica"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 32
@@ -296,6 +358,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000020000000300000003000000
     Title: Aula Abierta I+E
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 33
@@ -303,6 +367,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000040000000200000001000000
     Title: El Gran Juego del Valle del Guadalhorce
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 34
@@ -310,6 +376,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000300000003000000
     Title: "Taller de modelado e impresi\xF3n 3D"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 35
@@ -317,6 +385,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000002000000
     Title: "\xBFA qu\xE9 juegan mi hij@s?"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 36
@@ -324,6 +394,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000003000000
     Title: Apps y redes en el medio rural
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 37
@@ -331,6 +403,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000300000004000000
     Title: "Tour Fabm\xF3vil"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 38
@@ -338,6 +412,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000002000000
     Title: "Avanzamos y estamos en l\xEDnea"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 39
@@ -345,6 +421,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000003000000
     Title: "C\xF3mo navegar sin naufragar"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 40
@@ -352,6 +430,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000030000000300000001000000
     Title: Talent LAB
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 41
@@ -359,6 +439,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000100000002000000
     Title: Innoria Juventud
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 42
@@ -366,6 +448,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000004000000
     Title: Punto de Encuentro de Pesca Tradicional
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 43
@@ -373,6 +457,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: "Agentes de Innovaci\xF3n Social"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 44
@@ -380,6 +466,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 04000000010000000100000002000000
     Title: Cicloturismo accesible y seguridad vial
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 45
@@ -387,6 +475,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000040000000400000004000000
     Title: Monitores de ocio y tiempo libre
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 46
@@ -394,6 +484,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000400000001000000
     Title: "Agroturismo: j\xF3venes y mujer rural"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 47
@@ -401,6 +493,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0400000001000000
     Title: Mi entorno se recupera contigo
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 48
@@ -408,6 +502,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0300000004000000
     Title: Cerrando la brecha entre lo rural y lo urbano
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 49
@@ -415,6 +511,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000400000004000000
     Title: La corte 2.0
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 50
@@ -422,6 +520,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000040000000100000002000000
     Title: "Escape room educativo en Rancho Lim\xF3n"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 51
@@ -429,6 +529,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000200000004000000
     Title: Plan Fermenta
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 52
@@ -436,6 +538,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000400000002000000
     Title: 'Diversidad funcional y sector primario '
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 53
@@ -443,6 +547,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000020000000100000004000000
     Title: Sendas Inclusivas
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 54
@@ -450,6 +556,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: Diversidad y Helicultura
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 55
@@ -457,6 +565,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 040000000400000004000000
     Title: Sabor del pasado, sabor del futuro
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 56
@@ -464,6 +574,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 040000000400000004000000
     Title: Cicerones Rurales
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 57
@@ -471,6 +583,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000200000002000000
     Title: "Emprende en G\xE9nero"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 58
@@ -478,6 +592,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000004000000
     Title: FABLAB Algaidas
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 59
@@ -485,6 +601,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0300000002000000
     Title: Educar para avanzar
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 60
@@ -492,6 +610,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000002000000
     Title: "Talleres art\xEDsticos Picasso"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 61
@@ -499,6 +619,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000200000002000000
     Title: Puedo aprender, puedo trabajar
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 62
@@ -506,6 +628,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000002000000
     Title: Talleres de Segunda Oportunidad
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 63
@@ -513,6 +637,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: Pueblos de Colores
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 64
@@ -520,6 +646,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000002000000
     Title: Rejuvenecer
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 65
@@ -527,6 +655,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000200000004000000
     Title: La herramienta es el juego
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 66
@@ -534,6 +664,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0400000004000000
     Title: "Caminito a la Innovaci\xF3n"
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 67
@@ -541,6 +673,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 040000000400000004000000
     Title: Pueblo Acogedor
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 68
@@ -548,6 +682,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000400000004000000
     Title: La Semilla Rural
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 69
@@ -555,6 +691,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000400000001000000
     Title: Cambium
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
   - Id: 70
@@ -562,5 +700,7 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0400000001000000
     Title: Yo soy rural
+    Year: 
+    Entity: 
     Description: description of this project
     Image: {fileID: 0}
