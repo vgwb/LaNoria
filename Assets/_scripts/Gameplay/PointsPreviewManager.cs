@@ -52,7 +52,8 @@ namespace vgwb.lanoria
         private void DisplaySynergyPreview(Tile placeable)
         {
             cellsScore = ScoreManager.I.CalculateAdjacencyBonus(placeable);
-            if (ScoreManager.I.FindSinergy()) {
+            bool displayTutorial = AppManager.I.AppSettings.TutorialEnabled;
+            if (displayTutorial && ScoreManager.I.FindSinergy()) {
                 if (TutorialManager.I.IsExplanationCompleted(TutorialStep.PointsSynergy)) {
                     TutorialManager.I.CloseTutorialStep(TutorialStep.PointsArea, 0, false);
                 }
@@ -82,7 +83,8 @@ namespace vgwb.lanoria
         private void DisplayTransversalityPreview(Tile placeable)
         {
             highlightAreas = ScoreManager.I.CalculateAreaBonus(placeable);
-            if (highlightAreas.Count > 0) {
+            bool displayTutorial = AppManager.I.AppSettings.TutorialEnabled;
+            if (displayTutorial && highlightAreas.Count > 0) {
                 TutorialManager.I.CloseTutorialStep(TutorialStep.PointsSynergy, 0, false);
                 TutorialManager.I.ShowTutorialStep(TutorialStep.PointsArea, 0);
             }
