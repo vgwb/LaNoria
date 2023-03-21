@@ -18,12 +18,10 @@ namespace vgwb.lanoria
         {
             var sound = SoundsList.Sounds.Find(item => item.id == musicId);
             if (sound != null) {
-                var audioSource = getSource(sound);
-
-                audioSource.clip = sound.audioClip;
-                audioSource.volume = sound.Volume;
-                if (!AppManager.I.AppSettings.MusicEnabled) {
-                    audioSource.Play();
+                audioSourceMusic.clip = sound.audioClip;
+                audioSourceMusic.volume = sound.Volume;
+                if (AppManager.I.AppSettings.MusicEnabled) {
+                    audioSourceMusic.Play();
                 }
             }
         }
