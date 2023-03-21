@@ -33,9 +33,7 @@ MonoBehaviour:
   Place4Bonus: 36
   FadeInTimeScore: 0.2
   MovementYOffset: 80
-  MovementTime: 0.4
-  TextOutlineWidth: 0.35
-  TextOutlineColor: {r: 1, g: 1, b: 1, a: 1}
+  MovementTime: 1
   SlideProjectPanelTime: 0.4
   SlideProjectPanelPixelIn: 50
   UIProjectRotation: {x: -50, y: 0, z: 0}

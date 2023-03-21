@@ -9,17 +9,14 @@ namespace vgwb.lanoria
     public class PointsFX : MonoBehaviour
     {
         [Header("Placement Points")]
-        public TMP_Text PlacementTxt;
         public TMP_Text PlacementPointsTxt;
         public CanvasGroup PlacementCanvas;
 
         [Header("Adjacency Points")]
-        public TMP_Text AdjacencyTxt;
         public TMP_Text AdjacencyPointsTxt;
         public CanvasGroup AdjacencyCanvas;
 
         [Header("Area Points")]
-        public TMP_Text AreaTxt;
         public TMP_Text AreaPointsTxt;
         public CanvasGroup AreaPointsCanvas;
 
@@ -42,9 +39,6 @@ namespace vgwb.lanoria
         {
             canvas = new List<CanvasScore>();
             myRect = GetComponent<RectTransform>();
-            SetOutline(PlacementTxt);
-            SetOutline(AdjacencyTxt);
-            SetOutline(AreaTxt);
         }
 
         public void SetPlacementPoints(int points)
@@ -92,18 +86,11 @@ namespace vgwb.lanoria
         {
             if (points > 0) {
                 textArea.text = points.ToString();
-                SetOutline(textArea);
                 CanvasScore canvasScore = new CanvasScore(targetCanvas, points);
                 canvas.Add(canvasScore);
             } else {
                 textArea.transform.parent.gameObject.SetActive(false);
             }
-        }
-
-        private void SetOutline(TMP_Text targetTxt)
-        {
-            targetTxt.outlineWidth = GameplayConfig.I.TextOutlineWidth;
-            targetTxt.outlineColor = GameplayConfig.I.TextOutlineColor;
         }
 
         private void DestroyMe()
