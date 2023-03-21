@@ -19,7 +19,7 @@ MonoBehaviour:
     Sequence: 02000000030000000100000004000000
     Title: BIJ
     Year: 2014-17
-    Entity: Arrabal
+    Entity: Arrabal AID
     Description: "Reorientaci\xF3n de la actividad profesional de la juventud que
       se dedica a la construcci\xF3n con el fin de implementar otras formas de construcci\xF3n
       m\xE1s sostenibles. Se llev\xF3 a cabo a trav\xE9s de la recuperaci\xF3n de
@@ -67,7 +67,7 @@ MonoBehaviour:
     Sequence: 010000000100000001000000
     Title: "Gesti\xF3n integral huerto urbano de La Noria"
     Year: 2017
-    Entity: 
+    Entity: "Asociaci\xF3n TERO y Asociaci\xF3n Almijara"
     Description: "Resultado de sinergias entre la protecci\xF3n del medio ambiente
       y la actuaci\xF3n pr\xE1ctica del vermicompostaje. Se realizaron cinco l\xEDneas
       de trabajo en el huerto de La Noria: huerto productivo, experimental, bosque
@@ -130,8 +130,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000040000000200000001000000
     Title: "Escuela de Ecoinnovaci\xF3n Social"
-    Year: 
-    Entity: 
+    Year: 2016
+    Entity: "Asociaci\xF3n Redverso"
     Description: "Divulgar el ecoemprendimiento a trav\xE9s de capsulas formativas,
       encuentros, jornadas y seminarios sobre: nuevos modelos energ\xE9ticos, emprender
       en social y tecnol\xF3gico, emprendimiento colaborativo, agroecolog\xEDa y
@@ -149,8 +149,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 01000000010000000100000003000000
     Title: "Valorizaci\xF3n mediante Vermicompostaje"
-    Year: 
-    Entity: 
+    Year: 2016
+    Entity: "Asociaci\xF3n Tero"
     Description: "Conversi\xF3n de los productos org\xE1nicos generados por La Noria
       en abono org\xE1nico para ser utilizado en los jardines y el huerto de las
       propias instalaciones. La Noria ser\xE1 el primer lugar en M\xE1laga que realice
@@ -166,8 +166,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000004000000
     Title: Bosques y Juventud
-    Year: 
-    Entity: 
+    Year: 2017
+    Entity: "Asociaci\xF3n Almijara"
     Description: "Programa de reforestaci\xF3n, lucha contra el cambio clim\xE1tico
       y fomento de una actitud emprendedora sostenible como yacimiento de empleo,
       en materia medioambiental y forestal dirigida a j\xF3venes de entornos rurales
@@ -183,8 +183,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0100000001000000
     Title: Insect Community
-    Year: 
-    Entity: 
+    Year: 2017
+    Entity: GDR Valle del Guadalhorce
     Description: "Mostrar el abanico de oportunidades disponibles en el medio rural
       vinculado a la permanencia de las personas j\xF3venes en el territorio a trav\xE9s
       de la formaci\xF3n en agricultura ecol\xF3gica y la importancia de la fauna
@@ -197,8 +197,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 01000000010000000400000002000000
     Title: Vives Emprende
-    Year: 
-    Entity: 
+    Year: 2017
+    Entity: "Fundaci\xF3n Acci\xF3n Contra el Hambre"
     Description: "Proyecto orientado a facilitar la inserci\xF3n socio laboral a
       trav\xE9s de la formaci\xF3n te\xF3rico-pr\xE1ctica en el sector de la econom\xEDa
       verde. Destinado a personas que se encuentran en situaci\xF3n de vulnerabilidad.
@@ -213,8 +213,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000100000004000000
     Title: Cultivando Futuro
-    Year: 
-    Entity: 
+    Year: 2018
+    Entity: "Asociaci\xF3n EcoHerencia"
     Description: "Las PlaM, Plantas Multifuncionales, son plantas comestibles de
       muy f\xE1cil cultivo que sirven de apoyo en el huerto, son medicinales y suponen
       una estrategia de lucha contra el Cambio Clim\xE1tico. El proyecto cuenta con
@@ -231,8 +231,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 01000000010000000400000004000000
     Title: Custodia del Territorio
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: "Asociaci\xF3n Almijara"
     Description: "El proyecto de AMMA Almijara da a conocer la Custodia del Territorio
       (CdT) en los ayuntamientos locales a trav\xE9s de talleres y acciones formativas
       online. La CdT es un instrumento que permite acuerdos entre asociaciones y
@@ -243,8 +243,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000010000000100000004000000
     Title: Biodiversas
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Asociaci\xF3n Ecoherencia"
     Description: "Biodiversas ofrecer\xE1 a trav\xE9s de la formaci\xF3n una oportunidad
       de inclusi\xF3n social y empleabilidad a personas con diversidad funcional
       y mujeres en riesgo de exclusi\xF3n a trav\xE9s de la innovaci\xF3n con plantas
@@ -255,8 +255,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0100000004000000
     Title: La comida de la Abuela
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: "Asociaci\xF3n Marbella Activa"
     Description: "Proyecto cuyo objetivo principal es divulgar entre la poblaci\xF3n
       los beneficios de la denominada 'Dieta 3S', dieta saludable, sostenible y sensorial
       al mismo tiempo, involucrando a abuelas y nietos para potenciar las relaciones
@@ -270,8 +270,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000010000000400000004000000
     Title: "Inclusi\xF3n Rural Caprina"
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: "Asociaci\xF3n Arrabal"
     Description: "El objetivo principal ha sido promover la inclusi\xF3n social evitando
       cualquier forma de discriminaci\xF3n en el acceso al autoempleo a trav\xE9s
       de acciones orientadas a la mejora del emprendimiento social de las personas
@@ -291,17 +291,20 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: 'Agua: proyecto de empleo'
-    Year: 
-    Entity: 
-    Description: 
+    Year: 2020
+    Entity: "Asociaci\xF3n Decolores"
+    Description: "Proyecto que tiene como objetivo facilitar la inserci\xF3n social
+      y laboral de personas con diversidad funcional.  Entre sus iniciativas: pr\xE1cticas
+      profesionales para los alumnos, apoyo terap\xE9utico y podcast que visibiliza
+      el colectivo con diversidad funcional."
     Image: {fileID: 21300000, guid: 57773f3f657537d4e9ed5f5195127343, type: 3}
   - Id: 19
     Active: 1
     TileModel: 0
     Sequence: 04000000040000000100000001000000
     Title: Sembrando Territorio
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: "Asociaci\xF3n Ecoherencia"
     Description: "Sembrando territorio pone en valor las iniciativas agroecol\xF3gicas
       (de producci\xF3n, transformaci\xF3n, restauraci\xF3n o formaci\xF3n) de la
       provincia de M\xE1laga analizando su capacidad de resiliencia ante la emergencia
@@ -326,8 +329,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000004000000
     Title: "Escuela Rural de Agroecolog\xEDa"
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: "Asociaci\xF3n Extiercol"
     Description: "La Noria y la asociaci\xF3n Extiercol ponen en marcha el proyecto
       de la primera Escuela Rural de Agroecolog\xEDa de M\xE1laga. La iniciativa
       se enmarca en el convenio de colaboraci\xF3n entre la Diputaci\xF3n de M\xE1laga
@@ -353,8 +356,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0100000001000000
     Title: Reciclados, Plateados y Verdes
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: Circula
     Description: "El proyecto \u2018Reciclados, Plateados y Verdes\u2019 ha impulsado
       la construcci\xF3n de dos huertos urbanos y ha instalado 17 mesas de cultivo
       para el autoconsumo en las que han participado 20 familias. La cooperativa
@@ -377,8 +380,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000300000003000000
     Title: YouFAB
-    Year: 
-    Entity: 
+    Year: 2014-16
+    Entity: Arquitectura Avanzada
     Description: "El proyecto YouFAB pretende informar y formar a los j\xF3venes
       artesanos de la provincia de M\xE1laga sobre el uso de la tecnolog\xEDa digital
       en el dise\xF1o y fabricaci\xF3n en 3D de sus creaciones a fin de potenciar
@@ -406,8 +409,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000002000000
     Title: Gamestar(t)
-    Year: 
-    Entity: 
+    Year: 2015-17
+    Entity: Arsgames
     Description: "GAMESTAR(T) es un proyecto integrado por profesionales, artistas,
       investigadores, estudiantes\u2026 que trabajan en torno a la investigaci\xF3n
       del videojuego en sus facetas educativas, culturales, econ\xF3micas, art\xEDsticas,
@@ -420,8 +423,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000300000003000000
     Title: "Rob\xF3tica en La Noria"
-    Year: 
-    Entity: 
+    Year: 2016-17
+    Entity: AAGIT
     Description: "Proyecto realizado por AAGIT que intenta favorecer el inter\xE9s
       y participaci\xF3n activa de la infancia y juventud por las nuevas tecnolog\xEDas
       disminuyendo la brecha en la provincia a trav\xE9s de talleres did\xE1cticos
@@ -438,8 +441,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000300000003000000
     Title: Arkidtech
-    Year: 
-    Entity: 
+    Year: 2017-18
+    Entity: Arkidtech
     Description: "Fomento de la arquitectura como herramienta para el desarrollo
       del conocimiento espacial y matem\xE1tico para los ni\xF1os y ni\xF1as de entre
       4 y 12 a\xF1os, como acercamiento al trabajo de profesiones cient\xEDficas
@@ -451,8 +454,8 @@ MonoBehaviour:
     TileModel: 41
     Sequence: 03000000020000000100000004000000
     Title: Crafteando
-    Year: 
-    Entity: 
+    Year: 2017-18
+    Entity: "Asociaci\xF3n Oleaje, Arsgames, Dyar y Arrabal AID"
     Description: "Crafteando es un proyecto orientado al mapeo de nuestro entorno
       cercano, nuestros barrios, pueblos y ciudades, con el objetivo de desarrollar
       propuestas de mejora del espacio p\xFAblico. Este proyecto auna la intervenci\xF3n
@@ -471,8 +474,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000002000000
     Title: Semillas Online
-    Year: 
-    Entity: 
+    Year: 2018
+    Entity: "Fundaci\xF3n Marcelino Champagnat y Asociaci\xF3n Naim"
     Description: "Programa de formaci\xF3n en el que se a\xFAnan, nuevas tecnolog\xEDas
       a trav\xE9s del aprendizaje para la creaci\xF3n de una tienda virtual. Con
       una nueva visi\xF3n de c\xF3mo hacerlo y mejorar nuestro entorno siguiendo
@@ -488,8 +491,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000300000003000000
     Title: Pueblos Vivos
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: "Asociaci\xF3n Naim"
     Description: "La asociaci\xF3n NAIM trabajar\xE1 la formaci\xF3n en competencias
       digitales para la empleabilidad y b\xFAsqueda del empleo a trav\xE9s de la
       red, as\xED como formaciones online espec\xEDficas de herramientas digitales
@@ -501,8 +504,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000020000000200000001000000
     Title: Proyecto 200
-    Year: 
-    Entity: 
+    Year: 2018
+    Entity: ASIT
     Description: "El proyecto consiste en la puesta a disposici\xF3n de 200 equipos
       inform\xE1ticos reutilizados para su uso por parte de familias sin recursos
       y asociaciones sin \xE1nimo de lucro del medio rural. Esta acci\xF3n ir\xE1
@@ -517,8 +520,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 040000000300000003000000
     Title: Algaidas Maker
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: "Asociaci\xF3n Atrompikones y Fundaci\xF3n Esplai"
     Description: "Algaidas Maker es un espacio de emprendimiento social digital para
       potenciar competencias creativas a trav\xE9s de la tecnolog\xEDa y aunar proyectos
       de innovaci\xF3n social. Pretende disminuir la brecha digital y acercar a las
@@ -529,8 +532,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000300000004000000
     Title: "Arte, Tecnolog\xEDa y Cer\xE1mica"
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Fundaci\xF3n Museo Picasso M\xE1laga"
     Description: "La Fundaci\xF3n realizar\xE1 sesiones de producci\xF3n art\xEDstica
       dirigida a poblaci\xF3n joven de municipios peque\xF1os para potenciar la participaci\xF3n,
       la creatividad y la inteligencia colectiva."
@@ -540,8 +543,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000020000000300000003000000
     Title: Aula Abierta I+E
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Asociaci\xF3n C\xEDvica para la prevenci\xF3n"
     Description: "Aula Abierta Innovaci\xF3n + Educaci\xF3n formar\xE1 y asesorar\xE1
       a j\xF3venes que han abandonado el sistema educativo sin obtener el t\xEDtulo
       de Educaci\xF3n Secundaria, o que quieren realizar la prueba de acceso a los
@@ -553,8 +556,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000040000000200000001000000
     Title: El Gran Juego del Valle del Guadalhorce
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Asociaci\xF3n L\xEDbero"
     Description: "La Asociaci\xF3n L\xEDbero desarrolla la participaci\xF3n social
       de los j\xF3venes a trav\xE9s de la interacci\xF3n con el entorno en un juego
       mediante el que adquirir\xE1n conocimientos de cambio clim\xE1tico, g\xE9nero,
@@ -565,8 +568,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000300000003000000
     Title: "Taller de modelado e impresi\xF3n 3D"
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: AFENES
     Description: "AFENES trabajar\xE1 en alcanzar la inclusi\xF3n social de las personas
       con problemas de salud mental a trav\xE9s de la formaci\xF3n y uso de nuevas
       tecnolog\xEDas como el modelado e impresi\xF3n 3D."
@@ -576,8 +579,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000002000000
     Title: "\xBFA qu\xE9 juegan mi hij@s?"
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Asociaci\xF3n Olejae"
     Description: "El proyecto pone en marcha una Escuela de Videojuegos para Madres
       y Padres a trav\xE9s de la cual trabaja la prevenci\xF3n y sensibilizaci\xF3n
       sobre los retos que plantea el ocio electr\xF3nico para menores con talleres
@@ -588,8 +591,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000003000000
     Title: Apps y redes en el medio rural
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: UAGA-COAG
     Description: "El proyecto afronta el reto del despoblamiento y da una soluci\xF3n
       a la brecha digital en el sector agr\xEDcola y ganadero de la provincia. Con
       este objetivo, se ha puesto en marcha un programa formativo sobre aplicaciones
@@ -610,8 +613,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000300000004000000
     Title: "Tour Fabm\xF3vil"
-    Year: 
-    Entity: 
+    Year: 2014
+    Entity: Ehcofab
     Description: "El \u2018Tour FabM\xF3vil\u2019 se traslada a diez municipios de
       la provincia para mostrar a los m\xE1s j\xF3venes el uso de las nuevas tecnolog\xEDas
       en cuanto al dise\xF1o e impresi\xF3n en 3D que permite fabricar a bajo coste
@@ -634,8 +637,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000002000000
     Title: "Avanzamos y estamos en l\xEDnea"
-    Year: 
-    Entity: 
+    Year: 2015
+    Entity: "Fundaci\xF3n Alia2"
     Description: "Ofrecer\xE1n una l\xEDnea abierta de ayuda a la comunidad educativa,
       al tejido asociativo y las familias, con orientaci\xF3n y asesoramiento jur\xEDdico
       y psicol\xF3gico sobre seguridad del menor en la red. Esto se concretar\xE1
@@ -653,8 +656,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000003000000
     Title: "C\xF3mo navegar sin naufragar"
-    Year: 
-    Entity: 
+    Year: 2016
+    Entity: "Fundaci\xF3n Harena"
     Description: "Ayuda y disminuci\xF3n de malas pr\xE1cticas en los usos de internet
       y las tecnolog\xEDas de informaci\xF3n y comunicaci\xF3n en general. Educaci\xF3n
       a menores para el uso responsable de las TIC y el manejo y seguridad en Internet.
@@ -667,8 +670,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000030000000300000001000000
     Title: Talent LAB
-    Year: 
-    Entity: 
+    Year: 2016
+    Entity: Talent Lab
     Description: "Fomento y desarrollo del talento y la creatividad para infancia
       con altas capacidades en el \xE1rea de NNTT. Creaci\xF3n de un laboratorio
       de innovaci\xF3n y talento para infancia y j\xF3venes con AACC, donde se forme,
@@ -687,8 +690,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000100000002000000
     Title: Innoria Juventud
-    Year: 
-    Entity: 
+    Year: 2014
+    Entity: La Noria
     Description: "Visibilizaci\xF3n de las nuevas oportunidades sociolaborales para
       la juventud a trav\xE9s de las herramientas tecnol\xF3gicas en c\xF3digo abierto.
       Esta actuaci\xF3n se dirige a j\xF3venes y emprendedores e innovadores sociales.
@@ -708,8 +711,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000100000004000000
     Title: Punto de Encuentro de Pesca Tradicional
-    Year: 
-    Entity: 
+    Year: 2015
+    Entity: Aula del Mar
     Description: "Punto dedicado a la sensibilizaci\xF3n medioambiental y al emprendimiento
       juvenil en torno al mar. Versa tambi\xE9n sobre recuperar las tradicionales
       salazones deshidratadas y conservas, desde un punto de vista innovador. Un
@@ -721,8 +724,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: "Agentes de Innovaci\xF3n Social"
-    Year: 
-    Entity: 
+    Year: 2017
+    Entity: ATSET
     Description: "Apuesta pionera por el valor del profesional de lo social como
       facilitador de su entorno y su empoderamiento a trav\xE9s del emprendimiento.
       Contempla la realizaci\xF3n de sesiones informativas, curso formativo y mentorizaci\xF3n
@@ -735,8 +738,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 04000000010000000100000002000000
     Title: Cicloturismo accesible y seguridad vial
-    Year: 
-    Entity: 
+    Year: 2017
+    Entity: "Fundaci\xF3n Torcal"
     Description: "Proyecto destinado a impulsar el fomento de la empleabilidad a
       trav\xE9s de actividades relacionadas con el transporte sostenible. Sensibilizar
       y educar en seguridad vial a j\xF3venes mediante talleres. Incorporar las posibilidades
@@ -748,8 +751,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000040000000400000004000000
     Title: Monitores de ocio y tiempo libre
-    Year: 
-    Entity: 
+    Year: 2017
+    Entity: "Asociaci\xF3n Conocimiento a Innovaci\xF3n"
     Description: "Formaci\xF3n de 15 profesionales para que promuevan y asesoren
       proyectos de Innovaci\xF3n Social en los peque\xF1os territorios de la provincia
       a trav\xE9s de un proceso de formaci\xF3n con pr\xE1cticas en entidades sociales."
@@ -759,8 +762,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000400000001000000
     Title: "Agroturismo: j\xF3venes y mujer rural"
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: ASAJA
     Description: "El proyecto busca la generaci\xF3n de rentas complementarias a
       trav\xE9s del agroturismo, ayudando a promocionar la actividad de agricultores
       y ganaderos del sector. Se realizar\xE1 un ciclo de jornadas online para dar
@@ -772,8 +775,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0400000001000000
     Title: Mi entorno se recupera contigo
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: Cruz Roja
     Description: "Proyecto de prospecci\xF3n socio-laboral dirigido a poblaciones
       en riesgo de despoblamiento y a personas del \xE1mbito urbano que desean vivir
       en estos pueblos. Facilitar\xE1 los medios necesarios para atraer a estos peque\xF1os
@@ -784,8 +787,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0300000004000000
     Title: Cerrando la brecha entre lo rural y lo urbano
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: "Asociaci\xF3n Rooral"
     Description: "La Asociaci\xF3n busca experiencias de teletrabajo en zonas rurales
       en riesgo de despoblamiento de M\xE1laga, bajo el concepto de acortar la brecha
       digital entre lo rural y lo urbano y creando una conexi\xF3n de los visitantes
@@ -802,8 +805,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000030000000400000004000000
     Title: La corte 2.0
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: "Asociaci\xF3n Amigos de Europa"
     Description: "El proyecto nace con la idea de recuperar el hoy abandonado, camping
       municipal \u2018Las Camaretas\u2019 en Cortes de la Frontera para ofrecer un
       espacio de innovaci\xF3n social y educaci\xF3n que beneficie a sus habitantes
@@ -822,8 +825,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 03000000040000000100000002000000
     Title: "Escape room educativo en Rancho Lim\xF3n"
-    Year: 
-    Entity: 
+    Year: 2018
+    Entity: "Asociaci\xF3n L\xEDbero"
     Description: "Montaje de un \u2018Escape Room\u2019 educativo como herramienta
       para trabajar valores sociales y medioambientales de manera l\xFAdica. Estar\xE1
       ubicado en Rancho Lim\xF3n situado en C\xE1rtama, pretende ser un espacio de
@@ -841,8 +844,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000200000004000000
     Title: Plan Fermenta
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Asociaci\xF3n Quesos de M\xE1laga y Asociaci\xF3n DECOLORES"
     Description: "Plan Fermenta fomentar\xE1 la inserci\xF3n laboral de personas
       con diversidad funcional en centros de producci\xF3n y elaboraci\xF3n artesanal
       de quesos del entorno rural de la provincia."
@@ -852,8 +855,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000400000002000000
     Title: Diversidad funcional y sector primario
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: Fundatul
     Description: "Proyecto que trabaja en la cualificaci\xF3n e inserci\xF3n sociolaboral
       de personas con diversidad funcional en el sector primario. Colabora la Asociaci\xF3n
       de Criadores de Cabra Malague\xF1a (CABRAMA). La formaci\xF3n se realizar\xE1
@@ -866,8 +869,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 02000000020000000100000004000000
     Title: Sendas Inclusivas
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: Asprodisis
     Description: "Proyecto que busca visibilizar la situacio\u0301n de las personas
       con discapacidad intelectual en el medio rural de la Serran\xEDa de Ronda.
       Se realizar\xE1 apoyo integral online para la formaci\xF3n e inserci\xF3n sociolaboral
@@ -878,8 +881,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: Diversidad y Helicultura
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: Fundatul
     Description: "Fundatul ha presentado un emprendimiento social innovador en formato
       Incubadora que pretende ser comercializable, basado en la helicicultura (Cultivo
       de caracoles) para las personas con diversidad funcional que viven en los municipios
@@ -900,8 +903,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 040000000400000004000000
     Title: Sabor del pasado, sabor del futuro
-    Year: 
-    Entity: 
+    Year: 2015-16
+    Entity: "Asociaci\xF3n Km0"
     Description: "Curso especializado en cocina tradicional malague\xF1a, dirigido
       a estudiantes de cocina, profesionales de la hosteler\xEDa y emprendedores
       que pretendan desarrollar actividades de producci\xF3n o transformaci\xF3n
@@ -915,8 +918,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 040000000400000004000000
     Title: Cicerones Rurales
-    Year: 
-    Entity: 
+    Year: 2017
+    Entity: "Asociaci\xF3n Km0"
     Description: "Programa formativo destinado a fomentar nuevas v\xEDas de financiaci\xF3n
       de asociaciones del \xE1mbito rural y la creaci\xF3n de empresas sociales a
       trav\xE9s del turismo gastron\xF3mico. Cicerones Rurales, a trav\xE9s de su
@@ -929,8 +932,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000200000002000000
     Title: "Emprende en G\xE9nero"
-    Year: 
-    Entity: 
+    Year: 2016
+    Entity: Instituto para el Desarrollo de la Mujer AMIA
     Description: "Creaci\xF3n de una lanzadera de proyectos de emprendimiento joven.
       Sensibilizaci\xF3n y formaci\xF3n en g\xE9nero con emprendedores y emprendedoras
       j\xF3venes de la provincia de M\xE1laga a trav\xE9s de la Red territorial de
@@ -948,8 +951,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 030000000300000004000000
     Title: FABLAB Algaidas
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Asociaci\xF3n Atrompikones y Fundaci\xF3n Esplai"
     Description: "El proyecto desarrolla en Villanueva de Algaidas un espacio de
       emprendimiento social digital para estimular, potenciar y desarrollar competencias
       creativas, sociales y laborales a trav\xE9s de la tecnolog\xEDa."
@@ -959,8 +962,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0300000002000000
     Title: Educar para avanzar
-    Year: 
-    Entity: 
+    Year: 2014
+    Entity: "Fundaci\xF3n Alia2"
     Description: "Este proyecto sit\xFAa a la tecnolog\xEDa como uno de los pilares
       b\xE1sicos para la educaci\xF3n de los menores. Gracias al desarrollo de una
       plataforma tecnol\xF3gica formar\xE1 y concienciar\xE1 a ni\xF1os, AMPAS y
@@ -978,8 +981,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000002000000
     Title: "Talleres art\xEDsticos Picasso"
-    Year: 
-    Entity: 
+    Year: 2014-16
+    Entity: "Fundaci\xF3n Museo Picasso M\xE1laga"
     Description: "Talleres art\xEDsticos dirigidos a escolares de la provincia de
       M\xE1laga para despertar la conciencia creativa. Una vez vistas las salas,
       se emula el proceso del artista que busca y mira en otros artistas inspiraci\xF3n,
@@ -993,8 +996,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000200000002000000
     Title: Puedo aprender, puedo trabajar
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: "Asociaci\xF3n de padres de ni\xF1os y adultos autistas"
     Description: "Este proyecto consiste en talleres que den soluciones reales y
       novedosas a j\xF3venes de entre 16 y 25 a\xF1os con TEA, de nivel 1, con la
       finalidad de proporcionar orientaci\xF3n vocacional, formaci\xF3n y facilitarles
@@ -1013,8 +1016,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000002000000
     Title: Talleres de Segunda Oportunidad
-    Year: 
-    Entity: 
+    Year: 2014
+    Entity: APETMA
     Description: "Tiene por objetivo motivar y orientar a j\xF3venes entre 14 y 25
       a\xF1os residentes en la Axarqu\xEDa, que han abandonado su formaci\xF3n y
       crearles una ilusi\xF3n para buscar empleo. En los talleres aprenden nociones
@@ -1029,8 +1032,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: Pueblos de Colores
-    Year: 
-    Entity: 
+    Year: 2018
+    Entity: "Asociaci\xF3n IMAGINA"
     Description: "Proyecto de j\xF3venes emprendedoras sociales que est\xE1n creando
       espacios de aprendizaje inclusivo en zonas rurales. Trabajan para atender las
       necesidades de ni\xF1as/os y j\xF3venes con diversidad funcional, a trav\xE9s
@@ -1044,8 +1047,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000002000000
     Title: Rejuvenecer
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Asociaci\xF3n Cultural Tierras L\xFAdicas"
     Description: "El proyecto \u2018Rejuvenecer\u2019 mejora la calidad de vida de
       personas mayores a trav\xE9s de su participaci\xF3n en juegos de mesa, mientras
       que se forma a j\xF3venes y genera empleo para los mismos."
@@ -1055,8 +1058,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000200000004000000
     Title: La herramienta es el juego
-    Year: 
-    Entity: 
+    Year: 2018
+    Entity: "Asociaci\xF3n Cultural Tierras L\xFAdicas"
     Description: "Proyecto de apoyo al emprendimiento social en \xE1mbitos profesionales
       de trabajo educativo con infancia, juventud y mayores. Todo aprendizaje se
       puede lograr de manera l\xFAdica y experiencial a trav\xE9s del juego como
@@ -1073,8 +1076,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0400000004000000
     Title: "Caminito a la Innovaci\xF3n"
-    Year: 
-    Entity: 
+    Year: 2016
+    Entity: "Asociaci\xF3n de Profesionales de Escuelas Taller"
     Description: "Formaci\xF3n en profesiones de la oferta existente al entorno del
       Caminito del Rey, destinada a j\xF3venes en riesgo de exclusi\xF3n social en
       situaci\xF3n de desempleo. Adecuar el grado de profesionalidad alrededor del
@@ -1088,8 +1091,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 040000000400000004000000
     Title: Pueblo Acogedor
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: Aula del Mar
     Description: "El proyecto Pueblo acogedor tiene la finalidad de crear v\xEDnculos
       entre la poblaci\xF3n rural de diferentes municipios de interior con personas
       y grupos costeros urbanos de la provincia de M\xE1laga. La entidad realizar\xE1
@@ -1102,8 +1105,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 010000000400000004000000
     Title: La Semilla Rural
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: "Asociaci\xF3n Extiercol"
     Description: "El proyecto fomenta el emprendimiento en el sector agroganadero
       dirigido a j\xF3venes de las comarcas de Guadalteba y Serran\xEDa de Ronda.
       Para ello rescatar\xE1n y dar\xE1n a conocer las t\xE9cnicas tradicionales
@@ -1115,8 +1118,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 020000000400000001000000
     Title: Cambium
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: "Fundaci\xF3n Acci\xF3n Contra El Hambre"
     Description: "El proyecto tiene el objetivo de promover el cambio en entidades
       sociales, personas emprendedoras y empresas de la provincia hacia una econom\xEDa
       con impacto social a trav\xE9s del fortalecimiento en sostenibilidad econ\xF3mica
@@ -1136,8 +1139,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0400000001000000
     Title: Yo soy rural
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: "Federaci\xF3n de asociaciones de Mujeres Sierra de las Nieves"
     Description: "El fin del proyecto es fomentar el emprendimiento en el entorno
       rural y evitar el despoblamiento de la comarca de la Sierra de las Nieves a
       partir del desarrollo sostenible, la innovaci\xF3n social y la transversalidad
@@ -1152,8 +1155,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0100000004000000
     Title: Entre Costuras
-    Year: 
-    Entity: 
+    Year: 2020
+    Entity: "Fundaci\xF3n Marcelino Champagnat"
     Description: "Proyecto que investiga cu\xE1les son las necesidades de la industria
       textil en la Provincia de M\xE1laga para poder favorecer la reactivaci\xF3n
       del sector, tras identificar puntos solidarios de fabricaci\xF3n de material
@@ -1163,9 +1166,9 @@ MonoBehaviour:
     Active: 1
     TileModel: 0
     Sequence: 0200000002000000
-    Title: Alacena Bienestar
-    Year: 
-    Entity: 
+    Title: La Alacena del Bienestar
+    Year: 2021-22
+    Entity: ASPRODISIS
     Description: "El proyecto busca la inclusi\xF3n social y laboral de personas
       con discapacidad intelectual a trav\xE9s de la impartici\xF3n de talleres,
       por ellos mismos, de elaboraci\xF3n de cosm\xE9tica natural.  A trav\xE9s de
@@ -1182,8 +1185,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0200000004000000
     Title: "Igualdad, Cualificaci\xF3n y Diversidad"
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: Fundatul
     Description: "Fundatul lleva a cabo un programa para mejorar la empleabilidad
       e inclusi\xF3n en el mercado laboral de personas con diversidad funcional en
       la Sierra de las Nieves y con incidencia en las mujeres."
@@ -1193,8 +1196,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0400000002000000
     Title: Peridotitas 4.0
-    Year: 
-    Entity: 
+    Year: 2021-22
+    Entity: "Federaci\xF3n de Asociaciones de Mujeres Sierra de las Nieves"
     Description: "La Federaci\xF3n de Asociaciones de Mujeres Sierra de las Nieves
       trabaja el conocimiento de los valores medioambientales que tienen en la comarca
       de Sierra de las Nieves desde una perspectiva de g\xE9nero. Ha buscado capacitar,
@@ -1215,8 +1218,8 @@ MonoBehaviour:
     TileModel: 0
     Sequence: 0400000002000000
     Title: Poetry For Good
-    Year: 
-    Entity: 
+    Year: 2019
+    Entity: "Asociaci\xF3n Espa\xF1ola de Innovaci\xF3n Social AEIS"
     Description: "El proyecto lleva a cabo procesos de empoderamiento a trav\xE9s
       de la poes\xEDa para promover la participaci\xF3n comunitaria de los j\xF3venes
       y restablecer v\xEDnculos con su entorno local, previniendo el despoblamiento
