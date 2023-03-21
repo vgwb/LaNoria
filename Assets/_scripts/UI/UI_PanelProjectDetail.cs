@@ -10,6 +10,8 @@ namespace vgwb.lanoria
     {
         public TextMeshProUGUI Title;
         public TextMeshProUGUI Description;
+        public TextMeshProUGUI Year;
+        public TextMeshProUGUI Entity;
         public Image ProjectImage;
         public Button BtnClose;
         public Button BtnNext;
@@ -27,6 +29,8 @@ namespace vgwb.lanoria
         public void ShowProject(ProjectData projectData)
         {
             Title.text = projectData.Title;
+            Year.text = projectData.Year;
+            Entity.text = projectData.Entity;
             Description.text = projectData.Description;
             Info.text = "";
             if (projectData.Image != null) {
