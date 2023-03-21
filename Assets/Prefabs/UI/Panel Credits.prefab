@@ -995,7 +995,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 35
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1096,7 +1096,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7205e80c69d7482997cfabb00e98e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CreditsText: {fileID: 4900000, guid: 643c124c6a34b41aca69e674df6ce0db, type: 3}
   BtnClose: {fileID: 5677931558920507307}
+  TfCredits: {fileID: 5677931557967451244}
+  Level0Color: {r: 0, g: 0.3803922, b: 0.98823535, a: 1}
+  Level0FontPerc: 140
+  Level1Color: {r: 0.9716981, g: 0.7726055, b: 0, a: 1}
+  Level1FontPerc: 110
 --- !u!222 &5677931558044119684
 CanvasRenderer:
   m_ObjectHideFlags: 0

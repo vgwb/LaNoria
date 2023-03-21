@@ -17,5 +17,12 @@ namespace vgwb.framework
             s = f;
             return Color.HSVToRGB(h, s, v);
         }
+
+        // Taken from here: http://wiki.unity3d.com/index.php?title=HexConverter
+        public static string ColorToHex(Color32 _color, bool _addHashPrefix = false)
+        {
+            string hex = _color.r.ToString("X2") + _color.g.ToString("X2") + _color.b.ToString("X2");
+            return _addHashPrefix ? "#" + hex : hex;
+        }
     }
 }
