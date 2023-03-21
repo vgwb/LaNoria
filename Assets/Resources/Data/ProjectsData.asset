@@ -570,7 +570,7 @@ MonoBehaviour:
     Description: "AFENES trabajar\xE1 en alcanzar la inclusi\xF3n social de las personas
       con problemas de salud mental a trav\xE9s de la formaci\xF3n y uso de nuevas
       tecnolog\xEDas como el modelado e impresi\xF3n 3D."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: d9701217605cf0a48aecbc09475a1fa4, type: 3}
   - Id: 35
     Active: 1
     TileModel: 0
@@ -582,7 +582,7 @@ MonoBehaviour:
       y Padres a trav\xE9s de la cual trabaja la prevenci\xF3n y sensibilizaci\xF3n
       sobre los retos que plantea el ocio electr\xF3nico para menores con talleres
       y experiencias participativas."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 5d629a6ea06f7cf4882ac11da2793ca1, type: 3}
   - Id: 36
     Active: 1
     TileModel: 0
@@ -604,7 +604,7 @@ MonoBehaviour:
       la agricultura y la ganader\xEDa permitiendo reducir costos, tiempos, aumentar
       la producci\xF3n en los cultivos y hacer m\xE1s r\xE1pidos y eficientes diferentes
       procesos."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: c739f4d2ba3ca7f43913295a1cef828e, type: 3}
   - Id: 37
     Active: 1
     TileModel: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
       artistas y curiosos de la provincia que buscan formarse y conocer nuevas t\xE9cnicas
       que sirvan para incrementar las oportunidades de empleo y dinamicen la econom\xEDa
       local."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 1e302f30314301644a478b3615e52b19, type: 3}
   - Id: 38
     Active: 1
     TileModel: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
       Tambi\xE9n se concienciar\xE1 a los j\xF3venes sobre las tecnolog\xEDas desde
       un punto de vista no violento y tendr\xE1 un impacto de 15.000 personas de
       la provincia de M\xE1laga."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 5d74566f21aac0048867aaa4d5795718, type: 3}
   - Id: 39
     Active: 1
     TileModel: 0
@@ -661,7 +661,7 @@ MonoBehaviour:
       Talleres educativos en las instalaciones de La Noria y en centros educativos
       entre menores de 10 y 12 a\xF1os para que conozcan las NNTT, las normas de
       seguridad y los riesgos de Internet."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: c3b5ca136df3830448d3a3f6c711233b, type: 3}
   - Id: 40
     Active: 1
     TileModel: 0
@@ -681,7 +681,7 @@ MonoBehaviour:
       empleo, medio ambiente\u2026 Talleres de proyectos tecnol\xF3gicos, desarrollo
       de Apps, rob\xF3tica, tecnolog\xEDas aplicadas al desarrollo de prototipos
       para inventores, programaci\xF3n, habilidades digitales para AACC."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 26db461714352d44e81f59307db5282f, type: 3}
   - Id: 41
     Active: 1
     TileModel: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
       aspectos como los nuevos espacios y laboratorios ciudadanos que configuran
       los movimientos \u2018Fablabs\u2019, \u2018Makers\u2019 o \u2018Hacker\u2019
       que est\xE1n irrumpiendo con fuerza desde iniciativas p\xFAblicas y privadas."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: f58bd5d75425d554faa088fc6db104ca, type: 3}
   - Id: 42
     Active: 1
     TileModel: 0
@@ -715,7 +715,7 @@ MonoBehaviour:
       salazones deshidratadas y conservas, desde un punto de vista innovador. Un
       ejemplo podr\xEDa ser la t\xE9cnica del Garum de M\xE1laga (salsa de pesado
       muy apreciada en la \xE9poca romana)."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 08d663e29a84c4c47ba88048c6092118, type: 3}
   - Id: 43
     Active: 1
     TileModel: 0
@@ -729,7 +729,7 @@ MonoBehaviour:
       de proyectos. - Jornadas sobre Innovaci\xF3n Social en 5 municipios - Formaci\xF3n
       consistente en 5 jornadas en 3 municipios diferentes - Mentorizaci\xF3n de
       10 proyectos  - Jornada de intercambio de ideas emprendedoras en La Noria "
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 57728587184ce30419b060cbaef8fb3e, type: 3}
   - Id: 44
     Active: 1
     TileModel: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
       y educar en seguridad vial a j\xF3venes mediante talleres. Incorporar las posibilidades
       del ciclotursimo como nicho de emprendimiento, y vinculado a los objetivos
       de Diputaci\xF3n con la Gran Senda y Senda litoral."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 1771432fb90e2a44c88ec7f9bcc5bf57, type: 3}
   - Id: 45
     Active: 1
     TileModel: 0
@@ -753,7 +753,7 @@ MonoBehaviour:
     Description: "Formaci\xF3n de 15 profesionales para que promuevan y asesoren
       proyectos de Innovaci\xF3n Social en los peque\xF1os territorios de la provincia
       a trav\xE9s de un proceso de formaci\xF3n con pr\xE1cticas en entidades sociales."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 2096947a7d158b944bf5a1bf7d1d260e, type: 3}
   - Id: 46
     Active: 1
     TileModel: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
       y ganaderos del sector. Se realizar\xE1 un ciclo de jornadas online para dar
       a conocer casos de \xE9xitos de emprendimiento rural que sirvan como inspiraci\xF3n
       para los interesados."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: c3d6c5e600d1e9f42b05a3eb72986f40, type: 3}
   - Id: 47
     Active: 1
     TileModel: 0
@@ -778,7 +778,7 @@ MonoBehaviour:
       en riesgo de despoblamiento y a personas del \xE1mbito urbano que desean vivir
       en estos pueblos. Facilitar\xE1 los medios necesarios para atraer a estos peque\xF1os
       municipios a personas con posibilidades de teletrabajo."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 6103e9c24edf07b40961951cff9d5471, type: 3}
   - Id: 48
     Active: 1
     TileModel: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
       para entender qu\xE9 necesita cada pueblo, y cu\xE1les son las estrategias
       con m\xE1s potencial para atraer a n\xF3madas rurales. los pueblos nos ense\xF1an
       a equilibrar el hacer y el ser."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: a803ef509cdce8d4dbf83dc22ae44f25, type: 3}
   - Id: 49
     Active: 1
     TileModel: 0
@@ -816,7 +816,7 @@ MonoBehaviour:
       el desarrollo de empresas y aut\xF3nomos de la comarca.  De esta forma, el
       espacio se convierte en un espacio de coworking y networking entre empresarios
       locales y n\xF3madas digitales."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 9885a3f5e7bc4974ca9772381066e9c2, type: 3}
   - Id: 50
     Active: 1
     TileModel: 0
@@ -835,7 +835,7 @@ MonoBehaviour:
       trata de crear una sala de escape en la que un grupo de personas deben estar
       durante un tiempo determinado hasta resolver un enigma o problema a trav\xE9s
       de un conjunto de pistas y de manera colaborativa.  "
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 406ded1d9bd3d3148bce7353951cc43c, type: 3}
   - Id: 51
     Active: 1
     TileModel: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
     Description: "Plan Fermenta fomentar\xE1 la inserci\xF3n laboral de personas
       con diversidad funcional en centros de producci\xF3n y elaboraci\xF3n artesanal
       de quesos del entorno rural de la provincia."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: b64fbe992ec19c74cb613afc0dbaa778, type: 3}
   - Id: 52
     Active: 1
     TileModel: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
       online, a trav\xE9s de actividades para impulsar las competencias personales
       y las competencias profesionales relacionadas con el trabajo en la granja,
       y contar\xE1 con un cuaderno de pr\xE1cticas de ganader\xEDa virtual."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 7a43e12e4dfa9a042944c46b4122ecec, type: 3}
   - Id: 53
     Active: 1
     TileModel: 0
@@ -872,7 +872,7 @@ MonoBehaviour:
       con discapacidad intelectual en el medio rural de la Serran\xEDa de Ronda.
       Se realizar\xE1 apoyo integral online para la formaci\xF3n e inserci\xF3n sociolaboral
       de los j\xF3venes."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 9742e3f511262ed498e3e577d4e43ce7, type: 3}
   - Id: 54
     Active: 1
     TileModel: 0
@@ -894,7 +894,7 @@ MonoBehaviour:
       de expertos profesionales en la materia. Asimismo, tambi\xE9n contempla formaci\xF3n
       te\xF3rica sobre el conocimiento de la helicicultura y se practicar\xE1 la
       adecuaci\xF3n del h\xE1bitat y la cr\xEDa de caracoles."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 5062af032ade08c4397418ef4e2ef95e, type: 3}
   - Id: 55
     Active: 1
     TileModel: 0
@@ -909,7 +909,7 @@ MonoBehaviour:
       mayores, especialmente mujeres, del \xE1mbito rural, que son depositarias de
       recetas y pr\xE1cticas artesanales en riesgos de extinci\xF3n, que pese a no
       ser profesionales de la ense\xF1anza, sus conocimientos emanan de la experiencia."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 00bf0233323300f4981f955e76dfbf30, type: 3}
   - Id: 56
     Active: 1
     TileModel: 0
@@ -923,7 +923,7 @@ MonoBehaviour:
       programa de formaci\xF3n y tutorizaci\xF3n de proyectos, fomentar\xE1 alianzas
       entre productores agroalimentarios y asociaciones generando la creaci\xF3n
       de paquetes tur\xEDsticos en las diferentes comarcas"
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 145e85c14bbd96a448842a13a0f4f628, type: 3}
   - Id: 57
     Active: 1
     TileModel: 0
@@ -942,7 +942,7 @@ MonoBehaviour:
       y emprendedoras. Creaci\xF3n de la lanzadera \u2018Emprende en G\xE9nero\u2019,
       networking, jornadas formativas, conferencias y encuentros para el emprendimiento
       en g\xE9nero."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 537beec9d67d4394c8e82fcbbc492a5c, type: 3}
   - Id: 58
     Active: 1
     TileModel: 0
@@ -953,7 +953,7 @@ MonoBehaviour:
     Description: "El proyecto desarrolla en Villanueva de Algaidas un espacio de
       emprendimiento social digital para estimular, potenciar y desarrollar competencias
       creativas, sociales y laborales a trav\xE9s de la tecnolog\xEDa."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 5c4c4df875b98df4c8948c8e3dde889b, type: 3}
   - Id: 59
     Active: 1
     TileModel: 0
@@ -972,7 +972,7 @@ MonoBehaviour:
       los esfuerzos de toda la sociedad para hacer que la red sea un lugar m\xE1s
       seguro para los j\xF3venes, fomentando su uso seguro y luchando contra fen\xF3menos
       como el \u2018grooming\u2019, \u2018sexting\u2019, o el \u2018cyberbuying\u2019."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: cb7fa2961f9c745489ea41d657e0d3ac, type: 3}
   - Id: 60
     Active: 1
     TileModel: 0
@@ -987,7 +987,7 @@ MonoBehaviour:
       del proceso creativo, el grupo comparte y discute descubrimientos, a la que
       vez que piensan en la importancia de este proceso y no tanto en el resultado
       final."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 3167c03445161ef408ccb9dfadd939f6, type: 3}
   - Id: 61
     Active: 1
     TileModel: 0
@@ -1007,7 +1007,7 @@ MonoBehaviour:
       en la consecuci\xF3n de sus objetivos, como autoconocimiento y aumento de la
       autoestima, definici\xF3n del perfil profesional o motivaci\xF3n hacia una
       b\xFAsqueda activa de empleo, entre otros."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 467f2e7cf9e4f0246a38f48c03842e25, type: 3}
   - Id: 62
     Active: 1
     TileModel: 0
@@ -1023,7 +1023,7 @@ MonoBehaviour:
       completar la formaci\xF3n adquirida y que los j\xF3venes tengan una visi\xF3n
       m\xE1s pr\xE1ctica, se realizan visitas a empresas relacionadas con los talleres
       impartidos."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 03fc2b28446603f46af9f51c8c9fae15, type: 3}
   - Id: 63
     Active: 1
     TileModel: 0
@@ -1038,7 +1038,7 @@ MonoBehaviour:
       en conexi\xF3n con el territorio. Con el objeto de fomentar el desarrollo de
       su autonom\xEDa y sus competencias claves para la empleabilidad se trabaja
       con familias y profesionales a trav\xE9s de seminarios y grupos de apoyo."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 9f73ea8446ea00c4793968496dba85f5, type: 3}
   - Id: 64
     Active: 1
     TileModel: 0
@@ -1049,7 +1049,7 @@ MonoBehaviour:
     Description: "El proyecto \u2018Rejuvenecer\u2019 mejora la calidad de vida de
       personas mayores a trav\xE9s de su participaci\xF3n en juegos de mesa, mientras
       que se forma a j\xF3venes y genera empleo para los mismos."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: e24637287566c6143896c32504f99764, type: 3}
   - Id: 65
     Active: 1
     TileModel: 0
@@ -1067,7 +1067,7 @@ MonoBehaviour:
       educativos de mesa como recurso pedag\xF3gico.  Se realizar\xE1n formaciones
       a trav\xE9s de los juegos de mesa para trabajar competencias para la empleabilidad
       sobre: empoderamiento, toma de decisiones, negociaci\xF3n y escucha activa."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 1e02bb8721b077740bedbf6eb9a70e88, type: 3}
   - Id: 66
     Active: 1
     TileModel: 0
@@ -1082,7 +1082,7 @@ MonoBehaviour:
       al mundo laboral. Orientaci\xF3n laboral y formaci\xF3n en oficios tur\xEDsticos:
       ingl\xE9s, emprendimiento en el sector, monitor/a sociocultural y deportivo,
       gu\xEDa tur\xEDstico y de ruta, hosteler\xEDa, entre otros."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: f3fd0d489df9de54e841feeb29536b12, type: 3}
   - Id: 67
     Active: 1
     TileModel: 0
@@ -1096,7 +1096,7 @@ MonoBehaviour:
       un diagn\xF3stico de las oportunidades que ofrece cada pueblo y establecer\xE1
       una Agencia Pueblo Acogedor para atender las solicitudes de aquellos interesados
       en estrechar v\xEDnculos con los municipios."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: f8af5f11eb165a04a99cc0eae83b45ec, type: 3}
   - Id: 68
     Active: 1
     TileModel: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
       Para ello rescatar\xE1n y dar\xE1n a conocer las t\xE9cnicas tradicionales
       de cultivo junto con t\xE9cnicas innovadoras y tecnol\xF3gicas. Contar\xE1
       con talleres y mercadillos de ideas en formato digital."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 37a7fa1775019564cb3421b552104488, type: 3}
   - Id: 69
     Active: 1
     TileModel: 0
@@ -1130,7 +1130,7 @@ MonoBehaviour:
       es primordial saber medir el impacto ambiental de las actividades empresariales
       y promover acciones de triple balance para el desarrollo sostenible y econ\xF3mico
       del municipio."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 0a68a6453a7dc614881ace4c65c45fa1, type: 3}
   - Id: 70
     Active: 1
     TileModel: 0
@@ -1146,7 +1146,7 @@ MonoBehaviour:
       Adem\xE1s, se realizar\xE1n en formato virtual formaciones en digitalizaci\xF3n
       empresarial, coaching y marketing, y acciones de sensibilizaci\xF3n en los
       IES sobre emprendimiento y cultura local."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: a9b3fad6cb8cac94bbb075f379f2b5cf, type: 3}
   - Id: 71
     Active: 1
     TileModel: 0
@@ -1158,7 +1158,7 @@ MonoBehaviour:
       textil en la Provincia de M\xE1laga para poder favorecer la reactivaci\xF3n
       del sector, tras identificar puntos solidarios de fabricaci\xF3n de material
       sociosanitario durante la pandemia."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 73b3e0811a6b842429344b17cb682d8d, type: 3}
   - Id: 72
     Active: 1
     TileModel: 0
@@ -1176,23 +1176,23 @@ MonoBehaviour:
       rurales se enfrentan a numerosas barreras por sus limitaciones y por las propias
       del medio rural, por lo que con esta iniciativa se promueve su inclusi\xF3n,
       sensibilizar a la ciudadan\xEDa y poner en valor sus capacidades."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 0afb6a96989f066409fdd1e2900c512c, type: 3}
   - Id: 73
     Active: 1
     TileModel: 0
     Sequence: 0200000004000000
-    Title: "Igualda, Cualificaci\xF3n y Diversidad"
+    Title: "Igualdad, Cualificaci\xF3n y Diversidad"
     Year: 
     Entity: 
     Description: "Fundatul lleva a cabo un programa para mejorar la empleabilidad
       e inclusi\xF3n en el mercado laboral de personas con diversidad funcional en
       la Sierra de las Nieves y con incidencia en las mujeres."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 1eca782c166331a478bc8ceb3a2659cf, type: 3}
   - Id: 74
     Active: 1
     TileModel: 0
     Sequence: 0400000002000000
-    Title: "Igualda, Cualificaci\xF3n y Diversidad"
+    Title: Peridotitas 4.0
     Year: 
     Entity: 
     Description: "La Federaci\xF3n de Asociaciones de Mujeres Sierra de las Nieves
@@ -1209,7 +1209,7 @@ MonoBehaviour:
       los oficios y saberes tradicionales y d\xE1ndoles herramientas para ser Custodios
       de sus Territorios de cara a su conservaci\xF3n e inserci\xF3n laboral, apostando
       por pueblos igualitarios, inclusivos y sostenibles."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 89f98761417cb8341b438961d9456651, type: 3}
   - Id: 75
     Active: 1
     TileModel: 0
@@ -1221,4 +1221,4 @@ MonoBehaviour:
       de la poes\xEDa para promover la participaci\xF3n comunitaria de los j\xF3venes
       y restablecer v\xEDnculos con su entorno local, previniendo el despoblamiento
       rural."
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 6ad72c972d9f6884eab1a3cd84b57094, type: 3}
