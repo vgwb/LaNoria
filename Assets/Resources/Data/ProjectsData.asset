@@ -1225,3 +1225,15 @@ MonoBehaviour:
       y restablecer v\xEDnculos con su entorno local, previniendo el despoblamiento
       rural."
     Image: {fileID: 21300000, guid: 6ad72c972d9f6884eab1a3cd84b57094, type: 3}
+  - Id: 76
+    Active: 1
+    TileModel: 0
+    Sequence: 0200000002000000
+    Title: Intergeneraciones
+    Year: 2020
+    Entity: "Asociaci\xF3n Jarr\xF3n Club"
+    Description: "La asociaci\xF3n Jarr\xF3n Club trabajar\xE1 propuestas de actividades
+      de ocio inclusivo y tiempo libre de calidad, en formato virtual, dirigidas
+      a personas con diversidad funcional en las comarcas de Antequera, Nororma y
+      Guadalteba."
+    Image: {fileID: 21300000, guid: cfe4df033b8a0da479ec843d293f4669, type: 3}
