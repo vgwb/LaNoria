@@ -138,7 +138,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.6.0
+  bundleVersion: 0.7.0
   preloadedAssets:
   - {fileID: 11400000, guid: 040309ef49e246d489a94cc92ba53286, type: 2}
   - {fileID: 11400000, guid: f7f0d8b441236bb4aa66e00639afafcd, type: 2}
@@ -167,10 +167,10 @@ PlayerSettings:
     iPhone: org.vgwb.lanoria
   buildNumber:
     Standalone: 0
-    iPhone: 2
+    iPhone: 3
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 31
   AndroidPreferredInstallLocation: 1
