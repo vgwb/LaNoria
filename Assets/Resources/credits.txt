@@ -12,13 +12,9 @@ PRESENTAN UNA PRODUCCIÓN DE
 [1]EQUIPO DE DESARROLLO[1E]
 
 Francesco Cavallari (Producción y Diseño)
-
 José Manuel Salado (Diseño y Contenidos)
-
 Stefano Cecere (Responsable del Desarrollo)
-
 Clarissa Trianni (Dirección Artística)
-
 Giacomo Salvadori (Programación)
 
 
@@ -26,6 +22,12 @@ Giacomo Salvadori (Programación)
 [1]AGRADECIMIENTOS[1E]
 
 Un agradecimiento especial al equipo humano de La Noria y a todas las entidades y personas que han pasado por el centro durante estos años, y en especial a Fundación La Caixa que a través del convenio de colaboración con Diputación de Málaga lo hicieron posible
+
+
+[1]CÓDIGO ABIERTO[1E]
+
+Todo el proyecto está disponible bajo licencia BSD 2-clause "Simplified" y Creative Commons Attribution 4.0 International.
+https://github.com/vgwb/LaNoria
 
 
 [1]MÚSICA[1E]
