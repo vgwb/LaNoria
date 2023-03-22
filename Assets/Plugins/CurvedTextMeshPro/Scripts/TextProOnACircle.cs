@@ -84,13 +84,6 @@ namespace ntw.CurvedTextMeshPro
         /// </summary>
         private float m_oldMaxDegreesPerLetter = float.MaxValue;
 
-        protected override void Update()
-        {
-            base.Update();
-
-            ParametersHaveChanged();
-        }
-
         /// <summary>
         /// Method executed at every frame that checks if some parameters have been changed
         /// </summary>
