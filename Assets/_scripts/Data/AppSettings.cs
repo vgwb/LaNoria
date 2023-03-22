@@ -6,7 +6,7 @@ namespace vgwb.lanoria
     {
         public bool MusicEnabled = true;
         public bool SfxEnabled = true;
-        public bool AccessibilityEnabled = true;
+        public bool AccessibilityEnabled = false;
         public bool TutorialEnabled = true;
         public string Locale;
         public int HiScore = 0;
@@ -14,7 +14,6 @@ namespace vgwb.lanoria
         public AppSettings()
         {
             Load();
-            // Debug.Log("SfxEnabled " + SfxEnabled);
         }
 
         public void SetMusic(bool status)
@@ -59,7 +58,7 @@ namespace vgwb.lanoria
             // Debug.Log("Load Appsertings");
             MusicEnabled = PlayerPrefs.GetInt("MusicEnabled", 1) == 1;
             SfxEnabled = PlayerPrefs.GetInt("SfxEnabled", 1) == 1;
-            AccessibilityEnabled = PlayerPrefs.GetInt("AccessibilityEnabled", 1) == 1;
+            AccessibilityEnabled = PlayerPrefs.GetInt("AccessibilityEnabled", 0) == 1;
             TutorialEnabled = PlayerPrefs.GetInt("TutorialEnabled", 1) == 1;
             Locale = PlayerPrefs.GetString("Locale");
             HiScore = PlayerPrefs.GetInt("HiScore", 0);
