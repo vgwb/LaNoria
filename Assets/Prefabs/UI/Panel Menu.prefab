@@ -188,8 +188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -80, y: 0}
-  m_SizeDelta: {x: -240, y: -10}
+  m_AnchoredPosition: {x: -70, y: 0}
+  m_SizeDelta: {x: -220, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9076982547656192284
 CanvasRenderer:
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: marcas puntuale
+  m_text: "R\xE9cord"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7ca4c13ab087d846bc23db3fa7334e1, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: fa41b405c09594acf8731c2257a695f4, type: 2}
@@ -246,14 +246,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.7
+  m_fontSize: 39.65
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 35
+  m_fontSizeMax: 40
   m_fontStyle: 16
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -783,8 +783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 90, y: 0}
-  m_SizeDelta: {x: -220, y: -10}
+  m_AnchoredPosition: {x: 90, y: 2.5}
+  m_SizeDelta: {x: -260, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4422940123255557395
 CanvasRenderer:
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1209,7 +1209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2966039199825217550, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_text
-      value: PLAY
+      value: Jugar
       objectReference: {fileID: 0}
     - target: {fileID: 2966039199825217550, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_fontSize
@@ -1426,7 +1426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2966039199825217550, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_text
-      value: OPTIONS
+      value: Ajustes
       objectReference: {fileID: 0}
     - target: {fileID: 2966039199825217550, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_fontSize
@@ -1643,7 +1643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2966039199825217550, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_text
-      value: ABOUT
+      value: Sobre La Noria
       objectReference: {fileID: 0}
     - target: {fileID: 2966039199825217550, guid: 4d150bfe2e4c54e879ec1feaea3ac332, type: 3}
       propertyPath: m_fontSize
