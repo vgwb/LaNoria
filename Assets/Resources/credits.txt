@@ -27,7 +27,7 @@ Un agradecimiento especial al equipo humano de La Noria y a todas las entidades 
 [1]CÓDIGO ABIERTO[1E]
 
 Todo el proyecto está disponible bajo licencia BSD 2-clause "Simplified" y Creative Commons Attribution 4.0 International.
-https://github.com/vgwb/LaNoria
+[0]https://github.com/vgwb/LaNoria[0E]
 
 
 [1]MÚSICA[1E]
