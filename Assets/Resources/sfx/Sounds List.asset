@@ -16,11 +16,11 @@ MonoBehaviour:
   - id: 20
     Channel: 3
     audioClip: {fileID: 8300000, guid: eb8ef7a5d404440b697a05399d540ed8, type: 3}
-    Volume: 0.5
+    Volume: 0.2
   - id: 21
     Channel: 3
     audioClip: {fileID: 8300000, guid: 680b2770f990240d79c3a09364a1664e, type: 3}
-    Volume: 0.5
+    Volume: 0.2
   - id: 1
     Channel: 0
     audioClip: {fileID: 8300000, guid: 7b07293d40c504762846ff33b47cb5c9, type: 3}
@@ -48,7 +48,7 @@ MonoBehaviour:
   - id: 7
     Channel: 1
     audioClip: {fileID: 8300000, guid: 7ee27596ba24249e09c384671ebbe96f, type: 3}
-    Volume: 1
+    Volume: 0.299
   - id: 8
     Channel: 1
     audioClip: {fileID: 8300000, guid: 890c4629bc1615b49a28dda51f38b2f2, type: 3}
