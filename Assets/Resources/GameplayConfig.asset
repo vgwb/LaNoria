@@ -31,9 +31,9 @@ MonoBehaviour:
   Place2Bonus: 12
   Place3Bonus: 24
   Place4Bonus: 36
-  FadeInTimeScore: 0.2
+  FadeInTimeScore: 0.1
   MovementYOffset: 80
-  MovementTime: 1
+  MovementTime: 0.7
   SlideProjectPanelTime: 0.4
   SlideProjectPanelPixelIn: 50
   UIProjectRotation: {x: -50, y: 0, z: 0}

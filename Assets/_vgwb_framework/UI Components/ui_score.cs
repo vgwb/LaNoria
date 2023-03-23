@@ -15,24 +15,28 @@ namespace vgwb.framework.ui
 
         private Sequence PunchAnimation;
         private GameObject bonusGO;
+        private int _score;
 
         void Start()
         {
             PunchAnimation = DOTween.Sequence()
-           .Insert(0, ScoreGO.transform.DOPunchScale(new Vector3(0.5f, 0.5f, 0.5f), 1, 3, 0f))
+           .Insert(0, ScoreGO.transform.DOPunchScale(new Vector3(0.3f, 0.3f, 0.3f), 1, 3, 0f))
            .SetAutoKill(false).Pause();
         }
 
         public void Init(int score)
         {
-            ScoreText.text = score.ToString();
+            _score = score;
+            ScoreText.text = _score.ToString();
         }
 
         public void AddScore(int totalScore, int deltaPoints)
         {
-            bonusGO = Instantiate(BonusPrefab, transform);
-            bonusGO.GetComponent<ui_score_bonus>().Init(deltaPoints);
-            UpdateScore(totalScore);
+            Debug.Log("AddScore +" + deltaPoints + " TOTLE: " + totalScore);
+            _score += deltaPoints;
+            //            bonusGO = Instantiate(BonusPrefab, transform);
+            //            bonusGO.GetComponent<ui_score_bonus>().Init(deltaPoints);
+            UpdateScore(_score);
         }
 
         private void UpdateScore(int value)
