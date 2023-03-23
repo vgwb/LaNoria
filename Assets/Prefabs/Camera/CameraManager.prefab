@@ -134,7 +134,7 @@ MonoBehaviour:
   CanMove: 1
   PanSpeed: 20
   ZoomSpeedTouch: 0.05
-  ZoomSpeedMouse: 0.5
+  ZoomSpeedMouse: 2
   BoundsX:
   - -13
   - 10
@@ -191,3 +191,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyCamera: {fileID: 8672796550320188008}
   CameraController: {fileID: 950455279922659732}
+  IntroPath: []
