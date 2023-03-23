@@ -193,9 +193,9 @@ namespace vgwb.lanoria
             instance.transform.position = pos;
             var points = instance.GetComponent<PointsFX>();
             if (points != null) {
+                points.SetPlacementPoints(placementPoints);
                 points.SetAdjacencyPoints(adjacencyBonus);
                 points.SetAreaPoints(areaScore);
-                points.SetPlacementPoints(placementPoints);
                 points.Animate();
             }
 

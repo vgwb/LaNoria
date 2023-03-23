@@ -85,7 +85,7 @@ namespace vgwb.lanoria
         private void SetCanvas(int points, TMP_Text textArea, CanvasGroup targetCanvas)
         {
             if (points > 0) {
-                textArea.text = points.ToString();
+                textArea.text = "+" + points.ToString();
                 CanvasScore canvasScore = new CanvasScore(targetCanvas, points);
                 canvas.Add(canvasScore);
             } else {
