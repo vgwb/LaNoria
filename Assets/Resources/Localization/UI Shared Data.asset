@@ -179,6 +179,10 @@ MonoBehaviour:
     m_Key: intro.3.desc
     m_Metadata:
       m_Items: []
+  - m_Id: 27190940638584832
+    m_Key: about.desc
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
