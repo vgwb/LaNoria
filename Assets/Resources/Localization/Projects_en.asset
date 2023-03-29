@@ -1,0 +1,900 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Projects_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 16f55839ffe6b4647a6e2d8c608f4420, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 437989138432
+    m_Localized: "Reorientation of the professional activity of youth dedicated to
+      construction in order to implement other more sustainable construction forms.\nIt
+      was carried out through the recovery of traditional local construction techniques
+      and the teaching of new constructive, sustainable and respectful techniques
+      with the environment for unemployed people in the world of construction.\nIn
+      addition, with these actions, an associative associative coworking \u2019to
+      facilitate associations of the province was enabled and conditioned."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915648
+    m_Localized: Project dedicated to promoting aquaponia as an innovative activity
+      and socio -economic entrepreneurship, from the ecological and sustainable production
+      of food (fish and vegetables), promoting association and cooperativism as entrepreneurship
+      models, joining forces and capacities to implement business, social initiatives,
+      social and environmental that suppose the creation of jobs and self -consumption
+      between youth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915649
+    m_Localized: 'Ecological garden and agroecological education classroom strengthening
+      a dynamic role and reference center for projects and initiatives related to
+      urban agriculture.
+
+      Maintenance and adaptation of garden, aromatic and
+      greenhouse areas for courses, workshops and visits.
+
+      Celebration of the
+      II Conference of Urban Huertas in Malaga. Training course on ecological urban
+      orchards. Workshops around the ecological garden, agroecology, urban agriculture
+      and innovation.
+
+      Environmental sensitization around ecological garden,
+      agroecology, urban agriculture and innovation.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915650
+    m_Localized: 'Result of synergies between the protection of the environment and
+      the practical action of vermicomposting. Five lines of work were held at the
+      Noria garden: Productive, experimental garden, edible forest, composting and
+      greenhouse area.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109952
+    m_Localized: 'Design and maintenance of the Noria garden, disseminating the design,
+      crops and challenges of the garden, to inspire an agriculture consistent with
+      the environment in the province.
+
+      Organization of the I Hortodiversity
+      Meeting of Malaga, meeting space with scientific format for all agroecological
+      initiatives of the province. MAPO OF PARTICIPATORY SPACES OF AGROECOLOGICAL
+      CULTURE.
+
+      Training sessions or agroecology classrooms. Audiovisual ''women
+      and agroecology: a culture of permanence''.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109953
+    m_Localized: 'Agronauts aim to generate in the Noria a space for innovation that
+      complements the capacities of its facilities and help the existing community,
+      both in the center itself and in the province of Malaga.
+
+      Among the activities
+      stand out:
+
+      - Location of emerging initiatives in the province of Malaga
+      for interacting with the Noria.
+
+      - Creation of a space in the Noria garden
+      with construction and energy saving systems and resources, to generate innovative
+      relationships and practices in natural processes and organisms.
+
+      - Forums
+      of local initiatives focused on environmental education, agroecology and responsible
+      consumption with special incidence in the crops and foods of the province of
+      Malaga.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109954
+    m_Localized: "Creation and design of products through recycled plastic, plastic
+      reuse in the development of new products through the design and construction
+      of machines to process plastic in professional training centers.\nThe project
+      contemplates the design and manufacture of products, communication, marketing
+      and product distribution workshops, training network. Exhibition of products
+      and markets in La Noria. Days and workshops taught by students. Creation of
+      educational resources for trainers and trainers. Enhance the entrepreneurial
+      spirit, promote values \u200B\u200Bof equality and creation of synergies between
+      the different actors"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109955
+    m_Localized: "Disseminate Eco -emotion through training capsules, meetings, days
+      and seminars on: new energy models, undertake in social and technological,
+      collaborative entrepreneurship, agroecology and participatory certification,
+      fair trade cooperative and ecological products, training in bioconstruction,
+      sustainable entrepreneurship, agriculture Urban, conscious food, values \u200B\u200Beducation,
+      etc.\nShow young people what are the opportunities of social and environmental
+      entrepreneurship, as well as the importance of working in initiatives that
+      allow change towards more just societies without giving up economic viability.
+      Celebration in the Noria of the 3rd fair for a solidarity green economy and
+      the common good."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109956
+    m_Localized: 'Conversion of the organic products generated by the Noria in organic
+      fertilizer to be used in the gardens and the garden of the facilities themselves.
+      The Noria will be the first place in Malaga that performs the in-situ processing
+      of organic and paper waste it generates to be used in the center itself as
+      a fertilizer.
+
+      In addition to the installation of the apparatus and equipment
+      for the vermicompost called Worm Wigwam, the project contemplates the realization
+      of training workshops to the staff of the Noria and the associated projects,
+      as well as the creation of a demonstrative space and its opening to the use
+      and visit by part of the different groups.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109957
+    m_Localized: Reforestation program, fight against climate change and promotion
+      of a sustainable entrepreneurial attitude as a job site, in environmental and
+      forestry aimed at young people from rural environments (ESO centers and baccalaureate).
+      Carbon footprint calculation and compensation calculation workshops were held
+      in Geis Emissions in Centers years reforesting with Amma Almijara 'in La Noria
+      with visits to reforested areas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109958
+    m_Localized: Show the range of opportunities available in the rural environment
+      linked to the permanence of young people in the territory through training
+      in organic farming and the importance of the auxiliary fauna of the natural
+      environment, and construction workshops with the importance of recycling to
+      The time to build insectaries. Aimed at students from the 5 institutes of the
+      Region of the Guadalhorce Valley.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109959
+    m_Localized: 'Project aimed at facilitating socio-labor insertion through theoretical-practical
+      training in the green economy sector. Destined for people who are in vulnerability.
+      The acquisition and/or improvement of professional competences and the learning
+      of basic technical knowledge in agroecology and horticulture will be worked.
+
+      The
+      training will be linked to a period of non -work practices in companies and
+      cooperatives in the sector. The objective is the labor insertion of others
+      or the generation of social entrepreneurship.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109960
+    m_Localized: 'Plam, multifunctional plants, are edible plants of very easy crop
+      that serve as support in the garden, are medicinal and suppose a strategy to
+      fight climate change.
+
+      The project has the following lines of action:
+      presentation and tasting day of plates prepared with PLAM, ''Citizen Sciences''
+      Conference. Online course - Innovative crops for the weather. Multifunctional
+      plants workshop: Horticultural therapy for the promotion of independence, for
+      women at risk of social exclusion.
+
+      ''Cultivating future'' workshops,
+      demonstrative spaces and research on multifunctional plants in the facilities
+      of the Noria orchard.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109961
+    m_Localized: The Amma Almijara project makes known the custody of the territory
+      (CDT) in local municipalities through online workshops and training actions.
+      The CDT is an instrument that allows agreements between associations and land
+      owners in order to value the land.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109962
+    m_Localized: Biodiversas will offer through training an opportunity for social
+      inclusion and employability to people with functional diversity and women at
+      risk of exclusion through innovation with plants (agroecology).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109963
+    m_Localized: Project whose main objective is to disseminate among the population
+      the benefits of the so -called '3S' diet, healthy, sustainable and sensory
+      diet at the same time, involving grandmothers and grandchildren to enhance
+      intergenerational relationships and value the oral heritage of the community.
+      Its participants will make recording and editing formations of video, nutrition,
+      food and consumption through an online platform.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109964
+    m_Localized: 'The main objective has been to promote social inclusion avoiding
+      any form of discrimination in access to self -employment through actions aimed
+      at improving the social entrepreneurship of people in a situation of greater
+      vulnerability and the support of inclusive labor markets, creating replicable
+      models and sustainable that enhance employment and entrepreneurship in the
+      Caprino livestock sector.
+
+      This project meets the needs of demand for
+      qualified personnel in the livestock sector, in addition to the use of territory
+      resources for sustainable exploitation and as an opportunity for the growth
+      of the municipality and tries to address the demographic challenge of depopulation
+      through the project ''Rumbo To the field '', an experience of rural inclusion
+      and immersion in which nine people in social vulnerability are discovering
+      the Caprino livestock sector and different related trades.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109965
+    m_Localized: 'Project that aims to facilitate the social and labor insertion
+      of people with functional diversity. Among its initiatives: Professional practices
+      for students, therapeutic support and podcast that makes visible the collective
+      with functional diversity.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109966
+    m_Localized: "Sowing territory, agroecological initiatives (of production, transformation,
+      restoration or training) of the province of Malaga are valued analyzing its
+      resilience ability to the climatic emergency.\nThrough the project, microfinance
+      has been given to 3 initiatives of great social value and a package of measures
+      that improve their social return, in addition to accompanying with advice for
+      the implementation of the measures and with a study of viability and impact
+      analysis.\nThe initiative is part of the collaboration agreement between the
+      Diputaci\xF3n and Fundaci\xF3n \u201CLa Caixa\u201D, through which the agri
+      -food sector of the province is strengthened with the microfinance of agroecological
+      projects. The La Noria Social Innovation Center has raised more than 12,000
+      euros for three agroecological projects in Gauc\xEDn, Humilladero and Co\xEDn
+      through the \u2018Sowing territory\u2019 plan.\nThe initiatives that have received
+      the advice and accompaniment of ecoherence to carry out their microfinance
+      campaigns, selected after a process of evaluation of their social and environmental
+      impact, are 'pure life, the green store' of Gauc\xEDn, 'Black Spiga' of Humilladero
+      and 'Ga\xEFa Huerta' of Co\xEDn."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109967
+    m_Localized: "The Noria and the Association Extiercol launch the project of the
+      First Rural School of Agroecology of Malaga. The initiative is part of the
+      collaboration agreement between the Diputaci\xF3n de M\xE1laga and the \u2018La
+      Caixa\u2019 Foundation and aims to promote entrepreneurship in rural areas.\nThis
+      project involves the sustainable value of one of the greatest natural resources
+      of the territory, the soil. Likewise, the project also pursues different objectives
+      among which are the generation of networks -the school is configured as a confluence
+      of institutions, entities and companies; Theoretical and practical training;
+      the enhancement of the natural resources of the territory in a sustainable
+      way; face the depopulation of rural areas, and promote the settlement of young
+      people through the promotion of entrepreneurship.\nThis formation seeks to
+      promote awareness in the population, especially among youth, so that they know
+      the possibilities offered Offer young people the necessary skills to access
+      job opportunities in the rural environment, develop professionally and arouse
+      interest to settle in the territory."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109968
+    m_Localized: "The \u2018Recycled, silver and green\u2019 project has promoted
+      the construction of two urban gardens and has installed 17 cultivation tables
+      for self -consumption in which 20 families have participated. The non -profit
+      cooperative, circulates, specialized in circular economy, has been in charge
+      of the development of the project and the construction and carpentry of the
+      cultivation tables made of recycled wood assigned by Malaga companies.\nThis
+      project highlights the importance of working the circular economy, in addition
+      to promoting initiatives that improve the quality of life of the elderly through
+      the silver economy. Among the objectives of the project, in addition to the
+      creation of urban orchards and the self -consumption of cultivated food, the
+      fight against climate change reducing the emission of harmful gases from the
+      food sector, one of the most pollutants with respect to the Greenhouse gas
+      emission. It also reduces garbage and plastic wrappings, increases the consumption
+      of plant foods and decreases the consumption of products high in fats and sugars."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109969
+    m_Localized: 'The Youfab project aims to inform and train young artisans in the
+      province of Malaga about the use of digital technology in 3D design and manufacturing
+      of their creations in order to enhance their professional growth and foster
+      entrepreneurship.
+
+      It is a series of workshops and informative days that
+      will take place in the units of the Noria where about thirty young people from
+      Malaga can benefit from the training workshop.
+
+      The objective of this
+      project is none other than creating the innovative figure of the technological
+      artisan and turning the Noria, into the future, into an urban factory where
+      people can develop their own products, tools and designs.
+
+      Specifically,
+      the Youfab initiative includes the realization of a 3D modeling and printing
+      workshop that will be taught at the Social Innovation Center and will cover
+      the necessary theoretical and practical training on 3D parametric modeling
+      systems and digital manufacturing.
+
+      The purpose of these activities is
+      to give the necessary training to those who are interested in participating
+      in the 3D modeling and printing workshop but do not have the necessary knowledge
+      of computer science or CAD design.
+
+      In addition, the project offers different
+      days of information, both for social awareness about the use of digital technology
+      focused on artisans in the province, as informative days on the use of digital
+      technology aimed at the professional orientation of young students of FP.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109970
+    m_Localized: 'Gamestar (T) is a project composed of professionals, artists, researchers,
+      students ... who work around the research of the video game in their educational,
+      cultural, economic, artistic, etc.
+
+      The central element are video games
+      understood as another form of artistic-technological creation (comic, cinema,
+      painting, music, sculpture, computer programming, etc.).'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109971
+    m_Localized: 'Project carried out by AAGIT that tries to favor the interest and
+      active participation of childhood and youth in new technologies by reducing
+      the gap in the province through didactic robotic workshops with 3D printing
+      and programming and free use software.
+
+      - 4 CC workshops. of computing
+      through robotics for adults, aimed at professionals of sociocultural animation,
+      Guadalinfo centers, and social and teachers (4 hours)
+
+      - 30 Children''s
+      and Youth Workshops of Robotics, Programming and Educational Technology (2
+      hours) Workshops from 1st to 3rd of Early Childhood Education'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109972
+    m_Localized: Promotion of architecture as a tool for the development of spatial
+      and mathematical knowledge for children between 4 and 12 years, as an approach
+      to the work of scientific and technical professions, such as architecture,
+      engineering, chemistry, physics or math.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109973
+    m_Localized: 'Crafteando is a mapping -oriented project of our close environment,
+      our neighborhoods, towns and cities, with the aim of developing proposals to
+      improve public space.
+
+      This project to a territory intervention and direct
+      contact with our nearby realities with the possibility of imagining and designing
+      alternative spaces with digital tools such as the Minecraf video game, with
+      it you can build and design any type of space to return them to the territory
+      in a form of proposals.
+
+      Through participatory workshops aimed at young
+      people in the municipalities, the digital-analogical barrier is crossed by
+      affecting our way of thinking about the space that surrounds us and allowing
+      us to consider the environment and make proposals about the reality of our
+      peoples. This project collaborates with the Smelling Association, DyA-R and
+      Arrabal AID'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109974
+    m_Localized: 'Training program in which they combine, new technologies through
+      learning for the creation of a virtual store. With a new vision of how to do
+      it and improve our environment following the philosophy and methodology of
+      the economy of the common good, for the improvement of social employability,
+      the promotion of the social and economic participation of young people, avoiding
+      depopulation, and strengthening trade and rural production with an opening
+      to other markets.
+
+      All this aimed at the generation of a territorial
+      node in the northern part of the province of Malaga for entrepreneurship and
+      social innovation.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109975
+    m_Localized: The NAIM Association will work for the training in digital competences
+      for employability and job search through the network, as well as specific online
+      formations of digital tools for entrepreneurship in the rural world and the
+      reduction of the digital gap with young people from the region of Antequera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109976
+    m_Localized: 'The project consists of the disposition of 200 computer equipment
+      reused for use by families without resources and non -profit associations of
+      the rural environment. This action will be accompanied by training workshops
+      related to the subject.
+
+      It is a social and environmental initiative
+      that in addition to fighting the digital gap implies companies in CSR and administrations
+      in the development of their own territories through the transfer of equipment
+      already used for use by associations or families without resources from their
+      regions'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109977
+    m_Localized: Maker Algaids is a space for digital social entrepreneurship to
+      enhance creative skills through technology and join social innovation projects.
+      It aims to reduce the digital divide and bring the elderly to technologies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109978
+    m_Localized: The Foundation will carry out artistic production sessions aimed
+      at young population of small municipalities to enhance participation, creativity
+      and collective intelligence.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109979
+    m_Localized: Open Classroom Innovation + Education will form and advise young
+      people who have abandoned the educational system without obtaining the Secondary
+      Education title, or who want to carry out the access test to training cycles
+      through a semi -creencial education modality. As a novelty, it includes new
+      formats of the agendas such as the Audiolibro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109980
+    m_Localized: The Libero Association develops the social participation of young
+      people through interaction with the environment in a game through which they
+      will acquire knowledge of climate change, gender, SDGs, social economy and
+      rural world.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109981
+    m_Localized: Affenes will work to achieve the social inclusion of people with
+      mental health problems through the training and use of new technologies such
+      as 3D modeling and printing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109982
+    m_Localized: The project starts a video game school for mothers and fathers through
+      which the prevention and awareness of the challenges posed by electronic leisure
+      for minors with workshops and participatory experiences works.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109983
+    m_Localized: 'The project faces the challenge of depopulation and gives a solution
+      to the digital divide in the agricultural and livestock sector of the province.
+      With this objective, a training program on electronic applications and social
+      networks has been launched that allows the companies to be carried out digitally,
+      which will allow a more agile management of the farms, the best use of their
+      resources and the strengthening of the business.
+
+      20 face -to -face formative
+      actions and 400 -hour duration, up to 300 farmers have participated in practical
+      courses have been carried out for this.
+
+      In addition, it urges curiosity
+      in the sector to find other forms of technologies that improve the performance
+      of its crops, generating a great contribution to agriculture and livestock
+      allowing reducing costs, times, increasing production in crops and making faster
+      and faster and different processes efficient.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109984
+    m_Localized: "The 'Fabm\xF3vil Tour' moves to ten municipalities in the province
+      to show the youngest the use of new technologies regarding the 3D design and
+      printing that allows to manufacture at a low cost and that has become a new
+      generation alternative of employment.\nThis is the development of a four -hour
+      traveling workshop. Specifically, the \u2018Tour Fabm\xF3vil\u2019 is touring
+      the towns of Archidona, Antequera, Ronda, C\xE1rtama, Benalm\xE1dena, Estepona,
+      V\xE9lez-M\xE1laga, Nerja, Fuengirola and Malaga Capital. The activity includes
+      the morning celebration of a training workshop on the use of this technological
+      tool with scanner and 3D printing and in the afternoon, the bicycle will be
+      exposed to the residents of the town that can see a demonstration in the first
+      person in the first person how objects occur through this system.\nThe workshops
+      are intended for young entrepreneurs, artisans, artists and curious of the
+      province who seek to train and learn about new techniques that serve to increase
+      employment opportunities and boost the local economy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109985
+    m_Localized: 'They will offer an open line to help the educational community,
+      associative fabric and families, with legal and psychological guidance and
+      advice on the safety of the child in the network. This will be completed in
+      talks in educational centers, in the implementation of a web image on the web
+      pages of educational centers to carry out online consultations as well as a
+      telephone and online attention line will be implemented.
+
+      A specialized
+      training offer will be offered in education with online games for young people
+      and grandparents of the province of Malaga. Young people will also be aware
+      of technologies from a non -violent point of view and will have an impact of
+      15,000 people from the province of Malaga.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109986
+    m_Localized: 'Help and decrease in bad practices in Internet uses and information
+      and communication technologies in general. Education for minors for responsible
+      use of ICT and Internet management and safety.
+
+      Educational workshops
+      in the Noria facilities and in educational centers between children under 10
+      and 12 to know the NNTT, security standards and internet risks.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109987
+    m_Localized: 'Promotion and development of talent and creativity for childhood
+      with high capacities in the NNTT area. Creation of an innovation and talent
+      laboratory for childhood and young people with AACC, where it is formed, investigated
+      and incubator of technological initiatives focused on social innovation. Promotion
+      of technological partners projects with specialist entities and companies.
+
+      Promotion
+      of collaboration agreements for the development and implementation of prototypes
+      of inventions and designs in robotics and applications. Promotion and generation
+      of inventions and technological applications, innovative ideas and solutions
+      for the real sector, applicable to education, employment, environment ... workshops
+      of technological projects, apps development, robotics, technologies applied
+      to the development of prototypes for inventors, programming, Digital skills
+      for AACC.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109988
+    m_Localized: "Visibility of new socio -labor opportunities for youth through
+      open -source technological tools. This performance is aimed at young people
+      and entrepreneurs and social innovatives.\nFor two intense days, experts in
+      the new technologies, social networks and the Internet sector, discuss the
+      importance of operating movements in their most diverse fields, -access, hardware,
+      software, source ecology- as an engine of economic and social development.
+      in the territory of youth and childhood.\nA perfect means to detect and make
+      visible social opportunities for youth of all municipalities through open -source
+      technological tools.\nLikewise, aspects such as the new citizen spaces and
+      laboratories that make up the \u2018Fablabs\u2019, \u2018makers\u2019 or \u2018hacker\u2019
+      that are strengthening strongly from public and private initiatives are addressed."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109989
+    m_Localized: Point dedicated to environmental awareness and youth venture around
+      the sea. It also deals with recovering the traditional dehydrated and canned
+      salics, from an innovative point of view. An example could be the technique
+      of the Malaga Garum (heavy sauce highly appreciated in the Roman era).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109990
+    m_Localized: 'Pionera bet for the value of the social professional as a facilitator
+      of its environment and its empowerment through entrepreneurship. It contemplates
+      the realization of information sessions, training course and project mentoring.
+
+      -
+      Conference on Social Innovation in 5 municipalities
+
+      - Training consisting
+      of 5 days in 3 different municipalities
+
+      - Mentorization of 10 projects
+
+      -
+      Exchange day of entrepreneurial ideas in the Noria'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109991
+    m_Localized: "Project aimed at promoting the promotion of employability through
+      activities related to sustainable transport. Sensitize and educate in road
+      safety to young people through workshops. Incorporate the possibilities of
+      the Cyclotursm as an entrepreneurship niche, and linked to the objectives of
+      the Diputaci\xF3n with the Great Senda and Coastal Send."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109992
+    m_Localized: Training of 15 professionals to promote and advise social innovation
+      projects in small territories of the province through a training process with
+      practices in social entities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109993
+    m_Localized: The project seeks to generate complementary income through agrotourism,
+      helping to promote the activity of farmers and ranchers in the sector. A cycle
+      of online days will be held to publicize cases of rural entrepreneurship that
+      serve as inspiration for interested parties.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109994
+    m_Localized: Socio-labor prospecting project aimed at populations at risk of
+      depopulation and people in the urban environment who wish to live in these
+      villages. It will facilitate the necessary means to attract these small municipalities
+      to people with teleworking possibilities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109995
+    m_Localized: 'The association seeks teleworking experiences in rural areas at
+      risk of depopulation of Malaga, under the concept of shortening the digital
+      gap between rural and urban and creating a connection of visitors with local
+      settlers and nature.
+
+      From Rooraral they carry out a study with the objective
+      of identifying the necessary criteria for peoples to adapt to attract teleworkors.
+      They also carry out an analysis of the 45 Malaga municipalities at risk of
+      depopulation that are categorized to understand what each people needs, and
+      what are the most potential strategies to attract rural nomads. Peoples teach
+      us to balance doing and being.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109996
+    m_Localized: "The project was born with the idea of \u200B\u200Brecovering the
+      abandoned today, Municipal Camping \u2018Las Camaretas\u2019 in Cortes de la
+      Frontera to offer a space for social innovation and education that benefits
+      its inhabitants and its region. Once valued, the campsite is used as a center
+      for the development of educational projects and social innovation for third
+      sector entities. In addition, it is a host of \u2018Digital Nomads\u2019, with
+      the creation of coworking and networking spaces between these nomads and the
+      business initiatives of the border cuts and its region.\nThe digital skills
+      of digital nomads are the complement to the development of companies and freelancers
+      of the region. In this way, space becomes a coworking and networking space
+      between local and digital nomads."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109997
+    m_Localized: "Assembly of an educational \u2018escape\u2019 as a tool for working
+      social and environmental values \u200B\u200Bin a playful way. It will be located
+      in Rancho Lim\xF3n located in C\xE1rtama, it is intended to be a space for
+      the meeting and development of the rural environment.\nFor this, the association
+      works inclusive leisure, non -formal education, permaculture and biconstruction
+      among other areas.\nEscape Room is a game based on the development of mental
+      skills for the solution of enigmas and problems so that young people and critical
+      thinking and critical thinking.\nIt is about creating an escape room in which
+      a group of people must be for a certain time to solve an enigma or problem
+      through a set of clues and collaboratively."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109998
+    m_Localized: Fermenta Plan will encourage the labor insertion of people with
+      functional diversity in centers of artisanal production and elaboration of
+      cheeses of the rural environment of the province.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109999
+    m_Localized: "Project that works in the qualification and socio -labor insertion
+      of people with functional diversity in the primary sector. Collaborates the
+      Association of Breeders of Cabra Malague\xF1a (Cabrama). The training will
+      be carried out online, through activities to promote personal skills and professional
+      skills related to work on the farm, and will have a virtual livestock practices
+      notebook."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110000
+    m_Localized: "Project that seeks to make visible the situation of people with
+      intellectual disabilities in the rural environment of the Serran\xEDa de Ronda.
+      Integral online support will be made for the socio -labor training and insertion
+      of young people."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110001
+    m_Localized: 'Fundatul has presented an innovative social venture in incubator
+      format that aims to be commercialized, based on heliciculture (snail cultivation)
+      for people with functional diversity living in the municipalities of the Guadalhorce
+      Valley, which they have sought to contribute to economic wealth and social
+      of the territory.
+
+      The project starts from an agricultural and farm model
+      of Granja Caracoles, which has allowed synergy between social and private entities.
+      Within its involvement, the entity has also sought to face the digital gap,
+      health, gender equality, decent work and economic growth, linked to sustainable
+      development objectives (SDGs).
+
+      It is intended to launch a snail farm,
+      of the Helix Spiriting variety, and will be in charge of 40 people with functional
+      diversity that will work under the advice of professional experts in the field.
+      Likewise, it also contemplates theoretical training on the knowledge of heliciculture
+      and the adaptation of the habitat and the raising of snails will be practiced.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110002
+    m_Localized: Specialized course in traditional Malaga cuisine, aimed at kitchen
+      students, hospitality professionals and entrepreneurs who intend to develop
+      production or transformation activities in the agri -food sector. Practical
+      training taught by older people, especially women, from rural areas, who are
+      depositors of recipes and artisanal practices in extinction risks, which despite
+      not being teaching professionals, their knowledge emanates from experience.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110003
+    m_Localized: Formative program aimed at promoting new roads of associations of
+      rural areas and the creation of social companies through gastronomic tourism.
+      Rural Ciceroones, through its project training and tutoring program, will encourage
+      alliances between agri -food and associations generating the creation of tourist
+      packages in the different regions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110004
+    m_Localized: "Creation of a shuttle of young entrepreneurship projects. Awareness
+      and gender training with young entrepreneurs and entrepreneurs in the province
+      of Malaga through the territorial network support network. Accompaniment of
+      a gender consulting team to a group of 15 entrepreneurial projects in the province
+      of Malaga so that their business idea contemplates the gender perspective.\nPromotion
+      of incorporation into the entrepreneurship projects of the gender perspective
+      through training, meetings and dissemination between entrepreneurs and entrepreneurs.
+      Creation of the Shuttle \u2018Emprende in Gender\u2019, Networking, training
+      days, conferences and meetings for gender entrepreneurship."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110005
+    m_Localized: The project develops in Villanueva de Algaidas a space for digital
+      social entrepreneurship to stimulate, enhance and develop creative, social
+      and labor skills through technology.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110006
+    m_Localized: This project places technology as one of the basic pillars for the
+      education of minors. Thanks to the development of a technological platform,
+      it will form and raise aware same tracking tools of illicit material and denunciation
+      of websites containing this type of material. In this way, Alia2 intends to
+      combine the efforts of the whole society to make the network a safer place
+      for young people, encouraging its safe use and fighting against phenomena such
+      as 'grooming', 'Sexting', or the 'cyberbuying' .
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110007
+    m_Localized: 'Artistic workshops aimed at schoolchildren in the province of Malaga
+      to arouse creative consciousness.
+
+      Once the rooms are seen, the process
+      of the artist who seeks and looks in other inspiration artists is emulated,
+      reflects on it and, from there, creates his own work. Through the creative
+      process, the group shares and discusses discoveries, which time they think
+      about the importance of this process and not so much in the final result.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110008
+    m_Localized: 'This project consists of workshops that give real and novel solutions
+      to young people between 16 and 25 years with ASD, level 1, in order to provide
+      vocational guidance, training and facilitate labor integration.
+
+      The
+      initiative seeks the awareness and awareness of the companies of the nearby
+      municipalities about the importance of hiring people with ASD and with which,
+      subsequently, contracts for work practices will be arranged.
+
+      Also, both
+      individual and group, the project also works, by the hand of psychologists
+      and social workers, those personal aspects that can help participants in achieving
+      their objectives, such as self -knowledge and increased self -esteem, profile
+      definition Professional or motivation towards an active job search, among others.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110009
+    m_Localized: 'It aims to motivate and guide young people between 14 and 25 years
+      old in the axarchy, who have abandoned their training and create an illusion
+      to seek employment.
+
+      In the workshops they learn basic notions of a trade
+      that motivates them to resume their training and thus have more opportunities
+      when entering the labor market.
+
+      To complete the acquired training and
+      that young people have a more practical vision, visits are made to companies
+      related to the workshops given.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110010
+    m_Localized: 'Young social entrepreneur projects that are creating inclusive
+      learning spaces in rural areas. They work to meet the needs of girls and young
+      people with functional diversity, through activities and inclusive workshops
+      based on non -formal education and learning in connection with the territory.
+
+      In
+      order to promote the development of its autonomy and their key competences
+      for employability, we work with families and professionals through seminars
+      and support groups.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110011
+    m_Localized: "The \u2018rejuvenate\u2019 project improves the quality of life
+      of the elderly through their participation in board games, while young people
+      are trained and generates employment for them."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110012
+    m_Localized: 'Project to support social entrepreneurship in professional areas
+      of educational work with childhood, youth and major. All learning can be achieved
+      in a playful and experiential way through game as a pedagogical tool, in addition
+      to enhancing creativity and collective work, from childhood until we are adults
+      who, thanks to it, manage to delay aging.
+
+      This project aims to generate
+      employment in small territories through the use of table educational games
+      as a pedagogical resource. Formations will be held through board games to work
+      on competencies for employability on: empowerment, decision making, negotiation
+      and active listening.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110013
+    m_Localized: 'Training in professions of the existing offer to the surroundings
+      of the King''s Caminito, aimed at young people at risk of social exclusion
+      in unemployment. Adapt the degree of professionalism around the tourist attraction
+      of the natural environment of El Chorro, for a future incorporation into the
+      world of work.
+
+      Labor orientation and training in tourist trades: English,
+      entrepreneurship in the sector, sociocultural and sports monitor, tourist and
+      route guide, hospitality, among others.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110014
+    m_Localized: The Cozy Pueblo Project is intended to create links among the rural
+      population of different interior municipalities with urban coastal people and
+      groups in the province of Malaga. The entity will make a diagnosis of the opportunities
+      offered by each town and establish a cozy people agency to meet the requests
+      of those interested in strengthening links with the municipalities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304256
+    m_Localized: "The project encourages entrepreneurship in the agroganade sector
+      aimed at young people from the regions of Guadalteba and Serran\xEDa de Ronda.
+      To do this they will rescue and announce the traditional cultivation techniques
+      together with innovative and technological techniques. It will have workshops
+      and market markets in digital format."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304257
+    m_Localized: 'The project aims to promote the change in social entities, entrepreneurs
+      and companies in the province towards an economy with social impact through
+      strengthening in economic and environmental sustainability, gender perspective
+      and digitalization. It is composed of 6 modules and 15 workshops, both online
+      and face -to -face.
+
+      It has two action blocks, the first training through
+      pills - impact workshops and the second specialized and individualized consulting
+      for the practical implementation of the change process towards the improvement
+      and sustainability of the project/company.
+
+      The importance of bringing
+      these tools to companies, entrepreneurs and social entities is essential, since
+      it is essential to know how to measure the environmental impact of business
+      activities and promote triple balance actions for the sustainable and economic
+      development of the municipality.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304258
+    m_Localized: The end of the project is to promote entrepreneurship in the rural
+      environment and avoid depopulation of the Sierra de las Nieves region from
+      sustainable development, social innovation and gender transversality. A business
+      work group and the #Yosoyrural brand will be created with the involvement of
+      university students, youth and women. In addition, formations in business digitalization,
+      coaching and marketing, and awareness actions in IES on entrepreneurship and
+      local culture will be carried out in virtual format.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304259
+    m_Localized: Project that investigates what are the needs of the textile industry
+      in the province of Malaga to be able to favor the revival of the sector, after
+      identifying solidarity points for the manufacture of socio -health material
+      during the pandemic.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304260
+    m_Localized: 'The project seeks the social and labor inclusion of people with
+      intellectual disabilities through the delivery of workshops, for themselves,
+      of the elaboration of natural cosmetics.
+
+      Through this initiative and
+      the alliance of social, public and private entities, one of the priorities
+      of the Noria, the challenge of social and labor inclusion of people with functional
+      diversity, in addition to the improvement of their employability. People with
+      intellectual disabilities in rural areas face numerous barriers for their limitations
+      and those of rural areas, so with this initiative their inclusion is promoted,
+      sensitizing citizens and valueing their capacities.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304261
+    m_Localized: Fundatul carries out a program to improve employability and inclusion
+      in the labor market of people with functional diversity in the Sierra de las
+      Nieves and with an impact on women.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304262
+    m_Localized: "The Sierra de las Nieves Women's Federation works knowledge of
+      the environmental values \u200B\u200Bthey have in the Sierra de las Nieves
+      region from a gender perspective. He has sought to train, train and guide young
+      people, women, unemployed people and with functional diversity of municipalities
+      with less than 20,000 inhabitants in the Sierra de las Nieves region about
+      experiences of green entrepreneurship from the third sector providing them
+      with knowledge about custody of the territory, based solutions In nature, infrastructure
+      and green corridors, sustainable tourism and new employment niches with sustainability
+      criteria, circular economy and economy of the commons. They have announced
+      the next National Park as a protection figure and its socioeconomic affectation,
+      extolling traditional trades and knowledge and giving them tools to be custodians
+      of their territories in the face of their conservation and labor insertion,
+      betting on equal, inclusive and sustainable peoples."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304263
+    m_Localized: The project carries out empowerment processes through poetry to
+      promote the community participation of young people and restore links with
+      their local environment, preventing rural depopulation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304264
+    m_Localized: "The Jarr\xF3n Club Association will work proposals for inclusive
+      leisure activities and quality free time, in virtual format, aimed at people
+      with functional diversity in the Antequera, Nororma and Guadalteba regions."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

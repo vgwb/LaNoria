@@ -1,0 +1,332 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Projects Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Projects
+  m_TableCollectionNameGuidString: 16f55839ffe6b4647a6e2d8c608f4420
+  m_Entries:
+  - m_Id: 437989138432
+    m_Key: proj.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915648
+    m_Key: proj.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915649
+    m_Key: proj.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915650
+    m_Key: proj.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109952
+    m_Key: proj.5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109953
+    m_Key: proj.6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109954
+    m_Key: proj.7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109955
+    m_Key: proj.8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109956
+    m_Key: proj.9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109957
+    m_Key: proj.10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109958
+    m_Key: proj.11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109959
+    m_Key: proj.12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109960
+    m_Key: proj.13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109961
+    m_Key: proj.14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109962
+    m_Key: proj.15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109963
+    m_Key: proj.16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109964
+    m_Key: proj.17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109965
+    m_Key: proj.18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109966
+    m_Key: proj.19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109967
+    m_Key: proj.20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109968
+    m_Key: proj.21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109969
+    m_Key: proj.22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109970
+    m_Key: proj.23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109971
+    m_Key: proj.24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109972
+    m_Key: proj.25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109973
+    m_Key: proj.26
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109974
+    m_Key: proj.27
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109975
+    m_Key: proj.28
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109976
+    m_Key: proj.29
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109977
+    m_Key: proj.30
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109978
+    m_Key: proj.31
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109979
+    m_Key: proj.32
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109980
+    m_Key: proj.33
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109981
+    m_Key: proj.34
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109982
+    m_Key: proj.35
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109983
+    m_Key: proj.36
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109984
+    m_Key: proj.37
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109985
+    m_Key: proj.38
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109986
+    m_Key: proj.39
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109987
+    m_Key: proj.40
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109988
+    m_Key: proj.41
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109989
+    m_Key: proj.42
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109990
+    m_Key: proj.43
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109991
+    m_Key: proj.44
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109992
+    m_Key: proj.45
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109993
+    m_Key: proj.46
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109994
+    m_Key: proj.47
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109995
+    m_Key: proj.48
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109996
+    m_Key: proj.49
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109997
+    m_Key: proj.50
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109998
+    m_Key: proj.51
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109999
+    m_Key: proj.52
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110000
+    m_Key: proj.53
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110001
+    m_Key: proj.54
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110002
+    m_Key: proj.55
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110003
+    m_Key: proj.56
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110004
+    m_Key: proj.57
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110005
+    m_Key: proj.58
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110006
+    m_Key: proj.59
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110007
+    m_Key: proj.60
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110008
+    m_Key: proj.61
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110009
+    m_Key: proj.62
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110010
+    m_Key: proj.63
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110011
+    m_Key: proj.64
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110012
+    m_Key: proj.65
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110013
+    m_Key: proj.66
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110014
+    m_Key: proj.67
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304256
+    m_Key: proj.68
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304257
+    m_Key: proj.69
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304258
+    m_Key: proj.70
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304259
+    m_Key: proj.71
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304260
+    m_Key: proj.72
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304261
+    m_Key: proj.73
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304262
+    m_Key: proj.74
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304263
+    m_Key: proj.75
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304264
+    m_Key: proj.76
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1206175923727499264
+  references:
+    version: 2
+    RefIds:
+    - rid: 1206175923727499264
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1680109466345

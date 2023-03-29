@@ -1,0 +1,867 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Projects_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 16f55839ffe6b4647a6e2d8c608f4420, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 437989138432
+    m_Localized: "Reorientaci\xF3n de la actividad profesional de la juventud que
+      se dedica a la construcci\xF3n con el fin de implementar otras formas de construcci\xF3n
+      m\xE1s sostenibles.\nSe llev\xF3 a cabo a trav\xE9s de la recuperaci\xF3n de
+      t\xE9cnicas tradicionales locales de construcci\xF3n y la ense\xF1anza de nuevas
+      t\xE9cnicas constructivas, sostenibles y respetuosas con el medioambiente para
+      personas desempleadas del mundo de la construcci\xF3n.\nAdem\xE1s con estas
+      acciones se habilit\xF3 y acondicion\xF3 un espacio asociativo \u2018coworking
+      asociativo\u2019para facilitar encuentros de asociaciones de la provincia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915648
+    m_Localized: "Proyecto dedicado a promocionar la acuapon\xEDa como actividad
+      innovadora y de emprendimiento socioecon\xF3mico, desde la producci\xF3n ecol\xF3gica
+      y sostenible de alimentos (pescados y vegetales), promoviendo el asociacionismo
+      y cooperativismo como modelos de emprendimiento, uniendo fuerzas y capacidades
+      para poner en marcha iniciativas empresariales, sociales y medioambientales
+      que supongan la creaci\xF3n de puestos de trabajo y el autoconsumo entre la
+      juventud."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915649
+    m_Localized: "Huerto ecol\xF3gico y aula de educaci\xF3n agroecol\xF3gica afianzando
+      un papel dinamizador y centro de referencia para los proyectos e iniciativas
+      relacionadas con la agricultura urbana.\nMantenimiento y adecuaci\xF3n de las
+      zonas de huerto, arom\xE1ticas e invernadero para realizaci\xF3n de cursos,
+      talleres y visitas.\nCelebraci\xF3n de las II Jornadas de Huertas Urbanas en
+      M\xE1laga. Curso de formaci\xF3n sobre huertas urbanas ecol\xF3gicas. Talleres
+      en torno a la huerta ecol\xF3gica, agroecolog\xEDa, agricultura urbana e innovaci\xF3n.\nSensibilizaci\xF3n
+      ambiental en torno a la huerta ecol\xF3gica, agroecolog\xEDa, agricultura urbana
+      e innovaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438005915650
+    m_Localized: "Resultado de sinergias entre la protecci\xF3n del medio ambiente
+      y la actuaci\xF3n pr\xE1ctica del vermicompostaje. Se realizaron cinco l\xEDneas
+      de trabajo en el huerto de La Noria: huerto productivo, experimental, bosque
+      comestible, \xE1rea de compostaje e invernadero."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109952
+    m_Localized: "Dise\xF1o y mantenimiento del huerto de La Noria, divulgando el
+      dise\xF1o, las cosechas y los desaf\xEDos del huerto, para inspirar una agricultura
+      coherente con el entorno en la provincia.\nOrganizaci\xF3n del I Encuentro
+      de Hortodiversidad de M\xE1laga, espacio de encuentro con formato cient\xEDfico
+      para todas las iniciativas agroecol\xF3gicas de la provincia. Mapeo de espacios
+      participativos de cultivo agroecol\xF3gico.\nSesiones formativas o Aulas de
+      Agroecolog\xEDa. Realizaci\xF3n de audiovisual 'Mujeres y Agroecolog\xEDa:
+      una cultura de permanencia'. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109953
+    m_Localized: "Agronautas tienen como objetivo generar en La Noria un espacio
+      para la innovaci\xF3n que complemente las capacidades de sus instalaciones
+      y ayude a la comunidad existente, tanto en el propio centro como en la provincia
+      de M\xE1laga.\nEntre las actividades destacan:\n- Localizaci\xF3n de iniciativas
+      emergentes en la provincia de M\xE1laga para su interactuaci\xF3n con La Noria.\n-
+      Creaci\xF3n de un espacio en el huerto de La Noria con sistemas constructivos
+      y de ahorro de energ\xEDa y recursos, para generar relaciones y pr\xE1cticas
+      novedosas en procesos y organismos naturales.\n- Foros de iniciativas locales
+      centrado en la educaci\xF3n ambiental, agroecolog\xEDa y consumo responsable
+      con especial incidencia en los cultivos y alimentos de la provincia de M\xE1laga."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109954
+    m_Localized: "Creaci\xF3n y dise\xF1o de productos a trav\xE9s de pl\xE1stico
+      reciclado, reutilizaci\xF3n de pl\xE1stico en la elaboraci\xF3n de nuevos productos
+      a trav\xE9s del dise\xF1o y construcci\xF3n de m\xE1quinas para procesar el
+      pl\xE1stico en centros de formaci\xF3n profesional.\nEl proyecto contempla
+      el dise\xF1o y fabricaci\xF3n de productos, talleres de comunicaci\xF3n, marketing
+      y distribuci\xF3n de productos, red de formaci\xF3n de formadores. Exposici\xF3n
+      de productos y mercadillo en La Noria. Jornadas y talleres impartidos por el
+      alumnado. Creaci\xF3n de recursos educativos para formadores y formadoras.
+      Potenciar el esp\xEDritu emprendedor, promover valores de igualdad y creaci\xF3n
+      de sinergias entre los distintos actores"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109955
+    m_Localized: "Divulgar el ecoemprendimiento a trav\xE9s de capsulas formativas,
+      encuentros, jornadas y seminarios sobre: nuevos modelos energ\xE9ticos, emprender
+      en social y tecnol\xF3gico, emprendimiento colaborativo, agroecolog\xEDa y
+      certificaci\xF3n participativa, cooperativa de comercio justo y productos ecol\xF3gicos,
+      formaci\xF3n en bioconstrucci\xF3n, emprendimiento sostenible, agricultura
+      urbana, alimentaci\xF3n consciente, educaci\xF3n en valores, etc.\nMostrar
+      a los y las j\xF3venes cu\xE1les son las oportunidades del emprendimiento social
+      y medioambiental, as\xED como, la importancia de trabajar en iniciativas que
+      permitan el cambio hacia sociedades m\xE1s justas sin renunciar a la viabilidad
+      econ\xF3mica. Celebraci\xF3n en La Noria de la 3\xBA Feria por una Econom\xEDa
+      Verde Solidaria y del Bien Com\xFAn."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109956
+    m_Localized: "Conversi\xF3n de los productos org\xE1nicos generados por La Noria
+      en abono org\xE1nico para ser utilizado en los jardines y el huerto de las
+      propias instalaciones. La Noria ser\xE1 el primer lugar en M\xE1laga que realice
+      el procesamiento in-situ de los residuos org\xE1nicos y de papel que genere
+      para ser utilizados en el propio centro como abono.\nAdem\xE1s de la instalaci\xF3n
+      del aparato y equipo para el vermicompostaje denominado Worm Wigwam, el proyecto
+      contempla la realizaci\xF3n de talleres formativos al personal de La Noria
+      y de los proyectos asociados, as\xED como la creaci\xF3n de un espacio demostrativo
+      y su apertura al uso y visita por parte de los distintos colectivos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109957
+    m_Localized: "Programa de reforestaci\xF3n, lucha contra el cambio clim\xE1tico
+      y fomento de una actitud emprendedora sostenible como yacimiento de empleo,
+      en materia medioambiental y forestal dirigida a j\xF3venes de entornos rurales
+      (centros de ESO y Bachillerato). Se realizaron talleres de c\xE1lculo de Huella
+      de Carbono y compensaci\xF3n de emisiones de GEIs en centros docentes, talleres
+      de Orientaci\xF3n Laboral en centros docentes, visitas de los centros docentes
+      a empresas forestales, reforestaciones en los municipios de los centros docentes
+      y una Jornada Exposici\xF3n '30 a\xF1os reforestando con AMMA Almijara' en
+      La Noria con visitas a zonas reforestadas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109958
+    m_Localized: "Mostrar el abanico de oportunidades disponibles en el medio rural
+      vinculado a la permanencia de las personas j\xF3venes en el territorio a trav\xE9s
+      de la formaci\xF3n en agricultura ecol\xF3gica y la importancia de la fauna
+      auxiliar del medio natural, y talleres de construcci\xF3n con la importancia
+      del reciclado a la hora de construir insectarios. Dirigido a estudiantes de
+      los 5 Institutos de la Comarca del Valle del Guadalhorce."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109959
+    m_Localized: "Proyecto orientado a facilitar la inserci\xF3n socio laboral a
+      trav\xE9s de la formaci\xF3n te\xF3rico-pr\xE1ctica en el sector de la econom\xEDa
+      verde. Destinado a personas que se encuentran en situaci\xF3n de vulnerabilidad.
+      Se trabajar\xE1 la adquisici\xF3n y/o mejora de competencias profesionales
+      y el aprendizaje de conocimientos t\xE9cnicos b\xE1sicos en agroecolog\xEDa
+      y horticultura.\nLa formaci\xF3n ir\xE1 vinculada a un periodo de pr\xE1cticas
+      no laborales en empresas y cooperativas del sector. El objetivo es la inserci\xF3n
+      laboral por cuenta ajena o bien la generaci\xF3n de emprendimiento social."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109960
+    m_Localized: "Las PlaM, Plantas Multifuncionales, son plantas comestibles de
+      muy f\xE1cil cultivo que sirven de apoyo en el huerto, son medicinales y suponen
+      una estrategia de lucha contra el Cambio Clim\xE1tico.\nEl proyecto cuenta
+      con las siguientes l\xEDneas de acci\xF3n: Jornada de presentaci\xF3n y degustaci\xF3n
+      de platos elaborados con PlaM, Jornadas 'Ciencias Ciudadanas'. Curso online
+      \u2013 Cultivos innovadores por el Clima. Taller de Plantas Multifuncionales:
+      terapia hort\xEDcola para el fomento de la independencia, para mujeres en riesgo
+      de exclusi\xF3n social.\nTalleres 'Cultivando Futuro', Espacios demostrativos
+      e investigaci\xF3n sobre Plantas Multifuncionales en las instalaciones de la
+      huerta de La Noria."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109961
+    m_Localized: "El proyecto de AMMA Almijara da a conocer la Custodia del Territorio
+      (CdT) en los ayuntamientos locales a trav\xE9s de talleres y acciones formativas
+      online. La CdT es un instrumento que permite acuerdos entre asociaciones y
+      propietarios de terrenos con el fin de poner en valor la tierra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109962
+    m_Localized: "Biodiversas ofrecer\xE1 a trav\xE9s de la formaci\xF3n una oportunidad
+      de inclusi\xF3n social y empleabilidad a personas con diversidad funcional
+      y mujeres en riesgo de exclusi\xF3n a trav\xE9s de la innovaci\xF3n con plantas
+      (agroecolog\xEDa)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109963
+    m_Localized: "Proyecto cuyo objetivo principal es divulgar entre la poblaci\xF3n
+      los beneficios de la denominada 'Dieta 3S', dieta saludable, sostenible y sensorial
+      al mismo tiempo, involucrando a abuelas y nietos para potenciar las relaciones
+      intergeneracionales y poniendo en valor el patrimonio oral de la comunidad.
+      Sus participantes realizar\xE1n formaciones de grabaci\xF3n y edici\xF3n de
+      v\xEDdeo, nutrici\xF3n, alimentaci\xF3n y consumo a trav\xE9s de una plataforma
+      online."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109964
+    m_Localized: "El objetivo principal ha sido promover la inclusi\xF3n social evitando
+      cualquier forma de discriminaci\xF3n en el acceso al autoempleo a trav\xE9s
+      de acciones orientadas a la mejora del emprendimiento social de las personas
+      en situaci\xF3n de mayor vulnerabilidad y al apoyo de mercados laborales inclusivos,
+      creando modelos replicables y sostenibles que potencien el empleo y emprendimiento
+      en el sector ganadero caprino.\nEste proyecto atiende las necesidades de demanda
+      de personal cualificado en el sector ganadero, adem\xE1s del aprovechamiento
+      de los recursos del territorio para su explotaci\xF3n sostenible y como oportunidad
+      para el crecimiento del municipio y trata de abordar el reto demogr\xE1fico
+      del despoblamiento a trav\xE9s del proyecto \u2018Rumbo al campo\u2019, una
+      experiencia de inclusi\xF3n e inmersi\xF3n rural en la que nueve personas en
+      situaci\xF3n de vulnerabilidad social est\xE1n descubriendo el sector ganadero
+      caprino y distintos oficios relacionados. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109965
+    m_Localized: "Proyecto que tiene como objetivo facilitar la inserci\xF3n social
+      y laboral de personas con diversidad funcional.  Entre sus iniciativas: pr\xE1cticas
+      profesionales para los alumnos, apoyo terap\xE9utico y podcast que visibiliza
+      el colectivo con diversidad funcional."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109966
+    m_Localized: "Sembrando territorio pone en valor las iniciativas agroecol\xF3gicas
+      (de producci\xF3n, transformaci\xF3n, restauraci\xF3n o formaci\xF3n) de la
+      provincia de M\xE1laga analizando su capacidad de resiliencia ante la emergencia
+      clim\xE1tica. \nMediante el proyecto se ha dado microfinanciaci\xF3n a 3 iniciativas
+      de gran valor social y un paquete de medidas que mejoren su retorno social,
+      adem\xE1s de acompa\xF1ar con asesoramiento para la implementaci\xF3n de las
+      medidas y con un estudio de viabilidad y an\xE1lisis de impacto.\nLa iniciativa
+      se enmarca en el convenio de colaboraci\xF3n entre la Diputaci\xF3n y Fundaci\xF3n
+      \u201Cla Caixa\u201D, mediante el cual se fortalece el sector agroalimentario
+      de la provincia con la microfinanciaci\xF3n de proyectos agroecol\xF3gicos.
+      El centro de innovaci\xF3n social La Noria ha recaudado m\xE1s de 12.000 euros
+      para tres proyectos agroecol\xF3gicos en Gauc\xEDn, Humilladero y Co\xEDn a
+      trav\xE9s del plan \u2018Sembrando territorio\u2019.\nLas iniciativas que han
+      recibido el asesoramiento y acompa\xF1amiento de Ecoherencia para realizar
+      sus campa\xF1as de microfinanciaci\xF3n, seleccionados tras un proceso de evaluaci\xF3n
+      de su impacto social y medioambiental, son \u2018Pura Vida, la tienda verde\u2019
+      de Gauc\xEDn, \u2018Spiga Negra\u2019 de Humilladero y \u2018Huerta Ga\xEFa\u2019
+      de Co\xEDn. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109967
+    m_Localized: "La Noria y la asociaci\xF3n Extiercol ponen en marcha el proyecto
+      de la primera Escuela Rural de Agroecolog\xEDa de M\xE1laga. La iniciativa
+      se enmarca en el convenio de colaboraci\xF3n entre la Diputaci\xF3n de M\xE1laga
+      y la Fundaci\xF3n \u2018la Caixa\u2019 y tiene el objetivo de fomentar el emprendimiento
+      en las zonas rurales.\nEste proyecto supone la puesta en valor de forma sostenible
+      de uno de los mayores recursos naturales del territorio, el suelo. Asimismo,
+      el proyecto tambi\xE9n persigue diferentes objetivos entre los que se encuentran
+      la generaci\xF3n de redes -al configurarse la Escuela como una confluencia
+      de instituciones, entidades y empresas-; la formaci\xF3n te\xF3rica y pr\xE1ctica;
+      la puesta en valor de los recursos naturales del territorio de forma sostenible;
+      hacer frente al despoblamiento de las zonas rurales, y fomentar el asentamiento
+      de los j\xF3venes mediante el fomento del emprendimiento. \nEsta formaci\xF3n
+      busca fomentar la toma de conciencia en la poblaci\xF3n, sobre todo entre la
+      juventud, para que conozcan las posibilidades que ofrece el cambio de la agricultura
+      convencional a la agricultura ecol\xF3gica como una oportunidad tanto a nivel
+      econ\xF3mico, como social y medioambiental, as\xED como ofrecer a los j\xF3venes
+      las aptitudes necesarias para poder acceder a oportunidades laborales en el
+      medio rural, desarrollarse profesionalmente y despertar inter\xE9s para asentarse
+      en el territorio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109968
+    m_Localized: "El proyecto \u2018Reciclados, Plateados y Verdes\u2019 ha impulsado
+      la construcci\xF3n de dos huertos urbanos y ha instalado 17 mesas de cultivo
+      para el autoconsumo en las que han participado 20 familias. La cooperativa
+      sin \xE1nimo de lucro, Circula, especializada en econom\xEDa circular, ha sido
+      la encargada del desarrollo del proyecto y de la construcci\xF3n y carpinter\xEDa
+      de las mesas de cultivo hechas de madera reciclada cedidas por empresas malague\xF1as.\nEste
+      proyecto destaca la importancia de trabajar la econom\xEDa circular, adem\xE1s
+      de impulsar iniciativas que mejoren la calidad de vida de las personas mayores
+      a trav\xE9s de la econom\xEDa plateada. Entre los objetivos del proyecto destacan,
+      adem\xE1s de la creaci\xF3n de los huertos urbanos y el autoconsumo de los
+      alimentos cultivados, la lucha contra el cambio clim\xE1tico reduciendo la
+      emisi\xF3n de gases nocivos procedente del sector de la alimentaci\xF3n, uno
+      de los m\xE1s contaminantes respecto a la emisi\xF3n de gases de efecto invernadero.
+      Asimismo, reduce la basura y envoltorios de pl\xE1sticos, aumenta el consumo
+      de alimentos vegetales y disminuye el consumo de productos con alto contenido
+      en grasas y az\xFAcares."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109969
+    m_Localized: "El proyecto YouFAB pretende informar y formar a los j\xF3venes
+      artesanos de la provincia de M\xE1laga sobre el uso de la tecnolog\xEDa digital
+      en el dise\xF1o y fabricaci\xF3n en 3D de sus creaciones a fin de potenciar
+      su crecimiento profesional y fomentar el emprendimiento.\nSe trata de una serie
+      de talleres y jornadas informativas que se desarrollar\xE1n en las dependencias
+      de La Noria donde\_ una treintena de j\xF3venes malague\xF1os podr\xE1n beneficiarse
+      del taller formativo.\nEl objetivo de este proyecto no es otro que crear la
+      figura innovadora del artesano tecnol\xF3gico y convertir a La Noria, en el
+      futuro, en una f\xE1brica urbana donde la gente pueda ir a elaborar sus propios
+      productos, herramientas y dise\xF1os.\nConcretamente, la iniciativa YouFAB,
+      comprende la realizaci\xF3n de un taller de modelado e impresi\xF3n 3D que
+      se impartir\xE1 en el centro de innovaci\xF3n social y abarcar\xE1 la formaci\xF3n
+      te\xF3rica y pr\xE1ctica necesaria sobre sistemas de modelado param\xE9trico
+      3D y fabricaci\xF3n digital.\nLa finalidad de estas actividades es darle la
+      formaci\xF3n necesaria a aquellas personas que est\xE9n interesadas en participar
+      en el taller de Modelado e Impresi\xF3n 3D pero que no tengan los conocimientos
+      necesarios de inform\xE1tica o dise\xF1o CAD.\nAdem\xE1s, el proyecto ofrece
+      diferentes jornadas de informaci\xF3n, tanto para la concienciaci\xF3n social
+      sobre el empleo de la tecnolog\xEDa digital enfocado a artesanos de la provincia,
+      como jornadas informativas sobre el empleo de la tecnolog\xEDa digital dirigida
+      a la orientaci\xF3n profesional de j\xF3venes estudiantes de FP."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109970
+    m_Localized: "GAMESTAR(T) es un proyecto integrado por profesionales, artistas,
+      investigadores, estudiantes\u2026 que trabajan en torno a la investigaci\xF3n
+      del videojuego en sus facetas educativas, culturales, econ\xF3micas, art\xEDsticas,
+      etc.\nEl elemento central sonlos videojuegos entendidos como una forma m\xE1s
+      de creaci\xF3n art\xEDstico-tecnol\xF3gica (c\xF3mic, cine, pintura, m\xFAsica,
+      escultura, programaci\xF3n inform\xE1tica, etc.)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109971
+    m_Localized: "Proyecto realizado por AAGIT que intenta favorecer el inter\xE9s
+      y participaci\xF3n activa de la infancia y juventud por las nuevas tecnolog\xEDas
+      disminuyendo la brecha en la provincia a trav\xE9s de talleres did\xE1cticos
+      de rob\xF3tica con impresi\xF3n 3D y software de programaci\xF3n y uso libre.\n-
+      4 Talleres de CC. de la Computaci\xF3n a trav\xE9s de la Rob\xF3tica para personas
+      adultas, dirigidos a profesionales de la animaci\xF3n sociocultural, de los
+      centros Guadalinfo, y del \xE1mbito social y docentes (4 horas de duraci\xF3n)\n-
+      30 Talleres Infantiles y Juveniles de Rob\xF3tica, Programaci\xF3n y Tecnolog\xEDa
+      Educativa (2 horas de duraci\xF3n) Talleres de 1\xBA a 3\xBA de Educaci\xF3n
+      Infantil"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109972
+    m_Localized: "Fomento de la arquitectura como herramienta para el desarrollo
+      del conocimiento espacial y matem\xE1tico para los ni\xF1os y ni\xF1as de entre
+      4 y 12 a\xF1os, como acercamiento al trabajo de profesiones cient\xEDficas
+      y t\xE9cnicas, como la arquitectura, la ingenier\xEDa, la qu\xEDmica, la f\xEDsica
+      o la matem\xE1tica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109973
+    m_Localized: "Crafteando es un proyecto orientado al mapeo de nuestro entorno
+      cercano, nuestros barrios, pueblos y ciudades, con el objetivo de desarrollar
+      propuestas de mejora del espacio p\xFAblico.\nEste proyecto auna la intervenci\xF3n
+      sobre el territorio y el contacto directo con nuestras realidades cercanas
+      con la posibilidad de imaginar y dise\xF1ar espacios alternativos con herramientas
+      digitales como el videojuego Minecraf, con \xE9l se puede construir y dise\xF1ar
+      cualquier tipo de espacio para devolverlos al territorio en forma de propuestas.\nA
+      trav\xE9s de talleres participativos destinados a j\xF3venes en los municipios,
+      se atraviesa la barrera digital-anal\xF3gica incidiendo sobre nuestra forma
+      de pensar el espacio que nos rodea y permiti\xE9ndonos plantearnos el entorno
+      y hacer propuestas sobre la realidad de nuestros pueblos. En este proyecto
+      colaboran la Asociacion Oleaje, DYA-R y Arrabal AID"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109974
+    m_Localized: "Programa de formaci\xF3n en el que se a\xFAnan, nuevas tecnolog\xEDas
+      a trav\xE9s del aprendizaje para la creaci\xF3n de una tienda virtual. Con
+      una nueva visi\xF3n de c\xF3mo hacerlo y mejorar nuestro entorno siguiendo
+      la filosof\xEDa y metodolog\xEDa de la econom\xEDa del bien com\xFAn, para
+      la mejora de la empleabilidad social, el fomento de la participaci\xF3n social
+      y econ\xF3mica de j\xF3venes, evitando la despoblaci\xF3n, y fortaleciendo
+      el comercio y producci\xF3n rural con una apertura a otros mercados.\nTodo
+      ello encaminado a la generaci\xF3n de un nodo territorial en la zona norte
+      de la provincia de M\xE1laga para el emprendimiento y la innovaci\xF3n social."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109975
+    m_Localized: "La asociaci\xF3n NAIM trabajar\xE1 la formaci\xF3n en competencias
+      digitales para la empleabilidad y b\xFAsqueda del empleo a trav\xE9s de la
+      red, as\xED como formaciones online espec\xEDficas de herramientas digitales
+      para el emprendimiento en el mundo rural y la reducci\xF3n de la brecha digital
+      con j\xF3venes de la comarca de Antequera."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109976
+    m_Localized: "El proyecto consiste en la puesta a disposici\xF3n de 200 equipos
+      inform\xE1ticos reutilizados para su uso por parte de familias sin recursos
+      y asociaciones sin \xE1nimo de lucro del medio rural. Esta acci\xF3n ir\xE1
+      acompa\xF1ada de talleres formativos relacionados con la materia.\nSe trata
+      de una iniciativa social y medioambiental que adem\xE1s de luchar contra la
+      brecha digital implica a las empresas en RSC y a las administraciones en el
+      desarrollo de sus propios territorios mediante la cesi\xF3n de equipos ya utilizados
+      para su aprovechamiento por asociaciones o familias sin recursos de sus comarcas.  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109977
+    m_Localized: "Algaidas Maker es un espacio de emprendimiento social digital para
+      potenciar competencias creativas a trav\xE9s de la tecnolog\xEDa y aunar proyectos
+      de innovaci\xF3n social. Pretende disminuir la brecha digital y acercar a las
+      personas mayores a las tecnolog\xEDas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109978
+    m_Localized: "La Fundaci\xF3n realizar\xE1 sesiones de producci\xF3n art\xEDstica
+      dirigida a poblaci\xF3n joven de municipios peque\xF1os para potenciar la participaci\xF3n,
+      la creatividad y la inteligencia colectiva."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109979
+    m_Localized: "Aula Abierta Innovaci\xF3n + Educaci\xF3n formar\xE1 y asesorar\xE1
+      a j\xF3venes que han abandonado el sistema educativo sin obtener el t\xEDtulo
+      de Educaci\xF3n Secundaria, o que quieren realizar la prueba de acceso a los
+      ciclos formativos a trav\xE9s de una modalidad de ense\xF1anza semipresencial.
+      Como novedad incluye nuevos formatos de los temarios como el audiolibro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109980
+    m_Localized: "La Asociaci\xF3n L\xEDbero desarrolla la participaci\xF3n social
+      de los j\xF3venes a trav\xE9s de la interacci\xF3n con el entorno en un juego
+      mediante el que adquirir\xE1n conocimientos de cambio clim\xE1tico, g\xE9nero,
+      ODS, econom\xEDa social y mundo rural."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109981
+    m_Localized: "AFENES trabajar\xE1 en alcanzar la inclusi\xF3n social de las personas
+      con problemas de salud mental a trav\xE9s de la formaci\xF3n y uso de nuevas
+      tecnolog\xEDas como el modelado e impresi\xF3n 3D."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109982
+    m_Localized: "El proyecto pone en marcha una Escuela de Videojuegos para Madres
+      y Padres a trav\xE9s de la cual trabaja la prevenci\xF3n y sensibilizaci\xF3n
+      sobre los retos que plantea el ocio electr\xF3nico para menores con talleres
+      y experiencias participativas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109983
+    m_Localized: "El proyecto afronta el reto del despoblamiento y da una soluci\xF3n
+      a la brecha digital en el sector agr\xEDcola y ganadero de la provincia. Con
+      este objetivo, se ha puesto en marcha un programa formativo sobre aplicaciones
+      electr\xF3nicas y redes sociales que permita realizar a las empresas tr\xE1mites
+      de forma digital, lo que permitir\xE1 una gesti\xF3n m\xE1s \xE1gil de las
+      explotaciones, el mejor aprovechamiento de sus recursos y el fortalecimiento
+      del negocio.\nSe han realizado para ello 20 acciones formativas presenciales
+      y v\xEDa online o streaming, de 4 horas de duraci\xF3n cada una, hasta 300
+      agricultores han participado en los cursos pr\xE1cticos. \nAdem\xE1s, insta
+      a la curiosidad en el sector por encontrar otras formas de tecnolog\xEDas que
+      mejoren el rendimiento de sus cultivos, generando una gran aportaci\xF3n a
+      la agricultura y la ganader\xEDa permitiendo reducir costos, tiempos, aumentar
+      la producci\xF3n en los cultivos y hacer m\xE1s r\xE1pidos y eficientes diferentes
+      procesos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109984
+    m_Localized: "El \u2018Tour FabM\xF3vil\u2019 se traslada a diez municipios de
+      la provincia para mostrar a los m\xE1s j\xF3venes el uso de las nuevas tecnolog\xEDas
+      en cuanto al dise\xF1o e impresi\xF3n en 3D que permite fabricar a bajo coste
+      y que se ha convertido en una nueva alternativa de generaci\xF3n de empleo.\nSe
+      trata del desarrollo de un taller itinerante de cuatro horas de duraci\xF3n.
+      Concretamente, el \u2018Tour FabM\xF3vil\u2019 est\xE1 recorriendo las localidades
+      de Archidona, Antequera, Ronda, C\xE1rtama, Benalm\xE1dena, Estepona, V\xE9lez-M\xE1laga,
+      Nerja, Fuengirola y M\xE1laga capital. La actividad comprende la celebraci\xF3n
+      por la ma\xF1ana de un taller formativo sobre el uso de esta herramienta tecnol\xF3gica
+      de dise\xF1o con esc\xE1ner e impresi\xF3n en 3D y por la tarde, la bicicleta
+      ser\xE1 expuesta a los vecinos de la localidad que podr\xE1n ver en primera
+      persona una demostraci\xF3n de c\xF3mo se producen objetos a trav\xE9s de este
+      sistema.\nLos talleres est\xE1n destinados a j\xF3venes emprendedores, artesanos,
+      artistas y curiosos de la provincia que buscan formarse y conocer nuevas t\xE9cnicas
+      que sirvan para incrementar las oportunidades de empleo y dinamicen la econom\xEDa
+      local."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109985
+    m_Localized: "Ofrecer\xE1n una l\xEDnea abierta de ayuda a la comunidad educativa,
+      al tejido asociativo y las familias, con orientaci\xF3n y asesoramiento jur\xEDdico
+      y psicol\xF3gico sobre seguridad del menor en la red. Esto se concretar\xE1
+      en charlas en los centros educativos, en la implantaci\xF3n de una imagen web
+      en las p\xE1ginas web de los centros educativos para realizar consultas online
+      as\xED como se implantar\xE1 una l\xEDnea de atenci\xF3n telef\xF3nica y online.\nSe
+      ofrecer\xE1 una oferta formativa especializada en materia de educaci\xF3n con
+      juegos on-line para j\xF3venes y abuelos/as de la provincia de M\xE1laga. Tambi\xE9n
+      se concienciar\xE1 a los j\xF3venes sobre las tecnolog\xEDas desde un punto
+      de vista no violento y tendr\xE1 un impacto de 15.000 personas de la provincia
+      de M\xE1laga."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109986
+    m_Localized: "Ayuda y disminuci\xF3n de malas pr\xE1cticas en los usos de internet
+      y las tecnolog\xEDas de informaci\xF3n y comunicaci\xF3n en general. Educaci\xF3n
+      a menores para el uso responsable de las TIC y el manejo y seguridad en Internet.\nTalleres
+      educativos en las instalaciones de La Noria y en centros educativos entre menores
+      de 10 y 12 a\xF1os para que conozcan las NNTT, las normas de seguridad y los
+      riesgos de Internet. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109987
+    m_Localized: "Fomento y desarrollo del talento y la creatividad para infancia
+      con altas capacidades en el \xE1rea de NNTT. Creaci\xF3n de un laboratorio
+      de innovaci\xF3n y talento para infancia y j\xF3venes con AACC, donde se forme,
+      investigue y sea incubadora de iniciativas tecnol\xF3gicas enfocadas a la innovaci\xF3n
+      social. Fomento de proyectos de partners tecnol\xF3gicos con entidades y empresas
+      especialistas.\nPromoci\xF3n de convenios de colaboraci\xF3n para el desarrollo
+      e implantaci\xF3n de prototipos de inventos y dise\xF1os en rob\xF3tica y aplicaciones.
+      Promoci\xF3n y generaci\xF3n de inventos y aplicaciones tecnol\xF3gicas, ideas
+      innovadoras y soluciones para el sector real, aplicables a la educaci\xF3n,
+      empleo, medio ambiente\u2026 Talleres de proyectos tecnol\xF3gicos, desarrollo
+      de Apps, rob\xF3tica, tecnolog\xEDas aplicadas al desarrollo de prototipos
+      para inventores, programaci\xF3n, habilidades digitales para AACC. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109988
+    m_Localized: "Visibilizaci\xF3n de las nuevas oportunidades sociolaborales para
+      la juventud a trav\xE9s de las herramientas tecnol\xF3gicas en c\xF3digo abierto.
+      Esta actuaci\xF3n se dirige a j\xF3venes y emprendedores e innovadores sociales.\nDurante
+      dos intensos d\xEDas, expertos en el sector de las nuevas tecnolog\xEDas, redes
+      sociales e Internet, debaten sobre la importancia de los movimientos Open en
+      sus m\xE1s diversos \xE1mbitos, -access, hardware, software, source ecology-
+      como motor de desarrollo econ\xF3mico y social en el territorio de la juventud
+      y la infancia.\nUn medio perfecto para detectar y hacer visible las oportunidades
+      sociales para la juventud de todos los municipios a trav\xE9s de las herramientas
+      tecnol\xF3gicas en c\xF3digo abierto.\nIgualmente, se abordan aspectos como
+      los nuevos espacios y laboratorios ciudadanos que configuran los movimientos
+      \u2018Fablabs\u2019, \u2018Makers\u2019 o \u2018Hacker\u2019 que est\xE1n irrumpiendo
+      con fuerza desde iniciativas p\xFAblicas y privadas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109989
+    m_Localized: "Punto dedicado a la sensibilizaci\xF3n medioambiental y al emprendimiento
+      juvenil en torno al mar. Versa tambi\xE9n sobre recuperar las tradicionales
+      salazones deshidratadas y conservas, desde un punto de vista innovador. Un
+      ejemplo podr\xEDa ser la t\xE9cnica del Garum de M\xE1laga (salsa de pesado
+      muy apreciada en la \xE9poca romana)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109990
+    m_Localized: "Apuesta pionera por el valor del profesional de lo social como
+      facilitador de su entorno y su empoderamiento a trav\xE9s del emprendimiento.
+      Contempla la realizaci\xF3n de sesiones informativas, curso formativo y mentorizaci\xF3n
+      de proyectos.\n- Jornadas sobre Innovaci\xF3n Social en 5 municipios\n- Formaci\xF3n
+      consistente en 5 jornadas en 3 municipios diferentes\n- Mentorizaci\xF3n de
+      10 proyectos \n- Jornada de intercambio de ideas emprendedoras en La Noria "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109991
+    m_Localized: "Proyecto destinado a impulsar el fomento de la empleabilidad a
+      trav\xE9s de actividades relacionadas con el transporte sostenible. Sensibilizar
+      y educar en seguridad vial a j\xF3venes mediante talleres. Incorporar las posibilidades
+      del ciclotursimo como nicho de emprendimiento, y vinculado a los objetivos
+      de Diputaci\xF3n con la Gran Senda y Senda litoral."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109992
+    m_Localized: "Formaci\xF3n de 15 profesionales para que promuevan y asesoren
+      proyectos de Innovaci\xF3n Social en los peque\xF1os territorios de la provincia
+      a trav\xE9s de un proceso de formaci\xF3n con pr\xE1cticas en entidades sociales."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109993
+    m_Localized: "El proyecto busca la generaci\xF3n de rentas complementarias a
+      trav\xE9s del agroturismo, ayudando a promocionar la actividad de agricultores
+      y ganaderos del sector. Se realizar\xE1 un ciclo de jornadas online para dar
+      a conocer casos de \xE9xitos de emprendimiento rural que sirvan como inspiraci\xF3n
+      para los interesados."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109994
+    m_Localized: "Proyecto de prospecci\xF3n socio-laboral dirigido a poblaciones
+      en riesgo de despoblamiento y a personas del \xE1mbito urbano que desean vivir
+      en estos pueblos. Facilitar\xE1 los medios necesarios para atraer a estos peque\xF1os
+      municipios a personas con posibilidades de teletrabajo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109995
+    m_Localized: "La Asociaci\xF3n busca experiencias de teletrabajo en zonas rurales
+      en riesgo de despoblamiento de M\xE1laga, bajo el concepto de acortar la brecha
+      digital entre lo rural y lo urbano y creando una conexi\xF3n de los visitantes
+      con los pobladores locales y la naturaleza.\nDesde Rooral llevan a cabo un
+      estudio con el objetivo de identificar los criterios necesarios para que los
+      pueblos se adecuen para atraer a teletrabajadores/as. As\xED mismo, realizan
+      un an\xE1lisis de los 45 municipios malague\xF1os en riesgo de despoblaci\xF3n
+      que se categorizan para entender qu\xE9 necesita cada pueblo, y cu\xE1les son
+      las estrategias con m\xE1s potencial para atraer a n\xF3madas rurales. los
+      pueblos nos ense\xF1an a equilibrar el hacer y el ser."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109996
+    m_Localized: "El proyecto nace con la idea de recuperar el hoy abandonado, camping
+      municipal \u2018Las Camaretas\u2019 en Cortes de la Frontera para ofrecer un
+      espacio de innovaci\xF3n social y educaci\xF3n que beneficie a sus habitantes
+      y a su comarca. Una vez puesto en valor, el camping se usa como centro de desarrollo
+      de proyectos educativos y de innovaci\xF3n social para entidades del tercer
+      sector. Adem\xE1s, es lugar de acogida de \u2018n\xF3madas digitales\u2019,
+      con la creaci\xF3n de espacios de coworking y networking entre estos n\xF3madas
+      y las iniciativas empresariales de Cortes de la Frontera y su comarca. \nLas
+      competencias digitales de los n\xF3madas digitales son el complemento para
+      el desarrollo de empresas y aut\xF3nomos de la comarca.  De esta forma, el
+      espacio se convierte en un espacio de coworking y networking entre empresarios
+      locales y n\xF3madas digitales."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109997
+    m_Localized: "Montaje de un \u2018Escape Room\u2019 educativo como herramienta
+      para trabajar valores sociales y medioambientales de manera l\xFAdica. Estar\xE1
+      ubicado en Rancho Lim\xF3n situado en C\xE1rtama, pretende ser un espacio de
+      encuentro y desarrollo del medio rural.\nPara ello la asociaci\xF3n trabaja
+      ocio inclusivo, educaci\xF3n no formal, permacultura y biconstrucci\xF3n entre
+      otras \xE1reas.\nEl Escape Room es un juego basado en el desarrollo de las
+      habilidades mentales para la soluci\xF3n de enigmas y problemas de manera que
+      los y las j\xF3venes pongan en juego la creatividad y el pensamiento cr\xEDtico.
+      \nSe trata de crear una sala de escape en la que un grupo de personas deben
+      estar durante un tiempo determinado hasta resolver un enigma o problema a trav\xE9s
+      de un conjunto de pistas y de manera colaborativa.  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109998
+    m_Localized: "Plan Fermenta fomentar\xE1 la inserci\xF3n laboral de personas
+      con diversidad funcional en centros de producci\xF3n y elaboraci\xF3n artesanal
+      de quesos del entorno rural de la provincia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010109999
+    m_Localized: "Proyecto que trabaja en la cualificaci\xF3n e inserci\xF3n sociolaboral
+      de personas con diversidad funcional en el sector primario. Colabora la Asociaci\xF3n
+      de Criadores de Cabra Malague\xF1a (CABRAMA). La formaci\xF3n se realizar\xE1
+      online, a trav\xE9s de actividades para impulsar las competencias personales
+      y las competencias profesionales relacionadas con el trabajo en la granja,
+      y contar\xE1 con un cuaderno de pr\xE1cticas de ganader\xEDa virtual."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110000
+    m_Localized: "Proyecto que busca visibilizar la situacio\u0301n de las personas
+      con discapacidad intelectual en el medio rural de la Serran\xEDa de Ronda.
+      Se realizar\xE1 apoyo integral online para la formaci\xF3n e inserci\xF3n sociolaboral
+      de los j\xF3venes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110001
+    m_Localized: "Fundatul ha presentado un emprendimiento social innovador en formato
+      Incubadora que pretende ser comercializable, basado en la helicicultura (Cultivo
+      de caracoles) para las personas con diversidad funcional que viven en los municipios
+      del Valle del Guadalhorce, el cual, han buscado contribuir a la riqueza econ\xF3mica
+      y social del territorio. \nEl proyecto parte de un modelo agr\xEDcola y ganadero
+      de granja caracoles, que ha permitido sinergia entre entidades sociales y privadas.
+      Dentro de su implicaci\xF3n la Entidad ha buscado, adem\xE1s, afrontar la brecha
+      digital, la salud, igualdad de g\xE9nero, trabajo decente y crecimiento econ\xF3mico,
+      vinculados a los objetivos de Desarrollo Sostenibles (ODS).\nSe pretende poner
+      en marcha una granja de caracoles, de la variedad Helix aspersa, y estar\xE1
+      a cargo de 40 personas con diversidad funcional que trabajar\xE1n bajo el asesoramiento
+      de expertos profesionales en la materia. Asimismo, tambi\xE9n contempla formaci\xF3n
+      te\xF3rica sobre el conocimiento de la helicicultura y se practicar\xE1 la
+      adecuaci\xF3n del h\xE1bitat y la cr\xEDa de caracoles."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110002
+    m_Localized: "Curso especializado en cocina tradicional malague\xF1a, dirigido
+      a estudiantes de cocina, profesionales de la hosteler\xEDa y emprendedores
+      que pretendan desarrollar actividades de producci\xF3n o transformaci\xF3n
+      en el sector agroalimentario. Formaci\xF3n pr\xE1ctica impartida por personas
+      mayores, especialmente mujeres, del \xE1mbito rural, que son depositarias de
+      recetas y pr\xE1cticas artesanales en riesgos de extinci\xF3n, que pese a no
+      ser profesionales de la ense\xF1anza, sus conocimientos emanan de la experiencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110003
+    m_Localized: "Programa formativo destinado a fomentar nuevas v\xEDas de financiaci\xF3n
+      de asociaciones del \xE1mbito rural y la creaci\xF3n de empresas sociales a
+      trav\xE9s del turismo gastron\xF3mico. Cicerones Rurales, a trav\xE9s de su
+      programa de formaci\xF3n y tutorizaci\xF3n de proyectos, fomentar\xE1 alianzas
+      entre productores agroalimentarios y asociaciones generando la creaci\xF3n
+      de paquetes tur\xEDsticos en las diferentes comarcas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110004
+    m_Localized: "Creaci\xF3n de una lanzadera de proyectos de emprendimiento joven.
+      Sensibilizaci\xF3n y formaci\xF3n en g\xE9nero con emprendedores y emprendedoras
+      j\xF3venes de la provincia de M\xE1laga a trav\xE9s de la Red territorial de
+      apoyo al emprendimiento. Acompa\xF1amiento de un equipo asesor en g\xE9nero
+      a un grupo de 15 proyectos emprendedores de la provincia de M\xE1laga para
+      que su idea de negocio contemple la perspectiva de g\xE9nero.\nFomento de la
+      Incorporaci\xF3n en los proyectos de emprendimiento de la perspectiva de g\xE9nero
+      a trav\xE9s de la formaci\xF3n, encuentros y divulgaci\xF3n entre emprendedores
+      y emprendedoras. Creaci\xF3n de la lanzadera \u2018Emprende en G\xE9nero\u2019,
+      networking, jornadas formativas, conferencias y encuentros para el emprendimiento
+      en g\xE9nero.  "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110005
+    m_Localized: "El proyecto desarrolla en Villanueva de Algaidas un espacio de
+      emprendimiento social digital para estimular, potenciar y desarrollar competencias
+      creativas, sociales y laborales a trav\xE9s de la tecnolog\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110006
+    m_Localized: "Este proyecto sit\xFAa a la tecnolog\xEDa como uno de los pilares
+      b\xE1sicos para la educaci\xF3n de los menores. Gracias al desarrollo de una
+      plataforma tecnol\xF3gica formar\xE1 y concienciar\xE1 a ni\xF1os, AMPAS y
+      entidades malague\xF1as relacionadas con la infancia, pertenecientes a municipios
+      menores de 20.000 habitantes, sobre la seguridad de los menores en la red,
+      proporcionando los conocimientos, y poniendo a disposici\xF3n de los mismos
+      herramientas de rastreo de material il\xEDcito y de denuncia de p\xE1ginas
+      webs que contengan este tipo de material. De este modo, Alia2 pretende aunar
+      los esfuerzos de toda la sociedad para hacer que la red sea un lugar m\xE1s
+      seguro para los j\xF3venes, fomentando su uso seguro y luchando contra fen\xF3menos
+      como el \u2018grooming\u2019, \u2018sexting\u2019, o el \u2018cyberbuying\u2019."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110007
+    m_Localized: "Talleres art\xEDsticos dirigidos a escolares de la provincia de
+      M\xE1laga para despertar la conciencia creativa.\nUna vez vistas las salas,
+      se emula el proceso del artista que busca y mira en otros artistas inspiraci\xF3n,
+      reflexiona sobre ello y, a partir de ah\xED, crea su propia obra. A trav\xE9s
+      del proceso creativo, el grupo comparte y discute descubrimientos, a la que
+      vez que piensan en la importancia de este proceso y no tanto en el resultado
+      final."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110008
+    m_Localized: "Este proyecto consiste en talleres que den soluciones reales y
+      novedosas a j\xF3venes de entre 16 y 25 a\xF1os con TEA, de nivel 1, con la
+      finalidad de proporcionar orientaci\xF3n vocacional, formaci\xF3n y facilitarles
+      la integraci\xF3n laboral.\nLa iniciativa busca la sensibilizaci\xF3n y concienciaci\xF3n
+      de las empresas de los municipios cercanos sobre la importancia de contratar
+      a personas con TEA y con los que, posteriormente, se concertar\xE1n contratos
+      para realizar pr\xE1cticas laborales.\nAsimismo, tanto a nivel individual como
+      grupal, el proyecto tambi\xE9n trabaja, de la mano de psic\xF3logos y trabajadores
+      sociales, aquellos aspectos personales que puedan ayudar a los participantes
+      en la consecuci\xF3n de sus objetivos, como autoconocimiento y aumento de la
+      autoestima, definici\xF3n del perfil profesional o motivaci\xF3n hacia una
+      b\xFAsqueda activa de empleo, entre otros."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110009
+    m_Localized: "Tiene por objetivo motivar y orientar a j\xF3venes entre 14 y 25
+      a\xF1os residentes en la Axarqu\xEDa, que han abandonado su formaci\xF3n y
+      crearles una ilusi\xF3n para buscar empleo.\nEn los talleres aprenden nociones
+      b\xE1sicas de un oficio que les motive para retomar su formaci\xF3n y as\xED
+      tener m\xE1s oportunidades a la hora de ingresar en el mercado laboral.\nPara
+      completar la formaci\xF3n adquirida y que los j\xF3venes tengan una visi\xF3n
+      m\xE1s pr\xE1ctica, se realizan visitas a empresas relacionadas con los talleres
+      impartidos. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110010
+    m_Localized: "Proyecto de j\xF3venes emprendedoras sociales que est\xE1n creando
+      espacios de aprendizaje inclusivo en zonas rurales. Trabajan para atender las
+      necesidades de ni\xF1as/os y j\xF3venes con diversidad funcional, a trav\xE9s
+      de actividades y talleres inclusivos basados en educaci\xF3n no formal y aprendizaje
+      en conexi\xF3n con el territorio.\nCon el objeto de fomentar el desarrollo
+      de su autonom\xEDa y sus competencias claves para la empleabilidad se trabaja
+      con familias y profesionales a trav\xE9s de seminarios y grupos de apoyo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110011
+    m_Localized: "El proyecto \u2018Rejuvenecer\u2019 mejora la calidad de vida de
+      personas mayores a trav\xE9s de su participaci\xF3n en juegos de mesa, mientras
+      que se forma a j\xF3venes y genera empleo para los mismos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110012
+    m_Localized: "Proyecto de apoyo al emprendimiento social en \xE1mbitos profesionales
+      de trabajo educativo con infancia, juventud y mayores. Todo aprendizaje se
+      puede lograr de manera l\xFAdica y experiencial a trav\xE9s del juego como
+      herramienta pedag\xF3gica, adem\xE1s de potenciar la creatividad y el trabajo
+      colectivo, desde la ni\xF1ez hasta que somos personas adultas que, gracias
+      al mismo, se consigue retrasar el envejecimiento.\nEste proyecto pretende generar
+      empleo en los peque\xF1os territorios a trav\xE9s de la utilizaci\xF3n de juegos
+      educativos de mesa como recurso pedag\xF3gico.  Se realizar\xE1n formaciones
+      a trav\xE9s de los juegos de mesa para trabajar competencias para la empleabilidad
+      sobre: empoderamiento, toma de decisiones, negociaci\xF3n y escucha activa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110013
+    m_Localized: "Formaci\xF3n en profesiones de la oferta existente al entorno del
+      Caminito del Rey, destinada a j\xF3venes en riesgo de exclusi\xF3n social en
+      situaci\xF3n de desempleo. Adecuar el grado de profesionalidad alrededor del
+      atractivo tur\xEDstico del entorno natural de El Chorro, para una futura incorporaci\xF3n
+      al mundo laboral.\nOrientaci\xF3n laboral y formaci\xF3n en oficios tur\xEDsticos:
+      ingl\xE9s, emprendimiento en el sector, monitor/a sociocultural y deportivo,
+      gu\xEDa tur\xEDstico y de ruta, hosteler\xEDa, entre otros."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438010110014
+    m_Localized: "El proyecto Pueblo acogedor tiene la finalidad de crear v\xEDnculos
+      entre la poblaci\xF3n rural de diferentes municipios de interior con personas
+      y grupos costeros urbanos de la provincia de M\xE1laga. La entidad realizar\xE1
+      un diagn\xF3stico de las oportunidades que ofrece cada pueblo y establecer\xE1
+      una Agencia Pueblo Acogedor para atender las solicitudes de aquellos interesados
+      en estrechar v\xEDnculos con los municipios."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304256
+    m_Localized: "El proyecto fomenta el emprendimiento en el sector agroganadero
+      dirigido a j\xF3venes de las comarcas de Guadalteba y Serran\xEDa de Ronda.
+      Para ello rescatar\xE1n y dar\xE1n a conocer las t\xE9cnicas tradicionales
+      de cultivo junto con t\xE9cnicas innovadoras y tecnol\xF3gicas. Contar\xE1
+      con talleres y mercadillos de ideas en formato digital."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304257
+    m_Localized: "El proyecto tiene el objetivo de promover el cambio en entidades
+      sociales, personas emprendedoras y empresas de la provincia hacia una econom\xEDa
+      con impacto social a trav\xE9s del fortalecimiento en sostenibilidad econ\xF3mica
+      y medioambiental, perspectiva de g\xE9nero y digitalizaci\xF3n. Est\xE1 compuesto
+      por 6 m\xF3dulos y 15 talleres, tanto online como presencial.\nTiene dos bloques
+      de acci\xF3n, el primero de capacitaci\xF3n a trav\xE9s de p\xEDldoras - talleres
+      de impacto y el segundo de consultor\xEDa especializada e individualizadas
+      para la implantaci\xF3n pr\xE1ctica del proceso de cambio hacia la mejora y
+      sostenibilidad del proyecto/empresa. \nEs fundamental la importancia de acercar
+      estas herramientas a las empresas, emprendedores y entidades sociales, ya que
+      es primordial saber medir el impacto ambiental de las actividades empresariales
+      y promover acciones de triple balance para el desarrollo sostenible y econ\xF3mico
+      del municipio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304258
+    m_Localized: "El fin del proyecto es fomentar el emprendimiento en el entorno
+      rural y evitar el despoblamiento de la comarca de la Sierra de las Nieves a
+      partir del desarrollo sostenible, la innovaci\xF3n social y la transversalidad
+      de g\xE9nero. Se crear\xE1 un grupo de trabajo empresarial y la marca #YoSoyRural
+      con la implicaci\xF3n de estudiantes universitarios, j\xF3venes y mujeres.
+      Adem\xE1s, se realizar\xE1n en formato virtual formaciones en digitalizaci\xF3n
+      empresarial, coaching y marketing, y acciones de sensibilizaci\xF3n en los
+      IES sobre emprendimiento y cultura local."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304259
+    m_Localized: "Proyecto que investiga cu\xE1les son las necesidades de la industria
+      textil en la Provincia de M\xE1laga para poder favorecer la reactivaci\xF3n
+      del sector, tras identificar puntos solidarios de fabricaci\xF3n de material
+      sociosanitario durante la pandemia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304260
+    m_Localized: "El proyecto busca la inclusi\xF3n social y laboral de personas
+      con discapacidad intelectual a trav\xE9s de la impartici\xF3n de talleres,
+      por ellos mismos, de elaboraci\xF3n de cosm\xE9tica natural. \nA trav\xE9s
+      de esta iniciativa y la alianza de entidades sociales, p\xFAblicas y privadas,
+      se trabaja en una de las prioridades de La Noria, el reto de la inclusi\xF3n
+      social y laboral de personas con diversidad funcional, adem\xE1s de la mejora
+      de su empleabilidad. Las personas con discapacidad intelectual de las zonas
+      rurales se enfrentan a numerosas barreras por sus limitaciones y por las propias
+      del medio rural, por lo que con esta iniciativa se promueve su inclusi\xF3n,
+      sensibilizar a la ciudadan\xEDa y poner en valor sus capacidades."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304261
+    m_Localized: "Fundatul lleva a cabo un programa para mejorar la empleabilidad
+      e inclusi\xF3n en el mercado laboral de personas con diversidad funcional en
+      la Sierra de las Nieves y con incidencia en las mujeres."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304262
+    m_Localized: "La Federaci\xF3n de Asociaciones de Mujeres Sierra de las Nieves
+      trabaja el conocimiento de los valores medioambientales que tienen en la comarca
+      de Sierra de las Nieves desde una perspectiva de g\xE9nero. Ha buscado capacitar,
+      formar y orientar a j\xF3venes, mujeres, personas desempleadas y con diversidad
+      funcional de municipios de menos de 20.000 habitantes en la Comarca Sierra
+      de las Nieves sobre experiencias de emprendimiento verde desde el Tercer Sector
+      aport\xE1ndoles conocimientos sobre Custodia del Territorio, Soluciones basadas
+      en la Naturaleza, Infraestructuras y Corredores Verdes, Turismo Sostenible
+      y nuevos nichos de empleo con criterios de sostenibilidad, econom\xEDa circular
+      y econom\xEDa de los comunes. Han dado a conocer el pr\xF3ximo Parque Nacional
+      como figura de protecci\xF3n y su afectaci\xF3n socioecon\xF3mica, ensalzando
+      los oficios y saberes tradicionales y d\xE1ndoles herramientas para ser Custodios
+      de sus Territorios de cara a su conservaci\xF3n e inserci\xF3n laboral, apostando
+      por pueblos igualitarios, inclusivos y sostenibles."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304263
+    m_Localized: "El proyecto lleva a cabo procesos de empoderamiento a trav\xE9s
+      de la poes\xEDa para promover la participaci\xF3n comunitaria de los j\xF3venes
+      y restablecer v\xEDnculos con su entorno local, previniendo el despoblamiento
+      rural."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438014304264
+    m_Localized: "La asociaci\xF3n Jarr\xF3n Club trabajar\xE1 propuestas de actividades
+      de ocio inclusivo y tiempo libre de calidad, en formato virtual, dirigidas
+      a personas con diversidad funcional en las comarcas de Antequera, Nororma y
+      Guadalteba."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
