@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.Settings;
 using TMPro;
 
 namespace vgwb.lanoria
@@ -31,7 +34,8 @@ namespace vgwb.lanoria
             Title.text = projectData.Title;
             Year.text = projectData.Year;
             Entity.text = projectData.Entity;
-            Description.text = projectData.Description;
+            setDescription(projectData.Id);
+
             Info.text = "";
             if (projectData.Image != null) {
                 ProjectImage.gameObject.SetActive(true);
@@ -40,6 +44,14 @@ namespace vgwb.lanoria
                 ProjectImage.gameObject.SetActive(false);
             }
         }
+
+        private void setDescription(string id)
+        {
+            LocalizeStringEvent LocalizeStringEvent = Description.gameObject.GetComponent<LocalizeStringEvent>();
+            LocalizeStringEvent.StringReference = new LocalizedString("Projects", "proj." + id);
+            // Description.text = projectData.Description;
+        }
+
 
         public void OpenPanel(ProjectData data)
         {
