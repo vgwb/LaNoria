@@ -167,6 +167,18 @@ MonoBehaviour:
     m_Key: tutorial.popup.6.title
     m_Metadata:
       m_Items: []
+  - m_Id: 27154081522851840
+    m_Key: intro.1.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27158418991030272
+    m_Key: intro.2.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27159275572764672
+    m_Key: intro.3.desc
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

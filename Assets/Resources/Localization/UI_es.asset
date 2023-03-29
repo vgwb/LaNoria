@@ -111,7 +111,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618752
-    m_Localized: PROYECTOS
+    m_Localized: PROYECTO
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618753
@@ -172,6 +172,28 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22120300530360321
     m_Localized: "R\xE9cord"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27154081522851840
+    m_Localized: "La Noria es un centro de Innovaci\xF3n Social dependiente de la
+      Diputaci\xF3n Provincial de M\xE1laga. Abri\xF3 sus puertas en 2013 en M\xE1laga
+      capital pero su trabajo est\xE1 orientado a las otras 8 comarcas de M\xE1laga,
+      especialmente a las poblaciones de menos de 20.000 habitantes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27158418991030272
+    m_Localized: "Los proyectos est\xE1n representados por cartas de proyecto; cada
+      carta est\xE1 compuesta por varios hex\xE1gonos de diferentes colores representando
+      las 4 l\xEDneas de trabajo principales de La Noria."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27159275572764672
+    m_Localized: "Tu objetivo es conseguir el mayor impacto social posible. \nCada
+      vez que coloques un proyecto este generar\xE1 puntos de impacto social en funci\xF3n
+      de su tama\xF1o.\nAdem\xE1s, hay 2 tipos de Bonus que se pueden conseguir posicionando
+      los proyectos:\n- Por cada hex\xE1gono adyacente del mismo color conseguir\xE1s
+      un Bonus de Sinergia\n- Cuando una comarca tiene todos los 4 colores, consigues
+      un Bonus de Transversalidad"
     m_Metadata:
       m_Items: []
   references:

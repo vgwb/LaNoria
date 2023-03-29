@@ -111,15 +111,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618752
-    m_Localized: PROJECTS
+    m_Localized: PROJECT
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618753
-    m_Localized: SYNERGY BONUS
+    m_Localized: SYNERGIES
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618754
-    m_Localized: REGION BONUS
+    m_Localized: TRANSVERSALITY
     m_Metadata:
       m_Items: []
   - m_Id: 19679508188618755
@@ -172,6 +172,28 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22120300530360321
     m_Localized: Best Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27154081522851840
+    m_Localized: "La Noria is a center for Social Innovation under Diputaci\xF3n
+      Provincial of Malaga. It opened its doors in 2013 in Malaga capital but its
+      work is oriented to the other 8 counties of Malaga province, especially to
+      towns with less than 20,000 inhabitants."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27158418991030272
+    m_Localized: The projects are represented by project cards; each card is composed
+      of several hexagons of different colors representing the 4 main lines of work
+      of La Noria.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27159275572764672
+    m_Localized: "Your goal is to achieve the greatest social impact possible. \nEvery
+      time you place a project it will generate social impact points depending on
+      its size.\nIn addition, there are 2 types of bonuses that can be obtained by
+      positioning the projects:\n- For each adjacent hexagon of the same color you
+      will get a Synergy Bonus.\n- When a county has all 4 colors, you get a Transversality
+      Bonus."
     m_Metadata:
       m_Items: []
   references:
