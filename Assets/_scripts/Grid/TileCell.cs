@@ -11,6 +11,7 @@ namespace vgwb.lanoria
         public TextMeshPro Label;
         public SpriteRenderer Icon;
         public GameObject BridgePrefab;
+        public SpriteRenderer Highlight;
 
         public ProjectCategories Category => category;
         public Color AssociatedColor => GameData.I.Categories.GetColor(category);
@@ -24,6 +25,7 @@ namespace vgwb.lanoria
         public void Init()
         {
             BaseSetup();
+            SetHighlightColor(GameplayConfig.I.MovingColor);
             SetLabel("");
         }
 
@@ -69,6 +71,20 @@ namespace vgwb.lanoria
             bridge.transform.forward = to - from;
 
             return bridge;
+        }
+
+        public void EnableHighlight(bool enable)
+        {
+            if (Highlight != null) {
+                Highlight.gameObject.SetActive(enable);
+            }
+        }
+
+        public void SetHighlightColor(Color newColor)
+        {
+            if (Highlight != null) {
+                Highlight.color = newColor;
+            }
         }
     }
 }

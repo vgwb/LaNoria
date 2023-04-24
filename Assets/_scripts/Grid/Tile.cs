@@ -155,23 +155,6 @@ namespace vgwb.lanoria
             }
         }
 
-        private void Rotate(Transform turnPoint)
-        {
-            var ParentInPivot = new GameObject(); // create an empty object
-            // put it in the pivot position
-            ParentInPivot.transform.position = turnPoint.position;
-            // the new object is now the parent...
-            transform.parent = ParentInPivot.transform;
-            var rot = new Vector3(0.0f, 60.0f, 0.0f); // rotate it!
-            ParentInPivot.transform.Rotate(rot);
-            transform.parent = null; // restore the parent object to null
-            Destroy(ParentInPivot);
-
-            if (OnRotateMe != null) {
-                OnRotateMe();
-            }
-        }
-
         public void OnTileConfirmed()
         {
             EnableLeanComponents(false);
@@ -180,6 +163,7 @@ namespace vgwb.lanoria
 
             OccupyGrid();
             DisableOutline();
+            DisableHighlight();
             StopUsingMe();
             LowerDownTilesHeight(true);
             TileManager.I.AddTilesToPlaced(Cells);
@@ -269,13 +253,6 @@ namespace vgwb.lanoria
             }
         }
 
-        private void DisableCategoryIcons()
-        {
-            foreach (var cell in Cells) {
-                cell.RemoveCategory();
-            }
-        }
-
         public List<Vector3> GetCellsHexPositions()
         {
             var hexPositions = new List<Vector3>();
@@ -342,6 +319,23 @@ namespace vgwb.lanoria
             var pos = transform.position;
             pos.y = BoardManager.I.GetProjectsHeight();
             transform.position = pos;
+        }
+
+        private void Rotate(Transform turnPoint)
+        {
+            var ParentInPivot = new GameObject(); // create an empty object
+            // put it in the pivot position
+            ParentInPivot.transform.position = turnPoint.position;
+            // the new object is now the parent...
+            transform.parent = ParentInPivot.transform;
+            var rot = new Vector3(0.0f, 60.0f, 0.0f); // rotate it!
+            ParentInPivot.transform.Rotate(rot);
+            transform.parent = null; // restore the parent object to null
+            Destroy(ParentInPivot);
+
+            if (OnRotateMe != null) {
+                OnRotateMe();
+            }
         }
 
         private void SetupCellsForUICamera(bool enable)
@@ -419,12 +413,14 @@ namespace vgwb.lanoria
         {
             var overlapColor = GameplayConfig.I.OverlapColor;
             ChangeOutlineColor(overlapColor);
+            ChangeHighlightColor(overlapColor);
         }
 
         private void RestoreOutline()
         {
             var movingColor = GameplayConfig.I.MovingColor;
             ChangeOutlineColor(movingColor);
+            ChangeHighlightColor(movingColor);
         }
 
         private void ChangeOutlineColor(Color color)
@@ -437,10 +433,31 @@ namespace vgwb.lanoria
             OutlineHandler.enabled = false;
         }
 
+        private void DisableHighlight()
+        {
+            foreach (var cell in Cells) {
+                cell.EnableHighlight(false);
+            }
+        }
+
+        private void ChangeHighlightColor(Color color)
+        {
+            foreach (var cell in Cells) {
+                cell.SetHighlightColor(color);
+            }
+        }
+
         private void StopUsingMe()
         {
             isUsed = false;
             OnStopUsingMe?.Invoke();
+        }
+
+        private void DisableCategoryIcons()
+        {
+            foreach (var cell in Cells) {
+                cell.RemoveCategory();
+            }
         }
 
         private void SetupOutline()

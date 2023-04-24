@@ -58,10 +58,10 @@ namespace vgwb.lanoria
                 from = 1.0f;
                 to = GameplayConfig.I.BounceMinDim;
             }
-            DOVirtual.Float(from, to, duration, ResizeRect).OnComplete(() => Bounce(!increment));
+            DOVirtual.Float(from, to, duration, Resize).OnComplete(() => Bounce(!increment));
         }
 
-        private void ResizeRect(float perc)
+        private void Resize(float perc)
         {
             if (highlighterInstance != null) {
                 highlighterInstance.transform.localScale = originScale * perc;
