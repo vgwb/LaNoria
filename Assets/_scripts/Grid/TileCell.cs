@@ -86,5 +86,13 @@ namespace vgwb.lanoria
                 Highlight.color = newColor;
             }
         }
+
+        public void RotateIcon(float rot)
+        {
+            if (Icon != null) {
+                var iconRot = Icon.transform.eulerAngles - Vector3.up * rot;
+                Icon.transform.eulerAngles = iconRot;
+            }
+        }
     }
 }

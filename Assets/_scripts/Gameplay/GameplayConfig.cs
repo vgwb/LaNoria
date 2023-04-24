@@ -10,6 +10,8 @@ namespace vgwb.lanoria
     [CreateAssetMenu(menuName = "VGWB/Gameplay Config")]
     public class GameplayConfig : SingletonScriptableObject<GameplayConfig>
     {
+        [Header("Rotation Settings")]
+        public float RotationStep = 60.0f;
         [Header("Tiles")]
         public Color MovingColor;
         public Color OverlapColor;

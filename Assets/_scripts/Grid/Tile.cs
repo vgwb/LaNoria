@@ -342,10 +342,11 @@ namespace vgwb.lanoria
             ParentInPivot.transform.position = turnPoint.position;
             // the new object is now the parent...
             transform.parent = ParentInPivot.transform;
-            var rot = new Vector3(0.0f, 60.0f, 0.0f); // rotate it!
+            var rot = Vector3.up * GameplayConfig.I.RotationStep; // rotate it!
             ParentInPivot.transform.Rotate(rot);
             transform.parent = null; // restore the parent object to null
             Destroy(ParentInPivot);
+            RotateIcons();
 
             if (OnRotateMe != null) {
                 OnRotateMe();
@@ -464,6 +465,14 @@ namespace vgwb.lanoria
         {
             foreach (var cell in Cells) {
                 cell.RemoveCategory();
+            }
+        }
+
+        private void RotateIcons()
+        {
+            var rot = GameplayConfig.I.RotationStep;
+            foreach (var cell in Cells) {
+                cell.RotateIcon(rot);
             }
         }
 
