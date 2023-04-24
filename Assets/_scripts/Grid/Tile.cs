@@ -302,6 +302,20 @@ namespace vgwb.lanoria
             return result;
         }
 
+        public void DisableHighlight()
+        {
+            foreach (var cell in Cells) {
+                cell.EnableHighlight(false);
+            }
+        }
+
+        public void EnableHighlight()
+        {
+            foreach (var cell in Cells) {
+                cell.EnableHighlight(true);
+            }
+        }
+
         public bool IsMoving()
         {
             return isMoving;
@@ -431,13 +445,6 @@ namespace vgwb.lanoria
         private void DisableOutline()
         {
             OutlineHandler.enabled = false;
-        }
-
-        private void DisableHighlight()
-        {
-            foreach (var cell in Cells) {
-                cell.EnableHighlight(false);
-            }
         }
 
         private void ChangeHighlightColor(Color color)

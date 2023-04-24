@@ -37,9 +37,11 @@ namespace vgwb.lanoria
                 if (displayTutorial) {
                     highlighterInstance = Instantiate(HighlighterPrefab, tile.Pivot.transform);
                     originScale = highlighterInstance.transform.localScale;
+                    tile.DisableHighlight();
                     Bounce(false);
                 } else {
                     Destroy(highlighterInstance);
+                    tile.EnableHighlight();
                     highlighterInstance = null;
                 }
             }
