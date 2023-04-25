@@ -119,6 +119,10 @@ MonoBehaviour:
     m_Key: score.synergy
     m_Metadata:
       m_Items: []
+  - m_Id: 37013013116428288
+    m_Key: score.points
+    m_Metadata:
+      m_Items: []
   - m_Id: 19668705049829377
     m_Key: tutorial.popup.1.desc
     m_Metadata:
@@ -175,12 +179,40 @@ MonoBehaviour:
     m_Key: intro.2.desc
     m_Metadata:
       m_Items: []
+  - m_Id: 36997271876739072
+    m_Key: intro.2.card
+    m_Metadata:
+      m_Items: []
   - m_Id: 27159275572764672
     m_Key: intro.3.desc
     m_Metadata:
       m_Items: []
+  - m_Id: 37025295686901760
+    m_Key: intro.3.synergy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37025295686901761
+    m_Key: intro.3.area
+    m_Metadata:
+      m_Items: []
   - m_Id: 27190940638584832
     m_Key: about.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682112
+    m_Key: line.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682113
+    m_Key: line.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682114
+    m_Key: line.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682115
+    m_Key: line.4
     m_Metadata:
       m_Items: []
   m_Metadata:

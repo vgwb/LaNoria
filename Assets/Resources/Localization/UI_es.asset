@@ -215,6 +215,39 @@ MonoBehaviour:
       UNION (European Commission 2010/10/6)"
     m_Metadata:
       m_Items: []
+  - m_Id: 36997271876739072
+    m_Localized: "Puedes leer m\xE1s sobre cada proyecto clicando en el t\xEDtulo
+      del mismo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682112
+    m_Localized: Igualdad de Oportunidades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682113
+    m_Localized: "Tecnolog\xEDa para las Personas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682114
+    m_Localized: "Reto Demogr\xE1fico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682115
+    m_Localized: Medio Ambiente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37013013116428288
+    m_Localized: Puntos de Impacto Social
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37025295686901760
+    m_Localized: (por cada sinergia)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37025295686901761
+    m_Localized: (por cada comarca)
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

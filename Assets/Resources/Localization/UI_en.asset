@@ -214,6 +214,39 @@ MonoBehaviour:
       2010/10/6)."
     m_Metadata:
       m_Items: []
+  - m_Id: 36997271876739072
+    m_Localized: You can read more about each project by clicking on the title of
+      the project.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682112
+    m_Localized: Equal Opportunities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682113
+    m_Localized: Technology for People
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682114
+    m_Localized: Demographic Challenge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682115
+    m_Localized: Environment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37013013116428288
+    m_Localized: Social Impact Points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37025295686901760
+    m_Localized: (for each synergy)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37025295686901761
+    m_Localized: (for each county)
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
