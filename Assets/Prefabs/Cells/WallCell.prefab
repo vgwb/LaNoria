@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallMesh: {fileID: 0}
+  MyEfx: {fileID: 5027629180679705199}
   Areas: 
 --- !u!1001 &3061183885340031199
 PrefabInstance:
@@ -224,3 +225,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7273269669059690415, guid: 82be44261f5ed4d708feba3269b3472e, type: 3}
   m_PrefabInstance: {fileID: 3061183885340031199}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5662250398740334449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7273269669059690414, guid: 82be44261f5ed4d708feba3269b3472e, type: 3}
+  m_PrefabInstance: {fileID: 3061183885340031199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5027629180679705199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5662250398740334449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedd45f2621f15144b8755e245ceb8a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EfxType: 1
+  Curve: 1
+  EfxVal: 1
+  EfxDuration: 0.5
+  PlayOnStart: 0

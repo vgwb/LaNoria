@@ -31,11 +31,16 @@ namespace vgwb.lanoria
             SpriteComp.color = color;
         }
 
+        public void StopBlink()
+        {
+            SpriteComp.DOKill();
+            SpriteComp.DOFade(alphaVal, 0.0f);
+        }
+
         private void Blink(float fadeVal)
         {
             float nextFadeVal = fadeVal == 0.0f ? alphaVal : 0.0f;
             SpriteComp.DOFade(fadeVal, 0.5f).OnComplete(() => Blink(nextFadeVal));
-            ;
         }
         #endregion
     }

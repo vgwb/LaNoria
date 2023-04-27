@@ -7,6 +7,7 @@ namespace vgwb.lanoria
     public class Wall : MonoBehaviour
     {
         public MeshRenderer WallMesh;
+        public GameObjectEfx MyEfx;
         public List<AreaId> Areas;
 
         public bool IsMyArea(AreaId area)
@@ -43,6 +44,20 @@ namespace vgwb.lanoria
         {
             if (WallMesh != null) {
                 WallMesh.material = mat;
+            }
+        }
+
+        public void PlayEfx()
+        {
+            if (MyEfx != null) {
+                MyEfx.Play();
+            }
+        }
+
+        public void StopEfx()
+        {
+            if (MyEfx != null) {
+                MyEfx.Stop();
             }
         }
     } 

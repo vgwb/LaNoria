@@ -66,6 +66,7 @@ namespace vgwb.lanoria
             Score += newPoints;
             Debug.Log("basic: " + placementBonus + " adjacency: " + adjacencyBonus + " area: " + areaScore);
             confirmAreas();
+            PointsPreviewManager.I.ConfirmEfx();
             var pos = CameraManager.I.MyCamera.WorldToScreenPoint(tile.PivotPos);
             EarnedPointsUI(pos, placementBonus);
         }

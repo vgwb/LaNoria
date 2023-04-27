@@ -117,6 +117,7 @@ namespace vgwb.lanoria
             CloseTutorialStep(TutorialStep.PointsArea, 0);
             currentTile.transform.parent = BoardManager.I.ProjectsContainer.transform;
             ScoreManager.I.UpdateScore(currentTile);
+            WallManager.I.ResetAllWalls();
             ResetProjectPanel();
             ResetValues();
             CleanPointsPreview();
@@ -227,7 +228,7 @@ namespace vgwb.lanoria
                 if (currentTile.IsValidPosition) {
                     PointsPreviewManager.I.PreviewScore(currentTile);
                 } else {
-                    PointsPreviewManager.I.CleanPreview();
+                    PointsPreviewManager.I.CleanInvalidPosition();
                 }
                 HandleBtnConfirm();
             }
@@ -513,6 +514,7 @@ namespace vgwb.lanoria
                     CleanPointsPreview();
                     BoardManager.I.EmptyProjectsContainer();
                     WallManager.I.ResetAllWalls();
+                    PointsPreviewManager.I.ResetAll();
                     ScoreManager.I.ResetScore();
                     TutorialManager.I.ResetTutorial();
                     UI_manager.I.ShowGamePause(false);

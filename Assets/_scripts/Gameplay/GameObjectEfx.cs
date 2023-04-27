@@ -7,7 +7,8 @@ namespace vgwb.lanoria
 {
     public enum GameObjectEfxType
     {
-        Bounce
+        Bounce,
+        Fade
     }
 
     public class GameObjectEfx : MonoBehaviour
@@ -17,7 +18,9 @@ namespace vgwb.lanoria
         public Ease Curve = Ease.Linear;
         public float EfxVal = 1.5f;
         public float EfxDuration = 1.0f;
+        public bool PlayOnStart = true;
         private Vector3 originScale;
+        private Tweener myTween;
         #endregion
 
         private void Awake()
@@ -27,7 +30,24 @@ namespace vgwb.lanoria
 
         void Start()
         {
-            DoEfx();
+            if (PlayOnStart) {
+                DoEfx();
+            }
+        }
+
+        public void Stop()
+        {
+            if (myTween != null) {
+                myTween.Kill();
+                myTween = null;
+            }
+        }
+
+        public void Play()
+        {
+            if (myTween == null) {
+                DoEfx();
+            }
         }
 
         private void DoEfx()
@@ -36,6 +56,11 @@ namespace vgwb.lanoria
                 case GameObjectEfxType.Bounce:
                     Bounce(true);
                     break;
+
+                case GameObjectEfxType.Fade:
+                    Fade(false);
+                    break;
+
                 default:
                     break;
             }
@@ -48,7 +73,24 @@ namespace vgwb.lanoria
             if (!increment) {
                 to = originScale;
             }
-            transform.DOScale(to, duration).SetEase(Curve).OnComplete(() => Bounce(!increment));
+            myTween = transform.DOScale(to, duration).SetEase(Curve).OnComplete(() => Bounce(!increment));
+        }
+
+        private void Fade(bool increment)
+        {
+            float from = increment ? 0.0f : 1.0f;
+            float to = increment ? 1.0f : 0.0f;
+            myTween = DOVirtual.Float(from, to, EfxDuration, ApplyColor).OnComplete(() => Fade(!increment));
+        }
+
+        private void ApplyColor(float targetval)
+        {
+            var mesh = GetComponent<MeshRenderer>();
+            if (mesh != null && mesh.material.HasProperty("_BaseColor")) {
+                Color target = mesh.material.GetColor("_BaseColor");
+                target.a = targetval;
+                mesh.material.SetColor("_BaseColor", target);
+            }
         }
     }
 }

@@ -43,26 +43,32 @@ namespace vgwb.lanoria
 
         public void HighlightWallArea(AreaId area)
         {
-            ApplyMaterialToArea(area, GameplayConfig.I.HighlightMat);
+            ApplyEfxToArea(area, GameplayConfig.I.HighlightMat, true);
         }
 
         public void ResetWallArea(AreaId area)
         {
-            ApplyMaterialToArea(area, GameplayConfig.I.BaseMat);
+            ApplyEfxToArea(area, GameplayConfig.I.BaseMat, false);
         }
 
         public void ResetAllWalls()
         {
             foreach (var wall in Walls) {
                 wall.ChangeMaterial(GameplayConfig.I.BaseMat);
+                wall.StopEfx();
             }
         }
 
-        private void ApplyMaterialToArea(AreaId area, Material mat)
+        private void ApplyEfxToArea(AreaId area, Material mat, bool blink)
         {
             var walls = GetWallsByArea(area);
             foreach (var wall in walls) {
                 wall.ChangeMaterial(mat);
+                if (blink) {
+                    wall.PlayEfx();
+                } else {
+                    wall.StopEfx();
+                }
             }
         }
     } 
