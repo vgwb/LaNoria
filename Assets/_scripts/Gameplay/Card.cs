@@ -51,6 +51,7 @@ namespace vgwb.lanoria
 
         public void OnOpenProjectDetail()
         {
+            CameraManager.I.EnableCameraMove(false);
             UI_manager.I.OpenProjectDetail(Project);
         }
 

@@ -62,6 +62,7 @@ namespace vgwb.lanoria
         public void ClosePanel()
         {
             gameObject.SetActive(false);
+            CameraManager.I.EnableCameraMove(true);
         }
 
         private void OnNext()
