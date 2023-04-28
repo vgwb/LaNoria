@@ -75,9 +75,5 @@ namespace vgwb.lanoria
         public float CameraHomeSpeed = 1.0f;
         public float CameraHomeWait = 3.0f;
         public Ease CameraHomeCurve = Ease.Linear;
-
-        [Header("Camera In Game")]
-        public float MovementXClamp = 4.0f;
-        public float MovementYClamp = 3.0f;
     }
 }

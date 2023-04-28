@@ -1161,6 +1161,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 950455279922659732, guid: c1b423414308d0e4c919120ad178de62, type: 3}
+      propertyPath: BoundsX.Array.data[0]
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 950455279922659732, guid: c1b423414308d0e4c919120ad178de62, type: 3}
+      propertyPath: BoundsX.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 950455279922659732, guid: c1b423414308d0e4c919120ad178de62, type: 3}
+      propertyPath: BoundsZ.Array.data[0]
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 950455279922659732, guid: c1b423414308d0e4c919120ad178de62, type: 3}
+      propertyPath: BoundsZ.Array.data[1]
+      value: -12
+      objectReference: {fileID: 0}
     - target: {fileID: 8672796550617581756, guid: c1b423414308d0e4c919120ad178de62, type: 3}
       propertyPath: m_Name
       value: CameraManager
