@@ -37,6 +37,9 @@ namespace vgwb.lanoria
         public float CellEfxHeight = 0.4f;
         public float CellEfxAlpha = 0.5f;
 
+        [Header("Bridges")]
+        public float BridgeEfxHeight = 0.8f;
+
         [Header("Score")]
         public int AreaBonus = 20;
         public int AdjacencyBonus = 1;

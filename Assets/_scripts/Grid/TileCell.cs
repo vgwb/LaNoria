@@ -68,7 +68,12 @@ namespace vgwb.lanoria
         public GameObject SpawnBridgeBetween(Vector3 from, Vector3 to)
         {
             var bridge = Instantiate(BridgePrefab, transform);
-            bridge.transform.forward = to - from;
+            Vector3 dir = (to - from).normalized;
+            bridge.transform.forward = dir; // set the direction
+            float halfDistance = Vector3.Distance(from, to) / 2.0f;
+            Vector3 pos = from + (dir *halfDistance);
+            pos.y = GameplayConfig.I.BridgeEfxHeight;
+            bridge.transform.position = pos; // set position between the two cells
 
             return bridge;
         }
