@@ -18,6 +18,7 @@ namespace vgwb.lanoria
 
         [Header("Services")]
         public bool AnalyticsEnabled;
+        public bool LeaderboardEnabled;
         public bool AnalyticsDevEnv;
 
         [Header("Development")]
