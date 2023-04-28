@@ -40,6 +40,18 @@ namespace vgwb.lanoria
             }
         }
 
+        [Button]
+        public void HideIcons()
+        {
+            EnableIcons(false);
+        }
+
+        [Button]
+        public void ShowIcons()
+        {
+            EnableIcons(true);
+        }
+
         private void OnAccesibilityModified(bool enable)
         {
             EnableIcons(enable);

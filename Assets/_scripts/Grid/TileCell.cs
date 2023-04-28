@@ -57,12 +57,9 @@ namespace vgwb.lanoria
         {
             var mat = AssociatedMaterial;
             ApplyMaterial(mat);
-            if (AppManager.I.AppSettings.AccessibilityEnabled) {
-                Icon.gameObject.SetActive(true);
-                Icon.sprite = GameData.I.Categories.GetIcon(category);
-            } else {
-                Icon.gameObject.SetActive(false);
-            }
+            Icon.sprite = GameData.I.Categories.GetIcon(category);
+            bool showIcon = AppManager.I.AppSettings.AccessibilityEnabled;
+            Icon.gameObject.SetActive(showIcon);
         }
 
         public void SetupLayerForUICamera()
