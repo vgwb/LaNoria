@@ -442,8 +442,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EfxType: 0
   Curve: 1
-  EfxVal: 1.5
+  EfxVal: 1.65
   EfxDuration: 1
+  PlayOnStart: 1
 --- !u!1001 &5610890069311859253
 PrefabInstance:
   m_ObjectHideFlags: 0

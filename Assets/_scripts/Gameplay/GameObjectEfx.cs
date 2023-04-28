@@ -78,7 +78,7 @@ namespace vgwb.lanoria
 
         private void Bounce(bool increment)
         {
-            float duration = GameplayConfig.I.BounceDuration;
+            float duration = EfxDuration;
             Vector3 to = Vector3.one * EfxVal;
             if (!increment) {
                 to = originScale;
