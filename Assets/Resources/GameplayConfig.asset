@@ -27,6 +27,7 @@ MonoBehaviour:
   LabelDebugFontSize: 10
   CellEfxHeight: 0.9
   CellEfxAlpha: 0.5
+  BridgeEfxHeight: 0.8
   AreaBonus: 60
   AdjacencyBonus: 3
   Place2Bonus: 12

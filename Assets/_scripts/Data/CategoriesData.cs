@@ -46,5 +46,15 @@ namespace vgwb.lanoria
             return Categories.Find(x => x.Category == category).Material;
         }
 
+        /// <summary>
+        /// Get the icon by browsing for the material. Used only from editor
+        /// to populate the Map Manager
+        /// </summary>
+        /// <returns></returns>
+        public Sprite GetIconByMaterialName(string materialName)
+        {
+            return Categories.Find(x => x.Material.name == materialName).Icon;
+        }
+
     }
 }
