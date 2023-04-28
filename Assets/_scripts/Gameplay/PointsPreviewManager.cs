@@ -148,10 +148,9 @@ namespace vgwb.lanoria
                 var cells = GridManager.I.GetCellsByArea(area);
                 List<CellEfx> efxList = new List<CellEfx>();
                 foreach (var cell in cells) {
-                    var pos = Vector3.up;
-                    pos.y += GameplayConfig.I.CellEfxHeight;
+                    var pos = Vector3.up * GameplayConfig.I.CellEfxHeight;
                     var cellEfx = Instantiate(CellAreaEfx, cell.transform);
-                    cellEfx.transform.localPosition += pos;
+                    cellEfx.transform.localPosition = pos;
                     var efxComp = cellEfx.GetComponent<CellEfx>();
                     Color color = GameplayConfig.I.HighlightMat.GetColor("_BaseColor");
                     color.a = GameplayConfig.I.CellEfxAlpha;
