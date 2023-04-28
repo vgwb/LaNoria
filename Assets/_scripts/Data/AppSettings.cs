@@ -11,6 +11,9 @@ namespace vgwb.lanoria
         public string Locale;
         public int HiScore = 0;
 
+        public delegate void AccessibilityEvent(bool enable);
+        public AccessibilityEvent OnAccesibilityModified;
+
         public AppSettings()
         {
             Load();
@@ -33,6 +36,9 @@ namespace vgwb.lanoria
         {
             AccessibilityEnabled = status;
             PlayerPrefs.SetInt("AccessibilityEnabled", AccessibilityEnabled ? 1 : 0);
+            if (OnAccesibilityModified != null) {
+                OnAccesibilityModified(AccessibilityEnabled);
+            }
         }
 
         public void SetTutorial(bool status)

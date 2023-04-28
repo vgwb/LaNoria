@@ -46,6 +46,13 @@ namespace vgwb.lanoria
             }
         }
 
+        public void ShowCategory()
+        {
+            if (AppManager.I.AppSettings.AccessibilityEnabled) {
+                Icon.gameObject.SetActive(true);
+            }
+        }
+
         public void ApplyColor()
         {
             var mat = AssociatedMaterial;

@@ -82,6 +82,11 @@ namespace vgwb.lanoria
             SetupOutline();
         }
 
+        private void Start()
+        {
+            AppManager.I.AppSettings.OnAccesibilityModified += OnAccesibilityModified;
+        }
+
         private void Update()
         {
             if (isUsed) {
@@ -94,6 +99,7 @@ namespace vgwb.lanoria
 
         private void OnDestroy()
         {
+            AppManager.I.AppSettings.OnAccesibilityModified -= OnAccesibilityModified;
             StopUsingMe();
         }
 
@@ -159,8 +165,7 @@ namespace vgwb.lanoria
         {
             EnableLeanComponents(false);
             EnablePivot(false); // deactivate pivot and colliders
-            DisableCategoryIcons();
-
+            //DisableCategoryIcons();
             OccupyGrid();
             DisableOutline();
             DisableHighlight();
@@ -268,7 +273,6 @@ namespace vgwb.lanoria
             EnableLeanComponents(false);
             DisableOutline();
             SetupCellsForUICamera(false);
-            enabled = false;
         }
 
         public void SetupForDrag()
@@ -468,6 +472,13 @@ namespace vgwb.lanoria
             }
         }
 
+        private void EnableCategoryIcons()
+        {
+            foreach (var cell in Cells) {
+                cell.ShowCategory();
+            }
+        }
+
         private void RotateIcons()
         {
             var rot = GameplayConfig.I.RotationStep;
@@ -481,6 +492,15 @@ namespace vgwb.lanoria
             OutlineHandler.OutlineColor = GameplayConfig.I.MovingColor;
             OutlineHandler.OutlineWidth = GameplayConfig.I.OutlineWidth;
             OutlineHandler.OutlineMode = GameplayConfig.I.PlaceableOutlineMode;
+        }
+
+        private void OnAccesibilityModified(bool enable)
+        {
+            if (enable) {
+                EnableCategoryIcons();
+            } else {
+                DisableCategoryIcons();
+            }
         }
     }
 }
