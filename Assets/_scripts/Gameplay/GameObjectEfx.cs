@@ -36,6 +36,11 @@ namespace vgwb.lanoria
             }
         }
 
+        private void OnDestroy()
+        {
+            Stop();
+        }
+
         public void Stop()
         {
             if (myTween != null) {
