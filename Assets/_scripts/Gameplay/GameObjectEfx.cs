@@ -8,7 +8,8 @@ namespace vgwb.lanoria
     public enum GameObjectEfxType
     {
         Bounce,
-        Fade
+        Fade,
+        RotateOnX
     }
 
     public class GameObjectEfx : MonoBehaviour
@@ -61,6 +62,10 @@ namespace vgwb.lanoria
                     Fade(false);
                     break;
 
+                case GameObjectEfxType.RotateOnX:
+                    RotateOnX();
+                    break;
+
                 default:
                     break;
             }
@@ -91,6 +96,11 @@ namespace vgwb.lanoria
                 target.a = targetval;
                 mesh.material.SetColor("_BaseColor", target);
             }
+        }
+
+        private void RotateOnX()
+        {
+            myTween = transform.DOLocalRotate(new Vector3(360, 0, 0), EfxDuration, RotateMode.FastBeyond360).SetRelative(true).SetEase(Curve).SetLoops(-1);
         }
     }
 }
