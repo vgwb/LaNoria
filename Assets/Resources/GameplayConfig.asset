@@ -25,7 +25,7 @@ MonoBehaviour:
   HandSize: 3
   LabelDebugOffset: {x: 0, y: 0, z: 0}
   LabelDebugFontSize: 10
-  CellEfxHeight: 1.4
+  CellEfxHeight: 0.9
   CellEfxAlpha: 0.5
   AreaBonus: 60
   AdjacencyBonus: 3
