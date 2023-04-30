@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_it
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: it
+  m_SharedData: {fileID: 11400000, guid: f145508d5e373411a8e59d53138b69e4, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 20410027822014464
+    m_Localized: Progetti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 343755710464
+    m_Localized: Conferma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22120300530360320
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10138992044400640
+    m_Localized: Uscire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303461031936
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21811701396529152
+    m_Localized: Sito Ufficiale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 286247608320
+    m_Localized: Si
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22120300530360321
+    m_Localized: Record
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172359671808
+    m_Localized: Punti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81292943360
+    m_Localized: La Noria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10137802690781184
+    m_Localized: Come si gioca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114348253184
+    m_Localized: Opzioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34841026560
+    m_Localized: Gioca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10138653455015936
+    m_Localized: Continua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22116143866044416
+    m_Localized: "Accessibilit\xE0 (colore)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075905
+    m_Localized: Musica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075906
+    m_Localized: Suoni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075907
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8702683148967936
+    m_Localized: Abbandona
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19769399220101120
+    m_Localized: Pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19768326510075904
+    m_Localized: Il tuo impatto sociale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193004036096
+    m_Localized: Confermare?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618754
+    m_Localized: TRASVERSALITA'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618752
+    m_Localized: PROGETTO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618755
+    m_Localized: CASELLE VUOTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19679508188618753
+    m_Localized: SINERGIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37013013116428288
+    m_Localized: Punti Impatto Sociale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829377
+    m_Localized: "Trascina un progetto sulla mappa e, finch\xE9 non lo confermi,
+      puoi cambiarlo trascinando un altro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829376
+    m_Localized: Scegliere un progetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829379
+    m_Localized: Fai clic nella parte superiore del progetto per girarlo e puoi spostarlo
+      trascinandolo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829378
+    m_Localized: Ruotare il progetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829381
+    m_Localized: Una volta premuto il pulsante di conferma non sarai in grado di
+      spostare il progetto selezionato e le altre carte verranno scartate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829380
+    m_Localized: Conferma il progetto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829383
+    m_Localized: Per ogni esagono adiacente dello stesso colore ottieni un bonus
+      di Sinergia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829382
+    m_Localized: Sinergie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829385
+    m_Localized: "Quando una regione ha esagoni di tutti e 4 i colori, ottieni un
+      bonus di Trasversalit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19668705049829384
+    m_Localized: "Trasversalit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20308952073838592
+    m_Localized: Spostare e/o trasformare il progetto in una posizione valida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20308952015118336
+    m_Localized: Posizione non valida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27154081522851840
+    m_Localized: "Il Noria \xE8 un centro di innovazione sociale dipendente dal Consiglio
+      provinciale di Malaga. Ha aperto le sue porte nel 2013 nella citt\xE0 di Malaga,
+      ma il suo lavoro \xE8 rivolto alle altre 8 regioni di Malaga, in particolare
+      popolazioni di meno di 20.000 abitanti."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27158418991030272
+    m_Localized: "I progetti sono rappresentati dalle lettere di progetto; Ogni lettera
+      \xE8 costituita da diversi esagoni di diversi colori che rappresentano le 4
+      principali linee di lavoro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271876739072
+    m_Localized: "Puoi leggere di pi\xF9 su ogni progetto facendo clic sul titolo
+      dello stesso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27159275572764672
+    m_Localized: "Il tuo obiettivo \xE8 raggiungere il massimo impatto sociale possibile.\nOgni
+      volta che si inserisce un progetto, questo generer\xE0 punti di impatto sociale
+      a seconda delle sue dimensioni.\nInoltre, ci sono 2 tipi di bonus che possono
+      essere raggiunti posizionando i progetti:\n- Per ogni esagono adiacente dello
+      stesso colore otterrai un bonus di sinergia\n- Quando una regione ha tutti
+      e 4 i colori, ottieni un bonus trasversale"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37025295686901760
+    m_Localized: (per ogni sinergia)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37025295686901761
+    m_Localized: (per ogni regione)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27190940638584832
+    m_Localized: "<b>Activa in Malaga since January 11, 2013</b>.\n\nThe Diputaci\xF3n
+      Provincial of Malaga, creates in 2013 the Center for Social Innovation La Noria,
+      taking over from the former Basic Shelter Center. It has an area of 37,000
+      m2 open to citizens for their active participation in the former Huerta Ortega
+      and Huerta Godino, next to the Maternity Hospital, in the heart of the city
+      of Malaga (C/Arroyo de los Angeles 50). \n\nThe aim of La Noria is to provide
+      a transformative response to the problems of today's society, intended to serve
+      as a source of new solutions to the challenges of the 21st century.\n\n''Social
+      Innovation consists of finding new ways to satisfy social needs, which are
+      not adequately covered by the market or the public sector... or to produce
+      the behavioral changes necessary to solve the great challenges of society...
+      empowering citizens and generating new social relationships and new models
+      of collaboration. They are, therefore, both innovative in themselves and useful
+      in enabling society to innovate...''. INNOVATION UNION (European Commission
+      2010/10/6)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682112
+    m_Localized: "Pari Opportunit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682113
+    m_Localized: Tecnologie per le Persone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682114
+    m_Localized: Demografia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36997271918682115
+    m_Localized: Ambiente
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

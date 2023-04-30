@@ -24,7 +24,7 @@ namespace vgwb.framework
             currentLocaleIndex = 0;
             updateLanguageIcon();
 
-            localeCount = LocalizationSettings.AvailableLocales.Locales.Count;
+            localeCount = 2; //LocalizationSettings.AvailableLocales.Locales.Count;
 
             btnLanguageToggle.onClick.AddListener(() => changeLocale());
         }
