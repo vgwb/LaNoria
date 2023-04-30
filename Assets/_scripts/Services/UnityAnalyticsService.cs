@@ -7,7 +7,7 @@ using Unity.Services.Analytics;
 
 namespace vgwb.lanoria
 {
-    public class OnlineAnalyticsService : MonoBehaviour
+    public class UnityAnalyticsService : MonoBehaviour
     {
         private bool AnalyticsEnabled => AppConfig.I.AnalyticsEnabled;
 
@@ -17,7 +17,7 @@ namespace vgwb.lanoria
                 return;
 
             var options = new InitializationOptions();
-            if (AppConfig.I.AnalyticsDevEnv) {
+            if (AppConfig.I.DevEnvironment) {
                 options.SetEnvironmentName("dev");
                 Debug.LogWarning("Analytics in DEV environment");
             }

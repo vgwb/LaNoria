@@ -20,7 +20,6 @@ namespace vgwb.lanoria
 
     public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     {
-
         public int Score { get; private set; }
         public int AdjacencyScore { get; private set; }
         public int AreaScore { get; private set; }
@@ -54,6 +53,7 @@ namespace vgwb.lanoria
             if (totalScore > AppManager.I.AppSettings.HiScore) {
                 AppManager.I.AppSettings.SetHiScore(totalScore);
             }
+            OnlineServices.I.AddScore(totalScore);
         }
 
         public void UpdateScore(Tile tile)

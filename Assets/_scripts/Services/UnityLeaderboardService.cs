@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace vgwb.lanoria
 {
-    public class LeaderboardService : MonoBehaviour
+    public class UnityLeaderboardService : MonoBehaviour
     {
         private bool LeaderboardEnabled => AppConfig.I.LeaderboardEnabled;
 
@@ -26,7 +26,7 @@ namespace vgwb.lanoria
                 return;
 
             var options = new InitializationOptions();
-            if (AppConfig.I.AnalyticsDevEnv) {
+            if (AppConfig.I.DevEnvironment) {
                 options.SetEnvironmentName("dev");
                 Debug.LogWarning("Analytics in DEV environment");
             }

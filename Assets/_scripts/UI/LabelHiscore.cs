@@ -12,6 +12,8 @@ namespace vgwb.lanoria
         void Start()
         {
             Refresh();
+
+            OnlineServices.I.GetScores();
         }
 
         public void Refresh()

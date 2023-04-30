@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4724786872671007104}
-  - component: {fileID: 6885728483383772663}
+  - component: {fileID: 7287173179186859005}
   m_Layer: 0
-  m_Name: SocialPlatform
+  m_Name: OnlineServices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 7753285714682877559}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6885728483383772663
+--- !u!114 &7287173179186859005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
