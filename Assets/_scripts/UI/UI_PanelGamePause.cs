@@ -33,6 +33,7 @@ namespace vgwb.lanoria
 
         public void OpenPanel()
         {
+            EnableWindowConfirmQuit(false);
             gameObject.SetActive(true);
         }
 
