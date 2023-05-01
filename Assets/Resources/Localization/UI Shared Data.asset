@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: label.hiscore
     m_Metadata:
       m_Items: []
+  - m_Id: 39091989549932544
+    m_Key: label.leaderboard
+    m_Metadata:
+      m_Items: []
   - m_Id: 172359671808
     m_Key: label.score
     m_Metadata:

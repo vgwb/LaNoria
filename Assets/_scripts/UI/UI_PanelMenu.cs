@@ -11,7 +11,7 @@ namespace vgwb.lanoria
         public Button BtnAbout;
         public Button BtnHelp;
         public Button BtnOptions;
-        public LabelHiscore Hiscore;
+        public UI_Hiscores Hiscore;
 
         void Start()
         {

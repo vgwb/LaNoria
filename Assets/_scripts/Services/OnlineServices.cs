@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -78,15 +79,23 @@ namespace vgwb.lanoria
 
             Debug.Log("sending hi-score to Online Leaderboard");
             var scoreResponse = await LeaderboardsService.Instance.AddPlayerScoreAsync(LeaderboardId, score);
-            Debug.Log(JsonConvert.SerializeObject(scoreResponse));
+            // Debug.Log(JsonConvert.SerializeObject(scoreResponse));
         }
 
-        public async void GetScores()
+        public async void GetScores(Action<List<int>> callback)
         {
             if (!LeaderboardEnabled)
                 return;
 
             var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(LeaderboardId);
+            if (scoresResponse.Results.Count > 0) {
+                var scores = new List<int>();
+                foreach (var score in scoresResponse.Results) {
+                    scores.Add((int)score.Score);
+                }
+                callback?.Invoke(scores);
+            }
+
             Debug.Log(JsonConvert.SerializeObject(scoresResponse));
         }
         #endregion
