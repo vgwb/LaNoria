@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Services.Leaderboards;
+using Unity.Services.Leaderboards.Models;
+
 using TMPro;
 
 namespace vgwb.lanoria
@@ -9,12 +12,13 @@ namespace vgwb.lanoria
     {
 
         public TextMeshProUGUI LocalHiscore;
+        public GameObject LeaderboardContainer;
         public TextMeshProUGUI Leaderboard;
 
         void Start()
         {
             LocalHiscore.text = AppManager.I.AppSettings.HiScore.ToString();
-            Leaderboard.text = "";
+            LeaderboardContainer.SetActive(false);
         }
 
         void Update()
@@ -35,18 +39,37 @@ namespace vgwb.lanoria
         {
             yield return new WaitForSeconds(1);
             //            Debug.Log("Load Hi Scores");
-            OnlineServices.I.GetScores(DisplayLeaderboard);
+            OnlineServices.I.GetTopScores(DisplayTopLeaderboard);
+            OnlineServices.I.GetPlayerScore(DisplayPlayerLeaderboard);
         }
 
         // callback
-        private void DisplayLeaderboard(List<int> scores)
+        private void DisplayTopLeaderboard(List<LeaderboardEntry> scores)
         {
+            LeaderboardContainer.SetActive(true);
             Leaderboard.text = "";
-            int count = 1;
-            foreach (var score in scores) {
-                Leaderboard.text += count + ": " + score + "\n";
-                count++;
+
+            foreach (var entry in scores) {
+                DisplayScoreEntry(entry);
             }
+        }
+
+        // callback
+        private void DisplayPlayerLeaderboard(List<LeaderboardEntry> scores)
+        {
+            Leaderboard.text += "...\n";
+            foreach (var entry in scores) {
+                DisplayScoreEntry(entry);
+            }
+        }
+
+        private void DisplayScoreEntry(LeaderboardEntry entry)
+        {
+            string entryText = "#" + (entry.Rank + 1) + " - " + entry.Score;
+            if (entry.Score == AppManager.I.AppSettings.HiScore) {
+                entryText = "<color=#FFDD00>" + entryText + "</color>";
+            }
+            Leaderboard.text += entryText + "\n";
         }
     }
 }

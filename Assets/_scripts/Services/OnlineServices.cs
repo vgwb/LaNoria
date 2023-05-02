@@ -9,6 +9,7 @@ using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using Unity.Services.Analytics;
 using Unity.Services.Leaderboards;
+using Unity.Services.Leaderboards.Models;
 
 namespace vgwb.lanoria
 {
@@ -83,21 +84,28 @@ namespace vgwb.lanoria
                 Debug.Log(JsonConvert.SerializeObject(scoreResponse));
         }
 
-        public async void GetScores(Action<List<int>> callback)
+        public async void GetTopScores(Action<List<LeaderboardEntry>> callback)
         {
             if (!LeaderboardEnabled)
                 return;
 
-            var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(LeaderboardId);
-            if (scoresResponse.Results.Count > 0) {
-                var scores = new List<int>();
-                foreach (var score in scoresResponse.Results) {
-                    scores.Add((int)score.Score);
-                }
-                callback?.Invoke(scores);
-            }
+            var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(LeaderboardId, new GetScoresOptions { Limit = 3 });
+            callback?.Invoke(scoresResponse.Results);
+
             if (AppConfig.I.DebugMode)
                 Debug.Log(JsonConvert.SerializeObject(scoresResponse));
+        }
+
+        public async void GetPlayerScore(Action<List<LeaderboardEntry>> callback)
+        {
+            if (!LeaderboardEnabled)
+                return;
+
+            var aroundscoresResponse = await LeaderboardsService.Instance.GetPlayerRangeAsync(LeaderboardId, new GetPlayerRangeOptions { RangeLimit = 1 });
+            callback?.Invoke(aroundscoresResponse.Results);
+
+            if (AppConfig.I.DebugMode)
+                Debug.Log(JsonConvert.SerializeObject(aroundscoresResponse));
         }
         #endregion
     }
