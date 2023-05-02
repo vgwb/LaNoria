@@ -24,7 +24,7 @@ namespace vgwb.framework
             currentLocaleIndex = 0;
             updateLanguageIcon();
 
-            localeCount = 2; //LocalizationSettings.AvailableLocales.Locales.Count;
+            localeCount = LocalizationSettings.AvailableLocales.Locales.Count;
 
             btnLanguageToggle.onClick.AddListener(() => changeLocale());
         }
@@ -44,7 +44,6 @@ namespace vgwb.framework
         private void updateLanguageIcon()
         {
             btnLanguageToggle.gameObject.GetComponent<Image>().sprite = langIcons[currentLocaleIndex];
-
         }
     }
 
