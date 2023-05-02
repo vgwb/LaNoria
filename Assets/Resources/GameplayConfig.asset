@@ -15,6 +15,7 @@ MonoBehaviour:
   RotationStep: 60
   MovingColor: {r: 0.5494121, g: 1, b: 0.47450984, a: 1}
   OverlapColor: {r: 0.8, g: 0, b: 0, a: 1}
+  UseOutline: 0
   PlaceableOutlineMode: 1
   OutlineWidth: 3.01
   DragYOffset: 0.25
@@ -26,7 +27,7 @@ MonoBehaviour:
   LabelDebugOffset: {x: 0, y: 0, z: 0}
   LabelDebugFontSize: 10
   CellEfxHeight: 0.9
-  CellEfxAlpha: 0.5
+  CellEfxAlpha: 1
   BridgeEfxHeight: 0.8
   AreaBonus: 60
   AdjacencyBonus: 3
@@ -49,5 +50,3 @@ MonoBehaviour:
   CameraHomeSpeed: 1
   CameraHomeWait: 3
   CameraHomeCurve: 8
-  MovementXClamp: 4
-  MovementYClamp: 3
