@@ -13,7 +13,8 @@ namespace vgwb.lanoria
 
         void Start()
         {
-            Refresh();
+            LocalHiscore.text = AppManager.I.AppSettings.HiScore.ToString();
+            Leaderboard.text = "";
         }
 
         void Update()
@@ -33,10 +34,11 @@ namespace vgwb.lanoria
         private IEnumerator LoadHiScores()
         {
             yield return new WaitForSeconds(1);
-            Debug.Log("Load Hi Scores");
+            //            Debug.Log("Load Hi Scores");
             OnlineServices.I.GetScores(DisplayLeaderboard);
         }
 
+        // callback
         private void DisplayLeaderboard(List<int> scores)
         {
             Leaderboard.text = "";

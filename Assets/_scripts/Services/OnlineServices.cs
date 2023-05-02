@@ -18,7 +18,7 @@ namespace vgwb.lanoria
 
         private bool AnalyticsEnabled => AppConfig.I.AnalyticsEnabled;
         private bool LeaderboardEnabled => AppConfig.I.LeaderboardEnabled;
-        const string LeaderboardId = "noria-leaderboard";
+        private const string LeaderboardId = "noria-leaderboard";
 
         async void Awake()
         {
@@ -77,9 +77,10 @@ namespace vgwb.lanoria
             if (!LeaderboardEnabled)
                 return;
 
-            Debug.Log("sending hi-score to Online Leaderboard");
+            // Debug.Log("sending hi-score to Online Leaderboard");
             var scoreResponse = await LeaderboardsService.Instance.AddPlayerScoreAsync(LeaderboardId, score);
-            // Debug.Log(JsonConvert.SerializeObject(scoreResponse));
+            if (AppConfig.I.DebugMode)
+                Debug.Log(JsonConvert.SerializeObject(scoreResponse));
         }
 
         public async void GetScores(Action<List<int>> callback)
@@ -95,8 +96,8 @@ namespace vgwb.lanoria
                 }
                 callback?.Invoke(scores);
             }
-
-            Debug.Log(JsonConvert.SerializeObject(scoresResponse));
+            if (AppConfig.I.DebugMode)
+                Debug.Log(JsonConvert.SerializeObject(scoresResponse));
         }
         #endregion
     }
