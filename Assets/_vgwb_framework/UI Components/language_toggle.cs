@@ -21,11 +21,20 @@ namespace vgwb.framework
             // Wait for the localization system to initialize
             yield return LocalizationSettings.InitializationOperation;
 
-            currentLocaleIndex = 0;
+            switch (AppManager.I.AppSettings.Locale) {
+                case "en":
+                    currentLocaleIndex = 1;
+                    break;
+                case "it":
+                    currentLocaleIndex = 2;
+                    break;
+                default:
+                    currentLocaleIndex = 0;
+                    break;
+            }
+
             updateLanguageIcon();
-
             localeCount = LocalizationSettings.AvailableLocales.Locales.Count;
-
             btnLanguageToggle.onClick.AddListener(() => changeLocale());
         }
 
@@ -36,13 +45,14 @@ namespace vgwb.framework
             if (currentLocaleIndex >= localeCount) {
                 currentLocaleIndex = 0;
             }
-            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[currentLocaleIndex];
             updateLanguageIcon();
-            //Debug.Log(LocalizationSettings.AvailableLocales.Locales[currentLocaleIndex].name);
+            //Debug.Log(LocalizationSettings.AvailableLocales.Locales[currentLocaleIndex].Identifier.Code);
+            AppManager.I.AppSettings.SetLocale(LocalizationSettings.AvailableLocales.Locales[currentLocaleIndex].Identifier.Code);
         }
 
         private void updateLanguageIcon()
         {
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[currentLocaleIndex];
             btnLanguageToggle.gameObject.GetComponent<Image>().sprite = langIcons[currentLocaleIndex];
         }
     }
