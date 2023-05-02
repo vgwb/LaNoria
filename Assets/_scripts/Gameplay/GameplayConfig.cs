@@ -15,6 +15,7 @@ namespace vgwb.lanoria
         [Header("Tiles")]
         public Color MovingColor;
         public Color OverlapColor;
+        public bool UseOutline = false;
         public Outline.Mode PlaceableOutlineMode = Outline.Mode.OutlineVisible;
         public float OutlineWidth = 7.0f;
         public float DragYOffset = 0.2f;

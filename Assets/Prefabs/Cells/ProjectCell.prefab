@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 7692714804116099991}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5068229777665841356}
@@ -442,8 +442,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EfxType: 0
   Curve: 1
-  EfxVal: 1.65
-  EfxDuration: 1
+  EfxVal: 1.4
+  EfxDuration: 0.7
   PlayOnStart: 1
 --- !u!1001 &5610890069311859253
 PrefabInstance:

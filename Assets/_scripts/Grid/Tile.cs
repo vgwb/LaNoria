@@ -80,6 +80,9 @@ namespace vgwb.lanoria
             prevPos = HexPos;
             prevRot = transform.eulerAngles;
             SetupOutline();
+            if (!GameplayConfig.I.UseOutline) {
+                DisableOutline();
+            }
         }
 
         private void Start()
