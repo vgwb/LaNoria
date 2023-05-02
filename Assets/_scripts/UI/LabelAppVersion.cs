@@ -11,7 +11,7 @@ namespace vgwb.lanoria
 
         void Start()
         {
-            string version = (AppConfig.I.Version * 0.1).ToString();
+            string version = (AppConfig.I.Version * 0.1).ToString("N1");
 
             if (AppConfig.I.DebugMode) {
                 version = version + " DEBUG";
