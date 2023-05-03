@@ -266,7 +266,10 @@ namespace vgwb.lanoria
                 bool enable = true;
                 if (displayTutorial) {
                     enable = currentTile.IsValidPosition && TutorialManager.I.IsExplanationCompleted(TutorialStep.Rotate);
+                } else {
+                    enable = currentTile.IsValidPosition;
                 }
+                
                 UIGame.EnableBtnConfirm(enable);
             }
         }
