@@ -49,18 +49,43 @@ namespace vgwb.lanoria
             LeaderboardContainer.SetActive(true);
             //Leaderboard.text = "";
 
-            foreach (var entry in scores) {
-                DisplayScoreEntry(entry);
+            if (scores.Count > 0) {
+                LeaderboardEntries[0].Set((int)scores[0].Score, 1, scores[0].Score == AppManager.I.AppSettings.HiScore);
+            }
+
+            if (scores.Count > 1) {
+                LeaderboardEntries[1].Set((int)scores[1].Score, 2, scores[1].Score == AppManager.I.AppSettings.HiScore);
+            }
+
+            if (scores.Count > 2) {
+                LeaderboardEntries[2].Set((int)scores[2].Score, 3, scores[2].Score == AppManager.I.AppSettings.HiScore);
             }
         }
 
         // callback
         private void DisplayPlayerLeaderboard(List<LeaderboardEntry> scores)
         {
-            //Leaderboard.text += "...\n";
-            foreach (var entry in scores) {
-                DisplayScoreEntry(entry);
+            if (scores.Count > 0) {
+                LeaderboardEntries[3].Set((int)scores[0].Score, scores[0].Rank + 1, scores[0].Score == AppManager.I.AppSettings.HiScore);
+                LeaderboardEntries[3].Enable(true);
+            } else {
+                LeaderboardEntries[3].Enable(false);
             }
+
+            if (scores.Count > 1) {
+                LeaderboardEntries[4].Set((int)scores[1].Score, scores[1].Rank + 1, scores[1].Score == AppManager.I.AppSettings.HiScore);
+                LeaderboardEntries[4].Enable(true);
+            } else {
+                LeaderboardEntries[4].Enable(false);
+            }
+
+            if (scores.Count > 2) {
+                LeaderboardEntries[5].Set((int)scores[2].Score, scores[2].Rank + 1, scores[2].Score == AppManager.I.AppSettings.HiScore);
+                LeaderboardEntries[5].Enable(true);
+            } else {
+                LeaderboardEntries[5].Enable(false);
+            }
+
         }
 
         private void DisplayScoreEntry(LeaderboardEntry entry)

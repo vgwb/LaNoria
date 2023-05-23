@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Unity.Services.Leaderboards;
-using Unity.Services.Leaderboards.Models;
-
 using TMPro;
 
 namespace vgwb.lanoria
@@ -14,8 +9,19 @@ namespace vgwb.lanoria
         public TextMeshProUGUI PositionText;
         public GameObject playerBackground;
 
+        public void Set(int score, int position, bool isPlayer)
+        {
+            ScoreText.text = score.ToString();
+            if (position > 0) {
+                PositionText.text = position.ToString();
+            }
+            playerBackground.SetActive(isPlayer);
+        }
 
-
+        public void Enable(bool enabled)
+        {
+            gameObject.SetActive(enabled);
+        }
 
     }
 }
