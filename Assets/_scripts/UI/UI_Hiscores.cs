@@ -51,14 +51,23 @@ namespace vgwb.lanoria
 
             if (scores.Count > 0) {
                 LeaderboardEntries[0].Set((int)scores[0].Score, 1, scores[0].Score == AppManager.I.AppSettings.HiScore);
+                LeaderboardEntries[0].Enable(true);
+            } else {
+                LeaderboardEntries[0].Enable(false);
             }
 
             if (scores.Count > 1) {
                 LeaderboardEntries[1].Set((int)scores[1].Score, 2, scores[1].Score == AppManager.I.AppSettings.HiScore);
+                LeaderboardEntries[1].Enable(true);
+            } else {
+                LeaderboardEntries[1].Enable(false);
             }
 
             if (scores.Count > 2) {
                 LeaderboardEntries[2].Set((int)scores[2].Score, 3, scores[2].Score == AppManager.I.AppSettings.HiScore);
+                LeaderboardEntries[2].Enable(true);
+            } else {
+                LeaderboardEntries[2].Enable(false);
             }
         }
 
