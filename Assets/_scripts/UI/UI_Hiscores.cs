@@ -13,7 +13,7 @@ namespace vgwb.lanoria
 
         public TextMeshProUGUI LocalHiscore;
         public GameObject LeaderboardContainer;
-        public TextMeshProUGUI Leaderboard;
+        public List<UI_Leaderboard_Entry> LeaderboardEntries;
 
         void Start()
         {
@@ -31,7 +31,7 @@ namespace vgwb.lanoria
         public void Refresh()
         {
             LocalHiscore.text = AppManager.I.AppSettings.HiScore.ToString();
-            Leaderboard.text = "";
+            //Leaderboard.text = "";
             StartCoroutine(LoadHiScores());
         }
 
@@ -47,7 +47,7 @@ namespace vgwb.lanoria
         private void DisplayTopLeaderboard(List<LeaderboardEntry> scores)
         {
             LeaderboardContainer.SetActive(true);
-            Leaderboard.text = "";
+            //Leaderboard.text = "";
 
             foreach (var entry in scores) {
                 DisplayScoreEntry(entry);
@@ -57,7 +57,7 @@ namespace vgwb.lanoria
         // callback
         private void DisplayPlayerLeaderboard(List<LeaderboardEntry> scores)
         {
-            Leaderboard.text += "...\n";
+            //Leaderboard.text += "...\n";
             foreach (var entry in scores) {
                 DisplayScoreEntry(entry);
             }
@@ -69,7 +69,7 @@ namespace vgwb.lanoria
             if (entry.Score == AppManager.I.AppSettings.HiScore) {
                 entryText = "<color=#FFDD00>" + entryText + "</color>";
             }
-            Leaderboard.text += entryText + "\n";
+            //Leaderboard.text += entryText + "\n";
         }
     }
 }
