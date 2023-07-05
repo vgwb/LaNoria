@@ -40,7 +40,11 @@ namespace vgwb.lanoria
             yield return new WaitForSeconds(1);
             //            Debug.Log("Load Hi Scores");
             OnlineServices.I.GetTopScores(DisplayTopLeaderboard);
-            OnlineServices.I.GetPlayerScore(DisplayPlayerLeaderboard);
+            if (AppManager.I.AppSettings.HiScore > 0) {
+                OnlineServices.I.GetPlayerScore(DisplayPlayerLeaderboard);
+            } else {
+                DisplayPlayerLeaderboard(new List<LeaderboardEntry>());
+            }
         }
 
         // callback
