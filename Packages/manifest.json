@@ -15,7 +15,7 @@
     "com.unity.scriptablebuildpipeline": "1.21.7",
     "com.unity.searcher": "4.9.2",
     "com.unity.services.analytics": "4.4.2",
-    "com.unity.services.leaderboards": "file:com.unity.services.leaderboards-1.0.0-exp.1.tgz",
+    "com.unity.services.leaderboards": "1.0.0",
     "com.unity.test-framework": "1.1.33",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.5",
