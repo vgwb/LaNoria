@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e4cac8b0e02af4ebfdde70ff56454a, type: 3}
   m_Name: AppConfig
   m_EditorClassIdentifier: 
-  Version: 10
+  Version: 11
   UrlSupportWebsite: https://www.malaga.es/lanoria/
   GameData: {fileID: 11400000, guid: 2b6b51886b50b4b29b2b522d08682677, type: 2}
   AnalyticsEnabled: 1
