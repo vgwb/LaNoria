@@ -7,6 +7,7 @@ Voy a La Noria is a puzzle game in which we simulate the work carried out by the
 - **Project page**: [vgwb.org/projects/lanoria/](https://vgwb.org/projects/lanoria/)
 - **Game Docs:** [vgwb.github.io/LaNoria](http://vgwb.github.io/LaNoria)
 - **GitHub project:** [github.com/vgwb/LaNoria](https://github.com/vgwb/LaNoria)
+- **Play online:** [vgwb.itch.io/noria](https://vgwb.itch.io/noria)
 - La Noria site: <https://www.malaga.es/lanoria/>
 
 ## Issues and Contacts
