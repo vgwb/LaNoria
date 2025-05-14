@@ -45,13 +45,12 @@ namespace vgwb.lanoria
             if (!AnalyticsEnabled)
                 return;
 
-            var parameters = new Dictionary<string, object>()
-            {
+            var myEvent = new CustomEvent("myPoints") {
                 { "myPoints", points },
                 { "myCardAction", action },
             };
 
-            AnalyticsService.Instance.CustomData("myPoints", parameters);
+            AnalyticsService.Instance.RecordEvent(myEvent);
 #if UNITY_EDITOR
             AnalyticsService.Instance.Flush();
 #endif

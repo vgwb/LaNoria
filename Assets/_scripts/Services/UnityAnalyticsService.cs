@@ -24,17 +24,19 @@ namespace vgwb.lanoria
             await UnityServices.InitializeAsync(options);
         }
 
+        private void AddSharedParameters(CustomEvent myEvent)
+        {
+            myEvent.Add("myNativeLang", AppManager.I.AppSettings.Locale);
+        }
         public void TestEvent()
         {
             if (!AnalyticsEnabled)
                 return;
 
-            var parameters = new Dictionary<string, object>()
-            {
-                { "myNativeLang", AppManager.I.AppSettings.Locale },
+            var myEvent = new CustomEvent("myTestEvent") {
             };
-
-            AnalyticsService.Instance.CustomData("myTestEvent", parameters);
+            AddSharedParameters(myEvent);
+            AnalyticsService.Instance.RecordEvent(myEvent);
             AnalyticsService.Instance.Flush();
             Debug.Log("Analytics TestEvent");
         }
@@ -44,13 +46,13 @@ namespace vgwb.lanoria
             if (!AnalyticsEnabled)
                 return;
 
-            var parameters = new Dictionary<string, object>()
-            {
+            var myEvent = new CustomEvent("myActivity")
+                        {
                 { "myActivity", activityCode },
                 { "myActivityResult", result },
             };
 
-            AnalyticsService.Instance.CustomData("myActivity", parameters);
+            AnalyticsService.Instance.RecordEvent(myEvent);
 #if UNITY_EDITOR
             AnalyticsService.Instance.Flush();
 #endif
@@ -62,13 +64,14 @@ namespace vgwb.lanoria
             if (!AnalyticsEnabled)
                 return;
 
-            var parameters = new Dictionary<string, object>()
-            {
+            var myEvent = new CustomEvent("myPoints")
+                                    {
                 { "myPoints", points },
                 { "myCardAction", action },
             };
 
-            AnalyticsService.Instance.CustomData("myPoints", parameters);
+            AnalyticsService.Instance.RecordEvent(myEvent);
+
 #if UNITY_EDITOR
             AnalyticsService.Instance.Flush();
 #endif
@@ -79,12 +82,12 @@ namespace vgwb.lanoria
             if (!AnalyticsEnabled)
                 return;
 
-            var parameters = new Dictionary<string, object>()
-            {
+            var myEvent = new CustomEvent("myApp") {
                 { "myAction", action },
             };
 
-            AnalyticsService.Instance.CustomData("myApp", parameters);
+            AnalyticsService.Instance.RecordEvent(myEvent);
+
 #if UNITY_EDITOR
             AnalyticsService.Instance.Flush();
 #endif
