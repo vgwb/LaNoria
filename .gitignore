@@ -87,3 +87,4 @@ Assets/_private
 Assets/_private.meta
 docs/.obsidian
 *.keystore
+_build
