@@ -149,6 +149,7 @@ PlayerSettings:
   - {fileID: 11400000, guid: 040309ef49e246d489a94cc92ba53286, type: 2}
   - {fileID: 11400000, guid: f7f0d8b441236bb4aa66e00639afafcd, type: 2}
   - {fileID: 11400000, guid: 2b6b51886b50b4b29b2b522d08682677, type: 2}
+  - {fileID: 11400000, guid: cea07ce5d2b0f46c59071066750c3032, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -597,6 +598,7 @@ PlayerSettings:
   - serializedVersion: 2
     m_BuildTarget: tvOS
     m_EncodingQuality: 1
+  m_BuildTargetGroupHDRCubemapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings:
   - m_BuildTarget: WebGL
     m_TextureStreamingEnabled: 0
@@ -875,12 +877,12 @@ PlayerSettings:
   webGLMemoryLinearGrowthStep: 16
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
-  webGLEnableWebGPU: 0
   webGLPowerPreference: 1
   webGLWebAssemblyTable: 0
   webGLWebAssemblyBigInt: 0
   webGLCloseOnQuit: 0
   webWasm2023: 0
+  webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
     iPhone: 
   additionalCompilerArguments: {}
@@ -996,3 +998,4 @@ PlayerSettings:
   insecureHttpOption: 0
   androidVulkanDenyFilterList: []
   androidVulkanAllowFilterList: []
+  androidVulkanDeviceFilterListAsset: {fileID: 0}
